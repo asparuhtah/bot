@@ -1,0 +1,125 @@
+<div class="g2">
+
+  <!-- TODAY'S WORKOUT -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">🏋️ Днешна тренировка</span>
+      <span class="badge by" id="t-badge">Предстои</span>
+    </div>
+    <div class="workout-card" id="t-workoutCard">
+      <div>
+        <div style="font-weight:600;font-size:15px" id="t-workoutName">—</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px" id="t-workoutType">Зарежда...</div>
+      </div>
+      <button class="wbtn" id="t-workoutBtn" onclick="trainToggle()">Маркирай като завършена</button>
+    </div>
+
+    <div style="margin-top:16px">
+      <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Прогрес тази седмица</div>
+      <div style="display:flex;gap:5px" id="t-weekBar"></div>
+    </div>
+
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
+      <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Тренировки тази седмица</div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="font-size:28px;font-weight:700;color:var(--green)" id="t-weekCount">0</div>
+        <div style="font-size:12px;color:var(--muted)">от 5 планирани<br><span style="font-size:11px" id="t-weekMsg">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEKLY PLAN -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">📅 Седмичен план</span>
+    </div>
+    <div id="t-weekPlan"></div>
+  </div>
+
+</div>
+<script>
+(function(){
+  const PLAN={
+    0:{name:'Почивка / Активно възстановяване',type:'Лек разтег или йога',icon:'🧘',rest:true},
+    1:{name:'Горна половина (Upper Body)',type:'Гърди, рамене, трицепс',icon:'💪',rest:false},
+    2:{name:'Кардио',type:'30–40 мин бягане / велоергометър',icon:'🏃',rest:false},
+    3:{name:'Долна половина (Lower Body)',type:'Крака, глутеус, гърб',icon:'🦵',rest:false},
+    4:{name:'Кардио + Корем',type:'HIIT, ситъпс, планки',icon:'⚡',rest:false},
+    5:{name:'Push / Pull',type:'Комбиниран full-body',icon:'🔄',rest:false},
+    6:{name:'Почивка',type:'Пасивна почивка, разтег',icon:'😴',rest:true},
+  };
+  const DAY_NAMES=['Нед','Пон','Вт','Ср','Чет','Пет','Съб'];
+
+  function hKey(d){return`health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+  function gh(d){return JSON.parse(localStorage.getItem(hKey(d))||'{}');}
+  function sh(d,h){localStorage.setItem(hKey(d),JSON.stringify(h));window.dispatchEvent(new Event('statsUpdate'));}
+
+  function getWeekData(){
+    const now=new Date(),dow=now.getDay();
+    const start=new Date(now);start.setDate(now.getDate()-dow);
+    const days=[];
+    for(let i=0;i<7;i++){
+      const d=new Date(start);d.setDate(start.getDate()+i);
+      days.push({d,h:gh(d),isToday:i===dow,plan:PLAN[i]});
+    }
+    return days;
+  }
+
+  function renderToday(){
+    const now=new Date(),dow=now.getDay(),plan=PLAN[dow],h=gh(now);
+    document.getElementById('t-workoutName').textContent=`${plan.icon} ${plan.name}`;
+    document.getElementById('t-workoutType').textContent=plan.type;
+    const btn=document.getElementById('t-workoutBtn');
+    const done=!!h.workout;
+    btn.classList.toggle('done',done);
+    btn.textContent=done?'✅ Тренировката е завършена':'Маркирай като завършена';
+    const badge=document.getElementById('t-badge');
+    badge.textContent=done?'✅ Завършена':plan.rest?'Почивен ден':'Предстои';
+    badge.className='badge '+(done?'bg':plan.rest?'bb':'by');
+  }
+
+  function renderWeekBar(){
+    const days=getWeekData();
+    let workouts=0;
+    const html=days.map(({d,h,isToday,plan})=>{
+      const done=!!h.workout;
+      if(done&&!plan.rest)workouts++;
+      const bg=done?'var(--green)':plan.rest?'rgba(139,148,158,.15)':isToday?'var(--accent)':'var(--border)';
+      const border=isToday?'1px solid var(--blue)':'1px solid transparent';
+      return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px">
+        <div style="font-size:10px;font-weight:${isToday?700:400};color:${isToday?'var(--text)':'var(--muted)'}">${DAY_NAMES[d.getDay()]}</div>
+        <div style="width:100%;height:30px;border-radius:4px;background:${bg};border:${border};display:flex;align-items:center;justify-content:center;font-size:14px">${done?'✅':plan.icon}</div>
+      </div>`;
+    }).join('');
+    document.getElementById('t-weekBar').innerHTML=html;
+    document.getElementById('t-weekCount').textContent=workouts;
+    document.getElementById('t-weekMsg').textContent=
+      workouts>=5?'🎯 Седмичната цел е постигната!':
+      workouts>=3?`Още ${5-workouts} до целта`:
+      workouts>0?`Продължавай напред!`:'Започни тази седмица';
+  }
+
+  function renderWeekPlan(){
+    const now=new Date(),today=now.getDay();
+    document.getElementById('t-weekPlan').innerHTML=Array.from({length:7},(_,i)=>{
+      const plan=PLAN[i],isToday=i===today;
+      return `<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid ${i===6?'transparent':'var(--border)'};font-size:12px">
+        <div style="width:30px;text-align:center;font-size:18px">${plan.icon}</div>
+        <div style="flex:1">
+          <div style="font-weight:${isToday?600:400};color:${isToday?'var(--text)':'var(--muted)'}">${DAY_NAMES[i]} — ${plan.name}</div>
+          <div style="font-size:11px;color:var(--muted)">${plan.type}</div>
+        </div>
+        ${isToday?'<span class="badge bb" style="white-space:nowrap">Днес</span>':''}
+      </div>`;
+    }).join('');
+  }
+
+  window.trainToggle=function(){
+    const now=new Date(),h=gh(now);
+    h.workout=!h.workout;sh(now,h);
+    renderToday();renderWeekBar();
+  };
+
+  renderToday();renderWeekBar();renderWeekPlan();
+})();
+</script>

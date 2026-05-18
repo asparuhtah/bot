@@ -1,0 +1,91 @@
+<div class="card" style="text-align:center;padding:48px 24px 40px">
+  <div style="font-size:56px;margin-bottom:14px">📚</div>
+  <h2 style="color:var(--purple);font-size:18px;font-weight:700;margin-bottom:8px">Дисертация</h2>
+  <p style="color:var(--muted);font-size:13px;max-width:480px;margin:0 auto 28px;line-height:1.6">
+    Подробният модул е в разработка. Тук ще намериш трекер на главите,
+    дневни цели за думи, бележки за супервайзора и timeline на проекта.
+  </p>
+
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px" id="diss-stats"></div>
+
+  <div style="max-width:520px;margin:0 auto;text-align:left">
+    <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px">📖 Глави / Секции</div>
+    <div id="diss-chapters"></div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+      <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">📋 Думи днес</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" id="diss-words-input" min="0" max="5000" placeholder="0"
+          style="width:90px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-size:14px;text-align:right"
+          oninput="dissWords(this.value)">
+        <span style="font-size:12px;color:var(--muted)">/ 500 думи цел</span>
+        <div style="flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden">
+          <div id="diss-words-bar" style="height:100%;background:var(--purple);border-radius:3px;width:0%;transition:width .3s"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:5px" id="diss-words-msg">Цел: 500 думи на ден</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const CHAPTERS=[
+    {id:'c1',name:'Глава 1 — Увод & Литературен обзор'},
+    {id:'c2',name:'Глава 2 — Методология'},
+    {id:'c3',name:'Глава 3 — Данни & Анализ'},
+    {id:'c4',name:'Глава 4 — Резултати & Дискусия'},
+    {id:'c5',name:'Глава 5 — Заключение & Препоръки'},
+    {id:'c6',name:'Библиография & Приложения'},
+  ];
+  function dissKey(){const d=new Date();return`diss_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+  function getDiss(){return JSON.parse(localStorage.getItem(dissKey())||'{}');}
+  function saveDiss(data){localStorage.setItem(dissKey(),JSON.stringify(data));window.dispatchEvent(new Event('statsUpdate'));}
+
+  function renderStats(){
+    const d=getDiss(),done=(d.chapters||[]).length,words=d.words||0;
+    document.getElementById('diss-stats').innerHTML=`
+      <div style="background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:14px 28px;min-width:110px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:var(--purple)">${done} / ${CHAPTERS.length}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.4px">Глави</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:14px 28px;min-width:110px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:var(--blue)">${words}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.4px">Думи днес</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:14px 28px;min-width:110px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:${words>=500?'var(--green)':'var(--yellow)'}">${Math.min(100,Math.round(words/500*100))}%</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.4px">Цел 500/ден</div>
+      </div>`;
+  }
+
+  function renderChapters(){
+    const d=getDiss(),done=d.chapters||[];
+    document.getElementById('diss-chapters').innerHTML=CHAPTERS.map(c=>{
+      const isDone=done.includes(c.id);
+      return `<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px">
+        <span style="color:${isDone?'var(--green)':'var(--text)'}">${isDone?'✅ ':'📝 '}${c.name}</span>
+        <button onclick="dissToggle('${c.id}')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid ${isDone?'var(--green)':'var(--border)'};background:${isDone?'rgba(63,185,80,.15)':'transparent'};color:${isDone?'var(--green)':'var(--muted)'};cursor:pointer;font-family:inherit">${isDone?'Завършена':'Отбележи'}</button>
+      </div>`;
+    }).join('');
+  }
+
+  function renderWords(){
+    const d=getDiss(),words=d.words||0,pct=Math.min(100,Math.round(words/500*100));
+    document.getElementById('diss-words-input').value=words||'';
+    document.getElementById('diss-words-bar').style.width=pct+'%';
+    document.getElementById('diss-words-msg').textContent=
+      words>=500?`✅ Цел постигната! +${words-500} бонус думи`:`Остават ${500-words} думи до целта`;
+  }
+
+  window.dissToggle=function(id){
+    const d=getDiss(),done=d.chapters||[],i=done.indexOf(id);
+    if(i===-1)done.push(id);else done.splice(i,1);
+    d.chapters=done;saveDiss(d);renderChapters();renderStats();
+  };
+  window.dissWords=function(val){
+    const d=getDiss();d.words=parseInt(val)||0;saveDiss(d);renderWords();renderStats();
+  };
+
+  renderStats();renderChapters();renderWords();
+})();
+</script>

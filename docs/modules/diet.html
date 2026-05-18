@@ -1,0 +1,103 @@
+<div class="g2">
+
+  <!-- WATER TRACKER -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">💧 Прием на вода</span>
+      <span class="badge bb" id="d-waterBadge">0 / 8</span>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Цел: 8 чаши × 250 мл = 2 л на ден</div>
+    <div class="water-grid" id="d-waterGrid"></div>
+    <div style="height:5px;background:var(--s2);border-radius:3px;overflow:hidden;margin-top:12px">
+      <div id="d-waterBar" style="height:100%;border-radius:3px;background:var(--blue);transition:width .4s;width:0%"></div>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:6px" id="d-waterMsg">Не е пита вода днес</div>
+  </div>
+
+  <!-- MEALS -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">🍽️ Хранене</span>
+      <span class="badge bb" id="d-mealBadge">0 / 4</span>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Закуска</div>
+        <div style="font-size:11px;color:var(--muted)">07:00 — протеини, бавни въглехидрати</div>
+      </div>
+      <button class="mcheck" id="d-meal-breakfast" onclick="dietMeal('breakfast')">Изяждена</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Обяд</div>
+        <div style="font-size:11px;color:var(--muted)">13:00 — балансирано хранене</div>
+      </div>
+      <button class="mcheck" id="d-meal-lunch" onclick="dietMeal('lunch')">Изяден</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Следобедна закуска</div>
+        <div style="font-size:11px;color:var(--muted)">16:00 — плодове, ядки, протеинов бар</div>
+      </div>
+      <button class="mcheck" id="d-meal-snack" onclick="dietMeal('snack')">Изядена</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Вечеря</div>
+        <div style="font-size:11px;color:var(--muted)">20:00 — лека, богата на протеини</div>
+      </div>
+      <button class="mcheck" id="d-meal-dinner" onclick="dietMeal('dinner')">Изядена</button>
+    </div>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border)">
+      <div style="font-size:11px;color:var(--muted);margin-bottom:6px">Здравен резултат за деня</div>
+      <div style="display:flex;gap:4px" id="d-healthDots"></div>
+      <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:var(--muted)" id="d-healthLabels"></div>
+    </div>
+  </div>
+
+</div>
+<script>
+(function(){
+  function hKey(){const d=new Date();return`health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+  function gh(){return JSON.parse(localStorage.getItem(hKey())||'{}');}
+  function sh(h){localStorage.setItem(hKey(),JSON.stringify(h));window.dispatchEvent(new Event('statsUpdate'));}
+
+  function renderWater(){
+    const h=gh(),cups=h.water||0,pct=Math.round(cups/8*100);
+    let html='';
+    for(let i=0;i<8;i++)html+=`<div class="drop ${i<cups?'full':''}" onclick="dietWater(${i})">💧</div>`;
+    document.getElementById('d-waterGrid').innerHTML=html;
+    const badge=document.getElementById('d-waterBadge');
+    badge.textContent=`${cups} / 8`;
+    badge.className='badge '+(cups>=8?'bg':cups>=4?'by':'bb');
+    document.getElementById('d-waterBar').style.width=pct+'%';
+    document.getElementById('d-waterBar').style.background=cups>=8?'var(--green)':cups>=4?'var(--yellow)':'var(--blue)';
+    document.getElementById('d-waterMsg').textContent=
+      cups>=8?'✅ Дневната цел е постигната!':
+      cups>0?`Остават ${8-cups} чаши до целта`:
+      'Не е пита вода днес';
+  }
+
+  function renderMeals(){
+    const h=gh();let done=0;
+    for(const m of['breakfast','lunch','snack','dinner']){
+      const btn=document.getElementById(`d-meal-${m}`);
+      if(btn){btn.classList.toggle('done',!!h[m]);if(h[m])done++;}
+    }
+    const b=document.getElementById('d-mealBadge');
+    b.textContent=`${done} / 4`;
+    b.className='badge '+(done===4?'bg':done>=2?'by':'bb');
+    const checks=[!!h.breakfast,!!h.lunch,!!h.snack,!!h.dinner,(h.water||0)>=8,!!h.workout];
+    const labels=['Закуска','Обяд','Снак','Вечеря','Вода','Трен.'];
+    const dots=document.getElementById('d-healthDots');
+    const lbls=document.getElementById('d-healthLabels');
+    dots.innerHTML=checks.map(c=>`<div style="flex:1;height:6px;border-radius:3px;background:${c?'var(--green)':'var(--border)'};transition:background .3s"></div>`).join('');
+    lbls.innerHTML=labels.map((l,i)=>`<span style="color:${checks[i]?'var(--green)':'var(--muted)'}">${l}</span>`).join('');
+  }
+
+  window.dietWater=function(idx){const h=gh(),cur=h.water||0;h.water=idx<cur?idx:idx+1;sh(h);renderWater();renderMeals();};
+  window.dietMeal=function(meal){const h=gh();h[meal]=!h[meal];sh(h);renderMeals();};
+
+  renderWater();renderMeals();
+})();
+</script>
