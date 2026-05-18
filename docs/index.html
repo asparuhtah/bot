@@ -374,8 +374,19 @@ function updateDynamicStats() {
 
 // ═══════════════════════════════════════════════════════════════ MODULE LOADER ══
 
+// Modules that are full standalone HTML pages — load in iframe for full CSS isolation
+const IFRAME_MODULES = new Set(['dissertation']);
+
 function loadModule(name) {
   const container = el('module-container');
+  if (IFRAME_MODULES.has(name)) {
+    container.innerHTML =
+      `<iframe src="modules/${name}.html" id="mod-iframe"
+        style="width:100%;border:none;border-radius:8px;background:#0d1117;display:block;min-height:560px"
+        frameborder="0" scrolling="no"
+        onload="autoResizeFrame(this)"></iframe>`;
+    return;
+  }
   container.innerHTML = '<div class="loading pulse" style="padding:24px;text-align:center">Зарежда модул...</div>';
   fetch(`modules/${name}.html`)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
@@ -390,6 +401,15 @@ function loadModule(name) {
     .catch(() => {
       container.innerHTML = `<div class="card" style="color:var(--red);font-size:13px">Грешка при зареждане на модула "${name}.html".</div>`;
     });
+}
+
+function autoResizeFrame(frame) {
+  try {
+    const h = frame.contentDocument.documentElement.scrollHeight;
+    frame.style.height = (h + 16) + 'px';
+  } catch(e) {
+    frame.style.height = '800px';
+  }
 }
 
 function switchModule(name, btn) {
