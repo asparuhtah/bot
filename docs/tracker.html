@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Трекер на сесии — Аспарух</title>
+<style>
+:root{--bg:#0d1117;--s1:#161b22;--s2:#1c2128;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#58a6ff;--accent:#1f6feb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:900px;margin:0 auto}
+.hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.hdr h1{font-size:18px;font-weight:600}
+.back-btn{font-size:12px;color:var(--blue);text-decoration:none;padding:5px 10px;border:1px solid var(--border);border-radius:6px}
+.back-btn:hover{background:var(--s2)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.stat{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
+.stat-val{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.stat-lbl{font-size:11px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.4px}
+.timers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.t-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.t-card.running{border-color:var(--blue)}
+.t-name{font-size:12px;color:var(--muted);text-align:center;font-weight:500}
+.hg-wrap{width:52px;height:66px;cursor:pointer}
+.hg-wrap svg{width:100%;height:100%}
+.t-time{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.t-time.warn{color:var(--yellow)}.t-time.over{color:var(--red)}
+.t-bar{width:100%;height:4px;background:var(--s2);border-radius:2px;overflow:hidden}
+.t-fill{height:100%;border-radius:2px;transition:width 1s linear}
+.t-pct{font-size:11px;color:var(--muted)}
+.t-btns{display:flex;gap:5px}
+.btn{font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
+.btn:hover{background:var(--s2);color:var(--text)}
+.btn.go{color:var(--blue);border-color:var(--blue)}
+.add-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:20px}
+.add-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.add-row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
+.add-row input,.add-row select{padding:5px 9px;font-size:13px;border:1px solid var(--border);border-radius:6px;background:var(--s2);color:var(--text);font-family:inherit}
+.add-row button{padding:5px 14px;font-size:13px;border:1px solid var(--border);border-radius:6px;background:var(--s2);color:var(--text);cursor:pointer}
+.add-row button:hover{background:var(--border)}
+.add-row button.green{border-color:var(--green);color:var(--green)}
+.log-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.log-hdr-row{display:grid;grid-template-columns:100px 1fr 80px 90px 30px;gap:8px;padding:9px 14px;background:var(--s2);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.log-row{display:grid;grid-template-columns:100px 1fr 80px 90px 30px;gap:8px;align-items:center;padding:9px 14px;border-top:1px solid var(--border);font-size:12px}
+.log-date{color:var(--muted);font-variant-numeric:tabular-nums}
+.log-topic{color:var(--text)}
+.log-dur{color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
+.tag-dash{background:rgba(63,185,80,.15);color:var(--green)}
+.tag-diss{background:rgba(188,140,255,.15);color:#bc8cff}
+.tag-health{background:rgba(240,136,62,.15);color:#f0883e}
+.tag-general{background:rgba(139,148,158,.1);color:var(--muted)}
+.del-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:15px}
+.del-btn:hover{color:var(--red)}
+.empty{padding:2rem;text-align:center;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>⏳ Трекер на сесии с Claude</h1>
+  <a href="index.html" class="back-btn">← Към Dashboard</a>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-val" id="s-total">0</div><div class="stat-lbl">Общо сесии</div></div>
+  <div class="stat"><div class="stat-val" id="s-today">0</div><div class="stat-lbl">Днес</div></div>
+  <div class="stat"><div class="stat-val" id="s-time">0h</div><div class="stat-lbl">Общо часове</div></div>
+  <div class="stat"><div class="stat-val" id="s-week">0</div><div class="stat-lbl">Тази седмица</div></div>
+</div>
+
+<div class="timers-grid" id="timers-grid"></div>
+
+<div class="add-card">
+  <div class="add-lbl">Нов таймер / запис</div>
+  <div class="add-row">
+    <input type="text" id="n-name" placeholder="напр. Dashboard — diet module" style="flex:1;min-width:180px"/>
+    <input type="number" id="n-mins" placeholder="45 мин" min="1" max="480" style="width:80px"/>
+    <select id="n-tag">
+      <option value="general">Общо</option>
+      <option value="dash">Dashboard</option>
+      <option value="diss">Дисертация</option>
+      <option value="health">Здраве</option>
+    </select>
+    <button onclick="addTimer()">+ Таймер</button>
+    <button class="green" onclick="logQuick()">✓ Запиши</button>
+  </div>
+</div>
+
+<div class="log-card">
+  <div class="log-hdr-row"><div>Дата</div><div>Тема</div><div style="text-align:right">Мин.</div><div>Тип</div><div></div></div>
+  <div id="log-body"><div class="empty">Няма записани сесии още</div></div>
+</div>
+
+<script>
+const PRESETS=[
+  {name:'Разговор с Claude',total:45*60,elapsed:0,running:false,tag:'general'},
+  {name:'Работна сесия',total:90*60,elapsed:0,running:false,tag:'dash'},
+  {name:'Дневен лимит',total:3*3600,elapsed:0,running:false,tag:'general'}
+];
+const tagLabels={dash:'Dashboard',diss:'Дисертация',health:'Здраве',general:'Общо'};
+const tagClass={dash:'tag-dash',diss:'tag-diss',health:'tag-health',general:'tag-general'};
+let timers=JSON.parse(localStorage.getItem('session-timers')||'null')||PRESETS.map(p=>({...p}));
+let log=JSON.parse(localStorage.getItem('session-log')||'[]');
+
+function save(){
+  localStorage.setItem('session-timers',JSON.stringify(timers));
+  localStorage.setItem('session-log',JSON.stringify(log));
+}
+function fmt(s){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;return h>0?h+'h '+String(m).padStart(2,'0')+'m':String(m).padStart(2,'0')+':'+String(ss).padStart(2,'0');}
+function fmtDate(ts){const d=new Date(ts);return d.toLocaleDateString('bg-BG',{day:'2-digit',month:'2-digit'})+' '+d.toLocaleTimeString('bg-BG',{hour:'2-digit',minute:'2-digit'});}
+function pct(t){return Math.min(100,Math.round(t.elapsed/t.total*100));}
+function fillCol(p){return p>=90?'#f85149':p>=70?'#d29922':'#3fb950';}
+function hgSVG(p,running){
+  const top=Math.max(0,Math.round((1-p/100)*30)),bot=Math.max(0,30-top);
+  const col=p>=90?'#f85149':p>=70?'#d29922':'#3fb950';
+  const anim=running?'<animateTransform attributeName="transform" type="rotate" values="0 26 33;0.8 26 33;0 26 33;-0.8 26 33;0 26 33" dur="2s" repeatCount="indefinite"/>':"";
+  return `<svg viewBox="0 0 52 66" xmlns="http://www.w3.org/2000/svg"><g>${anim}<polygon points="7,3 45,3 34,33 45,63 7,63 18,33" fill="none" stroke="#30363d" stroke-width="1.5" stroke-linejoin="round"/><clipPath id="cct"><polygon points="7,3 45,3 34,33 26,33"/></clipPath><clipPath id="ccb"><polygon points="26,33 34,33 45,63 7,63 18,33"/></clipPath><rect x="0" y="${3+30-top}" width="52" height="${top}" fill="${col}" opacity="0.22" clip-path="url(#cct)"/><rect x="0" y="33" width="52" height="${bot}" fill="${col}" opacity="0.65" clip-path="url(#ccb)"/><line x1="26" y1="30" x2="26" y2="36" stroke="${col}" stroke-width="1.5" stroke-linecap="round"/></g></svg>`;
+}
+function renderTimers(){
+  document.getElementById('timers-grid').innerHTML=timers.map((t,i)=>{
+    const p=pct(t),rem=Math.max(0,t.total-t.elapsed),cls=p>=90?'over':p>=70?'warn':'';
+    return `<div class="t-card${t.running?' running':''}">
+      <div class="t-name">${t.name}</div>
+      <div class="hg-wrap" onclick="toggle(${i})">${hgSVG(p,t.running)}</div>
+      <div class="t-time ${cls}">${fmt(rem)}</div>
+      <div class="t-bar"><div class="t-fill" style="width:${p}%;background:${fillCol(p)}"></div></div>
+      <div class="t-pct">${p}% · ${tagLabels[t.tag]||'Общо'}</div>
+      <div class="t-btns">
+        <button class="btn" onclick="resetT(${i})">↺</button>
+        <button class="btn" onclick="finishT(${i})" title="Запиши">✓</button>
+        <button class="btn go" onclick="toggle(${i})">${t.running?'⏸':'▶'}</button>
+        <button class="btn" onclick="removeT(${i})">✕</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+function renderLog(){
+  const today=new Date().toDateString(),weekAgo=Date.now()-7*24*3600*1000;
+  document.getElementById('s-total').textContent=log.length;
+  document.getElementById('s-today').textContent=log.filter(e=>new Date(e.ts).toDateString()===today).length;
+  const totalMins=Math.round(log.reduce((s,e)=>s+e.mins,0));
+  document.getElementById('s-time').textContent=totalMins>=60?Math.round(totalMins/60)+'h':totalMins+'m';
+  document.getElementById('s-week').textContent=log.filter(e=>e.ts>weekAgo).length;
+  const body=document.getElementById('log-body');
+  if(!log.length){body.innerHTML='<div class="empty">Няма записани сесии още</div>';return;}
+  body.innerHTML=log.slice().reverse().slice(0,50).map((e,ri)=>`
+    <div class="log-row">
+      <div class="log-date">${fmtDate(e.ts)}</div>
+      <div class="log-topic">${e.name}</div>
+      <div class="log-dur">${e.mins} мин</div>
+      <div><span class="tag ${tagClass[e.tag]||'tag-general'}">${tagLabels[e.tag]||'Общо'}</span></div>
+      <div><button class="del-btn" onclick="delLog(${log.length-1-ri})">×</button></div>
+    </div>`).join('');
+}
+function render(){renderTimers();renderLog();}
+function toggle(i){timers[i].running=!timers[i].running&&timers[i].elapsed<timers[i].total;save();renderTimers();}
+function resetT(i){timers[i].elapsed=0;timers[i].running=false;save();renderTimers();}
+function removeT(i){timers.splice(i,1);save();renderTimers();}
+function finishT(i){
+  const t=timers[i];t.running=false;
+  log.push({ts:Date.now(),name:t.name,mins:Math.round(t.elapsed/60)||Math.round(t.total/60),tag:t.tag||'general'});
+  t.elapsed=0;save();render();
+}
+function addTimer(){
+  const name=document.getElementById('n-name').value.trim()||'Нова сесия';
+  const mins=parseInt(document.getElementById('n-mins').value)||45;
+  const tag=document.getElementById('n-tag').value;
+  timers.push({name,total:mins*60,elapsed:0,running:false,tag});
+  document.getElementById('n-name').value='';document.getElementById('n-mins').value='';
+  save();renderTimers();
+}
+function logQuick(){
+  const name=document.getElementById('n-name').value.trim()||'Сесия';
+  const mins=parseInt(document.getElementById('n-mins').value)||45;
+  const tag=document.getElementById('n-tag').value;
+  log.push({ts:Date.now(),name,mins,tag});
+  document.getElementById('n-name').value='';document.getElementById('n-mins').value='';
+  save();renderLog();
+}
+function delLog(i){log.splice(i,1);save();renderLog();}
+document.getElementById('n-mins').addEventListener('keydown',e=>{if(e.key==='Enter')addTimer();});
+render();
+setInterval(()=>{
+  let ch=false;
+  timers.forEach(t=>{if(t.running&&t.elapsed<t.total){t.elapsed++;ch=true;}if(t.elapsed>=t.total&&t.running){t.running=false;ch=true;}});
+  if(ch){save();renderTimers();}
+},1000);
+</script>
+</body>
+</html>
