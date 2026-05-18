@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Аспарух — Дневен Дашборд</title>
+<style>
+:root{
+  --bg:#0d1117;--s1:#161b22;--s2:#1c2128;
+  --border:#30363d;--text:#e6edf3;--muted:#8b949e;
+  --green:#3fb950;--red:#f85149;--yellow:#d29922;
+  --blue:#58a6ff;--purple:#bc8cff;--orange:#f0883e;
+  --accent:#1f6feb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;padding:14px;max-width:1500px;margin:0 auto}
+
+/* ── Header ── */
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:21px;font-weight:700}
+.hdr h1 span{color:var(--blue)}
+.hdr-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.clock{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--blue);text-align:right}
+.clock-date{font-size:12px;color:var(--muted);text-align:right;margin-top:2px}
+
+/* ── Quick stats ── */
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:14px}
+.stat{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:11px}
+.sl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
+.sv{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.ss{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* ── Grid layouts ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:13px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:13px;margin-bottom:13px}
+.mb{margin-bottom:13px}
+
+/* ── Card ── */
+.card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:15px}
+.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px}
+.ct{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+
+/* ── Badge ── */
+.badge{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
+.bg{background:rgba(63,185,80,.15);color:var(--green)}
+.br{background:rgba(248,81,73,.15);color:var(--red)}
+.by{background:rgba(210,153,34,.15);color:var(--yellow)}
+.bb{background:rgba(88,166,255,.15);color:var(--blue)}
+.bp{background:rgba(188,140,255,.15);color:var(--purple)}
+.bo{background:rgba(240,136,62,.15);color:var(--orange)}
+
+/* ── Tab system ── */
+.tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.tab{background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:5px 11px;font-size:12px;cursor:pointer;transition:all .15s;color:var(--muted)}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab-pane{display:none}
+.tab-pane.on{display:block}
+
+/* ── Tasks ── */
+.task{display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:opacity .15s}
+.task:last-child{border-bottom:none}
+.task.done{opacity:.45}
+.task.done .tlbl{text-decoration:line-through}
+.chk{width:16px;height:16px;border:2px solid var(--border);border-radius:3px;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
+.task.done .chk{background:var(--green);border-color:var(--green);color:#fff}
+.tlbl{font-size:13px}
+.ttm{font-size:11px;color:var(--muted)}
+
+/* ── Task category header ── */
+.cat-hdr{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:8px 0 4px;border-bottom:1px solid var(--border);margin-bottom:2px;display:flex;align-items:center;gap:6px}
+
+/* ── Timeline ── */
+.tl{display:flex;gap:10px;padding:7px 0;position:relative}
+.tl-tm{font-size:12px;color:var(--muted);width:46px;flex-shrink:0;padding-top:2px;font-variant-numeric:tabular-nums}
+.tl-body{flex:1;padding-left:13px;border-left:2px solid var(--border)}
+.tl.act .tl-body{border-left-color:var(--blue)}
+.tl.past .tl-body{border-left-color:var(--green);opacity:.5}
+.tl-dot{position:absolute;left:46px;top:13px;width:7px;height:7px;border-radius:50%;background:var(--border);transform:translateX(-2.5px)}
+.tl.act .tl-dot{background:var(--blue);box-shadow:0 0 7px var(--blue)}
+.tl.past .tl-dot{background:var(--green)}
+.tl-title{font-size:13px;font-weight:500}
+.tl-desc{font-size:11px;color:var(--muted);margin-top:1px}
+
+/* ── Portfolio ── */
+.asset{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)}
+.asset:last-child{border-bottom:none}
+.an{font-weight:500;font-size:13px}
+.at{font-size:11px;color:var(--muted);margin-top:1px}
+.av{text-align:right}
+.ac{font-weight:600;font-size:13px}
+.ap{font-size:11px;margin-top:1px}
+.pos{color:var(--green)}.neg{color:var(--red)}
+
+/* ── Alerts ── */
+.alrt{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;margin-bottom:6px;font-size:12px;gap:8px}
+.alrt:last-child{margin-bottom:0}
+.a-buy{background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.25)}
+.a-warn{background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.25)}
+.a-neu{background:rgba(139,148,158,.08);border:1px solid var(--border)}
+
+/* ── Price editor ── */
+.pe{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)}
+.pe:last-child{border-bottom:none}
+.pi{width:88px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:4px 7px;color:var(--text);font-size:12px;text-align:right}
+.pi:focus{outline:none;border-color:var(--blue)}
+.pb{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:4px 9px;font-size:11px;cursor:pointer;margin-left:4px}
+
+/* ── Health tracker ── */
+.water-grid{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.drop{width:36px;height:36px;border-radius:50%;border:2px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .2s;opacity:.4}
+.drop.full{border-color:var(--blue);opacity:1;background:rgba(88,166,255,.1)}
+.meal-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px}
+.meal-item:last-child{border-bottom:none}
+.mcheck{cursor:pointer;padding:4px 10px;border-radius:4px;font-size:12px;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .15s}
+.mcheck.done{background:rgba(63,185,80,.15);border-color:var(--green);color:var(--green)}
+.workout-card{background:var(--s2);border-radius:6px;padding:10px;margin-top:8px;display:flex;justify-content:space-between;align-items:center}
+.wbtn{padding:5px 14px;border-radius:4px;font-size:12px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .15s}
+.wbtn.done{background:rgba(63,185,80,.15);border-color:var(--green);color:var(--green)}
+
+/* ── Dissertation ── */
+.word-progress{margin:8px 0}
+.wbar{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-top:6px}
+.wfill{height:100%;background:var(--purple);border-radius:3px;transition:width .4s}
+.chap-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px}
+.chap-item:last-child{border-bottom:none}
+.chap-btn{font-size:11px;padding:3px 8px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s}
+.chap-btn.done{background:rgba(63,185,80,.15);border-color:var(--green);color:var(--green)}
+
+/* ── Projects ── */
+.proj{border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:7px}
+.proj:last-child{margin-bottom:0}
+.pjh{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.pjn{font-weight:600;font-size:13px}
+.pjm{font-size:11px;color:var(--muted);margin-top:2px}
+.pbar{height:3px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:7px}
+.pfill{height:100%;border-radius:2px;transition:width .4s}
+
+/* ── History ── */
+.hr-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px}
+.hr-row:last-child{border-bottom:none}
+
+/* ── Misc ── */
+.loading{color:var(--muted);font-size:13px;padding:6px 0}
+.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.rbtn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:4px;padding:3px 9px;font-size:11px;cursor:pointer;transition:all .2s}
+.rbtn:hover{border-color:var(--blue);color:var(--blue)}
+.lupd{font-size:11px;color:var(--muted)}
+.dot-g{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 5px var(--green);display:inline-block;margin-right:5px}
+.footer{text-align:center;font-size:11px;color:var(--muted);margin-top:18px;padding-top:13px;border-top:1px solid var(--border)}
+input[type=number]::-webkit-inner-spin-button{opacity:1}
+
+@media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.g2,.g3,.g4,.stats{grid-template-columns:1fr}.clock{font-size:22px}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HEADER ══ -->
+<div class="hdr">
+  <div>
+    <h1>Аспарух <span>— Дневен Дашборд</span></h1>
+    <div class="hdr-sub"><span class="dot-g"></span>Инвестиции · Дисертация · Университет · Здраве &amp; Спорт</div>
+  </div>
+  <div>
+    <div class="clock" id="liveClock">--:--:--</div>
+    <div class="clock-date" id="liveDate">—</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ QUICK STATS ══ -->
+<div class="stats mb">
+  <div class="stat">
+    <div class="sl">Портфолио</div>
+    <div class="sv pulse" id="sTotCur">…</div>
+    <div class="ss" id="sTotPnl">—</div>
+  </div>
+  <div class="stat">
+    <div class="sl">EUR / USD</div>
+    <div class="sv" id="sEurUsd">—</div>
+    <div class="ss">Kraken live</div>
+  </div>
+  <div class="stat">
+    <div class="sl">Дисертация</div>
+    <div class="sv" id="sDissWords">—</div>
+    <div class="ss" id="sDissGoal">цел: 500 думи / ден</div>
+  </div>
+  <div class="stat">
+    <div class="sl">Задачи днес</div>
+    <div class="sv" id="sTasksProg">0 / 0</div>
+    <div class="ss" id="sTasksSub">—</div>
+  </div>
+  <div class="stat">
+    <div class="sl">Вода</div>
+    <div class="sv" id="sWater">0 / 8</div>
+    <div class="ss">чаши (250 мл)</div>
+  </div>
+  <div class="stat">
+    <div class="sl">Тренировка</div>
+    <div class="sv" id="sWorkout">—</div>
+    <div class="ss" id="sWorkoutSub">—</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ROW 1: TASKS + SCHEDULE ══ -->
+<div class="g2">
+
+  <!-- ALL TASKS with tabs by category -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Задачи за деня</span>
+      <span class="badge bb" id="taskProg">0 / 0</span>
+    </div>
+    <div class="tabs" id="taskTabs">
+      <button class="tab on" onclick="switchTab('dis')">🎓 Дисертация</button>
+      <button class="tab"    onclick="switchTab('uni')">📚 Университет</button>
+      <button class="tab"    onclick="switchTab('inv')">💰 Инвестиции</button>
+      <button class="tab"    onclick="switchTab('hlt')">💪 Здраве</button>
+    </div>
+
+    <!-- Dissertation -->
+    <div class="tab-pane on" id="pane-dis">
+      <div id="tasks-dis"></div>
+    </div>
+
+    <!-- University -->
+    <div class="tab-pane" id="pane-uni">
+      <div id="tasks-uni"></div>
+    </div>
+
+    <!-- Investment -->
+    <div class="tab-pane" id="pane-inv">
+      <div id="tasks-inv"></div>
+    </div>
+
+    <!-- Health -->
+    <div class="tab-pane" id="pane-hlt">
+      <div id="tasks-hlt"></div>
+    </div>
+
+    <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:11px;color:var(--muted)" id="taskDay"></span>
+      <button class="rbtn" onclick="resetTasks()">Нулирай всички</button>
+    </div>
+  </div>
+
+  <!-- SCHEDULE TIMELINE -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Дневно Разписание</span>
+      <span class="badge by" id="mktStatus">—</span>
+    </div>
+    <div id="schedList"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ROW 2: HEALTH + DISSERTATION ══ -->
+<div class="g2">
+
+  <!-- HEALTH TRACKER -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Здраве &amp; Хранене</span>
+      <span class="badge bg" id="healthScore">—</span>
+    </div>
+
+    <div style="font-size:12px;color:var(--muted);margin-bottom:6px">💧 Прием на вода (цел: 8 чаши × 250 мл = 2 L)</div>
+    <div class="water-grid" id="waterGrid"></div>
+
+    <div style="font-size:12px;color:var(--muted);margin:10px 0 6px">🍽️ Хранене</div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Закуска</div>
+        <div style="font-size:11px;color:var(--muted)">07:00 – протеини, бавни въглехидрати</div>
+      </div>
+      <button class="mcheck" id="meal-breakfast" onclick="toggleMeal('breakfast')">Изяждена</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Обяд</div>
+        <div style="font-size:11px;color:var(--muted)">13:00 – балансирано хранене</div>
+      </div>
+      <button class="mcheck" id="meal-lunch" onclick="toggleMeal('lunch')">Изяден</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Следобедна закуска</div>
+        <div style="font-size:11px;color:var(--muted)">16:00 – плодове, ядки, протеинов бар</div>
+      </div>
+      <button class="mcheck" id="meal-snack" onclick="toggleMeal('snack')">Изядена</button>
+    </div>
+    <div class="meal-item">
+      <div>
+        <div style="font-weight:500">Вечеря</div>
+        <div style="font-size:11px;color:var(--muted)">20:00 – лека, богата на протеини</div>
+      </div>
+      <button class="mcheck" id="meal-dinner" onclick="toggleMeal('dinner')">Изядена</button>
+    </div>
+
+    <div style="font-size:12px;color:var(--muted);margin-top:10px">🏋️ Тренировка</div>
+    <div class="workout-card" id="workoutCard">
+      <div>
+        <div style="font-weight:500;font-size:13px" id="workoutLabel">—</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px" id="workoutType">Зарежда...</div>
+      </div>
+      <button class="wbtn" id="workoutBtn" onclick="toggleWorkout()">Маркирай като завършена</button>
+    </div>
+  </div>
+
+  <!-- DISSERTATION TRACKER -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Дисертация</span>
+      <span class="badge bp" id="dissStatus">В процес</span>
+    </div>
+
+    <div class="word-progress">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:13px;font-weight:500">Написани думи днес</span>
+        <div style="display:flex;align-items:center;gap:6px">
+          <input type="number" min="0" max="5000" id="wordInput" placeholder="0"
+            style="width:75px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:4px 7px;color:var(--text);font-size:13px;text-align:right"
+            oninput="updateWordCount(this.value)">
+          <span style="font-size:12px;color:var(--muted)">/ 500</span>
+        </div>
+      </div>
+      <div class="wbar"><div class="wfill" id="wordFill" style="width:0%"></div></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:4px" id="wordStatus">Цел: 500 думи на ден</div>
+    </div>
+
+    <div style="font-size:12px;color:var(--muted);margin:12px 0 6px;font-weight:600">📖 Глави / Секции</div>
+    <div id="chapList"></div>
+
+    <div style="font-size:12px;color:var(--muted);margin:12px 0 6px;font-weight:600">📋 Бележки за днес</div>
+    <textarea id="dissNotes" placeholder="Бележки, идеи, въпроси за супервайзора..."
+      style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:8px;color:var(--text);font-size:12px;resize:vertical;min-height:70px;font-family:inherit"
+      oninput="saveNotes()"></textarea>
+    <div style="font-size:11px;color:var(--muted);margin-top:4px">Автоматично записвано локално</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ROW 3: PORTFOLIO + ALERTS + PRICES ══ -->
+<div class="g3">
+
+  <!-- PORTFOLIO -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Портфолио</span>
+      <div style="display:flex;align-items:center;gap:7px">
+        <span class="lupd" id="lupd">Зарежда...</span>
+        <button class="rbtn" onclick="loadPrices()">↻ Обнови</button>
+      </div>
+    </div>
+    <div id="portfolioList"><div class="loading pulse">Зарежда CoinGecko…</div></div>
+  </div>
+
+  <!-- ALERTS -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Ценови Алерти</span>
+      <span class="badge bb" id="alertBadge">—</span>
+    </div>
+    <div id="alertList"><div class="loading pulse">Зарежда...</div></div>
+  </div>
+
+  <!-- MANUAL PRICES -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Ръчни Цени</span>
+      <span class="badge by">Акции / ETF</span>
+    </div>
+    <div id="priceEditors"></div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px">Enter или ✓ за запис · Съхранява се локално</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ROW 4: PROJECTS + HISTORY ══ -->
+<div class="g2">
+
+  <!-- PROJECTS -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Всички Текущи Проекти</span>
+      <span class="badge bg">Активни</span>
+    </div>
+    <div id="projectsList"></div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="card">
+    <div class="ch">
+      <span class="ct">Портфолио История (последните дни)</span>
+      <span class="badge bb" id="histBadge">—</span>
+    </div>
+    <div id="histList"><div class="loading">Зарежда data.json…</div></div>
+  </div>
+</div>
+
+<div class="footer" id="footerLine">—</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════ CONFIG ══
+
+const PORTFOLIO = {
+  "BTC-USD": {name:"Bitcoin (BTC)",          curr:"CRYPTO",inv:68.48, sh:0.00091802,  cgId:"bitcoin"},
+  "ETC-USD": {name:"Ethereum Classic (ETC)", curr:"CRYPTO",inv:58.03, sh:6.72696447,  cgId:"ethereum-classic"},
+  "FLR-USD": {name:"Flare (FLR)",            curr:"CRYPTO",inv:0.10,  sh:14.8080141,  cgId:"flare-networks"},
+  "EXI2.DE": {name:"EXI2 ETF",             curr:"EUR",   inv:50.00, sh:0.477463713},
+  "MRVL":    {name:"Marvell (MRVL)",         curr:"USD",   inv:37.04, sh:0.258598397},
+  "DFEN.DE": {name:"VanEck Defense ETF",    curr:"EUR",   inv:51.00, sh:0.891265597},
+  "ROBO":    {name:"Robo-Advisor",          curr:"EUR",   inv:23.42, sh:1.0},
+};
+const DEF_PRICES = {"EXI2.DE":104.95,"MRVL":157.20,"DFEN.DE":55.715,"ROBO":23.37};
+const ALERTS_CFG = {
+  "MRVL":    {buy:140,  warn:190,   name:"Marvell Technology", sym:"$"},
+  "DFEN.DE": {buy:54,   warn:65,    name:"VanEck Defense ETF", sym:"€"},
+  "BTC-USD": {buy:60000,warn:95000, name:"Bitcoin",            sym:"$"},
+  "EXI2.DE": {buy:95,   warn:115,   name:"EXI2 ETF",           sym:"€"},
+  "ETC-USD": {buy:6.0,  warn:12.0,  name:"Ethereum Classic",   sym:"$"},
+};
+const TOTAL_INV = Object.values(PORTFOLIO).reduce((s,p)=>s+p.inv,0);
+
+// Workout schedule: 0=Sun,1=Mon,...,6=Sat
+const WORKOUT_PLAN = {
+  0:{name:"Почивка / Активно възстановяване",type:"Лек разтег или йога"},
+  1:{name:"Горна половина (Upper Body)",      type:"Гърди, рамене, трицепс"},
+  2:{name:"Кардио",                          type:"30–40 мин бягане / велоергометър"},
+  3:{name:"Долна половина (Lower Body)",     type:"Крака, глутеус, гърб"},
+  4:{name:"Кардио + Корем",                  type:"HIIT, ситъпс, планки"},
+  5:{name:"Push / Pull",                     type:"Комбиниран full-body"},
+  6:{name:"Почивка",                         type:"Пасивна почивка, разтег"},
+};
+
+const DISSERTATION_CHAPTERS = [
+  {id:"c1", name:"Глава 1 — Увод & Литературен обзор"},
+  {id:"c2", name:"Глава 2 — Методология"},
+  {id:"c3", name:"Глава 3 — Данни & Анализ"},
+  {id:"c4", name:"Глава 4 — Резултати & Дискусия"},
+  {id:"c5", name:"Глава 5 — Заключение & Препоръки"},
+  {id:"c6", name:"Библиография & Приложения"},
+];
+
+// ═══════════════════════════════════════════════════════════════ STATE ══
+
+let cgPrices     = {};
+let eurUsd       = 1.08;
+let manualPrices = JSON.parse(localStorage.getItem('manualPrices')||'null') || {...DEF_PRICES};
+
+// ═══════════════════════════════════════════════════════════════ CLOCK ══
+
+const DAYS   = ['Неделя','Понеделник','Вторник','Сряда','Четвъртък','Петък','Събота'];
+const MONTHS = ['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+
+function tickClock() {
+  const n = new Date();
+  el('liveClock').textContent = n.toLocaleTimeString('bg-BG',{hour12:false});
+  el('liveDate').textContent  = `${DAYS[n.getDay()]}, ${n.getDate()} ${MONTHS[n.getMonth()]} ${n.getFullYear()}`;
+  el('footerLine').textContent =
+    `Аспарух Дашборд · CoinGecko & Kraken · обновено: ${n.toLocaleTimeString('bg-BG')}`;
+  renderSchedule(n);
+  renderMarketStatus(n);
+}
+
+// ═══════════════════════════════════════════════════════════════ PRICES ══
+
+async function fetchJSON(url,ms=10000){
+  const r=await fetch(url,{signal:AbortSignal.timeout(ms)});
+  if(!r.ok)throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
+
+async function loadPrices(){
+  let ok=false;
+  try{
+    const [cg,kr]=await Promise.allSettled([
+      fetchJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum-classic,flare-networks&vs_currencies=eur,usd'),
+      fetchJSON('https://api.kraken.com/0/public/Ticker?pair=EURUSD',8000)
+    ]);
+    if(cg.status==='fulfilled'){cgPrices=cg.value;ok=true;}
+    if(kr.status==='fulfilled'){
+      const res=kr.value.result||{};
+      const pair=Object.keys(res)[0];
+      if(pair)eurUsd=parseFloat(res[pair].c[0]);
+    }
+  }catch(e){console.warn(e);}
+  el('sEurUsd').textContent=eurUsd.toFixed(4);
+  el('lupd').textContent=ok?`Обновено ${new Date().toLocaleTimeString('bg-BG')}`:'CoinGecko недостъпен';
+  renderPortfolio();
+  renderAlerts();
+}
+
+function priceEur(t){
+  const a=PORTFOLIO[t];if(!a)return null;
+  if(a.cgId){const p=cgPrices[a.cgId];if(p?.eur)return p.eur;}
+  const mp=manualPrices[t];
+  if(mp)return a.curr==='USD'?mp/eurUsd:mp;
+  return null;
+}
+function priceUsd(t){
+  const a=PORTFOLIO[t];if(!a)return null;
+  if(a.cgId)return cgPrices[a.cgId]?.usd??null;
+  const mp=manualPrices[t];if(!mp)return null;
+  return a.curr==='USD'?mp:mp*eurUsd;
+}
+function dispPrice(t){
+  const a=PORTFOLIO[t];if(!a)return null;
+  if(a.cgId)return cgPrices[a.cgId]?.usd??null;
+  return manualPrices[t]??null;
+}
+
+// ═══════════════════════════════════════════════════════════════ PORTFOLIO ══
+
+function renderPortfolio(){
+  let html='',totCur=0;
+  for(const [t,a] of Object.entries(PORTFOLIO)){
+    const peur=priceEur(t);
+    if(!peur){
+      html+=`<div class="asset"><div><div class="an">${a.name}</div><div class="at">${t}</div></div><div class="av" style="color:var(--muted);font-size:12px">Няма цена</div></div>`;
+      continue;
+    }
+    const cur=a.sh*peur,pnl=cur-a.inv,pct=(pnl/a.inv)*100;
+    totCur+=cur;
+    const sym=a.curr==='EUR'?'€':'$';
+    const dp=dispPrice(t);
+    const dpTx=dp?`${sym}${fmtN(dp,t==='BTC-USD'?0:2)}`:'—';
+    const cls=pnl>=0?'pos':'neg',arr=pnl>=0?'▲':'▼';
+    html+=`<div class="asset">
+      <div><div class="an">${a.name}</div><div class="at">${t} · ${dpTx}</div></div>
+      <div class="av">
+        <div class="ac">€${cur.toFixed(2)}</div>
+        <div class="ap ${cls}">${arr} ${pnl>=0?'+':''}€${pnl.toFixed(2)} (${pct.toFixed(1)}%)</div>
+      </div>
+    </div>`;
+  }
+  el('portfolioList').innerHTML=html;
+  if(totCur>0){
+    const pnl=totCur-TOTAL_INV,pct=(pnl/TOTAL_INV)*100,cls=pnl>=0?'pos':'neg';
+    const c=el('sTotCur');c.textContent=`€${totCur.toFixed(2)}`;c.classList.remove('pulse');
+    el('sTotPnl').innerHTML=`<span class="${cls}">${pnl>=0?'+':''}€${pnl.toFixed(2)} (${pct.toFixed(1)}%)</span>`;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════ ALERTS ══
+
+function renderAlerts(){
+  let html='',hot=0;
+  for(const [t,cfg] of Object.entries(ALERTS_CFG)){
+    const usd=priceUsd(t);
+    const price=(t==='EXI2.DE'||t==='DFEN.DE')?(manualPrices[t]||null):usd;
+    if(price==null){
+      html+=`<div class="alrt a-neu"><span style="font-weight:500">${cfg.name}</span><span style="color:var(--muted)">—</span></div>`;
+      continue;
+    }
+    let cls,icon,status;
+    if(price<=cfg.buy){cls='a-buy';icon='🟢';hot++;status=`КУПИ! ${cfg.sym}${fmtN(price,0)} ≤ ${cfg.sym}${cfg.buy}`;}
+    else if(price>=cfg.warn){cls='a-warn';icon='🟡';hot++;status=`ВНИМАНИЕ ${cfg.sym}${fmtN(price,0)} ≥ ${cfg.sym}${cfg.warn}`;}
+    else{const p=((price-cfg.buy)/cfg.buy)*100;cls='a-neu';icon='⬜';status=`${p>=0?'+':''}${p.toFixed(1)}% (таргет ${cfg.sym}${cfg.buy})`;}
+    html+=`<div class="alrt ${cls}">
+      <span style="font-weight:500">${icon} ${cfg.name}</span>
+      <span style="font-size:11px">${status}</span>
+    </div>`;
+  }
+  el('alertList').innerHTML=html;
+  const ab=el('alertBadge');
+  ab.textContent=hot?`${hot} активни`:'Без алерти';
+  ab.className='badge '+(hot?'by':'bb');
+}
+
+// ═══════════════════════════════════════════════════════════════ MANUAL PRICES ══
+
+function renderPriceEditors(){
+  let html='';
+  for(const t of ['EXI2.DE','MRVL','DFEN.DE','ROBO']){
+    const a=PORTFOLIO[t],sym=a.curr==='USD'?'$':'€';
+    html+=`<div class="pe">
+      <div><div style="font-size:13px;font-weight:500">${a.name}</div><div style="font-size:11px;color:var(--muted)">${t}</div></div>
+      <div style="display:flex;align-items:center">
+        <span style="font-size:12px;color:var(--muted);margin-right:3px">${sym}</span>
+        <input class="pi" type="number" step="0.01" id="pi_${t}"
+          value="${(manualPrices[t]||DEF_PRICES[t]).toFixed(2)}"
+          onkeydown="if(event.key==='Enter')savePrice('${t}')">
+        <button class="pb" onclick="savePrice('${t}')">✓</button>
+      </div>
+    </div>`;
+  }
+  el('priceEditors').innerHTML=html;
+}
+
+function savePrice(t){
+  const inp=el(`pi_${t}`),v=parseFloat(inp.value);
+  if(!isNaN(v)&&v>0){
+    manualPrices[t]=v;
+    localStorage.setItem('manualPrices',JSON.stringify(manualPrices));
+    renderPortfolio();renderAlerts();
+    inp.style.borderColor='var(--green)';
+    setTimeout(()=>inp.style.borderColor='',1600);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════ TASKS ══
+
+const TASKS = {
+  dis:[
+    {id:'d1',t:'09:30',label:'Писане — сесия 1 (1 ч, цел ~250 думи)'},
+    {id:'d2',t:'11:00',label:'Четене на литература / референции'},
+    {id:'d3',t:'14:00',label:'Писане — сесия 2 (1 ч, цел ~250 думи)'},
+    {id:'d4',t:'15:30',label:'Прегледай и коригирай написаното'},
+    {id:'d5',t:'16:00',label:'Обнови бележките за супервайзора'},
+    {id:'d6',t:'',     label:'Backup на файловете (Google Drive / GitHub)'},
+  ],
+  uni:[
+    {id:'u1',t:'08:00',label:'Провери разписание и задания за днес'},
+    {id:'u2',t:'',     label:'Лекции / семинари (по разписание)'},
+    {id:'u3',t:'',     label:'Домашна работа / задания'},
+    {id:'u4',t:'',     label:'Учебни материали — повторение'},
+    {id:'u5',t:'21:00',label:'Подготовка за утре — план и материали'},
+    {id:'u6',t:'',     label:'Провери дедлайни и срокове'},
+  ],
+  inv:[
+    {id:'i1',t:'09:00',label:'Сутрешен бриф — /morning в Telegram'},
+    {id:'i2',t:'09:15',label:'Провери крипто тренд (BTC, ETC, FLR)'},
+    {id:'i3',t:'12:00',label:'Обедна проверка на алерти — /alerts'},
+    {id:'i4',t:'16:30',label:'Борсата отваря — следи MRVL'},
+    {id:'i5',t:'17:00',label:'Обнови ръчните цени — /setprice'},
+    {id:'i6',t:'20:00',label:'Вечерна P&L проверка — /pnl'},
+  ],
+  hlt:[
+    {id:'h1',t:'06:30',label:'Събуди се, сутрешна рутина (вода + разтег)'},
+    {id:'h2',t:'07:00',label:'Закуска — протеини и бавни въглехидрати'},
+    {id:'h3',t:'07:30',label:'Сутрешна тренировка (по план)'},
+    {id:'h4',t:'13:00',label:'Обяд — балансирано, не пропускай'},
+    {id:'h5',t:'16:00',label:'Следобедна закуска'},
+    {id:'h6',t:'18:30',label:'Вечерна тренировка (ако сутринта нямаш)'},
+    {id:'h7',t:'20:00',label:'Вечеря — лека, богата на протеини'},
+    {id:'h8',t:'22:30',label:'Без екрани — подготовка за сън'},
+    {id:'h9',t:'23:00',label:'Лягане (цел: 7–8 ч сън)'},
+  ],
+};
+
+const ALL_TASK_IDS = Object.values(TASKS).flat().map(t=>t.id);
+
+function todayKey(){const d=new Date();return`tasks_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+function getdone(){return JSON.parse(localStorage.getItem(todayKey())||'[]');}
+
+function switchTab(cat){
+  document.querySelectorAll('.tab').forEach((b,i)=>{
+    b.classList.toggle('on',['dis','uni','inv','hlt'][i]===cat);
+  });
+  document.querySelectorAll('.tab-pane').forEach(p=>{p.classList.remove('on');});
+  el(`pane-${cat}`).classList.add('on');
+}
+
+function renderTasks(){
+  const done=getdone();
+  const cats={dis:'#bc8cff',uni:'#58a6ff',inv:'#3fb950',hlt:'#f0883e'};
+  for(const [cat,tasks] of Object.entries(TASKS)){
+    let html='';
+    for(const t of tasks){
+      const isDone=done.includes(t.id);
+      html+=`<div class="task ${isDone?'done':''}" onclick="toggleTask('${t.id}')">
+        <div class="chk">${isDone?'✓':''}</div>
+        <div style="flex:1">
+          <div class="tlbl">${t.label}</div>
+          ${t.t?`<div class="ttm">${t.t}</div>`:''}
+        </div>
+      </div>`;
+    }
+    el(`tasks-${cat}`).innerHTML=html;
+  }
+  const comp=done.filter(id=>ALL_TASK_IDS.includes(id)).length;
+  el('taskProg').textContent=`${comp} / ${ALL_TASK_IDS.length}`;
+  el('taskProg').className='badge '+(comp===ALL_TASK_IDS.length?'bg':'bb');
+  el('sTasksProg').textContent=`${comp} / ${ALL_TASK_IDS.length}`;
+  const n=new Date();
+  el('taskDay').textContent=`${DAYS[n.getDay()]}, ${n.toLocaleDateString('bg-BG')}`;
+  // sub-label
+  el('sTasksSub').textContent=comp===ALL_TASK_IDS.length?'✅ Всички готови':'задачи завършени';
+}
+
+function toggleTask(id){
+  const k=todayKey(),done=getdone(),i=done.indexOf(id);
+  if(i===-1)done.push(id);else done.splice(i,1);
+  localStorage.setItem(k,JSON.stringify(done));
+  renderTasks();
+}
+
+function resetTasks(){
+  if(confirm('Нулираш всички задачи за днес?')){
+    localStorage.removeItem(todayKey());renderTasks();
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════ SCHEDULE ══
+
+const SCHEDULE_ITEMS = [
+  {t:'06:30',title:'Събуждане & сутрешна рутина',    desc:'Вода, разтег, психически старт'},
+  {t:'07:00',title:'Закуска',                        desc:'Протеинова, бавни въглехидрати'},
+  {t:'07:30',title:'Сутрешна тренировка',            desc:'По дневен план (виж Здраве)'},
+  {t:'09:00',title:'Инвестиции — бриф',              desc:'Telegram /morning · крипто тренд', auto:true},
+  {t:'09:30',title:'Дисертация — сесия 1',           desc:'Фокусирано писане, ~250 думи'},
+  {t:'11:00',title:'Пауза + четене',                 desc:'Литература, референции, кафе'},
+  {t:'12:00',title:'Университет / лекции',           desc:'По разписание'},
+  {t:'13:00',title:'Обяд',                           desc:'Балансиран хранителен прием'},
+  {t:'14:00',title:'Дисертация — сесия 2',           desc:'Писане или анализ, ~250 думи'},
+  {t:'15:30',title:'Корекция & преглед',             desc:'Редактиране на написаното'},
+  {t:'16:00',title:'Университет — задания',          desc:'Домашни, семинари, подготовка'},
+  {t:'16:30',title:'Борсата отваря',                 desc:'NYSE/NASDAQ · MRVL активен'},
+  {t:'17:00',title:'Обнови цени',                    desc:'EXI2, MRVL, DFEN — /setprice или тук'},
+  {t:'18:30',title:'Вечерна тренировка',             desc:'Ако сутринта нямаш или е кардио ден'},
+  {t:'20:00',title:'Вечеря',                         desc:'Лека, богата на протеини'},
+  {t:'20:30',title:'P&L преглед',                    desc:'Инвестиции — /pnl · анализ'},
+  {t:'21:00',title:'Подготовка за утре',             desc:'План, задачи, материали'},
+  {t:'22:30',title:'Wind-down',                      desc:'Без екрани, четене, релаксация'},
+  {t:'23:00',title:'Дневен snapshot (авто)',         desc:'Автоматично CSV логване на портфолио', auto:true},
+  {t:'*',    title:'Ценови алерти (авто)',           desc:'Проверка на всеки 30 мин от бота', auto:true, rep:true},
+];
+
+function renderSchedule(now){
+  const curMins=now.getHours()*60+now.getMinutes();
+  let html='';
+  for(const item of SCHEDULE_ITEMS){
+    if(item.rep){
+      html+=`<div class="tl">
+        <div class="tl-tm">🔄</div>
+        <div class="tl-body">
+          <div class="tl-title">${item.title} <span class="badge bb" style="font-size:10px;padding:1px 5px;margin-left:5px">Авто</span></div>
+          <div class="tl-desc">${item.desc}</div>
+        </div>
+      </div>`;
+      continue;
+    }
+    const [h,m]=item.t.split(':').map(Number);
+    const iMins=h*60+(m||0);
+    const past=iMins<curMins,act=!past&&Math.abs(iMins-curMins)<=45;
+    const cls=act?'act':past?'past':'';
+    const autoTag=item.auto?`<span class="badge bb" style="font-size:10px;padding:1px 5px;margin-left:5px">Авто</span>`:'';
+    html+=`<div class="tl ${cls}">
+      <div class="tl-tm">${item.t}</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-title">${item.title}${autoTag}</div>
+        <div class="tl-desc">${item.desc}</div>
+      </div>
+    </div>`;
+  }
+  el('schedList').innerHTML=html;
+}
+
+function renderMarketStatus(now){
+  const dow=now.getDay(),mins=now.getHours()*60+now.getMinutes(),e=el('mktStatus');
+  if(dow===0||dow===6){e.textContent='Борсата затворена';e.className='badge br';}
+  else if(mins>=16*60+30&&mins<23*60){e.textContent='Борсата работи';e.className='badge bg';}
+  else if(mins<16*60+30){
+    const w=16*60+30-mins;
+    e.textContent=`Отваря след ${Math.floor(w/60)}ч ${w%60}м`;e.className='badge by';
+  } else{e.textContent='Борсата затворена';e.className='badge br';}
+}
+
+// ═══════════════════════════════════════════════════════════════ HEALTH ══
+
+function healthKey(){const d=new Date();return`health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+function getHealth(){return JSON.parse(localStorage.getItem(healthKey())||'{}');}
+function saveHealth(h){localStorage.setItem(healthKey(),JSON.stringify(h));}
+
+function renderWater(){
+  const h=getHealth(),cups=h.water||0;
+  let html='';
+  for(let i=0;i<8;i++){
+    html+=`<div class="drop ${i<cups?'full':''}" onclick="toggleWater(${i})">💧</div>`;
+  }
+  el('waterGrid').innerHTML=html;
+  el('sWater').textContent=`${cups} / 8`;
+}
+
+function toggleWater(idx){
+  const h=getHealth(),cur=h.water||0;
+  h.water=idx<cur?idx:idx+1;
+  saveHealth(h);renderWater();updateHealthScore();
+}
+
+function toggleMeal(meal){
+  const h=getHealth();
+  h[meal]=!h[meal];
+  saveHealth(h);renderMeals();updateHealthScore();
+}
+
+function renderMeals(){
+  const h=getHealth();
+  for(const m of['breakfast','lunch','snack','dinner']){
+    const btn=el(`meal-${m}`);
+    if(btn){btn.classList.toggle('done',!!h[m]);}
+  }
+}
+
+function toggleWorkout(){
+  const h=getHealth();h.workout=!h.workout;
+  saveHealth(h);renderWorkout();updateHealthScore();
+}
+
+function renderWorkout(){
+  const h=getHealth(),dow=new Date().getDay(),plan=WORKOUT_PLAN[dow];
+  el('workoutLabel').textContent=plan.name;
+  el('workoutType').textContent=plan.type;
+  const btn=el('workoutBtn');
+  btn.classList.toggle('done',!!h.workout);
+  btn.textContent=h.workout?'✅ Завършена':'Маркирай като завършена';
+  el('sWorkout').textContent=h.workout?'✅ Готово':'Предстои';
+  el('sWorkoutSub').textContent=plan.name;
+}
+
+function updateHealthScore(){
+  const h=getHealth();
+  let pts=0;
+  if((h.water||0)>=8)pts++;
+  if(h.breakfast)pts++;if(h.lunch)pts++;if(h.dinner)pts++;
+  if(h.workout)pts++;
+  const total=5;
+  el('healthScore').textContent=`${pts}/${total} точки`;
+  el('healthScore').className='badge '+(pts===total?'bg':pts>=3?'by':'br');
+}
+
+// ═══════════════════════════════════════════════════════════════ DISSERTATION ══
+
+function dissKey(){const d=new Date();return`diss_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
+function getDiss(){return JSON.parse(localStorage.getItem(dissKey())||'{}');}
+function saveDiss(d){localStorage.setItem(dissKey(),JSON.stringify(d));}
+
+function updateWordCount(val){
+  const words=parseInt(val)||0,goal=500;
+  const pct=Math.min((words/goal)*100,100);
+  el('wordFill').style.width=pct+'%';
+  el('sDissWords').textContent=`${words} думи`;
+  el('wordStatus').textContent=
+    words>=goal?`✅ Цел постигната! +${words-goal} бонус думи`
+    :`Остават ${goal-words} думи до целта`;
+  const d=getDiss();d.words=words;saveDiss(d);
+}
+
+function saveNotes(){
+  const d=getDiss();d.notes=el('dissNotes').value;saveDiss(d);
+}
+
+function renderChapters(){
+  const d=getDiss(),done=d.chapters||[];
+  let html='';
+  for(const c of DISSERTATION_CHAPTERS){
+    const isDone=done.includes(c.id);
+    html+=`<div class="chap-item">
+      <span style="color:${isDone?'var(--green)':'var(--text)'}">${isDone?'✅ ':'📝 '}${c.name}</span>
+      <button class="chap-btn ${isDone?'done':''}" onclick="toggleChapter('${c.id}')">
+        ${isDone?'Завършена':'Отбележи'}
+      </button>
+    </div>`;
+  }
+  el('chapList').innerHTML=html;
+  const comp=done.length,total=DISSERTATION_CHAPTERS.length;
+  el('dissStatus').textContent=`${comp}/${total} глави`;
+  el('dissStatus').className='badge '+(comp===total?'bg':'bp');
+}
+
+function toggleChapter(id){
+  const d=getDiss(),done=d.chapters||[],i=done.indexOf(id);
+  if(i===-1)done.push(id);else done.splice(i,1);
+  d.chapters=done;saveDiss(d);renderChapters();
+}
+
+function loadDissertation(){
+  const d=getDiss();
+  if(d.words){
+    el('wordInput').value=d.words;
+    updateWordCount(d.words);
+  }
+  if(d.notes){el('dissNotes').value=d.notes;}
+  renderChapters();
+}
+
+// ═══════════════════════════════════════════════════════════════ PROJECTS ══
+
+function renderProjects(){
+  const projects=[
+    {name:'Asparuh Investment Bot v4',  status:'Активен',    sCls:'bg',  pct:85,  clr:'green',
+      desc:'Telegram бот · CoinGecko live · Kraken EUR/USD · CSV logging',
+      meta:'Commands: /prices /pnl /alerts /setprice /history /morning'},
+    {name:'Дисертация',                 status:'В процес',   sCls:'bp',  pct:35,  clr:'purple',
+      desc:'Академично изследване — писане, анализ, защита',
+      meta:'Цел: 500 думи/ден · Глави: 6 · Deadline: TBD'},
+    {name:'Университет',                status:'Активен',    sCls:'bb',  pct:60,  clr:'blue',
+      desc:'Курсова работа, лекции, семинари, задания',
+      meta:'Следи дедлайни · Подготвяй се навреме'},
+    {name:'Здравна Програма',           status:'Активен',    sCls:'bo',  pct:50,  clr:'orange',
+      desc:'Тренировки по план · Хранене · Хидратация · Сън',
+      meta:'Тренировка 5 дни/седмица · Вода 2 л/ден'},
+    {name:'Портфолио Трекер',           status:'Активен',    sCls:'bg',  pct:70,  clr:'green',
+      desc:'7 позиции: BTC, ETC, FLR, EXI2.DE, MRVL, DFEN.DE, ROBO',
+      meta:`Вложено: €${TOTAL_INV.toFixed(2)} · Крипто + ETF + Акции`},
+    {name:'Интерактивен Дашборд',       status:'Live',       sCls:'bg',  pct:100, clr:'blue',
+      desc:'GitHub Pages · Live цени · Задачи · Здраве · Авто обновяване',
+      meta:'GitHub Actions дневен snapshot · data.json'},
+  ];
+  let html='';
+  for(const p of projects){
+    html+=`<div class="proj">
+      <div class="pjh"><span class="pjn">${p.name}</span><span class="badge ${p.sCls}">${p.status}</span></div>
+      <div class="pjm">${p.desc}</div>
+      <div class="pjm">${p.meta}</div>
+      <div class="pbar"><div class="pfill" style="width:${p.pct}%;background:var(--${p.clr})"></div></div>
+    </div>`;
+  }
+  el('projectsList').innerHTML=html;
+}
+
+// ═══════════════════════════════════════════════════════════════ HISTORY ══
+
+async function loadHistory(){
+  try{
+    const data=await fetchJSON('./data.json',5000);
+    if(!data.history?.length)throw new Error('empty');
+    const rows=[...data.history].reverse().slice(0,10);
+    let html='';
+    for(const r of rows){
+      const cls=r.pnl>=0?'pos':'neg';
+      html+=`<div class="hr-row">
+        <span style="color:var(--muted)">${r.date}</span>
+        <span style="font-weight:500">€${r.total.toFixed(2)}</span>
+        <span class="${cls}">${r.pnl>=0?'+':''}€${r.pnl.toFixed(2)} (${r.pct.toFixed(1)}%)</span>
+      </div>`;
+    }
+    el('histList').innerHTML=html;
+    el('histBadge').textContent=`${rows.length} дни`;
+    if(data.eurUsd&&eurUsd===1.08)eurUsd=data.eurUsd;
+  }catch{
+    el('histList').innerHTML='<div class="loading" style="font-size:12px">Историята ще се появи след първото автоматично обновяване от GitHub Actions (daily cron).</div>';
+    el('histBadge').textContent='Няма данни';
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════ UTIL ══
+
+function el(id){return document.getElementById(id);}
+function fmtN(n,dec=2){return Number(n).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});}
+
+// ═══════════════════════════════════════════════════════════════ INIT ══
+
+function init(){
+  tickClock();
+  setInterval(tickClock,1000);
+  renderTasks();
+  renderPriceEditors();
+  renderProjects();
+  renderWater();
+  renderMeals();
+  renderWorkout();
+  updateHealthScore();
+  loadDissertation();
+  loadHistory();
+  loadPrices();
+  setInterval(loadPrices,5*60*1000);
+}
+
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
