@@ -1,103 +1,486 @@
-<div class="g2">
+<!-- diet.html — Модул Диета | Аспарух Дашборд -->
+<style>
+.diet-wrap{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e6edf3}
+.diet-grid{display:grid;grid-template-columns:1fr 340px;gap:13px}
+@media(max-width:900px){.diet-grid{grid-template-columns:1fr}}
 
-  <!-- WATER TRACKER -->
-  <div class="card">
-    <div class="ch">
-      <span class="ct">💧 Прием на вода</span>
-      <span class="badge bb" id="d-waterBadge">0 / 8</span>
-    </div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Цел: 8 чаши × 250 мл = 2 л на ден</div>
-    <div class="water-grid" id="d-waterGrid"></div>
-    <div style="height:5px;background:var(--s2);border-radius:3px;overflow:hidden;margin-top:12px">
-      <div id="d-waterBar" style="height:100%;border-radius:3px;background:var(--blue);transition:width .4s;width:0%"></div>
-    </div>
-    <div style="font-size:11px;color:var(--muted);margin-top:6px" id="d-waterMsg">Не е пита вода днес</div>
-  </div>
+/* Macro bars */
+.macro-row{display:flex;gap:10px;margin-bottom:13px;flex-wrap:wrap}
+.macro-card{flex:1;min-width:120px;background:#1c2128;border:1px solid #30363d;border-radius:8px;padding:10px 13px}
+.mc-label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+.mc-val{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.mc-sub{font-size:11px;color:#8b949e;margin-top:1px}
+.mc-bar{height:4px;background:#30363d;border-radius:2px;margin-top:6px;overflow:hidden}
+.mc-fill{height:100%;border-radius:2px;transition:width .4s}
 
-  <!-- MEALS -->
-  <div class="card">
-    <div class="ch">
-      <span class="ct">🍽️ Хранене</span>
-      <span class="badge bb" id="d-mealBadge">0 / 4</span>
-    </div>
-    <div class="meal-item">
-      <div>
-        <div style="font-weight:500">Закуска</div>
-        <div style="font-size:11px;color:var(--muted)">07:00 — протеини, бавни въглехидрати</div>
+/* Add food panel */
+.add-panel{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}
+.add-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.search-wrap{position:relative;margin-bottom:8px}
+.search-input{width:100%;background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:8px 12px;color:#e6edf3;font-size:13px;outline:none;box-sizing:border-box}
+.search-input:focus{border-color:#58a6ff}
+.search-input::placeholder{color:#8b949e}
+.dropdown{position:absolute;top:calc(100% + 3px);left:0;right:0;background:#161b22;border:1px solid #30363d;border-radius:6px;max-height:220px;overflow-y:auto;z-index:50;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.dropdown.show{display:block}
+.dd-item{padding:8px 12px;cursor:pointer;font-size:12px;border-bottom:1px solid #21262d;display:flex;justify-content:space-between;align-items:center}
+.dd-item:last-child{border-bottom:none}
+.dd-item:hover{background:#1c2128}
+.dd-name{font-weight:500}
+.dd-cat{font-size:10px;color:#8b949e;margin-top:1px}
+.dd-macros{font-size:11px;color:#8b949e;white-space:nowrap;text-align:right}
+
+/* Selected food info */
+.sel-food{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:10px;margin-bottom:8px;display:none}
+.sel-name{font-size:13px;font-weight:600;margin-bottom:6px}
+.sel-per100{display:flex;gap:10px;font-size:11px;color:#8b949e;margin-bottom:8px;flex-wrap:wrap}
+.sel-per100 span{background:#1c2128;padding:2px 7px;border-radius:4px}
+.portion-row{display:flex;gap:7px;align-items:center}
+.portion-row label{font-size:12px;color:#8b949e;white-space:nowrap}
+.portion-input{width:70px;background:#0d1117;border:1px solid #30363d;border-radius:4px;padding:5px 8px;color:#e6edf3;font-size:13px;text-align:center;outline:none}
+.portion-input:focus{border-color:#58a6ff}
+.meal-select{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:4px;padding:5px 8px;color:#e6edf3;font-size:12px;outline:none;cursor:pointer}
+.add-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600;white-space:nowrap;transition:background .15s}
+.add-btn:hover{background:#388bfd}
+.calc-preview{font-size:11px;color:#58a6ff;margin-top:6px;min-height:16px}
+
+/* Log */
+.log-panel{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}
+.log-title-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.log-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
+.day-nav{display:flex;align-items:center;gap:7px}
+.dnav-btn{background:transparent;border:1px solid #30363d;border-radius:4px;color:#8b949e;padding:2px 8px;cursor:pointer;font-size:14px;line-height:1.4}
+.dnav-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.dnav-date{font-size:12px;color:#e6edf3;font-weight:600;min-width:90px;text-align:center}
+
+/* Meal groups */
+.meal-group{margin-bottom:10px}
+.meal-hdr{font-size:11px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:.4px;padding:5px 0 3px;border-bottom:1px solid #21262d;margin-bottom:4px;display:flex;justify-content:space-between}
+.meal-hdr-cals{font-weight:400}
+.log-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #21262d;gap:8px}
+.log-row:last-child{border-bottom:none}
+.lr-name{font-size:12px;flex:1}
+.lr-portion{font-size:11px;color:#8b949e;white-space:nowrap}
+.lr-macros{font-size:11px;color:#8b949e;white-space:nowrap;text-align:right}
+.lr-del{background:transparent;border:none;color:#6e7681;cursor:pointer;font-size:14px;padding:0 3px;line-height:1;transition:color .15s}
+.lr-del:hover{color:#f85149}
+
+.log-empty{font-size:12px;color:#8b949e;text-align:center;padding:18px 0}
+
+/* Daily total */
+.day-total{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:10px;margin-top:10px}
+.dt-row{display:flex;justify-content:space-between;font-size:12px;padding:2px 0}
+.dt-label{color:#8b949e}
+.dt-val{font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Water */
+.water-section{margin-top:10px}
+.water-title{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px;font-weight:600}
+.water-drops{display:flex;gap:5px;flex-wrap:wrap}
+.wdrop{width:30px;height:30px;border-radius:50%;border:2px solid #30363d;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;opacity:.35;transition:all .2s}
+.wdrop.full{border-color:#58a6ff;opacity:1;background:rgba(88,166,255,.12)}
+
+/* IF window */
+.if-bar{background:#1c2128;border:1px solid #30363d;border-radius:6px;padding:9px 12px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.if-label{font-size:11px;color:#8b949e}
+.if-val{font-size:12px;font-weight:600}
+.if-open{color:#3fb950}.if-closed{color:#f85149}
+
+/* Scrollbar */
+.dropdown::-webkit-scrollbar{width:5px}
+.dropdown::-webkit-scrollbar-track{background:transparent}
+.dropdown::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+</style>
+
+<div class="diet-wrap">
+
+<!-- IF window status -->
+<div class="if-bar" id="ifBar">
+  <span class="if-label">⏳ Intermittent Fasting 16:8</span>
+  <span class="if-val" id="ifStatus">—</span>
+</div>
+
+<!-- Macro summary bars -->
+<div class="macro-row">
+  <div class="macro-card">
+    <div class="mc-label">Калории</div>
+    <div class="mc-val" id="mCalories">0</div>
+    <div class="mc-sub">цел: <span id="mCalGoal">1650</span> kcal</div>
+    <div class="mc-bar"><div class="mc-fill" id="mCalBar" style="width:0%;background:#f0883e"></div></div>
+  </div>
+  <div class="macro-card">
+    <div class="mc-label">Протеин</div>
+    <div class="mc-val" id="mProt">0g</div>
+    <div class="mc-sub">цел: 120g</div>
+    <div class="mc-bar"><div class="mc-fill" id="mProtBar" style="width:0%;background:#3fb950"></div></div>
+  </div>
+  <div class="macro-card">
+    <div class="mc-label">Мазнини</div>
+    <div class="mc-val" id="mFat">0g</div>
+    <div class="mc-sub">~55g лимит</div>
+    <div class="mc-bar"><div class="mc-fill" id="mFatBar" style="width:0%;background:#d29922"></div></div>
+  </div>
+  <div class="macro-card">
+    <div class="mc-label">Въглехидрати</div>
+    <div class="mc-val" id="mCarbs">0g</div>
+    <div class="mc-sub">~165g лимит</div>
+    <div class="mc-bar"><div class="mc-fill" id="mCarbsBar" style="width:0%;background:#bc8cff"></div></div>
+  </div>
+</div>
+
+<div class="diet-grid">
+
+<!-- LEFT: LOG -->
+<div>
+  <div class="log-panel">
+    <div class="log-title-row">
+      <span class="log-title">Дневник</span>
+      <div class="day-nav">
+        <button class="dnav-btn" onclick="dietNavDay(-1)">‹</button>
+        <span class="dnav-date" id="dietDayLabel">днес</span>
+        <button class="dnav-btn" onclick="dietNavDay(1)">›</button>
       </div>
-      <button class="mcheck" id="d-meal-breakfast" onclick="dietMeal('breakfast')">Изяждена</button>
     </div>
-    <div class="meal-item">
-      <div>
-        <div style="font-weight:500">Обяд</div>
-        <div style="font-size:11px;color:var(--muted)">13:00 — балансирано хранене</div>
-      </div>
-      <button class="mcheck" id="d-meal-lunch" onclick="dietMeal('lunch')">Изяден</button>
+    <div id="dietLog"></div>
+    <div class="day-total" id="dietDayTotal" style="display:none">
+      <div class="dt-row"><span class="dt-label">Общо калории</span><span class="dt-val" id="dtCal">—</span></div>
+      <div class="dt-row"><span class="dt-label">Протеин</span><span class="dt-val" id="dtProt">—</span></div>
+      <div class="dt-row"><span class="dt-label">Мазнини</span><span class="dt-val" id="dtFat">—</span></div>
+      <div class="dt-row"><span class="dt-label">Въглехидрати</span><span class="dt-val" id="dtCarbs">—</span></div>
     </div>
-    <div class="meal-item">
-      <div>
-        <div style="font-weight:500">Следобедна закуска</div>
-        <div style="font-size:11px;color:var(--muted)">16:00 — плодове, ядки, протеинов бар</div>
-      </div>
-      <button class="mcheck" id="d-meal-snack" onclick="dietMeal('snack')">Изядена</button>
-    </div>
-    <div class="meal-item">
-      <div>
-        <div style="font-weight:500">Вечеря</div>
-        <div style="font-size:11px;color:var(--muted)">20:00 — лека, богата на протеини</div>
-      </div>
-      <button class="mcheck" id="d-meal-dinner" onclick="dietMeal('dinner')">Изядена</button>
-    </div>
-    <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border)">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px">Здравен резултат за деня</div>
-      <div style="display:flex;gap:4px" id="d-healthDots"></div>
-      <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:var(--muted)" id="d-healthLabels"></div>
+    <!-- Water -->
+    <div class="water-section" id="waterSection">
+      <div class="water-title">💧 Вода — <span id="waterCount">0</span> / 8 чаши</div>
+      <div class="water-drops" id="waterDrops"></div>
     </div>
   </div>
+</div>
+
+<!-- RIGHT: ADD FOOD -->
+<div>
+  <div class="add-panel">
+    <div class="add-title">➕ Добави храна</div>
+
+    <div class="search-wrap">
+      <input class="search-input" type="text" id="foodSearch" placeholder="Търси от 348 храни..." autocomplete="off"
+        oninput="dietSearch(this.value)" onfocus="dietSearch(this.value)">
+      <div class="dropdown" id="foodDropdown"></div>
+    </div>
+
+    <div class="sel-food" id="selFood">
+      <div class="sel-name" id="selFoodName">—</div>
+      <div class="sel-per100" id="selFoodPer100"></div>
+      <div class="portion-row">
+        <label>Порция:</label>
+        <input class="portion-input" type="number" id="portionInput" value="100" min="1" max="2000"
+          oninput="dietUpdatePreview()">
+        <span style="font-size:12px;color:#8b949e">g/ml</span>
+        <select class="meal-select" id="mealSelect">
+          <option value="закуска">Закуска</option>
+          <option value="лека закуска">Лека закуска</option>
+          <option value="обяд" selected>Обяд</option>
+          <option value="следобедна">Следобедна</option>
+          <option value="вечеря">Вечеря</option>
+          <option value="друго">Друго</option>
+        </select>
+      </div>
+      <div class="calc-preview" id="calcPreview"></div>
+      <div style="margin-top:8px">
+        <button class="add-btn" onclick="dietAddEntry()">✓ Добави</button>
+      </div>
+    </div>
+
+    <!-- Custom entry -->
+    <div style="margin-top:12px;border-top:1px solid #21262d;padding-top:10px">
+      <div class="add-title" style="margin-bottom:8px">📝 Ръчно добавяне</div>
+      <input class="search-input" type="text" id="customName" placeholder="Наименование" style="margin-bottom:5px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px">
+        <input class="search-input" type="number" id="customP" placeholder="Протеин g" min="0">
+        <input class="search-input" type="number" id="customF" placeholder="Мазнини g" min="0">
+        <input class="search-input" type="number" id="customC" placeholder="Въглехидрати g" min="0">
+        <input class="search-input" type="number" id="customPortion" placeholder="Порция g" value="100">
+      </div>
+      <button class="add-btn" onclick="dietAddCustom()" style="width:100%">Добави ръчно</button>
+    </div>
+  </div>
+</div>
 
 </div>
+</div>
+
 <script>
 (function(){
-  function hKey(){const d=new Date();return`health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
-  function gh(){return JSON.parse(localStorage.getItem(hKey())||'{}');}
-  function sh(h){localStorage.setItem(hKey(),JSON.stringify(h));window.dispatchEvent(new Event('statsUpdate'));}
+// ── DATABASE ──────────────────────────────────────────────────────
+const FOODS = [{"cat":"Месо, месни продукти и яйца","name":"Агнешко","p":17.5,"f":11.7,"c":0.0,"e":178.0},{"cat":"Месо, месни продукти и яйца","name":"Говеждо месо от филе","p":19.0,"f":7.8,"c":0.0,"e":148.0},{"cat":"Месо, месни продукти и яйца","name":"Гъски","p":24.5,"f":29.7,"c":0.0,"e":370.0},{"cat":"Месо, месни продукти и яйца","name":"Кокоше","p":17.7,"f":20.8,"c":0.0,"e":261.0},{"cat":"Месо, месни продукти и яйца","name":"Кренвирш","p":18.5,"f":21.5,"c":0.0,"e":271.0},{"cat":"Месо, месни продукти и яйца","name":"Луканка","p":25.6,"f":39.7,"c":0.0,"e":466.0},{"cat":"Месо, месни продукти и яйца","name":"Овче","p":18.2,"f":12.5,"c":0.0,"e":188.0},{"cat":"Месо, месни продукти и яйца","name":"Петли","p":20.8,"f":7.0,"c":0.0,"e":148.0},{"cat":"Месо, месни продукти и яйца","name":"Пилешки крила","p":18.0,"f":15.0,"c":1.0,"e":214.0},{"cat":"Месо, месни продукти и яйца","name":"Пилешко месо от бут","p":21.0,"f":3.4,"c":0.0,"e":117.0},{"cat":"Месо, месни продукти и яйца","name":"Пилешко месо от гърди","p":24.0,"f":1.2,"c":0.0,"e":109.0},{"cat":"Месо, месни продукти и яйца","name":"Пилешко месо от плешка","p":19.5,"f":5.9,"c":0.0,"e":133.0},{"cat":"Месо, месни продукти и яйца","name":"Пуешко месо от бут","p":20.3,"f":2.4,"c":0.0,"e":105.0},{"cat":"Месо, месни продукти и яйца","name":"Пуешко месо от гърди","p":24.6,"f":0.7,"c":0.0,"e":107.0},{"cat":"Месо, месни продукти и яйца","name":"Пуешко месо от плешка","p":20.7,"f":3.5,"c":0.0,"e":116.0},{"cat":"Месо, месни продукти и яйца","name":"Саздърма","p":21.0,"f":34.3,"c":0.0,"e":398.0},{"cat":"Месо, месни продукти и яйца","name":"Салам Камчия","p":21.0,"f":16.4,"c":0.0,"e":235.0},{"cat":"Месо, месни продукти и яйца","name":"Свинско месо от бут","p":18.8,"f":15.7,"c":0.0,"e":219.0},{"cat":"Месо, месни продукти и яйца","name":"Свинско филе","p":20.5,"f":5.5,"c":0.0,"e":134.0},{"cat":"Месо, месни продукти и яйца","name":"Свинско филе - ребрена дъга","p":19.9,"f":14.1,"c":0.0,"e":209.0},{"cat":"Месо, месни продукти и яйца","name":"Телешко месо от бут","p":21.0,"f":3.1,"c":0.0,"e":114.0},{"cat":"Месо, месни продукти и яйца","name":"Телешко месо от врат","p":19.4,"f":5.5,"c":0.0,"e":129.0},{"cat":"Месо, месни продукти и яйца","name":"Телешко месо от плешка","p":19.2,"f":5.2,"c":0.0,"e":126.0},{"cat":"Месо, месни продукти и яйца","name":"Телешко месо от подбедрица","p":19.2,"f":3.5,"c":0.0,"e":110.0},{"cat":"Месо, месни продукти и яйца","name":"Телешко филе","p":20.2,"f":3.3,"c":0.0,"e":112.0},{"cat":"Месо, месни продукти и яйца","name":"Хамбургски салам","p":17.0,"f":22.0,"c":0.0,"e":269.0},{"cat":"Месо, месни продукти и яйца","name":"Шпеков салам","p":22.0,"f":40.5,"c":0.0,"e":458.0},{"cat":"Месо, месни продукти и яйца","name":"Яйце - гъше","p":13.9,"f":13.5,"c":1.3,"e":185.0},{"cat":"Месо, месни продукти и яйца","name":"Яйце - кокоше","p":12.9,"f":11.2,"c":0.7,"e":157.0},{"cat":"Месо, месни продукти и яйца","name":"Яйце - пуешко","p":13.5,"f":11.7,"c":1.1,"e":166.0},{"cat":"Месо, месни продукти и яйца","name":"Яйчен белтък - кокоши","p":11.1,"f":0.7,"c":0.7,"e":54.0},{"cat":"Месо, месни продукти и яйца","name":"Яйчен жалтък - кокоши","p":16.1,"f":81.9,"c":9.3,"e":849.0},{"cat":"Месо, месни продукти и яйца","name":"кебабче","p":14.3,"f":12.6,"c":1.2,"e":178.1},{"cat":"Месо, месни продукти и яйца","name":"черебн дроб","p":21.4,"f":3.6,"c":2.5,"e":134.0},{"cat":"Месо, месни продукти и яйца","name":"пастет","p":13.5,"f":13.1,"c":6.5,"e":201.0},{"cat":"Месо, месни продукти и яйца","name":"Бекон","p":37.0,"f":42.0,"c":1.4,"e":540.0},{"cat":"Риба и рибни продукти","name":"Бял амур","p":17.6,"f":6.4,"c":0.0,"e":130.0},{"cat":"Риба и рибни продукти","name":"Бяла риба","p":17.6,"f":0.6,"c":0.0,"e":77.0},{"cat":"Риба и рибни продукти","name":"Калкан","p":15.8,"f":0.6,"c":0.0,"e":70.0},{"cat":"Риба и рибни продукти","name":"Карагьоз","p":15.5,"f":20.4,"c":0.0,"e":249.0},{"cat":"Риба и рибни продукти","name":"Кефал","p":19.4,"f":2.5,"c":0.0,"e":102.0},{"cat":"Риба и рибни продукти","name":"Копърка","p":14.5,"f":0.8,"c":0.0,"e":66.0},{"cat":"Риба и рибни продукти","name":"Лаврак","p":23.9,"f":3.3,"c":0.0,"e":128.0},{"cat":"Риба и рибни продукти","name":"Лефер","p":19.8,"f":2.5,"c":0.0,"e":103.0},{"cat":"Риба и рибни продукти","name":"Мерлуза","p":16.5,"f":0.5,"c":0.0,"e":72.0},{"cat":"Риба и рибни продукти","name":"Омар","p":18.8,"f":0.9,"c":0.0,"e":85.0},{"cat":"Риба и рибни продукти","name":"Паламуд","p":20.5,"f":5.0,"c":0.0,"e":129.0},{"cat":"Риба и рибни продукти","name":"Пъстърва","p":16.5,"f":4.5,"c":0.0,"e":108.0},{"cat":"Риба и рибни продукти","name":"Риба тон","p":23.3,"f":4.9,"c":0.0,"e":140.0},{"cat":"Риба и рибни продукти","name":"Сардина","p":19.4,"f":5.2,"c":0.0,"e":126.0},{"cat":"Риба и рибни продукти","name":"Сафрид","p":18.6,"f":2.1,"c":0.0,"e":95.0},{"cat":"Риба и рибни продукти","name":"Скумрия","p":24.3,"f":3.2,"c":0.0,"e":128.0},{"cat":"Риба и рибни продукти","name":"Сом","p":13.3,"f":11.3,"c":0.0,"e":157.0},{"cat":"Риба и рибни продукти","name":"Сьомга - Атлантическа","p":19.9,"f":6.3,"c":0.0,"e":138.0},{"cat":"Риба и рибни продукти","name":"Треска","p":17.0,"f":0.3,"c":0.0,"e":72.0},{"cat":"Риба и рибни продукти","name":"Трицона","p":18.6,"f":5.5,"c":0.0,"e":126.0},{"cat":"Риба и рибни продукти","name":"Филе от акула","p":20.0,"f":4.0,"c":0.0,"e":118.0},{"cat":"Риба и рибни продукти","name":"Хайвер-сьомга","p":26.1,"f":15.5,"c":4.6,"e":266.0},{"cat":"Риба и рибни продукти","name":"Хайвер-шаран","p":27.2,"f":6.8,"c":0.0,"e":173.0},{"cat":"Риба и рибни продукти","name":"Хек","p":17.7,"f":2.3,"c":0.0,"e":93.0},{"cat":"Риба и рибни продукти","name":"Херинга","p":20.7,"f":4.9,"c":0.0,"e":129.0},{"cat":"Риба и рибни продукти","name":"Цаца","p":17.3,"f":5.6,"c":0.0,"e":121.0},{"cat":"Риба и рибни продукти","name":"Чига","p":18.0,"f":6.0,"c":0.0,"e":128.0},{"cat":"Риба и рибни продукти","name":"Шаран","p":17.8,"f":5.6,"c":0.0,"e":123.0},{"cat":"Риба и рибни продукти","name":"Камбала","p":18.6,"f":1.3,"c":0.0,"e":86.0},{"cat":"Риба и рибни продукти","name":"Щука","p":18.4,"f":0.8,"c":0.0,"e":82.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" 1.5%","p":3.6,"f":1.5,"c":4.3,"e":46.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" Закуска","p":4.7,"f":3.3,"c":18.3,"e":124.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" мед и пшеничен зародиш","p":3.7,"f":3.0,"c":13.5,"e":97.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" Натурална","p":3.6,"f":3.5,"c":4.3,"e":64.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" Натурална 0.5%","p":4.3,"f":0.5,"c":3.9,"e":38.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" пълнозърнеста мюсли","p":3.7,"f":3.2,"c":14.0,"e":101.0},{"cat":"Мляко и млечни продукти","name":"\"Активиа\" с плодове","p":3.7,"f":3.0,"c":13.7,"e":98.0},{"cat":"Мляко и млечни продукти","name":"Извара обезмаслена","p":17.2,"f":0.6,"c":1.8,"e":83.0},{"cat":"Мляко и млечни продукти","name":"Кашкавал краве","p":25.8,"f":29.6,"c":1.6,"e":381.0},{"cat":"Мляко и млечни продукти","name":"Кашкавал овчи","p":24.4,"f":30.9,"c":2.0,"e":389.0},{"cat":"Мляко и млечни продукти","name":"Кисело мляко 0,1%","p":3.3,"f":0.1,"c":4.7,"e":33.0},{"cat":"Мляко и млечни продукти","name":"Кисело мляко 2%","p":3.2,"f":2.0,"c":4.5,"e":49.0},{"cat":"Мляко и млечни продукти","name":"Кисело мляко 3,6%","p":3.1,"f":3.6,"c":4.5,"e":63.0},{"cat":"Мляко и млечни продукти","name":"Краве сирене","p":16.9,"f":24.7,"c":1.4,"e":299.0},{"cat":"Мляко и млечни продукти","name":"Овче сирене","p":17.1,"f":27.0,"c":1.1,"e":320.0},{"cat":"Мляко и млечни продукти","name":"Прясно мляко 0,1%","p":3.5,"f":0.1,"c":5.0,"e":35.0},{"cat":"Мляко и млечни продукти","name":"Прясно мляко 1,5%","p":3.3,"f":1.5,"c":4.7,"e":46.0},{"cat":"Мляко и млечни продукти","name":"Прясно мляко 3,6%","p":3.3,"f":3.6,"c":4.7,"e":65.0},{"cat":"Мляко и млечни продукти","name":"Прясно мляко Овче","p":6.7,"f":7.7,"c":4.5,"e":115.0},{"cat":"Мляко и млечни продукти","name":"Сметана","p":1.6,"f":45.0,"c":3.0,"e":428.0},{"cat":"Хлебни изделия и зърнени храни","name":"баничка с извара","p":8.1,"f":20.4,"c":41.1,"e":391.0},{"cat":"Хлебни изделия и зърнени храни","name":"Варен геврек","p":6.3,"f":0.7,"c":42.1,"e":204.0},{"cat":"Хлебни изделия и зърнени храни","name":"Виенска кифла","p":8.6,"f":8.0,"c":64.9,"e":374.0},{"cat":"Хлебни изделия и зърнени храни","name":"Жито","p":8.4,"f":2.3,"c":65.4,"e":323.0},{"cat":"Хлебни изделия и зърнени храни","name":"Кашкавалка","p":6.5,"f":14.6,"c":26.9,"e":269.0},{"cat":"Хлебни изделия и зърнени храни","name":"Милинка","p":8.3,"f":8.8,"c":37.8,"e":277.0},{"cat":"Хлебни изделия и зърнени храни","name":"Козунак","p":8.4,"f":10.0,"c":60.9,"e":375.0},{"cat":"Хлебни изделия и зърнени храни","name":"Леща","p":23.0,"f":1.0,"c":57.9,"e":340.0},{"cat":"Хлебни изделия и зърнени храни","name":"Макарони и спагети","p":10.8,"f":1.1,"c":75.0,"e":361.0},{"cat":"Хлебни изделия и зърнени храни","name":"Овесени трици","p":17.0,"f":7.0,"c":66.0,"e":403.0},{"cat":"Хлебни изделия и зърнени храни","name":"Овесени ядки","p":13.0,"f":7.5,"c":66.0,"e":392.0},{"cat":"Хлебни изделия и зърнени храни","name":"Ориз - Бял","p":6.5,"f":0.5,"c":79.0,"e":355.0},{"cat":"Хлебни изделия и зърнени храни","name":"Ориз - Кафяв","p":7.9,"f":2.7,"c":77.0,"e":372.0},{"cat":"Хлебни изделия и зърнени храни","name":"Просо","p":11.0,"f":4.2,"c":72.8,"e":381.0},{"cat":"Хлебни изделия и зърнени храни","name":"Пшеница","p":14.0,"f":1.8,"c":67.4,"e":350.0},{"cat":"Хлебни изделия и зърнени храни","name":"Пшенични трици","p":15.5,"f":4.5,"c":64.0,"e":368.0},{"cat":"Хлебни изделия и зърнени храни","name":"Ръж","p":10.0,"f":1.8,"c":72.1,"e":352.0},{"cat":"Хлебни изделия и зърнени храни","name":"Солети \"Великови\"","p":10.3,"f":2.0,"c":69.0,"e":343.0},{"cat":"Хлебни изделия и зърнени храни","name":"Солети \"Златна Добруджа\"","p":12.2,"f":4.2,"c":73.9,"e":391.0},{"cat":"Хлебни изделия и зърнени храни","name":"Солети \"Хрус Хрус\"","p":10.3,"f":2.0,"c":69.0,"e":343.0},{"cat":"Хлебни изделия и зърнени храни","name":"Солети \"Чико\"","p":12.2,"f":4.2,"c":73.2,"e":388.0},{"cat":"Хлебни изделия и зърнени храни","name":"Бисквити HOGARENAS Bran","p":11.0,"f":14.0,"c":64.0,"e":424.0},{"cat":"Хлебни изделия и зърнени храни","name":"Бисквити HOGARENAS Cereal Mix","p":10.0,"f":16.0,"c":63.0,"e":435.0},{"cat":"Хлебни изделия и зърнени храни","name":"Соя","p":36.9,"f":2.7,"c":24.9,"e":277.0},{"cat":"Хлебни изделия и зърнени храни","name":"Сухари","p":10.8,"f":5.2,"c":73.3,"e":392.0},{"cat":"Хлебни изделия и зърнени храни","name":"Тутманик","p":8.7,"f":19.2,"c":35.9,"e":357.0},{"cat":"Хлебни изделия и зърнени храни","name":"хрупанки","p":3.0,"f":19.0,"c":78.0,"e":495.0},{"cat":"Хлебни изделия и зърнени храни","name":"Хляб \"Бонус\" Ръжен","p":9.0,"f":1.4,"c":42.1,"e":222.0},{"cat":"Хлебни изделия и зърнени храни","name":"Хляб \"Вита\" без брашно","p":7.2,"f":2.7,"c":48.2,"e":251.0},{"cat":"Хлебни изделия и зърнени храни","name":"Хляб бял","p":7.1,"f":1.1,"c":51.4,"e":249.0},{"cat":"Хлебни изделия и зърнени храни","name":"Хляб ръжен","p":6.8,"f":1.2,"c":48.0,"e":235.0},{"cat":"Хлебни изделия и зърнени храни","name":"Хляб типов","p":8.0,"f":1.7,"c":46.0,"e":236.0},{"cat":"Хлебни изделия и зърнени храни","name":"хляб с микс от 4 семена Енергия","p":10.6,"f":6.0,"c":52.8,"e":322.0},{"cat":"Хлебни изделия и зърнени храни","name":"Пица на парче","p":16.1,"f":13.4,"c":36.8,"e":327.0},{"cat":"Хлебни изделия и зърнени храни","name":"savi stix mix crackers & pretzels","p":8.6,"f":23.5,"c":63.4,"e":500.0},{"cat":"Хлебни изделия и зърнени храни","name":"кус кус арабски","p":3.8,"f":0.5,"c":28.0,"e":147.0},{"cat":"Хлебни изделия и зърнени храни","name":"кренвиршка","p":12.0,"f":14.0,"c":30.0,"e":280.0},{"cat":"Хлебни изделия и зърнени храни","name":"млечна баница","p":5.0,"f":10.0,"c":40.0,"e":220.0},{"cat":"Хлебни изделия и зърнени храни","name":"High protein wraps","p":18.0,"f":7.0,"c":37.0,"e":293.0},{"cat":"Хлебни изделия и зърнени храни","name":"spageti","p":6.0,"f":0.8,"c":31.0,"e":155.0},{"cat":"Хлебни изделия и зърнени храни","name":"киноа","p":14.0,"f":6.0,"c":64.0,"e":370.0},{"cat":"Хлебни изделия и зърнени храни","name":"пълнозърнести соленки със сусам","p":6.7,"f":21.0,"c":45.0,"e":396.0},{"cat":"Зеленчуци","name":"Артишок","p":2.4,"f":0.1,"c":11.4,"e":57.0},{"cat":"Зеленчуци","name":"Аспержи","p":2.2,"f":0.1,"c":3.9,"e":25.0},{"cat":"Зеленчуци","name":"Броколи","p":2.8,"f":0.4,"c":6.6,"e":42.0},{"cat":"Зеленчуци","name":"Брюкселско зеле","p":3.4,"f":0.3,"c":9.0,"e":53.0},{"cat":"Зеленчуци","name":"Грах","p":6.7,"f":0.5,"c":14.5,"e":91.0},{"cat":"Зеленчуци","name":"Гъби","p":1.8,"f":0.5,"c":0.4,"e":13.0},{"cat":"Зеленчуци","name":"Домати","p":1.0,"f":0.2,"c":4.2,"e":23.0},{"cat":"Зеленчуци","name":"Зеле","p":1.4,"f":0.2,"c":3.7,"e":22.0},{"cat":"Зеленчуци","name":"Зеле - Китайско","p":1.2,"f":0.2,"c":3.2,"e":19.0},{"cat":"Зеленчуци","name":"Зеле - Червено","p":1.4,"f":0.2,"c":7.4,"e":37.0},{"cat":"Зеленчуци","name":"Камби","p":1.0,"f":0.3,"c":4.6,"e":25.0},{"cat":"Зеленчуци","name":"Картофи","p":2.0,"f":0.1,"c":17.5,"e":80.0},{"cat":"Зеленчуци","name":"Карфиол","p":2.0,"f":0.1,"c":5.3,"e":30.0},{"cat":"Зеленчуци","name":"Кисело зеле","p":1.5,"f":0.3,"c":5.3,"e":30.0},{"cat":"Зеленчуци","name":"Краставици","p":0.6,"f":0.2,"c":2.3,"e":13.0},{"cat":"Зеленчуци","name":"Лук зелен","p":1.8,"f":0.2,"c":4.3,"e":26.0},{"cat":"Зеленчуци","name":"Лук стар","p":1.7,"f":0.3,"c":10.5,"e":52.0},{"cat":"Зеленчуци","name":"Маруля","p":1.6,"f":0.2,"c":2.3,"e":17.0},{"cat":"Зеленчуци","name":"Моркови","p":0.8,"f":0.2,"c":8.0,"e":37.0},{"cat":"Зеленчуци","name":"Патладжан","p":1.4,"f":0.2,"c":4.2,"e":24.0},{"cat":"Зеленчуци","name":"Репички","p":0.9,"f":0.1,"c":3.3,"e":18.0},{"cat":"Зеленчуци","name":"Ряпа","p":1.9,"f":0.1,"c":7.0,"e":37.0},{"cat":"Зеленчуци","name":"Спанак","p":3.2,"f":0.4,"c":3.2,"e":29.0},{"cat":"Зеленчуци","name":"Тиква","p":1.0,"f":0.1,"c":6.5,"e":31.0},{"cat":"Зеленчуци","name":"Тиквички","p":0.6,"f":0.0,"c":3.7,"e":17.0},{"cat":"Зеленчуци","name":"Фасул","p":23.3,"f":1.5,"c":55.5,"e":336.0},{"cat":"Зеленчуци","name":"Фасул зелен","p":2.2,"f":0.3,"c":5.3,"e":33.0},{"cat":"Зеленчуци","name":"Цвекло червено","p":1.2,"f":0.1,"c":9.3,"e":43.0},{"cat":"Зеленчуци","name":"Царевица","p":14.2,"f":5.0,"c":72.1,"e":399.0},{"cat":"Зеленчуци","name":"Сладка царевица консерва","p":1.9,"f":0.5,"c":15.4,"e":64.0},{"cat":"Зеленчуци","name":"сладък картоф","p":1.6,"f":0.1,"c":20.1,"e":86.0},{"cat":"Зеленчуци","name":"Чушка","p":1.0,"f":0.3,"c":6.0,"e":31.0},{"cat":"Плодове и ядки","name":"Авокадо","p":2.0,"f":14.6,"c":8.5,"e":175.0},{"cat":"Плодове и ядки","name":"Ананас","p":0.5,"f":0.1,"c":12.7,"e":55.0},{"cat":"Плодове и ядки","name":"Бадеми печени","p":21.0,"f":51.0,"c":20.0,"e":632.0},{"cat":"Плодове и ядки","name":"Бадеми сурови","p":15.0,"f":57.0,"c":16.4,"e":647.0},{"cat":"Плодове и ядки","name":"Банани","p":1.1,"f":0.2,"c":21.0,"e":92.0},{"cat":"Плодове и ядки","name":"Боровинки","p":0.7,"f":0.1,"c":13.6,"e":82.9},{"cat":"Плодове и ядки","name":"Вишни","p":1.2,"f":0.4,"c":13.1,"e":62.0},{"cat":"Плодове и ядки","name":"Грейпфрут","p":0.7,"f":0.2,"c":9.8,"e":44.0},{"cat":"Плодове и ядки","name":"Грозде - бяло","p":0.7,"f":0.1,"c":8.4,"e":38.0},{"cat":"Плодове и ядки","name":"Грозде - розово","p":0.8,"f":0.1,"c":10.7,"e":48.0},{"cat":"Плодове и ядки","name":"Грозде - червено","p":0.7,"f":0.2,"c":18.2,"e":79.0},{"cat":"Плодове и ядки","name":"Диня","p":0.4,"f":0.1,"c":5.9,"e":26.0},{"cat":"Плодове и ядки","name":"Дюли","p":0.5,"f":0.4,"c":13.1,"e":59.0},{"cat":"Плодове и ядки","name":"Кайсии","p":0.1,"f":0.1,"c":11.1,"e":46.0},{"cat":"Плодове и ядки","name":"Киви","p":1.1,"f":0.5,"c":14.6,"e":68.0},{"cat":"Плодове и ядки","name":"Круши","p":0.3,"f":0.4,"c":14.5,"e":64.0},{"cat":"Плодове и ядки","name":"Круши - Азиатски","p":0.5,"f":0.2,"c":10.7,"e":47.0},{"cat":"Плодове и ядки","name":"Круши - диви","p":0.7,"f":0.5,"c":9.6,"e":46.0},{"cat":"Плодове и ядки","name":"Ленено семе","p":24.0,"f":31.0,"c":0.0,"e":380.0},{"cat":"Плодове и ядки","name":"Лешници","p":13.9,"f":61.8,"c":12.5,"e":670.0},{"cat":"Плодове и ядки","name":"Лимони","p":0.7,"f":0.6,"c":7.1,"e":37.0},{"cat":"Плодове и ядки","name":"Манго","p":3.0,"f":0.5,"c":17.0,"e":86.0},{"cat":"Плодове и ядки","name":"Мандарини","p":0.7,"f":0.3,"c":10.6,"e":49.0},{"cat":"Плодове и ядки","name":"Мармалади","p":0.7,"f":0.5,"c":68.0,"e":286.0},{"cat":"Плодове и ядки","name":"Нар","p":1.0,"f":0.3,"c":17.2,"e":77.0},{"cat":"Плодове и ядки","name":"Орехи","p":14.8,"f":64.0,"c":13.7,"e":699.0},{"cat":"Плодове и ядки","name":"Помело","p":0.7,"f":0.5,"c":10.0,"e":48.0},{"cat":"Плодове и ядки","name":"Портокали","p":0.9,"f":0.2,"c":10.5,"e":48.0},{"cat":"Плодове и ядки","name":"Праскови","p":0.6,"f":0.1,"c":11.3,"e":49.0},{"cat":"Плодове и ядки","name":"Пъпеш","p":0.7,"f":0.3,"c":6.1,"e":30.0},{"cat":"Плодове и ядки","name":"Сливи сини","p":0.8,"f":0.2,"c":18.7,"e":81.0},{"cat":"Плодове и ядки","name":"Слънчоглед","p":21.0,"f":55.8,"c":4.1,"e":610.0},{"cat":"Плодове и ядки","name":"Смокини","p":0.8,"f":0.3,"c":19.2,"e":84.0},{"cat":"Плодове и ядки","name":"Стафиди","p":2.0,"f":1.0,"c":70.0,"e":304.0},{"cat":"Плодове и ядки","name":"Сушени кайсии","p":3.4,"f":0.5,"c":62.6,"e":275.0},{"cat":"Плодове и ядки","name":"Сушени сливи","p":2.2,"f":0.4,"c":63.9,"e":274.0},{"cat":"Плодове и ядки","name":"Сушени смокини","p":3.0,"f":0.0,"c":54.0,"e":233.0},{"cat":"Плодове и ядки","name":"Тиква","p":0.7,"f":0.3,"c":7.8,"e":37.0},{"cat":"Плодове и ядки","name":"Тиквени семки","p":32.4,"f":45.0,"c":12.5,"e":593.0},{"cat":"Плодове и ядки","name":"Фурми","p":2.8,"f":0.2,"c":57.0,"e":246.0},{"cat":"Плодове и ядки","name":"Фъстъци","p":26.5,"f":46.6,"c":19.0,"e":610.0},{"cat":"Плодове и ядки","name":"Череши","p":0.8,"f":0.4,"c":13.5,"e":62.0},{"cat":"Плодове и ядки","name":"Ябалки","p":0.3,"f":0.3,"c":14.7,"e":64.0},{"cat":"Плодове и ядки","name":"Ягоди","p":0.9,"f":0.5,"c":17.4,"e":79.0},{"cat":"Други хранителни продукти","name":"Език","p":16.0,"f":15.9,"c":0.4,"e":211.0},{"cat":"Други хранителни продукти","name":"Захар","p":0.0,"f":0.0,"c":99.9,"e":409.0},{"cat":"Други хранителни продукти","name":"Зехтин","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Краве масло","p":0.0,"f":81.6,"c":0.0,"e":742.0},{"cat":"Други хранителни продукти","name":"Кълнове от пшеница","p":7.5,"f":1.3,"c":42.5,"e":216.0},{"cat":"Други хранителни продукти","name":"Маргарин","p":0.0,"f":79.4,"c":0.0,"e":722.0},{"cat":"Други хранителни продукти","name":"Маслини - зелени","p":1.0,"f":15.3,"c":3.8,"e":158.0},{"cat":"Други хранителни продукти","name":"Маслини - зрели Джъмбо","p":1.0,"f":6.9,"c":5.6,"e":89.0},{"cat":"Други хранителни продукти","name":"Маслини - Класик","p":0.8,"f":10.7,"c":6.3,"e":126.0},{"cat":"Други хранителни продукти","name":"Масло от Авокадо","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Масло от Бадем","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Масло от Какао","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Масло от Кокос","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Масло от Овес","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Масло от Сусам","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Мед","p":0.4,"f":0.0,"c":78.3,"e":322.0},{"cat":"Други хранителни продукти","name":"Мозък","p":10.4,"f":9.6,"c":0.0,"e":130.0},{"cat":"Други хранителни продукти","name":"Олио - Слънчогледово","p":0.0,"f":99.9,"c":0.0,"e":909.0},{"cat":"Други хранителни продукти","name":"Олио - Соево","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Сланина","p":0.0,"f":99.0,"c":0.0,"e":900.0},{"cat":"Други хранителни продукти","name":"Сърца","p":16.8,"f":6.0,"c":0.6,"e":125.0},{"cat":"Други хранителни продукти","name":"Хумус","p":5.8,"f":21.0,"c":18.4,"e":286.0},{"cat":"Други хранителни продукти","name":"микс царевица","p":2.9,"f":1.4,"c":8.1,"e":269.0},{"cat":"Други хранителни продукти","name":"тарама хайвер","p":24.6,"f":17.9,"c":4.0,"e":264.0},{"cat":"Други хранителни продукти","name":"Черен дроб","p":20.1,"f":5.7,"c":1.1,"e":138.0},{"cat":"Други хранителни продукти","name":"кренвиршка","p":14.0,"f":25.0,"c":30.0,"e":400.0},{"cat":"Други хранителни продукти","name":"вафла боряна с фъстъци","p":8.0,"f":33.0,"c":55.0,"e":554.0},{"cat":"Други хранителни продукти","name":"лютеница","p":2.0,"f":10.9,"c":12.4,"e":160.0},{"cat":"Други хранителни продукти","name":"чипс","p":6.5,"f":32.0,"c":49.0,"e":510.0},{"cat":"Други хранителни продукти","name":"YoPRO десертче","p":10.2,"f":0.9,"c":6.3,"e":78.0},{"cat":"Други хранителни продукти","name":"KFC burger&fries","p":40.0,"f":24.6,"c":100.0,"e":600.0},{"cat":"Други хранителни продукти","name":"пицалаб моята пица","p":16.0,"f":14.0,"c":37.0,"e":330.0},{"cat":"Други хранителни продукти","name":"ноодли със пилешко","p":45.0,"f":25.0,"c":60.0,"e":550.0},{"cat":"Други хранителни продукти","name":"консерва нахуд","p":7.2,"f":2.5,"c":14.0,"e":121.0},{"cat":"Други хранителни продукти","name":"консерва царевица, грах, чушка","p":3.4,"f":1.5,"c":11.4,"e":81.0},{"cat":"Други хранителни продукти","name":"суши сет от лидъл","p":5.1,"f":3.8,"c":19.2,"e":136.0},{"cat":"Захарни изделия","name":"Бисквити \"Sweet+\"","p":6.1,"f":27.3,"c":63.6,"e":534.0},{"cat":"Захарни изделия","name":"Бисквити \"Еверест\" ореховки","p":7.6,"f":21.6,"c":68.5,"e":508.0},{"cat":"Захарни изделия","name":"Бисквити \"Закуска\" - какао","p":8.5,"f":8.3,"c":80.6,"e":440.0},{"cat":"Захарни изделия","name":"Бисквити \"Закуска\" Победа","p":8.1,"f":7.1,"c":82.2,"e":434.0},{"cat":"Захарни изделия","name":"Бисквити \"Кафе\"","p":4.3,"f":25.5,"c":66.7,"e":523.0},{"cat":"Захарни изделия","name":"Бисквити \"Ревю\" с овесени ядки","p":7.5,"f":19.5,"c":57.6,"e":444.0},{"cat":"Захарни изделия","name":"Бисквити \"Траяна\"","p":7.5,"f":12.7,"c":76.7,"e":460.0},{"cat":"Захарни изделия","name":"Вафла \"Морена\"","p":7.5,"f":27.5,"c":59.5,"e":524.0},{"cat":"Захарни изделия","name":"Вафла \"Мотто\"","p":6.0,"f":32.7,"c":49.8,"e":526.0},{"cat":"Захарни изделия","name":"Вафла \"Симона\"","p":6.3,"f":29.0,"c":55.0,"e":515.0},{"cat":"Захарни изделия","name":"Вафла \"Споко\"","p":7.2,"f":35.2,"c":53.0,"e":567.0},{"cat":"Захарни изделия","name":"Вафла \"Троя\"","p":6.0,"f":34.2,"c":58.0,"e":573.0},{"cat":"Захарни изделия","name":"Вафла \"Чайка\"","p":6.4,"f":27.7,"c":63.6,"e":539.0},{"cat":"Захарни изделия","name":"Шоколад \"Darck Chokolate\" Своге","p":5.2,"f":31.3,"c":51.9,"e":518.0},{"cat":"Захарни изделия","name":"Шоколад \"Lindt 70% cocoa\"","p":8.0,"f":40.0,"c":33.0,"e":532.0},{"cat":"Захарни изделия","name":"Шоколад \"Lindt 85% cocoa\"","p":11.0,"f":46.0,"c":19.0,"e":541.0},{"cat":"Захарни изделия","name":"Шоколад \"Lindt 99% cocoa\"","p":13.0,"f":49.0,"c":8.0,"e":532.0},{"cat":"Захарни изделия","name":"Шоколад \"Lindt Orange Dark\"","p":6.0,"f":31.0,"c":49.0,"e":507.0},{"cat":"Захарни изделия","name":"Шоколад \"Milka Cream\"","p":5.4,"f":44.5,"c":45.5,"e":605.0},{"cat":"Захарни изделия","name":"Шоколад \"Milka\" с цели лешници","p":7.8,"f":36.5,"c":48.5,"e":562.0},{"cat":"Захарни изделия","name":"100% Power protein","p":20.2,"f":36.0,"c":40.5,"e":567.0},{"cat":"Захарни изделия","name":"100% Power ginseng","p":5.2,"f":36.0,"c":56.0,"e":568.0},{"cat":"Захарни изделия","name":"100% Power guarana","p":5.4,"f":36.0,"c":55.2,"e":566.0},{"cat":"Захарни изделия","name":"PROTEIN chocolate&nuts","p":25.0,"f":7.3,"c":29.8,"e":379.0},{"cat":"Захарни изделия","name":"сладко всички видове","p":0.0,"f":0.0,"c":68.0,"e":270.0},{"cat":"Захарни изделия","name":"Мираж вишна (почти всички видове)","p":5.4,"f":17.6,"c":67.4,"e":449.6},{"cat":"Захарни изделия","name":"Шоко Бадеми","p":12.0,"f":35.8,"c":43.1,"e":554.0},{"cat":"Захарни изделия","name":"Галена Дубайски десерт с крем, шоколад и кадаиф","p":3.4,"f":15.8,"c":37.8,"e":314.9},{"cat":"Захарни изделия","name":"Вафла Ная без глазура","p":6.0,"f":31.0,"c":65.0,"e":540.0},{"cat":"Захарни изделия","name":"Brown Winner hazelnut crème 27% protein cups","p":27.0,"f":44.0,"c":21.0,"e":553.0},{"cat":"Захарни изделия","name":"Soft cookies шоколад и боровинки ПРЕСТИЖ","p":5.8,"f":20.0,"c":64.8,"e":462.4},{"cat":"Захарни изделия","name":"cookies шоколад ПРЕСТИЖ","p":5.9,"f":27.2,"c":61.9,"e":516.0},{"cat":"Захарни изделия","name":"Пълнозърнести бисквити с лимец, череши и черен шоколад ДОБИ","p":8.0,"f":15.3,"c":50.2,"e":409.2},{"cat":"Захарни изделия","name":"Corny browny","p":6.0,"f":15.4,"c":65.4,"e":434.0},{"cat":"Захарни изделия","name":"Corny chocolate zero","p":7.3,"f":9.8,"c":70.2,"e":342.0},{"cat":"Захарни изделия","name":"High protein pudding chokolate flavour","p":12.0,"f":2.0,"c":5.2,"e":76.0},{"cat":"Захарни изделия","name":"soft baked flapjack шоколад","p":6.1,"f":24.0,"c":54.0,"e":461.0},{"cat":"Захарни изделия","name":"procrunchy protein bar chocolate","p":34.0,"f":14.0,"c":33.0,"e":361.0},{"cat":"Захарни изделия","name":"hazelnut&peanut wit dark chokolate","p":7.8,"f":22.0,"c":54.5,"e":459.0},{"cat":"Захарни изделия","name":"канап веган вафла с лимец","p":6.8,"f":29.0,"c":57.4,"e":524.0},{"cat":"Захарни изделия","name":"protein bar coockies&cream flavour","p":32.0,"f":9.7,"c":36.0,"e":371.0},{"cat":"Захарни изделия","name":"29% protein bar max 2x","p":29.0,"f":33.0,"c":28.0,"e":512.0},{"cat":"Захарни изделия","name":"orange with chocolate musli bar","p":5.0,"f":21.1,"c":61.7,"e":405.0},{"cat":"Захарни изделия","name":"brown rice bar milk chocolate","p":8.0,"f":30.0,"c":58.0,"e":534.0},{"cat":"Захарни изделия","name":"Kings soft cookie","p":6.6,"f":22.0,"c":58.0,"e":458.0},{"cat":"Захарни изделия","name":"Roshen small bar","p":7.3,"f":32.6,"c":18.9,"e":545.0},{"cat":"Захарни изделия","name":"Protein stick rice up vitamin c+e+d","p":30.1,"f":18.1,"c":32.4,"e":349.0},{"cat":"Захарни изделия","name":"33%protein fitpro","p":33.4,"f":25.2,"c":24.1,"e":449.0},{"cat":"Захарни изделия","name":"milka lu","p":6.4,"f":4.4,"c":63.0,"e":512.0},{"cat":"Захарни изделия","name":"nesquik maxi choko","p":5.6,"f":10.1,"c":68.2,"e":388.0},{"cat":"Захарни изделия","name":"Musli chocolate made with oats","p":7.2,"f":8.6,"c":69.1,"e":387.0},{"cat":"Захарни изделия","name":"Trapa 0% con ceche","p":5.6,"f":34.0,"c":55.0,"e":479.0},{"cat":"Захарни изделия","name":"Chocolate fitness","p":7.7,"f":9.1,"c":65.5,"e":382.0},{"cat":"Захарни изделия","name":"Вафла боровец","p":3.8,"f":23.0,"c":63.0,"e":482.0},{"cat":"Захарни изделия","name":"Fitness chocolate","p":7.7,"f":9.1,"c":65.5,"e":382.0},{"cat":"Захарни изделия","name":"Fitness choco banana","p":6.3,"f":7.3,"c":70.0,"e":337.0},{"cat":"Захарни изделия","name":"Fitness red berries","p":6.6,"f":10.1,"c":67.7,"e":392.0},{"cat":"Захарни изделия","name":"вафли wellness cocoa","p":4.2,"f":26.0,"c":61.3,"e":1898.5},{"cat":"Захарни изделия","name":"вафла споко 0sugar","p":18.6,"f":37.7,"c":36.8,"e":522.8},{"cat":"Захарни изделия","name":"вафла OMG orange","p":9.2,"f":31.0,"c":61.0,"e":584.0},{"cat":"Захарни изделия","name":"вафла OMG brown","p":9.0,"f":29.5,"c":58.0,"e":536.0},{"cat":"Захарни изделия","name":"вафла стевия какао","p":4.2,"f":29.1,"c":65.7,"e":494.0},{"cat":"Захарни изделия","name":"пурички без захар","p":6.0,"f":17.0,"c":62.0,"e":390.0},{"cat":"Захарни изделия","name":"wallnut cookie","p":11.5,"f":42.0,"c":41.1,"e":588.0},{"cat":"Захарни изделия","name":"quark snack","p":15.0,"f":24.0,"c":28.0,"e":391.0},{"cat":"Захарни изделия","name":"суха паста МАРИНА","p":4.5,"f":22.5,"c":61.4,"e":467.0},{"cat":"Захарни изделия","name":"вафла синньо лято","p":7.9,"f":33.0,"c":52.4,"e":487.0},{"cat":"Захарни изделия","name":"quark riegel scoko","p":11.0,"f":24.5,"c":34.7,"e":407.0},{"cat":"Захарни изделия","name":"Бисквитки DIGESTIVE млечен Шоколад","p":7.0,"f":23.0,"c":65.0,"e":501.0},{"cat":"Безалкохолни Напитки","name":"\"Кока кола\"","p":0.0,"f":0.0,"c":10.6,"e":42.0},{"cat":"Безалкохолни Напитки","name":"червено вино","p":0.1,"f":0.0,"c":2.6,"e":83.0},{"cat":"Безалкохолни Напитки","name":"Plant protein 50g chocolate flavor","p":5.0,"f":2.8,"c":5.3,"e":69.0},{"cat":"Безалкохолни Напитки","name":"бира Бургаско","p":0.2,"f":0.0,"c":1.6,"e":29.0},{"cat":"Безалкохолни Напитки","name":"Гъбена Кремсупа IKEA","p":2.0,"f":6.0,"c":9.0,"e":93.0},{"cat":"Безалкохолни Напитки","name":"супа пилешка","p":2.5,"f":1.2,"c":3.5,"e":92.2},{"cat":"Безалкохолни Напитки","name":"Балканска салата с филе от риба тон COMPASS","p":11.0,"f":6.9,"c":13.0,"e":160.0},{"cat":"Безалкохолни Напитки","name":"Риба тон с кускус RIO mare","p":10.0,"f":15.0,"c":15.0,"e":238.0},{"cat":"Безалкохолни Напитки","name":"консерва ориенталски лозови сърми Palliria","p":2.3,"f":7.3,"c":7.9,"e":136.0},{"cat":"Безалкохолни Напитки","name":"консерва сармички лозов лист","p":2.1,"f":7.1,"c":15.0,"e":138.0},{"cat":"Безалкохолни Напитки","name":"ПЪЛНЕНИ ЧУШКИ С КАЙМА И ОРИЗ НА ФУРНА","p":9.0,"f":9.0,"c":9.0,"e":146.0},{"cat":"Безалкохолни Напитки","name":"Телешко варено","p":30.7,"f":2.0,"c":23.0,"e":141.0},{"cat":"Безалкохолни Напитки","name":"агнешко","p":26.0,"f":18.0,"c":0.0,"e":270.0},{"cat":"Безалкохолни Напитки","name":"Принцеса с кайма","p":7.3,"f":6.6,"c":17.0,"e":160.0},{"cat":"Безалкохолни Напитки","name":"Салата Цезар","p":8.6,"f":3.1,"c":8.3,"e":848.0},{"cat":"Безалкохолни Напитки","name":"Салата Шопска","p":8.0,"f":17.0,"c":19.0,"e":249.0},{"cat":"Безалкохолни Напитки","name":"Супа зеленчукова","p":1.7,"f":1.8,"c":6.2,"e":48.0},{"cat":"Безалкохолни Напитки","name":"пиле яхния","p":30.0,"f":20.0,"c":10.0,"e":340.0},{"cat":"Безалкохолни Напитки","name":"супа леща","p":25.0,"f":1.1,"c":61.5,"e":335.0},{"cat":"Безалкохолни Напитки","name":"свинско със зеле","p":7.0,"f":1.6,"c":13.8,"e":160.0},{"cat":"Безалкохолни Напитки","name":"паея крина","p":15.0,"f":5.0,"c":50.0,"e":320.0},{"cat":"Безалкохолни Напитки","name":"сърми с кисело зеле и кайма","p":30.0,"f":25.0,"c":20.0,"e":471.0},{"cat":"Безалкохолни Напитки","name":"пиле с грах","p":15.0,"f":4.3,"c":10.0,"e":103.0},{"cat":"Безалкохолни Напитки","name":"кашкавал пане","p":21.9,"f":25.1,"c":6.1,"e":343.0},{"cat":"Безалкохолни Напитки","name":"ориз със зеленчуци","p":3.0,"f":8.1,"c":22.0,"e":135.0},{"cat":"Безалкохолни Напитки","name":"шницел от кайма","p":18.8,"f":32.1,"c":9.8,"e":400.0},{"cat":"Безалкохолни Напитки","name":"сирене по шопски","p":35.0,"f":56.0,"c":16.0,"e":540.0},{"cat":"Безалкохолни Напитки","name":"спаначена супа","p":7.0,"f":12.0,"c":18.0,"e":43.0},{"cat":"Безалкохолни Напитки","name":"шкембе чорба","p":15.0,"f":7.0,"c":5.0,"e":150.0},{"cat":"Безалкохолни Напитки","name":"доматена супа","p":2.0,"f":2.5,"c":6.0,"e":50.0},{"cat":"Безалкохолни Напитки","name":"тартиатели болонезе","p":12.8,"f":15.8,"c":48.2,"e":395.0},{"cat":"Безалкохолни Напитки","name":"шкембе чорба от кладница","p":2.8,"f":5.0,"c":6.0,"e":80.0},{"cat":"Безалкохолни Напитки","name":"миш-маш и подобни","p":22.0,"f":25.0,"c":16.0,"e":400.0},{"cat":"Безалкохолни Напитки","name":"постен гювеч","p":6.0,"f":11.0,"c":35.0,"e":100.0},{"cat":"Безалкохолни Напитки","name":"таратор","p":2.5,"f":2.5,"c":5.0,"e":50.0},{"cat":"Безалкохолни Напитки","name":"рамен със свинско","p":3.6,"f":4.1,"c":6.7,"e":100.0},{"cat":"Безалкохолни Напитки","name":"наденички","p":18.0,"f":31.0,"c":5.0,"e":325.0}];
 
-  function renderWater(){
-    const h=gh(),cups=h.water||0,pct=Math.round(cups/8*100);
-    let html='';
-    for(let i=0;i<8;i++)html+=`<div class="drop ${i<cups?'full':''}" onclick="dietWater(${i})">💧</div>`;
-    document.getElementById('d-waterGrid').innerHTML=html;
-    const badge=document.getElementById('d-waterBadge');
-    badge.textContent=`${cups} / 8`;
-    badge.className='badge '+(cups>=8?'bg':cups>=4?'by':'bb');
-    document.getElementById('d-waterBar').style.width=pct+'%';
-    document.getElementById('d-waterBar').style.background=cups>=8?'var(--green)':cups>=4?'var(--yellow)':'var(--blue)';
-    document.getElementById('d-waterMsg').textContent=
-      cups>=8?'✅ Дневната цел е постигната!':
-      cups>0?`Остават ${8-cups} чаши до целта`:
-      'Не е пита вода днес';
+// ── STATE ─────────────────────────────────────────────────────────
+const GOALS = {cal:1650, prot:120, fat:55, carbs:165};
+const IF_START = 12; // noon — eating window 12:00–20:00
+const IF_END   = 20;
+
+let selectedFood = null;
+let dietDayOffset = 0; // 0 = today, -1 = yesterday, etc.
+
+// ── KEYS ──────────────────────────────────────────────────────────
+function dietKey(offset){
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  return `diet_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;
+}
+function waterKey(offset){
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  return `health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;
+}
+function fmtDate(offset){
+  const d = new Date(); d.setDate(d.getDate()+offset);
+  const days=['Нед','Пон','Вт','Ср','Чет','Пет','Съб'];
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  if(offset===0) return 'днес';
+  if(offset===-1) return 'вчера';
+  return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
+}
+
+// ── LOAD / SAVE ───────────────────────────────────────────────────
+function loadEntries(offset){ return JSON.parse(localStorage.getItem(dietKey(offset))||'[]'); }
+function saveEntries(offset, entries){ localStorage.setItem(dietKey(offset), JSON.stringify(entries)); }
+
+// ── IF STATUS ─────────────────────────────────────────────────────
+function updateIF(){
+  const h = new Date().getHours();
+  const open = h >= IF_START && h < IF_END;
+  const el = document.getElementById('ifStatus');
+  if(!el) return;
+  if(open){
+    const rem = IF_END - h;
+    el.className='if-val if-open';
+    el.textContent=`🟢 Прозорец отворен (${rem}ч остават)`;
+  } else {
+    el.className='if-val if-closed';
+    const wait = h < IF_START ? IF_START - h : (24 - h + IF_START);
+    el.textContent=`🔴 Гладуване (${wait}ч до 12:00)`;
+  }
+}
+
+// ── SEARCH ────────────────────────────────────────────────────────
+function dietSearch(q){
+  const dd = document.getElementById('foodDropdown');
+  if(!q || q.length < 1){ dd.classList.remove('show'); return; }
+  const ql = q.toLowerCase();
+  const results = FOODS.filter(f => f.name.toLowerCase().includes(ql)).slice(0,30);
+  if(!results.length){ dd.innerHTML='<div class="dd-item" style="color:#8b949e">Не е намерено</div>'; dd.classList.add('show'); return; }
+  dd.innerHTML = results.map((f,i)=>`
+    <div class="dd-item" onclick="dietSelectFood(${FOODS.indexOf(f)})">
+      <div>
+        <div class="dd-name">${f.name}</div>
+        <div class="dd-cat">${f.cat}</div>
+      </div>
+      <div class="dd-macros">П:${f.p}g М:${f.f}g В:${f.c}g<br>${f.e} kcal</div>
+    </div>`).join('');
+  dd.classList.add('show');
+}
+
+function dietSelectFood(idx){
+  selectedFood = FOODS[idx];
+  document.getElementById('foodSearch').value = selectedFood.name;
+  document.getElementById('foodDropdown').classList.remove('show');
+  document.getElementById('selFoodName').textContent = selectedFood.name;
+  document.getElementById('selFoodPer100').innerHTML =
+    `<span>П: ${selectedFood.p}g</span><span>М: ${selectedFood.f}g</span><span>В: ${selectedFood.c}g</span><span>${selectedFood.e} kcal</span><span style="color:#8b949e">на 100g</span>`;
+  document.getElementById('selFood').style.display='block';
+  document.getElementById('portionInput').value = 100;
+  dietUpdatePreview();
+}
+
+function dietUpdatePreview(){
+  if(!selectedFood) return;
+  const g = parseFloat(document.getElementById('portionInput').value) || 0;
+  const f = selectedFood;
+  const p2=(v)=>Math.round(v*g/100*10)/10;
+  document.getElementById('calcPreview').textContent =
+    `→ П:${p2(f.p)}g  М:${p2(f.f)}g  В:${p2(f.c)}g  = ${Math.round(f.e*g/100)} kcal`;
+}
+
+// ── ADD ENTRY ─────────────────────────────────────────────────────
+function dietAddEntry(){
+  if(!selectedFood) return;
+  const g = parseFloat(document.getElementById('portionInput').value)||0;
+  if(g<=0) return;
+  const f = selectedFood;
+  const entry = {
+    name: f.name, meal: document.getElementById('mealSelect').value,
+    g: g,
+    p: Math.round(f.p*g/100*10)/10,
+    fat: Math.round(f.f*g/100*10)/10,
+    c: Math.round(f.c*g/100*10)/10,
+    e: Math.round(f.e*g/100),
+    ts: Date.now()
+  };
+  const entries = loadEntries(0);
+  entries.push(entry);
+  saveEntries(0, entries);
+  // Reset
+  selectedFood = null;
+  document.getElementById('foodSearch').value='';
+  document.getElementById('selFood').style.display='none';
+  document.getElementById('calcPreview').textContent='';
+  dietDayOffset = 0;
+  renderDiet();
+  dispatchEvent(new Event('statsUpdate'));
+}
+
+function dietAddCustom(){
+  const name = document.getElementById('customName').value.trim();
+  const p    = parseFloat(document.getElementById('customP').value)||0;
+  const fat  = parseFloat(document.getElementById('customF').value)||0;
+  const c    = parseFloat(document.getElementById('customC').value)||0;
+  const g    = parseFloat(document.getElementById('customPortion').value)||100;
+  if(!name) return;
+  const e = Math.round(p*4 + fat*9 + c*4);
+  const entry = {
+    name, meal: 'друго', g,
+    p: Math.round(p*g/100*10)/10,
+    fat: Math.round(fat*g/100*10)/10,
+    c: Math.round(c*g/100*10)/10,
+    e: Math.round(e*g/100),
+    ts: Date.now()
+  };
+  const entries = loadEntries(0);
+  entries.push(entry);
+  saveEntries(0, entries);
+  document.getElementById('customName').value='';
+  document.getElementById('customP').value='';
+  document.getElementById('customF').value='';
+  document.getElementById('customC').value='';
+  document.getElementById('customPortion').value='100';
+  dietDayOffset = 0;
+  renderDiet();
+  dispatchEvent(new Event('statsUpdate'));
+}
+
+function dietDeleteEntry(ts){
+  const entries = loadEntries(dietDayOffset).filter(e => e.ts !== ts);
+  saveEntries(dietDayOffset, entries);
+  renderDiet();
+  if(dietDayOffset===0) dispatchEvent(new Event('statsUpdate'));
+}
+
+// ── NAV ───────────────────────────────────────────────────────────
+function dietNavDay(d){
+  dietDayOffset += d;
+  if(dietDayOffset > 0) dietDayOffset = 0;
+  renderDiet();
+}
+
+// ── RENDER ────────────────────────────────────────────────────────
+const MEAL_ORDER = ['закуска','лека закуска','обяд','следобедна','вечеря','друго'];
+const MEAL_LABELS = {'закуска':'🌅 Закуска','лека закуска':'🍎 Лека закуска','обяд':'🍽️ Обяд','следобедна':'☕ Следобедна','вечеря':'🌙 Вечеря','друго':'📦 Друго'};
+
+function renderDiet(){
+  const entries = loadEntries(dietDayOffset);
+  document.getElementById('dietDayLabel').textContent = fmtDate(dietDayOffset);
+
+  // Totals
+  let totP=0,totF=0,totC=0,totE=0;
+  entries.forEach(e=>{ totP+=e.p; totF+=e.fat; totC+=e.c; totE+=e.e; });
+  totP=Math.round(totP*10)/10; totF=Math.round(totF*10)/10;
+  totC=Math.round(totC*10)/10; totE=Math.round(totE);
+
+  // Macro bars
+  const pct=(v,max)=>Math.min(100,Math.round(v/max*100));
+  document.getElementById('mCalories').textContent=totE;
+  document.getElementById('mProt').textContent=totP+'g';
+  document.getElementById('mFat').textContent=totF+'g';
+  document.getElementById('mCarbs').textContent=totC+'g';
+  const calPct=pct(totE,GOALS.cal);
+  document.getElementById('mCalBar').style.width=calPct+'%';
+  document.getElementById('mCalBar').style.background=calPct>105?'#f85149':calPct>90?'#3fb950':'#f0883e';
+  document.getElementById('mProtBar').style.width=pct(totP,GOALS.prot)+'%';
+  document.getElementById('mFatBar').style.width=pct(totF,GOALS.fat)+'%';
+  document.getElementById('mCarbsBar').style.width=pct(totC,GOALS.carbs)+'%';
+
+  // Group by meal
+  const byMeal = {};
+  entries.forEach(e=>{
+    const m = e.meal||'друго';
+    if(!byMeal[m]) byMeal[m]=[];
+    byMeal[m].push(e);
+  });
+
+  let html='';
+  if(!entries.length){
+    html='<div class="log-empty">Няма добавени храни</div>';
+  } else {
+    MEAL_ORDER.forEach(meal=>{
+      if(!byMeal[meal]) return;
+      const items = byMeal[meal];
+      const mCal = items.reduce((s,e)=>s+e.e,0);
+      html+=`<div class="meal-group">
+        <div class="meal-hdr">
+          <span>${MEAL_LABELS[meal]||meal}</span>
+          <span class="meal-hdr-cals">${Math.round(mCal)} kcal</span>
+        </div>`;
+      items.forEach(e=>{
+        html+=`<div class="log-row">
+          <span class="lr-name">${e.name}</span>
+          <span class="lr-portion">${e.g}g</span>
+          <span class="lr-macros">П${e.p} М${e.fat} В${e.c} | ${e.e}k</span>
+          <button class="lr-del" onclick="dietDeleteEntry(${e.ts})">✕</button>
+        </div>`;
+      });
+      html+='</div>';
+    });
+  }
+  document.getElementById('dietLog').innerHTML=html;
+
+  // Day total
+  const dt = document.getElementById('dietDayTotal');
+  if(entries.length){
+    dt.style.display='block';
+    const calColor = totE > GOALS.cal ? '#f85149' : totE > GOALS.cal*0.9 ? '#3fb950' : '#e6edf3';
+    document.getElementById('dtCal').innerHTML=`<span style="color:${calColor}">${totE} / ${GOALS.cal} kcal</span>`;
+    document.getElementById('dtProt').innerHTML=`<span style="color:${totP>=GOALS.prot?'#3fb950':'#e6edf3'}">${totP}g / ${GOALS.prot}g</span>`;
+    document.getElementById('dtFat').textContent=`${totF}g`;
+    document.getElementById('dtCarbs').textContent=`${totC}g`;
+  } else {
+    dt.style.display='none';
   }
 
-  function renderMeals(){
-    const h=gh();let done=0;
-    for(const m of['breakfast','lunch','snack','dinner']){
-      const btn=document.getElementById(`d-meal-${m}`);
-      if(btn){btn.classList.toggle('done',!!h[m]);if(h[m])done++;}
-    }
-    const b=document.getElementById('d-mealBadge');
-    b.textContent=`${done} / 4`;
-    b.className='badge '+(done===4?'bg':done>=2?'by':'bb');
-    const checks=[!!h.breakfast,!!h.lunch,!!h.snack,!!h.dinner,(h.water||0)>=8,!!h.workout];
-    const labels=['Закуска','Обяд','Снак','Вечеря','Вода','Трен.'];
-    const dots=document.getElementById('d-healthDots');
-    const lbls=document.getElementById('d-healthLabels');
-    dots.innerHTML=checks.map(c=>`<div style="flex:1;height:6px;border-radius:3px;background:${c?'var(--green)':'var(--border)'};transition:background .3s"></div>`).join('');
-    lbls.innerHTML=labels.map((l,i)=>`<span style="color:${checks[i]?'var(--green)':'var(--muted)'}">${l}</span>`).join('');
+  // Water
+  renderWater();
+}
+
+// ── WATER ─────────────────────────────────────────────────────────
+function renderWater(){
+  const hKey = waterKey(dietDayOffset);
+  const h = JSON.parse(localStorage.getItem(hKey)||'{}');
+  const w = h.water || 0;
+  document.getElementById('waterCount').textContent = w;
+  let html='';
+  for(let i=1;i<=8;i++){
+    html+=`<div class="wdrop ${i<=w?'full':''}" onclick="dietSetWater(${i})">💧</div>`;
   }
+  document.getElementById('waterDrops').innerHTML=html;
+}
 
-  window.dietWater=function(idx){const h=gh(),cur=h.water||0;h.water=idx<cur?idx:idx+1;sh(h);renderWater();renderMeals();};
-  window.dietMeal=function(meal){const h=gh();h[meal]=!h[meal];sh(h);renderMeals();};
+function dietSetWater(n){
+  const hKey = waterKey(dietDayOffset);
+  const h = JSON.parse(localStorage.getItem(hKey)||'{}');
+  h.water = (h.water===n) ? n-1 : n;
+  localStorage.setItem(hKey, JSON.stringify(h));
+  renderWater();
+  dispatchEvent(new Event('statsUpdate'));
+}
 
-  renderWater();renderMeals();
+// ── CLOSE DROPDOWN ON OUTSIDE CLICK ──────────────────────────────
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.search-wrap'))
+    document.getElementById('foodDropdown').classList.remove('show');
+});
+
+// ── INIT ──────────────────────────────────────────────────────────
+updateIF();
+setInterval(updateIF, 60000);
+renderDiet();
+
 })();
 </script>

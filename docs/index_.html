@@ -172,15 +172,9 @@ details[open] summary::before{content:"▼ "}
     <h1>Аспарух <span>— Дневен Дашборд</span></h1>
     <div class="hdr-sub"><span class="dot-g"></span>Инвестиции · Дисертация · Университет · Здраве &amp; Спорт</div>
   </div>
-  <div style="display:flex;align-items:center;gap:16px">
-    <div id="hdrTracker" style="text-align:right;font-size:12px;color:var(--muted);cursor:pointer" onclick="window.location.href='tracker.html'" title="Трекер">
-      <div id="hdrTrackerTime" style="font-size:18px;font-weight:700;color:var(--orange);font-variant-numeric:tabular-nums">⏳ —</div>
-      <div id="hdrTrackerSub" style="font-size:10px;margin-top:1px">Трекер</div>
-    </div>
-    <div>
-      <div class="clock" id="liveClock">--:--:--</div>
-      <div class="clock-date" id="liveDate">—</div>
-    </div>
+  <div>
+    <div class="clock" id="liveClock">--:--:--</div>
+    <div class="clock-date" id="liveDate">—</div>
   </div>
 </div>
 
@@ -223,10 +217,10 @@ details[open] summary::before{content:"▼ "}
   <!-- ЗАДАЧИ ЗА ДЕНЯ -->
   <div class="card">
     <div class="ch" onclick="toggleSection('tasks-body')" style="cursor:pointer">
-      <span class="ct" id="tasks-arrow">▶ Задачи за деня</span>
+      <span class="ct" id="tasks-arrow">▼ Задачи за деня</span>
       <span class="badge bb" id="taskProg">0 / 0</span>
     </div>
-    <div id="tasks-body" style="display:none">
+    <div id="tasks-body">
       <div class="tabs" id="taskTabs">
         <button class="tab on" onclick="switchTab('dis')">🎓 Дисертация</button>
         <button class="tab"    onclick="switchTab('uni')">📚 Университет</button>
@@ -371,7 +365,6 @@ function tickClock() {
     `Аспарух Дашборд · CoinGecko & Kraken · обновено: ${n.toLocaleTimeString('bg-BG')}`;
   renderSchedule(n);
   renderMarketStatus(n);
-  updateTrackerHeader(n);
 }
 
 // ═══════════════════════════════════════════════════════════════ DYNAMIC STATS ══
@@ -793,22 +786,6 @@ async function loadHistory(){
 
 function el(id){return document.getElementById(id);}
 function fmtN(n,dec=2){return Number(n).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});}
-
-// ═══════════════════════════════════════════════════════════════ TRACKER HEADER ══
-
-function updateTrackerHeader(now){
-  const dateKey=`timer_${now.getFullYear()}_${String(now.getMonth()+1).padStart(2,'0')}_${String(now.getDate()).padStart(2,'0')}`;
-  const data=JSON.parse(localStorage.getItem(dateKey)||'null');
-  const te=el('hdrTrackerTime'),se=el('hdrTrackerSub');
-  if(!te||!se)return;
-  if(!data||!data.entries||!data.entries.length){te.textContent='⏳ —';se.textContent='Трекер';return;}
-  // sum completed entries
-  let total=0;
-  data.entries.forEach(e=>{if(e.duration)total+=e.duration;});
-  const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60;
-  te.textContent=`⏳ ${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-  se.textContent=`${data.entries.length} сесии днес`;
-}
 
 // ═══════════════════════════════════════════════════════════════ INIT ══
 
