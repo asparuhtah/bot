@@ -1,125 +1,548 @@
-<div class="g2">
+<!-- modules/training.html — Модул Тренировки -->
+<style>
+.tr-wrap{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e6edf3}
+.tr-grid{display:grid;grid-template-columns:1fr 320px;gap:13px}
+@media(max-width:860px){.tr-grid{grid-template-columns:1fr}}
 
-  <!-- TODAY'S WORKOUT -->
-  <div class="card">
-    <div class="ch">
-      <span class="ct">🏋️ Днешна тренировка</span>
-      <span class="badge by" id="t-badge">Предстои</span>
-    </div>
-    <div class="workout-card" id="t-workoutCard">
+/* Week calendar strip */
+.week-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:13px}
+.wd{background:#1c2128;border:1px solid #30363d;border-radius:8px;padding:8px 6px;text-align:center;cursor:pointer;transition:all .15s;position:relative}
+.wd:hover{border-color:#58a6ff}
+.wd.today{border-color:#58a6ff;background:rgba(88,166,255,.08)}
+.wd.has-workout{border-color:#3fb950}
+.wd.selected{background:#1f6feb;border-color:#1f6feb}
+.wd-day{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.wd-date{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+.wd-label{font-size:9px;margin-top:3px;color:#8b949e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wd-dot{width:5px;height:5px;border-radius:50%;background:var(--green,#3fb950);margin:3px auto 0;display:none}
+.wd.has-workout .wd-dot{display:block}
+
+/* Day detail */
+.day-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}
+.day-title-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.day-title{font-size:15px;font-weight:700}
+.day-sub{font-size:11px;color:#8b949e}
+
+/* Garmin data strip */
+.garmin-strip{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.gstat{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:6px 10px;flex:1;min-width:70px;text-align:center}
+.gstat-val{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+.gstat-lbl{font-size:9px;color:#8b949e;text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
+
+/* Workout plan */
+.plan-section{margin-bottom:12px}
+.plan-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.exercise-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #21262d}
+.exercise-row:last-child{border-bottom:none}
+.ex-name{flex:1;font-size:13px;font-weight:500}
+.ex-plan{font-size:11px;color:#8b949e;white-space:nowrap}
+.ex-result{display:flex;gap:4px;align-items:center}
+.ex-input{width:52px;background:#0d1117;border:1px solid #30363d;border-radius:4px;padding:3px 6px;color:#e6edf3;font-size:11px;text-align:center;outline:none}
+.ex-input:focus{border-color:#58a6ff}
+.ex-input::placeholder{color:#484f58}
+.ex-done{width:22px;height:22px;border-radius:4px;border:1px solid #30363d;background:transparent;cursor:pointer;font-size:11px;color:#8b949e;transition:all .15s;display:flex;align-items:center;justify-content:center}
+.ex-done.done{background:rgba(63,185,80,.2);border-color:#3fb950;color:#3fb950}
+
+/* Sleep card */
+.sleep-card{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:10px;margin-bottom:10px}
+.sleep-title{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.4px;margin-bottom:7px;font-weight:600}
+.sleep-bars{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.sleep-bar-row{display:flex;flex-direction:column;gap:2px}
+.sb-label{font-size:10px;color:#8b949e}
+.sb-track{height:5px;background:#21262d;border-radius:3px;overflow:hidden}
+.sb-fill{height:100%;border-radius:3px}
+.sb-val{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Sidebar */
+.sidebar{}
+.prog-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-bottom:13px}
+.prog-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.prog-week-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #21262d;font-size:12px}
+.prog-week-row:last-child{border-bottom:none}
+.prog-dots{display:flex;gap:3px}
+.pdot{width:10px;height:10px;border-radius:2px;background:#21262d}
+.pdot.done{background:#3fb950}
+.pdot.today-dot{background:#58a6ff}
+
+.note-area{width:100%;background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:8px;color:#e6edf3;font-size:12px;resize:vertical;min-height:70px;outline:none;font-family:inherit;box-sizing:border-box;margin-top:8px}
+.note-area:focus{border-color:#58a6ff}
+.save-note-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:5px 12px;font-size:11px;cursor:pointer;margin-top:5px;width:100%}
+
+.garmin-badge{font-size:10px;padding:1px 6px;border-radius:8px;background:rgba(63,185,80,.15);color:#3fb950;font-weight:600;margin-left:5px}
+.no-garmin-badge{font-size:10px;padding:1px 6px;border-radius:8px;background:rgba(139,148,158,.1);color:#8b949e;font-weight:600;margin-left:5px}
+</style>
+
+<div class="tr-wrap">
+
+<!-- Week strip -->
+<div class="week-strip" id="trWeekStrip"></div>
+
+<div class="tr-grid">
+
+<!-- LEFT: Day detail -->
+<div>
+  <div class="day-card">
+    <div class="day-title-row">
       <div>
-        <div style="font-weight:600;font-size:15px" id="t-workoutName">—</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px" id="t-workoutType">Зарежда...</div>
+        <span class="day-title" id="trDayTitle">—</span>
+        <span id="trGarminBadge" class="no-garmin-badge">Няма Garmin данни</span>
       </div>
-      <button class="wbtn" id="t-workoutBtn" onclick="trainToggle()">Маркирай като завършена</button>
+      <span id="trDayType" style="font-size:12px;color:#8b949e"></span>
     </div>
 
-    <div style="margin-top:16px">
-      <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Прогрес тази седмица</div>
-      <div style="display:flex;gap:5px" id="t-weekBar"></div>
+    <!-- Garmin stats strip -->
+    <div class="garmin-strip" id="trGarminStrip">
+      <div class="gstat"><div class="gstat-val" id="gHR">—</div><div class="gstat-lbl">Пулс покой</div></div>
+      <div class="gstat"><div class="gstat-val" id="gSteps">—</div><div class="gstat-lbl">Стъпки</div></div>
+      <div class="gstat"><div class="gstat-val" id="gCal">—</div><div class="gstat-lbl">Калории</div></div>
+      <div class="gstat"><div class="gstat-val" id="gBB">—</div><div class="gstat-lbl">Body Battery</div></div>
+      <div class="gstat"><div class="gstat-val" id="gSleep">—</div><div class="gstat-lbl">Сън</div></div>
     </div>
 
-    <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
-      <div style="font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Тренировки тази седмица</div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <div style="font-size:28px;font-weight:700;color:var(--green)" id="t-weekCount">0</div>
-        <div style="font-size:12px;color:var(--muted)">от 5 планирани<br><span style="font-size:11px" id="t-weekMsg">—</span></div>
+    <!-- Sleep breakdown -->
+    <div class="sleep-card" id="trSleepCard" style="display:none">
+      <div class="sleep-title">💤 Сън детайли</div>
+      <div class="sleep-bars">
+        <div class="sleep-bar-row">
+          <div class="sb-label">Дълбок <span class="sb-val" id="slDeep">—</span></div>
+          <div class="sb-track"><div class="sb-fill" id="slDeepBar" style="background:#bc8cff;width:0%"></div></div>
+        </div>
+        <div class="sleep-bar-row">
+          <div class="sb-label">REM <span class="sb-val" id="slRem">—</span></div>
+          <div class="sb-track"><div class="sb-fill" id="slRemBar" style="background:#58a6ff;width:0%"></div></div>
+        </div>
+        <div class="sleep-bar-row">
+          <div class="sb-label">Лек <span class="sb-val" id="slLight">—</span></div>
+          <div class="sb-track"><div class="sb-fill" id="slLightBar" style="background:#3fb950;width:0%"></div></div>
+        </div>
+        <div class="sleep-bar-row">
+          <div class="sb-label">Буден <span class="sb-val" id="slAwake">—</span></div>
+          <div class="sb-track"><div class="sb-fill" id="slAwakeBar" style="background:#f85149;width:0%"></div></div>
+        </div>
       </div>
+    </div>
+
+    <!-- Workout plan for the day -->
+    <div id="trWorkoutPlan"></div>
+
+    <!-- Notes -->
+    <div style="margin-top:10px">
+      <div class="plan-title">📝 Бележки за деня</div>
+      <textarea class="note-area" id="trNoteArea" placeholder="Как беше тренировката? Болки, усещания, тегло..."></textarea>
+      <button class="save-note-btn" onclick="trSaveNote()">Запази бележката</button>
     </div>
   </div>
+</div>
 
-  <!-- WEEKLY PLAN -->
-  <div class="card">
-    <div class="ch">
-      <span class="ct">📅 Седмичен план</span>
-    </div>
-    <div id="t-weekPlan"></div>
+<!-- RIGHT: Sidebar -->
+<div class="sidebar">
+
+  <!-- Weekly progress -->
+  <div class="prog-card">
+    <div class="prog-title">📊 Прогрес тази седмица</div>
+    <div id="trWeekProgress"></div>
+  </div>
+
+  <!-- Garmin activities log -->
+  <div class="prog-card">
+    <div class="prog-title">🏃 Активности (Garmin)</div>
+    <div id="trActivitiesList" style="font-size:12px;color:#8b949e">Зарежда...</div>
+  </div>
+
+  <!-- Personal records -->
+  <div class="prog-card">
+    <div class="prog-title">🏆 Лични рекорди</div>
+    <div id="trPRList" style="font-size:12px;color:#8b949e">Зарежда...</div>
   </div>
 
 </div>
+</div>
+</div>
+
 <script>
 (function(){
-  const PLAN={
-    0:{name:'Почивка / Активно възстановяване',type:'Лек разтег или йога',icon:'🧘',rest:true},
-    1:{name:'Горна половина (Upper Body)',type:'Гърди, рамене, трицепс',icon:'💪',rest:false},
-    2:{name:'Кардио',type:'30–40 мин бягане / велоергометър',icon:'🏃',rest:false},
-    3:{name:'Долна половина (Lower Body)',type:'Крака, глутеус, гърб',icon:'🦵',rest:false},
-    4:{name:'Кардио + Корем',type:'HIIT, ситъпс, планки',icon:'⚡',rest:false},
-    5:{name:'Push / Pull',type:'Комбиниран full-body',icon:'🔄',rest:false},
-    6:{name:'Почивка',type:'Пасивна почивка, разтег',icon:'😴',rest:true},
-  };
-  const DAY_NAMES=['Нед','Пон','Вт','Ср','Чет','Пет','Съб'];
 
-  function hKey(d){return`health_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;}
-  function gh(d){return JSON.parse(localStorage.getItem(hKey(d))||'{}');}
-  function sh(d,h){localStorage.setItem(hKey(d),JSON.stringify(h));window.dispatchEvent(new Event('statsUpdate'));}
+// ── WORKOUT PROGRAM ───────────────────────────────────────────────
+// 0=Нед,1=Пон,2=Вт,3=Ср,4=Чет,5=Пет,6=Съб
+const PROGRAM = {
+  1: { // Понеделник — Плуване + Горна
+    name:'Плуване + Горна половина',
+    type:'swim+upper',
+    exercises:[
+      {name:'Плуване',             plan:'600м',  sets:null, reps:null, note:'кроул'},
+      {name:'Набирания',           plan:'3×max', sets:3,    reps:'max'},
+      {name:'Военна преса',        plan:'4×8',   sets:4,    reps:8},
+      {name:'Лицеви опори',        plan:'3×20',  sets:3,    reps:20},
+      {name:'Дъмбели странично',   plan:'3×12',  sets:3,    reps:12},
+      {name:'Трицепс блок',        plan:'3×12',  sets:3,    reps:12},
+      {name:'Ежедневни набирания', plan:'max',   sets:1,    reps:'max', note:'у дома'},
+    ]
+  },
+  2: { // Вторник — Почивка
+    name:'Активна почивка',
+    type:'rest',
+    exercises:[
+      {name:'Разтягане / мобилност', plan:'15-20 мин', sets:null, reps:null},
+      {name:'Ежедневни набирания',   plan:'max',       sets:1,    reps:'max', note:'у дома'},
+    ]
+  },
+  3: { // Сряда — Уейкборд или Долна
+    name:'Уейкборд / Долна половина',
+    type:'wake+lower',
+    exercises:[
+      {name:'Уейкборд (кейбъл парк)', plan:'2-3ч',  sets:null, reps:null, note:'raley, backroll, S-bend, slides'},
+      {name:'Клекове',                plan:'4×10',  sets:4,    reps:10},
+      {name:'Мъртва тяга',            plan:'4×6',   sets:4,    reps:6},
+      {name:'Набирания широки',       plan:'3×max', sets:3,    reps:'max'},
+      {name:'Ежедневни набирания',    plan:'max',   sets:1,    reps:'max', note:'у дома'},
+    ]
+  },
+  4: { // Четвъртък — Плуване
+    name:'Плуване',
+    type:'swim',
+    exercises:[
+      {name:'Плуване',             plan:'600м',  sets:null, reps:null, note:'кроул / смесено'},
+      {name:'Ежедневни набирания', plan:'max',   sets:1,    reps:'max', note:'у дома'},
+    ]
+  },
+  5: { // Петък — Уейкборд
+    name:'Уейкборд (кейбъл парк)',
+    type:'wake',
+    exercises:[
+      {name:'Уейкборд', plan:'2-4ч', sets:null, reps:null, note:'raley, backroll, S-bend, slides'},
+      {name:'Ежедневни набирания', plan:'max', sets:1, reps:'max', note:'у дома'},
+    ]
+  },
+  6: { // Събота — Уейкборд
+    name:'Уейкборд (кейбъл парк)',
+    type:'wake',
+    exercises:[
+      {name:'Уейкборд', plan:'2-4ч', sets:null, reps:null, note:'raley, backroll, S-bend, slides'},
+      {name:'Ежедневни набирания', plan:'max', sets:1, reps:'max', note:'у дома'},
+    ]
+  },
+  0: { // Неделя — Горна / почивка
+    name:'Горна половина / Почивка',
+    type:'upper',
+    exercises:[
+      {name:'Набирания',           plan:'4×max', sets:4, reps:'max'},
+      {name:'Наклонена пейка',     plan:'4×8',   sets:4, reps:8},
+      {name:'Рамо преса',          plan:'3×10',  sets:3, reps:10},
+      {name:'Гребане',             plan:'4×10',  sets:4, reps:10},
+      {name:'Ежедневни набирания', plan:'max',   sets:1, reps:'max', note:'у дома'},
+    ]
+  }
+};
 
-  function getWeekData(){
-    const now=new Date(),dow=now.getDay();
-    const start=new Date(now);start.setDate(now.getDate()-dow);
-    const days=[];
-    for(let i=0;i<7;i++){
-      const d=new Date(start);d.setDate(start.getDate()+i);
-      days.push({d,h:gh(d),isToday:i===dow,plan:PLAN[i]});
-    }
-    return days;
+const TYPE_COLORS = {
+  swim:'#58a6ff', 'swim+upper':'#58a6ff', upper:'#3fb950',
+  lower:'#bc8cff', wake:'#f0883e', 'wake+lower':'#f0883e', rest:'#8b949e'
+};
+
+const DAY_BG = ['Нед','Пон','Вт','Ср','Чет','Пет','Съб'];
+
+// ── STATE ─────────────────────────────────────────────────────────
+let selectedDate = new Date();
+let garminData   = {};
+let weekOffset   = 0; // future expansion
+
+// ── KEYS ──────────────────────────────────────────────────────────
+function trKey(d){ return `tr_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`; }
+function dateStr(d){ return d.toISOString().split('T')[0]; }
+
+function trLoad(d){ return JSON.parse(localStorage.getItem(trKey(d))||'{}'); }
+function trSave(d, obj){ localStorage.setItem(trKey(d), JSON.stringify(obj)); }
+
+// ── GARMIN LOAD ───────────────────────────────────────────────────
+async function loadGarmin(){
+  try{
+    const r = await fetch('../data.json', {signal: AbortSignal.timeout(5000)});
+    if(!r.ok) throw new Error();
+    const j = await r.json();
+    garminData = j.garmin || {};
+    renderAll();
+  }catch{
+    garminData = {};
+    renderAll();
+  }
+}
+
+// ── WEEK STRIP ────────────────────────────────────────────────────
+function renderWeekStrip(){
+  const today = new Date();
+  const strip = document.getElementById('trWeekStrip');
+  let html = '';
+  // show Mon–Sun of current week
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - ((today.getDay()+6)%7));
+
+  for(let i=0;i<7;i++){
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    const dow = d.getDay();
+    const prog = PROGRAM[dow];
+    const key  = trKey(d);
+    const saved = JSON.parse(localStorage.getItem(key)||'{}');
+    const hasWorkout = saved.done === true || (saved.exercises && Object.keys(saved.exercises).length > 0);
+    const isToday   = dateStr(d) === dateStr(today);
+    const isSel     = dateStr(d) === dateStr(selectedDate);
+    const col       = TYPE_COLORS[prog?.type] || '#8b949e';
+    html += `<div class="wd ${isToday?'today':''} ${hasWorkout?'has-workout':''} ${isSel?'selected':''}"
+               style="${isSel?'':''}${hasWorkout&&!isSel?`border-color:${col}40`:''}"
+               onclick="trSelectDate('${dateStr(d)}')">
+      <div class="wd-day">${DAY_BG[dow]}</div>
+      <div class="wd-date">${d.getDate()}</div>
+      <div class="wd-label" style="color:${col};font-size:9px">${prog?prog.name.split(' ')[0]:'—'}</div>
+      <div class="wd-dot" style="background:${col}"></div>
+    </div>`;
+  }
+  strip.innerHTML = html;
+}
+
+// ── SELECT DATE ───────────────────────────────────────────────────
+function trSelectDate(ds){
+  selectedDate = new Date(ds+'T12:00:00');
+  renderAll();
+}
+window.trSelectDate = trSelectDate;
+
+// ── RENDER ALL ────────────────────────────────────────────────────
+function renderAll(){
+  renderWeekStrip();
+  renderDayDetail();
+  renderSidebar();
+}
+
+// ── DAY DETAIL ────────────────────────────────────────────────────
+function renderDayDetail(){
+  const d    = selectedDate;
+  const dow  = d.getDay();
+  const ds   = dateStr(d);
+  const prog = PROGRAM[dow];
+  const saved= trLoad(d);
+  const gDay = garminData[ds];
+
+  // Title
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  document.getElementById('trDayTitle').textContent =
+    `${DAY_BG[dow]}, ${d.getDate()} ${months[d.getMonth()]}`;
+  document.getElementById('trDayType').textContent  = prog?.name || '—';
+
+  // Garmin badge
+  const badge = document.getElementById('trGarminBadge');
+  if(gDay){
+    badge.className='garmin-badge';
+    badge.textContent='Garmin ✓';
+  } else {
+    badge.className='no-garmin-badge';
+    badge.textContent='Няма Garmin данни';
   }
 
-  function renderToday(){
-    const now=new Date(),dow=now.getDay(),plan=PLAN[dow],h=gh(now);
-    document.getElementById('t-workoutName').textContent=`${plan.icon} ${plan.name}`;
-    document.getElementById('t-workoutType').textContent=plan.type;
-    const btn=document.getElementById('t-workoutBtn');
-    const done=!!h.workout;
-    btn.classList.toggle('done',done);
-    btn.textContent=done?'✅ Тренировката е завършена':'Маркирай като завършена';
-    const badge=document.getElementById('t-badge');
-    badge.textContent=done?'✅ Завършена':plan.rest?'Почивен ден':'Предстои';
-    badge.className='badge '+(done?'bg':plan.rest?'bb':'by');
+  // Garmin stats
+  const totalActCal = gDay?.activities?.reduce((s,a)=>s+(a.calories||0),0) || 0;
+  const sleepMin    = gDay?.sleep?.total_min;
+
+  document.getElementById('gHR').textContent    = gDay?.resting_hr    ? `${gDay.resting_hr} bpm`      : '—';
+  document.getElementById('gSteps').textContent = gDay?.steps         ? gDay.steps.toLocaleString()    : '—';
+  document.getElementById('gCal').textContent   = totalActCal         ? `${totalActCal} kcal`          : '—';
+  document.getElementById('gBB').textContent    = gDay?.body_battery  ? `${gDay.body_battery}%`        : '—';
+  document.getElementById('gSleep').textContent = sleepMin            ? `${Math.floor(sleepMin/60)}ч ${sleepMin%60}м` : '—';
+
+  // Sleep detail
+  const sl = gDay?.sleep;
+  const sleepCard = document.getElementById('trSleepCard');
+  if(sl && sl.total_min > 0){
+    sleepCard.style.display='block';
+    const tot = sl.total_min || 1;
+    const setBar = (id, barId, min, col) => {
+      document.getElementById(id).textContent  = min ? `${Math.floor(min/60)}ч ${min%60}м` : '—';
+      document.getElementById(barId).style.width = Math.round((min||0)/tot*100)+'%';
+    };
+    setBar('slDeep','slDeepBar',sl.deep_min,'#bc8cff');
+    setBar('slRem','slRemBar',sl.rem_min,'#58a6ff');
+    setBar('slLight','slLightBar',sl.light_min,'#3fb950');
+    setBar('slAwake','slAwakeBar',sl.awake_min,'#f85149');
+  } else {
+    sleepCard.style.display='none';
   }
 
-  function renderWeekBar(){
-    const days=getWeekData();
-    let workouts=0;
-    const html=days.map(({d,h,isToday,plan})=>{
-      const done=!!h.workout;
-      if(done&&!plan.rest)workouts++;
-      const bg=done?'var(--green)':plan.rest?'rgba(139,148,158,.15)':isToday?'var(--accent)':'var(--border)';
-      const border=isToday?'1px solid var(--blue)':'1px solid transparent';
-      return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px">
-        <div style="font-size:10px;font-weight:${isToday?700:400};color:${isToday?'var(--text)':'var(--muted)'}">${DAY_NAMES[d.getDay()]}</div>
-        <div style="width:100%;height:30px;border-radius:4px;background:${bg};border:${border};display:flex;align-items:center;justify-content:center;font-size:14px">${done?'✅':plan.icon}</div>
-      </div>`;
-    }).join('');
-    document.getElementById('t-weekBar').innerHTML=html;
-    document.getElementById('t-weekCount').textContent=workouts;
-    document.getElementById('t-weekMsg').textContent=
-      workouts>=5?'🎯 Седмичната цел е постигната!':
-      workouts>=3?`Още ${5-workouts} до целта`:
-      workouts>0?`Продължавай напред!`:'Започни тази седмица';
-  }
-
-  function renderWeekPlan(){
-    const now=new Date(),today=now.getDay();
-    document.getElementById('t-weekPlan').innerHTML=Array.from({length:7},(_,i)=>{
-      const plan=PLAN[i],isToday=i===today;
-      return `<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid ${i===6?'transparent':'var(--border)'};font-size:12px">
-        <div style="width:30px;text-align:center;font-size:18px">${plan.icon}</div>
+  // Workout plan
+  const planEl = document.getElementById('trWorkoutPlan');
+  if(!prog || !prog.exercises.length){
+    planEl.innerHTML='<div style="font-size:12px;color:#8b949e;padding:8px 0">Почивен ден</div>';
+  } else {
+    const exSaved = saved.exercises || {};
+    let html = `<div class="plan-title" style="margin-top:8px">💪 Програма</div>`;
+    prog.exercises.forEach((ex,i)=>{
+      const exData = exSaved[i] || {};
+      const isDone = exData.done || false;
+      html += `<div class="exercise-row">
         <div style="flex:1">
-          <div style="font-weight:${isToday?600:400};color:${isToday?'var(--text)':'var(--muted)'}">${DAY_NAMES[i]} — ${plan.name}</div>
-          <div style="font-size:11px;color:var(--muted)">${plan.type}</div>
+          <div class="ex-name">${ex.name}${ex.note?` <span style="font-size:10px;color:#8b949e">(${ex.note})</span>`:''}</div>
+          <div class="ex-plan">План: ${ex.plan}</div>
         </div>
-        ${isToday?'<span class="badge bb" style="white-space:nowrap">Днес</span>':''}
+        <div class="ex-result">`;
+      if(ex.sets){
+        html+=`<input class="ex-input" type="text" placeholder="${ex.reps}×${ex.sets}"
+          value="${exData.result||''}"
+          title="Резултат (напр. 8×4 или 70кг×4)"
+          onchange="trSaveEx(${i}, this.value, ${isDone})">`;
+      }
+      html+=`<button class="ex-done ${isDone?'done':''}" onclick="trToggleEx(${i})">${isDone?'✓':'○'}</button>
+        </div>
       </div>`;
-    }).join('');
+    });
+    // Done button
+    const allDone = prog.exercises.every((_,i)=>(exSaved[i]||{}).done);
+    html+=`<div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+      <button onclick="trMarkWorkoutDone()" style="background:${saved.done?'rgba(63,185,80,.2)':'#1f6feb'};color:${saved.done?'#3fb950':'#fff'};border:${saved.done?'1px solid #3fb950':'none'};border-radius:4px;padding:6px 14px;font-size:12px;cursor:pointer">
+        ${saved.done?'✅ Тренировката е отбелязана':'Отбележи тренировката'}
+      </button>
+      <span style="font-size:11px;color:#8b949e">${Object.values(exSaved).filter(e=>e.done).length}/${prog.exercises.length} упражнения</span>
+    </div>`;
+    planEl.innerHTML=html;
   }
 
-  window.trainToggle=function(){
-    const now=new Date(),h=gh(now);
-    h.workout=!h.workout;sh(now,h);
-    renderToday();renderWeekBar();
-  };
+  // Notes
+  document.getElementById('trNoteArea').value = saved.note || '';
+}
 
-  renderToday();renderWeekBar();renderWeekPlan();
+// ── EXERCISE INTERACTIONS ─────────────────────────────────────────
+function trSaveEx(idx, val, done){
+  const saved = trLoad(selectedDate);
+  if(!saved.exercises) saved.exercises={};
+  if(!saved.exercises[idx]) saved.exercises[idx]={};
+  saved.exercises[idx].result = val;
+  trSave(selectedDate, saved);
+}
+window.trSaveEx = trSaveEx;
+
+function trToggleEx(idx){
+  const saved = trLoad(selectedDate);
+  if(!saved.exercises) saved.exercises={};
+  if(!saved.exercises[idx]) saved.exercises[idx]={};
+  saved.exercises[idx].done = !saved.exercises[idx].done;
+  trSave(selectedDate, saved);
+  renderDayDetail();
+  renderWeekStrip();
+}
+window.trToggleEx = trToggleEx;
+
+function trMarkWorkoutDone(){
+  const saved = trLoad(selectedDate);
+  saved.done = !saved.done;
+  trSave(selectedDate, saved);
+  renderDayDetail();
+  renderWeekStrip();
+  dispatchEvent(new Event('statsUpdate'));
+}
+window.trMarkWorkoutDone = trMarkWorkoutDone;
+
+function trSaveNote(){
+  const saved = trLoad(selectedDate);
+  saved.note  = document.getElementById('trNoteArea').value;
+  trSave(selectedDate, saved);
+  const btn = document.querySelector('.save-note-btn');
+  btn.textContent='✓ Запазено'; btn.style.background='rgba(63,185,80,.2)';
+  btn.style.color='#3fb950'; btn.style.border='1px solid #3fb950';
+  setTimeout(()=>{btn.textContent='Запази бележката';btn.style.background='#1f6feb';btn.style.color='#fff';btn.style.border='none';},1500);
+}
+window.trSaveNote = trSaveNote;
+
+// ── SIDEBAR ───────────────────────────────────────────────────────
+function renderSidebar(){
+  renderWeekProgress();
+  renderActivities();
+  renderPRs();
+}
+
+function renderWeekProgress(){
+  const today = new Date();
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - ((today.getDay()+6)%7));
+  let html='';
+  let doneCount=0;
+  for(let i=0;i<7;i++){
+    const d = new Date(monday); d.setDate(monday.getDate()+i);
+    const dow = d.getDay();
+    const prog = PROGRAM[dow];
+    const saved = trLoad(d);
+    const isToday = dateStr(d)===dateStr(today);
+    const isPast  = d < today && !isToday;
+    const done    = saved.done;
+    if(done) doneCount++;
+    const col = TYPE_COLORS[prog?.type]||'#8b949e';
+    html+=`<div class="prog-week-row">
+      <span style="color:${done?col:'#8b949e'}">${DAY_BG[dow]} — ${prog?.name.split('/')[0].trim()||'Почивка'}</span>
+      <span style="font-size:13px">${done?'✅':isToday?'⬅':isPast&&prog?.type!=='rest'?'⭕':'—'}</span>
+    </div>`;
+  }
+  html+=`<div style="margin-top:8px;font-size:11px;color:#8b949e;text-align:center">${doneCount} от 7 дни завършени</div>`;
+  document.getElementById('trWeekProgress').innerHTML=html;
+}
+
+function renderActivities(){
+  // Show last 7 days from Garmin
+  const el = document.getElementById('trActivitiesList');
+  const days = Object.entries(garminData).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,7);
+  if(!days.length){ el.innerHTML='<span style="color:#8b949e">Очаква Garmin sync...</span>'; return; }
+  let html='';
+  days.forEach(([ds, gd])=>{
+    if(!gd.activities?.length) return;
+    gd.activities.forEach(a=>{
+      const dur = Math.round((a.duration_s||0)/60);
+      const d   = new Date(ds);
+      const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+      html+=`<div style="padding:5px 0;border-bottom:1px solid #21262d;font-size:12px">
+        <div style="display:flex;justify-content:space-between">
+          <span style="font-weight:500">${a.name||a.type}</span>
+          <span style="color:#8b949e">${d.getDate()} ${months[d.getMonth()]}</span>
+        </div>
+        <div style="color:#8b949e;font-size:11px;margin-top:1px">
+          ${dur}мин${a.avg_hr?` · ${a.avg_hr}bpm avg`:''}${a.calories?` · ${a.calories}kcal`:''}${a.distance_m>0?` · ${(a.distance_m/1000).toFixed(1)}км`:''}
+        </div>
+      </div>`;
+    });
+  });
+  el.innerHTML = html || '<span style="color:#8b949e">Няма активности</span>';
+}
+
+function renderPRs(){
+  const el = document.getElementById('trPRList');
+  // Collect best results from localStorage
+  const prs = {};
+  for(let i=0;i<localStorage.length;i++){
+    const k = localStorage.key(i);
+    if(!k.startsWith('tr_')) continue;
+    const d = localStorage.getItem(k);
+    try{
+      const obj = JSON.parse(d);
+      if(!obj.exercises) continue;
+      const date = k.replace('tr_','').replace(/_/g,'-');
+      Object.entries(obj.exercises).forEach(([idx, ex])=>{
+        if(!ex.result) return;
+        const dow = new Date(date+'T12:00:00').getDay();
+        const prog = PROGRAM[dow];
+        if(!prog) return;
+        const exName = prog.exercises[idx]?.name;
+        if(!exName) return;
+        if(!prs[exName] || ex.result > prs[exName].result)
+          prs[exName] = {result: ex.result, date};
+      });
+    }catch{}
+  }
+  const entries = Object.entries(prs);
+  if(!entries.length){ el.innerHTML='<span style="color:#8b949e">Още няма записани резултати</span>'; return; }
+  el.innerHTML = entries.slice(0,8).map(([name,pr])=>
+    `<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #21262d;font-size:12px">
+      <span>${name}</span>
+      <span style="color:#f0883e;font-weight:600">${pr.result}</span>
+    </div>`
+  ).join('');
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+loadGarmin();
+
 })();
 </script>

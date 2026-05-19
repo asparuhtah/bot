@@ -1,0 +1,533 @@
+<!-- modules/university.html — Модул Университет -->
+<style>
+.uni-wrap{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e6edf3}
+
+/* View switcher */
+.cal-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.cal-nav-title{font-size:16px;font-weight:700}
+.cal-nav-btns{display:flex;gap:5px}
+.cnbtn{background:#1c2128;border:1px solid #30363d;border-radius:5px;color:#8b949e;padding:4px 10px;font-size:12px;cursor:pointer;font-family:inherit;transition:all .15s}
+.cnbtn:hover,.cnbtn.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
+.nav-arrow{background:transparent;border:1px solid #30363d;border-radius:5px;color:#e6edf3;padding:4px 10px;font-size:14px;cursor:pointer;transition:border-color .15s}
+.nav-arrow:hover{border-color:#58a6ff}
+
+/* Month grid */
+.month-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.month-hdr{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.3px;text-align:center;padding:5px 0;font-weight:600}
+.mday{background:#1c2128;border:1px solid #30363d;border-radius:5px;padding:5px;min-height:72px;cursor:pointer;transition:border-color .15s;position:relative}
+.mday:hover{border-color:#58a6ff}
+.mday.today{border-color:#58a6ff;background:rgba(88,166,255,.08)}
+.mday.selected{border-color:#1f6feb;background:rgba(31,111,235,.12)}
+.mday.other-month .mday-num{color:#484f58}
+.mday.other-month{background:#161b22;opacity:.6}
+.mday-num{font-size:12px;font-weight:600;margin-bottom:3px}
+.mday-events{display:flex;flex-direction:column;gap:2px}
+.mev{font-size:9px;padding:1px 4px;border-radius:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+
+/* Week view */
+.week-grid{display:grid;grid-template-columns:50px repeat(7,1fr);gap:1px;background:#30363d;border-radius:8px;overflow:hidden}
+.wg-corner{background:#0d1117;padding:5px}
+.wg-day-hdr{background:#161b22;padding:6px 4px;text-align:center;font-size:11px}
+.wg-day-hdr .wdn{color:#8b949e;font-size:10px;text-transform:uppercase}
+.wg-day-hdr .wdd{font-size:14px;font-weight:700}
+.wg-day-hdr.today-col .wdd{color:#58a6ff}
+.wg-time{background:#0d1117;font-size:10px;color:#8b949e;padding:3px 5px;text-align:right;height:36px;display:flex;align-items:center;justify-content:flex-end}
+.wg-cell{background:#161b22;position:relative;height:36px;border-top:1px solid #21262d}
+.wg-cell.today-col{background:#1a2332}
+.wg-ev{position:absolute;left:1px;right:1px;border-radius:3px;font-size:9px;padding:1px 3px;overflow:hidden;cursor:pointer;font-weight:500;z-index:2}
+
+/* Day view */
+.day-view{display:grid;grid-template-columns:50px 1fr;gap:1px;background:#30363d;border-radius:8px;overflow:hidden;max-height:600px;overflow-y:auto}
+.dv-time{background:#0d1117;font-size:10px;color:#8b949e;padding:3px 5px;height:50px;display:flex;align-items:flex-start;justify-content:flex-end}
+.dv-cell{background:#161b22;position:relative;height:50px;border-top:1px solid #21262d}
+.dv-now-line{position:absolute;left:0;right:0;height:2px;background:#f85149;z-index:3}
+.dv-ev{position:absolute;left:2px;right:2px;border-radius:4px;font-size:10px;padding:2px 5px;overflow:hidden;cursor:pointer;font-weight:500}
+
+/* Event types */
+.et-lecture   {background:rgba(88,166,255,.2);color:#58a6ff;border-left:3px solid #58a6ff}
+.et-exam      {background:rgba(248,81,73,.2);color:#f85149;border-left:3px solid #f85149}
+.et-council   {background:rgba(188,140,255,.2);color:#bc8cff;border-left:3px solid #bc8cff}
+.et-deadline  {background:rgba(240,136,62,.2);color:#f0883e;border-left:3px solid #f0883e}
+.et-seminar   {background:rgba(63,185,80,.2);color:#3fb950;border-left:3px solid #3fb950}
+.et-other     {background:rgba(139,148,158,.15);color:#e6edf3;border-left:3px solid #8b949e}
+
+/* Event list */
+.ev-list-item{padding:8px 10px;border-radius:6px;margin-bottom:5px;cursor:pointer;transition:opacity .15s;display:flex;gap:10px;align-items:flex-start}
+.ev-list-item:hover{opacity:.85}
+.ev-time-col{font-size:11px;color:#8b949e;white-space:nowrap;padding-top:1px;min-width:65px}
+.ev-title{font-size:13px;font-weight:500}
+.ev-sub{font-size:11px;opacity:.75;margin-top:1px}
+
+/* Add/import panel */
+.import-panel{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-bottom:13px}
+.ip-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.ical-input{width:100%;background:#0d1117;border:1px solid #30363d;border-radius:5px;padding:7px 10px;color:#e6edf3;font-size:12px;outline:none;box-sizing:border-box;margin-bottom:6px}
+.ical-input:focus{border-color:#58a6ff}
+.ical-input::placeholder{color:#484f58}
+.import-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600;margin-right:6px}
+.import-btn:hover{background:#388bfd}
+.import-status{font-size:11px;color:#8b949e;margin-top:5px;min-height:16px}
+
+/* Add event form */
+.add-form{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.add-form input,.add-form select{background:#0d1117;border:1px solid #30363d;border-radius:5px;padding:6px 9px;color:#e6edf3;font-size:12px;outline:none;box-sizing:border-box}
+.add-form input:focus,.add-form select:focus{border-color:#58a6ff}
+.add-form-full{grid-column:1/-1}
+
+/* Upcoming strip */
+.upcoming{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px;margin-bottom:13px}
+.up-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.up-item{display:flex;gap:10px;align-items:center;padding:5px 0;border-bottom:1px solid #21262d;font-size:12px}
+.up-item:last-child{border-bottom:none}
+.up-date{min-width:55px;color:#8b949e;font-variant-numeric:tabular-nums}
+.up-days{min-width:45px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+</style>
+
+<div class="uni-wrap">
+
+<!-- Import/Add panel -->
+<div class="import-panel">
+  <div class="ip-title">📅 Google Calendar Import + Добавяне</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+    <input class="ical-input" id="icalUrl" placeholder="Google Calendar iCal URL (Settings → Secret address in iCal format → https://calendar.google.com/calendar/ical/...)" style="flex:1;min-width:260px">
+    <button class="import-btn" onclick="uniImportICal()">⬇ Import</button>
+    <button class="import-btn" style="background:#21262d;border:1px solid #30363d" onclick="uniShowAddForm()">+ Добави ивент</button>
+  </div>
+  <div class="import-status" id="importStatus"></div>
+
+  <!-- Add event form (hidden by default) -->
+  <div id="addEventForm" style="display:none;margin-top:10px;border-top:1px solid #30363d;padding-top:10px">
+    <div class="add-form">
+      <input type="text"     id="evTitle"    placeholder="Заглавие" class="add-form-full">
+      <input type="date"     id="evDate"     >
+      <input type="time"     id="evStart"    >
+      <input type="time"     id="evEnd"      >
+      <select id="evType">
+        <option value="lecture">Лекция</option>
+        <option value="seminar">Семинар</option>
+        <option value="exam">Изпит</option>
+        <option value="council">Катедрен съвет</option>
+        <option value="deadline">Дедлайн</option>
+        <option value="other">Друго</option>
+      </select>
+      <input type="text" id="evLoc" placeholder="Зала / Място">
+      <input type="text" id="evNote" placeholder="Бележка" class="add-form-full">
+      <div class="add-form-full" style="display:flex;gap:6px">
+        <button class="import-btn" onclick="uniAddEvent()">Добави</button>
+        <button class="import-btn" style="background:transparent;border:1px solid #30363d;color:#8b949e" onclick="document.getElementById('addEventForm').style.display='none'">Откажи</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Upcoming events -->
+<div class="upcoming" id="uniUpcoming"></div>
+
+<!-- Calendar nav -->
+<div class="cal-nav">
+  <div style="display:flex;gap:6px;align-items:center">
+    <button class="nav-arrow" onclick="uniNavPrev()">‹</button>
+    <span class="cal-nav-title" id="uniCalTitle">—</span>
+    <button class="nav-arrow" onclick="uniNavNext()">›</button>
+    <button class="cnbtn" onclick="uniGoToday()" style="font-size:11px">Днес</button>
+  </div>
+  <div class="cal-nav-btns">
+    <button class="cnbtn on" id="vDay"   onclick="uniSetView('day')">Ден</button>
+    <button class="cnbtn"    id="vWeek"  onclick="uniSetView('week')">Седмица</button>
+    <button class="cnbtn"    id="vMonth" onclick="uniSetView('month')">Месец</button>
+  </div>
+</div>
+
+<!-- Calendar body -->
+<div id="uniCalBody"></div>
+
+</div>
+
+<script>
+(function(){
+
+const MONTHS_BG = ['Януари','Февруари','Март','Април','Май','Юни','Юли','Август','Септември','Октомври','Ноември','Декември'];
+const DAYS_BG   = ['Нед','Пон','Вт','Ср','Чет','Пет','Съб'];
+const DAYS_FULL = ['Неделя','Понеделник','Вторник','Сряда','Четвъртък','Петък','Събота'];
+const TYPE_LABELS = {lecture:'Лекция',seminar:'Семинар',exam:'Изпит',council:'Катедрен съвет',deadline:'Дедлайн',other:'Събитие'};
+
+// ── STATE ─────────────────────────────────────────────────────────
+let view        = 'month';
+let cursor      = new Date();   // current nav date
+let events      = [];           // all events
+
+const STORE_KEY = 'uni_events_v2';
+const ICAL_KEY  = 'uni_ical_url';
+
+function loadEvents(){ try{ events=JSON.parse(localStorage.getItem(STORE_KEY)||'[]'); }catch{ events=[]; } }
+function saveEvents(){ localStorage.setItem(STORE_KEY, JSON.stringify(events)); }
+
+// ── ICAL IMPORT ───────────────────────────────────────────────────
+async function uniImportICal(){
+  const url = document.getElementById('icalUrl').value.trim();
+  if(!url){ setStatus('Въведи iCal URL','#f85149'); return; }
+  localStorage.setItem(ICAL_KEY, url);
+  setStatus('Зарежда...','#8b949e');
+
+  // Use CORS proxy since Google Calendar iCal needs it from browser
+  const proxy = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+  try{
+    const r = await fetch(proxy, {signal: AbortSignal.timeout(10000)});
+    if(!r.ok) throw new Error(`HTTP ${r.status}`);
+    const text = await r.text();
+    const parsed = parseICal(text);
+    // Merge — remove old ical events, add new
+    events = events.filter(e => e.source !== 'ical');
+    events.push(...parsed);
+    saveEvents();
+    setStatus(`✓ Импортирани ${parsed.length} ивента от Google Calendar`, '#3fb950');
+    renderAll();
+  }catch(err){
+    setStatus(`Грешка: ${err.message}. Провери URL и дали календарът е публичен.`, '#f85149');
+  }
+}
+window.uniImportICal = uniImportICal;
+
+function setStatus(msg, color='#8b949e'){
+  const el = document.getElementById('importStatus');
+  el.textContent = msg; el.style.color = color;
+}
+
+// ── ICAL PARSER ───────────────────────────────────────────────────
+function parseICal(text){
+  const evs = [];
+  const lines = text.replace(/\r\n /g,'').replace(/\r\n/g,'\n').split('\n');
+  let cur = null;
+  lines.forEach(line => {
+    if(line === 'BEGIN:VEVENT'){ cur = {}; return; }
+    if(line === 'END:VEVENT'){
+      if(cur && cur.title){
+        const ev = icalEventToObj(cur);
+        if(ev) evs.push(ev);
+      }
+      cur = null; return;
+    }
+    if(!cur) return;
+    const col = line.indexOf(':');
+    if(col < 0) return;
+    const key = line.substring(0, col).split(';')[0].trim();
+    const val = line.substring(col+1).trim();
+    if(key === 'SUMMARY')   cur.title = val.replace(/\\,/g,',').replace(/\\n/g,' ');
+    if(key === 'DTSTART')   cur.dtstart = val;
+    if(key === 'DTEND')     cur.dtend   = val;
+    if(key === 'LOCATION')  cur.location = val.replace(/\\,/g,',');
+    if(key === 'DESCRIPTION') cur.desc  = val.replace(/\\n/g,' ').replace(/\\,/g,',');
+    if(key === 'UID')       cur.uid     = val;
+  });
+  return evs;
+}
+
+function icalDateParse(s){
+  // 20250519T090000Z or 20250519T090000 or 20250519
+  if(!s) return null;
+  s = s.replace('Z','');
+  if(s.length === 8)  return new Date(`${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}T00:00:00`);
+  return new Date(`${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}T${s.slice(9,11)}:${s.slice(11,13)}:00`);
+}
+
+function guessType(title){
+  const t = (title||'').toLowerCase();
+  if(/изпит|тест|exam/.test(t))         return 'exam';
+  if(/катедр|съвет|заседан/.test(t))    return 'council';
+  if(/лекц/.test(t))                    return 'lecture';
+  if(/семинар|упражн/.test(t))          return 'seminar';
+  if(/дедлайн|deadline|срок/.test(t))   return 'deadline';
+  return 'other';
+}
+
+function icalEventToObj(cur){
+  const start = icalDateParse(cur.dtstart);
+  const end   = icalDateParse(cur.dtend);
+  if(!start) return null;
+  return {
+    id:       cur.uid || Math.random().toString(36).slice(2),
+    title:    cur.title,
+    date:     start.toISOString().split('T')[0],
+    startT:   start.toTimeString().slice(0,5),
+    endT:     end ? end.toTimeString().slice(0,5) : '',
+    type:     guessType(cur.title),
+    location: cur.location || '',
+    note:     cur.desc || '',
+    source:   'ical',
+    allDay:   cur.dtstart.length === 8,
+  };
+}
+
+// ── ADD EVENT ─────────────────────────────────────────────────────
+function uniShowAddForm(){
+  const f = document.getElementById('addEventForm');
+  f.style.display = f.style.display==='none' ? 'block' : 'none';
+  // default date = cursor
+  document.getElementById('evDate').value = dateStr(cursor);
+}
+window.uniShowAddForm = uniShowAddForm;
+
+function uniAddEvent(){
+  const title = document.getElementById('evTitle').value.trim();
+  const date  = document.getElementById('evDate').value;
+  if(!title || !date){ alert('Въведи поне заглавие и дата'); return; }
+  const ev = {
+    id:       Date.now().toString(),
+    title,
+    date,
+    startT:   document.getElementById('evStart').value,
+    endT:     document.getElementById('evEnd').value,
+    type:     document.getElementById('evType').value,
+    location: document.getElementById('evLoc').value,
+    note:     document.getElementById('evNote').value,
+    source:   'manual',
+    allDay:   !document.getElementById('evStart').value,
+  };
+  events.push(ev);
+  saveEvents();
+  document.getElementById('addEventForm').style.display='none';
+  document.getElementById('evTitle').value='';
+  renderAll();
+}
+window.uniAddEvent = uniAddEvent;
+
+function uniDeleteEvent(id){
+  events = events.filter(e=>e.id!==id);
+  saveEvents(); renderAll();
+}
+window.uniDeleteEvent = uniDeleteEvent;
+
+// ── HELPERS ───────────────────────────────────────────────────────
+function dateStr(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+function eventsOn(ds){ return events.filter(e=>e.date===ds).sort((a,b)=>a.startT.localeCompare(b.startT)); }
+function evClass(type){ return `et-${type||'other'}`; }
+
+// ── NAV ───────────────────────────────────────────────────────────
+function uniNavPrev(){
+  if(view==='month'){ cursor.setMonth(cursor.getMonth()-1); }
+  else if(view==='week'){ cursor.setDate(cursor.getDate()-7); }
+  else { cursor.setDate(cursor.getDate()-1); }
+  renderAll();
+}
+function uniNavNext(){
+  if(view==='month'){ cursor.setMonth(cursor.getMonth()+1); }
+  else if(view==='week'){ cursor.setDate(cursor.getDate()+7); }
+  else { cursor.setDate(cursor.getDate()+1); }
+  renderAll();
+}
+function uniGoToday(){ cursor=new Date(); renderAll(); }
+function uniSetView(v){
+  view=v;
+  ['Day','Week','Month'].forEach(x=>document.getElementById('v'+x).classList.remove('on'));
+  document.getElementById('v'+v.charAt(0).toUpperCase()+v.slice(1)).classList.add('on');
+  renderAll();
+}
+window.uniNavPrev=uniNavPrev; window.uniNavNext=uniNavNext;
+window.uniGoToday=uniGoToday; window.uniSetView=uniSetView;
+
+// ── RENDER ALL ────────────────────────────────────────────────────
+function renderAll(){
+  renderUpcoming();
+  if(view==='month') renderMonth();
+  else if(view==='week') renderWeek();
+  else renderDay();
+}
+
+// ── UPCOMING ─────────────────────────────────────────────────────
+function renderUpcoming(){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const tds   = dateStr(today);
+  const upcoming = events
+    .filter(e => e.date >= tds)
+    .sort((a,b)=> a.date.localeCompare(b.date)||a.startT.localeCompare(b.startT))
+    .slice(0,6);
+  const el = document.getElementById('uniUpcoming');
+  if(!upcoming.length){
+    el.innerHTML='<div class="up-title">📌 Предстоящи</div><div style="font-size:12px;color:#8b949e">Няма предстоящи ивенти</div>';
+    return;
+  }
+  let html='<div class="up-title">📌 Предстоящи</div>';
+  upcoming.forEach(ev=>{
+    const d = new Date(ev.date+'T12:00:00');
+    const diff = Math.round((d-today)/(1000*60*60*24));
+    const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+    const dLabel = diff===0?'Днес':diff===1?'Утре':`${d.getDate()} ${months[d.getMonth()]}`;
+    const daysLabel = diff===0?'днес':diff===1?'утре':`след ${diff}д`;
+    html+=`<div class="up-item">
+      <span class="up-date">${dLabel}</span>
+      <span class="${evClass(ev.type)}" style="padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${TYPE_LABELS[ev.type]||'—'}</span>
+      <span style="flex:1;font-size:12px">${ev.title}${ev.startT?` · ${ev.startT}`:''}</span>
+      <span class="up-days" style="color:${diff<=1?'#f85149':diff<=3?'#d29922':'#3fb950'}">${daysLabel}</span>
+    </div>`;
+  });
+  el.innerHTML=html;
+}
+
+// ── MONTH VIEW ────────────────────────────────────────────────────
+function renderMonth(){
+  const y=cursor.getFullYear(), m=cursor.getMonth();
+  document.getElementById('uniCalTitle').textContent=`${MONTHS_BG[m]} ${y}`;
+  const first=new Date(y,m,1), last=new Date(y,m+1,0);
+  const startDow=(first.getDay()+6)%7; // Mon=0
+  const today=dateStr(new Date());
+  let html='';
+  DAYS_BG.slice(1).concat(DAYS_BG[0]).forEach(d=>{
+    html+=`<div class="month-hdr">${d}</div>`;
+  });
+  let day=new Date(first); day.setDate(1-startDow);
+  for(let w=0;w<6;w++){
+    for(let d=0;d<7;d++){
+      const ds=dateStr(day);
+      const isToday=ds===today;
+      const isSel=ds===dateStr(cursor);
+      const otherM=day.getMonth()!==m;
+      const evs=eventsOn(ds).slice(0,3);
+      html+=`<div class="mday ${isToday?'today':''} ${isSel?'selected':''} ${otherM?'other-month':''}"
+               onclick="uniDayClick('${ds}')">
+        <div class="mday-num">${day.getDate()}</div>
+        <div class="mday-events">`;
+      evs.forEach(ev=>{
+        html+=`<div class="mev ${evClass(ev.type)}" title="${ev.title}">${ev.startT?ev.startT+' ':''} ${ev.title}</div>`;
+      });
+      if(eventsOn(ds).length>3) html+=`<div style="font-size:9px;color:#8b949e">+${eventsOn(ds).length-3} още</div>`;
+      html+='</div></div>';
+      day.setDate(day.getDate()+1);
+    }
+  }
+  document.getElementById('uniCalBody').innerHTML=`<div class="month-grid">${html}</div>`;
+}
+
+function uniDayClick(ds){
+  cursor=new Date(ds+'T12:00:00');
+  uniSetView('day');
+}
+window.uniDayClick=uniDayClick;
+
+// ── WEEK VIEW ─────────────────────────────────────────────────────
+function renderWeek(){
+  const monday=new Date(cursor);
+  monday.setDate(cursor.getDate()-((cursor.getDay()+6)%7));
+  const days=[]; for(let i=0;i<7;i++){const d=new Date(monday);d.setDate(monday.getDate()+i);days.push(d);}
+  const today=dateStr(new Date());
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  document.getElementById('uniCalTitle').textContent=
+    `${days[0].getDate()} ${months[days[0].getMonth()]} — ${days[6].getDate()} ${months[days[6].getMonth()]} ${days[6].getFullYear()}`;
+  const HOURS=Array.from({length:24},(_,i)=>i);
+  let html=`<div class="week-grid">
+    <div class="wg-corner"></div>`;
+  days.forEach(d=>{
+    const ds=dateStr(d);
+    html+=`<div class="wg-day-hdr ${ds===today?'today-col':''}">
+      <div class="wdn">${DAYS_BG[(d.getDay())]}</div>
+      <div class="wdd" style="cursor:pointer" onclick="uniDayClick('${ds}')">${d.getDate()}</div>
+    </div>`;
+  });
+  HOURS.forEach(h=>{
+    html+=`<div class="wg-time">${h}:00</div>`;
+    days.forEach(d=>{
+      const ds=dateStr(d);
+      const cellEvs=eventsOn(ds).filter(ev=>{
+        if(!ev.startT) return false;
+        const eh=parseInt(ev.startT.split(':')[0]);
+        return eh===h;
+      });
+      html+=`<div class="wg-cell ${ds===today?'today-col':''}">`;
+      cellEvs.forEach(ev=>{
+        html+=`<div class="wg-ev ${evClass(ev.type)}" title="${ev.title}\n${ev.startT}${ev.endT?'–'+ev.endT:''}" onclick="uniShowEvDetail('${ev.id}')">
+          ${ev.startT} ${ev.title}
+        </div>`;
+      });
+      html+='</div>';
+    });
+  });
+  html+='</div>';
+  document.getElementById('uniCalBody').innerHTML=html;
+}
+
+// ── DAY VIEW ──────────────────────────────────────────────────────
+function renderDay(){
+  const ds=dateStr(cursor);
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  document.getElementById('uniCalTitle').textContent=
+    `${DAYS_FULL[cursor.getDay()]}, ${cursor.getDate()} ${months[cursor.getMonth()]} ${cursor.getFullYear()}`;
+  const dayEvs=eventsOn(ds);
+  const allDay=dayEvs.filter(e=>e.allDay);
+  const timed=dayEvs.filter(e=>!e.allDay && e.startT);
+  const now=new Date();
+  const nowMins=now.getHours()*60+now.getMinutes();
+  const isToday=ds===dateStr(now);
+
+  let html='';
+  // All-day events
+  if(allDay.length){
+    html+=`<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px;padding:8px;background:#161b22;border-radius:6px">`;
+    allDay.forEach(ev=>{
+      html+=`<div class="${evClass(ev.type)}" style="padding:4px 8px;border-radius:4px;font-size:12px;cursor:pointer" onclick="uniShowEvDetail('${ev.id}')">${ev.title}</div>`;
+    });
+    html+='</div>';
+  }
+
+  html+='<div class="day-view">';
+  for(let h=7;h<24;h++){
+    const cellEvs=timed.filter(ev=>parseInt(ev.startT.split(':')[0])===h);
+    const nowLine=isToday&&now.getHours()===h?`<div class="dv-now-line" style="top:${Math.round(now.getMinutes()/60*50)}px"></div>`:'';
+    html+=`<div class="dv-time">${h}:00</div>
+    <div class="dv-cell">${nowLine}`;
+    cellEvs.forEach(ev=>{
+      const sm=parseInt(ev.startT.split(':')[1]||0);
+      const top=Math.round(sm/60*50);
+      let height=50;
+      if(ev.endT){
+        const eh2=parseInt(ev.endT.split(':')[0]),em2=parseInt(ev.endT.split(':')[1]||0);
+        height=Math.max(20,((eh2-h)*60+(em2-sm))/60*50);
+      }
+      html+=`<div class="dv-ev ${evClass(ev.type)}" style="top:${top}px;height:${height}px" onclick="uniShowEvDetail('${ev.id}')">
+        <strong>${ev.startT}${ev.endT?' – '+ev.endT:''}</strong> ${ev.title}
+        ${ev.location?`<br><span style="opacity:.7">📍 ${ev.location}</span>`:''}
+      </div>`;
+    });
+    html+='</div>';
+  }
+  html+='</div>';
+
+  // Event list below
+  if(dayEvs.length){
+    html+=`<div style="margin-top:12px">`;
+    dayEvs.forEach(ev=>{
+      html+=`<div class="ev-list-item ${evClass(ev.type)}" onclick="uniShowEvDetail('${ev.id}')">
+        <div class="ev-time-col">${ev.allDay?'Цял ден':ev.startT+(ev.endT?' – '+ev.endT:'')}</div>
+        <div style="flex:1">
+          <div class="ev-title">${ev.title}</div>
+          ${ev.location?`<div class="ev-sub">📍 ${ev.location}</div>`:''}
+          ${ev.note?`<div class="ev-sub">${ev.note}</div>`:''}
+        </div>
+        <button onclick="event.stopPropagation();uniDeleteEvent('${ev.id}')" style="background:transparent;border:none;color:#f85149;cursor:pointer;font-size:14px;padding:0 3px">✕</button>
+      </div>`;
+    });
+    html+='</div>';
+  } else {
+    html+=`<div style="font-size:12px;color:#8b949e;text-align:center;padding:20px">Няма ивенти за този ден</div>`;
+  }
+
+  document.getElementById('uniCalBody').innerHTML=html;
+}
+
+// ── EVENT DETAIL MODAL ────────────────────────────────────────────
+function uniShowEvDetail(id){
+  const ev=events.find(e=>e.id===id);
+  if(!ev) return;
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  const d=new Date(ev.date+'T12:00:00');
+  alert(`${ev.title}\n${DAYS_FULL[d.getDay()]}, ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}\n${ev.allDay?'Цял ден':(ev.startT+(ev.endT?' – '+ev.endT:''))}\n${ev.location?'📍 '+ev.location+'\n':''}${ev.note?ev.note:''}\n\nТип: ${TYPE_LABELS[ev.type]||ev.type}`);
+}
+window.uniShowEvDetail=uniShowEvDetail;
+
+// ── INIT ──────────────────────────────────────────────────────────
+loadEvents();
+// Restore saved iCal URL
+const savedUrl=localStorage.getItem(ICAL_KEY);
+if(savedUrl) document.getElementById('icalUrl').value=savedUrl;
+renderAll();
+
+})();
+</script>
