@@ -89,12 +89,20 @@
 <div class="import-panel">
   <div class="ip-title">📅 Google Calendar Import + Добавяне</div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
-    <input class="ical-input" id="icalUrl" placeholder="Google Calendar iCal URL (Settings → Secret address in iCal format → https://calendar.google.com/calendar/ical/...)" style="flex:1;min-width:260px">
-    <button class="import-btn" onclick="uniImportICal()">⬇ Import</button>
-	https://calendar.google.com/calendar/ical/asparuhtah%40gmail.com/public/basic.ics
-    <button class="import-btn" style="background:#21262d;border:1px solid #30363d" onclick="uniShowAddForm()">+ Добави ивент</button>
-  </div>
-  <div class="import-status" id="importStatus"></div>
+   
+	
+	
+	<input class="ical-input"
+       id="icalUrl"
+       value="https://calendar.google.com/calendar/ical/asparuhtah%40gmail.com/public/basic.ics"
+       placeholder="Google Calendar iCal URL"
+       style="flex:1;min-width:260px">
+
+<button class="import-btn" onclick="uniImportICal()">⬇ Import</button>
+<button class="import-btn" style="background:#21262d;border:1px solid #30363d" onclick="uniShowAddForm()">+ Добави ивент</button>
+
+	
+
 
   <!-- Add event form (hidden by default) -->
   <div id="addEventForm" style="display:none;margin-top:10px;border-top:1px solid #30363d;padding-top:10px">
