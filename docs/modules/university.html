@@ -89,28 +89,25 @@
 <div class="import-panel">
   <div class="ip-title">📅 Google Calendar Import + Добавяне</div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
-   
-	
-	
-	<input class="ical-input"
-       id="icalUrl"
-       value="https://calendar.google.com/calendar/ical/asparuhtah%40gmail.com/private-2588ec13723a48c110ffc4f5af3e185a/basic.ics"
-       placeholder="Google Calendar iCal URL"
-       style="flex:1;min-width:260px">
 
-<button class="import-btn" onclick="uniImportICal()">⬇ Import</button>
-<button class="import-btn" style="background:#21262d;border:1px solid #30363d" onclick="uniShowAddForm()">+ Добави ивент</button>
+    <input class="ical-input"
+           id="icalUrl"
+           value="https://calendar.google.com/calendar/ical/asparuhtah%40gmail.com/private-2588ec13723a48c110ffc4f5af3e185a/basic.ics"
+           placeholder="Google Calendar iCal URL"
+           style="flex:1;min-width:260px">
 
-	
+    <button class="import-btn" onclick="uniImportICal()">⬇ Import</button>
+    <button class="import-btn" style="background:#21262d;border:1px solid #30363d" onclick="uniShowAddForm()">+ Добави ивент</button>
 
+  </div>
 
   <!-- Add event form (hidden by default) -->
   <div id="addEventForm" style="display:none;margin-top:10px;border-top:1px solid #30363d;padding-top:10px">
     <div class="add-form">
-      <input type="text"     id="evTitle"    placeholder="Заглавие" class="add-form-full">
-      <input type="date"     id="evDate"     >
-      <input type="time"     id="evStart"    >
-      <input type="time"     id="evEnd"      >
+      <input type="text" id="evTitle" placeholder="Заглавие" class="add-form-full">
+      <input type="date" id="evDate">
+      <input type="time" id="evStart">
+      <input type="time" id="evEnd">
       <select id="evType">
         <option value="lecture">Лекция</option>
         <option value="seminar">Семинар</option>
@@ -123,7 +120,8 @@
       <input type="text" id="evNote" placeholder="Бележка" class="add-form-full">
       <div class="add-form-full" style="display:flex;gap:6px">
         <button class="import-btn" onclick="uniAddEvent()">Добави</button>
-        <button class="import-btn" style="background:transparent;border:1px solid #30363d;color:#8b949e" onclick="document.getElementById('addEventForm').style.display='none'">Откажи</button>
+        <button class="import-btn" style="background:transparent;border:1px solid #30363d;color:#8b949e"
+                onclick="document.getElementById('addEventForm').style.display='none'">Откажи</button>
       </div>
     </div>
   </div>
@@ -141,16 +139,14 @@
     <button class="cnbtn" onclick="uniGoToday()" style="font-size:11px">Днес</button>
   </div>
   <div class="cal-nav-btns">
-    <button class="cnbtn on" id="vDay"   onclick="uniSetView('day')">Ден</button>
-    <button class="cnbtn"    id="vWeek"  onclick="uniSetView('week')">Седмица</button>
-    <button class="cnbtn"    id="vMonth" onclick="uniSetView('month')">Месец</button>
+    <button class="cnbtn on" id="vDay" onclick="uniSetView('day')">Ден</button>
+    <button class="cnbtn" id="vWeek" onclick="uniSetView('week')">Седмица</button>
+    <button class="cnbtn" id="vMonth" onclick="uniSetView('month')">Месец</button>
   </div>
 </div>
 
 <!-- Calendar body -->
 <div id="uniCalBody"></div>
-
-</div>
 
 <script>
 (function(){
