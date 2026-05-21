@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-05-20T10:22:16.276057+00:00",
-  "eurUsd": 1.1592,
+  "lastUpdated": "2026-05-21T10:36:01.559068+00:00",
+  "eurUsd": 1.1605,
   "prices": {
-    "BTC-USD": 66855.0,
-    "ETC-USD": 7.79,
-    "FLR-USD": 0.007171,
+    "BTC-USD": 66632.0,
+    "ETC-USD": 7.66,
+    "FLR-USD": 0.007277,
     "EXI2.DE": 104.95,
-    "MRVL": 135.610766,
+    "MRVL": 135.458854,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 272.09,
-    "pnl": -15.98,
-    "pnlPct": -5.55
+    "totalCurrent": 270.97,
+    "pnl": -17.1,
+    "pnlPct": -5.94
   },
   "history": [
     {
@@ -28,6 +28,12 @@
       "total": 272.09,
       "pnl": -15.98,
       "pct": -5.55
+    },
+    {
+      "date": "2026-05-21",
+      "total": 270.97,
+      "pnl": -17.1,
+      "pct": -5.94
     }
   ]
 }
