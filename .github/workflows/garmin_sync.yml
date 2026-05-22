@@ -25,7 +25,7 @@ jobs:
       - name: Commit updated data.json
         run: |
           git config user.name "github-actions[bot]"
-          run: python $GITHUB_WORKSPACE/scripts/garmin_sync.py
+          run: python garmin_sync.py
           git add docs/data.json
           git diff --staged --quiet || git commit -m "garmin sync $(date -u +%Y-%m-%d)"
           git push
