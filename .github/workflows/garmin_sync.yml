@@ -17,6 +17,11 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install garminconnect
+        - name: Debug paths
+        run: |
+          pwd
+          ls -la
+          ls -la scripts/
       - name: Run Garmin sync
         env:
           GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
