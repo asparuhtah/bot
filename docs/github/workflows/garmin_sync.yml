@@ -25,7 +25,10 @@ jobs:
         env:
           GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
-        run: python scripts/garmin_sync.py
+       run: |
+  ls -la
+  ls -la scripts/
+  python scripts/garmin_sync.py
 
       - name: Commit updated data.json
         run: |
