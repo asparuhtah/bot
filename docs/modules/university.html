@@ -158,6 +158,7 @@ let events      = [];           // all events
 
 const STORE_KEY = 'uni_events_v2';
 const ICAL_KEY  = 'uni_ical_url';
+const ICAL_DEFAULT = 'https://calendar.google.com/calendar/ical/asparuhtah%40gmail.com/private-2588ec13723a48c110ffc4f5af3e185a/basic.ics';
 
 function loadEvents(){ try{ events=JSON.parse(localStorage.getItem(STORE_KEY)||'[]'); }catch{ events=[]; } }
 function saveEvents(){ localStorage.setItem(STORE_KEY, JSON.stringify(events)); }
@@ -537,8 +538,10 @@ window.uniShowEvDetail=uniShowEvDetail;
 // ── INIT ──────────────────────────────────────────────────────────
 loadEvents();
 // Restore saved iCal URL
-const savedUrl=localStorage.getItem(ICAL_KEY);
-if(savedUrl) document.getElementById('icalUrl').value=savedUrl;
+const savedUrl=localStorage.getItem(ICAL_KEY) || ICAL_DEFAULT;
+document.getElementById('icalUrl').value=savedUrl;
+// Auto-import on first load
+if(!localStorage.getItem(ICAL_KEY)) uniImportICal();
 renderAll();
 
 })();
