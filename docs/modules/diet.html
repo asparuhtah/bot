@@ -163,12 +163,14 @@
       <div class="dt-r"><span class="dt-l">Въглехидрати</span><span class="dt-v" id="totCarb">—</span></div>
     </div>
     
+
+    <div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:11px 13px;margin-top:8px;display:flex;align-items:center;gap:10px">
+      <span style="font-size:12px;font-weight:600;color:#8b949e;white-space:nowrap">💧 Вода — <span id="wCount">0</span> / 8 чаши</span>
+      <div id="wDrops" style="display:flex;flex-direction:row;gap:5px"></div>
+    </div>
   </div>
 </div>
-<div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:13px;margin-top:12px;display:flex;flex-direction:row;align-items:center;gap:12px;flex-wrap:nowrap">
-  <span style="font-size:12px;font-weight:600;color:#8b949e;white-space:nowrap">💧 Вода — <span id="wCount">0</span> / 8 чаши</span>
-  <div id="wDrops" style="display:flex;flex-direction:row;flex-wrap:nowrap;gap:5px"></div>
-</div>
+
 <!-- RIGHT: Add + DB -->
 <div>
   <div class="rpanel">
@@ -318,7 +320,6 @@
 
 </div>
 </div>
-
 <script>
 // ═══════════════ DIET MODULE v2 ═══════════════
 
@@ -665,7 +666,7 @@ function dRenderWater(){
   document.getElementById('wCount').textContent=w;
   let html='';
   for(let i=1;i<=8;i++)
-    html+=`<div class="wdrop ${i<=w?'full':''}" onclick="dSetWater(${i})" style="display:inline-flex;flex-shrink:0">💧</div>`;
+    html+=`<div class="wdrop ${i<=w?'full':''}" onclick="dSetWater(${i})">💧</div>`;
   document.getElementById('wDrops').innerHTML=html;
 }
 
