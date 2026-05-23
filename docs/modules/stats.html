@@ -1,0 +1,509 @@
+<!-- stats.html — Модул Статистики -->
+<style>
+.sw{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e6edf3}
+
+/* Range selector */
+.range-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.range-btn{background:#1c2128;border:1px solid #30363d;border-radius:5px;color:#8b949e;padding:5px 12px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s}
+.range-btn:hover{border-color:#58a6ff;color:#58a6ff}
+.range-btn.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
+
+/* Section tabs */
+.sec-tabs{display:flex;gap:0;border-bottom:1px solid #30363d;margin-bottom:14px}
+.sec-tab{padding:8px 14px;font-size:12px;font-weight:600;color:#8b949e;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s}
+.sec-tab:hover{color:#e6edf3}
+.sec-tab.on{color:#58a6ff;border-bottom-color:#58a6ff}
+.sec-body{display:none}
+.sec-body.on{display:block}
+
+/* Chart cards */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media(max-width:700px){.chart-grid{grid-template-columns:1fr}}
+.chart-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:13px}
+.chart-card.full{grid-column:1/-1}
+.cc-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.cc-sub{font-size:10px;color:#484f58;font-weight:400}
+
+/* Summary cards */
+.sum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+@media(max-width:700px){.sum-grid{grid-template-columns:repeat(2,1fr)}}
+.sum-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 12px}
+.sum-lbl{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.3px;margin-bottom:3px}
+.sum-val{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.sum-sub{font-size:10px;color:#8b949e;margin-top:2px}
+
+canvas{display:block;width:100%}
+</style>
+
+<div class="sw">
+
+<!-- Range selector -->
+<div class="range-bar">
+  <span style="font-size:11px;color:#8b949e;font-weight:600">Период:</span>
+  <button class="range-btn" onclick="sRange(7,this)">7 дни</button>
+  <button class="range-btn on" onclick="sRange(28,this)">4 седмици</button>
+  <button class="range-btn" onclick="sRange(90,this)">3 месеца</button>
+  <button class="range-btn" onclick="sRange(365,this)">Година</button>
+  <span id="sRangeInfo" style="font-size:10px;color:#484f58;margin-left:4px"></span>
+</div>
+
+<!-- Section tabs -->
+<div class="sec-tabs">
+  <div class="sec-tab on" onclick="sTab('diet',this)">🥗 Диета</div>
+  <div class="sec-tab" onclick="sTab('garmin',this)">⌚ Garmin</div>
+  <div class="sec-tab" onclick="sTab('training',this)">🏋️ Тренировки</div>
+  <div class="sec-tab" onclick="sTab('overview',this)">📊 Обзор</div>
+</div>
+
+<!-- DIET SECTION -->
+<div class="sec-body on" id="sec-diet">
+  <div class="sum-grid" id="dietSumCards"></div>
+  <div class="chart-grid">
+    <div class="chart-card full">
+      <div class="cc-title">Калории по дни <span class="cc-sub">цел: 1650 kcal</span></div>
+      <canvas id="cDietCal" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Протеин <span class="cc-sub">цел: 120g</span></div>
+      <canvas id="cDietPro" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Мазнини <span class="cc-sub">лимит: 55g</span></div>
+      <canvas id="cDietFat" height="90"></canvas>
+    </div>
+    <div class="chart-card full">
+      <div class="cc-title">Макронутриенти (П / М / В) по дни</div>
+      <canvas id="cDietMac" height="100"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Въглехидрати <span class="cc-sub">лимит: 165g</span></div>
+      <canvas id="cDietCarb" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Вода (чаши/ден)</div>
+      <canvas id="cDietWater" height="90"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- GARMIN SECTION -->
+<div class="sec-body" id="sec-garmin">
+  <div class="sum-grid" id="garminSumCards"></div>
+  <div class="chart-grid">
+    <div class="chart-card full">
+      <div class="cc-title">Стъпки по дни <span class="cc-sub">цел: 8000</span></div>
+      <canvas id="cGSteps" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Пулс в покой (bpm)</div>
+      <canvas id="cGHR" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Body Battery (%)</div>
+      <canvas id="cGBB" height="90"></canvas>
+    </div>
+    <div class="chart-card full">
+      <div class="cc-title">Сън (минути) <span class="cc-sub">дълбок / REM / лек</span></div>
+      <canvas id="cGSleep" height="100"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Калории от активности</div>
+      <canvas id="cGActCal" height="90"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Стрес ниво</div>
+      <canvas id="cGStress" height="90"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- TRAINING SECTION -->
+<div class="sec-body" id="sec-training">
+  <div class="sum-grid" id="trainSumCards"></div>
+  <div class="chart-grid">
+    <div class="chart-card full">
+      <div class="cc-title">Тренировки по седмица</div>
+      <canvas id="cTrWeek" height="90"></canvas>
+    </div>
+    <div class="chart-card full">
+      <div class="cc-title">Streak — поредни тренировъчни дни</div>
+      <canvas id="cTrStreak" height="70"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW SECTION -->
+<div class="sec-body" id="sec-overview">
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="cc-title">Калории vs Активност (kcal)</div>
+      <canvas id="cOvCal" height="120"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Сън vs Стъпки</div>
+      <canvas id="cOvSleep" height="120"></canvas>
+    </div>
+    <div class="chart-card full">
+      <div class="cc-title">Дневен скор (диета + активност + сън)</div>
+      <canvas id="cOvScore" height="80"></canvas>
+    </div>
+  </div>
+  <div id="ovInsights" style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:13px;margin-top:4px">
+    <div style="font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">💡 Наблюдения</div>
+    <div id="ovInsightsList" style="font-size:12px;line-height:1.7;color:#8b949e">Зарежда...</div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ═══════════════ STATS MODULE ═══════════════
+
+let sRangeDays = 28;
+let sGarminData = {};
+let sCurrentSection = 'diet';
+
+// ── DATA LOADERS ──────────────────────────────────────────────────
+function sLoadDietDay(ds){
+  const entries = JSON.parse(localStorage.getItem('diet2_'+ds)||'[]');
+  let cal=0,pro=0,fat=0,carb=0;
+  entries.forEach(e=>{cal+=e.e;pro+=e.p;fat+=e.fat;carb+=e.c;});
+  return {cal:Math.round(cal),pro:Math.round(pro*10)/10,fat:Math.round(fat*10)/10,carb:Math.round(carb*10)/10,hasData:entries.length>0};
+}
+
+function sLoadWaterDay(ds){
+  const k='health_'+ds.replace(/-/g,'_');
+  return (JSON.parse(localStorage.getItem(k)||'{}')).water||0;
+}
+
+function sLoadTrainingDay(ds){
+  const d=new Date(ds+'T12:00:00');
+  const k=`tr_${d.getFullYear()}_${d.getMonth()}_${d.getDate()}`;
+  return JSON.parse(localStorage.getItem(k)||'{}');
+}
+
+function sGetDates(days){
+  const dates=[];
+  for(let i=days-1;i>=0;i--){
+    const d=new Date(); d.setDate(d.getDate()-i);
+    dates.push(d.toISOString().split('T')[0]);
+  }
+  return dates;
+}
+
+function sDateLabel(ds, days){
+  const d=new Date(ds+'T12:00:00');
+  if(days<=7) return ['Нед','Пон','Вт','Ср','Чет','Пет','Съб'][d.getDay()];
+  if(days<=28) return `${d.getDate()}/${d.getMonth()+1}`;
+  if(days<=90) return `${d.getDate()}/${d.getMonth()+1}`;
+  const months=['яну','фев','мар','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  return `${d.getDate()} ${months[d.getMonth()]}`;
+}
+
+async function sLoadGarmin(){
+  const paths=['../data.json','data.json','./data.json'];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{signal:AbortSignal.timeout(5000)});
+      if(!r.ok)continue;
+      const j=await r.json();
+      if(j.garmin){sGarminData=j.garmin;return;}
+    }catch{}
+  }
+}
+
+// ── RANGE / TAB ───────────────────────────────────────────────────
+function sRange(days, btn){
+  sRangeDays=days;
+  document.querySelectorAll('.range-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  const dates=sGetDates(days);
+  const withDiet=dates.filter(ds=>sLoadDietDay(ds).hasData).length;
+  document.getElementById('sRangeInfo').textContent=`${withDiet} дни с данни от ${days}`;
+  sRenderSection(sCurrentSection);
+}
+
+function sTab(name, el){
+  document.querySelectorAll('.sec-tab').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.sec-body').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('sec-'+name).classList.add('on');
+  sCurrentSection=name;
+  setTimeout(()=>sRenderSection(name),30);
+}
+
+function sRenderSection(name){
+  if(name==='diet')     sRenderDiet();
+  if(name==='garmin')   sRenderGarmin();
+  if(name==='training') sRenderTraining();
+  if(name==='overview') sRenderOverview();
+}
+
+// ── CANVAS HELPERS ────────────────────────────────────────────────
+function sCanvas(id){
+  const c=document.getElementById(id);
+  if(!c)return null;
+  c.width=c.offsetWidth||400;
+  return c;
+}
+
+function sDraw(opts){
+  // opts: {canvas, data, key, color, goal, type:'line'|'bar'|'bar-stacked', keys, colors, labels}
+  const c=opts.canvas, H=c.height;
+  const W=c.width;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  const pad={t:10,r:10,b:22,l:38};
+  const iW=W-pad.l-pad.r, iH=H-pad.t-pad.b;
+  const data=opts.data;
+  if(!data||!data.length)return;
+
+  // Compute max
+  let maxV=0;
+  if(opts.type==='bar-stacked'){
+    maxV=Math.max(...data.map(d=>opts.keys.reduce((s,k)=>s+(d[k]||0),0)));
+  } else {
+    maxV=Math.max(...data.map(d=>d[opts.key]||0), opts.goal||0);
+  }
+  maxV=Math.max(maxV*1.1, 1);
+
+  const xOf=i=>pad.l+i/(data.length-1||1)*iW;
+  const yOf=v=>pad.t+iH-(Math.max(0,v)/maxV)*iH;
+
+  // Grid
+  ctx.strokeStyle='#21262d'; ctx.lineWidth=1;
+  [0,.25,.5,.75,1].forEach(f=>{
+    const yy=pad.t+iH*(1-f);
+    ctx.beginPath(); ctx.moveTo(pad.l,yy); ctx.lineTo(W-pad.r,yy); ctx.stroke();
+    ctx.fillStyle='#484f58'; ctx.font='9px sans-serif'; ctx.textAlign='right';
+    const v=Math.round(maxV*f);
+    ctx.fillText(v>=1000?Math.round(v/100)/10+'k':v, pad.l-3, yy+3);
+  });
+
+  // Goal line
+  if(opts.goal){
+    ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=1; ctx.setLineDash([4,3]);
+    const gy=yOf(opts.goal);
+    ctx.beginPath(); ctx.moveTo(pad.l,gy); ctx.lineTo(W-pad.r,gy); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  if(opts.type==='line'){
+    // Area
+    ctx.beginPath();
+    data.forEach((d,i)=>i===0?ctx.moveTo(xOf(i),yOf(d[opts.key]||0)):ctx.lineTo(xOf(i),yOf(d[opts.key]||0)));
+    ctx.lineTo(xOf(data.length-1),pad.t+iH);
+    ctx.lineTo(xOf(0),pad.t+iH);
+    ctx.closePath();
+    ctx.fillStyle=opts.color.replace(/[\d.]+\)$/,'0.1)');
+    ctx.fill();
+    // Line
+    ctx.beginPath(); ctx.strokeStyle=opts.color; ctx.lineWidth=2;
+    data.forEach((d,i)=>i===0?ctx.moveTo(xOf(i),yOf(d[opts.key]||0)):ctx.lineTo(xOf(i),yOf(d[opts.key]||0)));
+    ctx.stroke();
+    // Dots
+    data.forEach((d,i)=>{
+      if(!d.hasData&&d[opts.key]===0)return;
+      const v=d[opts.key]||0;
+      ctx.beginPath(); ctx.arc(xOf(i),yOf(v),2.5,0,Math.PI*2);
+      ctx.fillStyle=v>=(opts.goal||0)?opts.color:'rgba(248,81,73,0.8)';
+      ctx.fill();
+    });
+
+  } else if(opts.type==='bar'){
+    const bW=Math.max(2,iW/data.length*0.65);
+    data.forEach((d,i)=>{
+      const v=d[opts.key]||0;
+      const bh=Math.max(1,(v/maxV)*iH);
+      const col=opts.goal&&v>=opts.goal?opts.color:'rgba(240,136,62,0.7)';
+      ctx.fillStyle=v>0?opts.color:'#21262d';
+      ctx.fillRect(pad.l+i*(iW/data.length)+(iW/data.length-bW)/2, pad.t+iH-bh, bW, bh);
+    });
+
+  } else if(opts.type==='bar-stacked'){
+    const bW=Math.max(2,iW/data.length*0.65);
+    data.forEach((d,i)=>{
+      let cy=pad.t+iH;
+      opts.keys.forEach((k,ki)=>{
+        const v=d[k]||0;
+        if(!v)return;
+        const bh=(v/maxV)*iH;
+        cy-=bh;
+        ctx.fillStyle=opts.colors[ki];
+        ctx.fillRect(pad.l+i*(iW/data.length)+(iW/data.length-bW)/2, cy, bW, bh);
+      });
+    });
+    // Legend
+    let lx=pad.l;
+    opts.keys.forEach((k,ki)=>{
+      ctx.fillStyle=opts.colors[ki]; ctx.fillRect(lx,2,8,6); lx+=10;
+      ctx.fillStyle='#8b949e'; ctx.font='9px sans-serif'; ctx.textAlign='left';
+      ctx.fillText(opts.labels[ki], lx, 9); lx+=opts.labels[ki].length*5+8;
+    });
+  }
+
+  // X labels
+  const step=Math.max(1,Math.floor(data.length/8));
+  ctx.fillStyle='#8b949e'; ctx.font='9px sans-serif'; ctx.textAlign='center';
+  data.forEach((d,i)=>{
+    if(i%step===0||i===data.length-1)
+      ctx.fillText(d.lbl, opts.type==='bar'||opts.type==='bar-stacked'
+        ? pad.l+i*(iW/data.length)+iW/data.length/2
+        : xOf(i), H-4);
+  });
+}
+
+function sSumCards(elId, cards){
+  document.getElementById(elId).innerHTML = cards.map(([l,v,c,s])=>
+    `<div class="sum-card"><div class="sum-lbl">${l}</div>
+     <div class="sum-val" style="color:${c}">${v}</div>
+     ${s?`<div class="sum-sub">${s}</div>`:''}</div>`
+  ).join('');
+}
+
+// ── DIET RENDER ───────────────────────────────────────────────────
+function sRenderDiet(){
+  const dates=sGetDates(sRangeDays);
+  const data=dates.map(ds=>{const d=sLoadDietDay(ds);return{...d,lbl:sDateLabel(ds,sRangeDays),water:sLoadWaterDay(ds)};});
+  const withData=data.filter(d=>d.hasData);
+
+  const avg=key=>withData.length?Math.round(withData.reduce((s,d)=>s+(d[key]||0),0)/withData.length*10)/10:0;
+  const avgCal=avg('cal'), avgPro=avg('pro'), avgFat=avg('fat'), avgCarb=avg('carb');
+
+  sSumCards('dietSumCards',[
+    ['Ср. калории', avgCal+' kcal', avgCal<=1650&&avgCal>0?'#3fb950':avgCal>1650?'#f85149':'#8b949e', `цел 1650`],
+    ['Ср. протеин', avgPro+'g', avgPro>=120?'#3fb950':'#f85149', `цел 120g`],
+    ['Ср. мазнини', avgFat+'g', avgFat<=55?'#3fb950':'#f85149', `лимит 55g`],
+    ['Дни с данни', withData.length+'/'+sRangeDays, '#58a6ff', `${Math.round(withData.length/sRangeDays*100)}% покритие`],
+  ]);
+
+  const c1=sCanvas('cDietCal'); if(c1) sDraw({canvas:c1,data,key:'cal',color:'rgba(240,136,62,1)',goal:1650,type:'line'});
+  const c2=sCanvas('cDietPro'); if(c2) sDraw({canvas:c2,data,key:'pro',color:'rgba(63,185,80,1)',goal:120,type:'line'});
+  const c3=sCanvas('cDietFat'); if(c3) sDraw({canvas:c3,data,key:'fat',color:'rgba(210,153,34,1)',goal:55,type:'line'});
+  const c4=sCanvas('cDietCarb'); if(c4) sDraw({canvas:c4,data,key:'carb',color:'rgba(188,140,255,1)',goal:165,type:'line'});
+  const c5=sCanvas('cDietMac'); if(c5) sDraw({canvas:c5,data,type:'bar-stacked',keys:['pro','fat','carb'],colors:['rgba(63,185,80,.85)','rgba(210,153,34,.85)','rgba(188,140,255,.85)'],labels:['Протеин','Мазнини','Въглехидрати']});
+  const c6=sCanvas('cDietWater'); if(c6) sDraw({canvas:c6,data,key:'water',color:'rgba(88,166,255,1)',goal:8,type:'bar'});
+}
+
+// ── GARMIN RENDER ─────────────────────────────────────────────────
+function sRenderGarmin(){
+  const dates=sGetDates(sRangeDays);
+  const data=dates.map(ds=>{
+    const g=sGarminData[ds]||{};
+    const actCal=((g.activities||[]).reduce((s,a)=>s+(a.calories||0),0));
+    return{
+      lbl:sDateLabel(ds,sRangeDays),
+      steps:g.steps||0,
+      hr:g.resting_hr||0,
+      bb:g.body_battery||0,
+      stress:g.avg_stress||0,
+      actCal,
+      sleep:g.sleep?.total_min||0,
+      deep:g.sleep?.deep_min||0,
+      rem:g.sleep?.rem_min||0,
+      light:g.sleep?.light_min||0,
+      hasData:!!g.steps||!!g.sleep?.total_min,
+    };
+  });
+
+  const withData=data.filter(d=>d.hasData);
+  const avg=key=>withData.length?Math.round(withData.reduce((s,d)=>s+(d[key]||0),0)/withData.length):0;
+
+  sSumCards('garminSumCards',[
+    ['Ср. стъпки', (avg('steps')).toLocaleString(), avg('steps')>=8000?'#3fb950':'#f85149', 'цел 8000'],
+    ['Ср. пулс покой', avg('hr')+' bpm', avg('hr')>0?'#58a6ff':'#8b949e', ''],
+    ['Ср. сън', Math.floor(avg('sleep')/60)+'ч '+avg('sleep')%60+'м', avg('sleep')>=420?'#3fb950':'#f85149', 'цел 7ч'],
+    ['Дни Garmin', withData.length+'/'+sRangeDays, '#58a6ff', 'синкнати'],
+  ]);
+
+  const c1=sCanvas('cGSteps'); if(c1) sDraw({canvas:c1,data,key:'steps',color:'rgba(88,166,255,1)',goal:8000,type:'bar'});
+  const c2=sCanvas('cGHR');    if(c2) sDraw({canvas:c2,data,key:'hr',color:'rgba(248,81,73,1)',type:'line'});
+  const c3=sCanvas('cGBB');    if(c3) sDraw({canvas:c3,data,key:'bb',color:'rgba(240,136,62,1)',goal:50,type:'line'});
+  const c4=sCanvas('cGSleep'); if(c4) sDraw({canvas:c4,data,type:'bar-stacked',keys:['deep','rem','light'],colors:['rgba(188,140,255,.85)','rgba(88,166,255,.85)','rgba(63,185,80,.6)'],labels:['Дълбок','REM','Лек']});
+  const c5=sCanvas('cGActCal'); if(c5) sDraw({canvas:c5,data,key:'actCal',color:'rgba(63,185,80,1)',type:'bar'});
+  const c6=sCanvas('cGStress'); if(c6) sDraw({canvas:c6,data,key:'stress',color:'rgba(210,153,34,1)',type:'line'});
+}
+
+// ── TRAINING RENDER ───────────────────────────────────────────────
+function sRenderTraining(){
+  const dates=sGetDates(sRangeDays);
+  
+  // Weekly aggregation
+  const weeks={};
+  let streak=0, maxStreak=0, curStreak=0;
+  const streakData=[];
+
+  dates.forEach(ds=>{
+    const t=sLoadTrainingDay(ds);
+    const done=t.done===true;
+    // Streak
+    if(done){curStreak++; if(curStreak>maxStreak)maxStreak=curStreak;}
+    else curStreak=0;
+    streakData.push({lbl:sDateLabel(ds,sRangeDays),val:done?1:0,hasData:true});
+    // Weekly
+    const d=new Date(ds+'T12:00:00');
+    const wk=`${d.getFullYear()}-W${Math.ceil((d.getDate()+(new Date(d.getFullYear(),d.getMonth(),1).getDay()+6)%7)/7)}`;
+    if(!weeks[wk])weeks[wk]={lbl:'W'+Object.keys(weeks).length,count:0,hasData:true};
+    if(done)weeks[wk].count++;
+  });
+
+  const totalDone=streakData.filter(d=>d.val).length;
+  const weekData=Object.values(weeks).map((w,i)=>({...w,lbl:'Сед '+(i+1)}));
+
+  sSumCards('trainSumCards',[
+    ['Тренировки', totalDone+'/'+sRangeDays, '#3fb950', `${Math.round(totalDone/sRangeDays*100)}% от дните`],
+    ['Макс. стрийк', maxStreak+' дни', maxStreak>=7?'#3fb950':'#f0883e', ''],
+    ['Тек. стрийк', curStreak+' дни', curStreak>=3?'#3fb950':'#8b949e', ''],
+    ['Ср./седмица', Math.round(totalDone/Math.max(1,weekData.length)*10)/10, '#58a6ff', 'тренировки'],
+  ]);
+
+  const c1=sCanvas('cTrWeek');   if(c1) sDraw({canvas:c1,data:weekData,key:'count',color:'rgba(63,185,80,1)',goal:5,type:'bar'});
+  const c2=sCanvas('cTrStreak'); if(c2) sDraw({canvas:c2,data:streakData,key:'val',color:'rgba(63,185,80,0.8)',type:'bar'});
+}
+
+// ── OVERVIEW RENDER ───────────────────────────────────────────────
+function sRenderOverview(){
+  const dates=sGetDates(sRangeDays);
+  const data=dates.map(ds=>{
+    const diet=sLoadDietDay(ds);
+    const g=sGarminData[ds]||{};
+    const t=sLoadTrainingDay(ds);
+    const actCal=(g.activities||[]).reduce((s,a)=>s+(a.calories||0),0);
+    const sleepH=(g.sleep?.total_min||0)/60;
+    // Score 0-100
+    const dietScore=diet.hasData?Math.min(100,Math.round((1-(Math.abs(diet.cal-1650)/1650))*50+(diet.pro>=120?50:diet.pro/120*50))):0;
+    const actScore=Math.min(100,Math.round((g.steps||0)/8000*50+(actCal/300)*50));
+    const sleepScore=Math.min(100,Math.round(sleepH>=7?100:sleepH/7*100));
+    const score=Math.round((dietScore+actScore+sleepScore)/3);
+    return{lbl:sDateLabel(ds,sRangeDays),cal:diet.cal,actCal,sleep:(g.sleep?.total_min||0),steps:(g.steps||0),score,hasData:diet.hasData||!!g.steps};
+  });
+
+  const c1=sCanvas('cOvCal');   if(c1) sDraw({canvas:c1,data,type:'bar-stacked',keys:['cal','actCal'],colors:['rgba(240,136,62,.8)','rgba(63,185,80,.8)'],labels:['Прием','Изгорени']});
+  const c2=sCanvas('cOvSleep'); if(c2) sDraw({canvas:c2,data,type:'bar-stacked',keys:['sleep','steps'],colors:['rgba(188,140,255,.8)','rgba(88,166,255,.6)'],labels:['Сън(мин)','Стъпки/100']});
+  const c3=sCanvas('cOvScore'); if(c3) sDraw({canvas:c3,data,key:'score',color:'rgba(63,185,80,1)',goal:70,type:'line'});
+
+  // Insights
+  const withData=data.filter(d=>d.hasData);
+  const insights=[];
+  const avgCal=withData.length?Math.round(withData.reduce((s,d)=>s+d.cal,0)/withData.length):0;
+  const avgScore=withData.length?Math.round(withData.reduce((s,d)=>s+d.score,0)/withData.length):0;
+  if(avgCal>1650) insights.push(`⚠ Средните калории (${avgCal}) надвишават целта от 1650 kcal`);
+  else if(avgCal>0) insights.push(`✅ Средните калории (${avgCal}) са в рамките на целта`);
+  const avgSteps=withData.length?Math.round(withData.reduce((s,d)=>s+d.steps,0)/withData.length):0;
+  if(avgSteps>0&&avgSteps<8000) insights.push(`📉 Средните стъпки (${avgSteps.toLocaleString()}) са под целта от 8000`);
+  else if(avgSteps>=8000) insights.push(`🚶 Средните стъпки (${avgSteps.toLocaleString()}) достигат целта`);
+  const avgSleep=withData.length?Math.round(withData.reduce((s,d)=>s+d.sleep,0)/withData.length):0;
+  if(avgSleep>0&&avgSleep<420) insights.push(`😴 Средният сън (${Math.floor(avgSleep/60)}ч ${avgSleep%60}м) е под препоръчаните 7ч`);
+  if(avgScore>0) insights.push(`📊 Среден дневен скор: ${avgScore}/100`);
+  if(!insights.length) insights.push('Няма достатъчно данни за период. Добавяй храна и синкни Garmin.');
+  document.getElementById('ovInsightsList').innerHTML=insights.map(i=>`<div style="padding:4px 0;border-bottom:1px solid #21262d">${i}</div>`).join('');
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+if(!window._statsInit){
+  window._statsInit=true;
+  sLoadGarmin().then(()=>sRenderSection('diet'));
+} else {
+  sRenderSection(sCurrentSection);
+}
+</script>
