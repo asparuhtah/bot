@@ -63,10 +63,10 @@
   "garmin": {
     "2026-05-26": {
       "date": "2026-05-26",
-      "steps": 6767,
+      "steps": 14504,
       "resting_hr": 51,
       "body_battery": 63,
-      "avg_stress": 20,
+      "avg_stress": 45,
       "sleep": {
         "total_min": 359,
         "deep_min": 58,
@@ -77,7 +77,19 @@
         "start": 1779751740000,
         "end": 1779774000000
       },
-      "activities": []
+      "activities": [
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-05-26 13:15:15",
+          "duration_s": 1957,
+          "distance_m": 1300.0,
+          "calories": 250,
+          "avg_hr": 99,
+          "max_hr": 99,
+          "avg_speed": 0.66
+        }
+      ]
     },
     "2026-05-25": {
       "date": "2026-05-25",
@@ -268,7 +280,25 @@
           "avg_speed": 3.27
         }
       ]
+    },
+    "2026-05-27": {
+      "date": "2026-05-27",
+      "steps": 5401,
+      "resting_hr": 51,
+      "body_battery": 38,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 462,
+        "deep_min": 70,
+        "light_min": 362,
+        "rem_min": 30,
+        "awake_min": 24,
+        "score": 46,
+        "start": 1779836400000,
+        "end": 1779865560000
+      },
+      "activities": []
     }
   },
-  "garmin_updated": "2026-05-26"
+  "garmin_updated": "2026-05-27"
 }
