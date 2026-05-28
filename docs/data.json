@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-05-27T10:52:46.018716+00:00",
-  "eurUsd": 1.1634,
+  "lastUpdated": "2026-05-28T10:51:13.906652+00:00",
+  "eurUsd": 1.1606,
   "prices": {
-    "BTC-USD": 65147.0,
-    "ETC-USD": 7.39,
-    "FLR-USD": 0.007014,
+    "BTC-USD": 63228.0,
+    "ETC-USD": 7.02,
+    "FLR-USD": 0.006725,
     "EXI2.DE": 104.95,
-    "MRVL": 135.121196,
+    "MRVL": 135.447182,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 267.7,
-    "pnl": -20.37,
-    "pnlPct": -7.07
+    "totalCurrent": 263.53,
+    "pnl": -24.54,
+    "pnlPct": -8.52
   },
   "history": [
     {
@@ -64,183 +64,12 @@
       "total": 267.7,
       "pnl": -20.37,
       "pct": -7.07
-    }
-  ],
-  "garmin": {
-    "2026-05-28": {
+    },
+    {
       "date": "2026-05-28",
-      "steps": 6127,
-      "resting_hr": 55,
-      "body_battery": 6,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 232,
-        "deep_min": 45,
-        "light_min": 187,
-        "rem_min": 0,
-        "awake_min": 68,
-        "score": 30,
-        "start": 1779936000000,
-        "end": 1779953975000
-      },
-      "activities": []
-    },
-    "2026-05-27": {
-      "date": "2026-05-27",
-      "steps": 17168,
-      "resting_hr": 51,
-      "body_battery": 38,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 462,
-        "deep_min": 70,
-        "light_min": 362,
-        "rem_min": 30,
-        "awake_min": 24,
-        "score": 46,
-        "start": 1779836400000,
-        "end": 1779865560000
-      },
-      "activities": []
-    },
-    "2026-05-26": {
-      "date": "2026-05-26",
-      "steps": 14504,
-      "resting_hr": 51,
-      "body_battery": 63,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 359,
-        "deep_min": 58,
-        "light_min": 271,
-        "rem_min": 30,
-        "awake_min": 12,
-        "score": 67,
-        "start": 1779751740000,
-        "end": 1779774000000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-05-26 13:15:15",
-          "duration_s": 1957,
-          "distance_m": 1300.0,
-          "calories": 250,
-          "avg_hr": 99,
-          "max_hr": 99,
-          "avg_speed": 0.66
-        }
-      ]
-    },
-    "2026-05-25": {
-      "date": "2026-05-25",
-      "steps": 5985,
-      "resting_hr": 47,
-      "body_battery": 77,
-      "avg_stress": 33,
-      "sleep": {
-        "total_min": 438,
-        "deep_min": 74,
-        "light_min": 304,
-        "rem_min": 61,
-        "awake_min": 7,
-        "score": 79,
-        "start": 1779661620000,
-        "end": 1779688346000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-05-25 08:16:37",
-          "duration_s": 1300,
-          "distance_m": 0.0,
-          "calories": 133,
-          "avg_hr": 108,
-          "max_hr": 162,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-05-24": {
-      "date": "2026-05-24",
-      "steps": 8743,
-      "resting_hr": 53,
-      "body_battery": 72,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 413,
-        "deep_min": 92,
-        "light_min": 249,
-        "rem_min": 72,
-        "awake_min": 3,
-        "score": 81,
-        "start": 1779577140000,
-        "end": 1779602100000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-05-24 12:25:21",
-          "duration_s": 1324,
-          "distance_m": 0.0,
-          "calories": 178,
-          "avg_hr": 124,
-          "max_hr": 175,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-05-23": {
-      "date": "2026-05-23",
-      "steps": 13065,
-      "resting_hr": 50,
-      "body_battery": 66,
-      "avg_stress": 33,
-      "sleep": {
-        "total_min": 297,
-        "deep_min": 44,
-        "light_min": 203,
-        "rem_min": 50,
-        "awake_min": 0,
-        "score": 66,
-        "start": 1779494220000,
-        "end": 1779512040000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-05-23 09:05:01",
-          "duration_s": 1217,
-          "distance_m": 0.0,
-          "calories": 105,
-          "avg_hr": 100,
-          "max_hr": 142,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-05-22": {
-      "date": "2026-05-22",
-      "steps": 13526,
-      "resting_hr": 54,
-      "body_battery": 37,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 268,
-        "deep_min": 89,
-        "light_min": 179,
-        "rem_min": 0,
-        "awake_min": 327,
-        "score": 26,
-        "start": 1779397800000,
-        "end": 1779433500000
-      },
-      "activities": []
+      "total": 263.53,
+      "pnl": -24.54,
+      "pct": -8.52
     }
-  },
-  "garmin_updated": "2026-05-28"
+  ]
 }
