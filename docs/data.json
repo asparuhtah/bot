@@ -107,5 +107,271 @@
       "pnl": -31.45,
       "pct": -10.92
     }
-  ]
+  ],
+  "garmin": {
+    "2026-06-04": {
+      "date": "2026-06-04",
+      "steps": 2498,
+      "resting_hr": 54,
+      "body_battery": 38,
+      "avg_stress": 30,
+      "sleep": {
+        "total_min": 439,
+        "deep_min": 33,
+        "light_min": 394,
+        "rem_min": 12,
+        "awake_min": 112,
+        "score": 36,
+        "start": 1780529400000,
+        "end": 1780562460000
+      },
+      "activities": [
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-06-04 10:29:35",
+          "duration_s": 2036,
+          "distance_m": 1600.0,
+          "calories": 376,
+          "avg_hr": 94,
+          "max_hr": 94,
+          "avg_speed": 0.9
+        }
+      ]
+    },
+    "2026-06-03": {
+      "date": "2026-06-03",
+      "steps": 15455,
+      "resting_hr": 52,
+      "body_battery": 59,
+      "avg_stress": 48,
+      "sleep": {
+        "total_min": 446,
+        "deep_min": 73,
+        "light_min": 304,
+        "rem_min": 69,
+        "awake_min": 8,
+        "score": 81,
+        "start": 1780438860000,
+        "end": 1780466100000
+      },
+      "activities": [
+        {
+          "type": "hiit",
+          "name": "HIIT",
+          "start": "2026-06-03 15:17:08",
+          "duration_s": 1417,
+          "distance_m": 0.0,
+          "calories": 208,
+          "avg_hr": 134,
+          "max_hr": 175,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-06-03 14:53:22",
+          "duration_s": 1390,
+          "distance_m": 0.0,
+          "calories": 187,
+          "avg_hr": 126,
+          "max_hr": 166,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "running",
+          "name": "Base",
+          "start": "2026-06-03 14:25:39",
+          "duration_s": 1389,
+          "distance_m": 1461.0,
+          "calories": 162,
+          "avg_hr": 115,
+          "max_hr": 154,
+          "avg_speed": 1.05
+        },
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-06-03 09:26:52",
+          "duration_s": 1929,
+          "distance_m": 1200.0,
+          "calories": 261,
+          "avg_hr": null,
+          "max_hr": null,
+          "avg_speed": 0.68
+        }
+      ]
+    },
+    "2026-06-02": {
+      "date": "2026-06-02",
+      "steps": 11278,
+      "resting_hr": 52,
+      "body_battery": 86,
+      "avg_stress": 29,
+      "sleep": {
+        "total_min": 487,
+        "deep_min": 73,
+        "light_min": 330,
+        "rem_min": 84,
+        "awake_min": 27,
+        "score": 84,
+        "start": 1780347120000,
+        "end": 1780377960000
+      },
+      "activities": []
+    },
+    "2026-06-01": {
+      "date": "2026-06-01",
+      "steps": 11041,
+      "resting_hr": 56,
+      "body_battery": 17,
+      "avg_stress": 48,
+      "sleep": {
+        "total_min": 297,
+        "deep_min": 60,
+        "light_min": 217,
+        "rem_min": 20,
+        "awake_min": 38,
+        "score": 40,
+        "start": 1780271160000,
+        "end": 1780291260000
+      },
+      "activities": []
+    },
+    "2026-05-31": {
+      "date": "2026-05-31",
+      "steps": 23311,
+      "resting_hr": 55,
+      "body_battery": 24,
+      "avg_stress": 59,
+      "sleep": {
+        "total_min": 355,
+        "deep_min": 81,
+        "light_min": 238,
+        "rem_min": 36,
+        "awake_min": 26,
+        "score": 46,
+        "start": 1780182480000,
+        "end": 1780205340000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-31 20:06:51",
+          "duration_s": 3704,
+          "distance_m": 2230.0,
+          "calories": 371,
+          "avg_hr": 118,
+          "max_hr": 159,
+          "avg_speed": 0.6
+        }
+      ]
+    },
+    "2026-05-30": {
+      "date": "2026-05-30",
+      "steps": 18181,
+      "resting_hr": 56,
+      "body_battery": 17,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 290,
+        "deep_min": 105,
+        "light_min": 177,
+        "rem_min": 8,
+        "awake_min": 27,
+        "score": 42,
+        "start": 1780103760000,
+        "end": 1780122780000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-30 15:38:59",
+          "duration_s": 1245,
+          "distance_m": 3609.0,
+          "calories": 159,
+          "avg_hr": 120,
+          "max_hr": 151,
+          "avg_speed": 2.9
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-30 13:23:32",
+          "duration_s": 1503,
+          "distance_m": 3773.0,
+          "calories": 87,
+          "avg_hr": 87,
+          "max_hr": 126,
+          "avg_speed": 2.51
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-30 11:25:04",
+          "duration_s": 1314,
+          "distance_m": 4286.0,
+          "calories": 133,
+          "avg_hr": 109,
+          "max_hr": 156,
+          "avg_speed": 3.26
+        }
+      ]
+    },
+    "2026-05-29": {
+      "date": "2026-05-29",
+      "steps": 13827,
+      "resting_hr": 52,
+      "body_battery": 62,
+      "avg_stress": 40,
+      "sleep": {
+        "total_min": 334,
+        "deep_min": 82,
+        "light_min": 229,
+        "rem_min": 23,
+        "awake_min": 0,
+        "score": 65,
+        "start": 1780013940000,
+        "end": 1780033976000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-29 18:44:58",
+          "duration_s": 4178,
+          "distance_m": 3297.0,
+          "calories": 342,
+          "avg_hr": 107,
+          "max_hr": 141,
+          "avg_speed": 0.79
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-29 16:13:25",
+          "duration_s": 1250,
+          "distance_m": 3184.0,
+          "calories": 139,
+          "avg_hr": 115,
+          "max_hr": 147,
+          "avg_speed": 2.55
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Maritsa Kiteboarding",
+          "start": "2026-05-29 11:51:56",
+          "duration_s": 1320,
+          "distance_m": 3298.0,
+          "calories": 121,
+          "avg_hr": 105,
+          "max_hr": 134,
+          "avg_speed": 2.5
+        }
+      ]
+    }
+  },
+  "garmin_updated": "2026-06-04"
 }
