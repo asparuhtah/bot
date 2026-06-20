@@ -1,28 +1,22 @@
 {
-  "lastUpdated": "2026-06-19T11:16:24.346211+00:00",
-  "eurUsd": 1.1462,
+  "lastUpdated": "2026-06-20T09:58:59.338333+00:00",
+  "eurUsd": 1.1465,
   "prices": {
-    "BTC-USD": 54471.0,
-    "ETC-USD": 6.23,
-    "FLR-USD": 0.006414,
+    "BTC-USD": 55514.0,
+    "ETC-USD": 6.58,
+    "FLR-USD": 0.006435,
     "EXI2.DE": 104.95,
-    "MRVL": 137.14884,
+    "MRVL": 137.112952,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 250.61,
-    "pnl": -37.46,
-    "pnlPct": -13.0
+    "totalCurrent": 253.92,
+    "pnl": -34.15,
+    "pnlPct": -11.86
   },
   "history": [
-    {
-      "date": "2026-05-20",
-      "total": 272.09,
-      "pnl": -15.98,
-      "pct": -5.55
-    },
     {
       "date": "2026-05-21",
       "total": 270.97,
@@ -196,250 +190,12 @@
       "total": 250.61,
       "pnl": -37.46,
       "pct": -13.0
-    }
-  ],
-  "garmin": {
-    "2026-06-20": {
+    },
+    {
       "date": "2026-06-20",
-      "steps": 4624,
-      "resting_hr": 50,
-      "body_battery": 66,
-      "avg_stress": 23,
-      "sleep": {
-        "total_min": 414,
-        "deep_min": 68,
-        "light_min": 270,
-        "rem_min": 76,
-        "awake_min": 1,
-        "score": 75,
-        "start": 1781913060000,
-        "end": 1781937960000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-20 07:23:30",
-          "duration_s": 698,
-          "distance_m": 0.0,
-          "calories": 45,
-          "avg_hr": 89,
-          "max_hr": 120,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-06-19": {
-      "date": "2026-06-19",
-      "steps": 14600,
-      "resting_hr": 48,
-      "body_battery": 76,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 469,
-        "deep_min": 81,
-        "light_min": 315,
-        "rem_min": 73,
-        "awake_min": 11,
-        "score": 81,
-        "start": 1781821860000,
-        "end": 1781850640000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-06-19 10:22:20",
-          "duration_s": 1949,
-          "distance_m": 1100.0,
-          "calories": 247,
-          "avg_hr": 81,
-          "max_hr": 81,
-          "avg_speed": 0.63
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-19 06:56:27",
-          "duration_s": 644,
-          "distance_m": 0.0,
-          "calories": 42,
-          "avg_hr": 89,
-          "max_hr": 132,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-06-18": {
-      "date": "2026-06-18",
-      "steps": 9810,
-      "resting_hr": 50,
-      "body_battery": 77,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 446,
-        "deep_min": 64,
-        "light_min": 337,
-        "rem_min": 45,
-        "awake_min": 3,
-        "score": 78,
-        "start": 1781740380000,
-        "end": 1781767320000
-      },
-      "activities": []
-    },
-    "2026-06-17": {
-      "date": "2026-06-17",
-      "steps": 10339,
-      "resting_hr": 55,
-      "body_battery": 43,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 413,
-        "deep_min": 79,
-        "light_min": 306,
-        "rem_min": 28,
-        "awake_min": 5,
-        "score": 67,
-        "start": 1781652600000,
-        "end": 1781677680000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Burgas Open Water Swimming",
-          "start": "2026-06-17 09:44:02",
-          "duration_s": 1762,
-          "distance_m": 3483.0,
-          "calories": 718,
-          "avg_hr": 81,
-          "max_hr": 81,
-          "avg_speed": 1.98
-        },
-        {
-          "type": "open_water_swimming",
-          "name": "Burgas Open Water Swimming",
-          "start": "2026-06-17 09:03:14",
-          "duration_s": 1275,
-          "distance_m": 2243.0,
-          "calories": 461,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 1.76
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-17 07:14:26",
-          "duration_s": 931,
-          "distance_m": 0.0,
-          "calories": 86,
-          "avg_hr": 104,
-          "max_hr": 139,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-06-16": {
-      "date": "2026-06-16",
-      "steps": 27143,
-      "resting_hr": 56,
-      "body_battery": 26,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 303,
-        "deep_min": 28,
-        "light_min": 275,
-        "rem_min": 0,
-        "awake_min": 21,
-        "score": 36,
-        "start": 1781570340000,
-        "end": 1781589780000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Burgas Open Water Swimming",
-          "start": "2026-06-16 15:25:42",
-          "duration_s": 503,
-          "distance_m": 471.0,
-          "calories": 94,
-          "avg_hr": 87,
-          "max_hr": 87,
-          "avg_speed": 0.94
-        },
-        {
-          "type": "open_water_swimming",
-          "name": "Burgas Open Water Swimming",
-          "start": "2026-06-16 08:36:12",
-          "duration_s": 1251,
-          "distance_m": 2753.0,
-          "calories": 569,
-          "avg_hr": 80,
-          "max_hr": 80,
-          "avg_speed": 2.2
-        },
-        {
-          "type": "open_water_swimming",
-          "name": "Burgas Open Water Swimming",
-          "start": "2026-06-16 07:49:53",
-          "duration_s": 1473,
-          "distance_m": 1809.0,
-          "calories": 370,
-          "avg_hr": 104,
-          "max_hr": 104,
-          "avg_speed": 1.23
-        }
-      ]
-    },
-    "2026-06-15": {
-      "date": "2026-06-15",
-      "steps": 25549,
-      "resting_hr": 49,
-      "body_battery": 55,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 349,
-        "deep_min": 78,
-        "light_min": 234,
-        "rem_min": 37,
-        "awake_min": 13,
-        "score": 62,
-        "start": 1781480460000,
-        "end": 1781502180000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-15 06:12:32",
-          "duration_s": 819,
-          "distance_m": 0.0,
-          "calories": 80,
-          "avg_hr": 104,
-          "max_hr": 150,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-06-14": {
-      "date": "2026-06-14",
-      "steps": 17603,
-      "resting_hr": 49,
-      "body_battery": 84,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 434,
-        "deep_min": 70,
-        "light_min": 283,
-        "rem_min": 81,
-        "awake_min": 0,
-        "score": 87,
-        "start": 1781389920000,
-        "end": 1781415960000
-      },
-      "activities": []
+      "total": 253.92,
+      "pnl": -34.15,
+      "pct": -11.86
     }
-  },
-  "garmin_updated": "2026-06-20"
+  ]
 }
