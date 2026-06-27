@@ -1,28 +1,22 @@
 {
-  "lastUpdated": "2026-06-26T10:18:31.706447+00:00",
-  "eurUsd": 1.1404,
+  "lastUpdated": "2026-06-27T09:25:56.267026+00:00",
+  "eurUsd": 1.1384,
   "prices": {
-    "BTC-USD": 52375.0,
-    "ETC-USD": 6.12,
-    "FLR-USD": 0.005893,
+    "BTC-USD": 52896.0,
+    "ETC-USD": 6.38,
+    "FLR-USD": 0.005957,
     "EXI2.DE": 104.95,
-    "MRVL": 137.84637,
+    "MRVL": 138.088545,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 248.12,
-    "pnl": -39.95,
-    "pnlPct": -13.87
+    "totalCurrent": 250.41,
+    "pnl": -37.66,
+    "pnlPct": -13.07
   },
   "history": [
-    {
-      "date": "2026-05-28",
-      "total": 263.53,
-      "pnl": -24.54,
-      "pct": -8.52
-    },
     {
       "date": "2026-05-29",
       "total": 263.48,
@@ -196,228 +190,12 @@
       "total": 248.12,
       "pnl": -39.95,
       "pct": -13.87
-    }
-  ],
-  "garmin": {
-    "2026-06-27": {
+    },
+    {
       "date": "2026-06-27",
-      "steps": 4999,
-      "resting_hr": 54,
-      "body_battery": 14,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 323,
-        "deep_min": 137,
-        "light_min": 173,
-        "rem_min": 13,
-        "awake_min": 31,
-        "score": 41,
-        "start": 1782519660000,
-        "end": 1782540900000
-      },
-      "activities": []
-    },
-    "2026-06-26": {
-      "date": "2026-06-26",
-      "steps": 24381,
-      "resting_hr": 48,
-      "body_battery": 78,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 494,
-        "deep_min": 127,
-        "light_min": 301,
-        "rem_min": 66,
-        "awake_min": 15,
-        "score": 84,
-        "start": 1782424860000,
-        "end": 1782455400000
-      },
-      "activities": []
-    },
-    "2026-06-25": {
-      "date": "2026-06-25",
-      "steps": 5150,
-      "resting_hr": 54,
-      "body_battery": 23,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 441,
-        "deep_min": 132,
-        "light_min": 309,
-        "rem_min": 0,
-        "awake_min": 106,
-        "score": 36,
-        "start": 1782343980000,
-        "end": 1782376800000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-25 10:45:52",
-          "duration_s": 786,
-          "distance_m": 3574.0,
-          "calories": 70,
-          "avg_hr": 103,
-          "max_hr": 128,
-          "avg_speed": 4.54
-        }
-      ]
-    },
-    "2026-06-24": {
-      "date": "2026-06-24",
-      "steps": 11857,
-      "resting_hr": 50,
-      "body_battery": 63,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 404,
-        "deep_min": 73,
-        "light_min": 268,
-        "rem_min": 63,
-        "awake_min": 2,
-        "score": 79,
-        "start": 1782254040000,
-        "end": 1782278400000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-24 13:13:11",
-          "duration_s": 3080,
-          "distance_m": 3899.0,
-          "calories": 235,
-          "avg_hr": 101,
-          "max_hr": 148,
-          "avg_speed": 1.27
-        }
-      ]
-    },
-    "2026-06-23": {
-      "date": "2026-06-23",
-      "steps": 5997,
-      "resting_hr": 49,
-      "body_battery": 95,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 485,
-        "deep_min": 56,
-        "light_min": 332,
-        "rem_min": 97,
-        "awake_min": 26,
-        "score": 83,
-        "start": 1782166140000,
-        "end": 1782196800000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-23 15:07:28",
-          "duration_s": 2027,
-          "distance_m": 4244.0,
-          "calories": 225,
-          "avg_hr": 115,
-          "max_hr": 150,
-          "avg_speed": 2.09
-        }
-      ]
-    },
-    "2026-06-22": {
-      "date": "2026-06-22",
-      "steps": 14356,
-      "resting_hr": 51,
-      "body_battery": 50,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 292,
-        "deep_min": 80,
-        "light_min": 212,
-        "rem_min": 0,
-        "awake_min": 3,
-        "score": 50,
-        "start": 1782081960000,
-        "end": 1782099660000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-22 18:03:39",
-          "duration_s": 1413,
-          "distance_m": 4506.0,
-          "calories": 144,
-          "avg_hr": 111,
-          "max_hr": 143,
-          "avg_speed": 3.19
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-22 12:43:41",
-          "duration_s": 1434,
-          "distance_m": 0.0,
-          "calories": 169,
-          "avg_hr": 118,
-          "max_hr": 160,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-06-22 11:22:10",
-          "duration_s": 3345,
-          "distance_m": 0.0,
-          "calories": 419,
-          "avg_hr": 126,
-          "max_hr": 178,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-06-21": {
-      "date": "2026-06-21",
-      "steps": 10020,
-      "resting_hr": 50,
-      "body_battery": 80,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 481,
-        "deep_min": 66,
-        "light_min": 335,
-        "rem_min": 80,
-        "awake_min": 6,
-        "score": 80,
-        "start": 1781994360000,
-        "end": 1782023580000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-21 14:13:14",
-          "duration_s": 1332,
-          "distance_m": 4507.0,
-          "calories": 158,
-          "avg_hr": 116,
-          "max_hr": 156,
-          "avg_speed": 3.38
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-06-21 11:50:57",
-          "duration_s": 1400,
-          "distance_m": 3220.0,
-          "calories": 158,
-          "avg_hr": 116,
-          "max_hr": 171,
-          "avg_speed": 2.3
-        }
-      ]
+      "total": 250.41,
+      "pnl": -37.66,
+      "pct": -13.07
     }
-  },
-  "garmin_updated": "2026-06-27"
+  ]
 }
