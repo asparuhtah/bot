@@ -1,28 +1,22 @@
 {
-  "lastUpdated": "2026-07-01T10:39:01.891808+00:00",
-  "eurUsd": 1.1396,
+  "lastUpdated": "2026-07-02T09:56:14.308089+00:00",
+  "eurUsd": 1.141,
   "prices": {
-    "BTC-USD": 51460.0,
-    "ETC-USD": 6.0,
-    "FLR-USD": 0.005578,
+    "BTC-USD": 53678.0,
+    "ETC-USD": 6.22,
+    "FLR-USD": 0.005685,
     "EXI2.DE": 104.95,
-    "MRVL": 137.943138,
+    "MRVL": 137.773883,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 246.49,
-    "pnl": -41.58,
-    "pnlPct": -14.43
+    "totalCurrent": 249.97,
+    "pnl": -38.1,
+    "pnlPct": -13.23
   },
   "history": [
-    {
-      "date": "2026-06-02",
-      "total": 258.88,
-      "pnl": -29.19,
-      "pct": -10.13
-    },
     {
       "date": "2026-06-03",
       "total": 256.62,
@@ -196,159 +190,12 @@
       "total": 246.49,
       "pnl": -41.58,
       "pct": -14.43
-    }
-  ],
-  "garmin": {
-    "2026-07-02": {
+    },
+    {
       "date": "2026-07-02",
-      "steps": 2366,
-      "resting_hr": 49,
-      "body_battery": 64,
-      "avg_stress": 24,
-      "sleep": {
-        "total_min": 329,
-        "deep_min": 41,
-        "light_min": 245,
-        "rem_min": 44,
-        "awake_min": 33,
-        "score": 64,
-        "start": 1782950220000,
-        "end": 1782971953000
-      },
-      "activities": []
-    },
-    "2026-07-01": {
-      "date": "2026-07-01",
-      "steps": 11944,
-      "resting_hr": 49,
-      "body_battery": 83,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 420,
-        "deep_min": 106,
-        "light_min": 254,
-        "rem_min": 60,
-        "awake_min": 16,
-        "score": 82,
-        "start": 1782859620000,
-        "end": 1782885780000
-      },
-      "activities": []
-    },
-    "2026-06-30": {
-      "date": "2026-06-30",
-      "steps": 13244,
-      "resting_hr": 48,
-      "body_battery": 87,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 429,
-        "deep_min": 43,
-        "light_min": 264,
-        "rem_min": 122,
-        "awake_min": 9,
-        "score": 83,
-        "start": 1782773700000,
-        "end": 1782799980000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-06-30 11:07:27",
-          "duration_s": 2071,
-          "distance_m": 1000.0,
-          "calories": 226,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.59
-        }
-      ]
-    },
-    "2026-06-29": {
-      "date": "2026-06-29",
-      "steps": 10893,
-      "resting_hr": 47,
-      "body_battery": null,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-06-29 10:02:10",
-          "duration_s": 1795,
-          "distance_m": 1250.0,
-          "calories": 284,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.76
-        }
-      ]
-    },
-    "2026-06-28": {
-      "date": "2026-06-28",
-      "steps": 8192,
-      "resting_hr": 51,
-      "body_battery": null,
-      "avg_stress": 53,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-06-27": {
-      "date": "2026-06-27",
-      "steps": 19547,
-      "resting_hr": 64,
-      "body_battery": 14,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 323,
-        "deep_min": 137,
-        "light_min": 173,
-        "rem_min": 13,
-        "awake_min": 31,
-        "score": 41,
-        "start": 1782519660000,
-        "end": 1782540900000
-      },
-      "activities": []
-    },
-    "2026-06-26": {
-      "date": "2026-06-26",
-      "steps": 24381,
-      "resting_hr": 48,
-      "body_battery": 78,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 494,
-        "deep_min": 127,
-        "light_min": 301,
-        "rem_min": 66,
-        "awake_min": 15,
-        "score": 84,
-        "start": 1782424860000,
-        "end": 1782455400000
-      },
-      "activities": []
+      "total": 249.97,
+      "pnl": -38.1,
+      "pct": -13.23
     }
-  },
-  "garmin_updated": "2026-07-02"
+  ]
 }
