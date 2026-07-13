@@ -1,28 +1,22 @@
 {
-  "lastUpdated": "2026-07-12T08:59:16.766005+00:00",
-  "eurUsd": 1.1409,
+  "lastUpdated": "2026-07-13T10:18:41.233092+00:00",
+  "eurUsd": 1.143,
   "prices": {
-    "BTC-USD": 56017.0,
-    "ETC-USD": 6.01,
-    "FLR-USD": 0.005725,
+    "BTC-USD": 55139.0,
+    "ETC-USD": 6.11,
+    "FLR-USD": 0.005639,
     "EXI2.DE": 104.95,
-    "MRVL": 137.785958,
+    "MRVL": 137.532808,
     "DFEN.DE": 55.715,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 288.07,
-    "totalCurrent": 250.71,
-    "pnl": -37.36,
-    "pnlPct": -12.97
+    "totalCurrent": 250.51,
+    "pnl": -37.56,
+    "pnlPct": -13.04
   },
   "history": [
-    {
-      "date": "2026-06-13",
-      "total": 250.73,
-      "pnl": -37.34,
-      "pct": -12.96
-    },
     {
       "date": "2026-06-14",
       "total": 251.12,
@@ -196,205 +190,12 @@
       "total": 250.71,
       "pnl": -37.36,
       "pct": -12.97
-    }
-  ],
-  "garmin": {
-    "2026-07-13": {
+    },
+    {
       "date": "2026-07-13",
-      "steps": 1363,
-      "resting_hr": 57,
-      "body_battery": 7,
-      "avg_stress": 62,
-      "sleep": {
-        "total_min": 227,
-        "deep_min": 79,
-        "light_min": 124,
-        "rem_min": 24,
-        "awake_min": 56,
-        "score": 34,
-        "start": 1783910760000,
-        "end": 1783927740000
-      },
-      "activities": []
-    },
-    "2026-07-12": {
-      "date": "2026-07-12",
-      "steps": 15299,
-      "resting_hr": 51,
-      "body_battery": 63,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 487,
-        "deep_min": 95,
-        "light_min": 327,
-        "rem_min": 65,
-        "awake_min": 64,
-        "score": 70,
-        "start": 1783807200000,
-        "end": 1783840260000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-07-12 17:11:17",
-          "duration_s": 4725,
-          "distance_m": 5403.0,
-          "calories": 416,
-          "avg_hr": 116,
-          "max_hr": 167,
-          "avg_speed": 1.14
-        }
-      ]
-    },
-    "2026-07-11": {
-      "date": "2026-07-11",
-      "steps": 4713,
-      "resting_hr": 56,
-      "body_battery": 41,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 460,
-        "deep_min": 111,
-        "light_min": 283,
-        "rem_min": 66,
-        "awake_min": 90,
-        "score": 48,
-        "start": 1783724100000,
-        "end": 1783757100000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-11 15:53:10",
-          "duration_s": 334,
-          "distance_m": 0.0,
-          "calories": 30,
-          "avg_hr": 102,
-          "max_hr": 127,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-07-11 09:06:05",
-          "duration_s": 1962,
-          "distance_m": 5653.0,
-          "calories": 134,
-          "avg_hr": 93,
-          "max_hr": 137,
-          "avg_speed": 2.88
-        }
-      ]
-    },
-    "2026-07-10": {
-      "date": "2026-07-10",
-      "steps": 10887,
-      "resting_hr": 53,
-      "body_battery": 43,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 345,
-        "deep_min": 96,
-        "light_min": 205,
-        "rem_min": 44,
-        "awake_min": 13,
-        "score": 62,
-        "start": 1783635180000,
-        "end": 1783656660000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-07-10 17:46:18",
-          "duration_s": 2463,
-          "distance_m": 4380.0,
-          "calories": 253,
-          "avg_hr": 115,
-          "max_hr": 149,
-          "avg_speed": 1.78
-        },
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-07-10 14:25:31",
-          "duration_s": 2179,
-          "distance_m": 1100.0,
-          "calories": 273,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.64
-        }
-      ]
-    },
-    "2026-07-09": {
-      "date": "2026-07-09",
-      "steps": 7235,
-      "resting_hr": 54,
-      "body_battery": 20,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 235,
-        "deep_min": 50,
-        "light_min": 171,
-        "rem_min": 14,
-        "awake_min": 32,
-        "score": 34,
-        "start": 1783566240000,
-        "end": 1783582260000
-      },
-      "activities": []
-    },
-    "2026-07-08": {
-      "date": "2026-07-08",
-      "steps": 13469,
-      "resting_hr": 49,
-      "body_battery": 77,
-      "avg_stress": 53,
-      "sleep": {
-        "total_min": 380,
-        "deep_min": 85,
-        "light_min": 233,
-        "rem_min": 62,
-        "awake_min": 5,
-        "score": 77,
-        "start": 1783464660000,
-        "end": 1783487760000
-      },
-      "activities": []
-    },
-    "2026-07-07": {
-      "date": "2026-07-07",
-      "steps": 10678,
-      "resting_hr": 52,
-      "body_battery": 63,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 338,
-        "deep_min": 73,
-        "light_min": 260,
-        "rem_min": 5,
-        "awake_min": 84,
-        "score": 52,
-        "start": 1783379940000,
-        "end": 1783405260000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-07-07 10:09:28",
-          "duration_s": 2035,
-          "distance_m": 1400.0,
-          "calories": 334,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.78
-        }
-      ]
+      "total": 250.51,
+      "pnl": -37.56,
+      "pct": -13.04
     }
-  },
-  "garmin_updated": "2026-07-13"
+  ]
 }
