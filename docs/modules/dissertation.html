@@ -108,6 +108,9 @@ table.rt{width:100%;border-collapse:collapse;font-size:12px;font-family:Consolas
     <span class="badge b-red" id="dlBadge">Дедлайн: —</span>
     <span class="badge b-green" id="pctBadge">—</span>
     <span class="badge b-mut" id="genBadge">—</span>
+    <button class="badge b-blue" id="upBtn" style="border:1px solid rgba(88,166,255,.4);cursor:pointer;font-family:inherit"
+      onclick="document.getElementById('mdUp').click()" title="Качва MD файлове в dissertation/Всички задачи/ през GitHub API — Action-ът ги обработва автоматично">⬆ Качи MD</button>
+    <input type="file" id="mdUp" accept=".md,.markdown,.txt" multiple style="display:none" onchange="uploadMd(this.files)">
   </div>
 </div>
 
@@ -339,10 +342,69 @@ window.showTab=function(id,btn){
   document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   $('tab-'+id).classList.add('active'); btn.classList.add('active');
+  postHeight();
 };
+
+// ── Височина към родителския дешборд (iframe resize) ──
+function postHeight(){
+  try{
+    requestAnimationFrame(()=>parent.postMessage({dissHeight:document.documentElement.scrollHeight},'*'));
+  }catch(e){}
+}
+
+// ── Качване на MD в репото през GitHub API ──
+const GH_REPO='asparuhtah/bot', GH_DIR='dissertation/Всички задачи';
+function ghToken(force){
+  let t=localStorage.getItem('gh-token');
+  if(!t||force){
+    t=prompt('GitHub token (fine-grained, само за repo "bot", права: Contents → Read and write).\nСъздава се на github.com → Settings → Developer settings → Fine-grained tokens.\nЗапазва се само в този браузър:');
+    if(t) localStorage.setItem('gh-token', t.trim());
+  }
+  return t? t.trim():null;
+}
+window.uploadMd=async function(files){
+  if(!files||!files.length) return;
+  let token=ghToken(false);
+  if(!token) return;
+  const btn=$('upBtn'); const orig=btn.textContent;
+  let done=0;
+  for(const f of files){
+    btn.textContent='⬆ '+f.name+'…';
+    const text=await f.text();
+    const b64=btoa(unescape(encodeURIComponent(text)));
+    const path=GH_DIR+'/'+f.name;
+    const url='https://api.github.com/repos/'+GH_REPO+'/contents/'+encodeURIComponent(path).replace(/%2F/g,'/');
+    const hdr={Authorization:'Bearer '+token, Accept:'application/vnd.github+json'};
+    try{
+      // ако файлът съществува — нужен е sha за update
+      let sha=null;
+      const chk=await fetch(url,{headers:hdr});
+      if(chk.status===200) sha=(await chk.json()).sha;
+      else if(chk.status===401||chk.status===403){ token=ghToken(true); if(!token){break;} continue; }
+      const body={message:'diss: '+f.name+' (от дешборда)', content:b64, ...(sha?{sha}:{})};
+      const res=await fetch(url,{method:'PUT',headers:hdr,body:JSON.stringify(body)});
+      if(res.ok) done++;
+      else if(res.status===401||res.status===403){
+        localStorage.removeItem('gh-token');
+        alert('Токенът е невалиден или без права — въведи нов при следващ опит.');
+        break;
+      } else {
+        alert('Грешка при '+f.name+': HTTP '+res.status);
+      }
+    }catch(e){ alert('Мрежова грешка: '+e.message); break; }
+  }
+  btn.textContent=orig;
+  $('mdUp').value='';
+  if(done){
+    alert(done+' файл(а) качени в '+GH_DIR+'.\nGitHub Action-ът ще обнови данните до ~1 минута — презареди след това.');
+  }
+};
+
 function renderAll(){
   renderHeader(); renderBlockers(); renderGantt(); renderChapters(); renderTasks(); renderAnsys();
+  postHeight();
 }
+try{ new ResizeObserver(()=>postHeight()).observe(document.body); }catch(e){}
 fetch('../diss-data.json?t='+Date.now())
   .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
   .then(d=>{D=d;renderAll();})

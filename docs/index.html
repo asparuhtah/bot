@@ -457,6 +457,14 @@ function autoResizeFrame(frame) {
   }
 }
 
+// Модулите в iframe пращат реалната си височина след всяко рендиране
+window.addEventListener('message', e => {
+  if (e.data && typeof e.data.dissHeight === 'number') {
+    const f = document.getElementById('mod-iframe');
+    if (f) f.style.height = (e.data.dissHeight + 20) + 'px';
+  }
+});
+
 function switchModule(name, btn) {
   document.querySelectorAll('.mod-tab').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
