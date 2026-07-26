@@ -20,8 +20,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hdr-left h1{font-size:18px;font-weight:600;margin-bottom:3px}
 .hdr-left p{font-size:12px;color:var(--muted)}
 .hdr-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.deadline-badge{background:#1a0a0a;border:1px solid var(--red);color:var(--red);font-size:12px;padding:4px 10px;border-radius:6px;font-weight:600}
+.deadline-badge{background:#1a0a0a;border:1px solid var(--red);color:var(--red);font-size:12px;padding:4px 10px;border-radius:6px;font-weight:600;cursor:pointer}
+.deadline-badge:hover{background:#2a0f0f}
 .progress-badge{background:#0a1a0a;border:1px solid var(--green);color:var(--green);font-size:12px;padding:4px 10px;border-radius:6px}
+.ghost-btn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:inherit}
+.ghost-btn:hover{border-color:var(--red);color:var(--red)}
 
 /* Stats row */
 .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
@@ -33,7 +36,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 /* Blockers */
 .blockers{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
 .blocker{background:#1a0d0a;border:1px solid #5a2a1a;border-radius:8px;padding:10px 14px;font-size:12px;display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+.blocker.ok{background:#0d1a0a;border-color:#163d28}
 .blocker-icon{color:var(--orange);font-size:14px;flex-shrink:0}
+.blocker.ok .blocker-icon{color:var(--green)}
 .blocker-text{color:var(--text)}
 .blocker-sub{color:var(--muted);font-size:11px;margin-top:2px}
 
@@ -78,17 +83,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .ch-tasks{margin-top:10px;border-top:1px solid var(--border);padding-top:10px;display:none}
 .chapter-card.expanded .ch-tasks{display:block}
 .task-row{display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:12px}
-.task-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.task-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;cursor:pointer}
 .dot-done{background:var(--green)}.dot-wip{background:var(--yellow)}.dot-todo{background:var(--dim)}.dot-block{background:var(--red)}
-.task-text{flex:1;color:var(--text)}
+.task-text{flex:1;color:var(--text);cursor:pointer}
 .task-note{font-size:11px;color:var(--muted);margin-top:1px}
+.task-del{background:transparent;border:none;color:var(--dim);cursor:pointer;font-size:13px;padding:0 3px;line-height:1}
+.task-del:hover{color:var(--red)}
+.task-add-row{display:flex;gap:6px;margin-top:8px}
+.task-add-inp{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:4px 8px;color:var(--text);font-size:12px;outline:none}
+.task-add-inp:focus{border-color:var(--blue)}
+.task-add-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:4px 11px;font-size:11px;cursor:pointer}
 
 /* ANSYS section */
 .ansys-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:20px}
 .ansys-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
 .ansys-title{font-size:13px;font-weight:600}
 .ansys-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.as-item{display:flex;gap:10px;padding:10px 12px;border-radius:6px;background:var(--s2);border:1px solid var(--border);align-items:flex-start}
+.as-item{display:flex;gap:10px;padding:10px 12px;border-radius:6px;background:var(--s2);border:1px solid var(--border);align-items:flex-start;cursor:pointer}
+.as-item:hover{border-color:var(--blue)}
 .as-item.active{background:#1a1200;border-color:#5a4200}
 .as-item.done{opacity:.55}
 .as-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px}
@@ -120,6 +132,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tab-pane{display:none}
 .tab-pane.active{display:block}
 
+.footer-row{text-align:right;margin-top:6px}
+
 /* Responsive */
 @media(max-width:700px){
   .stats{grid-template-columns:repeat(3,1fr)}
@@ -136,37 +150,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <p>Слънчево адсорбционно охлаждане · InvenSor LTC 10 plus · ANSYS Fluent Meshing</p>
   </div>
   <div class="hdr-right">
-    <span class="deadline-badge">Дедлайн: Края на 2026</span>
-    <span class="progress-badge">34% общо</span>
+    <span class="deadline-badge" id="deadlineBadge" onclick="editDeadline()" title="Кликни за промяна на датата">Дедлайн: —</span>
+    <span class="progress-badge" id="progressBadge">— общо</span>
   </div>
 </div>
 
 <!-- Stats -->
 <div class="stats">
-  <div class="stat"><div class="sl">Общ прогрес</div><div class="sv blue">34%</div></div>
-  <div class="stat"><div class="sl">Завършени</div><div class="sv green">3/9</div></div>
-  <div class="stat"><div class="sl">В процес</div><div class="sv yellow">4/9</div></div>
-  <div class="stat"><div class="sl">Блокирани</div><div class="sv red">2</div></div>
-  <div class="stat"><div class="sl">До дедлайн</div><div class="sv">~7 мес.</div></div>
+  <div class="stat"><div class="sl">Общ прогрес</div><div class="sv blue" id="statOverall">—</div></div>
+  <div class="stat"><div class="sl">Завършени</div><div class="sv green" id="statDone">—</div></div>
+  <div class="stat"><div class="sl">В процес</div><div class="sv yellow" id="statWip">—</div></div>
+  <div class="stat"><div class="sl">Блокирани задачи</div><div class="sv red" id="statBlocked">—</div></div>
+  <div class="stat"><div class="sl">До дедлайн</div><div class="sv" id="statDeadline">—</div></div>
 </div>
 
-<!-- Blockers -->
-<div class="blockers">
-  <div class="blocker">
-    <div class="blocker-icon">⚠</div>
-    <div>
-      <div class="blocker-text">ANSYS overlapping <span class="coord pending">(196, 2727, 1668)</span></div>
-      <div class="blocker-sub">HWreturn_HeatExchanger — пролука 1–2mm → Geom_clean2.dsco</div>
-    </div>
-  </div>
-  <div class="blocker">
-    <div class="blocker-icon">⚠</div>
-    <div>
-      <div class="blocker-text">Нов сух охладител — измервания блокирани</div>
-      <div class="blocker-sub">9 работни режима не могат да стартират</div>
-    </div>
-  </div>
-</div>
+<!-- Blockers (dynamic — derived from task statuses) -->
+<div class="blockers" id="blockersWrap"></div>
 
 <!-- Tabs -->
 <div class="tabs">
@@ -179,13 +178,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <!-- TAB: GANTT -->
 <div class="tab-pane active" id="tab-gantt">
 <div class="gantt-card">
-  <div class="gantt-title">Линеен график — май 2026 → декември 2026</div>
+  <div class="gantt-title">Линеен график — май 2026 → декември 2026 <span style="color:var(--dim);font-weight:400;text-transform:none">· плътната лента = реален прогрес по главата</span></div>
   <div class="gantt-wrap" id="gantt-wrap"></div>
   <div class="gantt-legend">
     <div class="gl-item"><div class="gl-dot" style="background:#f85149"></div>Критичен path</div>
     <div class="gl-item"><div class="gl-dot" style="background:#d29922"></div>В процес</div>
     <div class="gl-item"><div class="gl-dot" style="background:#58a6ff"></div>Планирано</div>
     <div class="gl-item"><div class="gl-dot" style="background:#3fb950;opacity:.5"></div>Завършено</div>
+    <div class="gl-item"><div class="gl-dot" style="background:rgba(255,255,255,.5);width:6px"></div>Реален % (от главите)</div>
     <div class="gl-item"><div class="gl-dot" style="background:#58a6ff;width:2px;height:12px"></div>Днес</div>
   </div>
 </div>
@@ -206,16 +206,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <span class="coord pending">(196, 2727, 1668) ⟳</span>
     </div>
   </div>
-  <div class="ansys-steps">
-    <div class="as-item done"><div class="as-num n-done">1</div><div><div class="as-title">Лиценз грешка → решена</div><div class="as-note">Рано сутринта / университетски сървър уикенд</div></div></div>
-    <div class="as-item done"><div class="as-num n-done">2</div><div><div class="as-title">Fault-Tolerant workflow → установен</div><div class="as-note">Standalone Fluent Meshing, НЕ от Workbench</div></div></div>
-    <div class="as-item done"><div class="as-num n-done">3</div><div><div class="as-title">Overlapping (100, 2851, 1650) → решен</div><div class="as-note">Фантомни Curves изтрити → Geom_clean.dsco</div></div></div>
-    <div class="as-item done"><div class="as-num n-done">4</div><div><div class="as-title">Surface Mesh — 0 skewed cells</div><div class="as-note">Skewness 0.155 · 16 968 faces · отличен резултат</div></div></div>
-    <div class="as-item active"><div class="as-num n-active">5</div><div><div class="as-title">Overlapping (196, 2727, 1668) → в прогрес</div><div class="as-note">Discovery: измести HWreturn_HeatExchanger 1–2mm навътре → Geom_clean2.dsco → нов mesh</div></div></div>
-    <div class="as-item"><div class="as-num n-todo">6</div><div><div class="as-title">Volume Mesh → генерирай</div><div class="as-note">hexcore, Add BL: No, Use Size Field: No</div></div></div>
-    <div class="as-item"><div class="as-num n-todo">7</div><div><div class="as-title">Fluent Setup → 9 режима</div><div class="as-note">14 BC дефинирани ✓ — готови за конфигурация</div></div></div>
-    <div class="as-item"><div class="as-num n-todo">8</div><div><div class="as-title">CFD runs + post-processing</div><div class="as-note">Резултати → Гл. 5 Резултати и обсъждане</div></div></div>
-  </div>
+  <div class="ansys-steps" id="ansys-steps"></div>
 
   <div style="margin-top:14px;padding:12px 14px;background:#0d1a0a;border:1px solid #163d28;border-radius:6px;font-size:12px;color:#8b949e;line-height:1.6">
     <strong style="color:#3fb950">Важни правила (НИКОГА не нарушавай):</strong><br>
@@ -252,16 +243,220 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 </div>
 
+<div class="footer-row">
+  <button class="ghost-btn" onclick="resetDissertation()">↺ Нулирай модула до начални данни</button>
+</div>
+
 <script>
+(function(){
+
+const STORE_KEY = 'diss_data_v1';
+
+// ── DEFAULT DATA (seed on first load — same content as before, now editable) ──
+const DEFAULT_DATA = {
+  meta: {
+    deadline: '2026-12-31',
+  },
+  chapters: [
+    {name:'Увод / Въведение', tasks:[
+      {t:'Актуалност, цел, задачи', s:'done'},
+      {t:'Хипотеза', s:'wip', n:'Зависи от CFD резултати'},
+      {t:'Структура на труда', s:'todo'},
+    ]},
+    {name:'Гл. 1 — Литературен обзор', tasks:[
+      {t:'63 статии събрани', s:'done'},
+      {t:'Критичен синтез и анализ', s:'wip'},
+      {t:'Библиография — частично', s:'wip'},
+    ]},
+    {name:'Гл. 2 — Описание на системата', tasks:[
+      {t:'Компоненти, хидравлична схема', s:'done'},
+      {t:'Изчисления буфери, CFD геометрия', s:'done'},
+      {t:'Финална редакция — повторения', s:'wip'},
+    ]},
+    {name:'Гл. 3 — Теоретичен анализ', tasks:[
+      {t:'COP / мощност диаграми', s:'done'},
+      {t:'Термодинамичен модел', s:'wip'},
+      {t:'Симулация TRNSYS / собствена', s:'todo'},
+    ]},
+    {name:'Гл. 4 — Методология', tasks:[
+      {t:'Топлинна схема (Excel)', s:'done'},
+      {t:'Експ. план 9 режима', s:'done'},
+      {t:'CFD mesh', s:'block', n:'Overlapping блокира'},
+      {t:'Измервания', s:'block', n:'Чака нов сух охладител'},
+    ]},
+    {name:'CFD — ANSYS Fluent', tasks:[
+      {t:'Geom_clean.dsco', s:'done'},
+      {t:'14 Boundary Conditions', s:'done'},
+      {t:'Volume Mesh', s:'block', n:'Сесия #5 → пролука 1–2mm'},
+      {t:'Fluent runs 9 режима', s:'todo'},
+      {t:'Post-processing', s:'todo'},
+    ]},
+    {name:'Гл. 5 — Резултати', tasks:[
+      {t:'CFD анализ', s:'block', n:'Чака Volume Mesh'},
+      {t:'Анализ измервания', s:'block', n:'Чака сух охладител'},
+      {t:'Сравнение и обсъждане', s:'todo'},
+    ]},
+    {name:'Изводи и препоръки', tasks:[
+      {t:'Изводи', s:'todo'},
+      {t:'Препоръки', s:'todo'},
+    ]},
+    {name:'Библиография / Приложения', tasks:[
+      {t:'63 абстракта', s:'done'},
+      {t:'Форматиране по стандарт', s:'wip'},
+      {t:'Приложения', s:'todo'},
+    ]},
+  ],
+  ansys: {
+    currentStep: 5,
+    steps: [
+      {title:'Лиценз грешка → решена', note:'Рано сутринта / университетски сървър уикенд'},
+      {title:'Fault-Tolerant workflow → установен', note:'Standalone Fluent Meshing, НЕ от Workbench'},
+      {title:'Overlapping (100, 2851, 1650) → решен', note:'Фантомни Curves изтрити → Geom_clean.dsco'},
+      {title:'Surface Mesh — 0 skewed cells', note:'Skewness 0.155 · 16 968 faces · отличен резултат'},
+      {title:'Overlapping (196, 2727, 1668) → в прогрес', note:'Discovery: измести HWreturn_HeatExchanger 1–2mm навътре → Geom_clean2.dsco → нов mesh'},
+      {title:'Volume Mesh → генерирай', note:'hexcore, Add BL: No, Use Size Field: No'},
+      {title:'Fluent Setup → 9 режима', note:'14 BC дефинирани ✓ — готови за конфигурация'},
+      {title:'CFD runs + post-processing', note:'Резултати → Гл. 5 Резултати и обсъждане'},
+    ],
+  },
+};
+
+// ── PERSISTENCE ─────────────────────────────────────────────────────
+function loadData(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){}
+  const d = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  saveData(d);
+  return d;
+}
+function saveData(d){ localStorage.setItem(STORE_KEY, JSON.stringify(d)); }
+
+let DATA = loadData();
+let expandedChapters = new Set();
+
+function resetDissertation(){
+  if(!confirm('Нулираш модула до началните данни? Всички промени по главите и ANSYS стъпките ще се загубят.')) return;
+  DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  saveData(DATA);
+  expandedChapters = new Set();
+  renderAll();
+}
+window.resetDissertation = resetDissertation;
+
+// ── STATUS MAPS ───────────────────────────────────────────────────
+const statusCol={done:'#3fb950',wip:'#d29922',todo:'#4d5566',block:'#f85149'};
+const badgeCls={done:'b-done',wip:'b-wip',todo:'b-todo',block:'b-block'};
+const badgeLbl={done:'почти готово',wip:'в процес',todo:'предстои',block:'блокирано'};
+const dotCls={done:'dot-done',wip:'dot-wip',todo:'dot-todo',block:'dot-block'};
+const statusIcon={done:'✓',wip:'⏳',todo:'—',block:'⛔'};
+const TASK_CYCLE=['todo','wip','done','block'];
+
+// ── COMPUTED PROGRESS ────────────────────────────────────────────────
+function pctOf(ch){
+  if(!ch.tasks.length) return 0;
+  const w={done:1,wip:.5,todo:0,block:0};
+  const sum=ch.tasks.reduce((s,t)=>s+(w[t.s]??0),0);
+  return Math.round(sum/ch.tasks.length*100);
+}
+function statusOf(ch,pct){
+  const hasBlock=ch.tasks.some(t=>t.s==='block');
+  if(pct>=100) return 'done';
+  if(hasBlock) return 'block';
+  if(pct>0) return 'wip';
+  return 'todo';
+}
+function subLine(ch){
+  if(!ch.tasks.length) return 'Няма добавени задачи';
+  return ch.tasks.map(t=>`${t.t} ${statusIcon[t.s]}`).join(' · ');
+}
+function fmtDate(iso){
+  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+  const d=new Date(iso+'T00:00:00');
+  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+function daysToDeadlineLabel(){
+  const dl=new Date(DATA.meta.deadline+'T23:59:59');
+  const now=new Date();
+  const days=Math.ceil((dl-now)/86400000);
+  if(days<0) return 'Просрочено';
+  if(days===0) return 'Днес';
+  if(days<45) return days+' дни';
+  return '~'+Math.round(days/30)+' мес.';
+}
+function computeOverall(){
+  const pcts=DATA.chapters.map(pctOf);
+  const overallPct=pcts.length?Math.round(pcts.reduce((a,b)=>a+b,0)/pcts.length):0;
+  const doneCount=pcts.filter(p=>p>=100).length;
+  const wipCount=pcts.filter(p=>p>0&&p<100).length;
+  const blockedTasks=DATA.chapters.reduce((s,ch)=>s+ch.tasks.filter(t=>t.s==='block').length,0);
+  return {overallPct,doneCount,wipCount,blockedTasks,total:pcts.length};
+}
+
+// ── HEADER / STATS ────────────────────────────────────────────────
+function renderHeader(){
+  document.getElementById('deadlineBadge').textContent=`Дедлайн: ${fmtDate(DATA.meta.deadline)}`;
+  const o=computeOverall();
+  document.getElementById('progressBadge').textContent=`${o.overallPct}% общо`;
+  document.getElementById('statOverall').textContent=o.overallPct+'%';
+  document.getElementById('statDone').textContent=`${o.doneCount}/${o.total}`;
+  document.getElementById('statWip').textContent=`${o.wipCount}/${o.total}`;
+  document.getElementById('statBlocked').textContent=o.blockedTasks;
+  document.getElementById('statDeadline').textContent=daysToDeadlineLabel();
+}
+function editDeadline(){
+  const cur=DATA.meta.deadline;
+  const v=prompt('Нова дата на дедлайн (формат YYYY-MM-DD):', cur);
+  if(v===null) return;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(v.trim())){ alert('Невалиден формат. Използвай YYYY-MM-DD.'); return; }
+  DATA.meta.deadline=v.trim();
+  saveData(DATA);
+  renderHeader();
+}
+window.editDeadline=editDeadline;
+
+// ── BLOCKERS (derived) ───────────────────────────────────────────────
+function renderBlockers(){
+  const wrap=document.getElementById('blockersWrap');
+  const items=[];
+  DATA.chapters.forEach(ch=>{
+    ch.tasks.forEach(t=>{
+      if(t.s==='block') items.push({chapter:ch.name, text:t.t, note:t.n});
+    });
+  });
+  if(!items.length){
+    wrap.innerHTML=`<div class="blocker ok">
+      <div class="blocker-icon">✓</div>
+      <div><div class="blocker-text">Няма активни блокери</div></div>
+    </div>`;
+    return;
+  }
+  wrap.innerHTML=items.map(b=>`<div class="blocker">
+    <div class="blocker-icon">⚠</div>
+    <div>
+      <div class="blocker-text">${b.chapter}: <strong>${b.text}</strong></div>
+      ${b.note?`<div class="blocker-sub">${b.note}</div>`:''}
+    </div>
+  </div>`).join('');
+}
+
+// ── GANTT ─────────────────────────────────────────────────────────
 const MONTHS = ['Май','Юни','Юли','Авг','Сеп','Окт','Ное','Дек'];
-const TODAY_OFFSET = 0.6; // ~18 май в месец 0 (май)
+const GANTT_START_YEAR = 2026, GANTT_START_MONTH = 4; // May = index 4
+
+function computeTodayOffset(){
+  const now=new Date();
+  const monthDiff=(now.getFullYear()-GANTT_START_YEAR)*12+(now.getMonth()-GANTT_START_MONTH);
+  return monthDiff + now.getDate()/30;
+}
 
 const ganttRows = [
   {name:'ANSYS Mesh',start:0,end:1.2,col:'#f85149',crit:true},
   {name:'ANSYS Fluent runs',start:1.2,end:3,col:'#d29922',crit:true},
   {name:'Измервания (9 реж.)',start:1,end:4.5,col:'#d29922',crit:true},
   {name:'Гл. 1 — Лит. обзор',start:0,end:2,col:'#d29922'},
-  {name:'Гл. 2 — Система',start:0,end:1,col:'#3fb950',done:true},
+  {name:'Гл. 2 — Система',start:0,end:1,col:'#3fb950'},
   {name:'Гл. 3 — Теория',start:0,end:2.5,col:'#d29922'},
   {name:'Гл. 4 — Методология',start:1.5,end:4,col:'#58a6ff'},
   {name:'Гл. 5 — Резултати',start:3.5,end:6,col:'#58a6ff'},
@@ -270,16 +465,30 @@ const ganttRows = [
   {name:'Предаване',start:7.5,end:8,col:'#f85149',crit:true},
 ];
 
+function chapterPctForRow(rowName){
+  const m=rowName.match(/Гл\.\s*(\d+)/);
+  if(!m) return null;
+  const num=m[1];
+  const re=new RegExp('Гл\\.\\s*'+num+'\\b');
+  const ch=DATA.chapters.find(c=>re.test(c.name));
+  return ch?pctOf(ch):null;
+}
+
 function buildGantt(){
   const wrap = document.getElementById('gantt-wrap');
-  // header months
+  const todayOffset = computeTodayOffset();
+  const curMonthIdx = Math.floor(todayOffset);
+  const inRange = curMonthIdx>=0 && curMonthIdx<8;
+
   let html = '<div class="gantt-months"><div></div>';
   MONTHS.forEach((m,i) => {
-    html += `<div class="gm${i===0?' current':''}">${m}</div>`;
+    html += `<div class="gm${inRange&&i===curMonthIdx?' current':''}">${m}</div>`;
   });
   html += '</div>';
 
   ganttRows.forEach(r => {
+    const chPct = chapterPctForRow(r.name);
+    const done = chPct!==null ? chPct>=100 : !!r.done;
     html += `<div class="gantt-row">`;
     html += `<div class="gr-name${r.crit?' critical':''}">${r.name}</div>`;
     for(let m=0;m<8;m++){
@@ -287,10 +496,14 @@ function buildGantt(){
       const os=Math.max(0,r.start-ms), oe=Math.min(1,r.end-ms);
       const w=Math.max(0,oe-os)*100;
       const l=os*100;
-      const isToday = TODAY_OFFSET>=ms && TODAY_OFFSET<me;
-      const todayL = isToday ? (TODAY_OFFSET-ms)*100 : null;
+      const isToday = inRange && todayOffset>=ms && todayOffset<me;
+      const todayL = isToday ? (todayOffset-ms)*100 : null;
       html += `<div class="g-cell">`;
-      if(w>0) html += `<div class="g-bar${r.done?' done':''}" style="left:${l}%;width:${w}%;background:${r.col}"></div>`;
+      if(w>0){
+        html += `<div class="g-bar${done?' done':''}" style="left:${l}%;width:${w}%;background:${r.col}">`;
+        if(chPct!==null) html += `<div style="position:absolute;left:0;top:0;bottom:0;width:${chPct}%;background:rgba(255,255,255,.35);border-radius:3px 0 0 3px" title="${chPct}% реален прогрес"></div>`;
+        html += `</div>`;
+      }
       if(todayL!==null) html += `<div class="g-today-line" style="left:${todayL}%"></div>`;
       html += `</div>`;
     }
@@ -299,65 +512,114 @@ function buildGantt(){
   wrap.innerHTML = html;
 }
 
-const chapters = [
-  {name:'Увод / Въведение',pct:70,status:'wip',sub:'Актуалност ✓ · Цел ✓ · Задачи ✓ · Хипотеза — · Структура —',
-   tasks:[{s:'done',t:'Актуалност, цел, задачи'},{s:'wip',t:'Хипотеза',n:'Зависи от CFD резултати'},{s:'todo',t:'Структура на труда'}]},
-  {name:'Гл. 1 — Литературен обзор',pct:60,status:'wip',sub:'63 реферирани статии ✓ · Синтез — · Библиография частично',
-   tasks:[{s:'done',t:'63 статии събрани'},{s:'wip',t:'Критичен синтез и анализ'},{s:'wip',t:'Библиография — частично'}]},
-  {name:'Гл. 2 — Описание на системата',pct:85,status:'done',sub:'Компоненти ✓ · Схема ✓ · Геометрия ✓ · Редакция —',
-   tasks:[{s:'done',t:'Компоненти, хидравлична схема'},{s:'done',t:'Изчисления буфери, CFD геометрия'},{s:'wip',t:'Финална редакция — повторения'}]},
-  {name:'Гл. 3 — Теоретичен анализ',pct:40,status:'wip',sub:'COP диаграми ✓ · Термодинамичен модел —',
-   tasks:[{s:'done',t:'COP / мощност диаграми'},{s:'wip',t:'Термодинамичен модел'},{s:'todo',t:'Симулация TRNSYS / собствена'}]},
-  {name:'Гл. 4 — Методология',pct:30,status:'wip',sub:'Топлинна схема ✓ · CFD mesh — · Измервания —',
-   tasks:[{s:'done',t:'Топлинна схема (Excel)'},{s:'done',t:'Експ. план 9 режима'},{s:'block',t:'CFD mesh',n:'Overlapping блокира'},{s:'block',t:'Измервания',n:'Чака нов сух охладител'}]},
-  {name:'CFD — ANSYS Fluent',pct:25,status:'wip',sub:'Геометрия ✓ · 14 BC ✓ · Volume Mesh — · Runs —',
-   tasks:[{s:'done',t:'Geom_clean.dsco'},{s:'done',t:'14 Boundary Conditions'},{s:'block',t:'Volume Mesh',n:'Сесия #5 → пролука 1–2mm'},{s:'todo',t:'Fluent runs 9 режима'},{s:'todo',t:'Post-processing'}]},
-  {name:'Гл. 5 — Резултати',pct:5,status:'todo',sub:'Зависи от CFD + измервания на площадка',
-   tasks:[{s:'block',t:'CFD анализ',n:'Чака Volume Mesh'},{s:'block',t:'Анализ измервания',n:'Чака сух охладител'},{s:'todo',t:'Сравнение и обсъждане'}]},
-  {name:'Изводи и препоръки',pct:0,status:'todo',sub:'Зависи от Гл. 5',
-   tasks:[{s:'todo',t:'Изводи'},{s:'todo',t:'Препоръки'}]},
-  {name:'Библиография / Приложения',pct:50,status:'wip',sub:'63 абстракта ✓ · Форматиране — · Приложения —',
-   tasks:[{s:'done',t:'63 абстракта'},{s:'wip',t:'Форматиране по стандарт'},{s:'todo',t:'Приложения'}]},
-];
-
-const statusCol={done:'#3fb950',wip:'#d29922',todo:'#4d5566',block:'#f85149'};
-const badgeCls={done:'b-done',wip:'b-wip',todo:'b-todo',block:'b-block'};
-const badgeLbl={done:'почти готово',wip:'в процес',todo:'предстои',block:'блокирано'};
-const dotCls={done:'dot-done',wip:'dot-wip',todo:'dot-todo',block:'dot-block'};
-
+// ── CHAPTERS ──────────────────────────────────────────────────────
 function buildChapters(){
   const grid = document.getElementById('chapters-grid');
-  grid.innerHTML = chapters.map((c,i) => `
-    <div class="chapter-card" id="ch-${i}" onclick="toggleChapter(${i})">
+  grid.innerHTML = DATA.chapters.map((ch,ci) => {
+    const pct=pctOf(ch), status=statusOf(ch,pct);
+    const isExp=expandedChapters.has(ci);
+    return `
+    <div class="chapter-card${isExp?' expanded':''}" id="ch-${ci}" onclick="toggleChapter(${ci})">
       <div class="ch-header">
-        <div class="ch-name">${c.name}</div>
-        <span class="badge ${badgeCls[c.status]}">${badgeLbl[c.status]}</span>
-        <div class="ch-pct" style="color:${statusCol[c.status]}">${c.pct}%</div>
+        <div class="ch-name">${ch.name}</div>
+        <span class="badge ${badgeCls[status]}">${badgeLbl[status]}</span>
+        <div class="ch-pct" style="color:${statusCol[status]}">${pct}%</div>
       </div>
-      <div class="ch-bar"><div class="ch-fill" style="width:${c.pct}%;background:${statusCol[c.status]}"></div></div>
-      <div class="ch-sub">${c.sub}</div>
+      <div class="ch-bar"><div class="ch-fill" style="width:${pct}%;background:${statusCol[status]}"></div></div>
+      <div class="ch-sub">${subLine(ch)}</div>
       <div class="ch-tasks">
-        ${c.tasks.map(t=>`<div class="task-row">
-          <div class="task-dot ${dotCls[t.s]}"></div>
-          <div><div class="task-text">${t.t}</div>${t.n?`<div class="task-note">${t.n}</div>`:''}</div>
+        ${ch.tasks.map((t,ti)=>`<div class="task-row">
+          <div class="task-dot ${dotCls[t.s]}" title="Кликни за смяна на статус" onclick="event.stopPropagation();cycleTask(${ci},${ti})"></div>
+          <div style="flex:1" onclick="event.stopPropagation();cycleTask(${ci},${ti})">
+            <div class="task-text">${t.t}</div>
+            ${t.n?`<div class="task-note">${t.n}</div>`:''}
+          </div>
+          <button class="task-del" title="Изтрий задача" onclick="event.stopPropagation();deleteTask(${ci},${ti})">✕</button>
         </div>`).join('')}
+        <div class="task-add-row" onclick="event.stopPropagation()">
+          <input class="task-add-inp" id="newTaskInp-${ci}" placeholder="+ Нова задача..." onkeydown="if(event.key==='Enter')addTask(${ci})">
+          <button class="task-add-btn" onclick="addTask(${ci})">Добави</button>
+        </div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
-function toggleChapter(i){
-  document.getElementById('ch-'+i).classList.toggle('expanded');
+function toggleChapter(ci){
+  if(expandedChapters.has(ci)) expandedChapters.delete(ci);
+  else expandedChapters.add(ci);
+  buildChapters();
 }
+window.toggleChapter=toggleChapter;
 
+function cycleTask(ci,ti){
+  const t=DATA.chapters[ci].tasks[ti];
+  t.s=TASK_CYCLE[(TASK_CYCLE.indexOf(t.s)+1)%TASK_CYCLE.length];
+  saveData(DATA);
+  renderAll();
+}
+window.cycleTask=cycleTask;
+
+function deleteTask(ci,ti){
+  DATA.chapters[ci].tasks.splice(ti,1);
+  saveData(DATA);
+  renderAll();
+}
+window.deleteTask=deleteTask;
+
+function addTask(ci){
+  const inp=document.getElementById(`newTaskInp-${ci}`);
+  const v=inp.value.trim();
+  if(!v) return;
+  DATA.chapters[ci].tasks.push({t:v,s:'todo'});
+  expandedChapters.add(ci);
+  saveData(DATA);
+  renderAll();
+}
+window.addTask=addTask;
+
+// ── ANSYS STEPS ───────────────────────────────────────────────────
+function buildAnsysSteps(){
+  const el=document.getElementById('ansys-steps');
+  const cur=DATA.ansys.currentStep;
+  el.innerHTML = DATA.ansys.steps.map((s,i)=>{
+    const num=i+1;
+    const state = num<cur?'done':num===cur?'active':'todo';
+    const numCls = state==='done'?'n-done':state==='active'?'n-active':'n-todo';
+    return `<div class="as-item ${state}" onclick="setAnsysStep(${num})" title="Кликни за да отбележиш тази стъпка като текуща">
+      <div class="as-num ${numCls}">${num}</div>
+      <div><div class="as-title">${s.title}</div><div class="as-note">${s.note}</div></div>
+    </div>`;
+  }).join('');
+}
+function setAnsysStep(n){
+  DATA.ansys.currentStep=n;
+  saveData(DATA);
+  buildAnsysSteps();
+}
+window.setAnsysStep=setAnsysStep;
+
+// ── TABS ──────────────────────────────────────────────────────────
 function showTab(id, btn){
   document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+id).classList.add('active');
   btn.classList.add('active');
 }
+window.showTab=showTab;
 
-buildGantt();
-buildChapters();
+// ── RENDER ALL ────────────────────────────────────────────────────
+function renderAll(){
+  renderHeader();
+  renderBlockers();
+  buildGantt();
+  buildChapters();
+  buildAnsysSteps();
+}
+
+renderAll();
+
+})();
 </script>
 </body>
 </html>

@@ -282,7 +282,6 @@ details[open] summary::before{content:"▼ "}
   <button class="mod-tab"    onclick="switchModule('training',this)">🏋️ Тренировки</button>
   <button class="mod-tab"    onclick="switchModule('university',this)">🎓 Университет</button>
   <button class="mod-tab"    onclick="switchModule('dissertation',this)">📚 Дисертация</button>
-  <button class="mod-tab"    onclick="switchModule('stats',this)">📊 Статистики</button>
 </div>
 
 <!-- ═══════════════════════════ MODULE CONTAINER ══ -->
@@ -353,21 +352,23 @@ details[open] summary::before{content:"▼ "}
 // ═══════════════════════════════════════════════════════════════ CONFIG ══
 
 const PORTFOLIO = {
-  "BTC-USD": {name:"Bitcoin (BTC)",          curr:"CRYPTO",inv:68.48, sh:0.00091802,  cgId:"bitcoin"},
+  "BTC-USD": {name:"Bitcoin (BTC)",          curr:"CRYPTO",inv:107.00,sh:0.00162035,  cgId:"bitcoin"},
   "ETC-USD": {name:"Ethereum Classic (ETC)", curr:"CRYPTO",inv:58.03, sh:6.72696447,  cgId:"ethereum-classic"},
   "FLR-USD": {name:"Flare (FLR)",            curr:"CRYPTO",inv:0.10,  sh:14.8080141,  cgId:"flare-networks"},
   "EXI2.DE": {name:"EXI2 ETF",              curr:"EUR",   inv:50.00, sh:0.477463713},
   "MRVL":    {name:"Marvell (MRVL)",         curr:"USD",   inv:37.04, sh:0.258598397},
-  "DFEN.DE": {name:"VanEck Defense ETF",     curr:"EUR",   inv:51.00, sh:0.891265597},
+  "DFEN.DE": {name:"VanEck Defense ETF",     curr:"EUR",   inv:49.00, sh:0.873440280},
+  "NVDA":    {name:"NVIDIA (NVDA)",          curr:"USD",   inv:74.08, sh:0.351794520},
   "ROBO":    {name:"Robo-Advisor",           curr:"EUR",   inv:23.42, sh:1.0},
 };
-const DEF_PRICES = {"EXI2.DE":104.95,"MRVL":157.20,"DFEN.DE":55.715,"ROBO":23.37};
+const DEF_PRICES = {"EXI2.DE":109.52,"MRVL":188.68,"DFEN.DE":55.03,"NVDA":203.81,"ROBO":23.37};
 const ALERTS_CFG = {
   "MRVL":    {buy:140,  warn:190,   name:"Marvell Technology", sym:"$"},
   "DFEN.DE": {buy:54,   warn:65,    name:"VanEck Defense ETF", sym:"€"},
   "BTC-USD": {buy:60000,warn:95000, name:"Bitcoin",            sym:"$"},
   "EXI2.DE": {buy:95,   warn:115,   name:"EXI2 ETF",           sym:"€"},
   "ETC-USD": {buy:6.0,  warn:12.0,  name:"Ethereum Classic",   sym:"$"},
+  "NVDA":    {buy:175,  warn:230,   name:"NVIDIA",             sym:"$"},
 };
 const TOTAL_INV = Object.values(PORTFOLIO).reduce((s,p)=>s+p.inv,0);
 
@@ -377,7 +378,7 @@ const WORKOUT_NAMES = ['Почивка','Горна половина','Кард�
 
 let cgPrices     = {};
 let eurUsd       = 1.08;
-let manualPrices = JSON.parse(localStorage.getItem('manualPrices')||'null') || {...DEF_PRICES};
+let manualPrices = {...DEF_PRICES, ...(JSON.parse(localStorage.getItem('manualPrices')||'null')||{})};
 
 // ═══════════════════════════════════════════════════════════════ CLOCK ══
 
@@ -570,7 +571,7 @@ function renderAlerts(){
 
 function renderPriceEditors(){
   let html='';
-  for(const t of ['EXI2.DE','MRVL','DFEN.DE','ROBO']){
+  for(const t of ['EXI2.DE','MRVL','NVDA','DFEN.DE','ROBO']){
     const a=PORTFOLIO[t],sym=a.curr==='USD'?'$':'€';
     html+=`<div class="pe">
       <div><div style="font-size:13px;font-weight:500">${a.name}</div><div style="font-size:11px;color:var(--muted)">${t}</div></div>
@@ -771,7 +772,7 @@ function renderProjects(){
       desc:'Тренировки по план · Хранене · Хидратация · Сън',
       meta:'Тренировка 5 дни/седмица · Вода 2 л/ден'},
     {name:'Портфолио Трекер',           status:'Активен',  sCls:'bg', pct:70,  clr:'green',
-      desc:'7 позиции: BTC, ETC, FLR, EXI2.DE, MRVL, DFEN.DE, ROBO',
+      desc:'8 позиции: BTC, ETC, FLR, EXI2.DE, MRVL, NVDA, DFEN.DE, ROBO',
       meta:`Вложено: €${TOTAL_INV.toFixed(2)} · Крипто + ETF + Акции`},
     {name:'Интерактивен Дашборд',       status:'Live',     sCls:'bg', pct:100, clr:'blue',
       desc:'GitHub Pages · Модули: Диета · Тренировки · Дисертация · Трекер',

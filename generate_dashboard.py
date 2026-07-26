@@ -12,16 +12,17 @@ from datetime import datetime, timezone
 
 # ── Portfolio (mirrors asparuh_invest_bot_v4.py) ──────────────────────────────
 PORTFOLIO = {
-    "BTC-USD": {"name": "Bitcoin (BTC)",          "currency": "CRYPTO", "invested": 68.48,  "shares": 0.00091802,    "cgId": "bitcoin"},
+    "BTC-USD": {"name": "Bitcoin (BTC)",          "currency": "CRYPTO", "invested": 107.00, "shares": 0.00162035,    "cgId": "bitcoin"},
     "ETC-USD": {"name": "Ethereum Classic (ETC)", "currency": "CRYPTO", "invested": 58.03,  "shares": 6.72696447,    "cgId": "ethereum-classic"},
     "FLR-USD": {"name": "Flare (FLR)",            "currency": "CRYPTO", "invested": 0.10,   "shares": 14.8080141,    "cgId": "flare-networks"},
     "EXI2.DE": {"name": "EXI2 ETF",              "currency": "EUR",    "invested": 50.00,  "shares": 0.477463713},
     "MRVL":    {"name": "Marvell (MRVL)",         "currency": "USD",    "invested": 37.04,  "shares": 0.258598397},
-    "DFEN.DE": {"name": "VanEck Defense ETF",     "currency": "EUR",    "invested": 51.00,  "shares": 0.891265597},
+    "DFEN.DE": {"name": "VanEck Defense ETF",     "currency": "EUR",    "invested": 49.00,  "shares": 0.873440280},
+    "NVDA":    {"name": "NVIDIA (NVDA)",          "currency": "USD",    "invested": 74.08,  "shares": 0.351794520},
     "ROBO":    {"name": "Robo-Advisor",           "currency": "EUR",    "invested": 23.42,  "shares": 1.0},
 }
 
-DEFAULT_PRICES = {"EXI2.DE": 104.95, "MRVL": 157.20, "DFEN.DE": 55.715, "ROBO": 23.37}
+DEFAULT_PRICES = {"EXI2.DE": 109.52, "MRVL": 188.68, "DFEN.DE": 55.03, "NVDA": 203.81, "ROBO": 23.37}
 TOTAL_INVESTED = sum(a["invested"] for a in PORTFOLIO.values())
 DATA_FILE      = os.path.join(os.path.dirname(__file__), "docs", "data.json")
 MAX_HISTORY    = 30

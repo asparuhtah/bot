@@ -33,8 +33,8 @@ PORTFOLIO = {
     "BTC-USD": {
         "name": "Bitcoin (BTC)",
         "currency": "CRYPTO",
-        "invested_eur": 68.48,
-        "shares": 0.00091802,
+        "invested_eur": 107.00,
+        "shares": 0.00162035,
     },
     "ETC-USD": {
         "name": "Ethereum Classic (ETC)",
@@ -63,8 +63,14 @@ PORTFOLIO = {
     "DFEN.DE": {
         "name": "VanEck Defense ETF",
         "currency": "EUR",
-        "invested_eur": 51.00,
-        "shares": 0.891265597,
+        "invested_eur": 49.00,
+        "shares": 0.873440280,
+    },
+    "NVDA": {
+        "name": "NVIDIA (NVDA)",
+        "currency": "USD",
+        "invested_eur": 74.08,
+        "shares": 0.351794520,
     },
     "ROBO": {
         "name": "Robo-Advisor",
@@ -84,9 +90,10 @@ COINGECKO_MAP = {
 
 # ─── РЪЧНИ ЦЕНИ (акции/ETF) — обновяват се с /setprice ───────────────────────
 MANUAL_PRICES = {
-    "EXI2.DE": 104.95,
-    "MRVL":    157.20,
-    "DFEN.DE": 55.715,
+    "EXI2.DE": 109.52,
+    "MRVL":    188.68,
+    "DFEN.DE": 55.03,
+    "NVDA":    203.81,
     "ROBO":    23.37,
 }
 
@@ -97,6 +104,7 @@ ALERTS = {
     "BTC-USD": {"buy": 60000, "warn": 95000, "name": "Bitcoin",            "curr": "$"},
     "EXI2.DE": {"buy": 95,    "warn": 115,   "name": "EXI2 ETF",           "curr": "€"},
     "ETC-USD": {"buy": 6.0,   "warn": 12.0,  "name": "Ethereum Classic",   "curr": "$"},
+    "NVDA":    {"buy": 175,   "warn": 230,   "name": "NVIDIA",             "curr": "$"},
 }
 
 _alert_state    = {}
@@ -198,6 +206,10 @@ def calc_portfolio() -> tuple[list, dict, float]:
             print(f"⚠️ Няма цена за {ticker}")
             continue
 
+        # Ръчните цени за USD-акции (MRVL, NVDA) са в USD → конвертирай в EUR
+        if currency == "USD":
+            price_eur = round(price_eur / eurusd, 6)
+
         current_eur = round(shares * price_eur, 2)
         pnl         = round(current_eur - invested, 2)
         pnl_pct     = round(pnl / invested * 100, 2) if invested else 0
@@ -237,7 +249,8 @@ CSV_COLUMNS = [
     "BTC цена ($)", "ETC цена ($)",
     "EXI2 цена (€)", "MRVL цена ($)", "DFEN цена (€)",
     "EUR/USD",
-    "Дневна промяна (€)", "Дневна промяна (%)"
+    "Дневна промяна (€)", "Дневна промяна (%)",
+    "NVDA (€)", "NVDA цена ($)"
 ]
 
 _prev_total = None
@@ -256,9 +269,10 @@ def log_to_csv(results: list, eurusd: float):
 
     btc  = v("BTC-USD"); etc  = v("ETC-USD"); flr  = v("FLR-USD")
     exi2 = v("EXI2.DE"); mrvl = v("MRVL");   dfen = v("DFEN.DE"); robo = v("ROBO")
+    nvda = v("NVDA")
 
     crypto_total = round(btc + etc + flr, 2)
-    invest_total = round(exi2 + mrvl + dfen + robo, 2)
+    invest_total = round(exi2 + mrvl + dfen + robo + nvda, 2)
     grand_total  = round(crypto_total + invest_total, 2)
 
     daily_change     = round(grand_total - _prev_total, 2) if _prev_total else 0
@@ -273,6 +287,7 @@ def log_to_csv(results: list, eurusd: float):
         p("BTC-USD"), p("ETC-USD"),
         p("EXI2.DE"), p("MRVL"), p("DFEN.DE"),
         eurusd, daily_change, daily_change_pct,
+        nvda, p("NVDA"),
     ]
 
     with open(CSV_FILE, "a", newline="", encoding="utf-8-sig") as f:
@@ -416,8 +431,8 @@ def cmd_history():
         last = day_rows[-1]  # последният запис за деня
         try:
             total   = float(last[11]) if last[11] else 0
-            crypto  = float(last[8])  if last[8]  else 0
-            invest  = float(last[9])  if last[9]  else 0
+            crypto  = float(last[9])  if last[9]  else 0
+            invest  = float(last[10]) if last[10] else 0
             change  = float(last[18]) if last[18] else 0
             chg_pct = float(last[19]) if last[19] else 0
             arrow   = "🟢" if change >= 0 else "🔴"
@@ -530,9 +545,10 @@ def daily_snapshot():
 
     btc  = v("BTC-USD"); etc  = v("ETC-USD"); flr  = v("FLR-USD")
     exi2 = v("EXI2.DE"); mrvl = v("MRVL");   dfen = v("DFEN.DE"); robo = v("ROBO")
+    nvda = v("NVDA")
 
     crypto_total = round(btc + etc + flr, 2)
-    invest_total = round(exi2 + mrvl + dfen + robo, 2)
+    invest_total = round(exi2 + mrvl + dfen + robo + nvda, 2)
     grand_total  = round(crypto_total + invest_total, 2)
     total_inv    = sum(d["invested_eur"] for d in PORTFOLIO.values())
     total_pnl    = round(grand_total - total_inv, 2)
@@ -544,7 +560,7 @@ def daily_snapshot():
     msg += "─" * 22 + "\n\n"
     msg += f"🪙 BTC: €{btc:.2f}  ETC: €{etc:.2f}  FLR: €{flr:.3f}\n"
     msg += f"   <b>Крипто: €{crypto_total:.2f}</b>\n\n"
-    msg += f"📈 EXI2: €{exi2:.2f}  MRVL: €{mrvl:.2f}\n"
+    msg += f"📈 EXI2: €{exi2:.2f}  MRVL: €{mrvl:.2f}  NVDA: €{nvda:.2f}\n"
     msg += f"   DFEN: €{dfen:.2f}  Robo: €{robo:.2f}\n"
     msg += f"   <b>Инвестиции: €{invest_total:.2f}</b>\n\n"
     msg += f"{'─'*22}\n"
