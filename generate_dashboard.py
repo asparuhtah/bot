@@ -57,6 +57,41 @@ def get_price_eur(ticker, cg, eur_usd, manual):
     return None
 
 
+def fetch_news():
+    """Новини за портфейлните активи: Yahoo Finance RSS (акции) + CoinDesk (крипто).
+    Връща списък [{title, link, date, source, tickers}] — най-новите 14."""
+    import xml.etree.ElementTree as ET
+    from email.utils import parsedate_to_datetime
+
+    feeds = [
+        ("Yahoo Finance", ["MRVL", "NVDA"],
+         "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MRVL,NVDA&region=US&lang=en-US"),
+        ("CoinDesk", ["BTC-USD", "ETC-USD"],
+         "https://www.coindesk.com/arc/outboundfeeds/rss/"),
+    ]
+    items = []
+    for source, tickers, url in feeds:
+        try:
+            r = requests.get(url, timeout=12, headers={"User-Agent": "Mozilla/5.0"})
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+            for it in root.iter("item"):
+                title = (it.findtext("title") or "").strip()
+                link  = (it.findtext("link") or "").strip()
+                pub   = (it.findtext("pubDate") or "").strip()
+                try:
+                    date = parsedate_to_datetime(pub).strftime("%Y-%m-%d")
+                except Exception:
+                    date = pub[:16]
+                if title and link:
+                    items.append({"title": title, "link": link, "date": date,
+                                  "source": source, "tickers": tickers})
+        except Exception as e:
+            print(f"  news WARNING ({source}): {e}")
+    items.sort(key=lambda x: x.get("date", ""), reverse=True)
+    return items[:14]
+
+
 def load_existing():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -114,6 +149,7 @@ def main():
             "pnlPct":        round(pnl_pct, 2),
         },
         "history": history,
+        "news":    fetch_news(),
     }
 
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)

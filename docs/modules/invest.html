@@ -1,0 +1,504 @@
+<!-- invest.html — Модул Инвестиции v1 -->
+<style>
+.iw{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e6edf3}
+.iw .sec{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:13px;margin-bottom:12px}
+.iw .sec-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px}
+.iw .sec-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
+.iw .pill{font-size:11px;padding:2px 9px;border-radius:9px;font-weight:600}
+.iw .pg{background:rgba(63,185,80,.15);color:#3fb950}
+.iw .py{background:rgba(210,153,34,.15);color:#d29922}
+.iw .pr{background:rgba(248,81,73,.15);color:#f85149}
+.iw .pb{background:rgba(88,166,255,.15);color:#58a6ff}
+
+/* Summary cards */
+.iw .sum-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.iw .sc{flex:1;min-width:130px;background:#1c2128;border:1px solid #30363d;border-radius:8px;padding:9px 12px}
+.iw .sc-lbl{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
+.iw .sc-val{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums}
+.iw .sc-sub{font-size:10px;color:#8b949e;margin-top:1px}
+
+/* Tables */
+.iw table{width:100%;border-collapse:collapse;font-size:12px}
+.iw th{color:#8b949e;font-size:10px;text-transform:uppercase;letter-spacing:.3px;text-align:right;padding:4px 6px;border-bottom:1px solid #30363d;white-space:nowrap}
+.iw th:first-child,.iw td:first-child{text-align:left}
+.iw td{padding:5px 6px;text-align:right;border-bottom:1px solid rgba(48,54,61,.4);font-variant-numeric:tabular-nums;white-space:nowrap}
+.iw tr:last-child td{border-bottom:none}
+.iw .g{color:#3fb950}.iw .r{color:#f85149}.iw .y{color:#d29922}.iw .m{color:#8b949e}
+.iw .tname{font-weight:600}
+.iw .tsub{font-size:10px;color:#8b949e}
+
+/* Forms */
+.iw input,.iw select,.iw textarea{background:#0d1117;border:1px solid #30363d;border-radius:5px;color:#e6edf3;padding:5px 8px;font-size:12px;font-family:inherit}
+.iw input:focus,.iw select:focus,.iw textarea:focus{outline:none;border-color:#58a6ff}
+.iw .btn{font-size:12px;padding:5px 12px;border:1px solid #30363d;border-radius:6px;background:#1c2128;color:#e6edf3;cursor:pointer;font-family:inherit}
+.iw .btn:hover{border-color:#58a6ff;color:#58a6ff}
+.iw .btn.primary{border-color:#238636;background:#238636;color:#fff}
+.iw .btn.primary:hover{background:#2ea043}
+.iw .btn.mini{font-size:10px;padding:2px 7px}
+.iw .tx-form{display:flex;gap:6px;flex-wrap:wrap;align-items:flex-end;margin-top:10px;padding-top:10px;border-top:1px dashed #30363d}
+.iw .tx-form label{display:flex;flex-direction:column;gap:3px;font-size:10px;color:#8b949e}
+.iw .tx-form input,.iw .tx-form select{width:105px}
+
+/* Layout */
+.iw .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:860px){.iw .g2{grid-template-columns:1fr}}
+
+/* Alerts editor */
+.iw .al-row{display:grid;grid-template-columns:1fr 84px 84px 110px;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid rgba(48,54,61,.4)}
+.iw .al-row:last-child{border-bottom:none}
+.iw .al-row input{width:100%}
+.iw .al-hdr{font-size:10px;color:#8b949e;text-transform:uppercase}
+.iw .al-status{font-size:11px;font-weight:600;text-align:right}
+
+/* News */
+.iw .news-item{padding:7px 0;border-bottom:1px solid rgba(48,54,61,.4)}
+.iw .news-item:last-child{border-bottom:none}
+.iw .news-item a{color:#e6edf3;text-decoration:none;font-size:12px;line-height:1.4}
+.iw .news-item a:hover{color:#58a6ff}
+.iw .news-meta{font-size:10px;color:#8b949e;margin-top:2px}
+.iw .opp{background:#0d1a10;border:1px solid #1e4620;border-radius:7px;padding:9px 12px;margin-bottom:7px;font-size:12px}
+.iw .opp.warn{background:#1a1200;border-color:#5a4200}
+
+/* Strategy */
+.iw .ms-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid rgba(48,54,61,.4)}
+.iw .ms-row:last-child{border-bottom:none}
+.iw .ms-check{font-size:15px;flex-shrink:0;cursor:pointer}
+.iw .ms-body{flex:1}
+.iw .ms-name{font-size:12px;font-weight:600}
+.iw .ms-desc{font-size:10px;color:#8b949e}
+.iw .ms-track{height:5px;background:#21262d;border-radius:3px;margin-top:4px;overflow:hidden}
+.iw .ms-fill{height:100%;border-radius:3px;background:#3fb950;transition:width .4s}
+.iw .strat-text{width:100%;min-height:140px;line-height:1.55;font-size:12px;resize:vertical}
+.iw .note{font-size:10px;color:#8b949e;margin-top:6px}
+</style>
+
+<div class="iw">
+
+<!-- ═══ ОБЗОР ═══ -->
+<div class="sum-row">
+  <div class="sc"><div class="sc-lbl">Вложено</div><div class="sc-val" id="iv-inv">—</div><div class="sc-sub">общо EUR</div></div>
+  <div class="sc"><div class="sc-lbl">Стойност сега</div><div class="sc-val" id="iv-cur">—</div><div class="sc-sub" id="iv-upd">зарежда…</div></div>
+  <div class="sc"><div class="sc-lbl">P&L</div><div class="sc-val" id="iv-pnl">—</div><div class="sc-sub" id="iv-pct">—</div></div>
+  <div class="sc"><div class="sc-lbl">EUR/USD</div><div class="sc-val" id="iv-fx">—</div><div class="sc-sub">Kraken / data.json</div></div>
+</div>
+
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">Портфейл — осреднена цена срещу настояща</span>
+    <button class="btn mini" onclick="ivLoadPrices()">↻ Обнови цени</button>
+  </div>
+  <div style="overflow-x:auto">
+  <table id="iv-table">
+    <thead><tr><th>Актив</th><th>Кол-во</th><th>Ср. покупна</th><th>Сега</th><th>Δ цена</th><th>Вложено</th><th>Стойност</th><th>P&L</th><th>Дял</th></tr></thead>
+    <tbody id="iv-tbody"><tr><td colspan="9" class="m">Зарежда…</td></tr></tbody>
+  </table>
+  </div>
+</div>
+
+<div class="g2">
+<!-- ═══ ХРОНОЛОГИЯ ═══ -->
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">Хронология на покупките</span>
+    <div style="display:flex;gap:6px">
+      <button class="btn mini" onclick="ivExportTx()">⬇ Експорт</button>
+      <button class="btn mini" onclick="ivImportTx()">⬆ Импорт</button>
+    </div>
+  </div>
+  <div style="max-height:260px;overflow-y:auto">
+  <table>
+    <thead><tr><th>Дата</th><th>Актив</th><th></th><th>Кол-во</th><th>Цена</th><th>Сума €</th><th></th></tr></thead>
+    <tbody id="iv-txbody"></tbody>
+  </table>
+  </div>
+  <div class="tx-form">
+    <label>Дата<input type="date" id="tx-date"></label>
+    <label>Актив<select id="tx-ticker"></select></label>
+    <label>Тип<select id="tx-side"><option value="buy">Покупка</option><option value="sell">Продажба</option></select></label>
+    <label>Кол-во<input type="number" id="tx-qty" step="any" placeholder="0.001"></label>
+    <label>Сума EUR<input type="number" id="tx-eur" step="0.01" placeholder="50.00"></label>
+    <button class="btn primary" onclick="ivAddTx()">+ Добави</button>
+  </div>
+  <div class="note">Цената на сделката се смята от сума/количество. Записва се локално (localStorage) — ползвай Експорт за резервно копие.</div>
+</div>
+
+<!-- ═══ АЛЕРТИ ═══ -->
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">Ценови алерти</span>
+    <div style="display:flex;gap:6px">
+      <span class="pill pb" id="al-count">—</span>
+      <button class="btn mini" onclick="ivResetAlerts()">↺ По подразбиране</button>
+    </div>
+  </div>
+  <div class="al-row al-hdr"><span>Актив</span><span>Купи ≤</span><span>Внимание ≥</span><span>Статус</span></div>
+  <div id="iv-albody"></div>
+  <div class="note">Промените се записват автоматично (localStorage) и важат за секцията „Сигнали“ по-долу. Telegram ботът има свои нива — синхронизирай ги с /alerts при нужда.</div>
+</div>
+</div>
+
+<!-- ═══ СИГНАЛИ + НОВИНИ ═══ -->
+<div class="g2">
+<div class="sec">
+  <div class="sec-hdr"><span class="sec-title">Сигнали — възможни сделки</span><span class="pill py" id="opp-count">—</span></div>
+  <div id="iv-opps"><div class="m" style="font-size:12px">Зарежда…</div></div>
+</div>
+
+<div class="sec">
+  <div class="sec-hdr"><span class="sec-title">Новини (портфейлни активи)</span><span class="pill pb" id="news-src">data.json</span></div>
+  <div id="iv-news" style="max-height:300px;overflow-y:auto"><div class="m" style="font-size:12px">Зарежда…</div></div>
+</div>
+</div>
+
+<!-- ═══ СТРАТЕГИЯ ═══ -->
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">Дългосрочна стратегия</span>
+    <button class="btn mini" id="strat-btn" onclick="ivToggleStrat()">✎ Редактирай</button>
+  </div>
+  <div id="strat-view" style="font-size:12px;line-height:1.6;white-space:pre-wrap"></div>
+  <textarea class="strat-text" id="strat-edit" style="display:none"></textarea>
+</div>
+
+<div class="sec">
+  <div class="sec-hdr"><span class="sec-title">Майлстони</span><span class="pill pg" id="ms-count">—</span></div>
+  <div id="iv-ms"></div>
+  <div class="note">✓/✗ се превключва с клик. Прогресът на сумите се смята автоматично от портфейла.</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+// ═══ CONFIG ═══
+const IV_PORTFOLIO = {
+  "BTC-USD": {name:"Bitcoin",           curr:"CRYPTO", inv:107.00, sh:0.00162035,   cgId:"bitcoin"},
+  "ETC-USD": {name:"Ethereum Classic",  curr:"CRYPTO", inv:58.03,  sh:6.72696447,   cgId:"ethereum-classic"},
+  "FLR-USD": {name:"Flare",             curr:"CRYPTO", inv:0.10,   sh:14.8080141,   cgId:"flare-networks"},
+  "EXI2.DE": {name:"EXI2 ETF",          curr:"EUR",    inv:50.00,  sh:0.477463713},
+  "MRVL":    {name:"Marvell",           curr:"USD",    inv:37.04,  sh:0.258598397},
+  "DFEN.DE": {name:"VanEck Defense",    curr:"EUR",    inv:49.00,  sh:0.873440280},
+  "NVDA":    {name:"NVIDIA",            curr:"USD",    inv:74.08,  sh:0.351794520},
+  "ROBO":    {name:"Robo-Advisor",      curr:"EUR",    inv:23.42,  sh:1.0}
+};
+const IV_DEFAULT_ALERTS = {
+  "MRVL":    {buy:140,   warn:190},
+  "DFEN.DE": {buy:54,    warn:65},
+  "BTC-USD": {buy:60000, warn:95000},
+  "EXI2.DE": {buy:95,    warn:115},
+  "ETC-USD": {buy:6.0,   warn:12.0},
+  "NVDA":    {buy:175,   warn:230}
+};
+const IV_DEFAULT_STRATEGY =
+`ЦЕЛ: Дългосрочно натрупване с малки регулярни суми (DCA), хоризонт 5+ години. Не гоня бързи печалби — купувам качествени активи на разумни нива и ги държа.
+
+РАЗПРЕДЕЛЕНИЕ (цел): до 40% крипто (BTC ядро, ETC/FLR сателити) · 40% технологични акции и ETF (NVDA, MRVL, EXI2) · 20% отбранителен сектор (DFEN) и Robo-Advisor като буфер.
+
+ПРАВИЛА:
+1. Купувам само на или под „Купи“ нивата от алертите — без импулсивни покупки.
+2. Не продавам на загуба заради паника; преглеждам тезата, не цената.
+3. Месечен преглед (1-во число): P&L, тегла на активите, новини по позициите.
+4. Ребаланс ако някой актив надхвърли 50% от портфейла.
+5. Нова позиция — само след като запиша тезата ѝ в едно изречение тук.
+
+ИЗХОД: частична продажба (25–50%) при +100% на отделен актив; преоценка на цялата стратегия при достигане на €2000 обща стойност.`;
+const IV_DEFAULT_MS = [
+  {id:"m1", name:"€500 общо вложени",        type:"invested", target:500},
+  {id:"m2", name:"€500 стойност на портфейла", type:"value",  target:500},
+  {id:"m3", name:"€1000 стойност на портфейла",type:"value",  target:1000},
+  {id:"m4", name:"Портфейлът на плюс (P&L > 0)", type:"pnl",  target:0},
+  {id:"m5", name:"Пълна хронология на сделките", type:"manual"},
+  {id:"m6", name:"Първи месечен преглед по правилата", type:"manual"},
+  {id:"m7", name:"Първи ребаланс", type:"manual"},
+  {id:"m8", name:"12 месеца непрекъсната история", type:"manual"}
+];
+
+// ═══ STATE ═══
+const LS = {tx:"inv-tx-v1", al:"inv-alerts-v1", st:"inv-strategy-v1", ms:"inv-ms-v1"};
+let prices = {};   // ticker -> price EUR
+let disp   = {};   // ticker -> display price (native currency)
+let eurUsd = 1.08;
+let dataJson = null;
+
+const $ = id => document.getElementById(id);
+const fmt = (n,d=2) => n==null?"—":n.toLocaleString("bg-BG",{minimumFractionDigits:d,maximumFractionDigits:d});
+const cls = n => n>=0?"g":"r";
+const sign = n => (n>=0?"+":"")+fmt(n);
+
+function lsGet(k,def){ try{const v=JSON.parse(localStorage.getItem(k)); return v==null?def:v;}catch(e){return def;} }
+function lsSet(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
+
+// Seed transactions from aggregates on first run
+function ivTx(){
+  let tx = lsGet(LS.tx, null);
+  if(!tx){
+    tx = Object.entries(IV_PORTFOLIO).map(([t,a])=>({
+      date:"2026-01-01", ticker:t, side:"buy", qty:a.sh, eur:a.inv, seed:true
+    }));
+    lsSet(LS.tx, tx);
+  }
+  return tx;
+}
+
+// Positions derived from transactions (avg price, qty, invested)
+function ivPositions(){
+  const pos = {};
+  for(const t of Object.keys(IV_PORTFOLIO)) pos[t] = {qty:0, invested:0};
+  for(const x of ivTx()){
+    if(!pos[x.ticker]) pos[x.ticker] = {qty:0, invested:0};
+    const p = pos[x.ticker];
+    if(x.side==="buy"){ p.qty += +x.qty; p.invested += +x.eur; }
+    else {
+      const avg = p.qty>0 ? p.invested/p.qty : 0;
+      p.invested -= avg * +x.qty;
+      p.qty -= +x.qty;
+    }
+  }
+  for(const t in pos){ const p=pos[t]; p.avg = p.qty>0 ? p.invested/p.qty : null; }
+  return pos;
+}
+
+// ═══ PRICES ═══
+async function ivLoadPrices(){
+  $("iv-upd").textContent = "зарежда…";
+  // 1) data.json — base (stocks & fallback) + news + fx
+  try{
+    dataJson = await (await fetch("data.json?t="+Date.now())).json();
+    eurUsd = dataJson.eurUsd || eurUsd;
+    Object.assign(prices, dataJson.prices||{});
+  }catch(e){}
+  // 2) CoinGecko live за крипто
+  try{
+    const ids = Object.values(IV_PORTFOLIO).filter(a=>a.cgId).map(a=>a.cgId).join(",");
+    const cg = await (await fetch("https://api.coingecko.com/api/v3/simple/price?ids="+ids+"&vs_currencies=eur,usd")).json();
+    for(const [t,a] of Object.entries(IV_PORTFOLIO)){
+      if(a.cgId && cg[a.cgId]){ prices[t]=cg[a.cgId].eur; disp[t]=cg[a.cgId].usd; }
+    }
+  }catch(e){}
+  // display prices за акции: data.json държи EUR-конвертирани; покажи native
+  for(const [t,a] of Object.entries(IV_PORTFOLIO)){
+    if(!a.cgId && prices[t]!=null){
+      disp[t] = a.curr==="USD" ? prices[t]*eurUsd : prices[t];
+    }
+  }
+  ivRenderAll();
+}
+
+// ═══ RENDER: обзор + таблица ═══
+function ivRenderTable(){
+  const pos = ivPositions();
+  let totInv=0, totCur=0;
+  const rows = [];
+  for(const [t,a] of Object.entries(IV_PORTFOLIO)){
+    const p = pos[t] || {qty:a.sh, invested:a.inv, avg:a.inv/a.sh};
+    const priceEur = prices[t];
+    const cur = priceEur!=null ? p.qty*priceEur : null;
+    totInv += p.invested; if(cur!=null) totCur += cur;
+    rows.push({t, a, p, priceEur, cur});
+  }
+  const sym = a => a.curr==="EUR"?"€":"$";
+  $("iv-tbody").innerHTML = rows.map(({t,a,p,priceEur,cur})=>{
+    const avgNative = p.avg!=null ? (a.curr==="USD"? p.avg*eurUsd : p.avg) : null;
+    const dNative   = disp[t];
+    const dPct = (avgNative && dNative) ? (dNative-avgNative)/avgNative*100 : null;
+    const pnl = cur!=null ? cur-p.invested : null;
+    const pnlPct = pnl!=null && p.invested ? pnl/p.invested*100 : null;
+    const w = cur!=null && totCur ? cur/totCur*100 : null;
+    return `<tr>
+      <td><span class="tname">${a.name}</span><br><span class="tsub">${t}</span></td>
+      <td>${fmt(p.qty, p.qty<1?6:3)}</td>
+      <td>${avgNative!=null? sym(a)+fmt(avgNative, avgNative<1?4:2) : "—"}</td>
+      <td>${dNative!=null? sym(a)+fmt(dNative, dNative<1?4:2) : "—"}</td>
+      <td class="${dPct!=null?cls(dPct):'m'}">${dPct!=null? sign(dPct)+"%" : "—"}</td>
+      <td>€${fmt(p.invested)}</td>
+      <td>${cur!=null?"€"+fmt(cur):"—"}</td>
+      <td class="${pnl!=null?cls(pnl):'m'}">${pnl!=null? sign(pnl)+" ("+sign(pnlPct)+"%)" : "—"}</td>
+      <td class="m">${w!=null? fmt(w,1)+"%" : "—"}</td>
+    </tr>`;
+  }).join("");
+  const pnl = totCur-totInv, pct = totInv? pnl/totInv*100 : 0;
+  $("iv-inv").textContent = "€"+fmt(totInv);
+  $("iv-cur").textContent = "€"+fmt(totCur);
+  $("iv-pnl").textContent = sign(pnl)+" €"; $("iv-pnl").className = "sc-val "+cls(pnl);
+  $("iv-pct").textContent = sign(pct)+"%"; $("iv-pct").className = "sc-sub "+cls(pct);
+  $("iv-fx").textContent = fmt(eurUsd,4);
+  $("iv-upd").textContent = dataJson? "data.json: "+ (dataJson.lastUpdated||"").slice(0,10) : "live";
+  return {totInv, totCur, pnl};
+}
+
+// ═══ RENDER: хронология ═══
+function ivRenderTx(){
+  const tx = ivTx().slice().sort((a,b)=> (a.date<b.date?1:-1));
+  $("iv-txbody").innerHTML = tx.length? tx.map((x,i)=>{
+    const unit = +x.qty ? +x.eur/+x.qty : 0;
+    const a = IV_PORTFOLIO[x.ticker]||{name:x.ticker};
+    return `<tr>
+      <td class="m">${x.date}${x.seed?' <span class="tsub">(нач.)</span>':''}</td>
+      <td class="tname">${x.ticker}</td>
+      <td class="${x.side==='buy'?'g':'r'}">${x.side==='buy'?'▲ купи':'▼ продай'}</td>
+      <td>${fmt(+x.qty, +x.qty<1?6:3)}</td>
+      <td class="m">€${fmt(unit, unit<1?4:2)}</td>
+      <td>€${fmt(+x.eur)}</td>
+      <td><button class="btn mini" onclick="ivDelTx(${ivTx().indexOf(x)})">✕</button></td>
+    </tr>`;
+  }).join("") : '<tr><td colspan="7" class="m">Няма сделки</td></tr>';
+  // ticker dropdown
+  $("tx-ticker").innerHTML = Object.keys(IV_PORTFOLIO).map(t=>`<option>${t}</option>`).join("");
+  if(!$("tx-date").value) $("tx-date").value = new Date().toISOString().slice(0,10);
+}
+window.ivAddTx = function(){
+  const x = {date:$("tx-date").value, ticker:$("tx-ticker").value, side:$("tx-side").value,
+             qty:+$("tx-qty").value, eur:+$("tx-eur").value};
+  if(!x.date || !x.qty || !x.eur){ alert("Попълни дата, количество и сума."); return; }
+  const tx = ivTx(); tx.push(x); lsSet(LS.tx, tx);
+  $("tx-qty").value=""; $("tx-eur").value="";
+  ivRenderAll();
+};
+window.ivDelTx = function(i){
+  const tx = ivTx();
+  if(!confirm("Изтриване на сделката "+tx[i].ticker+" от "+tx[i].date+"?")) return;
+  tx.splice(i,1); lsSet(LS.tx, tx); ivRenderAll();
+};
+window.ivExportTx = function(){
+  const blob = new Blob([JSON.stringify({tx:ivTx(), alerts:lsGet(LS.al,IV_DEFAULT_ALERTS), strategy:lsGet(LS.st,IV_DEFAULT_STRATEGY), ms:lsGet(LS.ms,{})},null,2)],{type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "invest-backup-"+new Date().toISOString().slice(0,10)+".json"; a.click();
+};
+window.ivImportTx = function(){
+  const inp = document.createElement("input"); inp.type="file"; inp.accept=".json";
+  inp.onchange = e => {
+    const f = e.target.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = () => { try{
+      const d = JSON.parse(r.result);
+      if(d.tx) lsSet(LS.tx, d.tx);
+      if(d.alerts) lsSet(LS.al, d.alerts);
+      if(d.strategy) lsSet(LS.st, d.strategy);
+      if(d.ms) lsSet(LS.ms, d.ms);
+      ivRenderAll();
+    }catch(err){ alert("Невалиден файл: "+err.message); } };
+    r.readAsText(f);
+  };
+  inp.click();
+};
+
+// ═══ RENDER: алерти ═══
+function ivAlerts(){ return lsGet(LS.al, IV_DEFAULT_ALERTS); }
+function ivRenderAlerts(){
+  const al = ivAlerts();
+  $("al-count").textContent = Object.keys(al).length + " активни";
+  $("iv-albody").innerHTML = Object.entries(al).map(([t,a])=>{
+    const price = disp[t];
+    let st = '<span class="m">няма цена</span>';
+    if(price!=null){
+      if(price<=a.buy) st = '<span class="g">🟢 КУПИ</span>';
+      else if(price>=a.warn) st = '<span class="y">🟡 ВНИМАНИЕ</span>';
+      else st = `<span class="m">${fmt((price-a.buy)/a.buy*100,1)}% до купи</span>`;
+    }
+    return `<div class="al-row">
+      <span class="tname" style="font-size:12px">${(IV_PORTFOLIO[t]||{}).name||t}<br><span class="tsub">${t}</span></span>
+      <input type="number" step="any" value="${a.buy}" onchange="ivSetAlert('${t}','buy',this.value)">
+      <input type="number" step="any" value="${a.warn}" onchange="ivSetAlert('${t}','warn',this.value)">
+      <span class="al-status">${st}</span>
+    </div>`;
+  }).join("");
+}
+window.ivSetAlert = function(t,k,v){
+  const al = ivAlerts(); al[t][k] = +v; lsSet(LS.al, al); ivRenderAlerts(); ivRenderOpps();
+};
+window.ivResetAlerts = function(){
+  if(confirm("Връщане на алертите по подразбиране?")){ lsSet(LS.al, IV_DEFAULT_ALERTS); ivRenderAlerts(); ivRenderOpps(); }
+};
+
+// ═══ RENDER: сигнали ═══
+function ivRenderOpps(){
+  const al = ivAlerts();
+  const opps = [];
+  for(const [t,a] of Object.entries(al)){
+    const price = disp[t]; if(price==null) continue;
+    const name = (IV_PORTFOLIO[t]||{}).name||t;
+    const c = (IV_PORTFOLIO[t]||{}).curr==="EUR"?"€":"$";
+    if(price<=a.buy)
+      opps.push(`<div class="opp">🟢 <b>${name}</b> е на ${c}${fmt(price,price<1?4:2)} — на/под „купи“ нивото ${c}${fmt(a.buy,0)}. Прегледай новините и P&L преди решение.</div>`);
+    else if(price>=a.warn)
+      opps.push(`<div class="opp warn">🟡 <b>${name}</b> е на ${c}${fmt(price,price<1?4:2)} — над „внимание“ ${c}${fmt(a.warn,0)}. Възможен частичен изход или вдигане на нивата.</div>`);
+    else if((price-a.buy)/a.buy < 0.05)
+      opps.push(`<div class="opp warn">👀 <b>${name}</b> е на ${fmt((price-a.buy)/a.buy*100,1)}% от „купи“ нивото — наблюдавай.</div>`);
+  }
+  $("opp-count").textContent = opps.length + " сигнала";
+  $("iv-opps").innerHTML = opps.length? opps.join("") : '<div class="m" style="font-size:12px">Няма активни сигнали — всичко е в неутралната зона.</div>';
+}
+
+// ═══ RENDER: новини ═══
+function ivRenderNews(){
+  const news = (dataJson && dataJson.news) || [];
+  if(!news.length){
+    $("iv-news").innerHTML = '<div class="m" style="font-size:12px">Няма новини в data.json — секцията се пълни от дневния GitHub Action (след първото му пускане с новата версия).</div>';
+    return;
+  }
+  $("iv-news").innerHTML = news.map(n=>`
+    <div class="news-item">
+      <a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>
+      <div class="news-meta">${n.source||""} · ${n.date||""} ${n.tickers? "· "+n.tickers.join(", "):""}</div>
+    </div>`).join("");
+}
+
+// ═══ RENDER: стратегия + майлстони ═══
+function ivRenderStrat(){
+  $("strat-view").textContent = lsGet(LS.st, IV_DEFAULT_STRATEGY);
+}
+window.ivToggleStrat = function(){
+  const view=$("strat-view"), edit=$("strat-edit"), btn=$("strat-btn");
+  if(edit.style.display==="none"){
+    edit.value = lsGet(LS.st, IV_DEFAULT_STRATEGY);
+    view.style.display="none"; edit.style.display="block"; btn.textContent="💾 Запази";
+  } else {
+    lsSet(LS.st, edit.value);
+    view.style.display="block"; edit.style.display="none"; btn.textContent="✎ Редактирай";
+    ivRenderStrat();
+  }
+};
+function ivRenderMs(totals){
+  const state = lsGet(LS.ms, {});
+  let done = 0;
+  $("iv-ms").innerHTML = IV_DEFAULT_MS.map(m=>{
+    let auto=null, pct=null;
+    if(m.type==="invested"){ auto = totals.totInv>=m.target; pct = Math.min(100,totals.totInv/m.target*100); }
+    if(m.type==="value")   { auto = totals.totCur>=m.target; pct = Math.min(100,totals.totCur/m.target*100); }
+    if(m.type==="pnl")     { auto = totals.pnl>0; pct = null; }
+    const checked = m.type==="manual" ? !!state[m.id] : auto;
+    if(checked) done++;
+    const desc = m.type==="invested" ? `€${fmt(totals.totInv)} / €${m.target}`
+               : m.type==="value"    ? `€${fmt(totals.totCur)} / €${m.target}`
+               : m.type==="pnl"      ? `P&L: ${sign(totals.pnl)} €`
+               : "ръчно отбелязване";
+    return `<div class="ms-row">
+      <span class="ms-check" ${m.type==="manual"? `onclick="ivToggleMs('${m.id}')"`:""}>${checked?"✅":"⬜"}</span>
+      <div class="ms-body">
+        <div class="ms-name" style="${checked?'text-decoration:line-through;opacity:.6':''}">${m.name}</div>
+        <div class="ms-desc">${desc}</div>
+        ${pct!=null? `<div class="ms-track"><div class="ms-fill" style="width:${pct}%"></div></div>`:""}
+      </div>
+    </div>`;
+  }).join("");
+  $("ms-count").textContent = done+" / "+IV_DEFAULT_MS.length;
+}
+window.ivToggleMs = function(id){
+  const st = lsGet(LS.ms,{}); st[id]=!st[id]; lsSet(LS.ms,st); ivRenderAll();
+};
+
+// ═══ MAIN ═══
+function ivRenderAll(){
+  const totals = ivRenderTable();
+  ivRenderTx();
+  ivRenderAlerts();
+  ivRenderOpps();
+  ivRenderNews();
+  ivRenderStrat();
+  ivRenderMs(totals);
+}
+window.ivLoadPrices = ivLoadPrices;
+ivRenderAll();
+ivLoadPrices();
+})();
+</script>
