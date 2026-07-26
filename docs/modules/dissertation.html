@@ -5,835 +5,350 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дисертация — Аспарух</title>
 <style>
-:root {
-  --bg:#0d1117;--s1:#161b22;--s2:#1c2128;--border:#30363d;
-  --text:#e6edf3;--muted:#8b949e;--dim:#4d5566;
-  --green:#3fb950;--red:#f85149;--yellow:#d29922;
-  --blue:#58a6ff;--purple:#bc8cff;--orange:#f0883e;
-  --teal:#39d353;
-}
+:root{--bg:#0d1117;--s1:#161b22;--s2:#1c2128;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--dim:#4d5566;
+--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#58a6ff;--purple:#bc8cff}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:1400px;margin:0 auto;font-size:14px;line-height:1.5}
-
-/* Header */
-.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:10px}
-.hdr-left h1{font-size:18px;font-weight:600;margin-bottom:3px}
-.hdr-left p{font-size:12px;color:var(--muted)}
-.hdr-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.deadline-badge{background:#1a0a0a;border:1px solid var(--red);color:var(--red);font-size:12px;padding:4px 10px;border-radius:6px;font-weight:600;cursor:pointer}
-.deadline-badge:hover{background:#2a0f0f}
-.progress-badge{background:#0a1a0a;border:1px solid var(--green);color:var(--green);font-size:12px;padding:4px 10px;border-radius:6px}
-.ghost-btn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:inherit}
-.ghost-btn:hover{border-color:var(--red);color:var(--red)}
-
-/* Stats row */
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
-.stat{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
-.sl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
-.sv{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
-.sv.green{color:var(--green)}.sv.yellow{color:var(--yellow)}.sv.red{color:var(--red)}.sv.blue{color:var(--blue)}
-
-/* Blockers */
-.blockers{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
-.blocker{background:#1a0d0a;border:1px solid #5a2a1a;border-radius:8px;padding:10px 14px;font-size:12px;display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:18px;font-weight:600}
+.hdr p{font-size:12px;color:var(--muted)}
+.hdr-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}
+.badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:8px;font-weight:600;white-space:nowrap}
+.b-red{background:rgba(248,81,73,.15);color:var(--red);border:1px solid rgba(248,81,73,.3)}
+.b-green{background:rgba(63,185,80,.15);color:var(--green)}
+.b-blue{background:rgba(88,166,255,.15);color:var(--blue)}
+.b-yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
+.b-mut{background:rgba(139,148,158,.1);color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+.stat{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:11px 13px}
+.sl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
+.sv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
+.blockers{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.blocker{background:#1a0d0a;border:1px solid #5a2a1a;border-radius:8px;padding:9px 13px;font-size:12px;flex:1;min-width:220px}
 .blocker.ok{background:#0d1a0a;border-color:#163d28}
-.blocker-icon{color:var(--orange);font-size:14px;flex-shrink:0}
-.blocker.ok .blocker-icon{color:var(--green)}
-.blocker-text{color:var(--text)}
-.blocker-sub{color:var(--muted);font-size:11px;margin-top:2px}
-
+.blocker b{color:var(--text)}
+.blocker .sub{color:var(--muted);font-size:11px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border)}
+.tab-btn{font-size:13px;padding:8px 16px;background:transparent;border:none;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab-pane{display:none}.tab-pane.active{display:block}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:15px;margin-bottom:14px}
+.card-title{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:12px}
 /* Gantt */
-.gantt-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:20px;overflow-x:auto}
-.gantt-title{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:14px}
-.gantt-wrap{min-width:700px}
-.gantt-months{display:grid;grid-template-columns:180px repeat(8,1fr);margin-bottom:6px}
-.gm{font-size:10px;color:var(--dim);text-align:center;padding:2px 0;border-left:1px solid var(--border)}
-.gm:first-child{border-left:none}
+.gantt-wrap{min-width:700px;overflow-x:auto}
+.g-months{display:grid;grid-template-columns:180px repeat(8,1fr);margin-bottom:6px}
+.gm{font-size:10px;color:var(--dim);text-align:center;border-left:1px solid var(--border)}
 .gm.current{color:var(--blue);font-weight:600}
-.gantt-row{display:grid;grid-template-columns:180px repeat(8,1fr);margin-bottom:3px;align-items:center;min-height:26px}
-.gantt-row:hover{background:rgba(255,255,255,.02);border-radius:4px}
+.g-row{display:grid;grid-template-columns:180px repeat(8,1fr);margin-bottom:3px;align-items:center;min-height:26px}
 .gr-name{font-size:11px;color:var(--muted);padding-right:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.gr-name.critical{color:var(--text)}
+.gr-name.crit{color:var(--text);font-weight:500}
 .g-cell{height:24px;border-left:1px solid rgba(48,54,61,.5);position:relative}
 .g-bar{height:16px;border-radius:3px;margin:4px 1px;position:absolute;min-width:3px}
-.g-bar.done{opacity:.5}
-.g-today-line{position:absolute;top:0;bottom:0;width:2px;background:var(--blue);opacity:.7;z-index:2}
-.gantt-legend{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap}
-.gl-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
-.gl-dot{width:12px;height:8px;border-radius:2px}
-
+.g-today{position:absolute;top:0;bottom:0;width:2px;background:var(--blue);opacity:.7;z-index:2}
+.legend{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:5px}
+.ldot{width:12px;height:8px;border-radius:2px;display:inline-block}
 /* Chapters */
-.chapters-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
-.chapter-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:14px;cursor:pointer;transition:border-color .15s}
-.chapter-card:hover{border-color:var(--blue)}
-.chapter-card.expanded{border-color:var(--blue)}
-.ch-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.ch-name{font-size:13px;font-weight:500;flex:1}
-.ch-pct{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;min-width:36px;text-align:right}
-.ch-bar{height:6px;background:var(--s2);border-radius:3px;overflow:hidden;margin-bottom:8px}
-.ch-fill{height:100%;border-radius:3px;transition:width .3s}
-.ch-sub{font-size:11px;color:var(--muted);line-height:1.5}
-.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:8px;font-weight:600;white-space:nowrap}
-.b-done{background:rgba(63,185,80,.15);color:var(--green)}
-.b-wip{background:rgba(210,153,34,.15);color:var(--yellow)}
-.b-todo{background:rgba(139,148,158,.1);color:var(--muted)}
-.b-block{background:rgba(248,81,73,.15);color:var(--red)}
-
-/* Tasks expand */
-.ch-tasks{margin-top:10px;border-top:1px solid var(--border);padding-top:10px;display:none}
-.chapter-card.expanded .ch-tasks{display:block}
-.task-row{display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:12px}
-.task-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;cursor:pointer}
-.dot-done{background:var(--green)}.dot-wip{background:var(--yellow)}.dot-todo{background:var(--dim)}.dot-block{background:var(--red)}
-.task-text{flex:1;color:var(--text);cursor:pointer}
-.task-note{font-size:11px;color:var(--muted);margin-top:1px}
-.task-del{background:transparent;border:none;color:var(--dim);cursor:pointer;font-size:13px;padding:0 3px;line-height:1}
-.task-del:hover{color:var(--red)}
-.task-add-row{display:flex;gap:6px;margin-top:8px}
-.task-add-inp{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:4px 8px;color:var(--text);font-size:12px;outline:none}
-.task-add-inp:focus{border-color:var(--blue)}
-.task-add-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:4px 11px;font-size:11px;cursor:pointer}
-
-/* ANSYS section */
-.ansys-card{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:20px}
-.ansys-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
-.ansys-title{font-size:13px;font-weight:600}
-.ansys-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.as-item{display:flex;gap:10px;padding:10px 12px;border-radius:6px;background:var(--s2);border:1px solid var(--border);align-items:flex-start;cursor:pointer}
-.as-item:hover{border-color:var(--blue)}
+.ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ch-card{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:13px}
+.ch-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.ch-name{font-size:13px;font-weight:600;flex:1}
+.ch-pct{font-weight:700;font-variant-numeric:tabular-nums}
+.ch-bar{height:6px;background:var(--bg);border-radius:3px;overflow:hidden;margin-bottom:7px}
+.ch-fill{height:100%;border-radius:3px}
+.ch-words{font-size:11px;color:var(--muted)}
+.ch-note{font-size:11px;color:var(--yellow);margin-top:4px}
+/* Tasks */
+.tk-chapter{margin-bottom:14px}
+.tk-chname{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+.tk-row{display:flex;align-items:flex-start;gap:9px;padding:5px 0;border-bottom:1px solid rgba(48,54,61,.35);font-size:13px}
+.tk-row:last-child{border-bottom:none}
+.tk-check{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;user-select:none}
+.tk-check.done{background:var(--green);border-color:var(--green);color:#fff}
+.tk-check.wip{border-color:var(--yellow);color:var(--yellow)}
+.tk-check.block{border-color:var(--red);color:var(--red);cursor:pointer}
+.tk-text{flex:1}
+.tk-row.done .tk-text{text-decoration:line-through;opacity:.55}
+.tk-note{font-size:11px;color:var(--muted)}
+.tk-src{font-size:10px;color:var(--dim)}
+.tk-add{display:flex;gap:6px;margin-top:6px}
+.tk-inp{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:4px 8px;color:var(--text);font-size:12px;outline:none}
+.tk-inp:focus{border-color:var(--blue)}
+.tk-btn{background:#1f6feb;color:#fff;border:none;border-radius:4px;padding:4px 11px;font-size:11px;cursor:pointer}
+.tk-del{background:transparent;border:none;color:var(--dim);cursor:pointer;font-size:13px}
+.tk-del:hover{color:var(--red)}
+/* ANSYS */
+.as-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.as-item{display:flex;gap:10px;padding:10px 12px;border-radius:6px;background:var(--s2);border:1px solid var(--border)}
 .as-item.active{background:#1a1200;border-color:#5a4200}
 .as-item.done{opacity:.55}
-.as-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px}
+.as-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
 .n-done{background:rgba(63,185,80,.2);color:var(--green)}
 .n-active{background:rgba(210,153,34,.2);color:var(--yellow)}
 .n-todo{background:var(--border);color:var(--muted)}
-.as-title{font-size:12px;font-weight:500;color:var(--text)}
-.as-note{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4}
-.as-item.active .as-title{color:var(--yellow)}
-
-/* Overlapping coords */
-.coord{font-family:'SF Mono',Consolas,monospace;font-size:11px;background:var(--s2);border:1px solid var(--border);padding:2px 6px;border-radius:4px;color:var(--blue)}
-.coord.solved{color:var(--green)}
-.coord.pending{color:var(--yellow)}
-
-/* Region table */
-.region-table{width:100%;border-collapse:collapse;font-size:12px;font-family:'SF Mono',Consolas,monospace}
-.region-table th{text-align:left;color:var(--muted);padding:6px 10px;border-bottom:1px solid var(--border);font-size:11px;font-weight:500}
-.region-table td{padding:6px 10px;border-bottom:1px solid rgba(48,54,61,.5);color:var(--text)}
-.region-table tr:last-child td{border-bottom:none}
-.fluid-cell{color:var(--green);font-weight:600}
-.void-cell{color:var(--dim)}
-
-/* Tabs */
-.tabs{display:flex;gap:6px;margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:0}
-.tab-btn{font-size:12px;padding:8px 14px;background:transparent;border:none;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;transition:color .15s}
-.tab-btn:hover{color:var(--text)}
-.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
-.tab-pane{display:none}
-.tab-pane.active{display:block}
-
-.footer-row{text-align:right;margin-top:6px}
-
-/* Import modal */
-.imp-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:50;display:none;align-items:flex-start;justify-content:center;padding:30px 16px;overflow-y:auto}
-.imp-overlay.visible{display:flex}
-.imp-modal{background:var(--s1);border:1px solid var(--border);border-radius:10px;max-width:640px;width:100%;padding:18px}
-.imp-title{font-size:14px;font-weight:600;margin-bottom:4px}
-.imp-sub{font-size:11px;color:var(--muted);margin-bottom:12px}
-.imp-list{max-height:380px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px 10px;margin-bottom:12px}
-.imp-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px solid rgba(48,54,61,.4);font-size:12px}
-.imp-row:last-child{border-bottom:none}
-.imp-row input{margin-top:3px}
-.imp-ch{color:var(--muted);font-size:11px}
-.imp-what{flex:1}
-.imp-btns{display:flex;justify-content:flex-end;gap:8px}
-.imp-apply{background:#238636;color:#fff;border:none;border-radius:6px;padding:6px 16px;font-size:12px;cursor:pointer}
-.imp-cancel{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:6px 14px;font-size:12px;cursor:pointer}
-.imp-help{font-size:11px;color:var(--muted);line-height:1.6;background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;margin-bottom:10px}
-.imp-help code{background:var(--bg);padding:1px 5px;border-radius:3px;font-size:10px}
-
-/* Responsive */
-@media(max-width:700px){
-  .stats{grid-template-columns:repeat(3,1fr)}
-  .chapters-grid{grid-template-columns:1fr}
-  .ansys-steps{grid-template-columns:1fr}
-}
+.as-t{font-size:12px;font-weight:500}
+.as-n{font-size:11px;color:var(--muted)}
+.rules{background:#0d1a0a;border:1px solid #163d28;border-radius:6px;padding:11px 13px;font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6}
+table.rt{width:100%;border-collapse:collapse;font-size:12px;font-family:Consolas,monospace}
+.rt td{padding:5px 10px;border-bottom:1px solid rgba(48,54,61,.5)}
+.rt tr:first-child td{color:var(--muted);font-size:11px}
+.fluid{color:var(--green);font-weight:600}.void{color:var(--dim)}
+.src-note{font-size:11px;color:var(--dim);margin-top:8px}
+@media(max-width:700px){.stats{grid-template-columns:repeat(3,1fr)}.ch-grid,.as-steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <div class="hdr">
-  <div class="hdr-left">
+  <div>
     <h1>Дисертация — ТУ-София</h1>
-    <p>Слънчево адсорбционно охлаждане · InvenSor LTC 10 plus · ANSYS Fluent Meshing</p>
+    <p>Слънчево адсорбционно охлаждане · InvenSor LTC 10 plus · данни от папка <b>dissertation/</b></p>
   </div>
   <div class="hdr-right">
-    <span class="deadline-badge" id="deadlineBadge" onclick="editDeadline()" title="Кликни за промяна на датата">Дедлайн: —</span>
-    <span class="progress-badge" id="progressBadge">— общо</span>
-    <button class="ghost-btn" style="border-color:var(--blue);color:var(--blue)" onclick="document.getElementById('mdFileInput').click()" title="Обнови задачите от .md файлове от сесии">⬆ Импорт MD</button>
-    <input type="file" id="mdFileInput" accept=".md,.txt,.markdown" multiple style="display:none" onchange="importMdFiles(this.files)">
+    <span class="badge b-red" id="dlBadge">Дедлайн: —</span>
+    <span class="badge b-green" id="pctBadge">—</span>
+    <span class="badge b-mut" id="genBadge">—</span>
   </div>
 </div>
 
-<!-- Stats -->
 <div class="stats">
-  <div class="stat"><div class="sl">Общ прогрес</div><div class="sv blue" id="statOverall">—</div></div>
-  <div class="stat"><div class="sl">Завършени</div><div class="sv green" id="statDone">—</div></div>
-  <div class="stat"><div class="sl">В процес</div><div class="sv yellow" id="statWip">—</div></div>
-  <div class="stat"><div class="sl">Блокирани задачи</div><div class="sv red" id="statBlocked">—</div></div>
-  <div class="stat"><div class="sl">До дедлайн</div><div class="sv" id="statDeadline">—</div></div>
+  <div class="stat"><div class="sl">Общ прогрес</div><div class="sv" style="color:var(--blue)" id="stOverall">—</div></div>
+  <div class="stat"><div class="sl">Готови задачи</div><div class="sv" style="color:var(--green)" id="stDone">—</div></div>
+  <div class="stat"><div class="sl">Думи написани</div><div class="sv" id="stWords">—</div></div>
+  <div class="stat"><div class="sl">Блокирани</div><div class="sv" style="color:var(--red)" id="stBlock">—</div></div>
+  <div class="stat"><div class="sl">До дедлайн</div><div class="sv" id="stDl">—</div></div>
 </div>
 
-<!-- Blockers (dynamic — derived from task statuses) -->
-<div class="blockers" id="blockersWrap"></div>
+<div class="blockers" id="blockers"></div>
 
-<!-- Tabs -->
 <div class="tabs">
-  <button class="tab-btn active" onclick="showTab('gantt',this)">Gantt timeline</button>
-  <button class="tab-btn" onclick="showTab('chapters',this)">Глави</button>
-  <button class="tab-btn" onclick="showTab('ansys',this)">ANSYS Fluent</button>
-  <button class="tab-btn" onclick="showTab('regions',this)">Region settings</button>
+  <button class="tab-btn active" onclick="showTab('gantt',this)">📅 График</button>
+  <button class="tab-btn" onclick="showTab('chapters',this)">📖 Глави</button>
+  <button class="tab-btn" onclick="showTab('tasks',this)">☑ Всички задачи</button>
+  <button class="tab-btn" onclick="showTab('ansys',this)">🔧 ANSYS</button>
 </div>
 
-<!-- TAB: GANTT -->
-<div class="tab-pane active" id="tab-gantt">
-<div class="gantt-card">
-  <div class="gantt-title">Линеен график — май 2026 → декември 2026 <span style="color:var(--dim);font-weight:400;text-transform:none">· плътната лента = реален прогрес по главата</span></div>
-  <div class="gantt-wrap" id="gantt-wrap"></div>
-  <div class="gantt-legend">
-    <div class="gl-item"><div class="gl-dot" style="background:#f85149"></div>Критичен path</div>
-    <div class="gl-item"><div class="gl-dot" style="background:#d29922"></div>В процес</div>
-    <div class="gl-item"><div class="gl-dot" style="background:#58a6ff"></div>Планирано</div>
-    <div class="gl-item"><div class="gl-dot" style="background:#3fb950;opacity:.5"></div>Завършено</div>
-    <div class="gl-item"><div class="gl-dot" style="background:rgba(255,255,255,.5);width:6px"></div>Реален % (от главите)</div>
-    <div class="gl-item"><div class="gl-dot" style="background:#58a6ff;width:2px;height:12px"></div>Днес</div>
+<div class="tab-pane active" id="tab-gantt"><div class="card">
+  <div class="card-title">Линеен график · плътната бяла лента = реален прогрес от задачите</div>
+  <div class="gantt-wrap" id="ganttWrap"></div>
+  <div class="legend">
+    <span><span class="ldot" style="background:#f85149"></span>Критичен</span>
+    <span><span class="ldot" style="background:#d29922"></span>В процес</span>
+    <span><span class="ldot" style="background:#58a6ff"></span>Планирано</span>
+    <span><span class="ldot" style="background:#3fb950;opacity:.5"></span>Готово</span>
+    <span><span class="ldot" style="background:#58a6ff;width:2px;height:12px"></span>Днес</span>
   </div>
-</div>
+  <div class="src-note">Редактира се от <b>dissertation/График/timeline.md</b></div>
+</div></div>
+
+<div class="tab-pane" id="tab-chapters"><div class="ch-grid" id="chGrid"></div>
+  <div class="src-note">Думите се броят от файловете в <b>dissertation/Глави/</b> · прогресът е от задачите</div>
 </div>
 
-<!-- TAB: CHAPTERS -->
-<div class="tab-pane" id="tab-chapters">
-<div class="chapters-grid" id="chapters-grid"></div>
+<div class="tab-pane" id="tab-tasks"><div class="card" id="tasksWrap"></div>
+  <div class="src-note">Отметките тук са лични (запазват се в браузъра) и не се губят при нов импорт — по-напредналият статус печели. Новите задачи идват от MD файловете в <b>dissertation/Всички задачи/</b>; ръчно добавените са само в този браузър.</div>
 </div>
 
-<!-- TAB: ANSYS -->
 <div class="tab-pane" id="tab-ansys">
-<div class="ansys-card">
-  <div class="ansys-hdr">
-    <div class="ansys-title">Fault-Tolerant Meshing · Geom_clean.dsco · Сесия #4 → #5</div>
-    <div>
-      <span class="coord solved">(100, 2851, 1650) ✓</span>&nbsp;
-      <span class="coord pending">(196, 2727, 1668) ⟳</span>
-    </div>
+  <div class="card">
+    <div class="card-title">Работен план — стъпка <span id="asCur">—</span> от <span id="asTot">—</span></div>
+    <div class="as-steps" id="asSteps"></div>
+    <div class="rules" id="asRules" style="display:none"></div>
   </div>
-  <div class="ansys-steps" id="ansys-steps"></div>
-
-  <div style="margin-top:14px;padding:12px 14px;background:#0d1a0a;border:1px solid #163d28;border-radius:6px;font-size:12px;color:#8b949e;line-height:1.6">
-    <strong style="color:#3fb950">Важни правила (НИКОГА не нарушавай):</strong><br>
-    Add Boundary Layers → <strong style="color:var(--text)">ВИНАГИ No</strong> &nbsp;·&nbsp;
-    Capping стъпката → <strong style="color:var(--text)">ПРОПУСНИ винаги</strong> &nbsp;·&nbsp;
-    Use Size Field → <strong style="color:var(--text)">No</strong> &nbsp;·&nbsp;
-    Зареждай <strong style="color:var(--text)">Geom_clean2.dsco</strong> (не оригинала) &nbsp;·&nbsp;
-    Изтрий FM_Parapanov папката преди всеки старт
+  <div class="card" id="regionCard" style="display:none">
+    <div class="card-title">Region settings</div>
+    <table class="rt" id="regionTable"></table>
   </div>
-</div>
-</div>
-
-<!-- TAB: REGION SETTINGS -->
-<div class="tab-pane" id="tab-regions">
-<div class="ansys-card">
-  <div class="ansys-hdr">
-    <div class="ansys-title">Update Region Settings — правилна конфигурация</div>
-    <span class="badge b-wip">Референция за сесия #5</span>
-  </div>
-  <table class="region-table">
-    <tr><th>Обект</th><th>Type</th><th>Extraction</th><th>Volume Fill</th></tr>
-    <tr><td>chilledwater_in</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-    <tr><td>chilledwater_out</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-    <tr><td>fluid-region-1</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-    <tr><td>geom_clean2</td><td class="void-cell">void</td><td>none</td><td>none</td></tr>
-    <tr><td>hw_heatexchanger</td><td class="void-cell">void</td><td>none</td><td>none</td></tr>
-    <tr><td>hwin_adsorption_chiller</td><td class="void-cell">void</td><td>none</td><td>none</td></tr>
-    <tr><td>hwreturn_adsorbtionchiller</td><td class="void-cell">void</td><td>none</td><td>none</td></tr>
-    <tr><td>hwreturn_heatexchanger</td><td class="void-cell">void</td><td>none</td><td>none</td></tr>
-    <tr><td>recool_in</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-    <tr><td>recool_out</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-    <tr><td>water_volume</td><td class="fluid-cell">fluid</td><td>wrap</td><td>hexcore</td></tr>
-  </table>
-</div>
-</div>
-
-<div class="footer-row">
-  <button class="ghost-btn" onclick="resetDissertation()">↺ Нулирай модула до начални данни</button>
-</div>
-
-<!-- Import preview modal -->
-<div class="imp-overlay" id="impOverlay">
-  <div class="imp-modal">
-    <div class="imp-title">Импорт от MD — преглед на промените</div>
-    <div class="imp-sub" id="impSub">—</div>
-    <div class="imp-help">
-      Разпознати формати: <code>- [x] задача</code> готово · <code>- [~]</code> в процес · <code>- [ ]</code> предстои · <code>- [!]</code> блокирано · бележка след <code>::</code><br>
-      Главата се познава от заглавие <code>## Гл. 4 …</code> над списъка или префикс <code>Гл. 4:</code> в реда. Работят и ключови думи в свободен текст (решен/завършено, в процес, блокира/чака). <code>ANSYS стъпка: 6</code> и <code>Дедлайн: 2026-12-31</code> също се разпознават.
-    </div>
-    <div class="imp-list" id="impList"></div>
-    <div class="imp-btns">
-      <button class="imp-cancel" onclick="impClose()">Отказ</button>
-      <button class="imp-apply" id="impApplyBtn" onclick="impApply()">Приложи избраните</button>
-    </div>
-  </div>
+  <div class="src-note">Редактира се от <b>dissertation/График/ansys.md</b></div>
 </div>
 
 <script>
 (function(){
+const RANK={todo:0,wip:1,block:2,done:3};
+const COL={done:'#3fb950',wip:'#d29922',todo:'#4d5566',block:'#f85149'};
+const LS_MANUAL='diss-manual-v2', LS_LOCAL='diss-local-tasks-v2';
+let D=null;
+const $=id=>document.getElementById(id);
+const lsGet=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v;}catch(e){return d;}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 
-const STORE_KEY = 'diss_data_v1';
-
-// ── DEFAULT DATA (seed on first load — same content as before, now editable) ──
-const DEFAULT_DATA = {
-  meta: {
-    deadline: '2026-12-31',
-  },
-  chapters: [
-    {name:'Увод / Въведение', tasks:[
-      {t:'Актуалност, цел, задачи', s:'done'},
-      {t:'Хипотеза', s:'wip', n:'Зависи от CFD резултати'},
-      {t:'Структура на труда', s:'todo'},
-    ]},
-    {name:'Гл. 1 — Литературен обзор', tasks:[
-      {t:'63 статии събрани', s:'done'},
-      {t:'Критичен синтез и анализ', s:'wip'},
-      {t:'Библиография — частично', s:'wip'},
-    ]},
-    {name:'Гл. 2 — Описание на системата', tasks:[
-      {t:'Компоненти, хидравлична схема', s:'done'},
-      {t:'Изчисления буфери, CFD геометрия', s:'done'},
-      {t:'Финална редакция — повторения', s:'wip'},
-    ]},
-    {name:'Гл. 3 — Теоретичен анализ', tasks:[
-      {t:'COP / мощност диаграми', s:'done'},
-      {t:'Термодинамичен модел', s:'wip'},
-      {t:'Симулация TRNSYS / собствена', s:'todo'},
-    ]},
-    {name:'Гл. 4 — Методология', tasks:[
-      {t:'Топлинна схема (Excel)', s:'done'},
-      {t:'Експ. план 9 режима', s:'done'},
-      {t:'CFD mesh', s:'block', n:'Overlapping блокира'},
-      {t:'Измервания', s:'block', n:'Чака нов сух охладител'},
-    ]},
-    {name:'CFD — ANSYS Fluent', tasks:[
-      {t:'Geom_clean.dsco', s:'done'},
-      {t:'14 Boundary Conditions', s:'done'},
-      {t:'Volume Mesh', s:'block', n:'Сесия #5 → пролука 1–2mm'},
-      {t:'Fluent runs 9 режима', s:'todo'},
-      {t:'Post-processing', s:'todo'},
-    ]},
-    {name:'Гл. 5 — Резултати', tasks:[
-      {t:'CFD анализ', s:'block', n:'Чака Volume Mesh'},
-      {t:'Анализ измервания', s:'block', n:'Чака сух охладител'},
-      {t:'Сравнение и обсъждане', s:'todo'},
-    ]},
-    {name:'Изводи и препоръки', tasks:[
-      {t:'Изводи', s:'todo'},
-      {t:'Препоръки', s:'todo'},
-    ]},
-    {name:'Библиография / Приложения', tasks:[
-      {t:'63 абстракта', s:'done'},
-      {t:'Форматиране по стандарт', s:'wip'},
-      {t:'Приложения', s:'todo'},
-    ]},
-  ],
-  ansys: {
-    currentStep: 5,
-    steps: [
-      {title:'Лиценз грешка → решена', note:'Рано сутринта / университетски сървър уикенд'},
-      {title:'Fault-Tolerant workflow → установен', note:'Standalone Fluent Meshing, НЕ от Workbench'},
-      {title:'Overlapping (100, 2851, 1650) → решен', note:'Фантомни Curves изтрити → Geom_clean.dsco'},
-      {title:'Surface Mesh — 0 skewed cells', note:'Skewness 0.155 · 16 968 faces · отличен резултат'},
-      {title:'Overlapping (196, 2727, 1668) → в прогрес', note:'Discovery: измести HWreturn_HeatExchanger 1–2mm навътре → Geom_clean2.dsco → нов mesh'},
-      {title:'Volume Mesh → генерирай', note:'hexcore, Add BL: No, Use Size Field: No'},
-      {title:'Fluent Setup → 9 режима', note:'14 BC дефинирани ✓ — готови за конфигурация'},
-      {title:'CFD runs + post-processing', note:'Резултати → Гл. 5 Резултати и обсъждане'},
-    ],
-  },
+// ефективен статус: файл vs ръчно — по-напредналият печели
+function effStatus(t){
+  const man=lsGet(LS_MANUAL,{})[t.id];
+  if(!man) return t.s;
+  return RANK[man]>RANK[t.s]?man:t.s;
+}
+window.toggleTask=function(tid,fileS){
+  const man=lsGet(LS_MANUAL,{});
+  const cur=man[tid]&&RANK[man[tid]]>RANK[fileS]?man[tid]:fileS;
+  if(cur==='done'){
+    // връщане: маха ръчния ъпгрейд (файловият статус остава)
+    delete man[tid];
+  } else {
+    man[tid]='done';
+  }
+  lsSet(LS_MANUAL,man);
+  renderAll();
+};
+// локални (ръчни) задачи
+window.addLocal=function(ch){
+  const el=document.getElementById('inp-'+ch.replace(/[^a-z0-9а-я]/gi,'_'));
+  const v=el.value.trim(); if(!v) return;
+  const loc=lsGet(LS_LOCAL,[]);
+  loc.push({id:'loc'+Date.now(), ch, t:v, s:'todo'});
+  lsSet(LS_LOCAL,loc); el.value='';
+  renderAll();
+};
+window.toggleLocal=function(id){
+  const loc=lsGet(LS_LOCAL,[]);
+  const t=loc.find(x=>x.id===id); if(!t) return;
+  t.s=t.s==='done'?'todo':'done';
+  lsSet(LS_LOCAL,loc); renderAll();
+};
+window.delLocal=function(id){
+  lsSet(LS_LOCAL,lsGet(LS_LOCAL,[]).filter(x=>x.id!==id)); renderAll();
 };
 
-// ── PERSISTENCE ─────────────────────────────────────────────────────
-function loadData(){
-  try{
-    const raw = localStorage.getItem(STORE_KEY);
-    if(raw) return JSON.parse(raw);
-  }catch(e){}
-  const d = JSON.parse(JSON.stringify(DEFAULT_DATA));
-  saveData(d);
-  return d;
+function chapterTasks(ch){
+  const loc=lsGet(LS_LOCAL,[]).filter(x=>x.ch===ch.name);
+  return ch.tasks.map(t=>({...t,eff:effStatus(t),local:false}))
+    .concat(loc.map(t=>({...t,eff:t.s,local:true,n:''})));
 }
-function saveData(d){ localStorage.setItem(STORE_KEY, JSON.stringify(d)); }
-
-let DATA = loadData();
-let expandedChapters = new Set();
-
-function resetDissertation(){
-  if(!confirm('Нулираш модула до началните данни? Всички промени по главите и ANSYS стъпките ще се загубят.')) return;
-  DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
-  saveData(DATA);
-  expandedChapters = new Set();
-  renderAll();
-}
-window.resetDissertation = resetDissertation;
-
-// ── STATUS MAPS ───────────────────────────────────────────────────
-const statusCol={done:'#3fb950',wip:'#d29922',todo:'#4d5566',block:'#f85149'};
-const badgeCls={done:'b-done',wip:'b-wip',todo:'b-todo',block:'b-block'};
-const badgeLbl={done:'почти готово',wip:'в процес',todo:'предстои',block:'блокирано'};
-const dotCls={done:'dot-done',wip:'dot-wip',todo:'dot-todo',block:'dot-block'};
-const statusIcon={done:'✓',wip:'⏳',todo:'—',block:'⛔'};
-const TASK_CYCLE=['todo','wip','done','block'];
-
-// ── COMPUTED PROGRESS ────────────────────────────────────────────────
 function pctOf(ch){
-  if(!ch.tasks.length) return 0;
+  const ts=chapterTasks(ch);
+  if(!ts.length) return 0;
   const w={done:1,wip:.5,todo:0,block:0};
-  const sum=ch.tasks.reduce((s,t)=>s+(w[t.s]??0),0);
-  return Math.round(sum/ch.tasks.length*100);
-}
-function statusOf(ch,pct){
-  const hasBlock=ch.tasks.some(t=>t.s==='block');
-  if(pct>=100) return 'done';
-  if(hasBlock) return 'block';
-  if(pct>0) return 'wip';
-  return 'todo';
-}
-function subLine(ch){
-  if(!ch.tasks.length) return 'Няма добавени задачи';
-  return ch.tasks.map(t=>`${t.t} ${statusIcon[t.s]}`).join(' · ');
-}
-function fmtDate(iso){
-  const months=['яну','фев','март','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
-  const d=new Date(iso+'T00:00:00');
-  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
-}
-function daysToDeadlineLabel(){
-  const dl=new Date(DATA.meta.deadline+'T23:59:59');
-  const now=new Date();
-  const days=Math.ceil((dl-now)/86400000);
-  if(days<0) return 'Просрочено';
-  if(days===0) return 'Днес';
-  if(days<45) return days+' дни';
-  return '~'+Math.round(days/30)+' мес.';
-}
-function computeOverall(){
-  const pcts=DATA.chapters.map(pctOf);
-  const overallPct=pcts.length?Math.round(pcts.reduce((a,b)=>a+b,0)/pcts.length):0;
-  const doneCount=pcts.filter(p=>p>=100).length;
-  const wipCount=pcts.filter(p=>p>0&&p<100).length;
-  const blockedTasks=DATA.chapters.reduce((s,ch)=>s+ch.tasks.filter(t=>t.s==='block').length,0);
-  return {overallPct,doneCount,wipCount,blockedTasks,total:pcts.length};
+  return Math.round(ts.reduce((s,t)=>s+(w[t.eff]||0),0)/ts.length*100);
 }
 
-// ── HEADER / STATS ────────────────────────────────────────────────
 function renderHeader(){
-  document.getElementById('deadlineBadge').textContent=`Дедлайн: ${fmtDate(DATA.meta.deadline)}`;
-  const o=computeOverall();
-  document.getElementById('progressBadge').textContent=`${o.overallPct}% общо`;
-  document.getElementById('statOverall').textContent=o.overallPct+'%';
-  document.getElementById('statDone').textContent=`${o.doneCount}/${o.total}`;
-  document.getElementById('statWip').textContent=`${o.wipCount}/${o.total}`;
-  document.getElementById('statBlocked').textContent=o.blockedTasks;
-  document.getElementById('statDeadline').textContent=daysToDeadlineLabel();
+  $('dlBadge').textContent='Дедлайн: '+D.deadline;
+  const dl=new Date(D.deadline+'T23:59:59'), days=Math.ceil((dl-new Date())/864e5);
+  $('stDl').textContent=days<0?'Просрочено':days<45?days+' дни':'~'+Math.round(days/30)+' мес.';
+  const pcts=D.chapters.map(pctOf);
+  const overall=pcts.length?Math.round(pcts.reduce((a,b)=>a+b,0)/pcts.length):0;
+  $('stOverall').textContent=overall+'%'; $('pctBadge').textContent=overall+'% общо';
+  let done=0,tot=0,block=0,words=0;
+  D.chapters.forEach(ch=>{
+    const ts=chapterTasks(ch); tot+=ts.length;
+    done+=ts.filter(t=>t.eff==='done').length;
+    block+=ts.filter(t=>t.eff==='block').length;
+    words+=ch.words||0;
+  });
+  $('stDone').textContent=done+'/'+tot;
+  $('stBlock').textContent=block;
+  $('stWords').textContent=words? words.toLocaleString('bg-BG'):'—';
+  $('genBadge').textContent='данни: '+(D.generated||'').slice(0,10);
 }
-function editDeadline(){
-  const cur=DATA.meta.deadline;
-  const v=prompt('Нова дата на дедлайн (формат YYYY-MM-DD):', cur);
-  if(v===null) return;
-  if(!/^\d{4}-\d{2}-\d{2}$/.test(v.trim())){ alert('Невалиден формат. Използвай YYYY-MM-DD.'); return; }
-  DATA.meta.deadline=v.trim();
-  saveData(DATA);
-  renderHeader();
-}
-window.editDeadline=editDeadline;
-
-// ── BLOCKERS (derived) ───────────────────────────────────────────────
 function renderBlockers(){
-  const wrap=document.getElementById('blockersWrap');
   const items=[];
-  DATA.chapters.forEach(ch=>{
-    ch.tasks.forEach(t=>{
-      if(t.s==='block') items.push({chapter:ch.name, text:t.t, note:t.n});
-    });
-  });
-  if(!items.length){
-    wrap.innerHTML=`<div class="blocker ok">
-      <div class="blocker-icon">✓</div>
-      <div><div class="blocker-text">Няма активни блокери</div></div>
-    </div>`;
-    return;
-  }
-  wrap.innerHTML=items.map(b=>`<div class="blocker">
-    <div class="blocker-icon">⚠</div>
-    <div>
-      <div class="blocker-text">${b.chapter}: <strong>${b.text}</strong></div>
-      ${b.note?`<div class="blocker-sub">${b.note}</div>`:''}
-    </div>
-  </div>`).join('');
+  D.chapters.forEach(ch=>chapterTasks(ch).forEach(t=>{
+    if(t.eff==='block') items.push({ch:ch.name,t:t.t,n:t.n});
+  }));
+  $('blockers').innerHTML=items.length? items.map(b=>
+    `<div class="blocker">⚠ <b>${b.ch}</b>: ${b.t}${b.n?`<div class="sub">${b.n}</div>`:''}</div>`).join('')
+    : '<div class="blocker ok">✓ Няма активни блокери</div>';
 }
-
-// ── GANTT ─────────────────────────────────────────────────────────
-const MONTHS = ['Май','Юни','Юли','Авг','Сеп','Окт','Ное','Дек'];
-const GANTT_START_YEAR = 2026, GANTT_START_MONTH = 4; // May = index 4
-
-function computeTodayOffset(){
+function renderGantt(){
+  const gm=D.ganttMeta||{startYear:2026,startMonth:4,months:8};
+  const MON=['Яну','Фев','Март','Апр','Май','Юни','Юли','Авг','Сеп','Окт','Ное','Дек'];
+  const months=[...Array(gm.months)].map((_,i)=>MON[(gm.startMonth+i)%12]);
   const now=new Date();
-  const monthDiff=(now.getFullYear()-GANTT_START_YEAR)*12+(now.getMonth()-GANTT_START_MONTH);
-  return monthDiff + now.getDate()/30;
-}
-
-const ganttRows = [
-  {name:'ANSYS Mesh',start:0,end:1.2,col:'#f85149',crit:true},
-  {name:'ANSYS Fluent runs',start:1.2,end:3,col:'#d29922',crit:true},
-  {name:'Измервания (9 реж.)',start:1,end:4.5,col:'#d29922',crit:true},
-  {name:'Гл. 1 — Лит. обзор',start:0,end:2,col:'#d29922'},
-  {name:'Гл. 2 — Система',start:0,end:1,col:'#3fb950'},
-  {name:'Гл. 3 — Теория',start:0,end:2.5,col:'#d29922'},
-  {name:'Гл. 4 — Методология',start:1.5,end:4,col:'#58a6ff'},
-  {name:'Гл. 5 — Резултати',start:3.5,end:6,col:'#58a6ff'},
-  {name:'Изводи и препоръки',start:5.5,end:7,col:'#58a6ff'},
-  {name:'Редакция / финал',start:6.5,end:7.8,col:'#bc8cff'},
-  {name:'Предаване',start:7.5,end:8,col:'#f85149',crit:true},
-];
-
-function chapterPctForRow(rowName){
-  const m=rowName.match(/Гл\.\s*(\d+)/);
-  if(!m) return null;
-  const num=m[1];
-  const re=new RegExp('Гл\\.\\s*'+num+'\\b');
-  const ch=DATA.chapters.find(c=>re.test(c.name));
-  return ch?pctOf(ch):null;
-}
-
-function buildGantt(){
-  const wrap = document.getElementById('gantt-wrap');
-  const todayOffset = computeTodayOffset();
-  const curMonthIdx = Math.floor(todayOffset);
-  const inRange = curMonthIdx>=0 && curMonthIdx<8;
-
-  let html = '<div class="gantt-months"><div></div>';
-  MONTHS.forEach((m,i) => {
-    html += `<div class="gm${inRange&&i===curMonthIdx?' current':''}">${m}</div>`;
-  });
-  html += '</div>';
-
-  ganttRows.forEach(r => {
-    const chPct = chapterPctForRow(r.name);
-    const done = chPct!==null ? chPct>=100 : !!r.done;
-    html += `<div class="gantt-row">`;
-    html += `<div class="gr-name${r.crit?' critical':''}">${r.name}</div>`;
-    for(let m=0;m<8;m++){
-      const ms=m, me=m+1;
-      const os=Math.max(0,r.start-ms), oe=Math.min(1,r.end-ms);
-      const w=Math.max(0,oe-os)*100;
-      const l=os*100;
-      const isToday = inRange && todayOffset>=ms && todayOffset<me;
-      const todayL = isToday ? (todayOffset-ms)*100 : null;
-      html += `<div class="g-cell">`;
+  const off=(now.getFullYear()-gm.startYear)*12+(now.getMonth()-gm.startMonth)+now.getDate()/30;
+  const cm=Math.floor(off);
+  let html='<div class="g-months"><div></div>'+months.map((m,i)=>`<div class="gm${i===cm?' current':''}">${m}</div>`).join('')+'</div>';
+  D.gantt.forEach(r=>{
+    const ch=r.ch? D.chapters.find(c=>c.name===r.ch):null;
+    const pct=ch? pctOf(ch):null;
+    const done=pct!==null&&pct>=100;
+    html+=`<div class="g-row"><div class="gr-name${r.crit?' crit':''}">${r.name}${pct!==null?` <span style="color:var(--dim)">${pct}%</span>`:''}</div>`;
+    for(let m=0;m<gm.months;m++){
+      const os=Math.max(0,r.start-m), oe=Math.min(1,r.end-m);
+      const w=Math.max(0,oe-os)*100, l=os*100;
+      const isToday=off>=m&&off<m+1;
+      html+='<div class="g-cell">';
       if(w>0){
-        html += `<div class="g-bar${done?' done':''}" style="left:${l}%;width:${w}%;background:${r.col}">`;
-        if(chPct!==null) html += `<div style="position:absolute;left:0;top:0;bottom:0;width:${chPct}%;background:rgba(255,255,255,.35);border-radius:3px 0 0 3px" title="${chPct}% реален прогрес"></div>`;
-        html += `</div>`;
+        html+=`<div class="g-bar" style="left:${l}%;width:${w}%;background:${r.col};${done?'opacity:.5':''}">`;
+        if(pct!==null) html+=`<div style="position:absolute;left:0;top:0;bottom:0;width:${pct}%;background:rgba(255,255,255,.35);border-radius:3px 0 0 3px"></div>`;
+        html+='</div>';
       }
-      if(todayL!==null) html += `<div class="g-today-line" style="left:${todayL}%"></div>`;
-      html += `</div>`;
+      if(isToday) html+=`<div class="g-today" style="left:${(off-m)*100}%"></div>`;
+      html+='</div>';
     }
-    html += `</div>`;
+    html+='</div>';
   });
-  wrap.innerHTML = html;
+  $('ganttWrap').innerHTML=html;
 }
-
-// ── CHAPTERS ──────────────────────────────────────────────────────
-function buildChapters(){
-  const grid = document.getElementById('chapters-grid');
-  grid.innerHTML = DATA.chapters.map((ch,ci) => {
-    const pct=pctOf(ch), status=statusOf(ch,pct);
-    const isExp=expandedChapters.has(ci);
-    return `
-    <div class="chapter-card${isExp?' expanded':''}" id="ch-${ci}" onclick="toggleChapter(${ci})">
-      <div class="ch-header">
-        <div class="ch-name">${ch.name}</div>
-        <span class="badge ${badgeCls[status]}">${badgeLbl[status]}</span>
-        <div class="ch-pct" style="color:${statusCol[status]}">${pct}%</div>
-      </div>
-      <div class="ch-bar"><div class="ch-fill" style="width:${pct}%;background:${statusCol[status]}"></div></div>
-      <div class="ch-sub">${subLine(ch)}</div>
-      <div class="ch-tasks">
-        ${ch.tasks.map((t,ti)=>`<div class="task-row">
-          <div class="task-dot ${dotCls[t.s]}" title="Кликни за смяна на статус" onclick="event.stopPropagation();cycleTask(${ci},${ti})"></div>
-          <div style="flex:1" onclick="event.stopPropagation();cycleTask(${ci},${ti})">
-            <div class="task-text">${t.t}</div>
-            ${t.n?`<div class="task-note">${t.n}</div>`:''}
-          </div>
-          <button class="task-del" title="Изтрий задача" onclick="event.stopPropagation();deleteTask(${ci},${ti})">✕</button>
-        </div>`).join('')}
-        <div class="task-add-row" onclick="event.stopPropagation()">
-          <input class="task-add-inp" id="newTaskInp-${ci}" placeholder="+ Нова задача..." onkeydown="if(event.key==='Enter')addTask(${ci})">
-          <button class="task-add-btn" onclick="addTask(${ci})">Добави</button>
+function renderChapters(){
+  $('chGrid').innerHTML=D.chapters.map(ch=>{
+    const pct=pctOf(ch);
+    const ts=chapterTasks(ch);
+    const hasBlock=ts.some(t=>t.eff==='block');
+    const col=pct>=100?'#3fb950':hasBlock?'#f85149':pct>0?'#d29922':'#4d5566';
+    const wordsLine=ch.words? `${ch.words.toLocaleString('bg-BG')} думи${ch.target?` / цел ${ch.target.toLocaleString('bg-BG')}`:''}`:'няма чернова в Глави/';
+    const wpct=ch.words&&ch.target? Math.min(100,Math.round(ch.words/ch.target*100)):null;
+    return `<div class="ch-card">
+      <div class="ch-head"><div class="ch-name">${ch.name}</div><div class="ch-pct" style="color:${col}">${pct}%</div></div>
+      <div class="ch-bar"><div class="ch-fill" style="width:${pct}%;background:${col}"></div></div>
+      <div class="ch-words">✍ ${wordsLine}${wpct!==null?` (${wpct}%)`:''}</div>
+      ${(ch.notes||[]).map(n=>`<div class="ch-note">📌 ${n}</div>`).join('')}
+      <div class="ch-words" style="margin-top:5px">${ts.filter(t=>t.eff==='done').length}/${ts.length} задачи готови${hasBlock?' · <span style="color:var(--red)">има блокер</span>':''}</div>
+    </div>`;
+  }).join('');
+}
+function renderTasks(){
+  const icon={done:'✓',wip:'⏳',block:'⛔',todo:''};
+  $('tasksWrap').innerHTML=D.chapters.map(ch=>{
+    const ts=chapterTasks(ch);
+    const chid=ch.name.replace(/[^a-z0-9а-я]/gi,'_');
+    return `<div class="tk-chapter">
+      <div class="tk-chname">${ch.name} · ${ts.filter(t=>t.eff==='done').length}/${ts.length}</div>
+      ${ts.map(t=>`<div class="tk-row ${t.eff}">
+        <div class="tk-check ${t.eff}" title="${t.local?'Локална задача — клик за готово':'Клик = готово / връщане'}"
+          onclick="${t.local?`toggleLocal('${t.id}')`:`toggleTask('${t.id}','${t.s}')`}">${icon[t.eff]}</div>
+        <div class="tk-text">${t.t}
+          ${t.n?`<div class="tk-note">${t.n}</div>`:''}
+          ${t.local?'<span class="tk-src">· ръчна (само в този браузър)</span>':''}
         </div>
+        ${t.local?`<button class="tk-del" onclick="delLocal('${t.id}')">✕</button>`:''}
+      </div>`).join('')}
+      <div class="tk-add">
+        <input class="tk-inp" id="inp-${chid}" placeholder="+ ръчна задача…" onkeydown="if(event.key==='Enter')addLocal('${ch.name}')">
+        <button class="tk-btn" onclick="addLocal('${ch.name}')">Добави</button>
       </div>
     </div>`;
   }).join('');
 }
-
-function toggleChapter(ci){
-  if(expandedChapters.has(ci)) expandedChapters.delete(ci);
-  else expandedChapters.add(ci);
-  buildChapters();
-}
-window.toggleChapter=toggleChapter;
-
-function cycleTask(ci,ti){
-  const t=DATA.chapters[ci].tasks[ti];
-  t.s=TASK_CYCLE[(TASK_CYCLE.indexOf(t.s)+1)%TASK_CYCLE.length];
-  saveData(DATA);
-  renderAll();
-}
-window.cycleTask=cycleTask;
-
-function deleteTask(ci,ti){
-  DATA.chapters[ci].tasks.splice(ti,1);
-  saveData(DATA);
-  renderAll();
-}
-window.deleteTask=deleteTask;
-
-function addTask(ci){
-  const inp=document.getElementById(`newTaskInp-${ci}`);
-  const v=inp.value.trim();
-  if(!v) return;
-  DATA.chapters[ci].tasks.push({t:v,s:'todo'});
-  expandedChapters.add(ci);
-  saveData(DATA);
-  renderAll();
-}
-window.addTask=addTask;
-
-// ── ANSYS STEPS ───────────────────────────────────────────────────
-function buildAnsysSteps(){
-  const el=document.getElementById('ansys-steps');
-  const cur=DATA.ansys.currentStep;
-  el.innerHTML = DATA.ansys.steps.map((s,i)=>{
-    const num=i+1;
-    const state = num<cur?'done':num===cur?'active':'todo';
-    const numCls = state==='done'?'n-done':state==='active'?'n-active':'n-todo';
-    return `<div class="as-item ${state}" onclick="setAnsysStep(${num})" title="Кликни за да отбележиш тази стъпка като текуща">
-      <div class="as-num ${numCls}">${num}</div>
-      <div><div class="as-title">${s.title}</div><div class="as-note">${s.note}</div></div>
-    </div>`;
+function renderAnsys(){
+  const a=D.ansys||{};
+  if(!a.steps||!a.steps.length){ $('asSteps').innerHTML='<div style="color:var(--muted);font-size:12px">Няма ansys.md в График/</div>'; return; }
+  $('asCur').textContent=a.currentStep; $('asTot').textContent=a.steps.length;
+  $('asSteps').innerHTML=a.steps.map((s,i)=>{
+    const n=i+1, st=n<a.currentStep?'done':n===a.currentStep?'active':'todo';
+    return `<div class="as-item ${st}"><div class="as-num n-${st}">${n}</div>
+      <div><div class="as-t">${s.title}</div><div class="as-n">${s.note||''}</div></div></div>`;
   }).join('');
+  if(a.rules){ $('asRules').style.display='block'; $('asRules').innerHTML='<b style="color:var(--green)">Правила:</b> '+a.rules; }
+  if(a.regions&&a.regions.length){
+    $('regionCard').style.display='block';
+    $('regionTable').innerHTML=a.regions.map(row=>
+      '<tr>'+row.map((c,i)=>`<td class="${c==='fluid'?'fluid':c==='void'?'void':''}">${c}</td>`).join('')+'</tr>').join('');
+  }
 }
-function setAnsysStep(n){
-  DATA.ansys.currentStep=n;
-  saveData(DATA);
-  buildAnsysSteps();
-}
-window.setAnsysStep=setAnsysStep;
-
-// ── TABS ──────────────────────────────────────────────────────────
-function showTab(id, btn){
+window.showTab=function(id,btn){
   document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-window.showTab=showTab;
-
-// ── MD IMPORT ─────────────────────────────────────────────────────
-// Парсва .md файлове от сесии и предлага промени по задачите (с преглед).
-
-function mdNorm(s){
-  return s.toLowerCase()
-    .replace(/[„“"'’`().,;:!?†*_\[\]#]/g,' ')
-    .replace(/\s+/g,' ').trim();
-}
-function mdTokens(s){ return new Set(mdNorm(s).split(' ').filter(w=>w.length>2)); }
-function mdSim(a,b){
-  const ta=mdTokens(a), tb=mdTokens(b);
-  if(!ta.size||!tb.size) return 0;
-  let hit=0; for(const w of ta) if(tb.has(w)) hit++;
-  return hit/Math.min(ta.size,tb.size);
-}
-
-// Намери глава по "Гл. N" номер или по сходство на името
-function mdFindChapter(hint){
-  if(!hint) return -1;
-  const m=hint.match(/гл\.?\s*(\d+)/i);
-  if(m){
-    const re=new RegExp('Гл\\.\\s*'+m[1]+'\\b');
-    const i=DATA.chapters.findIndex(c=>re.test(c.name));
-    if(i>=0) return i;
-  }
-  const nh=mdNorm(hint);
-  if(/увод|въведение/.test(nh)) return DATA.chapters.findIndex(c=>/Увод/.test(c.name));
-  if(/ansys|cfd|fluent|mesh/.test(nh)){ const i=DATA.chapters.findIndex(c=>/CFD|ANSYS/i.test(c.name)); if(i>=0) return i; }
-  if(/извод|препорък/.test(nh)) return DATA.chapters.findIndex(c=>/Изводи/.test(c.name));
-  if(/библиограф|приложени/.test(nh)) return DATA.chapters.findIndex(c=>/Библиография/.test(c.name));
-  let best=-1,bestScore=0.49;
-  DATA.chapters.forEach((c,i)=>{ const s=mdSim(hint,c.name); if(s>bestScore){best=i;bestScore=s;} });
-  return best;
-}
-
-function mdStatusFromLine(line){
-  const cb=line.match(/^\s*[-*]\s*\[(.| )\]/);
-  if(cb){
-    const c=cb[1].toLowerCase();
-    if(c==='x') return 'done';
-    if(c==='~'||c==='/') return 'wip';
-    if(c==='!') return 'block';
-    return 'todo';
-  }
-  const n=mdNorm(line);
-  if(/✓|готово|решен|завършен|приключ|направен/.test(n)) return 'done';
-  if(/⛔|блокир|чака|спрян|изчаква/.test(n)) return 'block';
-  if(/⏳|в процес|частично|продължава|работя по/.test(n)) return 'wip';
-  return null;
-}
-
-function mdParse(text){
-  const changes=[]; // {type:'task'|'ansys'|'deadline', ...}
-  let ctxChapter=-1;
-  for(const raw of text.split(/\r?\n/)){
-    const line=raw.trim();
-    if(!line) continue;
-
-    // Заглавие → контекст за глава
-    const h=line.match(/^#{1,4}\s+(.*)/);
-    if(h){ const ci=mdFindChapter(h[1]); if(ci>=0) ctxChapter=ci; continue; }
-
-    // Мета: ANSYS стъпка / дедлайн
-    let m=line.match(/ansys\s*стъпка[:\s]+(\d+)/i);
-    if(m){ changes.push({type:'ansys', step:+m[1]}); continue; }
-    m=line.match(/дедлайн[:\s]+(\d{4}-\d{2}-\d{2})/i);
-    if(m){ changes.push({type:'deadline', date:m[1]}); continue; }
-
-    // Задача: checkbox ред ИЛИ ред с ключова дума за статус
-    const isCheckbox=/^\s*[-*]\s*\[.?\]/.test(line);
-    const status=mdStatusFromLine(line);
-    if(status===null && !isCheckbox) continue;
-    if(!isCheckbox && !/^[-*•]/.test(line)) continue;   // свободен текст само ако е bullet
-
-    // Извлечи текст и бележка
-    let body=line.replace(/^\s*[-*•]\s*(\[.?\]\s*)?/,'');
-    let note='';
-    if(body.includes('::')){ const p=body.split('::'); body=p[0].trim(); note=p.slice(1).join('::').trim(); }
-    body=body.replace(/[✓⏳⛔✅]/g,'').trim();
-
-    // Глава от префикс "Гл. 4:" в реда или от контекста
-    let ci=ctxChapter;
-    const pref=body.match(/^(гл\.?\s*\d+[^:]*):\s*(.*)/i);
-    if(pref){ const found=mdFindChapter(pref[1]); if(found>=0){ ci=found; body=pref[2].trim(); } }
-    if(ci<0) ci=mdFindChapter(body);
-    if(!body) continue;
-
-    // Съвпадение със съществуваща задача
-    let matchCi=-1, matchTi=-1, bestScore=0.55;
-    const scanChapters = ci>=0 ? [ci] : DATA.chapters.map((_,i)=>i);
-    for(const c of scanChapters){
-      DATA.chapters[c].tasks.forEach((t,ti)=>{
-        const s=mdSim(body,t.t);
-        if(s>bestScore){ matchCi=c; matchTi=ti; bestScore=s; }
-      });
-    }
-    const st=status||'todo';
-    if(matchCi>=0){
-      const t=DATA.chapters[matchCi].tasks[matchTi];
-      if(t.s!==st || (note && note!==t.n)){
-        changes.push({type:'task', action:'update', ci:matchCi, ti:matchTi,
-          label:`${DATA.chapters[matchCi].name} › ${t.t}`, from:t.s, to:st, note});
-      }
-    } else {
-      const targetCi = ci>=0 ? ci : mdEnsureMiscChapter();
-      changes.push({type:'task', action:'add', ci:targetCi,
-        label:`${DATA.chapters[targetCi]?DATA.chapters[targetCi].name:'Разни'} › ${body}`, text:body, to:st, note});
-    }
-  }
-  return changes;
-}
-
-let _miscIdx=null;
-function mdEnsureMiscChapter(){
-  let i=DATA.chapters.findIndex(c=>c.name==='Импортирани / Разни');
-  if(i<0){ DATA.chapters.push({name:'Импортирани / Разни', tasks:[]}); i=DATA.chapters.length-1; }
-  return i;
-}
-
-let _pendingChanges=[];
-window.importMdFiles=async function(files){
-  if(!files||!files.length) return;
-  let all=[];
-  const sorted=[...files].sort((a,b)=>a.name.localeCompare(b.name));
-  for(const f of sorted){
-    const text=await f.text();
-    all=all.concat(mdParse(text));
-  }
-  // дедупликация: последната промяна за една и съща задача печели
-  const seen=new Map();
-  all.forEach((c,i)=>{
-    const key=c.type==='task'? (c.action==='update'? `u${c.ci}-${c.ti}` : `a${mdNorm(c.text||'')}`) : c.type;
-    seen.set(key,i);
-  });
-  _pendingChanges=all.filter((c,i)=>seen.get(
-    c.type==='task'? (c.action==='update'? `u${c.ci}-${c.ti}` : `a${mdNorm(c.text||'')}`) : c.type)===i);
-  document.getElementById('mdFileInput').value='';
-  if(!_pendingChanges.length){
-    alert('Не намерих разпознаваеми промени във файловете. Провери формата (виж помощта в прозореца за импорт) — или ми ги прати в сесия да ги структурирам.');
-    return;
-  }
-  const lbl={done:'готово',wip:'в процес',todo:'предстои',block:'блокирано'};
-  document.getElementById('impSub').textContent=`${files.length} файл(а) · ${_pendingChanges.length} предложени промени`;
-  document.getElementById('impList').innerHTML=_pendingChanges.map((c,i)=>{
-    let what='';
-    if(c.type==='task'&&c.action==='update') what=`<span class="imp-what"><b>${c.label}</b><br><span class="imp-ch">статус: ${lbl[c.from]} → <b style="color:${statusCol[c.to]}">${lbl[c.to]}</b>${c.note?` · бележка: „${c.note}“`:''}</span></span>`;
-    else if(c.type==='task') what=`<span class="imp-what"><b>+ Нова:</b> ${c.label}<br><span class="imp-ch">статус: <b style="color:${statusCol[c.to]}">${lbl[c.to]}</b>${c.note?` · „${c.note}“`:''}</span></span>`;
-    else if(c.type==='ansys') what=`<span class="imp-what"><b>ANSYS стъпка → ${c.step}</b></span>`;
-    else what=`<span class="imp-what"><b>Дедлайн → ${c.date}</b></span>`;
-    return `<label class="imp-row"><input type="checkbox" checked data-i="${i}">${what}</label>`;
-  }).join('');
-  document.getElementById('impOverlay').classList.add('visible');
+  $('tab-'+id).classList.add('active'); btn.classList.add('active');
 };
-window.impClose=function(){ document.getElementById('impOverlay').classList.remove('visible'); _pendingChanges=[]; };
-window.impApply=function(){
-  const boxes=document.querySelectorAll('#impList input[type=checkbox]');
-  let applied=0;
-  boxes.forEach(b=>{
-    if(!b.checked) return;
-    const c=_pendingChanges[+b.dataset.i];
-    if(c.type==='task'&&c.action==='update'){
-      const t=DATA.chapters[c.ci].tasks[c.ti];
-      t.s=c.to; if(c.note) t.n=c.note;
-    } else if(c.type==='task'){
-      DATA.chapters[c.ci].tasks.push({t:c.text, s:c.to, ...(c.note?{n:c.note}:{})});
-    } else if(c.type==='ansys'){
-      DATA.ansys.currentStep=Math.min(Math.max(1,c.step), DATA.ansys.steps.length);
-    } else if(c.type==='deadline'){
-      DATA.meta.deadline=c.date;
-    }
-    applied++;
-  });
-  saveData(DATA);
-  impClose();
-  renderAll();
-  if(applied) setTimeout(()=>alert(`Приложени ${applied} промени. Графикът и статистиките са преизчислени.`),100);
-};
-
-// ── RENDER ALL ────────────────────────────────────────────────────
 function renderAll(){
-  renderHeader();
-  renderBlockers();
-  buildGantt();
-  buildChapters();
-  buildAnsysSteps();
+  renderHeader(); renderBlockers(); renderGantt(); renderChapters(); renderTasks(); renderAnsys();
 }
-
-renderAll();
-
+fetch('../diss-data.json?t='+Date.now())
+  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+  .then(d=>{D=d;renderAll();})
+  .catch(e=>{
+    document.body.innerHTML='<div style="padding:30px;color:#8b949e;font-size:13px">⚠ Липсва <b>docs/diss-data.json</b> — пусни <code>python scripts/diss_build.py</code> и качи промените, или изчакай GitHub Action-а.</div>';
+  });
 })();
 </script>
 </body>

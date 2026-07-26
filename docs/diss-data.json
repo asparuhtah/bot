@@ -1,0 +1,459 @@
+{
+ "generated": "2026-07-26T11:15:06.670426+00:00",
+ "deadline": "2026-12-31",
+ "ganttMeta": {
+  "startYear": 2026,
+  "startMonth": 4,
+  "months": 8
+ },
+ "gantt": [
+  {
+   "name": "ANSYS Mesh",
+   "start": 0.0,
+   "end": 1.2,
+   "col": "#f85149",
+   "crit": true,
+   "ch": "CFD — ANSYS Fluent"
+  },
+  {
+   "name": "ANSYS Fluent runs",
+   "start": 1.2,
+   "end": 3.0,
+   "col": "#f85149",
+   "crit": true,
+   "ch": "CFD — ANSYS Fluent"
+  },
+  {
+   "name": "Измервания (9 реж.)",
+   "start": 1.0,
+   "end": 4.5,
+   "col": "#f85149",
+   "crit": true,
+   "ch": null
+  },
+  {
+   "name": "Гл. 1 — Лит. обзор",
+   "start": 0.0,
+   "end": 2.0,
+   "col": "#d29922",
+   "crit": false,
+   "ch": "Гл. 1 — Литературен обзор"
+  },
+  {
+   "name": "Гл. 2 — Система",
+   "start": 0.0,
+   "end": 1.0,
+   "col": "#3fb950",
+   "crit": false,
+   "ch": "Гл. 2 — Описание на системата"
+  },
+  {
+   "name": "Гл. 3 — Теория",
+   "start": 0.0,
+   "end": 2.5,
+   "col": "#d29922",
+   "crit": false,
+   "ch": "Гл. 3 — Теоретичен анализ"
+  },
+  {
+   "name": "Гл. 4 — Методология",
+   "start": 1.5,
+   "end": 4.0,
+   "col": "#58a6ff",
+   "crit": false,
+   "ch": "Гл. 4 — Методология"
+  },
+  {
+   "name": "Гл. 5 — Резултати",
+   "start": 3.5,
+   "end": 6.0,
+   "col": "#58a6ff",
+   "crit": false,
+   "ch": "Гл. 5 — Резултати"
+  },
+  {
+   "name": "Изводи и препоръки",
+   "start": 5.5,
+   "end": 7.0,
+   "col": "#58a6ff",
+   "crit": false,
+   "ch": "Изводи и препоръки"
+  },
+  {
+   "name": "Редакция / финал",
+   "start": 6.5,
+   "end": 7.8,
+   "col": "#58a6ff",
+   "crit": false,
+   "ch": null
+  },
+  {
+   "name": "Предаване",
+   "start": 7.5,
+   "end": 8.0,
+   "col": "#f85149",
+   "crit": true,
+   "ch": null
+  }
+ ],
+ "chapters": [
+  {
+   "name": "Увод / Въведение",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "5f0190705d",
+     "t": "Актуалност, цел, задачи",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "9d1b30549f",
+     "t": "Хипотеза",
+     "s": "wip",
+     "n": "Зависи от CFD резултати"
+    },
+    {
+     "id": "a0cbf5e0ec",
+     "t": "Структура на труда",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Гл. 1 — Литературен обзор",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "a03a88c6d3",
+     "t": "63 статии събрани",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "f7606cfc67",
+     "t": "Критичен синтез и анализ",
+     "s": "wip",
+     "n": ""
+    },
+    {
+     "id": "51ab363b5f",
+     "t": "Библиография — частично",
+     "s": "wip",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Гл. 2 — Описание на системата",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "0f85bfc783",
+     "t": "Компоненти, хидравлична схема",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "3c462fedcf",
+     "t": "Изчисления буфери, CFD геометрия",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "657267f682",
+     "t": "Финална редакция — повторения",
+     "s": "wip",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Гл. 3 — Теоретичен анализ",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "665bb9d397",
+     "t": "COP / мощност диаграми",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "855769ee54",
+     "t": "Термодинамичен модел",
+     "s": "wip",
+     "n": ""
+    },
+    {
+     "id": "aa4f8c2a22",
+     "t": "Симулация TRNSYS / собствена",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Гл. 4 — Методология",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "b341d86532",
+     "t": "Топлинна схема (Excel)",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "78362dfa24",
+     "t": "Експ. план 9 режима",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "de9d7fc338",
+     "t": "CFD mesh",
+     "s": "block",
+     "n": "Overlapping блокира"
+    },
+    {
+     "id": "6c90d9d96d",
+     "t": "Измервания",
+     "s": "block",
+     "n": "Чака нов сух охладител"
+    }
+   ]
+  },
+  {
+   "name": "CFD — ANSYS Fluent",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "1e5127be03",
+     "t": "Geom_clean.dsco",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "302a116f2e",
+     "t": "14 Boundary Conditions",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "a814dc8607",
+     "t": "Volume Mesh",
+     "s": "block",
+     "n": "Сесия #5 → пролука 1–2mm"
+    },
+    {
+     "id": "0090dcfcab",
+     "t": "Fluent runs 9 режима",
+     "s": "todo",
+     "n": ""
+    },
+    {
+     "id": "11bdaec8f0",
+     "t": "Post-processing",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Гл. 5 — Резултати",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "6a02b910a4",
+     "t": "CFD анализ",
+     "s": "block",
+     "n": "Чака Volume Mesh"
+    },
+    {
+     "id": "8f5044d8de",
+     "t": "Анализ измервания",
+     "s": "block",
+     "n": "Чака сух охладител"
+    },
+    {
+     "id": "bda3675d6b",
+     "t": "Сравнение и обсъждане",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Изводи и препоръки",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "8c9268bd8a",
+     "t": "Изводи",
+     "s": "todo",
+     "n": ""
+    },
+    {
+     "id": "1dfd5b004e",
+     "t": "Препоръки",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  },
+  {
+   "name": "Библиография / Приложения",
+   "words": 0,
+   "target": null,
+   "notes": [],
+   "tasks": [
+    {
+     "id": "b0cc50b4cc",
+     "t": "63 абстракта",
+     "s": "done",
+     "n": ""
+    },
+    {
+     "id": "3c7763390e",
+     "t": "Форматиране по стандарт",
+     "s": "wip",
+     "n": ""
+    },
+    {
+     "id": "7655b2e3c3",
+     "t": "Приложения",
+     "s": "todo",
+     "n": ""
+    }
+   ]
+  }
+ ],
+ "ansys": {
+  "currentStep": 5,
+  "steps": [
+   {
+    "title": "Лиценз грешка → решена",
+    "note": "Рано сутринта / университетски сървър уикенд"
+   },
+   {
+    "title": "Fault-Tolerant workflow → установен",
+    "note": "Standalone Fluent Meshing, НЕ от Workbench"
+   },
+   {
+    "title": "Overlapping (100, 2851, 1650) → решен",
+    "note": "Фантомни Curves изтрити → Geom_clean.dsco"
+   },
+   {
+    "title": "Surface Mesh — 0 skewed cells",
+    "note": "Skewness 0.155 · 16 968 faces · отличен резултат"
+   },
+   {
+    "title": "Overlapping (196, 2727, 1668) → в прогрес",
+    "note": "Discovery: измести HWreturn_HeatExchanger 1–2mm навътре → Geom_clean2.dsco → нов mesh"
+   },
+   {
+    "title": "Volume Mesh → генерирай",
+    "note": "hexcore, Add BL: No, Use Size Field: No"
+   },
+   {
+    "title": "Fluent Setup → 9 режима",
+    "note": "14 BC дефинирани ✓ — готови за конфигурация"
+   },
+   {
+    "title": "CFD runs + post-processing",
+    "note": "Резултати → Гл. 5 Резултати и обсъждане"
+   }
+  ],
+  "rules": "Add Boundary Layers → ВИНАГИ No · Capping стъпката → ПРОПУСНИ винаги · Use Size Field → No · Зареждай Geom_clean2.dsco (не оригинала) · Изтрий FM_Parapanov папката преди всеки старт",
+  "regions": [
+   [
+    "Обект",
+    "Type",
+    "Extraction",
+    "Volume Fill"
+   ],
+   [
+    "chilledwater_in",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ],
+   [
+    "chilledwater_out",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ],
+   [
+    "fluid-region-1",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ],
+   [
+    "geom_clean2",
+    "void",
+    "none",
+    "none"
+   ],
+   [
+    "hw_heatexchanger",
+    "void",
+    "none",
+    "none"
+   ],
+   [
+    "hwin_adsorption_chiller",
+    "void",
+    "none",
+    "none"
+   ],
+   [
+    "hwreturn_adsorbtionchiller",
+    "void",
+    "none",
+    "none"
+   ],
+   [
+    "hwreturn_heatexchanger",
+    "void",
+    "none",
+    "none"
+   ],
+   [
+    "recool_in",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ],
+   [
+    "recool_out",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ],
+   [
+    "water_volume",
+    "fluid",
+    "wrap",
+    "hexcore"
+   ]
+  ]
+ }
+}
