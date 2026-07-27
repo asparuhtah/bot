@@ -198,5 +198,215 @@
       "pnl": -35.61,
       "pct": -8.93
     }
-  ]
+  ],
+  "garmin": {
+    "2026-07-27": {
+      "date": "2026-07-27",
+      "steps": 2658,
+      "resting_hr": 51,
+      "body_battery": 48,
+      "avg_stress": 33,
+      "sleep": {
+        "total_min": 477,
+        "deep_min": 60,
+        "light_min": 371,
+        "rem_min": 46,
+        "awake_min": 35,
+        "score": 66,
+        "start": 1785109860000,
+        "end": 1785141060000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-07-27 11:52:03",
+          "duration_s": 1207,
+          "distance_m": 0.0,
+          "calories": 110,
+          "avg_hr": 103,
+          "max_hr": 156,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-07-26": {
+      "date": "2026-07-26",
+      "steps": 6878,
+      "resting_hr": 48,
+      "body_battery": 71,
+      "avg_stress": 45,
+      "sleep": {
+        "total_min": 345,
+        "deep_min": 77,
+        "light_min": 219,
+        "rem_min": 49,
+        "awake_min": 0,
+        "score": 75,
+        "start": 1785023040000,
+        "end": 1785043740000
+      },
+      "activities": []
+    },
+    "2026-07-25": {
+      "date": "2026-07-25",
+      "steps": 6097,
+      "resting_hr": 47,
+      "body_battery": 2,
+      "avg_stress": 35,
+      "sleep": {
+        "total_min": 423,
+        "deep_min": 87,
+        "light_min": 255,
+        "rem_min": 81,
+        "awake_min": 0,
+        "score": 83,
+        "start": 1784932380000,
+        "end": 1784957760000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-07-25 09:05:13",
+          "duration_s": 1517,
+          "distance_m": 0.0,
+          "calories": 161,
+          "avg_hr": 110,
+          "max_hr": 167,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-07-24": {
+      "date": "2026-07-24",
+      "steps": 6441,
+      "resting_hr": 44,
+      "body_battery": 77,
+      "avg_stress": 27,
+      "sleep": {
+        "total_min": 424,
+        "deep_min": 54,
+        "light_min": 285,
+        "rem_min": 85,
+        "awake_min": 5,
+        "score": 84,
+        "start": 1784849160000,
+        "end": 1784874900000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-07-24 07:12:49",
+          "duration_s": 1299,
+          "distance_m": 0.0,
+          "calories": 134,
+          "avg_hr": 114,
+          "max_hr": 177,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-07-23": {
+      "date": "2026-07-23",
+      "steps": 10627,
+      "resting_hr": 50,
+      "body_battery": 57,
+      "avg_stress": 38,
+      "sleep": {
+        "total_min": 205,
+        "deep_min": 67,
+        "light_min": 125,
+        "rem_min": 13,
+        "awake_min": 23,
+        "score": 31,
+        "start": 1784775180000,
+        "end": 1784788860000
+      },
+      "activities": [
+        {
+          "type": "hiit",
+          "name": "HIIT",
+          "start": "2026-07-23 01:54:22",
+          "duration_s": 1201,
+          "distance_m": 0.0,
+          "calories": 135,
+          "avg_hr": 119,
+          "max_hr": 171,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "hiit",
+          "name": "HIIT",
+          "start": "2026-07-23 01:33:01",
+          "duration_s": 1248,
+          "distance_m": 0.0,
+          "calories": 124,
+          "avg_hr": 109,
+          "max_hr": 145,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "hiit",
+          "name": "HIIT",
+          "start": "2026-07-23 01:02:01",
+          "duration_s": 1288,
+          "distance_m": 0.0,
+          "calories": 99,
+          "avg_hr": 106,
+          "max_hr": 155,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-07-23 00:24:36",
+          "duration_s": 2123,
+          "distance_m": 0.0,
+          "calories": 126,
+          "avg_hr": 88,
+          "max_hr": 143,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-07-22": {
+      "date": "2026-07-22",
+      "steps": 18502,
+      "resting_hr": 47,
+      "body_battery": 89,
+      "avg_stress": 32,
+      "sleep": {
+        "total_min": 419,
+        "deep_min": 65,
+        "light_min": 286,
+        "rem_min": 68,
+        "awake_min": 9,
+        "score": 82,
+        "start": 1784675640000,
+        "end": 1784701320000
+      },
+      "activities": []
+    },
+    "2026-07-21": {
+      "date": "2026-07-21",
+      "steps": 10293,
+      "resting_hr": 53,
+      "body_battery": 39,
+      "avg_stress": 43,
+      "sleep": {
+        "total_min": 322,
+        "deep_min": 63,
+        "light_min": 259,
+        "rem_min": 0,
+        "awake_min": 15,
+        "score": 54,
+        "start": 1784603700000,
+        "end": 1784623920000
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-07-27"
 }
