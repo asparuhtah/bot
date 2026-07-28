@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-07-27T10:35:52.004749+00:00",
-  "eurUsd": 1.1396,
+  "lastUpdated": "2026-07-28T09:32:06.602332+00:00",
+  "eurUsd": 1.1364,
   "prices": {
-    "BTC-USD": 57295.0,
-    "ETC-USD": 6.16,
-    "FLR-USD": 0.005635,
+    "BTC-USD": 55812.0,
+    "ETC-USD": 5.91,
+    "FLR-USD": 0.005493,
     "EXI2.DE": 109.52,
-    "MRVL": 165.566866,
+    "MRVL": 166.033087,
     "DFEN.DE": 55.03,
-    "NVDA": 178.843454,
+    "NVDA": 179.347061,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 363.82,
-    "pnl": -34.85,
-    "pnlPct": -8.74
+    "totalCurrent": 360.03,
+    "pnl": -38.64,
+    "pnlPct": -9.69
   },
   "history": [
-    {
-      "date": "2026-06-28",
-      "total": 249.31,
-      "pnl": -38.76,
-      "pct": -13.46
-    },
     {
       "date": "2026-06-29",
       "total": 248.33,
@@ -197,358 +191,154 @@
       "total": 363.82,
       "pnl": -34.85,
       "pct": -8.74
+    },
+    {
+      "date": "2026-07-28",
+      "total": 360.03,
+      "pnl": -38.64,
+      "pct": -9.69
     }
   ],
   "news": [
     {
-      "title": "SpaceX Stock Is Down 49% — Elon Musk Says That’s Exactly What Investors Should Expect",
-      "link": "https://247wallst.com/investing/2026/07/27/spacex-stock-is-down-49-elon-musk-says-thats-exactly-what-investors-should-expect/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Where Will Quantinuum Stock Be in 1 Year?",
-      "link": "https://www.fool.com/investing/2026/07/27/where-will-quantinuum-stock-be-in-1-year/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 AI Stocks to Buy Now While They Are Still Cheap",
-      "link": "https://www.fool.com/investing/2026/07/27/3-ai-stocks-to-buy-now-while-they-are-still-cheap/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: This Quantum Computing Stock Is Going to Plummet After Aug. 6",
-      "link": "https://www.fool.com/investing/2026/07/27/prediction-quantum-computing-stock-plummet-aug-6/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nebius Just Revealed the Biggest Problem Facing Neocloud Stocks",
-      "link": "https://www.fool.com/investing/2026/07/27/nebius-just-revealed-the-biggest-problem/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why is Bernstein bullish on memory stocks after Samsung, Nvidia deals?",
-      "link": "https://finance.yahoo.com/technology/articles/why-bernstein-bullish-memory-stocks-095139149.html?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If I Could Tell Every Investor 1 Thing About the Next Bear Market, It's This",
-      "link": "https://www.fool.com/investing/2026/07/27/if-i-could-tell-every-investor-1-thing-about-the-n/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Cathie Wood's Ark Bought $21.3 Million of SpaceX Stock as Shares Fell 45% From Their Record High. Wall Street's Median Price Target Is $243.81, 111.5% Above the Current Close.",
-      "link": "https://www.fool.com/investing/2026/07/27/cathie-woods-ark-bought-213-million-of-spacex-stoc/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Solana and Hyperliquid ETFs Continue to See New Inflows. Should Investors Be Bullish on SOL and HYPE?",
-      "link": "https://www.fool.com/investing/2026/07/27/solana-and-hyperliquid-etfs-continue-to-see-new-in/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Ranking the \"Magnificent Seven\" From Most to Least Attractive, Based on Future Cash Flow",
-      "link": "https://www.fool.com/investing/2026/07/27/ranking-magnificent-seven-most-to-least-attractive/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Morgan Stanley’s Wilson Says AI Adoption Key to Profit Outlook",
-      "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-wilson-says-ai-092445879.html?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "MercadoLibre Stock: Why This E-Commerce Leader Can Outperform the Market Over the Next 5 Years",
-      "link": "https://www.fool.com/investing/2026/07/27/mercadolibre-stock-outperform-next-five-years/?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel More Than Quadrupled In A Year, So Why Has It Cooled",
-      "link": "https://www.trefis.com/articles/608973/intel-more-than-quadrupled-in-a-year-so-why-has-it-cooled/2026-07-27?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Micron Traded Its Cost-Cutting Story For A Contract Story",
-      "link": "https://www.trefis.com/articles/608970/micron-traded-its-cost-cutting-story-for-a-contract-story/2026-07-27?.tsrc=rss",
-      "date": "2026-07-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-07-28": {
+      "title": "Prediction: Warren Buffett's Successor, Greg Abel, Extended a Dubious 15-Quarter Net-Selling Streak at Berkshire Hathaway in the 2nd Quarter",
+      "link": "https://www.fool.com/investing/2026/07/28/warren-buffett-abel-extend-15-quarter-sell-streak/?.tsrc=rss",
       "date": "2026-07-28",
-      "steps": 165,
-      "resting_hr": 47,
-      "body_battery": 88,
-      "avg_stress": 7,
-      "sleep": {
-        "total_min": 461,
-        "deep_min": 62,
-        "light_min": 324,
-        "rem_min": 75,
-        "awake_min": 30,
-        "score": 79,
-        "start": 1785193920000,
-        "end": 1785223380000
-      },
-      "activities": []
-    },
-    "2026-07-27": {
-      "date": "2026-07-27",
-      "steps": 4510,
-      "resting_hr": 51,
-      "body_battery": 53,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 477,
-        "deep_min": 60,
-        "light_min": 371,
-        "rem_min": 46,
-        "awake_min": 35,
-        "score": 66,
-        "start": 1785109860000,
-        "end": 1785141060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-27 11:52:03",
-          "duration_s": 1207,
-          "distance_m": 0.0,
-          "calories": 110,
-          "avg_hr": 103,
-          "max_hr": 156,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-26": {
-      "date": "2026-07-26",
-      "steps": 6878,
-      "resting_hr": 48,
-      "body_battery": 71,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 345,
-        "deep_min": 77,
-        "light_min": 219,
-        "rem_min": 49,
-        "awake_min": 0,
-        "score": 75,
-        "start": 1785023040000,
-        "end": 1785043740000
-      },
-      "activities": []
-    },
-    "2026-07-25": {
-      "date": "2026-07-25",
-      "steps": 6097,
-      "resting_hr": 47,
-      "body_battery": 2,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 423,
-        "deep_min": 87,
-        "light_min": 255,
-        "rem_min": 81,
-        "awake_min": 0,
-        "score": 83,
-        "start": 1784932380000,
-        "end": 1784957760000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-25 09:05:13",
-          "duration_s": 1517,
-          "distance_m": 0.0,
-          "calories": 161,
-          "avg_hr": 110,
-          "max_hr": 167,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "U.S. chip stocks extend losses on AI financing, China competition fears",
+      "link": "https://finance.yahoo.com/technology/ai/articles/u-chip-stocks-extend-losses-092307317.html?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-24": {
-      "date": "2026-07-24",
-      "steps": 6441,
-      "resting_hr": 44,
-      "body_battery": 77,
-      "avg_stress": 27,
-      "sleep": {
-        "total_min": 424,
-        "deep_min": 54,
-        "light_min": 285,
-        "rem_min": 85,
-        "awake_min": 5,
-        "score": 84,
-        "start": 1784849160000,
-        "end": 1784874900000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-24 07:12:49",
-          "duration_s": 1299,
-          "distance_m": 0.0,
-          "calories": 134,
-          "avg_hr": 114,
-          "max_hr": 177,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "1 Popular Cryptocurrency to Buy Before It Soars 13,000%, According to Bitmine's Tom Lee",
+      "link": "https://www.fool.com/investing/2026/07/28/1-cryptocurrency-buy-soars-13000-bitmines-tom-lee/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-23": {
-      "date": "2026-07-23",
-      "steps": 10627,
-      "resting_hr": 50,
-      "body_battery": 57,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 205,
-        "deep_min": 67,
-        "light_min": 125,
-        "rem_min": 13,
-        "awake_min": 23,
-        "score": 31,
-        "start": 1784775180000,
-        "end": 1784788860000
-      },
-      "activities": [
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-07-23 01:54:22",
-          "duration_s": 1201,
-          "distance_m": 0.0,
-          "calories": 135,
-          "avg_hr": 119,
-          "max_hr": 171,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-07-23 01:33:01",
-          "duration_s": 1248,
-          "distance_m": 0.0,
-          "calories": 124,
-          "avg_hr": 109,
-          "max_hr": 145,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-07-23 01:02:01",
-          "duration_s": 1288,
-          "distance_m": 0.0,
-          "calories": 99,
-          "avg_hr": 106,
-          "max_hr": 155,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-23 00:24:36",
-          "duration_s": 2123,
-          "distance_m": 0.0,
-          "calories": 126,
-          "avg_hr": 88,
-          "max_hr": 143,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Should You Buy Meta Platforms Stock Before July 29? Wall Street Has a Clear Answer for Investors.",
+      "link": "https://www.fool.com/investing/2026/07/28/buy-meta-stock-before-july-29-wall-street-answer/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-22": {
-      "date": "2026-07-22",
-      "steps": 18502,
-      "resting_hr": 47,
-      "body_battery": 89,
-      "avg_stress": 32,
-      "sleep": {
-        "total_min": 419,
-        "deep_min": 65,
-        "light_min": 286,
-        "rem_min": 68,
-        "awake_min": 9,
-        "score": 82,
-        "start": 1784675640000,
-        "end": 1784701320000
-      },
-      "activities": []
+    {
+      "title": "Market Chatter: Microsoft-Backed OpenAI, Nvidia CEOs to Meet Sen. Warner After AI Security Test",
+      "link": "https://finance.yahoo.com/technology/ai/articles/market-chatter-microsoft-backed-openai-091223219.html?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "1 AI Stock to Buy Before It Soars 150%, According to a Wall Street Analyst (Hint: Not Micron or Sandisk)",
+      "link": "https://www.fool.com/investing/2026/07/28/1-ai-stock-buy-before-soar-150-wall-st-not-micron/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Cadence Stock Can Be an AI Winner. The Earnings Prove It.",
+      "link": "https://finance.yahoo.com/m/4f4570d5-881e-3137-a175-217fff5870f4/cadence-stock-can-be-an-ai.html?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Will Google's $200 Billion AI Bet Pay Off? History Says It Will.",
+      "link": "https://www.fool.com/investing/2026/07/28/will-googles-200-billion-ai-bet-pay-off-history-sa/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Slip As Korea Chip Shock Dents AI Memory Heavyweights Ahead Of Fed Decision: Why NVDA, SNDK, MU, APLD, SPCX, SLS, CAPR Are In Focus",
+      "link": "https://stocktwits.com/news-articles/markets/equity/nasdaq-sp500-futures-slip-korea-chip-shock-ai-memory-fed-decision-why-nvda-sndk-mu-apld-spcx-sls-capr-in-focus/cZZCK96RJG0?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Wall Street's Average Price Target for AMD Implies Only 9% Upside. Is the Stock a Buy, Sell, or Hold?",
+      "link": "https://www.fool.com/investing/2026/07/28/amd-stock-buy-sell-or-hold/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is SpaceX a No-Brainer Buy Below $120? (Hint: The Answer May Surprise You)",
+      "link": "https://www.fool.com/investing/2026/07/28/is-spacex-a-no-brainer-buy-below-125-hint-the-answ/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Market Chatter: Nvidia Employee Detained in Taiwan AI Chip-Smuggling Probe",
+      "link": "https://finance.yahoo.com/technology/ai/articles/market-chatter-nvidia-employee-detained-084001862.html?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "History Says Memory Stocks Like Micron and Sandisk Rarely Stay This Profitable for Long. Here's the Case for Why It's Different This Time.",
+      "link": "https://www.fool.com/investing/2026/07/28/history-memory-stocks-micron-sandisk-profit/?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stock market today: S&P 500, Nasdaq futures slide as chip sell-off deepens",
+      "link": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-july-28-dow-sp-500-nasdaq-082832371.html?.tsrc=rss",
+      "date": "2026-07-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-07-28"
+  ]
 }
