@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-07-29T09:33:29.499433+00:00",
-  "eurUsd": 1.1394,
+  "lastUpdated": "2026-07-30T09:25:53.703775+00:00",
+  "eurUsd": 1.146,
   "prices": {
-    "BTC-USD": 56533.0,
-    "ETC-USD": 5.89,
-    "FLR-USD": 0.005517,
+    "BTC-USD": 56205.0,
+    "ETC-USD": 5.92,
+    "FLR-USD": 0.005534,
     "EXI2.DE": 109.52,
-    "MRVL": 165.595928,
+    "MRVL": 164.642234,
     "DFEN.DE": 55.03,
-    "NVDA": 178.874846,
+    "NVDA": 177.844677,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 360.78,
-    "pnl": -37.89,
-    "pnlPct": -9.5
+    "totalCurrent": 359.85,
+    "pnl": -38.82,
+    "pnlPct": -9.74
   },
   "history": [
-    {
-      "date": "2026-06-30",
-      "total": 247.83,
-      "pnl": -40.24,
-      "pct": -13.97
-    },
     {
       "date": "2026-07-01",
       "total": 246.49,
@@ -197,337 +191,154 @@
       "total": 360.78,
       "pnl": -37.89,
       "pct": -9.5
+    },
+    {
+      "date": "2026-07-30",
+      "total": 359.85,
+      "pnl": -38.82,
+      "pct": -9.74
     }
   ],
   "news": [
     {
-      "title": "Anthropic's lonely island",
-      "link": "https://www.axios.com/2026/07/29/anthropic-claude-open-models-ban-china#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Investors Just Got Bad News About President Trump's Economy. It Hints at a Big Move in the S&P 500 and Nasdaq.",
-      "link": "https://www.fool.com/investing/2026/07/29/stock-market-investors-bad-news-trumps-economy/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Under Greg Abel, Berkshire Hathaway Will Hold This Warren Buffett Stock for Decades for This Remarkably Simple Reason",
-      "link": "https://www.fool.com/investing/2026/07/29/prediction-under-greg-abel-berkshire-hathaway-will/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "South Korean chipmaker SK hynix reports 1,242% profit surge on booming AI demand",
-      "link": "https://www.euronews.com/2026/07/29/south-korean-chipmaker-sk-hynix-reports-1242-profit-surge-on-booming-ai-demand?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "122,000 Reasons to Believe This Turnaround Story Stock Will Soar",
-      "link": "https://www.fool.com/investing/2026/07/29/reasons-believe-turnaround-story-stock-stla/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Should You Buy This Monster Growth Stock Before Its 2-for-1 Stock Split Takes Effect on Aug. 11?",
-      "link": "https://www.fool.com/investing/2026/07/29/should-you-buy-this-monster-growth-stock-before-it/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Federal Reserve Should Raise Interest Rates Today, but It Won't for One Fundamental Reason",
-      "link": "https://www.fool.com/investing/2026/07/29/fed-should-raise-interest-rates-but-wont-1-reason/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Amazon CEO Andy Jassy Just Sold $25 Billion in Bonds to Finance the Company's AI Data Center Build-Out. Amazon Has Committed $200 Billion in Capex for 2026.",
-      "link": "https://www.fool.com/investing/2026/07/29/amazon-ceo-andy-jassy-just-sold-25-billion-in-bond/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "China’s Moonshot AI Passes Funding Goal to Hit $35 Billion Value",
-      "link": "https://finance.yahoo.com/technology/ai/articles/china-moonshot-ai-passes-funding-081902952.html?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Threat Out of China Creeps Up on ASML: Is the Dip in the Stock Worth Buying?",
-      "link": "https://www.fool.com/investing/2026/07/29/threat-china-creeps-up-asml-is-dip-stock-buy/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Experts Are Sounding the Alarm Over an AI Bubble. Here's What History Says Investors Should Do Right Now.",
-      "link": "https://www.fool.com/investing/2026/07/29/experts-are-sounding-the-alarm-over-an-ai-bubble-h/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Much Will Your Social Security Check Increase in 2027? Early Numbers Offer Clues.",
-      "link": "https://www.fool.com/retirement/2026/07/29/how-much-will-your-social-security-check-increase/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Binance Adds 10 More Tokenized Stocks to Its bStocks Lineup",
-      "link": "https://beincrypto.com/binance-bstocks-10-new-tokenized-stocks/?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Life Time Group and Strategy have been highlighted as Zacks Bull and Bear of the Day",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/life-time-group-strategy-highlighted-072400702.html?.tsrc=rss",
-      "date": "2026-07-29",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-07-30": {
+      "title": "Prediction: This Will Be Palantir's Stock Price in a Year (Hint: It's Time to Buy)",
+      "link": "https://www.fool.com/investing/2026/07/30/this-be-palantir-stock-price-in-year-time-to-buy/?.tsrc=rss",
       "date": "2026-07-30",
-      "steps": 1825,
-      "resting_hr": 47,
-      "body_battery": 82,
-      "avg_stress": 14,
-      "sleep": {
-        "total_min": 371,
-        "deep_min": 65,
-        "light_min": 275,
-        "rem_min": 31,
-        "awake_min": 5,
-        "score": 71,
-        "start": 1785366780000,
-        "end": 1785389340000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-30 09:43:11",
-          "duration_s": 227,
-          "distance_m": 0.0,
-          "calories": 29,
-          "avg_hr": 116,
-          "max_hr": 154,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-29": {
-      "date": "2026-07-29",
-      "steps": 4157,
-      "resting_hr": 52,
-      "body_battery": 38,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 357,
-        "deep_min": 108,
-        "light_min": 177,
-        "rem_min": 72,
-        "awake_min": 0,
-        "score": 73,
-        "start": 1785290280000,
-        "end": 1785311700000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Slivnitsa Open Water Swimming",
-          "start": "2026-07-29 16:20:05",
-          "duration_s": 682,
-          "distance_m": 1286.0,
-          "calories": 265,
-          "avg_hr": 111,
-          "max_hr": 111,
-          "avg_speed": 1.88
-        }
+    {
+      "title": "These 3 Oil Stocks Surged in the First Half of 2026. Here's the Best One to Buy for the Second Half.",
+      "link": "https://www.fool.com/investing/2026/07/30/these-3-oil-stocks-surged-in-the-first-half-of-202/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-28": {
-      "date": "2026-07-28",
-      "steps": 23702,
-      "resting_hr": 47,
-      "body_battery": 88,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 461,
-        "deep_min": 62,
-        "light_min": 324,
-        "rem_min": 75,
-        "awake_min": 30,
-        "score": 79,
-        "start": 1785193920000,
-        "end": 1785223380000
-      },
-      "activities": []
-    },
-    "2026-07-27": {
-      "date": "2026-07-27",
-      "steps": 4510,
-      "resting_hr": 51,
-      "body_battery": 53,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 477,
-        "deep_min": 60,
-        "light_min": 371,
-        "rem_min": 46,
-        "awake_min": 35,
-        "score": 66,
-        "start": 1785109860000,
-        "end": 1785141060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-27 11:52:03",
-          "duration_s": 1207,
-          "distance_m": 0.0,
-          "calories": 110,
-          "avg_hr": 103,
-          "max_hr": 156,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Alphabet Will Spend as Much as $205 Billion This Year. The Depreciation Bill Starts Landing in 2027.",
+      "link": "https://www.fool.com/investing/2026/07/30/alphabet-will-spend-as-much-as-205-billion-this-ye/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-26": {
-      "date": "2026-07-26",
-      "steps": 6878,
-      "resting_hr": 48,
-      "body_battery": 71,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 345,
-        "deep_min": 77,
-        "light_min": 219,
-        "rem_min": 49,
-        "awake_min": 0,
-        "score": 75,
-        "start": 1785023040000,
-        "end": 1785043740000
-      },
-      "activities": []
-    },
-    "2026-07-25": {
-      "date": "2026-07-25",
-      "steps": 6097,
-      "resting_hr": 47,
-      "body_battery": 2,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 423,
-        "deep_min": 87,
-        "light_min": 255,
-        "rem_min": 81,
-        "awake_min": 0,
-        "score": 83,
-        "start": 1784932380000,
-        "end": 1784957760000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-25 09:05:13",
-          "duration_s": 1517,
-          "distance_m": 0.0,
-          "calories": 161,
-          "avg_hr": 110,
-          "max_hr": 167,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Forget the Fed Meeting! The Most Important Inflation Metric Is Being Released Today.",
+      "link": "https://www.fool.com/investing/2026/07/30/forget-fed-meeting-most-important-inflation-metric/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-24": {
-      "date": "2026-07-24",
-      "steps": 6441,
-      "resting_hr": 44,
-      "body_battery": 77,
-      "avg_stress": 27,
-      "sleep": {
-        "total_min": 424,
-        "deep_min": 54,
-        "light_min": 285,
-        "rem_min": 85,
-        "awake_min": 5,
-        "score": 84,
-        "start": 1784849160000,
-        "end": 1784874900000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-24 07:12:49",
-          "duration_s": 1299,
-          "distance_m": 0.0,
-          "calories": 134,
-          "avg_hr": 114,
-          "max_hr": 177,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Rivian Reports Earnings on July 30, Followed by Lucid on Aug. 4. Here's the Better Buy Now.",
+      "link": "https://www.fool.com/investing/2026/07/30/rivian-reports-earnings-on-july-30-followed-by-luc/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I Was Wrong About Meta Earnings, But the Stock Is Still a Buy",
+      "link": "https://www.fool.com/investing/2026/07/30/i-was-wrong-about-meta-earnings-but-the-stock-is-s/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Flirting with $5 trillion, Apple has never been more valuable—or a riskier bet for investors",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/flirting-5-trillion-apple-never-070000702.html?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Cash-Producing Stocks Worth Investigating and 1 We Brush Off",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-worth-065302068.html?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "This Investment Could Turn $1,000 Into $6,700 Without Picking a Single Stock. Here's the Math. (Keep Adding Money, and It Could Grow to $687,000.)",
+      "link": "https://www.fool.com/investing/2026/07/30/this-investment-could-turn-1000-into-6700-without/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Jensen Huang's Bullish Call on the AI Market Can Make Nvidia a $5 Trillion Company Again",
+      "link": "https://www.fool.com/investing/2026/07/30/jensen-huangs-bullish-call-on-the-ai-market-can-ma/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Starbucks Just Raised Starbucks' Full-Year Profit Guidance by About 10%. Here's the Number Behind It.",
+      "link": "https://www.fool.com/investing/2026/07/29/starbucks-just-raised-starbucks-full-year-profit-g/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "AI data centre supplier Zhongji InnoLight tumbles on Hong Kong debut",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ai-data-centre-supplier-zhongji-040541416.html?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Johnson Controls International Q3 Earnings Call Highlights",
+      "link": "https://www.marketbeat.com/instant-alerts/johnson-controls-international-q3-earnings-call-highlights-2026-07-29/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meta Generated $31.9 Billion in Operating Cash Flow Last Quarter and Kept Only $784 Million of It. Here's Where the Rest Went.",
+      "link": "https://www.fool.com/investing/2026/07/29/meta-generated-319-billion-in-operating-cash-flow/?.tsrc=rss",
+      "date": "2026-07-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-07-30"
+  ]
 }
