@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-02T09:05:40.663063+00:00",
-  "eurUsd": 1.1527,
+  "lastUpdated": "2026-08-03T10:36:02.494637+00:00",
+  "eurUsd": 1.152,
   "prices": {
-    "BTC-USD": 54704.0,
-    "ETC-USD": 5.73,
-    "FLR-USD": 0.005427,
+    "BTC-USD": 54339.0,
+    "ETC-USD": 5.69,
+    "FLR-USD": 0.005447,
     "EXI2.DE": 109.52,
-    "MRVL": 163.685261,
+    "MRVL": 163.784722,
     "DFEN.DE": 55.03,
-    "NVDA": 176.810966,
+    "NVDA": 176.918403,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 355.52,
-    "pnl": -43.15,
-    "pnlPct": -10.82
+    "totalCurrent": 354.73,
+    "pnl": -43.94,
+    "pnlPct": -11.02
   },
   "history": [
-    {
-      "date": "2026-07-04",
-      "total": 251.2,
-      "pnl": -36.87,
-      "pct": -12.8
-    },
     {
       "date": "2026-07-05",
       "total": 250.74,
@@ -197,13 +191,19 @@
       "total": 355.52,
       "pnl": -43.15,
       "pct": -10.82
+    },
+    {
+      "date": "2026-08-03",
+      "total": 354.73,
+      "pnl": -43.94,
+      "pct": -11.02
     }
   ],
   "news": [
     {
-      "title": "Billionaire Steve Cohen Is Buying This Overlooked Stock While Dumping Big Tech",
-      "link": "https://www.fool.com/investing/2026/08/02/billionaire-steve-cohen-is-buying-this-overlooked/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "3 Reasons to Buy Bloom Energy Stock -- and 3 Reasons to Wait",
+      "link": "https://www.fool.com/investing/2026/08/03/3-reasons-to-buy-bloom-energy-stock-and-3-reasons/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -211,9 +211,9 @@
       ]
     },
     {
-      "title": "Warren Buffett Thinks Investors Are \"Gambling\" Right Now. Here's What Happened the Last Time He Uttered Those Words.",
-      "link": "https://www.fool.com/investing/2026/08/02/warren-buffett-thinks-investors-are-gambling-right/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Mark Zuckerberg Just Explained Why Iren Has an Edge Over Other Neoclouds",
+      "link": "https://www.fool.com/investing/2026/08/03/mark-zuckerberg-just-explained-why-iren-has-an-edg/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -221,9 +221,9 @@
       ]
     },
     {
-      "title": "President Donald Trump Expects the Stock Market to \"Go Through the Roof,\" but His Own Policies Can Prevent That From Happening",
-      "link": "https://www.fool.com/investing/2026/08/02/trump-expects-stock-market-to-go-through-the-roof/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Oracle’s Massive AI Bet Has Already Cost Larry Ellison $207 Billion. Analyst Warns the AI Bubble Is 17 Times Bigger Than the Dot-Com Bubble.",
+      "link": "https://247wallst.com/investing/2026/08/03/oracles-massive-ai-bet-has-already-cost-larry-ellison-207-billion-analyst-warns-the-ai-bubble-is-17-times-bigger-than-the-dot-com-bubble/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -231,9 +231,9 @@
       ]
     },
     {
-      "title": "1 Incredible Reason to Buy Qualcomm Stock Right Now",
-      "link": "https://www.fool.com/investing/2026/08/02/1-incredible-reason-buy-qualcomm-stock-right-now/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "15% Of Israel Englander's $240 Billion Millennium Portfolio Sits in Just 10 Stocks",
+      "link": "https://www.fool.com/investing/2026/08/03/15-of-israel-englanders-240-billion-millennium-por/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -241,9 +241,9 @@
       ]
     },
     {
-      "title": "Here Are My 3 Top Artificial Intelligence (AI) Stocks to Buy in August",
-      "link": "https://www.fool.com/investing/2026/08/02/here-are-my-3-top-artificial-intelligence-ai-stock/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "If I Had $1,000 to Invest Today, Here's the Trillion-Dollar Stock I'd Buy Instead of SpaceX",
+      "link": "https://www.fool.com/investing/2026/08/03/if-1000-invest-trillion-dollar-stock-buy-spacex/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -251,9 +251,9 @@
       ]
     },
     {
-      "title": "Roblox and Reddit Stocks Just Both Crashed More Than 20%, but Only One Is a Buy",
-      "link": "https://www.fool.com/investing/2026/08/02/roblox-and-reddit-stocks-just-both-crashed-more-th/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "P&G Guided Below Estimates and Sits 5% Above a 52-Week Low. I'm Not Buying It Yet, and Here's What Would Change That.",
+      "link": "https://www.fool.com/investing/2026/08/03/pg-guided-below-estimates-and-sits-5-above-a-52-we/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -261,9 +261,9 @@
       ]
     },
     {
-      "title": "Prediction: Nvidia Stock Will Skyrocket on Aug. 26",
-      "link": "https://www.fool.com/investing/2026/08/02/prediction-nvidia-stock-will-skyrocket-on-aug-26/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Warren Buffett's Successor, Greg Abel, Started His Tenure With a Bang by Slashing Berkshire's Chevron Stake and Making a Virtual Monopoly the New No. 5 Holding",
+      "link": "https://www.fool.com/investing/2026/08/03/warren-buffett-successor-abel-sell-cvx-buy-googl/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -271,9 +271,9 @@
       ]
     },
     {
-      "title": "Meta Trades at a Forward P/E of 17, Below Its 5-Year Average, Making the Stock a Potential Bargain as Zuckerberg's Net Worth Rebounds",
-      "link": "https://www.fool.com/investing/2026/08/02/meta-trades-at-a-forward-pe-of-17-below-its-5-year/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Some Investors Are Panicking About Memory Stocks. Micron Shareholders Should Keep a Cool Head.",
+      "link": "https://www.fool.com/investing/2026/08/03/some-investors-are-panicking-about-memory-stocks-m/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -281,9 +281,9 @@
       ]
     },
     {
-      "title": "Don't Buy Strategy Stock When You Can Just Buy Bitcoin",
-      "link": "https://www.fool.com/investing/2026/08/02/dont-buy-strategy-stock-when-you-can-just-buy-bitc/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Billionaire Ken Griffin Just Invested $400 Million Into Crypto.com Via Citadel Securities. Here's Why That Could Be Bullish For Crypto.",
+      "link": "https://www.fool.com/investing/2026/08/03/billionaire-ken-griffin-just-invested-400-million/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -291,9 +291,9 @@
       ]
     },
     {
-      "title": "If the $1.3 Trillion Chip Stock Sell-Off Was a Warning for the S&P 500, History Repeatedly Suggests 1 Move to Avoid",
-      "link": "https://www.fool.com/investing/2026/08/02/if-the-13-trillion-chip-stock-sell-off-was-a-warni/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Semiconductor Stocks Are Down 22%. Here's the 1 Chip Stock I'd Buy Right Now.",
+      "link": "https://www.fool.com/investing/2026/08/03/semiconductor-stocks-down-chip-stock-buy/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -301,9 +301,9 @@
       ]
     },
     {
-      "title": "An Analyst Just Named Mark Zuckerberg's Meta a Top Large-Cap Long Idea, Citing AI-Driven Ad Momentum and an Attractive Valuation",
-      "link": "https://www.fool.com/investing/2026/08/02/an-analyst-just-named-mark-zuckerbergs-meta-a-top/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Ciena and Boston Beer have been highlighted as Zacks Bull and Bear of the Day",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ciena-boston-beer-highlighted-zacks-084000097.html?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -311,9 +311,9 @@
       ]
     },
     {
-      "title": "Cathie Wood Is Buying SpaceX Stock as it Sinks 50% Below Its Post-IPO High. Should You Follow Her?",
-      "link": "https://www.fool.com/investing/2026/08/02/cathie-wood-is-buying-spacex-stock-as-it-sinks-50/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "3 Big Takeaways From Microsoft's Earnings",
+      "link": "https://www.fool.com/investing/2026/08/03/3-big-takeaways-from-microsofts-earnings/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -321,9 +321,9 @@
       ]
     },
     {
-      "title": "Is Ferrari a Buy After Its Latest Earnings Report?",
-      "link": "https://www.fool.com/investing/2026/08/02/is-ferrari-a-buy-after-its-latest-earnings-report/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "The Federal Reserve Just Did Something That No One's Witnessed in 56 Years -- and It Has Significant Implications for the Stock Market",
+      "link": "https://www.fool.com/investing/2026/08/03/fed-just-did-something-no-one-witness-in-56-years/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -331,9 +331,9 @@
       ]
     },
     {
-      "title": "3 Brilliant Artificial Intelligence (AI) Stocks Billionaire Bill Ackman Owns That You Should Too",
-      "link": "https://www.fool.com/investing/2026/08/02/3-brilliant-artificial-intelligence-ai-stocks-bill/?.tsrc=rss",
-      "date": "2026-08-02",
+      "title": "Up Just 2% and Still Dominant: Is Amazon the 1 Growth Stock Worth Buying Right Now?",
+      "link": "https://www.fool.com/investing/2026/08/03/down-12-and-still-dominant-is-amazon-the-1-growth/?.tsrc=rss",
+      "date": "2026-08-03",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
