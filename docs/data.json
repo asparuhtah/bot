@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-03T10:36:02.494637+00:00",
-  "eurUsd": 1.152,
+  "lastUpdated": "2026-08-04T09:35:37.355393+00:00",
+  "eurUsd": 1.151,
   "prices": {
-    "BTC-USD": 54339.0,
-    "ETC-USD": 5.69,
-    "FLR-USD": 0.005447,
+    "BTC-USD": 55166.0,
+    "ETC-USD": 5.71,
+    "FLR-USD": 0.005273,
     "EXI2.DE": 109.52,
-    "MRVL": 163.784722,
+    "MRVL": 163.92702,
     "DFEN.DE": 55.03,
-    "NVDA": 176.918403,
+    "NVDA": 177.072111,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 354.73,
-    "pnl": -43.94,
-    "pnlPct": -11.02
+    "totalCurrent": 356.29,
+    "pnl": -42.38,
+    "pnlPct": -10.63
   },
   "history": [
-    {
-      "date": "2026-07-05",
-      "total": 250.74,
-      "pnl": -37.33,
-      "pct": -12.96
-    },
     {
       "date": "2026-07-06",
       "total": 251.38,
@@ -197,312 +191,154 @@
       "total": 354.73,
       "pnl": -43.94,
       "pct": -11.02
+    },
+    {
+      "date": "2026-08-04",
+      "total": 356.29,
+      "pnl": -42.38,
+      "pct": -10.63
     }
   ],
   "news": [
     {
-      "title": "3 Reasons to Buy Bloom Energy Stock -- and 3 Reasons to Wait",
-      "link": "https://www.fool.com/investing/2026/08/03/3-reasons-to-buy-bloom-energy-stock-and-3-reasons/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Mark Zuckerberg Just Explained Why Iren Has an Edge Over Other Neoclouds",
-      "link": "https://www.fool.com/investing/2026/08/03/mark-zuckerberg-just-explained-why-iren-has-an-edg/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Oracle’s Massive AI Bet Has Already Cost Larry Ellison $207 Billion. Analyst Warns the AI Bubble Is 17 Times Bigger Than the Dot-Com Bubble.",
-      "link": "https://247wallst.com/investing/2026/08/03/oracles-massive-ai-bet-has-already-cost-larry-ellison-207-billion-analyst-warns-the-ai-bubble-is-17-times-bigger-than-the-dot-com-bubble/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "15% Of Israel Englander's $240 Billion Millennium Portfolio Sits in Just 10 Stocks",
-      "link": "https://www.fool.com/investing/2026/08/03/15-of-israel-englanders-240-billion-millennium-por/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If I Had $1,000 to Invest Today, Here's the Trillion-Dollar Stock I'd Buy Instead of SpaceX",
-      "link": "https://www.fool.com/investing/2026/08/03/if-1000-invest-trillion-dollar-stock-buy-spacex/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "P&G Guided Below Estimates and Sits 5% Above a 52-Week Low. I'm Not Buying It Yet, and Here's What Would Change That.",
-      "link": "https://www.fool.com/investing/2026/08/03/pg-guided-below-estimates-and-sits-5-above-a-52-we/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Warren Buffett's Successor, Greg Abel, Started His Tenure With a Bang by Slashing Berkshire's Chevron Stake and Making a Virtual Monopoly the New No. 5 Holding",
-      "link": "https://www.fool.com/investing/2026/08/03/warren-buffett-successor-abel-sell-cvx-buy-googl/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Some Investors Are Panicking About Memory Stocks. Micron Shareholders Should Keep a Cool Head.",
-      "link": "https://www.fool.com/investing/2026/08/03/some-investors-are-panicking-about-memory-stocks-m/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Billionaire Ken Griffin Just Invested $400 Million Into Crypto.com Via Citadel Securities. Here's Why That Could Be Bullish For Crypto.",
-      "link": "https://www.fool.com/investing/2026/08/03/billionaire-ken-griffin-just-invested-400-million/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Semiconductor Stocks Are Down 22%. Here's the 1 Chip Stock I'd Buy Right Now.",
-      "link": "https://www.fool.com/investing/2026/08/03/semiconductor-stocks-down-chip-stock-buy/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Ciena and Boston Beer have been highlighted as Zacks Bull and Bear of the Day",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/ciena-boston-beer-highlighted-zacks-084000097.html?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Big Takeaways From Microsoft's Earnings",
-      "link": "https://www.fool.com/investing/2026/08/03/3-big-takeaways-from-microsofts-earnings/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Federal Reserve Just Did Something That No One's Witnessed in 56 Years -- and It Has Significant Implications for the Stock Market",
-      "link": "https://www.fool.com/investing/2026/08/03/fed-just-did-something-no-one-witness-in-56-years/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Up Just 2% and Still Dominant: Is Amazon the 1 Growth Stock Worth Buying Right Now?",
-      "link": "https://www.fool.com/investing/2026/08/03/down-12-and-still-dominant-is-amazon-the-1-growth/?.tsrc=rss",
-      "date": "2026-08-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-04": {
+      "title": "Microsoft vs. Amazon: Which Stock Does Wall Street Think Is the Better Buy?",
+      "link": "https://www.fool.com/investing/2026/08/04/microsoft-vs-amazon-which-stock-does-wall-street-t/?.tsrc=rss",
       "date": "2026-08-04",
-      "steps": 644,
-      "resting_hr": 55,
-      "body_battery": 25,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 358,
-        "deep_min": 149,
-        "light_min": 162,
-        "rem_min": 47,
-        "awake_min": 15,
-        "score": 69,
-        "start": 1785811440000,
-        "end": 1785833820000
-      },
-      "activities": []
-    },
-    "2026-08-03": {
-      "date": "2026-08-03",
-      "steps": 29892,
-      "resting_hr": 47,
-      "body_battery": 85,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 488,
-        "deep_min": 89,
-        "light_min": 326,
-        "rem_min": 73,
-        "awake_min": 12,
-        "score": 85,
-        "start": 1785708840000,
-        "end": 1785738840000
-      },
-      "activities": []
-    },
-    "2026-08-02": {
-      "date": "2026-08-02",
-      "steps": 6531,
-      "resting_hr": 54,
-      "body_battery": 21,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 319,
-        "deep_min": 110,
-        "light_min": 172,
-        "rem_min": 37,
-        "awake_min": 0,
-        "score": 45,
-        "start": 1785638100000,
-        "end": 1785657240000
-      },
-      "activities": []
-    },
-    "2026-08-01": {
-      "date": "2026-08-01",
-      "steps": 15773,
-      "resting_hr": 52,
-      "body_battery": 18,
-      "avg_stress": 53,
-      "sleep": {
-        "total_min": 321,
-        "deep_min": 99,
-        "light_min": 222,
-        "rem_min": 0,
-        "awake_min": 3,
-        "score": 39,
-        "start": 1785551880000,
-        "end": 1785571320000
-      },
-      "activities": []
-    },
-    "2026-07-31": {
-      "date": "2026-07-31",
-      "steps": 10587,
-      "resting_hr": 53,
-      "body_battery": 25,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 421,
-        "deep_min": 126,
-        "light_min": 295,
-        "rem_min": 0,
-        "awake_min": 32,
-        "score": 41,
-        "start": 1785455820000,
-        "end": 1785483000000
-      },
-      "activities": []
-    },
-    "2026-07-30": {
-      "date": "2026-07-30",
-      "steps": 16815,
-      "resting_hr": 47,
-      "body_battery": 82,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 371,
-        "deep_min": 65,
-        "light_min": 275,
-        "rem_min": 31,
-        "awake_min": 5,
-        "score": 71,
-        "start": 1785366780000,
-        "end": 1785389340000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-07-30 18:57:29",
-          "duration_s": 3611,
-          "distance_m": 3019.0,
-          "calories": 260,
-          "avg_hr": 99,
-          "max_hr": 155,
-          "avg_speed": 0.84
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-07-30 09:43:11",
-          "duration_s": 227,
-          "distance_m": 0.0,
-          "calories": 29,
-          "avg_hr": 116,
-          "max_hr": 154,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-07-29": {
-      "date": "2026-07-29",
-      "steps": 4157,
-      "resting_hr": 52,
-      "body_battery": 38,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 357,
-        "deep_min": 108,
-        "light_min": 177,
-        "rem_min": 72,
-        "awake_min": 0,
-        "score": 73,
-        "start": 1785290280000,
-        "end": 1785311700000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Slivnitsa Open Water Swimming",
-          "start": "2026-07-29 16:20:05",
-          "duration_s": 682,
-          "distance_m": 1286.0,
-          "calories": 265,
-          "avg_hr": 111,
-          "max_hr": 111,
-          "avg_speed": 1.88
-        }
+    {
+      "title": "1 Glorious Growth Stock That Could 10X by 2034",
+      "link": "https://www.fool.com/investing/2026/08/04/1-glorious-growth-stock-that-could-10x-by-2034/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meet the Magnificent Vanguard ETF Crushing the S&P 500 in 2026, Thanks to Its Unique Momentum-Driven Strategy",
+      "link": "https://www.fool.com/investing/2026/08/04/meet-vanguard-etf-crushing-sp-500-in-2026-strategy/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "President Trump Buys 2 AI Stocks That Wall Street Says Are Undervalued",
+      "link": "https://www.fool.com/investing/2026/08/04/president-trump-buys-ai-stocks-wall-st-undervalued/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "One Word Repeated 10 Times by Fed Chair Kevin Warsh Has Effectively Reshaped the Central Bank's Monetary Policy Approach",
+      "link": "https://www.fool.com/investing/2026/08/04/one-word-fed-kevin-warsh-reshape-monetary-policy/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Bear Market Is Coming, I'm Buying This 1 ETF Hand Over Fist",
+      "link": "https://www.fool.com/investing/2026/08/04/bear-market-coming-buying-etf-schd/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Amazon And Microsoft Ace Wall Street’s AI Test — Analyst Warns ‘Mag Seven’ Now Faces A ‘Higher Burden Of Proof’",
+      "link": "https://stocktwits.com/news-articles/markets/equity/amazon-microsoft-ai-test-analyst-mag-seven-burden-proof/cZo5OZyRJET?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Palantir's ‘Rule Of 40’ Score Hit 155% — Here's The Math And Why It Matters For Software Valuations",
+      "link": "https://stocktwits.com/news-articles/markets/equity/palantir-s-rule-of-40-score-hit-155-here-s-the-math-and-why-it-matters-for-software-valuations/cZo5OP3RJER?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Higher Net Interest Income And A New Dividend Altering The Investment Case For Butterfield (NTB)?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/higher-net-interest-income-dividend-070925369.html?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meet 2 Vanguard ETFs That Just Hit All-Time Highs. Here's What They Have in Common (Hint: It Has to Do With SpaceX).",
+      "link": "https://www.fool.com/investing/2026/08/04/meet-2-vanguard-etfs-that-just-hit-all-time-highs/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang Said the Semiconductor Industry Could Grow to $7.9 Trillion to Support the Agentic AI Boom. Here Are 2 Stocks That Could Benefit",
+      "link": "https://www.fool.com/investing/2026/08/04/nvidias-ceo-jensen-huang-said-the-semiconductor-in/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Investors Are Learning a Hard Lesson About the Dangers of Using Leverage",
+      "link": "https://www.fool.com/investing/2026/08/04/investors-learning-lesson-dangers-leverage-soxl/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Fitch Says: AI Market Correction Could Be a Big Risk to Corporate Credit. That Might Be Bad News for This Junk Bond ETF.",
+      "link": "https://www.fool.com/investing/2026/08/04/fitch-says-ai-market-correction-could-be-a-big-ris/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Better Neocloud Stock: CoreWeave vs. Nebius",
+      "link": "https://www.fool.com/investing/2026/08/04/better-neocloud-stock-nebius-vs-coreweave/?.tsrc=rss",
+      "date": "2026-08-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-04"
+  ]
 }
