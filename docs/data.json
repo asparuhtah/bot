@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-09T07:48:17.964454+00:00",
-  "eurUsd": 1.1551,
+  "lastUpdated": "2026-08-10T08:22:50.200124+00:00",
+  "eurUsd": 1.1562,
   "prices": {
-    "BTC-USD": 56057.0,
-    "ETC-USD": 5.61,
-    "FLR-USD": 0.005274,
+    "BTC-USD": 56388.0,
+    "ETC-USD": 5.64,
+    "FLR-USD": 0.005252,
     "EXI2.DE": 109.52,
-    "MRVL": 163.345165,
+    "MRVL": 163.18976,
     "DFEN.DE": 55.03,
-    "NVDA": 176.443598,
+    "NVDA": 176.275731,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 356.69,
-    "pnl": -41.98,
-    "pnlPct": -10.53
+    "totalCurrent": 357.33,
+    "pnl": -41.34,
+    "pnlPct": -10.37
   },
   "history": [
-    {
-      "date": "2026-07-11",
-      "total": 252.32,
-      "pnl": -35.75,
-      "pct": -12.41
-    },
     {
       "date": "2026-07-12",
       "total": 250.71,
@@ -197,370 +191,154 @@
       "total": 356.69,
       "pnl": -41.98,
       "pct": -10.53
+    },
+    {
+      "date": "2026-08-10",
+      "total": 357.33,
+      "pnl": -41.34,
+      "pct": -10.37
     }
   ],
   "news": [
     {
-      "title": "Why the 20% Sell-Off in Dutch Bros Stock Is a Massive Opportunity",
-      "link": "https://www.fool.com/investing/2026/08/09/why-the-20-sell-off-in-dutch-bros-stock-is-a-massi/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Cathie Wood's Ark Piled Into Nvidia and Taiwan Semiconductor After Meta's Earnings Miss. Here's What It Signals for Artificial Intelligence (AI) Stocks.",
-      "link": "https://www.fool.com/investing/2026/08/09/cathie-woods-ark-piled-into-nvidia-and-taiwan-semi/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Geron (GERN) Is Up 14.7% After Issuing First RYTELO Revenue Guide And Narrowing Losses - Has The Bull Case Changed?",
-      "link": "https://finance.yahoo.com/healthcare/articles/geron-gern-14-7-issuing-071513251.html?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "1 Incredible Reason to Buy Home Depot Stock Before It Reports Earnings on Aug. 18",
-      "link": "https://www.fool.com/investing/2026/08/09/reason-buy-home-depot-stock-before-earnings/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Many of the Largest Companies Do You Own -- and Should You Own More or Fewer?",
-      "link": "https://www.fool.com/investing/2026/08/09/how-many-of-the-largest-companies-do-you-own-and-s/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jeff Bezos' Amazon Stock Surged 14% After a Blowout Earnings Beat, Adding $25 Billion to His Fortune. Is the Stock Still a Buy After the Rally?",
-      "link": "https://www.fool.com/investing/2026/08/09/jeff-bezos-amazon-stock-billion-surged-still-buy/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Humanoids are as much a compute story as a robotics one",
-      "link": "https://finance.yahoo.com/technology/ai/articles/humanoids-much-compute-story-robotics-063038029.html?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel Foundry Lands a Major New Client Worth Watching",
-      "link": "https://www.fool.com/investing/2026/08/09/intel-foundry-lands-a-major-new-client-worth-watch/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dan Ives Says SpaceX Stock Is Worth This Much (Hint: Big Gains Ahead)",
-      "link": "https://www.fool.com/investing/2026/08/09/dan-ives-says-spacex-stock-is-worth-this-much-hint/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Is the Worst Finally Over for Palantir Stock?",
-      "link": "https://www.fool.com/investing/2026/08/09/is-the-worst-finally-over-for-palantir-stock/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Moonshot AI's 2.8 Trillion Parameter Model Just Became the First From China to Top a Major Coding Benchmark",
-      "link": "https://www.fool.com/investing/2026/08/09/moonshot-ais-28-trillion-parameter-model-just-beca/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Tariff Wave Ahead: Should You Make Shifts to Your Portfolio?",
-      "link": "https://www.fool.com/investing/2026/08/09/tariff-wave-ahead-should-you-make-shifts-to-your-p/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jensen Huang Says AI Will Kill Tasks, Not Jobs. Here's What That Means for Stocks Riding the AI Trade.",
-      "link": "https://www.fool.com/investing/2026/08/09/jensen-huang-says-ai-will-kill-tasks-not-jobs-here/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Palantir Is Worth $413 Billion. The $500 Billion Line Sits Almost Exactly at Its Record High.",
-      "link": "https://www.fool.com/investing/2026/08/08/palantir-is-worth-413-billion-the-500-billion-line/?.tsrc=rss",
-      "date": "2026-08-09",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-10": {
+      "title": "Why Is Disney So Much Cheaper Than Netflix? This Is the Only Answer I Can Think Of.",
+      "link": "https://www.fool.com/investing/2026/08/10/why-is-disney-so-much-cheaper-than-netflix-this-is/?.tsrc=rss",
       "date": "2026-08-10",
-      "steps": 1955,
-      "resting_hr": 54,
-      "body_battery": 15,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 393,
-        "deep_min": 82,
-        "light_min": 261,
-        "rem_min": 50,
-        "awake_min": 4,
-        "score": 48,
-        "start": 1786327680000,
-        "end": 1786351500000
-      },
-      "activities": []
-    },
-    "2026-08-09": {
-      "date": "2026-08-09",
-      "steps": 14791,
-      "resting_hr": 48,
-      "body_battery": 62,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 402,
-        "deep_min": 83,
-        "light_min": 260,
-        "rem_min": 59,
-        "awake_min": 13,
-        "score": 80,
-        "start": 1786224780000,
-        "end": 1786249680000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-09 10:03:33",
-          "duration_s": 1238,
-          "distance_m": 6701.0,
-          "calories": 144,
-          "avg_hr": 117,
-          "max_hr": 153,
-          "avg_speed": 5.41
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-08": {
-      "date": "2026-08-08",
-      "steps": 8547,
-      "resting_hr": 54,
-      "body_battery": 36,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 410,
-        "deep_min": 113,
-        "light_min": 291,
-        "rem_min": 6,
-        "awake_min": 31,
-        "score": 41,
-        "start": 1786155900000,
-        "end": 1786182360000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-08 16:16:24",
-          "duration_s": 717,
-          "distance_m": 3876.0,
-          "calories": 76,
-          "avg_hr": 109,
-          "max_hr": 152,
-          "avg_speed": 5.4
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-08 14:11:21",
-          "duration_s": 1266,
-          "distance_m": 4937.0,
-          "calories": 140,
-          "avg_hr": 112,
-          "max_hr": 168,
-          "avg_speed": 3.9
-        }
+    {
+      "title": "If You'd Invested $10,000 in Tesla a Decade Ago, Here's How Much You'd Have Today",
+      "link": "https://www.fool.com/investing/2026/08/10/if-youd-invested-10000-in-tesla-a-decade-ago/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-07": {
-      "date": "2026-08-07",
-      "steps": 14446,
-      "resting_hr": 46,
-      "body_battery": 84,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 481,
-        "deep_min": 84,
-        "light_min": 330,
-        "rem_min": 67,
-        "awake_min": 54,
-        "score": 80,
-        "start": 1786053960000,
-        "end": 1786086060000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-07 10:25:01",
-          "duration_s": 1371,
-          "distance_m": 8017.0,
-          "calories": 130,
-          "avg_hr": 107,
-          "max_hr": 148,
-          "avg_speed": 5.85
-        }
+    {
+      "title": "Prediction: Sandisk Will Reclaim Its All-Time High by the End of the Year",
+      "link": "https://www.fool.com/investing/2026/08/10/prediction-sandisk-will-reclaim-its-all-time-high/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-06": {
-      "date": "2026-08-06",
-      "steps": 6748,
-      "resting_hr": 53,
-      "body_battery": 38,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 391,
-        "deep_min": 100,
-        "light_min": 274,
-        "rem_min": 17,
-        "awake_min": 35,
-        "score": 43,
-        "start": 1785974340000,
-        "end": 1785999900000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-06 13:11:27",
-          "duration_s": 1596,
-          "distance_m": 5648.0,
-          "calories": 167,
-          "avg_hr": 112,
-          "max_hr": 137,
-          "avg_speed": 3.54
-        }
+    {
+      "title": "Iran Tensions Highlight Defense Supply Gaps Poised to Lift 2 Stocks",
+      "link": "https://www.fool.com/investing/2026/08/10/iran-tensions-highlight-defense-supply-gaps-poised/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-05": {
-      "date": "2026-08-05",
-      "steps": 8496,
-      "resting_hr": 47,
-      "body_battery": 83,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 439,
-        "deep_min": 129,
-        "light_min": 239,
-        "rem_min": 71,
-        "awake_min": 110,
-        "score": 67,
-        "start": 1785882780000,
-        "end": 1785915720000
-      },
-      "activities": []
+    {
+      "title": "New Fed Chair Kevin Warsh Has Refused to Give Forward Guidance for 2 Straight Meetings. Here's Why That Should Worry Markets.",
+      "link": "https://www.fool.com/investing/2026/08/10/new-fed-chair-kevin-warsh-has-refused-to-give-forw/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-08-04": {
-      "date": "2026-08-04",
-      "steps": 7390,
-      "resting_hr": 54,
-      "body_battery": 33,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 358,
-        "deep_min": 149,
-        "light_min": 162,
-        "rem_min": 47,
-        "awake_min": 15,
-        "score": 69,
-        "start": 1785811440000,
-        "end": 1785833820000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-04 16:17:51",
-          "duration_s": 1680,
-          "distance_m": 2619.0,
-          "calories": 156,
-          "avg_hr": 106,
-          "max_hr": 138,
-          "avg_speed": 1.56
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-04 12:18:01",
-          "duration_s": 809,
-          "distance_m": 0.0,
-          "calories": 92,
-          "avg_hr": 113,
-          "max_hr": 142,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-04 10:22:21",
-          "duration_s": 1855,
-          "distance_m": 2619.0,
-          "calories": 262,
-          "avg_hr": 132,
-          "max_hr": 166,
-          "avg_speed": 1.41
-        }
+    {
+      "title": "Forget Chips: AI Is Now a Power Trade. These 2 Dividend-Paying Industrials Prove It.",
+      "link": "https://www.fool.com/investing/2026/08/10/forget-chips-ai-is-now-a-power-trade-these-2-divid/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia, Eli Lilly, and Disney Show It’s Time to Back the Top Dogs",
+      "link": "https://finance.yahoo.com/m/bd14b29c-18a2-3bb0-930e-e50923390400/nvidia%2C-eli-lilly%2C-and-disney.html?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dow Jones Futures Fall After Market Ramps Up; Cisco, Lumentum Earnings Ahead",
+      "link": "https://finance.yahoo.com/m/6bf0da8a-faae-33c1-af5a-bcc389ef390c/dow-jones-futures-fall-after.html?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX Stock Is Slumping: Is Now the Time to Buy or Hold Off?",
+      "link": "https://www.fool.com/investing/2026/08/10/spacex-stock-is-slumping-is-now-the-time-to-buy-or/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Palantir Stock Skyrocketed This Past Week",
+      "link": "https://www.fool.com/investing/2026/08/09/why-palantir-stock-skyrocketed-this-past-week/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "US Export Control Meant to Cripple China’s AI. But They Created Its Most Valuable Company",
+      "link": "https://beincrypto.com/us-chip-export-controls-cxmt-china-ai/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Solana Could Boost Its Token Burns by 14X. Would That Make It a Better Buy?",
+      "link": "https://www.fool.com/investing/2026/08/09/solana-could-boost-its-token-burns-by-14x-would-th/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: Trump's New Tariffs Won't Stand Up in Court. Consider Buying These 2 International ETFs.",
+      "link": "https://www.fool.com/investing/2026/08/09/prediction-trumps-new-tariffs-wont-stand-up-in-cou/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Twilio Raised Its Full-Year Growth Guide to 18% and Posted Record Revenue of $1.5 Billion. The Stock Rose 25% in a Day.",
+      "link": "https://www.fool.com/investing/2026/08/09/twilio-raised-its-full-year-growth-guide-to-18-and/?.tsrc=rss",
+      "date": "2026-08-10",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-10"
+  ]
 }
