@@ -1,0 +1,18 @@
+{
+  "last_update_id": 662305921,
+  "manual_prices": {
+    "EXI2.DE": 104.95,
+    "MRVL": 157.2,
+    "DFEN.DE": 55.715,
+    "ROBO": 23.37
+  },
+  "alert_state": {
+    "MRVL": "neutral",
+    "DFEN.DE": "neutral",
+    "BTC-USD": "neutral",
+    "EXI2.DE": "neutral",
+    "ETC-USD": "neutral"
+  },
+  "last_morning_date": null,
+  "last_snapshot_date": null
+}
