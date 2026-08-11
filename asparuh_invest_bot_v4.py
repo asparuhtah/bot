@@ -24,7 +24,7 @@ import os
 from datetime import datetime
 
 # ─── КОНФИГУРАЦИЯ ─────────────────────────────────────────────────────────────
-BOT_TOKEN = "8635032958:AAEgK2HJT8f2odzS2cZ3d0VVFT9P5sRTftw"
+BOT_TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID   = "6087726724"
 CSV_FILE  = "portfolio_history.csv"
 
