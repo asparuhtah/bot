@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-12T08:10:47.542631+00:00",
-  "eurUsd": 1.1537,
+  "lastUpdated": "2026-08-13T08:14:12.258840+00:00",
+  "eurUsd": 1.1523,
   "prices": {
-    "BTC-USD": 55292.0,
-    "ETC-USD": 5.49,
-    "FLR-USD": 0.005265,
+    "BTC-USD": 55365.0,
+    "ETC-USD": 5.45,
+    "FLR-USD": 0.005195,
     "EXI2.DE": 109.52,
-    "MRVL": 163.543382,
+    "MRVL": 163.742081,
     "DFEN.DE": 55.03,
-    "NVDA": 176.65771,
+    "NVDA": 176.872342,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 354.77,
-    "pnl": -43.9,
-    "pnlPct": -11.01
+    "totalCurrent": 354.74,
+    "pnl": -43.93,
+    "pnlPct": -11.02
   },
   "history": [
-    {
-      "date": "2026-07-14",
-      "total": 250.02,
-      "pnl": -38.05,
-      "pct": -13.21
-    },
     {
       "date": "2026-07-15",
       "total": 252.28,
@@ -197,382 +191,154 @@
       "total": 354.77,
       "pnl": -43.9,
       "pct": -11.01
+    },
+    {
+      "date": "2026-08-13",
+      "total": 354.74,
+      "pnl": -43.93,
+      "pct": -11.02
     }
   ],
   "news": [
     {
-      "title": "Bechtle Q2 Earnings Call Highlights",
-      "link": "https://www.marketbeat.com/instant-alerts/bechtle-q2-earnings-call-highlights-2026-08-12/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Warren Buffett's Favorite Compounders: 3 Stocks to Hold Forever",
-      "link": "https://www.fool.com/investing/2026/08/12/warren-buffetts-favorite-compounders-3-stocks-to-h/?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "CoreWeave soars after fifth straight quarter of record revenue, raised guide",
-      "link": "https://finance.yahoo.com/technology/ai/articles/coreweave-soars-fifth-straight-quarter-074019639.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "MiTAC Computing Showcases Diversified Infra for Agentic Workloads at OCP APAC Summit",
-      "link": "https://finance.yahoo.com/technology/ai/articles/mitac-computing-showcases-diversified-infra-073300330.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Ex-AMD Exec Says Nvidia Is Using Its Bigger War Chest To Counter AI Gains: ‘I Experienced This Same Play’ Against Intel",
-      "link": "https://stocktwits.com/news-articles/markets/equity/ex-amd-exec-nvidia-war-chest-ai-gains-play-against-intel/cZoFHKiRJg5?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Foxconn posts quarterly profit surge on AI server demand",
-      "link": "https://finance.yahoo.com/technology/ai/articles/foxconn-posts-quarterly-profit-surge-064534770.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Cerebras Set to Report Earnings as AI Chips Enter a New Era",
-      "link": "https://finance.yahoo.com/m/18bd543e-82dc-35d1-b91d-187f477240ae/cerebras-set-to-report.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Taiwan's Foxconn reports 35% rise in Q2 profit on AI demand, beats forecasts",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/taiwans-foxconn-reports-35-rise-062345360.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Curaleaf Just Announced a Hostile Takeover Bid for Aurora Cannabis. Here’s What This Means for Investors.",
-      "link": "https://www.fool.com/investing/2026/08/12/curaleaf-just-announced-a-hostile-takeover-bid-for-aurora-cannabis-heres-what-this-means-for-investors/?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dow Jones Futures: 3 Nvidia Partners Lead Earnings Movers; CPI Inflation Data Due",
-      "link": "https://finance.yahoo.com/m/7170c7f6-3bd3-35bf-bee2-a691a7f3afbd/dow-jones-futures%3A-3-nvidia.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Software-as-a-Service (SaaS) Companies Are Making a Comeback. Here's the Exact SaaS Stock I Recommend Buying Right Now.",
-      "link": "https://www.fool.com/investing/2026/08/12/software-as-a-service-saas-companies-are-making-a/?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA to Report Q2 Earnings Later in August—Crypto Prediction Market Wagers on NVDA Closing Above $250 by Month-End",
-      "link": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61132379/nvidia-q2-earnings-august-2026-nvda-250-prediction-market?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Is Marvell Technology (MRVL) Investing $250 Million In India Now?",
-      "link": "https://finance.yahoo.com/technology/articles/why-marvell-technology-mrvl-investing-032159497.html?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "BofA sends strong message on Nvidia's weak spot",
-      "link": "https://www.thestreet.com/investing/bofa-says-nvidia-500-billion-plan-eases-financing-risk?.tsrc=rss",
-      "date": "2026-08-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-13": {
+      "title": "Prediction: Greg Abel Will Continue Holding This Berkshire Hathaway Stock That Warren Buffett Backed for Decades",
+      "link": "https://www.fool.com/investing/2026/08/13/prediction-greg-abel-will-continue-holding-this-be/?.tsrc=rss",
       "date": "2026-08-13",
-      "steps": 996,
-      "resting_hr": 50,
-      "body_battery": 56,
-      "avg_stress": 19,
-      "sleep": {
-        "total_min": 436,
-        "deep_min": 79,
-        "light_min": 314,
-        "rem_min": 43,
-        "awake_min": 47,
-        "score": 75,
-        "start": 1786581600000,
-        "end": 1786610580000
-      },
-      "activities": []
-    },
-    "2026-08-12": {
-      "date": "2026-08-12",
-      "steps": 12932,
-      "resting_hr": 48,
-      "body_battery": 60,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 390,
-        "deep_min": 41,
-        "light_min": 285,
-        "rem_min": 64,
-        "awake_min": 24,
-        "score": 74,
-        "start": 1786489620000,
-        "end": 1786514460000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-12 10:10:51",
-          "duration_s": 1206,
-          "distance_m": 2714.0,
-          "calories": 151,
-          "avg_hr": 119,
-          "max_hr": 160,
-          "avg_speed": 2.25
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-11": {
-      "date": "2026-08-11",
-      "steps": 9595,
-      "resting_hr": 48,
-      "body_battery": 93,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 547,
-        "deep_min": 84,
-        "light_min": 417,
-        "rem_min": 46,
-        "awake_min": 62,
-        "score": 75,
-        "start": 1786400520000,
-        "end": 1786437060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-11 11:31:26",
-          "duration_s": 1276,
-          "distance_m": 0.0,
-          "calories": 199,
-          "avg_hr": 135,
-          "max_hr": 167,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-11 10:23:18",
-          "duration_s": 1220,
-          "distance_m": 3561.0,
-          "calories": 132,
-          "avg_hr": 113,
-          "max_hr": 138,
-          "avg_speed": 2.92
-        }
+    {
+      "title": "Uber Is Due for a Rally as Fundamentals Improve",
+      "link": "https://www.fool.com/investing/2026/08/13/uber-is-due-for-a-rally-as-fundamentals-improve/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-10": {
-      "date": "2026-08-10",
-      "steps": 8704,
-      "resting_hr": 54,
-      "body_battery": 23,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 393,
-        "deep_min": 82,
-        "light_min": 261,
-        "rem_min": 50,
-        "awake_min": 4,
-        "score": 48,
-        "start": 1786327680000,
-        "end": 1786351500000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-10 19:08:15",
-          "duration_s": 1290,
-          "distance_m": 2577.0,
-          "calories": 111,
-          "avg_hr": 103,
-          "max_hr": 133,
-          "avg_speed": 2.0
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-10 13:06:29",
-          "duration_s": 1611,
-          "distance_m": 2876.0,
-          "calories": 150,
-          "avg_hr": 108,
-          "max_hr": 144,
-          "avg_speed": 1.78
-        }
+    {
+      "title": "1 Number That Makes Lowe's Stock an Obvious Buy Before Aug. 19",
+      "link": "https://www.fool.com/investing/2026/08/13/1-number-that-makes-lowes-stock-an-obvious-buy-bef/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-09": {
-      "date": "2026-08-09",
-      "steps": 14791,
-      "resting_hr": 48,
-      "body_battery": 62,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 402,
-        "deep_min": 83,
-        "light_min": 260,
-        "rem_min": 59,
-        "awake_min": 13,
-        "score": 80,
-        "start": 1786224780000,
-        "end": 1786249680000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-09 10:03:33",
-          "duration_s": 1238,
-          "distance_m": 6701.0,
-          "calories": 144,
-          "avg_hr": 117,
-          "max_hr": 153,
-          "avg_speed": 5.41
-        }
+    {
+      "title": "Michael Burry Calls Nvidia’s $500B Wall Street Tie-Up A ‘Sign Of Desperation’ — and Rising Default Expectations Aren't Helping",
+      "link": "https://stocktwits.com/news-articles/markets/equity/michael-burry-calls-nvidia-s-500-b-wall-street-tie-up-a-sign-of-desperation-and-rising-default-expectations-aren-t-helping/cZoqTD3RJhg?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-08": {
-      "date": "2026-08-08",
-      "steps": 8547,
-      "resting_hr": 54,
-      "body_battery": 36,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 410,
-        "deep_min": 113,
-        "light_min": 291,
-        "rem_min": 6,
-        "awake_min": 31,
-        "score": 41,
-        "start": 1786155900000,
-        "end": 1786182360000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-08 16:16:24",
-          "duration_s": 717,
-          "distance_m": 3876.0,
-          "calories": 76,
-          "avg_hr": 109,
-          "max_hr": 152,
-          "avg_speed": 5.4
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-08 14:11:21",
-          "duration_s": 1266,
-          "distance_m": 4937.0,
-          "calories": 140,
-          "avg_hr": 112,
-          "max_hr": 168,
-          "avg_speed": 3.9
-        }
+    {
+      "title": "Nvidia Could Hit $7.5 Trillion in Value Thanks to This Overlooked Business Opportunity",
+      "link": "https://www.fool.com/investing/2026/08/13/nvidia-could-hit-75-trillion-in-value-thanks-to-th/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-07": {
-      "date": "2026-08-07",
-      "steps": 14446,
-      "resting_hr": 46,
-      "body_battery": 84,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 481,
-        "deep_min": 84,
-        "light_min": 330,
-        "rem_min": 67,
-        "awake_min": 54,
-        "score": 80,
-        "start": 1786053960000,
-        "end": 1786086060000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-07 10:25:01",
-          "duration_s": 1371,
-          "distance_m": 8017.0,
-          "calories": 130,
-          "avg_hr": 107,
-          "max_hr": 148,
-          "avg_speed": 5.85
-        }
+    {
+      "title": "Wall Street Firms Back Nvidia With $500B for AI Data Centers",
+      "link": "https://www.credaily.com/briefs/wall-street-firms-back-nvidia-with-500b-for-ai-data-centers/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The Hidden Red Flag in Wall Street’s Price Targets",
+      "link": "https://finance.yahoo.com/m/3524393c-1e83-3193-af28-9e5b8b921a1f/the-hidden-red-flag-in-wall.html?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Antrique Unveils AI Innovation Platform to Advance AI Capability in Brunei",
+      "link": "https://finance.yahoo.com/technology/ai/articles/antrique-unveils-ai-innovation-platform-062200662.html?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Soaring Stocks With More Upside Ahead to Buy and Hold",
+      "link": "https://www.fool.com/investing/2026/08/13/2-soaring-stocks-with-more-upside-ahead-to-buy-and/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "India's Larsen and Toubro secures AI data centre order worth up to $1.57 billion",
+      "link": "https://finance.yahoo.com/technology/ai/articles/indias-larsen-toubro-secures-order-061543153.html?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "What Could Amazon.com (AMZN) Gain From Leading The Decart AI Bidding?",
+      "link": "https://finance.yahoo.com/technology/ai/articles/could-amazon-com-amzn-gain-060951348.html?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Tim Cook Warned of a \"100-Year Flood\" in Memory Chip Pricing on His Last Earnings Call. Should Apple Investors Be Worried About Margins?",
+      "link": "https://www.fool.com/investing/2026/08/13/tim-cook-warned-of-a-100-year-flood-in-memory-chip/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Anthropic in talks to buy Decart AI, source says",
+      "link": "https://finance.yahoo.com/technology/ai/articles/anthropic-talks-buy-decart-ai-035155234.html?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Super Micro Guided Fiscal 2027 Revenue $16 Billion Above Wall Street and Missed the Quarter Anyway",
+      "link": "https://www.fool.com/investing/2026/08/12/super-micro-guided-fiscal-2027-revenue-16-billion/?.tsrc=rss",
+      "date": "2026-08-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-13"
+  ]
 }
