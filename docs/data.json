@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-16T07:25:00.217575+00:00",
-  "eurUsd": 1.1563,
+  "lastUpdated": "2026-08-17T07:45:57.621260+00:00",
+  "eurUsd": 1.1607,
   "prices": {
-    "BTC-USD": 54461.0,
+    "BTC-USD": 54693.0,
     "ETC-USD": 5.33,
-    "FLR-USD": 0.005167,
+    "FLR-USD": 0.005114,
     "EXI2.DE": 109.52,
-    "MRVL": 163.175646,
+    "MRVL": 162.557078,
     "DFEN.DE": 55.03,
-    "NVDA": 176.260486,
+    "NVDA": 175.592315,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 352.11,
-    "pnl": -46.56,
+    "totalCurrent": 352.09,
+    "pnl": -46.58,
     "pnlPct": -11.68
   },
   "history": [
-    {
-      "date": "2026-07-18",
-      "total": 251.6,
-      "pnl": -36.47,
-      "pct": -12.66
-    },
     {
       "date": "2026-07-19",
       "total": 251.71,
@@ -197,359 +191,154 @@
       "total": 352.11,
       "pnl": -46.56,
       "pct": -11.68
+    },
+    {
+      "date": "2026-08-17",
+      "total": 352.09,
+      "pnl": -46.58,
+      "pct": -11.68
     }
   ],
   "news": [
     {
-      "title": "Prediction: Nvidia Stock Will Fall After Aug. 26. Here Are 2 Reasons Why",
-      "link": "https://www.fool.com/investing/2026/08/16/prediction-nvidia-stock-will-fall-after-aug-26-her/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Data Centers Are Turning Energy Stocks Into AI Plays",
-      "link": "https://www.fool.com/investing/2026/08/15/why-data-centers-are-turning-energy-stocks-into-ai/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Curaleaf Wants to Buy Aurora Cannabis for $272 Million. Is Canopy Growth the Next Marijuana Takeover Target?",
-      "link": "https://www.fool.com/investing/2026/08/16/curaleaf-wants-to-buy-aurora-cannabis-for-272-mill/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "These 2 Potential Stock Splits Look Like Screaming Deals Right Now",
-      "link": "https://www.fool.com/investing/2026/08/16/these-2-potential-stock-splits-look-like-screaming/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
-      "link": "https://www.fool.com/investing/2026/08/15/bill-ackman-put-49-of-pershing-square-usa-into-the/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
-      "link": "https://www.fool.com/investing/2026/08/15/amd-just-borrowed-475-billion-more-than-triple-its/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Firefly Aerospace Is Awarded New Orbital Contract From Department of Defense",
-      "link": "https://www.fool.com/investing/2026/08/15/firefly-aerospace-is-awarded-new-orbital-contract-from-department-of-defense/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Could Investing $5,000 in SpaceX Help Make You a Millionaire?",
-      "link": "https://www.fool.com/investing/2026/08/15/could-investing-5000-in-spacex-help-make-you-a-mil/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You'd Put $5,000 Into Rocket Lab 5 Years Ago, Here's How Much You'd Have Today",
-      "link": "https://www.fool.com/investing/2026/08/15/if-youd-put-5000-into-rocket-lab-5-years-ago-heres/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Stock Market Just Triggered 1 of its Rarest Signals on Record. Here's What History Says Will Happen Next.",
-      "link": "https://www.fool.com/investing/2026/08/16/the-stock-market-just-triggered-1-of-its-rarest-si/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Amazon vs. Microsoft: Which Cloud Computing Behemoth Is the Better Artificial Intelligence (AI) Buy Today?",
-      "link": "https://www.fool.com/investing/2026/08/16/amazon-vs-microsoft-which-cloud-computing-behemoth/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You've Saved This Much for Retirement by Age 50, You're Ahead of the Game",
-      "link": "https://www.fool.com/retirement/2026/08/15/if-youve-saved-this-much-for-retirement-by-age-50/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
-      "link": "https://www.fool.com/investing/2026/08/15/crowdstrike-is-one-of-my-largest-holdings-and-trad/?.tsrc=rss",
-      "date": "2026-08-16",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Is Turning Its Massive Cash Flow Into Another AI Growth Engine",
-      "link": "https://www.barchart.com/story/news/3870011/nvidia-is-turning-its-massive-cash-flow-into-another-ai-growth-engine?.tsrc=rss",
-      "date": "2026-08-15",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-17": {
+      "title": "What Nvidia's $500 billion Wall Street deal signals about the AI boom",
+      "link": "https://www.euronews.com/2026/08/17/what-nvidias-500-billion-wall-street-deal-signals-about-the-ai-boom?.tsrc=rss",
       "date": "2026-08-17",
-      "steps": 1044,
-      "resting_hr": 52,
-      "body_battery": 48,
-      "avg_stress": 25,
-      "sleep": {
-        "total_min": 324,
-        "deep_min": 93,
-        "light_min": 212,
-        "rem_min": 19,
-        "awake_min": 9,
-        "score": 62,
-        "start": 1786932540000,
-        "end": 1786952520000
-      },
-      "activities": []
-    },
-    "2026-08-16": {
-      "date": "2026-08-16",
-      "steps": 15614,
-      "resting_hr": 48,
-      "body_battery": 66,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 491,
-        "deep_min": 60,
-        "light_min": 302,
-        "rem_min": 129,
-        "awake_min": 11,
-        "score": 87,
-        "start": 1786829280000,
-        "end": 1786859400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-16 16:54:22",
-          "duration_s": 1216,
-          "distance_m": 0.0,
-          "calories": 70,
-          "avg_hr": 86,
-          "max_hr": 135,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-15": {
-      "date": "2026-08-15",
-      "steps": 25081,
-      "resting_hr": 48,
-      "body_battery": 79,
-      "avg_stress": 33,
-      "sleep": {
-        "total_min": 370,
-        "deep_min": 46,
-        "light_min": 298,
-        "rem_min": 26,
-        "awake_min": 0,
-        "score": 66,
-        "start": 1786747980000,
-        "end": 1786770180000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Bansko Open Water Swimming",
-          "start": "2026-08-15 17:32:36",
-          "duration_s": 1523,
-          "distance_m": 2289.0,
-          "calories": 468,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 1.5
-        }
+    {
+      "title": "Jensen Huang Doubled Nvidia's Own Sales Forecast to $1 Trillion Through 2027. Here's What That Guidance Means for the Stock's Valuation.",
+      "link": "https://www.fool.com/investing/2026/08/16/jensen-huang-doubled-nvidias-own-sales-forecast-to/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-14": {
-      "date": "2026-08-14",
-      "steps": 5835,
-      "resting_hr": 48,
-      "body_battery": 82,
-      "avg_stress": 32,
-      "sleep": {
-        "total_min": 381,
-        "deep_min": 61,
-        "light_min": 283,
-        "rem_min": 37,
-        "awake_min": 2,
-        "score": 73,
-        "start": 1786665000000,
-        "end": 1786687980000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-14 11:59:49",
-          "duration_s": 4161,
-          "distance_m": 10413.0,
-          "calories": 458,
-          "avg_hr": 120,
-          "max_hr": 152,
-          "avg_speed": 2.5
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-14 10:26:49",
-          "duration_s": 3187,
-          "distance_m": 9253.0,
-          "calories": 345,
-          "avg_hr": 116,
-          "max_hr": 150,
-          "avg_speed": 2.9
-        }
+    {
+      "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Nears Key Level; Walmart Looms",
+      "link": "https://finance.yahoo.com/m/79b73c1c-e364-315f-8433-18e9ae96269d/dow-jones-futures%3A-nvidia.html?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-13": {
-      "date": "2026-08-13",
-      "steps": 10471,
-      "resting_hr": 50,
-      "body_battery": 56,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 436,
-        "deep_min": 79,
-        "light_min": 314,
-        "rem_min": 43,
-        "awake_min": 47,
-        "score": 75,
-        "start": 1786581600000,
-        "end": 1786610580000
-      },
-      "activities": []
-    },
-    "2026-08-12": {
-      "date": "2026-08-12",
-      "steps": 12932,
-      "resting_hr": 48,
-      "body_battery": 60,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 390,
-        "deep_min": 41,
-        "light_min": 285,
-        "rem_min": 64,
-        "awake_min": 24,
-        "score": 74,
-        "start": 1786489620000,
-        "end": 1786514460000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-12 10:10:51",
-          "duration_s": 1206,
-          "distance_m": 2714.0,
-          "calories": 151,
-          "avg_hr": 119,
-          "max_hr": 160,
-          "avg_speed": 2.25
-        }
+    {
+      "title": "AI Money Moves Put These Five Stocks In Spotlight Last Week: NVDA, INTC, ORCL, AMD, SNDK",
+      "link": "https://stocktwits.com/news-articles/markets/equity/ai-money-moves-put-these-five-stocks-in-spotlight-last-week-nvda-intc-orcl-amd-sndk/cZo6V2KRJKf?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-11": {
-      "date": "2026-08-11",
-      "steps": 9595,
-      "resting_hr": 48,
-      "body_battery": 93,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 547,
-        "deep_min": 84,
-        "light_min": 417,
-        "rem_min": 46,
-        "awake_min": 62,
-        "score": 75,
-        "start": 1786400520000,
-        "end": 1786437060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-11 11:31:26",
-          "duration_s": 1276,
-          "distance_m": 0.0,
-          "calories": 199,
-          "avg_hr": 135,
-          "max_hr": 167,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-11 10:23:18",
-          "duration_s": 1220,
-          "distance_m": 3561.0,
-          "calories": 132,
-          "avg_hr": 113,
-          "max_hr": 138,
-          "avg_speed": 2.92
-        }
+    {
+      "title": "Dan Niles Says AI Infrastructure Rally Has ‘At Least A Year’ To Run — Names Intel His Favorite Chip Bet",
+      "link": "https://stocktwits.com/news-articles/markets/equity/dan-niles-says-ai-infrastructure-rally-has-at-least-a-year-to-run-names-intel-his-favorite-chip-bet/cZo6siyRJKN?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Best Nuclear Power Stocks Right Now",
+      "link": "https://www.fool.com/investing/2026/08/16/2-best-nuclear-power-stocks-right-now/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Nuclear Stocks With Real Revenue vs. 3 That Are Still Pre-Revenue. Here's Where the Money Actually Is.",
+      "link": "https://www.fool.com/investing/2026/08/17/3-nuclear-stocks-with-real-revenue-vs-3-that-are-s/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Critical Things Investors Overlooked in Rivian's Strong Q2",
+      "link": "https://www.fool.com/investing/2026/08/17/3-critical-things-investors-overlooked-in-rivians/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Should You Buy MP Materials Stock at $58?",
+      "link": "https://www.fool.com/investing/2026/08/16/should-you-buy-mp-materials-stock-at-58/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Stocks Down 15% and 30% to Buy Right Now and Hold for the Next Decade",
+      "link": "https://www.fool.com/investing/2026/08/16/2-stocks-down-buy-right-now-hold-decade/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "CXMT’s Rise to China’s Most Valuable Firm Heralds New Tech Era",
+      "link": "https://finance.yahoo.com/technology/articles/cxmt-rise-china-most-valuable-010738048.html?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Michael Burry Says ‘You Could Have Heard It First’ — As Big Tech’s $3T AI Spending Risk Comes Into Focus",
+      "link": "https://stocktwits.com/news-articles/markets/equity/michael-burry-says-you-could-have-heard-it-first-as-big-tech-s-3-t-ai-spending-risk-comes-into-focus/cZo6sZzRJKV?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why This Memory Chip Boom May Have More Staying Power Than History Suggests",
+      "link": "https://www.fool.com/investing/2026/08/17/why-this-memory-chip-boom-may-have-more-staying-po/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will Palantir Stock Be in 2030?",
+      "link": "https://www.fool.com/investing/2026/08/16/where-will-palantir-stock-be-in-2030/?.tsrc=rss",
+      "date": "2026-08-17",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-17"
+  ]
 }
