@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-20T07:35:00.582968+00:00",
-  "eurUsd": 1.1687,
+  "lastUpdated": "2026-08-21T07:36:54.328516+00:00",
+  "eurUsd": 1.1692,
   "prices": {
-    "BTC-USD": 59512.0,
-    "ETC-USD": 5.63,
-    "FLR-USD": 0.005403,
+    "BTC-USD": 65303.0,
+    "ETC-USD": 6.16,
+    "FLR-USD": 0.006058,
     "EXI2.DE": 109.52,
-    "MRVL": 161.44434,
+    "MRVL": 161.375299,
     "DFEN.DE": 55.03,
-    "NVDA": 174.390348,
+    "NVDA": 174.315771,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 361.21,
-    "pnl": -37.46,
-    "pnlPct": -9.4
+    "totalCurrent": 374.12,
+    "pnl": -24.55,
+    "pnlPct": -6.16
   },
   "history": [
-    {
-      "date": "2026-07-22",
-      "total": 253.01,
-      "pnl": -35.06,
-      "pct": -12.17
-    },
     {
       "date": "2026-07-23",
       "total": 252.52,
@@ -197,393 +191,154 @@
       "total": 361.21,
       "pnl": -37.46,
       "pct": -9.4
+    },
+    {
+      "date": "2026-08-21",
+      "total": 374.12,
+      "pnl": -24.55,
+      "pct": -6.16
     }
   ],
   "news": [
     {
-      "title": "Nvidia Chip-Filled Data Centers Need More Power Than Any Utility Can Promise. Here's Who Actually Wins.",
-      "link": "https://www.fool.com/investing/2026/08/20/nvidia-chip-filled-data-centers-need-more-power-th/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Marvell Stock Surged Today",
-      "link": "https://www.fool.com/investing/2026/08/19/why-marvell-stock-surged-today/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Louis Navellier sets eye-opening Nvidia stock price target for rest of this year",
-      "link": "https://www.thestreet.com/investing/louis-navellier-sets-eye-opening-nvidia-stock-price-target-for-rest-of-this-year?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Big Tech Is on Pace to Spend $735 Billion on AI Data Centers in 2026. These 3 Industrial Stocks Collect the Checks.",
-      "link": "https://www.fool.com/investing/2026/08/19/big-tech-is-on-pace-to-spend-735-billion-on-ai-dat/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Guided to $91 Billion. Wall Street Penciled In $92 Billion.",
-      "link": "https://www.fool.com/investing/2026/08/19/nvidia-guided-to-usd91-billion-wall-street-penciled-in-usd92-billion/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nebius Increases Debt Raise Plan To $5B: Neocloud Operator Reportedly Bids For Decart AI Buyout Eyed by Anthropic",
-      "link": "https://stocktwits.com/news-articles/markets/equity/nebius-increases-debt-raise-plan-to-5-b-neocloud-operator-reportedly-bids-for-decart-ai-buyout-eyed-by-anthropic/cZYIXx7RJmI?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stripe agrees to acquire AI model router OpenRouter",
-      "link": "https://www.electronicpaymentsinternational.com/news/stripe-agrees-to-acquire-ai-model-router-openrouter/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Regeneron (REGN) Is Up 5.4% After FDA Approves Pasatru For Ultra-Rare FOP Therapy",
-      "link": "https://finance.yahoo.com/healthcare/articles/why-regeneron-regn-5-4-051056760.html?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Masayoshi Son Has 67% of SoftBank's U.S. Stock Portfolio in Intel. He Didn't Buy a Single Share Last Quarter.",
-      "link": "https://www.fool.com/investing/2026/08/19/masayoshi-son-has-67-of-softbank-s-u-s-stock-portfolio-in-intel-he-didn-t-buy-a-single-share-last-quarter/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Moderna Stock Skyrocketed Today",
-      "link": "https://www.fool.com/investing/2026/08/19/why-moderna-stock-skyrocketed-today/?.tsrc=rss",
-      "date": "2026-08-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Live updates: Bitcoin ETFs draw $517 million, ether pulls $189 million in biggest inflows in months",
-      "link": "https://www.coindesk.com/tech/2026/08/20/live-updates-bitcoin-etfs-draw-usd517-million-ether-pulls-usd189-million-in-biggest-inflows-in-months",
-      "date": "2026-08-20",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Trader who made $49 million shorting crypto lost $24 million on ether in 12 seconds",
-      "link": "https://www.coindesk.com/markets/2026/08/20/trader-who-made-usd49-million-shorting-crypto-lost-usd24-million-on-ether-in-12-seconds",
-      "date": "2026-08-20",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Bearish crypto bets lose record $2.7 billion as bitcoin surges toward $70,000",
-      "link": "https://www.coindesk.com/markets/2026/08/20/bearish-crypto-bets-lose-record-usd2-7-billion-as-bitcoin-surges-toward-usd70-000",
-      "date": "2026-08-20",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Ether jumps 18% to $2,250 as bitcoin tops $69,000 in broad crypto rally",
-      "link": "https://www.coindesk.com/markets/2026/08/20/ether-jumps-18-to-usd2-250-as-bitcoin-tops-usd69-000-in-broad-crypto-rally",
-      "date": "2026-08-20",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-21": {
+      "title": "The Dividend ETF That Generates Passive Income While You Sleep",
+      "link": "https://www.fool.com/investing/2026/08/21/the-dividend-etf-that-generates-passive-income-whi/?.tsrc=rss",
       "date": "2026-08-21",
-      "steps": 393,
-      "resting_hr": 55,
-      "body_battery": null,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-08-20": {
-      "date": "2026-08-20",
-      "steps": 12475,
-      "resting_hr": 53,
-      "body_battery": 39,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 413,
-        "deep_min": 101,
-        "light_min": 285,
-        "rem_min": 27,
-        "awake_min": 16,
-        "score": 46,
-        "start": 1787184300000,
-        "end": 1787210040000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 12:00:50",
-          "duration_s": 953,
-          "distance_m": 4203.0,
-          "calories": 145,
-          "avg_hr": 131,
-          "max_hr": 156,
-          "avg_speed": 4.41
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 10:20:48",
-          "duration_s": 1316,
-          "distance_m": 3160.0,
-          "calories": 169,
-          "avg_hr": 120,
-          "max_hr": 152,
-          "avg_speed": 2.4
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-19": {
-      "date": "2026-08-19",
-      "steps": 10338,
-      "resting_hr": 52,
-      "body_battery": 40,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 499,
-        "deep_min": 152,
-        "light_min": 332,
-        "rem_min": 15,
-        "awake_min": 72,
-        "score": 43,
-        "start": 1787091600000,
-        "end": 1787125860000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-19 10:33:49",
-          "duration_s": 1187,
-          "distance_m": 2707.0,
-          "calories": 120,
-          "avg_hr": 109,
-          "max_hr": 132,
-          "avg_speed": 2.28
-        }
+    {
+      "title": "You’re Already Funding the AI Bubble — and You’ll Pay for the Bust",
+      "link": "https://finance.yahoo.com/technology/ai/articles/already-funding-ai-bubble-ll-033114528.html?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-18": {
-      "date": "2026-08-18",
-      "steps": 11420,
-      "resting_hr": 52,
-      "body_battery": 47,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 384,
-        "deep_min": 98,
-        "light_min": 258,
-        "rem_min": 28,
-        "awake_min": 3,
-        "score": 46,
-        "start": 1787009640000,
-        "end": 1787032860000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-18 10:03:14",
-          "duration_s": 1540,
-          "distance_m": 5333.0,
-          "calories": 147,
-          "avg_hr": 108,
-          "max_hr": 148,
-          "avg_speed": 3.46
-        }
+    {
+      "title": "Is a Financial Sector ETF a Better Buy Than Picking the Stocks Yourself?",
+      "link": "https://www.fool.com/investing/2026/08/20/is-a-financial-sector-etf-a-better-buy-than-pickin/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-17": {
-      "date": "2026-08-17",
-      "steps": 11472,
-      "resting_hr": 52,
-      "body_battery": 48,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 324,
-        "deep_min": 93,
-        "light_min": 212,
-        "rem_min": 19,
-        "awake_min": 9,
-        "score": 62,
-        "start": 1786932540000,
-        "end": 1786952520000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 16:37:51",
-          "duration_s": 1542,
-          "distance_m": 2863.0,
-          "calories": 149,
-          "avg_hr": 109,
-          "max_hr": 147,
-          "avg_speed": 1.86
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 15:35:54",
-          "duration_s": 2449,
-          "distance_m": 3005.0,
-          "calories": 267,
-          "avg_hr": 120,
-          "max_hr": 154,
-          "avg_speed": 1.23
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-17 11:09:25",
-          "duration_s": 3250,
-          "distance_m": 7979.0,
-          "calories": 374,
-          "avg_hr": 119,
-          "max_hr": 159,
-          "avg_speed": 2.45
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 10:00:08",
-          "duration_s": 1543,
-          "distance_m": 3504.0,
-          "calories": 126,
-          "avg_hr": 100,
-          "max_hr": 129,
-          "avg_speed": 2.27
-        }
+    {
+      "title": "Nvidia, AMD, and Intel: Wall Street Says to Buy 2 and Avoid 1. I Disagree.",
+      "link": "https://www.fool.com/investing/2026/08/20/nvidia-amd-and-intel-wall-street-says-to-buy-2-and/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-16": {
-      "date": "2026-08-16",
-      "steps": 15614,
-      "resting_hr": 48,
-      "body_battery": 66,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 491,
-        "deep_min": 60,
-        "light_min": 302,
-        "rem_min": 129,
-        "awake_min": 11,
-        "score": 87,
-        "start": 1786829280000,
-        "end": 1786859400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-16 16:54:22",
-          "duration_s": 1216,
-          "distance_m": 0.0,
-          "calories": 70,
-          "avg_hr": 86,
-          "max_hr": 135,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Why MPLX Stock Is Suddenly Trending on Wall Street",
+      "link": "https://www.fool.com/investing/2026/08/20/why-mplx-stock-is-suddenly-trending-on-wall/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-15": {
-      "date": "2026-08-15",
-      "steps": 25081,
-      "resting_hr": 48,
-      "body_battery": 79,
-      "avg_stress": 33,
-      "sleep": {
-        "total_min": 370,
-        "deep_min": 46,
-        "light_min": 298,
-        "rem_min": 26,
-        "awake_min": 0,
-        "score": 66,
-        "start": 1786747980000,
-        "end": 1786770180000
-      },
-      "activities": [
-        {
-          "type": "open_water_swimming",
-          "name": "Bansko Open Water Swimming",
-          "start": "2026-08-15 17:32:36",
-          "duration_s": 1523,
-          "distance_m": 2289.0,
-          "calories": 468,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 1.5
-        }
+    {
+      "title": "Which Streaming Stock Would Hold Up Better in a Recession: Netflix or Walt Disney?",
+      "link": "https://www.fool.com/investing/2026/08/20/streaming-better-recession-netflix-walt-disney/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Will Stronger Operating Trends Amid Volatile Markets Change TC Energy's (TSX:TRP) Narrative?",
+      "link": "https://finance.yahoo.com/energy/articles/stronger-operating-trends-amid-volatile-043050641.html?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Advance Auto Parts Stock Crashed Today",
+      "link": "https://www.fool.com/investing/2026/08/20/why-advance-auto-parts-stock-crashed-today/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Alibaba Cloud Revenue Jumps 45%. Is the Profit Plunge and China E-Commerce Slide Cause for Concern?",
+      "link": "https://www.fool.com/investing/2026/08/20/alibaba-cloud-revenue-jumps-45-is-the-profit-plunge-and-china-e-commerce-slide-cause-for-concern/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Alphabet and Nvidia Own More SpaceX Than BlackRock and Vanguard Combined. Here's Why That's About to Change.",
+      "link": "https://www.fool.com/investing/2026/08/20/alphabet-and-nvidia-own-more-spacex-than-blackrock/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Marc Benioff Says Wall Street's Fears That AI Will Kill Salesforce Are \"Dead Wrong,\" Even as CRM Stock Has Fallen Over 25% in 2026. Should Investors Bet on His Conviction?",
+      "link": "https://www.fool.com/investing/2026/08/21/marc-benioff-says-wall-streets-fears-that-ai-will/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Fabrinet Sees AI Optical Demand Fueling Years of Growth, Expands Capacity",
+      "link": "https://www.marketbeat.com/instant-alerts/fabrinet-sees-ai-optical-demand-fueling-years-of-growth-expands-capacity-2026-08-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Google's Marvell Warrant Doesn't Fully Vest Until Google Buys $120 Billion of Chips",
+      "link": "https://www.fool.com/investing/2026/08/20/google-s-marvell-warrant-doesn-t-fully-vest-until-google-buys-usd120-billion-of-chips/?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NVIDIA Corporation (NVDA)’s Space Exploration Technologies (SPCX) Stake Traces Back to a Wild $1.25 Trillion Deal. Here’s How It Happened",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-corporation-nvda-space-exploration-005825605.html?.tsrc=rss",
+      "date": "2026-08-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-21"
+  ]
 }
