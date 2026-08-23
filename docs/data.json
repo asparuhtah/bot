@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-22T07:25:23.592776+00:00",
-  "eurUsd": 1.1683,
+  "lastUpdated": "2026-08-23T07:27:35.110881+00:00",
+  "eurUsd": 1.1721,
   "prices": {
-    "BTC-USD": 66270.0,
-    "ETC-USD": 7.05,
-    "FLR-USD": 0.006432,
+    "BTC-USD": 65247.0,
+    "ETC-USD": 6.63,
+    "FLR-USD": 0.005997,
     "EXI2.DE": 109.52,
-    "MRVL": 161.499615,
+    "MRVL": 160.976026,
     "DFEN.DE": 55.03,
-    "NVDA": 174.450056,
+    "NVDA": 173.884481,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 381.76,
-    "pnl": -16.91,
-    "pnlPct": -4.24
+    "totalCurrent": 376.94,
+    "pnl": -21.73,
+    "pnlPct": -5.45
   },
   "history": [
-    {
-      "date": "2026-07-24",
-      "total": 251.4,
-      "pnl": -36.67,
-      "pct": -12.73
-    },
     {
       "date": "2026-07-25",
       "total": 249.45,
@@ -197,448 +191,154 @@
       "total": 381.76,
       "pnl": -16.91,
       "pct": -4.24
+    },
+    {
+      "date": "2026-08-23",
+      "total": 376.94,
+      "pnl": -21.73,
+      "pct": -5.45
     }
   ],
   "news": [
     {
-      "title": "AMD Investors Must Be Ready For Major News On Aug. 26",
-      "link": "https://www.fool.com/investing/2026/08/22/amd-investors-must-be-ready-for-major-news-on-aug/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Google Is Getting Paid in Marvell Stock Warrants for Buying Marvell's Chips",
-      "link": "https://www.fool.com/investing/2026/08/21/google-is-getting-paid-in-marvell-stock-warrants-for-buying-marvell-s-chips/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Robinhood Markets Stock Popped Today",
-      "link": "https://www.fool.com/investing/2026/08/21/why-robinhood-markets-stock-popped-today/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dow Jones Futures: Market Rally Repairs Some Damage; Nvidia Earnings Loom",
-      "link": "https://finance.yahoo.com/m/0e4d198b-0fbe-345f-9a59-99f6074c2273/dow-jones-futures%3A-market.html?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell vs. Broadcom: the custom silicon shift",
-      "link": "https://www.thestreet.com/technology/marvell-google-broadcom-custom-silicon-shift?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "UPS Fired Amazon. Was It The Smart Move?",
-      "link": "https://www.fool.com/investing/2026/08/22/ups-fired-amazon-was-it-the-smart-move/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How to Judge a Fintech Stock Before You Buy It",
-      "link": "https://www.fool.com/investing/2026/08/22/how-to-judge-a-fintech-stock-before-you-buy-it/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Still Sitting in Cash? Here's How Much $10,000 Could Cost You Over the Next 10 Years.",
-      "link": "https://www.fool.com/investing/2026/08/22/still-in-cash-how-much-10000-cost-you-10-years/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Billionaire David Tepper Sells Lyft in Favor of Its Biggest Rival, Which Has 30% Upside, According to Wall Street",
-      "link": "https://www.fool.com/investing/2026/08/22/billionaire-david-tepper-sells-lyft-in-favor-of-it/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Micron Committed $10 Billion Over 10 Years to a Research Lab That Breaks Ground in 2027",
-      "link": "https://www.fool.com/investing/2026/08/21/micron-committed-usd10-billion-over-10-years-to-a-research-lab-that-breaks-ground-in-2027/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This 401(k) Move Could Cost Retirees Up to $487 a Month for a Year",
-      "link": "https://www.fool.com/retirement/2026/08/22/this-401k-move-could-cost-retirees-up-to-487-a-mon/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Vlad Tenev Asked Regulators to Green-Light Tokenized Stocks. Robinhood Just Added About $12 Billion in Market Value.",
-      "link": "https://www.fool.com/investing/2026/08/21/vlad-tenev-asked-regulators-to-green-light-tokenized-stocks-robinhood-just-added-about-usd12-billion-in-market-value/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Ubiquiti Stock Just Sank",
-      "link": "https://www.fool.com/investing/2026/08/21/why-ubiquiti-stock-just-sank/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel Sold $20 Billion of Stock at $95 a Share. It Now Trades Below $93.",
-      "link": "https://www.fool.com/investing/2026/08/21/intel-sold-usd20-billion-of-stock-at-usd95-a-share-it-now-trades-below-usd93/?.tsrc=rss",
-      "date": "2026-08-22",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-23": {
+      "title": "Got $500? 1 Cryptocurrency to Buy Hand Over Fist in the Second Half of 2026",
+      "link": "https://www.fool.com/investing/2026/08/23/got-500-1-cryptocurrency-buy-hand-over-fist-2026/?.tsrc=rss",
       "date": "2026-08-23",
-      "steps": 1288,
-      "resting_hr": 55,
-      "body_battery": 35,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-08-22": {
-      "date": "2026-08-22",
-      "steps": 12846,
-      "resting_hr": 51,
-      "body_battery": 63,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 387,
-        "deep_min": 105,
-        "light_min": 282,
-        "rem_min": 0,
-        "awake_min": 48,
-        "score": 57,
-        "start": 1787358000000,
-        "end": 1787384100000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-22 18:34:28",
-          "duration_s": 2259,
-          "distance_m": 7200.0,
-          "calories": 273,
-          "avg_hr": 120,
-          "max_hr": 153,
-          "avg_speed": 3.19
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 16:48:23",
-          "duration_s": 732,
-          "distance_m": 1700.0,
-          "calories": 62,
-          "avg_hr": 100,
-          "max_hr": 125,
-          "avg_speed": 2.32
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 15:54:12",
-          "duration_s": 1366,
-          "distance_m": 4532.0,
-          "calories": 143,
-          "avg_hr": 112,
-          "max_hr": 133,
-          "avg_speed": 3.32
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 15:28:28",
-          "duration_s": 1241,
-          "distance_m": 4049.0,
-          "calories": 107,
-          "avg_hr": 102,
-          "max_hr": 124,
-          "avg_speed": 3.26
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-22 14:27:12",
-          "duration_s": 163,
-          "distance_m": 0.0,
-          "calories": 12,
-          "avg_hr": 92,
-          "max_hr": 114,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-21": {
-      "date": "2026-08-21",
-      "steps": 8983,
-      "resting_hr": 54,
-      "body_battery": 29,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 469,
-        "deep_min": 132,
-        "light_min": 321,
-        "rem_min": 16,
-        "awake_min": 44,
-        "score": 44,
-        "start": 1787273940000,
-        "end": 1787304720000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-21 22:34:04",
-          "duration_s": 3294,
-          "distance_m": 10186.0,
-          "calories": 295,
-          "avg_hr": 109,
-          "max_hr": 148,
-          "avg_speed": 3.09
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-21 10:55:00",
-          "duration_s": 810,
-          "distance_m": 3087.0,
-          "calories": 104,
-          "avg_hr": 118,
-          "max_hr": 146,
-          "avg_speed": 3.81
-        }
+    {
+      "title": "Dow Jones Futures: Market Rally Repairs Some Damage As Nvidia Looms; New Trump Tariffs On Canada",
+      "link": "https://finance.yahoo.com/m/0e4d198b-0fbe-345f-9a59-99f6074c2273/dow-jones-futures%3A-market.html?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-20": {
-      "date": "2026-08-20",
-      "steps": 12475,
-      "resting_hr": 53,
-      "body_battery": 39,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 413,
-        "deep_min": 101,
-        "light_min": 285,
-        "rem_min": 27,
-        "awake_min": 16,
-        "score": 46,
-        "start": 1787184300000,
-        "end": 1787210040000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 12:00:50",
-          "duration_s": 953,
-          "distance_m": 4203.0,
-          "calories": 145,
-          "avg_hr": 131,
-          "max_hr": 156,
-          "avg_speed": 4.41
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 10:20:48",
-          "duration_s": 1316,
-          "distance_m": 3160.0,
-          "calories": 169,
-          "avg_hr": 120,
-          "max_hr": 152,
-          "avg_speed": 2.4
-        }
+    {
+      "title": "IPO Fever Heats Up for OpenAI and Anthropic",
+      "link": "https://www.fool.com/investing/2026/08/22/ipo-fever-heats-up-for-openai-and-anthropic/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-19": {
-      "date": "2026-08-19",
-      "steps": 10338,
-      "resting_hr": 52,
-      "body_battery": 40,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 499,
-        "deep_min": 152,
-        "light_min": 332,
-        "rem_min": 15,
-        "awake_min": 72,
-        "score": 43,
-        "start": 1787091600000,
-        "end": 1787125860000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-19 10:33:49",
-          "duration_s": 1187,
-          "distance_m": 2707.0,
-          "calories": 120,
-          "avg_hr": 109,
-          "max_hr": 132,
-          "avg_speed": 2.28
-        }
+    {
+      "title": "Senators Plan a Clarity Act Vote on Sept. 15. What Happens Next for Crypto?",
+      "link": "https://www.fool.com/investing/2026/08/22/senators-plan-a-clarity-act-vote-on-sept-15/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-18": {
-      "date": "2026-08-18",
-      "steps": 11420,
-      "resting_hr": 52,
-      "body_battery": 47,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 384,
-        "deep_min": 98,
-        "light_min": 258,
-        "rem_min": 28,
-        "awake_min": 3,
-        "score": 46,
-        "start": 1787009640000,
-        "end": 1787032860000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-18 10:03:14",
-          "duration_s": 1540,
-          "distance_m": 5333.0,
-          "calories": 147,
-          "avg_hr": 108,
-          "max_hr": 148,
-          "avg_speed": 3.46
-        }
+    {
+      "title": "Cisco & Cerebras Orders Up, Stocks Down",
+      "link": "https://www.fool.com/investing/2026/08/22/cisco-cerebras-orders-up-stocks-down/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-17": {
-      "date": "2026-08-17",
-      "steps": 11472,
-      "resting_hr": 52,
-      "body_battery": 48,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 324,
-        "deep_min": 93,
-        "light_min": 212,
-        "rem_min": 19,
-        "awake_min": 9,
-        "score": 62,
-        "start": 1786932540000,
-        "end": 1786952520000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 16:37:51",
-          "duration_s": 1542,
-          "distance_m": 2863.0,
-          "calories": 149,
-          "avg_hr": 109,
-          "max_hr": 147,
-          "avg_speed": 1.86
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 15:35:54",
-          "duration_s": 2449,
-          "distance_m": 3005.0,
-          "calories": 267,
-          "avg_hr": 120,
-          "max_hr": 154,
-          "avg_speed": 1.23
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-17 11:09:25",
-          "duration_s": 3250,
-          "distance_m": 7979.0,
-          "calories": 374,
-          "avg_hr": 119,
-          "max_hr": 159,
-          "avg_speed": 2.45
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-17 10:00:08",
-          "duration_s": 1543,
-          "distance_m": 3504.0,
-          "calories": 126,
-          "avg_hr": 100,
-          "max_hr": 129,
-          "avg_speed": 2.27
-        }
+    {
+      "title": "Jim Cramer Said NVIDIA Corp. (NASDAQ:NVDA) Doesn’t Need Anyone But Elon Musk",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-said-nvidia-corp-002234481.html?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Down 32% or More in 2026, Are Any of These Top Cryptocurrencies Worth Buying Right Now?",
+      "link": "https://www.fool.com/investing/2026/08/23/down-32-or-more-in-2026-are-any-of-these-top-crypt/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Brookfield Renewable a Better Buy Now Than It Was 6 Months Ago?",
+      "link": "https://www.fool.com/investing/2026/08/23/is-brookfield-renewable-a-better-buy-now-than-it-w/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Mark Zuckerberg Published a 6,500-Word AI Manifesto This Week Defending Meta's Unrestricted AI Buildout. Here's Why Investors Should Care.",
+      "link": "https://www.fool.com/investing/2026/08/23/mark-zuckerberg-published-a-6500-word-ai-manifesto/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Apple Cut Its Standard EU App Store Commission From 30% to 26%",
+      "link": "https://www.fool.com/investing/2026/08/22/apple-cut-its-standard-eu-app-store-commission-from-30-to-26/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Palantir Keeps 55 Cents of Every Revenue Dollar as Profit",
+      "link": "https://www.fool.com/investing/2026/08/22/palantir-keeps-55-cents-of-every-revenue-dollar-as-profit/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Micron Stock Is Up 30% From Its Recent Low. Here's How Much a $5,000 Investment Today Could Be Worth by Next Year, According to Wall Street Analysts.",
+      "link": "https://www.fool.com/investing/2026/08/23/micron-stock-is-up-30-from-its-recent-low-heres-ho/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Keysight Technologies Stock Sank This Week",
+      "link": "https://www.fool.com/investing/2026/08/22/why-keysight-technologies-stock-sank-this-week/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Solana Is Beating Ethereum in Tokenized Assets. That Might Not Make It the Better Buy.",
+      "link": "https://www.fool.com/investing/2026/08/22/solana-is-beating-ethereum-in-tokenized-assets/?.tsrc=rss",
+      "date": "2026-08-23",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-23"
+  ]
 }
