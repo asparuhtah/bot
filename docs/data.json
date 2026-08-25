@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-24T07:52:09.745231+00:00",
-  "eurUsd": 1.1669,
+  "lastUpdated": "2026-08-25T07:38:18.929147+00:00",
+  "eurUsd": 1.1657,
   "prices": {
-    "BTC-USD": 66326.0,
-    "ETC-USD": 6.61,
-    "FLR-USD": 0.006038,
+    "BTC-USD": 69137.0,
+    "ETC-USD": 6.88,
+    "FLR-USD": 0.005948,
     "EXI2.DE": 109.52,
-    "MRVL": 161.693376,
+    "MRVL": 161.859827,
     "DFEN.DE": 55.03,
-    "NVDA": 174.659354,
+    "NVDA": 174.839152,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 379.01,
-    "pnl": -19.66,
-    "pnlPct": -4.93
+    "totalCurrent": 385.49,
+    "pnl": -13.18,
+    "pnlPct": -3.31
   },
   "history": [
-    {
-      "date": "2026-07-26",
-      "total": 363.06,
-      "pnl": -35.61,
-      "pct": -8.93
-    },
     {
       "date": "2026-07-27",
       "total": 363.82,
@@ -197,448 +191,154 @@
       "total": 379.01,
       "pnl": -19.66,
       "pct": -4.93
+    },
+    {
+      "date": "2026-08-25",
+      "total": 385.49,
+      "pnl": -13.18,
+      "pct": -3.31
     }
   ],
   "news": [
     {
-      "title": "Taiwan indicts nine over alleged illegal export of AI servers to China",
-      "link": "https://finance.yahoo.com/technology/ai/articles/taiwan-indicts-9-over-alleged-062457847.html?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Week’s Big Events Are Priced In for Stocks: Will Bitcoin Agree?",
-      "link": "https://beincrypto.com/bitcoin-priced-in-reaction-stocks/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Is Coming for OpenAI and DeepSeek With $6 Billion Poolside Deal to Build a Powerful Open-Weight AI Model: Report",
-      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-coming-openai-deepseek-6-042155320.html?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "$92 Billion Nvidia Earnings Could Make or Break the AI Trade",
-      "link": "https://beincrypto.com/nvidia-earnings-92-billion-ai-trade/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How S&P 500, Nasdaq, Dow Futures Are Moving As Trump’s ‘Economic D-Day’ On Iran, Nvidia Earnings Loom",
-      "link": "https://stocktwits.com/news-articles/markets/equity/how-s-and-p-500-nasdaq-dow-futures-are-moving-as-trump-s-economic-d-day-on-iran-nvidia-earnings-loom/cZYKTMXRJn2?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVDA Stock Comes Off Rough Week: AI Darling Reportedly Plans Major Price Hike As Q2 Earnings Loom",
-      "link": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-comes-off-rough-week-ai-darling-reportedly-plans-major-price-hike-as-q2-earnings-loom/cZYKTZqRJnc?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "I've Covered Nvidia for 9 Years. Here's Whether the Stock Is Overvalued Right Now.",
-      "link": "https://www.fool.com/investing/2026/08/23/ive-covered-nvidia-for-9-years-heres-whether-nvda/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dow Jones Futures Waver; Nvidia, Tariffs, Warsh In Focus",
-      "link": "https://finance.yahoo.com/m/0e4d198b-0fbe-345f-9a59-99f6074c2273/dow-jones-futures-waver%3B.html?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Broadcom Has Seen Its Biggest Customer Drop a Key Chip Before. History Says What the Stock Did Next.",
-      "link": "https://www.fool.com/investing/2026/08/23/broadcom-has-seen-its-biggest-customer-drop-a-key-chip-before-history-says-what-the-stock-did-next/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "BABA, NVDA, MRVL, WMT, SPCX: Why Retail Traders Couldn’t Take Their Eyes Off These Stocks Last Week",
-      "link": "https://stocktwits.com/news-articles/markets/equity/baba-nvda-mrvl-wmt-spcx-why-retail-traders-couldn-t-take-their-eyes-off-these-stocks-last-week/cZYKGYPRJV6?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "A Win-Win Deal: Here's Why the Archer Aviation and Boeing Deal Adds Value to Both Stocks",
-      "link": "https://www.fool.com/investing/2026/08/24/a-win-win-deal-heres-why-the-archer-aviation-and-b/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia reportedly in talks to back Perplexity at more than $30bn valuation",
-      "link": "https://www.proactiveinvestors.com/companies/news/1097457/nvidia-reportedly-in-talks-to-back-perplexity-at-more-than-30bn-valuation-1097457.html?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Billionaire Investor Stanley Druckenmiller Sold Broadcom, Intel, and Micron and Bought Another Chip Stock That Expects to Double Data Center Sales in 2027",
-      "link": "https://www.fool.com/investing/2026/08/24/billionaire-stanley-druckenmiller-sold-micron-2027/?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Farmers & Merchants Bancorp’s Dividend Hike Shapes FMCB’s Capital Return Strategy for Investors",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/farmers-merchants-bancorp-dividend-hike-042949456.html?.tsrc=rss",
-      "date": "2026-08-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-25": {
+      "title": "Nvidia To Move Markets More Than Warsh: 3-Minute MLIV",
+      "link": "https://finance.yahoo.com/video/nvidia-move-markets-more-warsh-071452519.html?.tsrc=rss",
       "date": "2026-08-25",
-      "steps": 655,
-      "resting_hr": 47,
-      "body_battery": 69,
-      "avg_stress": 10,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 97,
-        "light_min": 261,
-        "rem_min": 74,
-        "awake_min": 14,
-        "score": 81,
-        "start": 1787611020000,
-        "end": 1787637780000
-      },
-      "activities": []
-    },
-    "2026-08-24": {
-      "date": "2026-08-24",
-      "steps": 8581,
-      "resting_hr": 50,
-      "body_battery": 61,
-      "avg_stress": 39,
-      "sleep": {
-        "total_min": 462,
-        "deep_min": 105,
-        "light_min": 331,
-        "rem_min": 26,
-        "awake_min": 57,
-        "score": 65,
-        "start": 1787529660000,
-        "end": 1787560800000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-24 17:27:05",
-          "duration_s": 646,
-          "distance_m": 2749.0,
-          "calories": 65,
-          "avg_hr": 107,
-          "max_hr": 137,
-          "avg_speed": 4.25
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-24 11:50:44",
-          "duration_s": 2031,
-          "distance_m": 7109.0,
-          "calories": 257,
-          "avg_hr": 122,
-          "max_hr": 156,
-          "avg_speed": 3.5
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-24 10:59:12",
-          "duration_s": 1449,
-          "distance_m": 6879.0,
-          "calories": 144,
-          "avg_hr": 109,
-          "max_hr": 131,
-          "avg_speed": 4.74
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-24 10:03:20",
-          "duration_s": 792,
-          "distance_m": 1807.0,
-          "calories": 84,
-          "avg_hr": 110,
-          "max_hr": 150,
-          "avg_speed": 2.28
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-23": {
-      "date": "2026-08-23",
-      "steps": 14213,
-      "resting_hr": 55,
-      "body_battery": 35,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 367,
-        "deep_min": 78,
-        "light_min": 263,
-        "rem_min": 26,
-        "awake_min": 52,
-        "score": 63,
-        "start": 1787448240000,
-        "end": 1787473380000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-23 09:59:49",
-          "duration_s": 1310,
-          "distance_m": 2944.0,
-          "calories": 104,
-          "avg_hr": 99,
-          "max_hr": 118,
-          "avg_speed": 2.25
-        }
+    {
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "link": "https://www.benzinga.com/markets/prediction-markets/26/08/61400464/stock-market-will-sp-500-open-up-or-down-today-23?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-22": {
-      "date": "2026-08-22",
-      "steps": 12846,
-      "resting_hr": 51,
-      "body_battery": 63,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 387,
-        "deep_min": 105,
-        "light_min": 282,
-        "rem_min": 0,
-        "awake_min": 48,
-        "score": 57,
-        "start": 1787358000000,
-        "end": 1787384100000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-22 18:34:28",
-          "duration_s": 2259,
-          "distance_m": 7200.0,
-          "calories": 273,
-          "avg_hr": 120,
-          "max_hr": 153,
-          "avg_speed": 3.19
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 16:48:23",
-          "duration_s": 732,
-          "distance_m": 1700.0,
-          "calories": 62,
-          "avg_hr": 100,
-          "max_hr": 125,
-          "avg_speed": 2.32
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 15:54:12",
-          "duration_s": 1366,
-          "distance_m": 4532.0,
-          "calories": 143,
-          "avg_hr": 112,
-          "max_hr": 133,
-          "avg_speed": 3.32
-        },
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-22 15:28:28",
-          "duration_s": 1241,
-          "distance_m": 4049.0,
-          "calories": 107,
-          "avg_hr": 102,
-          "max_hr": 124,
-          "avg_speed": 3.26
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-22 14:27:12",
-          "duration_s": 163,
-          "distance_m": 0.0,
-          "calories": 12,
-          "avg_hr": 92,
-          "max_hr": 114,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Nvidia shares set for $280 billion price swing after earnings, options show",
+      "link": "https://finance.yahoo.com/markets/options/articles/nvidia-shares-set-280-billion-050140314.html?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-21": {
-      "date": "2026-08-21",
-      "steps": 8983,
-      "resting_hr": 54,
-      "body_battery": 29,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 469,
-        "deep_min": 132,
-        "light_min": 321,
-        "rem_min": 16,
-        "awake_min": 44,
-        "score": 44,
-        "start": 1787273940000,
-        "end": 1787304720000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Sofia Cycling",
-          "start": "2026-08-21 22:34:04",
-          "duration_s": 3294,
-          "distance_m": 10186.0,
-          "calories": 295,
-          "avg_hr": 109,
-          "max_hr": 148,
-          "avg_speed": 3.09
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-21 10:55:00",
-          "duration_s": 810,
-          "distance_m": 3087.0,
-          "calories": 104,
-          "avg_hr": 118,
-          "max_hr": 146,
-          "avg_speed": 3.81
-        }
+    {
+      "title": "AMD Is Winning Nvidia (NVDA) Customers But Investors May Be Missing The Catch",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/amd-winning-nvidia-nvda-customers-043310331.html?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-20": {
-      "date": "2026-08-20",
-      "steps": 12475,
-      "resting_hr": 53,
-      "body_battery": 39,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 413,
-        "deep_min": 101,
-        "light_min": 285,
-        "rem_min": 27,
-        "awake_min": 16,
-        "score": 46,
-        "start": 1787184300000,
-        "end": 1787210040000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 12:00:50",
-          "duration_s": 953,
-          "distance_m": 4203.0,
-          "calories": 145,
-          "avg_hr": 131,
-          "max_hr": 156,
-          "avg_speed": 4.41
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-20 10:20:48",
-          "duration_s": 1316,
-          "distance_m": 3160.0,
-          "calories": 169,
-          "avg_hr": 120,
-          "max_hr": 152,
-          "avg_speed": 2.4
-        }
+    {
+      "title": "Elizabeth Warren Says if Jensen Huang Has Time for $1 Million Mar-a-Lago Dinner, He Can 'Find Time to Testify' and Explain Nvidia Tech in Russian Drones",
+      "link": "https://finance.yahoo.com/technology/ai/articles/elizabeth-warren-says-jensen-huang-042303771.html?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-19": {
-      "date": "2026-08-19",
-      "steps": 10338,
-      "resting_hr": 52,
-      "body_battery": 40,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 499,
-        "deep_min": 152,
-        "light_min": 332,
-        "rem_min": 15,
-        "awake_min": 72,
-        "score": 43,
-        "start": 1787091600000,
-        "end": 1787125860000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-19 10:33:49",
-          "duration_s": 1187,
-          "distance_m": 2707.0,
-          "calories": 120,
-          "avg_hr": 109,
-          "max_hr": 132,
-          "avg_speed": 2.28
-        }
+    {
+      "title": "Nvidia just sent a huge signal to investors ahead of earnings",
+      "link": "https://www.thestreet.com/investing/stocks/nvidia-perplexity-ai-30-billion-investment-ahead-of-earnings?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "S&P 500, Nasdaq, Dow Futures Mixed As Nvidia Earnings, Fed Signals, PCE Inflation Keep Markets On Edge This Week",
+      "link": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-futures-mixed-as-nvidia-earnings-fed-signals-pce-inflation-keep-markets-on-edge-this-week/cZYkJyIRJFD?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia (NVDA) Q2 Earnings Report Preview: What To Look For",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-q2-earnings-report-030915342.html?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stocks stagger and oil rises as traders eye Iran threat, Nvidia results",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-stagger-oil-rises-traders-024603014.html?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NVDA Stock’s 7-Day Losing Streak Sets Up Make-Or-Break AI Earnings Test: Retail Expects Yet Another Beat",
+      "link": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-s-7-day-losing-streak-sets-up-make-or-break-ai-earnings-test-retail-expects-yet-another-beat/cZYke4BRJFM?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is The Metals Company a Potential Millionaire-Maker Stock?",
+      "link": "https://www.fool.com/investing/2026/08/25/is-the-metals-company-a-potential-millionaire-make/?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: SpaceX's Power Needs Will Turn It Into Oklo's Biggest Customer",
+      "link": "https://www.fool.com/investing/2026/08/25/prediction-spacexs-power-needs-will-turn-it-into-w/?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Alibaba Is Selling $10.2 Billion of Stock to Fund AI. Alphabet and Intel Went First.",
+      "link": "https://www.fool.com/investing/2026/08/24/alibaba-is-selling-usd10-2-billion-of-stock-to-fund-ai-alphabet-and-intel-went-first/?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Western Digital Sits 46% Below Its High and Has Still More Than Doubled This Year",
+      "link": "https://www.fool.com/investing/2026/08/24/western-digital-sits-46-below-its-high-and-has-still-more-than-doubled-this-year/?.tsrc=rss",
+      "date": "2026-08-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-25"
+  ]
 }
