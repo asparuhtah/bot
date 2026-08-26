@@ -28,19 +28,21 @@ jobs:
         run: pip install requests
 
       - name: Run investment bot
-                env:
+        env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID:   ${{ secrets.ID_CHAT }}
-          run: python invest_bot_runner.py
+        run: python invest_bot_runner.py
 
       - name: Commit updated state / history
         run: |
+          set +e
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bot_state.json
           if [ -f portfolio_history.csv ]; then git add portfolio_history.csv; fi
 
-          if git diff --staged --quiet; then
+          git diff --staged --quiet
+          if [ $? -eq 0 ]; then
             echo "Няма промени за commit."
             exit 0
           fi
@@ -48,12 +50,14 @@ jobs:
           git commit -m "bot: state update $(date -u '+%Y-%m-%d %H:%M UTC')"
 
           for i in 1 2 3 4 5; do
-            if git push; then
+            git push
+            if [ $? -eq 0 ]; then
               echo "Push успешен (опит $i)."
               exit 0
             fi
-            echo "Push отхвърлен, rebase и нов опит ($i)..."
-            git pull --rebase origin main
+            echo "Push отхвърлен (опит $i) — fetch + merge (favor нашата версия на state файла)..."
+            git fetch origin main
+            git merge origin/main --no-edit -X ours
             sleep $(( (RANDOM % 5) + 1 ))
           done
 
