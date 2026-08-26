@@ -5,6 +5,10 @@ on:
     - cron: '*/5 * * * *'   # на всеки 5 минути (UTC, GitHub може леко да закъснява)
   workflow_dispatch:         # позволява ръчно пускане от GitHub UI (Actions таб)
 
+concurrency:
+  group: invest-bot
+  cancel-in-progress: false   # опашка вместо застъпване, ако два run-а съвпаднат
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
@@ -33,6 +37,25 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bot_state.json portfolio_history.csv
-          git diff --staged --quiet || git commit -m "bot: state update $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git add bot_state.json
+          if [ -f portfolio_history.csv ]; then git add portfolio_history.csv; fi
+
+          if git diff --staged --quiet; then
+            echo "Няма промени за commit."
+            exit 0
+          fi
+
+          git commit -m "bot: state update $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push успешен (опит $i)."
+              exit 0
+            fi
+            echo "Push отхвърлен, rebase и нов опит ($i)..."
+            git pull --rebase origin main
+            sleep $(( (RANDOM % 5) + 1 ))
+          done
+
+          echo "Push не успя след 5 опита."
+          exit 1
