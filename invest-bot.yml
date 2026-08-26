@@ -28,10 +28,10 @@ jobs:
         run: pip install requests
 
       - name: Run investment bot
-        env:
+                env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID:   ${{ secrets.CHAT_ID }}
-        run: python invest_bot_runner.py
+          CHAT_ID:   ${{ secrets.ID_CHAT }}
+          run: python invest_bot_runner.py
 
       - name: Commit updated state / history
         run: |
