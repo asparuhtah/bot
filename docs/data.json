@@ -340,5 +340,361 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-08-27": {
+      "date": "2026-08-27",
+      "steps": 3783,
+      "resting_hr": 49,
+      "body_battery": 65,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 449,
+        "deep_min": 35,
+        "light_min": 371,
+        "rem_min": 43,
+        "awake_min": 78,
+        "score": 62,
+        "start": 1787788080000,
+        "end": 1787819700000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-27 10:11:29",
+          "duration_s": 645,
+          "distance_m": 1182.0,
+          "calories": 80,
+          "avg_hr": 117,
+          "max_hr": 141,
+          "avg_speed": 1.83
+        }
+      ]
+    },
+    "2026-08-26": {
+      "date": "2026-08-26",
+      "steps": 8144,
+      "resting_hr": 49,
+      "body_battery": 17,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 276,
+        "deep_min": 56,
+        "light_min": 220,
+        "rem_min": 0,
+        "awake_min": 43,
+        "score": 34,
+        "start": 1787694480000,
+        "end": 1787713620000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-26 14:47:44",
+          "duration_s": 606,
+          "distance_m": 1468.0,
+          "calories": 42,
+          "avg_hr": 91,
+          "max_hr": 112,
+          "avg_speed": 2.42
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-26 10:39:11",
+          "duration_s": 1115,
+          "distance_m": 2452.0,
+          "calories": 95,
+          "avg_hr": 101,
+          "max_hr": 136,
+          "avg_speed": 2.2
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Kiteboarding",
+          "start": "2026-08-26 05:26:10",
+          "duration_s": 18742,
+          "distance_m": 0.0,
+          "calories": 634,
+          "avg_hr": 72,
+          "max_hr": 111,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-08-25": {
+      "date": "2026-08-25",
+      "steps": 10499,
+      "resting_hr": 47,
+      "body_battery": 74,
+      "avg_stress": 43,
+      "sleep": {
+        "total_min": 432,
+        "deep_min": 97,
+        "light_min": 261,
+        "rem_min": 74,
+        "awake_min": 14,
+        "score": 81,
+        "start": 1787611020000,
+        "end": 1787637780000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-25 15:05:38",
+          "duration_s": 1093,
+          "distance_m": 5655.0,
+          "calories": 138,
+          "avg_hr": 119,
+          "max_hr": 151,
+          "avg_speed": 5.17
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-25 11:41:41",
+          "duration_s": 694,
+          "distance_m": 1215.0,
+          "calories": 47,
+          "avg_hr": 91,
+          "max_hr": 127,
+          "avg_speed": 1.75
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-25 10:05:42",
+          "duration_s": 2181,
+          "distance_m": 3004.0,
+          "calories": 151,
+          "avg_hr": 95,
+          "max_hr": 127,
+          "avg_speed": 1.38
+        },
+        {
+          "type": "yoga",
+          "name": "Yoga",
+          "start": "2026-08-25 09:25:57",
+          "duration_s": 1365,
+          "distance_m": 0,
+          "calories": 71,
+          "avg_hr": 86,
+          "max_hr": 115,
+          "avg_speed": null
+        }
+      ]
+    },
+    "2026-08-24": {
+      "date": "2026-08-24",
+      "steps": 8581,
+      "resting_hr": 50,
+      "body_battery": 61,
+      "avg_stress": 39,
+      "sleep": {
+        "total_min": 462,
+        "deep_min": 105,
+        "light_min": 331,
+        "rem_min": 26,
+        "awake_min": 57,
+        "score": 65,
+        "start": 1787529660000,
+        "end": 1787560800000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-24 17:27:05",
+          "duration_s": 646,
+          "distance_m": 2749.0,
+          "calories": 65,
+          "avg_hr": 107,
+          "max_hr": 137,
+          "avg_speed": 4.25
+        },
+        {
+          "type": "cycling",
+          "name": "Slivnitsa Cycling",
+          "start": "2026-08-24 11:50:44",
+          "duration_s": 2031,
+          "distance_m": 7109.0,
+          "calories": 257,
+          "avg_hr": 122,
+          "max_hr": 156,
+          "avg_speed": 3.5
+        },
+        {
+          "type": "cycling",
+          "name": "Slivnitsa Cycling",
+          "start": "2026-08-24 10:59:12",
+          "duration_s": 1449,
+          "distance_m": 6879.0,
+          "calories": 144,
+          "avg_hr": 109,
+          "max_hr": 131,
+          "avg_speed": 4.74
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-24 10:03:20",
+          "duration_s": 792,
+          "distance_m": 1807.0,
+          "calories": 84,
+          "avg_hr": 110,
+          "max_hr": 150,
+          "avg_speed": 2.28
+        }
+      ]
+    },
+    "2026-08-23": {
+      "date": "2026-08-23",
+      "steps": 14213,
+      "resting_hr": 55,
+      "body_battery": 35,
+      "avg_stress": 54,
+      "sleep": {
+        "total_min": 367,
+        "deep_min": 78,
+        "light_min": 263,
+        "rem_min": 26,
+        "awake_min": 52,
+        "score": 63,
+        "start": 1787448240000,
+        "end": 1787473380000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-23 09:59:49",
+          "duration_s": 1310,
+          "distance_m": 2944.0,
+          "calories": 104,
+          "avg_hr": 99,
+          "max_hr": 118,
+          "avg_speed": 2.25
+        }
+      ]
+    },
+    "2026-08-22": {
+      "date": "2026-08-22",
+      "steps": 12846,
+      "resting_hr": 51,
+      "body_battery": 63,
+      "avg_stress": 37,
+      "sleep": {
+        "total_min": 387,
+        "deep_min": 105,
+        "light_min": 282,
+        "rem_min": 0,
+        "awake_min": 48,
+        "score": 57,
+        "start": 1787358000000,
+        "end": 1787384100000
+      },
+      "activities": [
+        {
+          "type": "cycling",
+          "name": "Slivnitsa Cycling",
+          "start": "2026-08-22 18:34:28",
+          "duration_s": 2259,
+          "distance_m": 7200.0,
+          "calories": 273,
+          "avg_hr": 120,
+          "max_hr": 153,
+          "avg_speed": 3.19
+        },
+        {
+          "type": "cycling",
+          "name": "Sofia Cycling",
+          "start": "2026-08-22 16:48:23",
+          "duration_s": 732,
+          "distance_m": 1700.0,
+          "calories": 62,
+          "avg_hr": 100,
+          "max_hr": 125,
+          "avg_speed": 2.32
+        },
+        {
+          "type": "cycling",
+          "name": "Sofia Cycling",
+          "start": "2026-08-22 15:54:12",
+          "duration_s": 1366,
+          "distance_m": 4532.0,
+          "calories": 143,
+          "avg_hr": 112,
+          "max_hr": 133,
+          "avg_speed": 3.32
+        },
+        {
+          "type": "cycling",
+          "name": "Sofia Cycling",
+          "start": "2026-08-22 15:28:28",
+          "duration_s": 1241,
+          "distance_m": 4049.0,
+          "calories": 107,
+          "avg_hr": 102,
+          "max_hr": 124,
+          "avg_speed": 3.26
+        },
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-08-22 14:27:12",
+          "duration_s": 163,
+          "distance_m": 0.0,
+          "calories": 12,
+          "avg_hr": 92,
+          "max_hr": 114,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-08-21": {
+      "date": "2026-08-21",
+      "steps": 8983,
+      "resting_hr": 54,
+      "body_battery": 29,
+      "avg_stress": 49,
+      "sleep": {
+        "total_min": 469,
+        "deep_min": 132,
+        "light_min": 321,
+        "rem_min": 16,
+        "awake_min": 44,
+        "score": 44,
+        "start": 1787273940000,
+        "end": 1787304720000
+      },
+      "activities": [
+        {
+          "type": "cycling",
+          "name": "Sofia Cycling",
+          "start": "2026-08-21 22:34:04",
+          "duration_s": 3294,
+          "distance_m": 10186.0,
+          "calories": 295,
+          "avg_hr": 109,
+          "max_hr": 148,
+          "avg_speed": 3.09
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-08-21 10:55:00",
+          "duration_s": 810,
+          "distance_m": 3087.0,
+          "calories": 104,
+          "avg_hr": 118,
+          "max_hr": 146,
+          "avg_speed": 3.81
+        }
+      ]
+    }
+  },
+  "garmin_updated": "2026-08-27"
 }
