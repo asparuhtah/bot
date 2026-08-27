@@ -95,6 +95,10 @@ def send_message(text: str) -> bool:
     payload = {"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}
     try:
         r = requests.post(url, json=payload, timeout=10)
+        if r.status_code != 200:
+            print(f"❌ sendMessage HTTP {r.status_code} | chat_id={CHAT_ID!r} | body={r.text[:300]}")
+        else:
+            print(f"✅ sendMessage OK -> chat_id={CHAT_ID!r}")
         return r.status_code == 200
     except Exception as e:
         print(f"Telegram грешка: {e}")
@@ -107,7 +111,15 @@ def get_updates(offset=None):
         params["offset"] = offset
     try:
         r = requests.get(url, params=params, timeout=10)
-        return r.json().get("result", [])
+        data = r.json()
+        if not data.get("ok", True):
+            print(f"❌ getUpdates HTTP {r.status_code} | body={r.text[:500]}")
+        result = data.get("result", [])
+        print(f"📥 getUpdates: offset={offset} -> {len(result)} update(s)")
+        for u in result:
+            m = u.get("message", {})
+            print(f"   • update_id={u.get('update_id')} text={m.get('text')!r}")
+        return result
     except Exception as e:
         print(f"getUpdates грешка: {e}")
         return []
@@ -576,6 +588,9 @@ def main():
 
     print("🤖 Investment BOT v5 (GitHub Actions run)")
     print(f"📁 CSV: {CSV_FILE} | 🗂 State: {STATE_FILE}")
+    print(f"🔑 BOT_TOKEN налично: {bool(BOT_TOKEN)} (дължина={len(BOT_TOKEN)}, начало={BOT_TOKEN[:6]}...)")
+    print(f"💬 CHAT_ID: {CHAT_ID!r}")
+    print(f"🕐 NOW (Sofia): {NOW().isoformat()}")
 
     process_commands()
     check_price_alerts()
