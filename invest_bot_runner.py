@@ -17,6 +17,9 @@ import requests
 import json
 import csv
 import os
+import subprocess
+import time
+import random
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -87,6 +90,47 @@ def load_state():
 def save_state():
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(STATE, f, ensure_ascii=False, indent=2)
+
+# ─── ЗАПИС ОБРАТНО В GIT ──────────────────────────────────────────────────────
+# Прави се тук, а не в workflow-а, защото така е устойчиво на конфликти
+# от паралелни run-ове. Ако това мине успешно, стъпката в workflow-а
+# после няма да намери промени и ще приключи зелено.
+def _sh(cmd: str) -> int:
+    p = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    out = (p.stdout + p.stderr).strip()
+    print(f"$ {cmd}" + (f"\n{out}" if out else ""))
+    return p.returncode
+
+def git_sync():
+    if not os.environ.get("GITHUB_ACTIONS"):
+        print("ℹ️ Не сме в GitHub Actions — пропускам git sync.")
+        return
+
+    _sh('git config user.name "github-actions[bot]"')
+    _sh('git config user.email "github-actions[bot]@users.noreply.github.com"')
+
+    _sh(f"git add {STATE_FILE}")
+    if os.path.exists(CSV_FILE):
+        _sh(f"git add {CSV_FILE}")
+
+    if _sh("git diff --staged --quiet") == 0:
+        print("ℹ️ Няма промени за commit.")
+        return
+
+    ts = datetime.now(ZoneInfo("UTC")).strftime("%Y-%m-%d %H:%M UTC")
+    _sh(f'git commit -m "bot: state update {ts}"')
+
+    for i in range(1, 6):
+        if _sh("git push") == 0:
+            print(f"✅ Push успешен (опит {i}).")
+            return
+        print(f"⚠️ Push отхвърлен (опит {i}) — сливам с origin/main...")
+        _sh("git fetch origin main")
+        # -X ours: при сблъсък пази нашия ред в CSV-то, вместо да спира с конфликт
+        _sh("git merge origin/main --no-edit -X ours")
+        time.sleep(random.randint(1, 4))
+
+    print("❌ Push не успя след 5 опита.")
 
 MANUAL_PRICES = None  # ще се сложи в main() след load_state()
 
@@ -621,6 +665,7 @@ def main():
         STATE["last_snapshot_date"] = today
 
     save_state()
+    git_sync()
     print("✅ Run завършен.")
 
 if __name__ == "__main__":
