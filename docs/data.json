@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-28T19:11:23.062954+00:00",
-  "eurUsd": 1.1583,
+  "lastUpdated": "2026-08-29T12:54:50.761072+00:00",
+  "eurUsd": 1.1578,
   "prices": {
-    "BTC-USD": 67063.0,
+    "BTC-USD": 66951.0,
     "ETC-USD": 6.47,
-    "FLR-USD": 0.005436,
+    "FLR-USD": 0.005432,
     "EXI2.DE": 109.52,
-    "MRVL": 162.893896,
+    "MRVL": 162.964243,
     "DFEN.DE": 55.03,
-    "NVDA": 175.956143,
+    "NVDA": 176.03213,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 380.02,
-    "pnl": -18.65,
-    "pnlPct": -4.68
+    "totalCurrent": 379.88,
+    "pnl": -18.79,
+    "pnlPct": -4.71
   },
   "history": [
-    {
-      "date": "2026-07-30",
-      "total": 359.85,
-      "pnl": -38.82,
-      "pct": -9.74
-    },
     {
       "date": "2026-07-31",
       "total": 356.98,
@@ -197,425 +191,154 @@
       "total": 380.02,
       "pnl": -18.65,
       "pct": -4.68
+    },
+    {
+      "date": "2026-08-29",
+      "total": 379.88,
+      "pnl": -18.79,
+      "pct": -4.71
     }
   ],
   "news": [
     {
-      "title": "Stock Market Today: Dow Seeks Direction After Hawkish Fed Signal; Software Name Plummets (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/af609e0d-241a-3766-b67c-b22ac8fea8da/stock-market-today%3A-dow-seeks.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Was Situational Awareness's Top 5 Holdings at the End of Q2. They're All on Sale Now",
-      "link": "https://www.fool.com/investing/2026/08/28/this-was-situational-awarenesss-top-5-holdings-at/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "A Hawkish Fed Speech Turns a Green Morning Red",
-      "link": "https://www.fool.com/investing/2026/08/28/a-hawkish-fed-speech-turns-a-green-morning-red/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "MRVL Q2 Deep Dive: Data Center Strength and Custom Silicon Drive Upbeat Outlook",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/mrvl-q2-deep-dive-data-183252337.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA (NVDA) Tops Q2 Estimates and Guides Above Forecasts, But Shares Slip",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-tops-q2-estimates-183248574.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Investing.com’s stocks of the week",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/investing-com-stocks-week-183004118.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Open-weight AI companies are the Valley’s hottest acquisition targets",
-      "link": "https://finance.yahoo.com/technology/ai/articles/open-weight-ai-companies-valley-181940949.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Bitcoin ETFs Just Posted Their Best Week Since October 2025. That's Why I'm Bullish on Bitcoin.",
-      "link": "https://www.fool.com/investing/2026/08/28/bitcoin-etfs-just-posted-their-best-week-since-oct/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What I Learned From Investing Through 3 Big Stock Market Crashes",
-      "link": "https://www.fool.com/investing/2026/08/28/what-i-learned-from-investing-through-3-big-stock/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "President Trump Says U.S. Regulators Are About to Give the Green Light to Hyperliquid. Is It Finally Time to Believe the Hype About HYPE?",
-      "link": "https://www.fool.com/investing/2026/08/28/president-trump-says-us-regulators-are-about-to-gi/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: USA Rare Earth Doubles Before 2028",
-      "link": "https://www.fool.com/investing/2026/08/28/prediction-usa-rare-earth-doubles-before-2028/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Rubrik Stock Is Plummeting Today",
-      "link": "https://www.fool.com/investing/2026/08/28/why-rubrik-stock-is-plummeting-today/?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Broadcom vs. AMD: Which AI Chip Stock Has the Better Risk-Reward?",
-      "link": "https://finance.yahoo.com/technology/ai/articles/broadcom-vs-amd-ai-chip-190000795.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jim Cramer Shares Why PepsiCo (PEP) Caught His Eye During Consumer Headwinds",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-shares-why-pepsico-184534513.html?.tsrc=rss",
-      "date": "2026-08-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-08-29": {
+      "title": "Wall Street is turning Nvidia's AI chips into a new futures market: Chart of the Day",
+      "link": "https://finance.yahoo.com/markets/article/wall-street-is-turning-nvidias-ai-chips-into-a-new-futures-market-chart-of-the-day-115118331.html?.tsrc=rss",
       "date": "2026-08-29",
-      "steps": 796,
-      "resting_hr": 55,
-      "body_battery": 29,
-      "avg_stress": 29,
-      "sleep": {
-        "total_min": 311,
-        "deep_min": 70,
-        "light_min": 215,
-        "rem_min": 26,
-        "awake_min": 1,
-        "score": 62,
-        "start": 1787968680000,
-        "end": 1787987400000
-      },
-      "activities": []
-    },
-    "2026-08-28": {
-      "date": "2026-08-28",
-      "steps": 6303,
-      "resting_hr": 54,
-      "body_battery": 24,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 355,
-        "deep_min": 87,
-        "light_min": 268,
-        "rem_min": 0,
-        "awake_min": 77,
-        "score": 31,
-        "start": 1787875920000,
-        "end": 1787901840000
-      },
-      "activities": []
-    },
-    "2026-08-27": {
-      "date": "2026-08-27",
-      "steps": 7932,
-      "resting_hr": 49,
-      "body_battery": 65,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 449,
-        "deep_min": 35,
-        "light_min": 371,
-        "rem_min": 43,
-        "awake_min": 78,
-        "score": 62,
-        "start": 1787788080000,
-        "end": 1787819700000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-27 10:11:29",
-          "duration_s": 645,
-          "distance_m": 1182.0,
-          "calories": 80,
-          "avg_hr": 117,
-          "max_hr": 141,
-          "avg_speed": 1.83
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-26": {
-      "date": "2026-08-26",
-      "steps": 8144,
-      "resting_hr": 49,
-      "body_battery": 17,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 276,
-        "deep_min": 56,
-        "light_min": 220,
-        "rem_min": 0,
-        "awake_min": 43,
-        "score": 34,
-        "start": 1787694480000,
-        "end": 1787713620000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-26 14:47:44",
-          "duration_s": 606,
-          "distance_m": 1468.0,
-          "calories": 42,
-          "avg_hr": 91,
-          "max_hr": 112,
-          "avg_speed": 2.42
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-26 10:39:11",
-          "duration_s": 1115,
-          "distance_m": 2452.0,
-          "calories": 95,
-          "avg_hr": 101,
-          "max_hr": 136,
-          "avg_speed": 2.2
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Kiteboarding",
-          "start": "2026-08-26 05:26:10",
-          "duration_s": 18742,
-          "distance_m": 0.0,
-          "calories": 634,
-          "avg_hr": 72,
-          "max_hr": 111,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Will EA’s €250 Million Bundesliga Rights Deal Reshape Its Live-Services Football Narrative (EA)?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ea-250-million-bundesliga-rights-121137242.html?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-25": {
-      "date": "2026-08-25",
-      "steps": 10499,
-      "resting_hr": 47,
-      "body_battery": 74,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 97,
-        "light_min": 261,
-        "rem_min": 74,
-        "awake_min": 14,
-        "score": 81,
-        "start": 1787611020000,
-        "end": 1787637780000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-25 15:05:38",
-          "duration_s": 1093,
-          "distance_m": 5655.0,
-          "calories": 138,
-          "avg_hr": 119,
-          "max_hr": 151,
-          "avg_speed": 5.17
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-25 11:41:41",
-          "duration_s": 694,
-          "distance_m": 1215.0,
-          "calories": 47,
-          "avg_hr": 91,
-          "max_hr": 127,
-          "avg_speed": 1.75
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-25 10:05:42",
-          "duration_s": 2181,
-          "distance_m": 3004.0,
-          "calories": 151,
-          "avg_hr": 95,
-          "max_hr": 127,
-          "avg_speed": 1.38
-        },
-        {
-          "type": "yoga",
-          "name": "Yoga",
-          "start": "2026-08-25 09:25:57",
-          "duration_s": 1365,
-          "distance_m": 0,
-          "calories": 71,
-          "avg_hr": 86,
-          "max_hr": 115,
-          "avg_speed": null
-        }
+    {
+      "title": "Dow Jones Futures: Microsoft, Titans Mask Market Weakness. Here's What To Do.",
+      "link": "https://finance.yahoo.com/m/5851be5e-4456-36df-acc2-e391c82c51f8/dow-jones-futures%3A-microsoft%2C.html?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-24": {
-      "date": "2026-08-24",
-      "steps": 8581,
-      "resting_hr": 50,
-      "body_battery": 61,
-      "avg_stress": 39,
-      "sleep": {
-        "total_min": 462,
-        "deep_min": 105,
-        "light_min": 331,
-        "rem_min": 26,
-        "awake_min": 57,
-        "score": 65,
-        "start": 1787529660000,
-        "end": 1787560800000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-24 17:27:05",
-          "duration_s": 646,
-          "distance_m": 2749.0,
-          "calories": 65,
-          "avg_hr": 107,
-          "max_hr": 137,
-          "avg_speed": 4.25
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-24 11:50:44",
-          "duration_s": 2031,
-          "distance_m": 7109.0,
-          "calories": 257,
-          "avg_hr": 122,
-          "max_hr": 156,
-          "avg_speed": 3.5
-        },
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-08-24 10:59:12",
-          "duration_s": 1449,
-          "distance_m": 6879.0,
-          "calories": 144,
-          "avg_hr": 109,
-          "max_hr": 131,
-          "avg_speed": 4.74
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-24 10:03:20",
-          "duration_s": 792,
-          "distance_m": 1807.0,
-          "calories": 84,
-          "avg_hr": 110,
-          "max_hr": 150,
-          "avg_speed": 2.28
-        }
+    {
+      "title": "Breakfast News: To Buy Nvidia or Not to Buy",
+      "link": "https://www.fool.com/investing/breakfast-news/2026/08/29/breakfast-news/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-23": {
-      "date": "2026-08-23",
-      "steps": 14213,
-      "resting_hr": 55,
-      "body_battery": 35,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 367,
-        "deep_min": 78,
-        "light_min": 263,
-        "rem_min": 26,
-        "awake_min": 52,
-        "score": 63,
-        "start": 1787448240000,
-        "end": 1787473380000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-23 09:59:49",
-          "duration_s": 1310,
-          "distance_m": 2944.0,
-          "calories": 104,
-          "avg_hr": 99,
-          "max_hr": 118,
-          "avg_speed": 2.25
-        }
+    {
+      "title": "China Just Copied the SpaceX Falcon 9. Should SpaceX Investors Worry?",
+      "link": "https://www.fool.com/investing/2026/08/29/china-just-copied-the-spacex-falcon-9-should-space/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: This Pipeline Stock's Payout Will Grow Faster Than Chevron's [or Exxon's] Over the Next 5 Years",
+      "link": "https://www.fool.com/investing/2026/08/29/prediction-this-pipeline-stocks-payout-grows-faste/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "How Likely Is It That Shiba Inu Outperforms Nvidia Stock in 5 Years? Here's What History Tells Us.",
+      "link": "https://www.fool.com/investing/2026/08/29/shiba-inu-nvidia-ai-stock-5-years-history-says/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Bear Market Is Coming, History Says the Smartest Investors Are All Making This 1 Move Right Now",
+      "link": "https://www.fool.com/investing/2026/08/29/if-a-bear-market-is-coming-history-says-the-smarte/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "A Nationwide, Industry-Owned Blockchain Network for Banks Will Launch in 2027. Here's What Crypto Investors Need to Know.",
+      "link": "https://www.fool.com/investing/2026/08/29/a-nationwide-industry-owned-blockchain-network-for/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Boeing's Back in the Defense Business With a Big $131.2 Billion Order for New F-15 Fighters",
+      "link": "https://www.fool.com/investing/2026/08/29/boeing-back-defense-business-billion-f-15/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Would You Use a Debit Card That Offers 2% Cashback in Bitcoin? This Popular Cryptocurrency Exchange Thinks You Will.",
+      "link": "https://www.fool.com/investing/2026/08/29/would-you-use-a-debit-card-that-offers-2-cashback/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Down 35% From Its High, Is Sandisk Stock a Screaming Bargain in September?",
+      "link": "https://www.fool.com/investing/2026/08/29/down-35-from-its-high-is-sandisk-stock-a-screaming/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The One High-Yield Asset You Should Never Put in a Roth (and 3 You Should)",
+      "link": "https://247wallst.com/investing/2026/08/29/the-one-high-yield-asset-you-should-never-put-in-a-roth-and-3-you-should/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Bear Market Is Coming, History Has Good News for Investors",
+      "link": "https://www.fool.com/investing/2026/08/29/if-a-bear-market-is-coming-history-has-good-news-f/?.tsrc=rss",
+      "date": "2026-08-29",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-08-29"
+  ]
 }
