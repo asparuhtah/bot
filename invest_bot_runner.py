@@ -149,13 +149,13 @@ def send_message(text: str) -> bool:
         print(f"Telegram грешка: {e}")
         return False
 
-def get_updates(offset=None):
+def get_updates(offset=None, long_poll=5):
     url    = f"https://api.telegram.org/bot{BOT_TOKEN}/getUpdates"
-    params = {"timeout": 5}
+    params = {"timeout": long_poll}
     if offset:
         params["offset"] = offset
     try:
-        r = requests.get(url, params=params, timeout=10)
+        r = requests.get(url, params=params, timeout=long_poll + 10)
         data = r.json()
         if not data.get("ok", True):
             print(f"❌ getUpdates HTTP {r.status_code} | body={r.text[:500]}")
@@ -171,16 +171,24 @@ def get_updates(offset=None):
 
 # ─── ЦЕНИ ─────────────────────────────────────────────────────────────────────
 _cg_cache = {}
+_cg_cache_ts = 0.0
+CG_TTL = 60   # секунди — пази CoinGecko от rate limit при често допитване
 
 def get_coingecko_prices() -> dict:
-    global _cg_cache
+    global _cg_cache, _cg_cache_ts
+
+    if _cg_cache and (time.monotonic() - _cg_cache_ts) < CG_TTL:
+        return _cg_cache
+
     try:
         ids = ",".join(COINGECKO_MAP.values())
         url = f"https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies=eur,usd"
         r   = requests.get(url, timeout=10)
         if r.status_code == 200:
-            _cg_cache = r.json()
+            _cg_cache    = r.json()
+            _cg_cache_ts = time.monotonic()
             return _cg_cache
+        print(f"⚠️ CoinGecko HTTP {r.status_code}")
     except Exception as e:
         print(f"CoinGecko грешка: {e}")
     return _cg_cache
@@ -589,9 +597,10 @@ def daily_snapshot():
     send_message(msg)
 
 # ─── КОМАНДЕН ПРОЦЕСОР ────────────────────────────────────────────────────────
-def process_commands():
+def process_commands(long_poll=5) -> bool:
+    """Обработва чакащите команди. Връща True, ако е имало нещо ново."""
     offset  = (STATE["last_update_id"] + 1) if STATE["last_update_id"] else None
-    updates = get_updates(offset=offset)
+    updates = get_updates(offset=offset, long_poll=long_poll)
 
     for update in updates:
         STATE["last_update_id"] = update.get("update_id")
@@ -624,6 +633,40 @@ def process_commands():
         elif low in ["/morning", "morning"]:   cmd_morning()
         elif low in ["/help", "help"]:         cmd_start()
 
+    return bool(updates)
+
+# ─── РАЗПИСАНИЕ (сутрешен бриф + дневен snapshot) ─────────────────────────────
+def run_scheduled() -> bool:
+    """Проверява дали е време за сутрешен бриф или дневен snapshot.
+    Връща True, ако е свършило нещо (значи state-ът трябва да се запази)."""
+    now   = NOW()
+    today = now.strftime("%Y-%m-%d")
+    hour  = now.hour
+    did   = False
+
+    # Сутрешен бриф: прозорец 09:00–11:59 (GitHub cron-ът е неточен,
+    # затова не чакаме точно 09:00, а първата възможност в прозореца).
+    if 9 <= hour < 12 and STATE["last_morning_date"] != today:
+        cmd_morning()
+        STATE["last_morning_date"] = today
+        did = True
+
+    # Дневен snapshot: от 23:00 нататък същия ден.
+    # Плюс "наваксване" — ако сме пропуснали изцяло предишен ден,
+    # записваме при първа възможност, за да не се къса историята в CSV.
+    last_snap = STATE.get("last_snapshot_date")
+    missed_a_day = (
+        last_snap is not None
+        and last_snap < (now.date() - timedelta(days=1)).strftime("%Y-%m-%d")
+    )
+
+    if last_snap != today and (hour >= 23 or missed_a_day):
+        daily_snapshot()
+        STATE["last_snapshot_date"] = today
+        did = True
+
+    return did
+
 # ─── MAIN — един run на workflow-а ────────────────────────────────────────────
 def main():
     global MANUAL_PRICES
@@ -637,33 +680,39 @@ def main():
     print(f"💬 CHAT_ID: {CHAT_ID!r}")
     print(f"🕐 NOW (Sofia): {NOW().isoformat()}")
 
-    process_commands()
-    check_price_alerts()
+    listen_min = int(os.environ.get("LISTEN_MINUTES", "14"))
+    deadline   = time.monotonic() + listen_min * 60
+    print(f"👂 Слушам за команди {listen_min} мин...")
 
-    now   = NOW()
-    today = now.strftime("%Y-%m-%d")
-    hour  = now.hour
+    last_alert_check = 0.0
+    dirty            = False
 
-    # Сутрешен бриф: прозорец 09:00–11:59 (GitHub cron-ът е неточен,
-    # затова не чакаме точно 09:00, а първия run в прозореца).
-    if 9 <= hour < 12 and STATE["last_morning_date"] != today:
-        cmd_morning()
-        STATE["last_morning_date"] = today
+    while True:
+        try:
+            if process_commands(long_poll=20):
+                dirty = True
 
-    # Дневен snapshot: от 23:00 нататък същия ден.
-    # Плюс "наваксване" — ако сме пропуснали изцяло предишен ден
-    # (рядък run в прозореца 23:xx), записваме го при първа възможност,
-    # за да не се къса историята в CSV.
-    last_snap = STATE.get("last_snapshot_date")
-    missed_a_day = (
-        last_snap is not None
-        and last_snap < (now.date() - timedelta(days=1)).strftime("%Y-%m-%d")
-    )
+            # Ценови алерти — на всеки 5 минути, не при всяка обиколка
+            if time.monotonic() - last_alert_check >= 300:
+                check_price_alerts()
+                last_alert_check = time.monotonic()
+                dirty = True
 
-    if last_snap != today and (hour >= 23 or missed_a_day):
-        daily_snapshot()
-        STATE["last_snapshot_date"] = today
+            if run_scheduled():
+                dirty = True
 
+            if dirty:
+                save_state()      # запазваме често, за да не губим при прекъсване
+                dirty = False
+
+        except Exception as e:
+            print(f"⚠️ Грешка в цикъла: {e}")
+            time.sleep(5)
+
+        if time.monotonic() >= deadline:
+            break
+
+    print("⏹ Прозорецът за слушане изтече.")
     save_state()
     git_sync()
     print("✅ Run завършен.")
