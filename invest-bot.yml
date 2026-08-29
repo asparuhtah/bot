@@ -27,11 +27,44 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      # ── ДИАГНОСТИКА: проверява дали secret-ът BOT_TOKEN е валиден ──────────
+      # Показва само отговора на Telegram (без самия токен) в Summary.
+      - name: Диагностика на токена
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          set +e
+          {
+            echo "## 🔎 Диагностика"
+            echo ""
+            echo "- Дължина на BOT_TOKEN secret: **${#BOT_TOKEN}** символа (очаквано ~46)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          code=$(curl -s -o /tmp/me.json -w '%{http_code}' "https://api.telegram.org/bot${BOT_TOKEN}/getMe")
+          {
+            echo "- getMe HTTP код: **${code}**  (200 = токенът е верен, 401 = грешен токен)"
+            echo ""
+            echo '```json'
+            cat /tmp/me.json
+            echo ""
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Run investment bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID:   ${{ secrets.ID_CHAT }}
-        run: python invest_bot_runner.py
+        run: |
+          set +e
+          python invest_bot_runner.py 2>&1 | tee /tmp/bot.log
+          {
+            echo "## 🤖 Лог на бота"
+            echo ""
+            echo '```'
+            cat /tmp/bot.log
+            echo ""
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit updated state / history
         run: |
@@ -43,7 +76,8 @@ jobs:
 
           git diff --staged --quiet
           if [ $? -eq 0 ]; then
-            echo "Няма промени за commit."
+            echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
+            echo "Няма промени за запис (state файлът е непроменен)." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
 
@@ -52,14 +86,15 @@ jobs:
           for i in 1 2 3 4 5; do
             git push
             if [ $? -eq 0 ]; then
-              echo "Push успешен (опит $i)."
+              echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
+              echo "Push успешен (опит $i)." >> "$GITHUB_STEP_SUMMARY"
               exit 0
             fi
-            echo "Push отхвърлен (опит $i) — fetch + merge (favor нашата версия на state файла)..."
             git fetch origin main
             git merge origin/main --no-edit -X ours
             sleep $(( (RANDOM % 5) + 1 ))
           done
 
-          echo "Push не успя след 5 опита."
+          echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
+          echo "⚠️ Push не успя след 5 опита." >> "$GITHUB_STEP_SUMMARY"
           exit 1
