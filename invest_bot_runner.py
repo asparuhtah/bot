@@ -22,7 +22,8 @@ from zoneinfo import ZoneInfo
 
 # ─── КОНФИГУРАЦИЯ ─────────────────────────────────────────────────────────────
 BOT_TOKEN = os.environ["BOT_TOKEN"]                       # GitHub Actions Secret
-CHAT_ID   = os.environ.get("CHAT_ID", "6087726724")        # може и като Secret/Variable
+# устойчиво: приема CHAT_ID или ID_CHAT, и игнорира празна стойност
+CHAT_ID   = (os.environ.get("CHAT_ID") or os.environ.get("ID_CHAT") or "6087726724").strip()
 CSV_FILE   = "portfolio_history.csv"
 STATE_FILE = "bot_state.json"
 
@@ -595,14 +596,27 @@ def main():
     process_commands()
     check_price_alerts()
 
-    today = NOW().strftime("%Y-%m-%d")
-    hour  = NOW().hour
+    now   = NOW()
+    today = now.strftime("%Y-%m-%d")
+    hour  = now.hour
 
-    if hour == 9 and STATE["last_morning_date"] != today:
+    # Сутрешен бриф: прозорец 09:00–11:59 (GitHub cron-ът е неточен,
+    # затова не чакаме точно 09:00, а първия run в прозореца).
+    if 9 <= hour < 12 and STATE["last_morning_date"] != today:
         cmd_morning()
         STATE["last_morning_date"] = today
 
-    if hour == 23 and STATE["last_snapshot_date"] != today:
+    # Дневен snapshot: от 23:00 нататък същия ден.
+    # Плюс "наваксване" — ако сме пропуснали изцяло предишен ден
+    # (рядък run в прозореца 23:xx), записваме го при първа възможност,
+    # за да не се къса историята в CSV.
+    last_snap = STATE.get("last_snapshot_date")
+    missed_a_day = (
+        last_snap is not None
+        and last_snap < (now.date() - timedelta(days=1)).strftime("%Y-%m-%d")
+    )
+
+    if last_snap != today and (hour >= 23 or missed_a_day):
         daily_snapshot()
         STATE["last_snapshot_date"] = today
 
