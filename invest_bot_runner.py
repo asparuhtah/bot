@@ -279,6 +279,21 @@ CSV_COLUMNS = [
     "Дневна промяна (€)", "Дневна промяна (%)"
 ]
 
+def _last_csv_date() -> str | None:
+    """Датата на последния ред в CSV-то, върната като YYYY-MM-DD.
+    Използва се вместо bot_state.json, защото CSV-ът е истинският запис."""
+    if not os.path.exists(CSV_FILE):
+        return None
+    try:
+        with open(CSV_FILE, "r", encoding="utf-8-sig") as f:
+            rows = [r for r in csv.reader(f, delimiter=";") if r and r[0]]
+        if len(rows) <= 1:
+            return None
+        return datetime.strptime(rows[-1][0], "%d.%m.%Y").strftime("%Y-%m-%d")
+    except Exception as e:
+        print(f"⚠️ Не мога да разчета последната дата от CSV: {e}")
+        return None
+
 def _yesterdays_total() -> float | None:
     """Общото портфолио от последния запис за вчерашния (или последния наличен) ден."""
     if not os.path.exists(CSV_FILE):
@@ -633,6 +648,14 @@ def process_commands(long_poll=5) -> bool:
         elif low in ["/morning", "morning"]:   cmd_morning()
         elif low in ["/help", "help"]:         cmd_start()
 
+    # ВАЖНО: потвърждаваме обработените updates директно при Telegram.
+    # Така, дори ако bot_state.json не успее да се запише в GitHub,
+    # същите команди няма да бъдат обработени повторно при следващия run.
+    if updates:
+        last_id = updates[-1].get("update_id")
+        get_updates(offset=last_id + 1, long_poll=0)
+        print(f"☑️ Потвърдени updates до {last_id} при Telegram.")
+
     return bool(updates)
 
 # ─── РАЗПИСАНИЕ (сутрешен бриф + дневен snapshot) ─────────────────────────────
@@ -651,10 +674,10 @@ def run_scheduled() -> bool:
         STATE["last_morning_date"] = today
         did = True
 
-    # Дневен snapshot: от 23:00 нататък същия ден.
-    # Плюс "наваксване" — ако сме пропуснали изцяло предишен ден,
-    # записваме при първа възможност, за да не се къса историята в CSV.
-    last_snap = STATE.get("last_snapshot_date")
+    # Дневен snapshot: истината се чете от самия CSV, а не от bot_state.json.
+    # Така, дори ако state файлът не е успял да се запише в GitHub,
+    # не правим дубликат и не пропускаме ден.
+    last_snap = _last_csv_date() or STATE.get("last_snapshot_date")
     missed_a_day = (
         last_snap is not None
         and last_snap < (now.date() - timedelta(days=1)).strftime("%Y-%m-%d")
