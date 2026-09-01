@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-08-31T14:43:46.879692+00:00",
-  "eurUsd": 1.1603,
+  "lastUpdated": "2026-09-01T12:16:46.473350+00:00",
+  "eurUsd": 1.1592,
   "prices": {
-    "BTC-USD": 67604.0,
-    "ETC-USD": 6.27,
-    "FLR-USD": 0.005499,
+    "BTC-USD": 67311.0,
+    "ETC-USD": 6.31,
+    "FLR-USD": 0.005886,
     "EXI2.DE": 109.52,
-    "MRVL": 162.613117,
+    "MRVL": 162.767426,
     "DFEN.DE": 55.03,
-    "NVDA": 175.652848,
+    "NVDA": 175.819531,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 379.37,
-    "pnl": -19.3,
-    "pnlPct": -4.84
+    "totalCurrent": 379.27,
+    "pnl": -19.4,
+    "pnlPct": -4.87
   },
   "history": [
-    {
-      "date": "2026-08-02",
-      "total": 355.52,
-      "pnl": -43.15,
-      "pct": -10.82
-    },
     {
       "date": "2026-08-03",
       "total": 354.73,
@@ -197,335 +191,154 @@
       "total": 379.37,
       "pnl": -19.3,
       "pct": -4.84
+    },
+    {
+      "date": "2026-09-01",
+      "total": 379.27,
+      "pnl": -19.4,
+      "pct": -4.87
     }
   ],
   "news": [
     {
-      "title": "Jim Cramer Warns AI Is Making Even “Diversified” Portfolios More Concentrated",
-      "link": "https://247wallst.com/investing/2026/08/31/jim-cramer-warns-ai-is-making-even-diversified-portfolios-more-concentrated/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Oil, Yields Higher Ahead of \"Jobs Week\"",
-      "link": "https://finance.yahoo.com/economy/policy/articles/oil-yields-higher-ahead-jobs-141500733.html?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Nvidia Stock Will Trade at $350 on This Date",
-      "link": "https://247wallst.com/investing/2026/08/31/prediction-nvidia-stock-will-trade-at-350-on-this-date/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street Analysts Believe Marvell (MRVL) Could Rally 34.31%: Here's is How to Trade",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-marvell-135503098.html?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia investing $3.5 billion in MediaTek for AI chip partnership",
-      "link": "https://qz.com/nvidia-mediatek-investment-35-billion-ai-chips-083126?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Thesis for Marvell Technology Keeps Me Accumulating Amid Tailwinds",
-      "link": "https://247wallst.com/investing/2026/08/31/this-thesis-for-marvell-technology-keeps-me-accumulating-amid-tailwinds/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Musk Loses The AI Race",
-      "link": "https://247wallst.com/investing/2026/08/31/musk-loses-the-ai-race/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Bull Case for Netflix Stock Is Stronger Than You Think",
-      "link": "https://247wallst.com/investing/2026/08/31/the-bull-case-for-netflix-stock-is-stronger-than-you-think/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "MP Materials Stock: Bull vs. Bear on This Top Rare Earth Bet",
-      "link": "https://www.fool.com/investing/2026/08/31/mp-materials-bull-vs-bear-on-this-top-rare-earth/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What Does Lumentum Holdings (LITE) New AI Backing Mean For Its Growth?",
-      "link": "https://finance.yahoo.com/technology/ai/articles/does-lumentum-holdings-lite-ai-141542663.html?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Pfizer and Starbucks: One Turnaround Is Built to Last, and One Isn’t",
-      "link": "https://247wallst.com/investing/2026/08/31/pfizer-and-starbucks-one-turnaround-is-built-to-last-and-one-isnt/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Chevron and Exxon Mobil Rise 3% as U.S. Strikes on Iran Push WTI Crude Oil to $86",
-      "link": "https://247wallst.com/investing/2026/08/31/chevron-and-exxon-mobil-rise-3-as-u-s-strikes-on-iran-push-wti-crude-oil-to-86/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Berkshire Bought a Homebuilder the Same Month JPMorgan Committed $750 Billion to Housing",
-      "link": "https://www.fool.com/investing/2026/08/31/berkshire-bought-a-homebuilder-same-month-jpmorgan/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Salesforce at $256: Should You Buy It?",
-      "link": "https://247wallst.com/investing/2026/08/31/salesforce-at-256-should-you-buy-it/?.tsrc=rss",
-      "date": "2026-08-31",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-01": {
+      "title": "Stock Market Today: Dow Falls As Oil Prices, Treasury Yields Jump; Nvidia, Micron Shares Slide (Live Coverage)",
+      "link": "https://finance.yahoo.com/m/01f4a532-05e7-3571-8eb1-b7afa3f67969/stock-market-today%3A-dow-falls.html?.tsrc=rss",
       "date": "2026-09-01",
-      "steps": 528,
-      "resting_hr": 47,
-      "body_battery": 79,
-      "avg_stress": 10,
-      "sleep": {
-        "total_min": 444,
-        "deep_min": 77,
-        "light_min": 319,
-        "rem_min": 48,
-        "awake_min": 11,
-        "score": 78,
-        "start": 1788219300000,
-        "end": 1788246600000
-      },
-      "activities": []
-    },
-    "2026-08-31": {
-      "date": "2026-08-31",
-      "steps": 14978,
-      "resting_hr": 48,
-      "body_battery": 77,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 484,
-        "deep_min": 97,
-        "light_min": 327,
-        "rem_min": 60,
-        "awake_min": 12,
-        "score": 83,
-        "start": 1788126960000,
-        "end": 1788156720000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-31 06:35:59",
-          "duration_s": 1272,
-          "distance_m": 0.0,
-          "calories": 82,
-          "avg_hr": 90,
-          "max_hr": 146,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-30": {
-      "date": "2026-08-30",
-      "steps": 14000,
-      "resting_hr": 52,
-      "body_battery": 30,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 308,
-        "deep_min": 94,
-        "light_min": 214,
-        "rem_min": 0,
-        "awake_min": 5,
-        "score": 38,
-        "start": 1788070500000,
-        "end": 1788089280000
-      },
-      "activities": []
-    },
-    "2026-08-29": {
-      "date": "2026-08-29",
-      "steps": 12551,
-      "resting_hr": 55,
-      "body_battery": 29,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 311,
-        "deep_min": 70,
-        "light_min": 215,
-        "rem_min": 26,
-        "awake_min": 1,
-        "score": 62,
-        "start": 1787968680000,
-        "end": 1787987400000
-      },
-      "activities": []
-    },
-    "2026-08-28": {
-      "date": "2026-08-28",
-      "steps": 6303,
-      "resting_hr": 54,
-      "body_battery": 24,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 355,
-        "deep_min": 87,
-        "light_min": 268,
-        "rem_min": 0,
-        "awake_min": 77,
-        "score": 31,
-        "start": 1787875920000,
-        "end": 1787901840000
-      },
-      "activities": []
-    },
-    "2026-08-27": {
-      "date": "2026-08-27",
-      "steps": 7932,
-      "resting_hr": 49,
-      "body_battery": 65,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 449,
-        "deep_min": 35,
-        "light_min": 371,
-        "rem_min": 43,
-        "awake_min": 78,
-        "score": 62,
-        "start": 1787788080000,
-        "end": 1787819700000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-27 10:11:29",
-          "duration_s": 645,
-          "distance_m": 1182.0,
-          "calories": 80,
-          "avg_hr": 117,
-          "max_hr": 141,
-          "avg_speed": 1.83
-        }
+    {
+      "title": "Lowe's Foundation Launches Nation's Largest Skilled Trades Coalition with NVIDIA, AT&T, Bank of America, Carrier, General Motors, DEWALT and Duke Energy to Help Train and Develop 1 Million People for America's Workforce",
+      "link": "https://finance.yahoo.com/small-business/articles/lowes-foundation-launches-nations-largest-120000490.html?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-26": {
-      "date": "2026-08-26",
-      "steps": 8144,
-      "resting_hr": 49,
-      "body_battery": 17,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 276,
-        "deep_min": 56,
-        "light_min": 220,
-        "rem_min": 0,
-        "awake_min": 43,
-        "score": 34,
-        "start": 1787694480000,
-        "end": 1787713620000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-26 14:47:44",
-          "duration_s": 606,
-          "distance_m": 1468.0,
-          "calories": 42,
-          "avg_hr": 91,
-          "max_hr": 112,
-          "avg_speed": 2.42
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-08-26 10:39:11",
-          "duration_s": 1115,
-          "distance_m": 2452.0,
-          "calories": 95,
-          "avg_hr": 101,
-          "max_hr": 136,
-          "avg_speed": 2.2
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Kiteboarding",
-          "start": "2026-08-26 05:26:10",
-          "duration_s": 18742,
-          "distance_m": 0.0,
-          "calories": 634,
-          "avg_hr": 72,
-          "max_hr": 111,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "OneRail and Nvidia launch AI delivery routing platform OmniStar",
+      "link": "https://qz.com/onerail-nvidia-ai-delivery-platform-omnistar-090126?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Everyone Loves a Winner: Investors Can’t Get Enough of Nvidia After Blowout Earnings",
+      "link": "https://247wallst.com/investing/2026/09/01/everyone-loves-a-winner-investors-cant-get-enough-of-nvidia-after-blowout-earnings/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Custom Silicon Kings: When to Choose Broadcom and When to Choose Marvell Technology",
+      "link": "https://247wallst.com/investing/2026/09/01/custom-silicon-kings-when-to-choose-broadcom-and-when-to-choose-marvell-technology/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Stock Market Crash Is Coming, These 2 Growth Stocks Might Be Worth Selling",
+      "link": "https://www.fool.com/investing/2026/09/01/if-stock-market-crash-2-growth-stocks-worth-sellin/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia’s Latest ‘Circular’ Deal Might Be Its Most Confusing Yet",
+      "link": "https://finance.yahoo.com/m/3bc517ef-df4b-385c-82ac-32a84b9836ae/nvidia%E2%80%99s-latest-%E2%80%98circular%E2%80%99.html?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Here Are Tuesday’s Top Wall Street Analyst Research Calls: Akamai Technologies, Arista Networks, Booking Holdings, Cisco Systems, Dell Technologies, Duolingo, Robinhood Markets, PG&E, and More",
+      "link": "https://247wallst.com/investing/2026/09/01/here-are-tuesdays-top-wall-street-analyst-research-calls-akamai-technologies-arista-networks-booking-holdings-cisco-systems-dell-technologies-duolingo-robinhood-markets-pge-and-more/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "This ETF Could Take You From $10,000 to $733,998 With Practically Zero Effort on Your Part",
+      "link": "https://www.fool.com/investing/2026/09/01/this-etf-could-take-you-from-10000-to-733998-with/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Palantir Vs. Intel: Choose One for The Rest of 2026",
+      "link": "https://247wallst.com/investing/2026/09/01/palantir-vs-intel-choose-one-for-the-rest-of-2026-2/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Greg Abel Thinks Berkshire's Stock Is Cheap -- Is He Right? Here's the Math.",
+      "link": "https://www.fool.com/investing/2026/09/01/greg-abel-thinks-berkshires-stock-is-cheap-is-he-r/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Billionaire Stanley Druckenmiller Kicked Micron to the Curb in the Second Quarter in Favor of an AI Superstar That's Gained 13,700% Since Its IPO",
+      "link": "https://www.fool.com/investing/2026/09/01/billionaire-stanley-druckenmiller-sell-mu-buy-goog/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Tesla's AI Investments Pale In Comparison To Microsoft, Amazon, and Alphabet",
+      "link": "https://finance.yahoo.com/m/c25ea171-df99-30df-9fa7-df1f0295bf63/tesla%27s-ai-investments-pale.html?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "This ETF Has a Lot Riding on the Fed’s Next Move",
+      "link": "https://www.fool.com/investing/2026/09/01/this-etf-has-a-lot-riding-on-the-fed-s-next-move/?.tsrc=rss",
+      "date": "2026-09-01",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-09-01"
+  ]
 }
