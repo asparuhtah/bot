@@ -703,39 +703,14 @@ def main():
     print(f"💬 CHAT_ID: {CHAT_ID!r}")
     print(f"🕐 NOW (Sofia): {NOW().isoformat()}")
 
-    listen_min = int(os.environ.get("LISTEN_MINUTES", "14"))
-    deadline   = time.monotonic() + listen_min * 60
-    print(f"👂 Слушам за команди {listen_min} мин...")
+    # Командите вече се обработват мигновено от Cloudflare Worker чрез webhook.
+    # Telegram не позволява webhook и getUpdates едновременно, затова тук
+    # НЕ четем команди — този run само пази историята и следи алертите.
+    print("ℹ️ Командите се обработват от webhook. Тук: алерти + дневен запис.")
 
-    last_alert_check = 0.0
-    dirty            = False
+    check_price_alerts()
+    run_scheduled()
 
-    while True:
-        try:
-            if process_commands(long_poll=20):
-                dirty = True
-
-            # Ценови алерти — на всеки 5 минути, не при всяка обиколка
-            if time.monotonic() - last_alert_check >= 300:
-                check_price_alerts()
-                last_alert_check = time.monotonic()
-                dirty = True
-
-            if run_scheduled():
-                dirty = True
-
-            if dirty:
-                save_state()      # запазваме често, за да не губим при прекъсване
-                dirty = False
-
-        except Exception as e:
-            print(f"⚠️ Грешка в цикъла: {e}")
-            time.sleep(5)
-
-        if time.monotonic() >= deadline:
-            break
-
-    print("⏹ Прозорецът за слушане изтече.")
     save_state()
     git_sync()
     print("✅ Run завършен.")
