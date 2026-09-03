@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-02T11:54:11.905903+00:00",
-  "eurUsd": 1.1577,
+  "lastUpdated": "2026-09-03T11:52:22.128718+00:00",
+  "eurUsd": 1.1608,
   "prices": {
-    "BTC-USD": 66172.0,
-    "ETC-USD": 6.23,
-    "FLR-USD": 0.005694,
+    "BTC-USD": 67065.0,
+    "ETC-USD": 6.38,
+    "FLR-USD": 0.005827,
     "EXI2.DE": 109.52,
-    "MRVL": 162.978319,
+    "MRVL": 162.543074,
     "DFEN.DE": 55.03,
-    "NVDA": 176.047335,
+    "NVDA": 175.577188,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 377.02,
-    "pnl": -21.65,
-    "pnlPct": -5.43
+    "totalCurrent": 379.2,
+    "pnl": -19.47,
+    "pnlPct": -4.88
   },
   "history": [
-    {
-      "date": "2026-08-04",
-      "total": 356.29,
-      "pnl": -42.38,
-      "pct": -10.63
-    },
     {
       "date": "2026-08-05",
       "total": 356.0,
@@ -197,313 +191,154 @@
       "total": 377.02,
       "pnl": -21.65,
       "pct": -5.43
+    },
+    {
+      "date": "2026-09-03",
+      "total": 379.2,
+      "pnl": -19.47,
+      "pct": -4.88
     }
   ],
   "news": [
     {
-      "title": "‘Only in America’: Trump hails Nvidia’s record $96.2B quarter and Micron’s massive $250B US bet — are you cashing in?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/only-america-trump-hails-nvidia-114000861.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Is Still Retail Investors' Most-Held Stock on Robinhood, but a New Trillion-Dollar Stock Has Entered the Top 10",
-      "link": "https://www.fool.com/investing/2026/09/02/nvda-is-retail-investors-most-held-stock-new-spcx/?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell Beat and Raised Guidance. Why Its Google Deal Still Spooked Investors",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/marvell-beat-raised-guidance-why-102009844.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Latest News In AI Chips - Revolutionizing Cooling: The Rise of Advanced Thermal Management",
-      "link": "https://finance.yahoo.com/technology/ai/articles/latest-news-ai-chips-revolutionizing-113727733.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Loan Delinquencies Edge Lower in Q2, but Some Remain at Very High Levels. Here's What It Means for Investors.",
-      "link": "https://www.fool.com/investing/2026/09/02/loan-delinquencies-edge-lower-in-q2-but-some-remai/?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Realty Income Just Announced Its 674th Consecutive Monthly Dividend. Here's How Much $30,000 Invested Pays in Monthly Dividends.",
-      "link": "https://www.fool.com/investing/2026/09/02/realty-income-monthly-dividend-pay-yield/?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Mobile ECG Devices Market Outlook 2025-2035 Featuring Profiles AliveCor, Apple and iRhythm Technologies - Industry Forecast to Reach $9.03 Billion by 2035 as Remote Cardiac Monitoring Adoption Accelerates",
-      "link": "https://finance.yahoo.com/healthcare/articles/mobile-ecg-devices-market-outlook-114800368.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dow Jones Futures Rise As Oil Prices Fall; Dell, Credo, Palo Alto Are Earnings Movers",
-      "link": "https://finance.yahoo.com/m/3c8f786a-671c-3fb9-bb03-81fc8be4d3f0/dow-jones-futures-rise-as-oil.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Semiconductor Wafer Inspection Equipment Market Outlook 2025-2035 Featuring Profiles of KLA Corporation, Applied Materials, Hitachi High-Tech Corporation and More",
-      "link": "https://finance.yahoo.com/technology/articles/semiconductor-wafer-inspection-equipment-market-114600514.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Global Data Center Access Control Market Outlook 2026-2030 Featuring Profiles of Cisco Systems, Honeywell and Johnson Controls - Market to Reach $2.34 Billion by 2030 as Security Investments Accelerate",
-      "link": "https://finance.yahoo.com/technology/articles/global-data-center-access-control-114300370.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street headed into the red, bond markets are twitchy, while oil keeps pushing higher",
-      "link": "https://www.proactiveinvestors.com/companies/news/1097983/wall-street-headed-into-the-red-bond-markets-are-twitchy-while-oil-keeps-pushing-higher-1097983.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Global Information Technology (IT) Governance and Strategy Outlook 2026-2030 Featuring Profiles of Accenture, IBM and Deloitte",
-      "link": "https://finance.yahoo.com/technology/articles/global-information-technology-governance-strategy-113600565.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Four Leaf Acquisition Corporation and Data443 Risk Mitigation, Inc. Advance Definitive Business Combination and Path to a Market Listing",
-      "link": "https://finance.yahoo.com/technology/ai/articles/four-leaf-acquisition-corporation-data443-113200039.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Exclusive: IBM Ventures backs physics acceleration firm BQP as bookings climb 8x",
-      "link": "https://finance.yahoo.com/technology/ai/articles/exclusive-ibm-ventures-backs-physics-113136095.html?.tsrc=rss",
-      "date": "2026-09-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-03": {
+      "title": "How Nvidia is still making history",
+      "link": "https://finance.yahoo.com/markets/stocks/article/how-nvidia-is-still-making-history-100126626.html?.tsrc=rss",
       "date": "2026-09-03",
-      "steps": 3023,
-      "resting_hr": 47,
-      "body_battery": 84,
-      "avg_stress": 20,
-      "sleep": {
-        "total_min": 492,
-        "deep_min": 65,
-        "light_min": 354,
-        "rem_min": 73,
-        "awake_min": 4,
-        "score": 87,
-        "start": 1788388200000,
-        "end": 1788417960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-03 11:05:57",
-          "duration_s": 1200,
-          "distance_m": 2430.0,
-          "calories": 142,
-          "avg_hr": 117,
-          "max_hr": 173,
-          "avg_speed": 2.02
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-02": {
-      "date": "2026-09-02",
-      "steps": 6132,
-      "resting_hr": 54,
-      "body_battery": 16,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 306,
-        "deep_min": 74,
-        "light_min": 220,
-        "rem_min": 12,
-        "awake_min": 34,
-        "score": 39,
-        "start": 1788316560000,
-        "end": 1788336960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-02 09:58:33",
-          "duration_s": 1426,
-          "distance_m": 3094.0,
-          "calories": 137,
-          "avg_hr": 108,
-          "max_hr": 131,
-          "avg_speed": 2.17
-        }
+    {
+      "title": "75% of Nvidia's $63 Billion Investment Portfolio Has Been Put to Work in Just 2 Game-Changing AI Stocks",
+      "link": "https://www.fool.com/investing/2026/09/03/75-nvda-63-billion-portfolio-invest-in-2-ai-stocks/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-01": {
-      "date": "2026-09-01",
-      "steps": 12842,
-      "resting_hr": 47,
-      "body_battery": 79,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 444,
-        "deep_min": 77,
-        "light_min": 319,
-        "rem_min": 48,
-        "awake_min": 11,
-        "score": 78,
-        "start": 1788219300000,
-        "end": 1788246600000
-      },
-      "activities": []
-    },
-    "2026-08-31": {
-      "date": "2026-08-31",
-      "steps": 14978,
-      "resting_hr": 48,
-      "body_battery": 77,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 484,
-        "deep_min": 97,
-        "light_min": 327,
-        "rem_min": 60,
-        "awake_min": 12,
-        "score": 83,
-        "start": 1788126960000,
-        "end": 1788156720000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-31 06:35:59",
-          "duration_s": 1272,
-          "distance_m": 0.0,
-          "calories": 82,
-          "avg_hr": 90,
-          "max_hr": 146,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "A Once-in-a-Lifetime Investment Opportunity: The 3 Best Stocks to Take Advantage of the AI Build-Out",
+      "link": "https://www.fool.com/investing/2026/09/03/a-once-in-a-lifetime-investment-opportunity-the-3/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-30": {
-      "date": "2026-08-30",
-      "steps": 14000,
-      "resting_hr": 52,
-      "body_battery": 30,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 308,
-        "deep_min": 94,
-        "light_min": 214,
-        "rem_min": 0,
-        "awake_min": 5,
-        "score": 38,
-        "start": 1788070500000,
-        "end": 1788089280000
-      },
-      "activities": []
+    {
+      "title": "Superluminal Medicines Announces Oversubscribed $60 Million Series B Financing to Advance Lead Program in Rare Genetic Forms of Obesity into the Clinic",
+      "link": "https://finance.yahoo.com/healthcare/articles/superluminal-medicines-announces-oversubscribed-60-100000680.html?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-08-29": {
-      "date": "2026-08-29",
-      "steps": 12551,
-      "resting_hr": 55,
-      "body_battery": 29,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 311,
-        "deep_min": 70,
-        "light_min": 215,
-        "rem_min": 26,
-        "awake_min": 1,
-        "score": 62,
-        "start": 1787968680000,
-        "end": 1787987400000
-      },
-      "activities": []
+    {
+      "title": "QumulusAI Completes Deployment of All 616 NVIDIA RTX PRO 6000 Blackwell GPUs for Runpod, Weeks Ahead of Schedule",
+      "link": "https://finance.yahoo.com/technology/ai/articles/qumulusai-completes-deployment-616-nvidia-114100844.html?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-08-28": {
-      "date": "2026-08-28",
-      "steps": 6303,
-      "resting_hr": 54,
-      "body_battery": 24,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 355,
-        "deep_min": 87,
-        "light_min": 268,
-        "rem_min": 0,
-        "awake_min": 77,
-        "score": 31,
-        "start": 1787875920000,
-        "end": 1787901840000
-      },
-      "activities": []
+    {
+      "title": "Meet the Dividend King Stock That Yields Quadruple the S&P 500. Here's Why It's a Buy Now.",
+      "link": "https://www.fool.com/investing/2026/09/03/meet-the-dividend-king-stock-that-yields-more-than/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I Wouldn't Touch The Metals Company Yet -- Here's the One Number I'm Waiting On",
+      "link": "https://www.fool.com/investing/2026/09/03/i-wouldnt-touch-the-metals-company-yet-heres-the-o/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Broadcom just took a page from Dell and Nvidia",
+      "link": "https://finance.yahoo.com/markets/stocks/article/broadcom-just-took-a-page-from-dell-and-nvidia-102718498.html?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Broadcom Shares Slip as Q4 Revenue Forecast Falls Below Estimates",
+      "link": "https://investorshub.advfn.com/market-news/article/35566/broadcom-shares-slip-as-q4-revenue-forecast-falls-below-estimates?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will GE Vernova Be in 10 Years?",
+      "link": "https://www.fool.com/investing/2026/09/03/where-will-ge-vernova-be-in-10-years/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Tesla Stock Surged 18% in August -- and Why the Robotaxi Story Is Just Getting Started",
+      "link": "https://www.fool.com/investing/2026/09/03/why-tesla-stock-surged-18-in-august-and-why-the-ro/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dow Jones Futures Rise, Oil Prices Keep Climbing; Snowflake, Victoria's Secret Are Big Movers With Tesla Cybercab Event Due",
+      "link": "https://finance.yahoo.com/m/1d7123ac-a008-32ff-9bbd-f00beb6c5dbf/dow-jones-futures-rise%2C-oil.html?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "This Aerospace Stock Is Cheap, but Does That Make It a Buy Today?",
+      "link": "https://www.fool.com/investing/2026/09/03/aerospace-stock-cheap-make-buy-textron-txt/?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "QuantumCore to Participate in IEEE Quantum Week 2026 in Toronto",
+      "link": "https://finance.yahoo.com/technology/ai/articles/quantumcore-participate-ieee-quantum-week-110000090.html?.tsrc=rss",
+      "date": "2026-09-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-09-03"
+  ]
 }
