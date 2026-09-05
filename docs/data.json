@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-04T11:55:19.800679+00:00",
-  "eurUsd": 1.162,
+  "lastUpdated": "2026-09-05T11:04:45.694960+00:00",
+  "eurUsd": 1.1608,
   "prices": {
-    "BTC-USD": 69946.0,
-    "ETC-USD": 6.59,
-    "FLR-USD": 0.005914,
+    "BTC-USD": 68563.0,
+    "ETC-USD": 6.6,
+    "FLR-USD": 0.005742,
     "EXI2.DE": 109.52,
-    "MRVL": 162.375215,
+    "MRVL": 162.543074,
     "DFEN.DE": 55.03,
-    "NVDA": 175.395869,
+    "NVDA": 175.577188,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 385.18,
-    "pnl": -13.49,
-    "pnlPct": -3.38
+    "totalCurrent": 383.11,
+    "pnl": -15.56,
+    "pnlPct": -3.9
   },
   "history": [
-    {
-      "date": "2026-08-06",
-      "total": 356.26,
-      "pnl": -42.41,
-      "pct": -10.64
-    },
     {
       "date": "2026-08-07",
       "total": 356.94,
@@ -197,347 +191,154 @@
       "total": 385.18,
       "pnl": -13.49,
       "pct": -3.38
+    },
+    {
+      "date": "2026-09-05",
+      "total": 383.11,
+      "pnl": -15.56,
+      "pct": -3.9
     }
   ],
   "news": [
     {
-      "title": "Why this veteran tech CEO is impressed by Nvidia's Jensen Huang buying Hugging Face for $12.9 billion",
-      "link": "https://finance.yahoo.com/markets/stocks/article/why-this-veteran-tech-ceo-is-impressed-by-nvidias-jensen-huang-buying-hugging-face-for-129-billion-104313626.html?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AI Chips Update - AI Circuit Breaker Revolutionizes Security In Autonomous Systems",
-      "link": "https://finance.yahoo.com/technology/ai/articles/ai-chips-ai-circuit-breaker-113720314.html?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Not Nvidia. Not Palantir. This AI Stock Could Have the Most Upside.",
-      "link": "https://www.fool.com/investing/2026/09/04/not-nvidia-not-palantir-this-ai-stock-could-have-t/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nuclear Stock Face-Off: Is NuScale Power or Oklo the Better Buy Right Now?",
-      "link": "https://www.fool.com/investing/2026/09/04/nuclear-stock-face-off-nuscale-oklo-better-buy/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Update: Market Chatter: Nvidia Increases Equity Investments to $99 Billion",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-nvidia-increases-equity-102704254.html?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If I Were in My 20s, I'd Buy This Spectacular Nasdaq-100 Index Fund and Hold It Forever",
-      "link": "https://www.fool.com/investing/2026/09/04/if-in-my-20s-buy-nasdaq-100-index-fund-hold-foreve/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marc Benioff's $25 Billion Bet Against the \"SaaSpocalypse\" Earlier This Year Is Now Paying Off for Salesforce Investors, and It's Not Too Late to Join",
-      "link": "https://www.fool.com/investing/2026/09/04/marc-benioffs-billion-bet-saaspocalypse-salesforce/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell Technology and Taiwan Semiconductor are No-Brainer Picks: They Have What Wins in a Gold Rush",
-      "link": "https://247wallst.com/investing/2026/09/04/marvell-technology-and-taiwan-semiconductor-are-no-brainer-picks-they-have-what-wins-in-a-gold-rush/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Here's How Many Shares of PepsiCo You'd Need for $25,000 in Yearly Dividends",
-      "link": "https://www.fool.com/investing/2026/09/04/how-many-shares-pepsico-need-25k-dividend/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Reasons Wall Street Analysts Remain Bullish on NuScale Power Stock",
-      "link": "https://www.fool.com/investing/2026/09/04/3-reasons-wall-street-analysts-remain-bullish-on-n/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AMC Stock Jumps After Attack on ‘Inexcusable’ and ‘Vile’ Robinhood Practices",
-      "link": "https://finance.yahoo.com/m/d9209df9-b64c-31f2-af66-c2be26b6683c/amc-stock-jumps-after-attack.html?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Social Buzz: Wallstreetbets Stocks Mixed Premarket Friday; Micron to Rise, Lululemon to Fall",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/social-buzz-wallstreetbets-stocks-mixed-103611296.html?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Superluminal Medicines secures $60m to advance rare obesity therapy",
-      "link": "https://www.pharmaceutical-technology.com/news/superluminal-60m-advance-rare-obesity-therapy/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You Recognize What This Number Means Then You Are Likely An NVIDIA Bull",
-      "link": "https://247wallst.com/investing/2026/09/04/if-you-recognize-what-this-number-means-then-you-are-likely-an-nvidia-bull/?.tsrc=rss",
-      "date": "2026-09-04",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-05": {
+      "title": "Jensen Huang Just Sent a Signal That Could Matter More Than the September Effect",
+      "link": "https://www.fool.com/investing/2026/09/05/jensen-huang-just-sent-a-signal-that-could-matter/?.tsrc=rss",
       "date": "2026-09-05",
-      "steps": 3653,
-      "resting_hr": 54,
-      "body_battery": 52,
-      "avg_stress": 33,
-      "sleep": {
-        "total_min": 405,
-        "deep_min": 106,
-        "light_min": 249,
-        "rem_min": 50,
-        "awake_min": 8,
-        "score": 77,
-        "start": 1788568680000,
-        "end": 1788593460000
-      },
-      "activities": []
-    },
-    "2026-09-04": {
-      "date": "2026-09-04",
-      "steps": 8884,
-      "resting_hr": 55,
-      "body_battery": 24,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 362,
-        "deep_min": 85,
-        "light_min": 277,
-        "rem_min": 0,
-        "awake_min": 23,
-        "score": 40,
-        "start": 1788483900000,
-        "end": 1788507000000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-04 14:28:41",
-          "duration_s": 1558,
-          "distance_m": 2331.0,
-          "calories": 153,
-          "avg_hr": 108,
-          "max_hr": 158,
-          "avg_speed": 1.5
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-04 10:39:56",
-          "duration_s": 1474,
-          "distance_m": 3851.0,
-          "calories": 137,
-          "avg_hr": 106,
-          "max_hr": 158,
-          "avg_speed": 2.61
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-03": {
-      "date": "2026-09-03",
-      "steps": 12136,
-      "resting_hr": 47,
-      "body_battery": 87,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 492,
-        "deep_min": 65,
-        "light_min": 354,
-        "rem_min": 73,
-        "awake_min": 4,
-        "score": 87,
-        "start": 1788388200000,
-        "end": 1788417960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-03 16:45:11",
-          "duration_s": 1562,
-          "distance_m": 2739.0,
-          "calories": 133,
-          "avg_hr": 103,
-          "max_hr": 133,
-          "avg_speed": 1.75
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-03 11:05:57",
-          "duration_s": 1200,
-          "distance_m": 2430.0,
-          "calories": 142,
-          "avg_hr": 117,
-          "max_hr": 173,
-          "avg_speed": 2.02
-        }
+    {
+      "title": "Is SCHD Still the Best Dividend ETF You Can Buy for Passive Income? Here's What the Data Says.",
+      "link": "https://www.fool.com/investing/2026/09/05/is-schd-still-the-best-dividend-etf-you-can-buy-fo/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-02": {
-      "date": "2026-09-02",
-      "steps": 6132,
-      "resting_hr": 54,
-      "body_battery": 16,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 306,
-        "deep_min": 74,
-        "light_min": 220,
-        "rem_min": 12,
-        "awake_min": 34,
-        "score": 39,
-        "start": 1788316560000,
-        "end": 1788336960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-02 09:58:33",
-          "duration_s": 1426,
-          "distance_m": 3094.0,
-          "calories": 137,
-          "avg_hr": 108,
-          "max_hr": 131,
-          "avg_speed": 2.17
-        }
+    {
+      "title": "3 Unstoppable Dow Stocks to Buy in September",
+      "link": "https://www.fool.com/investing/2026/09/05/3-unstoppable-dow-stocks-to-buy-in-september/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-01": {
-      "date": "2026-09-01",
-      "steps": 12842,
-      "resting_hr": 47,
-      "body_battery": 79,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 444,
-        "deep_min": 77,
-        "light_min": 319,
-        "rem_min": 48,
-        "awake_min": 11,
-        "score": 78,
-        "start": 1788219300000,
-        "end": 1788246600000
-      },
-      "activities": []
-    },
-    "2026-08-31": {
-      "date": "2026-08-31",
-      "steps": 14978,
-      "resting_hr": 48,
-      "body_battery": 77,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 484,
-        "deep_min": 97,
-        "light_min": 327,
-        "rem_min": 60,
-        "awake_min": 12,
-        "score": 83,
-        "start": 1788126960000,
-        "end": 1788156720000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-08-31 06:35:59",
-          "duration_s": 1272,
-          "distance_m": 0.0,
-          "calories": 82,
-          "avg_hr": 90,
-          "max_hr": 146,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "FormFactor, Entegris, Penguin Solutions, Teradyne, and Marvell Technology Stocks Trade Up, What You Need To Know",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/formfactor-entegris-penguin-solutions-teradyne-021410145.html?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-08-30": {
-      "date": "2026-08-30",
-      "steps": 14000,
-      "resting_hr": 52,
-      "body_battery": 30,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 308,
-        "deep_min": 94,
-        "light_min": 214,
-        "rem_min": 0,
-        "awake_min": 5,
-        "score": 38,
-        "start": 1788070500000,
-        "end": 1788089280000
-      },
-      "activities": []
+    {
+      "title": "Palantir Billionaire Peter Thiel Just Bought Shares of This AI Stock That’s Climbed 200,000% Since Its IPO -- And It’s His Top Position.",
+      "link": "https://www.fool.com/investing/2026/09/05/palantir-billionaire-peter-thiel-just-bought-shares-of-this-ai-stock-that-s-climbed-200-000-since-its-ipo-and-it-s-his-top-position/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Watch Out, Solana and Ethereum. Robinhood's Blockchain Is Eating Your Lunch.",
+      "link": "https://www.fool.com/investing/2026/09/05/watch-out-solana-and-ethereum-robinhoods-blockchai/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Michael Saylor's Strategy Continues to Sell Bitcoin. That's Why I'm Doubling Down on Bitcoin Right Now.",
+      "link": "https://www.fool.com/investing/2026/09/05/michael-saylors-strategy-continues-to-sell-bitcoin/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Greg Abel Betting on Lower Interest Rates? The Berkshire Hathaway CEO Just Trimmed Bank Stocks Like Bank of America and Bought 3 Stocks That Would Benefit From Lower Yields.",
+      "link": "https://www.fool.com/investing/2026/09/05/is-greg-abel-betting-on-lower-interest-rates-the-b/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Cathie Wood's Ark Innovation ETF Has Delivered a Negative 7.5% Annualized Return Over the Past Five Years, While the S&P 500 Gained 11.2% a Year. Does Her High-Conviction Style Still Deserve a Place in Your Portfolio?",
+      "link": "https://www.fool.com/investing/2026/09/05/cathie-woods-ark-innovation-etf-has-delivered-a-ne/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Dividend Stocks to Buy and Hold Forever (Including 1 Dividend King)",
+      "link": "https://www.fool.com/investing/2026/09/05/x-dividend-stocks-to-buy-and-hold-forever-includin/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Costco Has Grown Its Membership Base no Matter What the Economy Has Done. Does That Make It a Forever Hold?",
+      "link": "https://www.fool.com/investing/2026/09/05/costco-grown-membership-base-no-matter-economy/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "All It Takes Is 336 Shares of Realty Income Stock to Generate $1,000 in Yearly Dividends. Here's Whether the Payout Is Safe.",
+      "link": "https://www.fool.com/investing/2026/09/05/all-it-takes-is-336-shares-of-realty-income-stock/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "What Move Will SpaceX Stock Make After Sept. 9? The Evidence Is Piling Up, and Here’s What It Shows.",
+      "link": "https://www.fool.com/investing/2026/09/05/what-move-will-spacex-stock-make-after-sept-9-the-evidence-is-piling-up-and-here-s-what-it-shows/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The Stock Market Just Did Something for the First Time Ever. History Says Investors Should Be Worried. But Could This Time Be Different?",
+      "link": "https://www.fool.com/investing/2026/09/05/the-stock-market-just-did-something-for-the-first-time-ever-history-says-investors-should-be-worried-but-this-time-could-be-different/?.tsrc=rss",
+      "date": "2026-09-05",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-09-05"
+  ]
 }
