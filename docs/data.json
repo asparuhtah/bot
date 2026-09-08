@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-07T13:12:01.901893+00:00",
-  "eurUsd": 1.1622,
+  "lastUpdated": "2026-09-08T11:55:37.355644+00:00",
+  "eurUsd": 1.1609,
   "prices": {
-    "BTC-USD": 68471.0,
-    "ETC-USD": 6.86,
-    "FLR-USD": 0.005771,
+    "BTC-USD": 67493.0,
+    "ETC-USD": 6.93,
+    "FLR-USD": 0.005611,
     "EXI2.DE": 109.52,
-    "MRVL": 162.347272,
+    "MRVL": 162.529072,
     "DFEN.DE": 55.03,
-    "NVDA": 175.365686,
+    "NVDA": 175.562064,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 384.58,
-    "pnl": -14.09,
-    "pnlPct": -3.53
+    "totalCurrent": 383.58,
+    "pnl": -15.09,
+    "pnlPct": -3.78
   },
   "history": [
-    {
-      "date": "2026-08-09",
-      "total": 356.69,
-      "pnl": -41.98,
-      "pct": -10.53
-    },
     {
       "date": "2026-08-10",
       "total": 357.33,
@@ -197,370 +191,154 @@
       "total": 384.58,
       "pnl": -14.09,
       "pct": -3.53
+    },
+    {
+      "date": "2026-09-08",
+      "total": 383.58,
+      "pnl": -15.09,
+      "pct": -3.78
     }
   ],
   "news": [
     {
-      "title": "Solana to triple transaction size as apps get room for more complex trades",
-      "link": "https://www.coindesk.com/tech/2026/09/07/solana-to-triple-transaction-size-as-apps-get-room-for-more-complex-trades",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "DBS and Citi complete weekend USD payment via Swift’s Digital Ledger using tokenized deposits",
-      "link": "https://www.coindesk.com/business/2026/09/07/dbs-and-citi-enable-instant-24-7-cross-border-tokenised-deposit-payments-on-the-swift-ledger",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Bitcoin blinks less than gold when Treasury yields move",
-      "link": "https://www.coindesk.com/daybook-us/2026/09/07/bitcoin-blinks-less-than-gold-when-treasury-yields-move",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "UK regulator weighs easing financial prediction market ban: Times",
-      "link": "https://www.coindesk.com/policy/2026/09/07/uk-regulator-weighs-easing-financial-prediction-market-ban-times",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "A two-key breach could hand control of $91 billion in USDT to hackers, report finds",
-      "link": "https://www.coindesk.com/tech/2026/09/04/tether-receives-bluechip-rating-upgrade-but-hacken-finds-major-key-security-gaps",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Weekend altcoin rally runs out of road as bitcoin slips",
-      "link": "https://www.coindesk.com/markets/2026/09/07/weekend-altcoin-rally-runs-out-of-road-as-bitcoin-slips",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Bitcoin struggles at $83,000 sell wall as whales distribution flip into net selling",
-      "link": "https://www.coindesk.com/markets/2026/09/07/bitcoin-investors-turn-to-selling-as-usd83-000-resistance-holds",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Coldcard hacker moves $7.7 million in BTC, 45% of bitcoin stolen in third attack wave",
-      "link": "https://www.coindesk.com/business/2026/09/07/coldcard-hacker-moves-45-of-bitcoin-stolen-in-third-attack-wave",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "No, Friday's jobs report hasn't materially boosted Fed rate hike odds",
-      "link": "https://www.coindesk.com/markets/2026/09/07/no-friday-s-jobs-report-hasn-t-materially-boost-fed-rate-hike-odds",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Live updates: Bitcoin holds $79,000 as hike odds climb, zcash runs 45% in a week",
-      "link": "https://www.coindesk.com/business/2026/09/07/live-updates-bitcoin-holds-usd79-000-as-hike-odds-climb-zcash-runs-45-in-a-week",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "U.S. inflation, Coinbase’s Deribit switch: Crypto Week Ahead",
-      "link": "https://www.coindesk.com/markets/2026/09/07/u-s-inflation-coinbase-s-deribit-switch-crypto-week-ahead",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Once-hyped Ethereum rival Harmony wants to shut its blockchain over AI threats",
-      "link": "https://www.coindesk.com/markets/2026/09/07/once-hyped-ethereum-rival-harmony-wants-to-shut-its-blockchain-over-ai-threats",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "This cat memecoin has paid holders $2.8 million in Zcash as ZEC tops $1,200",
-      "link": "https://www.coindesk.com/markets/2026/09/07/this-cat-memecoin-has-paid-holders-usd2-8-million-in-zcash-as-zec-tops-usd1-200",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    },
-    {
-      "title": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
-      "link": "https://www.coindesk.com/markets/2026/09/07/oil-up-bitcoin-down-as-u-s-strikes-iranian-crude-carriers",
-      "date": "2026-09-07",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-08": {
+      "title": "Lab Notes: The Week AI Infrastructure Got Serious and Its Safety Got Fragile",
+      "link": "https://finance.yahoo.com/technology/ai/articles/lab-notes-week-ai-infrastructure-113150450.html?.tsrc=rss",
       "date": "2026-09-08",
-      "steps": 5777,
-      "resting_hr": 50,
-      "body_battery": 37,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-09-07": {
-      "date": "2026-09-07",
-      "steps": 8999,
-      "resting_hr": 49,
-      "body_battery": 81,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 491,
-        "deep_min": 103,
-        "light_min": 342,
-        "rem_min": 46,
-        "awake_min": 20,
-        "score": 79,
-        "start": 1788731580000,
-        "end": 1788762240000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-07 16:44:23",
-          "duration_s": 3051,
-          "distance_m": 0.0,
-          "calories": 166,
-          "avg_hr": 87,
-          "max_hr": 128,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-07 16:09:15",
-          "duration_s": 1371,
-          "distance_m": 0.0,
-          "calories": 88,
-          "avg_hr": 90,
-          "max_hr": 125,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-06": {
-      "date": "2026-09-06",
-      "steps": 9037,
-      "resting_hr": 55,
-      "body_battery": 21,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 322,
-        "deep_min": 84,
-        "light_min": 238,
-        "rem_min": 0,
-        "awake_min": 8,
-        "score": 39,
-        "start": 1788657420000,
-        "end": 1788677220000
-      },
-      "activities": []
-    },
-    "2026-09-05": {
-      "date": "2026-09-05",
-      "steps": 17672,
-      "resting_hr": 54,
-      "body_battery": 52,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 405,
-        "deep_min": 106,
-        "light_min": 249,
-        "rem_min": 50,
-        "awake_min": 8,
-        "score": 77,
-        "start": 1788568680000,
-        "end": 1788593460000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Maritsa Kiteboarding",
-          "start": "2026-09-05 15:19:28",
-          "duration_s": 2987,
-          "distance_m": 3576.0,
-          "calories": 306,
-          "avg_hr": 121,
-          "max_hr": 167,
-          "avg_speed": 1.2
-        }
+    {
+      "title": "Quantum Cyber Acquires NVIDIA A100 AI Compute Cluster to Power Its Swarm Operating System",
+      "link": "https://finance.yahoo.com/technology/ai/articles/quantum-cyber-acquires-nvidia-a100-113000622.html?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-04": {
-      "date": "2026-09-04",
-      "steps": 8884,
-      "resting_hr": 55,
-      "body_battery": 24,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 362,
-        "deep_min": 85,
-        "light_min": 277,
-        "rem_min": 0,
-        "awake_min": 23,
-        "score": 40,
-        "start": 1788483900000,
-        "end": 1788507000000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-04 14:28:41",
-          "duration_s": 1558,
-          "distance_m": 2331.0,
-          "calories": 153,
-          "avg_hr": 108,
-          "max_hr": 158,
-          "avg_speed": 1.5
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-04 10:39:56",
-          "duration_s": 1474,
-          "distance_m": 3851.0,
-          "calories": 137,
-          "avg_hr": 106,
-          "max_hr": 158,
-          "avg_speed": 2.61
-        }
+    {
+      "title": "OpenAI and Anthropic Want What SpaceX Got After Its IPO Despite Billions in Losses",
+      "link": "https://beincrypto.com/openai-anthropic-investment-grade-credit-ratings/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-03": {
-      "date": "2026-09-03",
-      "steps": 12136,
-      "resting_hr": 47,
-      "body_battery": 87,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 492,
-        "deep_min": 65,
-        "light_min": 354,
-        "rem_min": 73,
-        "awake_min": 4,
-        "score": 87,
-        "start": 1788388200000,
-        "end": 1788417960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-03 16:45:11",
-          "duration_s": 1562,
-          "distance_m": 2739.0,
-          "calories": 133,
-          "avg_hr": 103,
-          "max_hr": 133,
-          "avg_speed": 1.75
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-03 11:05:57",
-          "duration_s": 1200,
-          "distance_m": 2430.0,
-          "calories": 142,
-          "avg_hr": 117,
-          "max_hr": 173,
-          "avg_speed": 2.02
-        }
+    {
+      "title": "Crypto ETFs Continue to Attract Investor Funds At a Rapid Rate. These Are the Only 3 Altcoins I'm Buying Now.",
+      "link": "https://www.fool.com/investing/2026/09/08/crypto-etfs-continue-to-attract-investor-funds-at/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-02": {
-      "date": "2026-09-02",
-      "steps": 6132,
-      "resting_hr": 54,
-      "body_battery": 16,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 306,
-        "deep_min": 74,
-        "light_min": 220,
-        "rem_min": 12,
-        "awake_min": 34,
-        "score": 39,
-        "start": 1788316560000,
-        "end": 1788336960000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-02 09:58:33",
-          "duration_s": 1426,
-          "distance_m": 3094.0,
-          "calories": 137,
-          "avg_hr": 108,
-          "max_hr": 131,
-          "avg_speed": 2.17
-        }
+    {
+      "title": "Worried About the September Effect? Here’s What History Tells Us About Investing During What’s Generally Been the Worst Month for Stocks.",
+      "link": "https://www.fool.com/investing/2026/09/08/worried-about-the-september-effect-here-s-what-history-tells-us-about-investing-during-what-s-generally-been-the-worst-month-for-stocks/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why USA Rare Earth Stock Surged 19.2% Last Month",
+      "link": "https://www.fool.com/investing/2026/09/08/why-usa-rare-earth-stock-surged-192-last-month/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Micron vs. Sandisk: 1 Artificial Intelligence (AI) Memory Winner Is Down 20% and Clearly the Superior Buy Today",
+      "link": "https://www.fool.com/investing/2026/09/08/micron-vs-sandisk-1-artificial-intelligence-ai-mem/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Bloom Energy Is Joining the S&P 500: Is the Stock Still a Buy After Its Massive Run?",
+      "link": "https://www.fool.com/investing/2026/09/08/bloom-energy-is-joining-the-sp-500-is-the-stock-st/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Beamr and VAST Data Partner to AI-enhance and Monetize Video Archives with NVIDIA",
+      "link": "https://finance.yahoo.com/technology/ai/articles/beamr-vast-data-partner-ai-110000219.html?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Alphabet vs. Meta Platforms: Which \"Magnificent Seven\" Titan Has More Room to Run in September?",
+      "link": "https://www.fool.com/investing/2026/09/08/alphabet-vs-meta-platforms-which-magnificent-seven/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I've Covered Many IPOs for The Motley Fool. Here's What Most Investors Get Wrong.",
+      "link": "https://www.fool.com/investing/2026/09/08/ive-covered-many-ipos-for-the-motley-fool-heres-wh/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Archer Aviation Skyrocketed 24.6% Last Month",
+      "link": "https://www.fool.com/investing/2026/09/08/why-archer-aviation-skyrocketed-246-last-month/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Turnaround Stocks Wall Street Hates That I've Been Buying in 2026",
+      "link": "https://www.fool.com/investing/2026/09/08/2-turnaround-stocks-wall-street-hates-that-ive-been-buying-in-2026/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "IREN Limited Has Cratered Over 3 Months: A Top-Ranked Wall Street Name Says It’s Due to Double",
+      "link": "https://247wallst.com/investing/2026/09/08/iren-limited-has-cratered-over-3-months-a-top-ranked-wall-street-name-says-its-due-to-double/?.tsrc=rss",
+      "date": "2026-09-08",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-09-08"
+  ]
 }
