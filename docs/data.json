@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-12T11:24:53.306729+00:00",
-  "eurUsd": 1.1589,
+  "lastUpdated": "2026-09-13T12:29:09.445886+00:00",
+  "eurUsd": 1.159,
   "prices": {
-    "BTC-USD": 66613.0,
-    "ETC-USD": 6.66,
-    "FLR-USD": 0.005511,
+    "BTC-USD": 66159.0,
+    "ETC-USD": 6.49,
+    "FLR-USD": 0.005531,
     "EXI2.DE": 109.52,
-    "MRVL": 162.809561,
+    "MRVL": 162.795513,
     "DFEN.DE": 55.03,
-    "NVDA": 175.865044,
+    "NVDA": 175.849871,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 380.52,
-    "pnl": -18.15,
-    "pnlPct": -4.55
+    "totalCurrent": 378.63,
+    "pnl": -20.04,
+    "pnlPct": -5.03
   },
   "history": [
-    {
-      "date": "2026-08-14",
-      "total": 352.02,
-      "pnl": -46.65,
-      "pct": -11.7
-    },
     {
       "date": "2026-08-15",
       "total": 352.54,
@@ -197,357 +191,154 @@
       "total": 380.52,
       "pnl": -18.15,
       "pct": -4.55
+    },
+    {
+      "date": "2026-09-13",
+      "total": 378.63,
+      "pnl": -20.04,
+      "pct": -5.03
     }
   ],
   "news": [
     {
-      "title": "Oracle Just Added $30 Billion in AI Contracts. Nvidia Investors Should Read the Fine Print",
-      "link": "https://finance.yahoo.com/technology/ai/articles/oracle-just-added-30-billion-111550996.html?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jim Cramer on Why Marvell (MRVL) Plunged",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-why-marvell-mrvl-110613884.html?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jim Cramer Discussed The Contradictions Surrounding NVIDIA Corporation (NASDAQ:NVDA)’s Shares",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-discussed-contradictions-surrounding-104912429.html?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jim Cramer Names NVIDIA the Main Portfolio “Running Back”",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-names-nvidia-main-104325250.html?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Shell Just Sold a $715 Million Stake in a Major New England Asset to Constellation Energy. Here's What Investors Need to Know.",
-      "link": "https://www.fool.com/investing/2026/09/12/shell-just-sold-a-usd715-million-stake-in-a-major-new-england-asset-to-constellation-energy-here-s-what-investors-need-to-know/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nike Is Being Deleted From the S&P 100. Is Its Seat in the Dow Jones Industrial Average in Jeopardy?",
-      "link": "https://www.fool.com/investing/2026/09/12/nike-just-got-deleted-from-the-sp-100-is-its-seat/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Stock Could Reach $490 by End of 2027 Based on Current Growth Projections",
-      "link": "https://www.fool.com/investing/2026/09/12/nvidia-stock-could-reach-x-by-end-of-2027-based-on/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Warren Buffett Loves Wide Moats: 3 AI Infrastructure Stocks That Fit the Bill",
-      "link": "https://www.fool.com/investing/2026/09/12/warren-buffett-loves-wide-moats-3-ai-infrastructur/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Is Micron Stock the Next Nvidia? The Answer May Shock Investors.",
-      "link": "https://www.fool.com/investing/2026/09/12/micron-stock-next-nvidia-answer-may-shock-investors/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Palantir and Nvidia Are Building a Sovereign AI Stack. Who Captures More of the Economics?",
-      "link": "https://finance.yahoo.com/technology/ai/articles/palantir-nvidia-building-sovereign-ai-085205506.html?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Broadcom's AI Chip Revenue Grew 221% Last Quarter. A $1,000 Investment a Year Ago Would Be Worth This Much Today.",
-      "link": "https://www.fool.com/investing/2026/09/12/broadcom-ai-chip-revenue-grew-invest-worth/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Nvidia Will Overtake Apple in Stock Buybacks and Dividends Under New Apple CEO John Ternus",
-      "link": "https://www.fool.com/investing/2026/09/12/predict-nvidia-overtake-apple-stock-buyback/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You'd Invested $1,000 in Monster Beverage Stock 20 Years Ago, Here's How Much You'd Have Today",
-      "link": "https://www.fool.com/investing/2026/09/12/if-youd-invested-1000-in-monster-beverage-stock-20/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Meet the Value Stock That's Crushing the S&P 500. Here's Why It's Still a Great Buy in September.",
-      "link": "https://www.fool.com/investing/2026/09/12/meet-the-value-stock-thats-crushing-the-sp-500-her/?.tsrc=rss",
-      "date": "2026-09-12",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-13": {
+      "title": "1 Rising Cryptocurrency I'll Be Buying in September, and 1 I'll Definitely Avoid",
+      "link": "https://www.fool.com/investing/2026/09/13/1-rising-cryptocurrency-ill-be-buying-in-september/?.tsrc=rss",
       "date": "2026-09-13",
-      "steps": 182,
-      "resting_hr": 48,
-      "body_battery": 73,
-      "avg_stress": 11,
-      "sleep": {
-        "total_min": 379,
-        "deep_min": 94,
-        "light_min": 258,
-        "rem_min": 27,
-        "awake_min": 9,
-        "score": 68,
-        "start": 1789248600000,
-        "end": 1789271880000
-      },
-      "activities": []
-    },
-    "2026-09-12": {
-      "date": "2026-09-12",
-      "steps": 10214,
-      "resting_hr": 55,
-      "body_battery": 5,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 263,
-        "deep_min": 99,
-        "light_min": 164,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": 34,
-        "start": 1789186620000,
-        "end": 1789202400000
-      },
-      "activities": []
-    },
-    "2026-09-11": {
-      "date": "2026-09-11",
-      "steps": 18451,
-      "resting_hr": 55,
-      "body_battery": 11,
-      "avg_stress": 65,
-      "sleep": {
-        "total_min": 208,
-        "deep_min": 36,
-        "light_min": 172,
-        "rem_min": 0,
-        "awake_min": 68,
-        "score": 27,
-        "start": 1789094040000,
-        "end": 1789110600000
-      },
-      "activities": [
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-09-11 10:16:15",
-          "duration_s": 1249,
-          "distance_m": 0.0,
-          "calories": 153,
-          "avg_hr": 119,
-          "max_hr": 152,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-09-11 09:55:09",
-          "duration_s": 1241,
-          "distance_m": 0.0,
-          "calories": 123,
-          "avg_hr": 108,
-          "max_hr": 138,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "open_water_swimming",
-          "name": "Varna Open Water Swimming",
-          "start": "2026-09-11 09:04:57",
-          "duration_s": 1252,
-          "distance_m": 342.0,
-          "calories": 65,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.27
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-11 08:26:13",
-          "duration_s": 1257,
-          "distance_m": 0.0,
-          "calories": 160,
-          "avg_hr": 121,
-          "max_hr": 159,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-10": {
-      "date": "2026-09-10",
-      "steps": 10416,
-      "resting_hr": 51,
-      "body_battery": 45,
-      "avg_stress": 58,
-      "sleep": {
-        "total_min": 368,
-        "deep_min": 46,
-        "light_min": 306,
-        "rem_min": 16,
-        "awake_min": 44,
-        "score": 41,
-        "start": 1788991680000,
-        "end": 1789016400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-10 07:08:02",
-          "duration_s": 1207,
-          "distance_m": 0.0,
-          "calories": 120,
-          "avg_hr": 109,
-          "max_hr": 158,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Shiba Inu vs. Nvidia: Which Is More Likely to Win Over the Next 5 Years?",
+      "link": "https://www.fool.com/investing/2026/09/13/shiba-inu-vs-nvidia-win-over-next-5-years/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-09": {
-      "date": "2026-09-09",
-      "steps": 12323,
-      "resting_hr": 48,
-      "body_battery": 85,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 461,
-        "deep_min": 60,
-        "light_min": 341,
-        "rem_min": 60,
-        "awake_min": 5,
-        "score": 85,
-        "start": 1788906840000,
-        "end": 1788934800000
-      },
-      "activities": []
+    {
+      "title": "Wall Street's Biggest Bubble May Be Bursting Before Our Eyes, and the Consequences for the Stock Market Are Nothing Short of Disastrous",
+      "link": "https://www.fool.com/investing/2026/09/13/wall-street-biggest-bubble-bursting-consequences-for-stock-market-are-disastrous/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-09-08": {
-      "date": "2026-09-08",
-      "steps": 8709,
-      "resting_hr": 50,
-      "body_battery": 52,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 304,
-        "deep_min": 120,
-        "light_min": 184,
-        "rem_min": 0,
-        "awake_min": 56,
-        "score": 50,
-        "start": 1788833100000,
-        "end": 1788854700000
-      },
-      "activities": []
+    {
+      "title": "Firmus Adds OpenAI. NVIDIA and Blackstone Face Different Sides of the AI Buildout",
+      "link": "https://finance.yahoo.com/technology/ai/articles/firmus-adds-openai-nvidia-blackstone-105141455.html?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-09-07": {
-      "date": "2026-09-07",
-      "steps": 8999,
-      "resting_hr": 49,
-      "body_battery": 81,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 491,
-        "deep_min": 103,
-        "light_min": 342,
-        "rem_min": 46,
-        "awake_min": 20,
-        "score": 79,
-        "start": 1788731580000,
-        "end": 1788762240000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-07 16:44:23",
-          "duration_s": 3051,
-          "distance_m": 0.0,
-          "calories": 166,
-          "avg_hr": 87,
-          "max_hr": 128,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-07 16:09:15",
-          "duration_s": 1371,
-          "distance_m": 0.0,
-          "calories": 88,
-          "avg_hr": 90,
-          "max_hr": 125,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Nvidia May Put $10 Billion Into Anthropic’s $2 Trillion IPO. Amazon Already Has Much More Riding on It",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-may-put-10-billion-103618397.html?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Wall Street Analyst Sees Between 19% to 37% Upside in These 5 AI Chip Stocks",
+      "link": "https://www.fool.com/investing/2026/09/13/wall-street-analyst-upside-ai-chip-stocks/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Microsoft Stock: Is Now the Right Time to Buy or Should You Hold Off?",
+      "link": "https://www.fool.com/investing/2026/09/13/microsoft-stock-is-now-the-right-time-to-buy-or-sh/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "XRP ETFs Continue to See Significant New Inflows. Does That Make XRP a Buy Right Now?",
+      "link": "https://www.fool.com/investing/2026/09/13/xrp-etfs-continue-to-see-significant-new-inflows-d/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nscale’s Funding Talks Put Dell and Nokia’s AI Supply Relationships to the Test",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nscale-funding-talks-put-dell-114055829.html?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX and Rocket Lab Have a New Space Rival -- in Norway",
+      "link": "https://www.fool.com/investing/2026/09/13/spacex-and-rocket-lab-have-a-new-space-rival-in-no/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Got $1,000? An Investment in SpaceX Could Be Worth This Much by the End of 2027.",
+      "link": "https://www.fool.com/investing/2026/09/13/got-1000-an-investment-in-spacex-could-be-worth-th/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "5 Dividend Stocks to Hold for the Next 5 Years",
+      "link": "https://www.fool.com/investing/2026/09/13/5-dividend-stocks-to-hold-for-the-next-5-years/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Got $1,000? Here's What an Intel Investment Made the Day the U.S. Government Took Its Stake Would Be Worth Today.",
+      "link": "https://www.fool.com/investing/2026/09/13/got-1000-heres-what-an-intel-investment-made-the-d/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: Taiwan Semiconductor Manufacturing Stock Will Hit $600 by the End of 2027",
+      "link": "https://www.fool.com/investing/2026/09/13/prediction-taiwan-semiconductor-stock-will-hit-600/?.tsrc=rss",
+      "date": "2026-09-13",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-09-13"
+  ]
 }
