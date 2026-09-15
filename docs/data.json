@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-14T13:33:06.097252+00:00",
-  "eurUsd": 1.1535,
+  "lastUpdated": "2026-09-15T12:23:54.524783+00:00",
+  "eurUsd": 1.154,
   "prices": {
-    "BTC-USD": 67627.0,
-    "ETC-USD": 6.59,
-    "FLR-USD": 0.005663,
+    "BTC-USD": 66665.0,
+    "ETC-USD": 6.41,
+    "FLR-USD": 0.005736,
     "EXI2.DE": 109.52,
-    "MRVL": 163.571738,
+    "MRVL": 163.500867,
     "DFEN.DE": 55.03,
-    "NVDA": 176.68834,
+    "NVDA": 176.611785,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 382.18,
-    "pnl": -16.49,
-    "pnlPct": -4.14
+    "totalCurrent": 379.36,
+    "pnl": -19.31,
+    "pnlPct": -4.84
   },
   "history": [
-    {
-      "date": "2026-08-16",
-      "total": 352.11,
-      "pnl": -46.56,
-      "pct": -11.68
-    },
     {
       "date": "2026-08-17",
       "total": 352.09,
@@ -197,346 +191,154 @@
       "total": 382.18,
       "pnl": -16.49,
       "pct": -4.14
+    },
+    {
+      "date": "2026-09-15",
+      "total": 379.36,
+      "pnl": -19.31,
+      "pct": -4.84
     }
   ],
   "news": [
     {
-      "title": "Chip Stocks Tumble as AI Pacing Call Reaches Beyond Memory: Intel Drops 7%, AMD Sinks 6%, NVIDIA Pulls Back",
-      "link": "https://247wallst.com/investing/2026/09/14/chip-stocks-tumble-as-ai-pacing-call-reaches-beyond-memory-intel-drops-7-amd-sinks-6-nvidia-pulls-back/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Infleqtion Advances Fault-Tolerant Quantum Computing Software with NVIDIA CUDA-Q Logical",
-      "link": "https://finance.yahoo.com/technology/ai/articles/infleqtion-advances-fault-tolerant-quantum-130500001.html?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA Expands Open Source CUDA-Q Platform for Fault-Tolerant Quantum Computing",
-      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-expands-open-source-cuda-130000278.html?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Dow Falls On Surging Oil; Nvidia Sells Off On AI Warning (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/e8c0a567-addf-325b-8e69-657d5975fcc3/stock-market-today%3A-dow-falls.html?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Reasons I Bought AMC Stock This Month",
-      "link": "https://www.fool.com/investing/2026/09/14/3-reasons-i-bought-amc-stock-this-month/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Stacking This Growth ETF on Top of VOO May Work Against You",
-      "link": "https://www.fool.com/investing/2026/09/14/why-stacking-this-growth-etf-on-top-of-voo-may/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Memory Stocks Lead AI Selloff as Anthropic and OpenAI Chiefs Urge Slower Development: Micron and SanDisk Sink 6%, SK Hynix Drops 7%",
-      "link": "https://247wallst.com/investing/2026/09/14/memory-stocks-lead-ai-selloff-as-anthropic-and-openai-chiefs-urge-slower-development-micron-and-sandisk-sink-6-sk-hynix-drops-7/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street Strategist Tom Lee Says Ethereum Is Going to $6,000 By December. Here's Why He's Wrong.",
-      "link": "https://www.fool.com/investing/2026/09/14/wall-street-strategist-tom-lee-says-ethereum-is-go/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What's Wrong With Nike Stock?",
-      "link": "https://www.fool.com/investing/2026/09/14/whats-wrong-with-nike-stock/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You're Still Holding NuScale, Here's 1 Catalyst That Might Make You Sell",
-      "link": "https://www.fool.com/investing/2026/09/14/if-holding-nuscale-stock-catalyst-make-sell-smr/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "$10,000 Invested in SCHD a Decade Ago Would Be Worth This Much Today",
-      "link": "https://www.fool.com/investing/2026/09/14/10000-invested-in-schd-decade-ago-worth-this-today/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Reasons to Ride Out the Latest AI Stock Panic",
-      "link": "https://finance.yahoo.com/m/b8eef073-7c8d-3984-9c8f-cd29bde0ee6e/3-reasons-to-ride-out-the.html?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Verizon Leads 6G Momentum with Nine New Forum Members and Successful Real-World ISAC and AI-Native Trials",
-      "link": "https://finance.yahoo.com/technology/ai/articles/verizon-leads-6g-momentum-nine-130000627.html?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Bulls Say AST SpaceMobile Is a 10-Bagger. Bears Say It's Overhyped. Who's Right?",
-      "link": "https://www.fool.com/investing/2026/09/14/bulls-say-ast-spacemobile-is-a-10-bagger-bears-say/?.tsrc=rss",
-      "date": "2026-09-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-15": {
+      "title": "Nvidia eyes a $10 billion Anthropic bet at an awkward moment",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-eyes-10-billion-anthropic-121709384.html?.tsrc=rss",
       "date": "2026-09-15",
-      "steps": 5048,
-      "resting_hr": 46,
-      "body_battery": 75,
-      "avg_stress": 19,
-      "sleep": {
-        "total_min": 462,
-        "deep_min": 79,
-        "light_min": 318,
-        "rem_min": 65,
-        "awake_min": 24,
-        "score": 78,
-        "start": 1789427280000,
-        "end": 1789456440000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-15 07:43:26",
-          "duration_s": 1437,
-          "distance_m": 0.0,
-          "calories": 134,
-          "avg_hr": 104,
-          "max_hr": 144,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-14": {
-      "date": "2026-09-14",
-      "steps": 9719,
-      "resting_hr": 46,
-      "body_battery": 91,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 542,
-        "deep_min": 77,
-        "light_min": 383,
-        "rem_min": 82,
-        "awake_min": 3,
-        "score": 89,
-        "start": 1789339380000,
-        "end": 1789372080000
-      },
-      "activities": []
-    },
-    "2026-09-13": {
-      "date": "2026-09-13",
-      "steps": 3902,
-      "resting_hr": 48,
-      "body_battery": 89,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 379,
-        "deep_min": 94,
-        "light_min": 258,
-        "rem_min": 27,
-        "awake_min": 9,
-        "score": 68,
-        "start": 1789248600000,
-        "end": 1789271880000
-      },
-      "activities": []
-    },
-    "2026-09-12": {
-      "date": "2026-09-12",
-      "steps": 10214,
-      "resting_hr": 55,
-      "body_battery": 5,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 263,
-        "deep_min": 99,
-        "light_min": 164,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": 34,
-        "start": 1789186620000,
-        "end": 1789202400000
-      },
-      "activities": []
-    },
-    "2026-09-11": {
-      "date": "2026-09-11",
-      "steps": 18451,
-      "resting_hr": 55,
-      "body_battery": 11,
-      "avg_stress": 65,
-      "sleep": {
-        "total_min": 208,
-        "deep_min": 36,
-        "light_min": 172,
-        "rem_min": 0,
-        "awake_min": 68,
-        "score": 27,
-        "start": 1789094040000,
-        "end": 1789110600000
-      },
-      "activities": [
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-09-11 10:16:15",
-          "duration_s": 1249,
-          "distance_m": 0.0,
-          "calories": 153,
-          "avg_hr": 119,
-          "max_hr": 152,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-09-11 09:55:09",
-          "duration_s": 1241,
-          "distance_m": 0.0,
-          "calories": 123,
-          "avg_hr": 108,
-          "max_hr": 138,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "open_water_swimming",
-          "name": "Varna Open Water Swimming",
-          "start": "2026-09-11 09:04:57",
-          "duration_s": 1252,
-          "distance_m": 342.0,
-          "calories": 65,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.27
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-11 08:26:13",
-          "duration_s": 1257,
-          "distance_m": 0.0,
-          "calories": 160,
-          "avg_hr": 121,
-          "max_hr": 159,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "AI chip sell-off overblown: Zero GPU slowdown after Anthropic essay, analyst says",
+      "link": "https://finance.yahoo.com/technology/ai/articles/ai-chip-sell-off-overblown-120855997.html?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-10": {
-      "date": "2026-09-10",
-      "steps": 10416,
-      "resting_hr": 51,
-      "body_battery": 45,
-      "avg_stress": 58,
-      "sleep": {
-        "total_min": 368,
-        "deep_min": 46,
-        "light_min": 306,
-        "rem_min": 16,
-        "awake_min": 44,
-        "score": 41,
-        "start": 1788991680000,
-        "end": 1789016400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-10 07:08:02",
-          "duration_s": 1207,
-          "distance_m": 0.0,
-          "calories": 120,
-          "avg_hr": 109,
-          "max_hr": 158,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "3 AI Stocks Poised to Outperform Micron and Sandisk as the Next Infrastructure Bottleneck Builds",
+      "link": "https://www.fool.com/investing/2026/09/15/x-ai-stock-poised-to-outperform-micron-and-sandisk/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-09": {
-      "date": "2026-09-09",
-      "steps": 12323,
-      "resting_hr": 48,
-      "body_battery": 85,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 461,
-        "deep_min": 60,
-        "light_min": 341,
-        "rem_min": 60,
-        "awake_min": 5,
-        "score": 85,
-        "start": 1788906840000,
-        "end": 1788934800000
-      },
-      "activities": []
+    {
+      "title": "The AI Company You Haven't Heard of -- But Should Keep on Your Radar",
+      "link": "https://www.fool.com/investing/2026/09/15/the-ai-company-you-havent-heard-of-but-should-keep/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Trillion-Dollar AI Infrastructure Stocks With Up to 136% Upside, According to Select Wall Street Analysts",
+      "link": "https://www.fool.com/investing/2026/09/15/2-trillion-dollar-ai-infrastructure-stocks-up-to-136-upside-according-to-wall-street-analysts/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Stocks That Declared Dividend Raises of at Least 30% in 2026",
+      "link": "https://www.fool.com/investing/2026/09/15/3-stocks-that-declared-dividend-raises-2026/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "IREN Draws a Two-Notch Upgrade on Neocloud Pricing",
+      "link": "https://finance.yahoo.com/technology/ai/articles/iren-draws-two-notch-upgrade-122036256.html?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Palantir's CEO Revealed the Biggest Opportunity in Its Future. And It Has Little to Do with AI Models",
+      "link": "https://www.fool.com/investing/2026/09/15/palantir-ceo-revealed-big-opportunity-ai-model/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Salesforce Puts AI Strategy In Spotlight At Dreamforce, Investor Day",
+      "link": "https://finance.yahoo.com/m/a1757739-882c-3c8e-8bc5-22785639d4ff/salesforce-puts-ai-strategy.html?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is SpaceX a Millionaire-Maker Stock?",
+      "link": "https://www.fool.com/investing/2026/09/15/is-spacex-a-millionaire-maker-stock/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The Simple Reason AT&T Isn't Too Concerned About SpaceX's Starlink Business",
+      "link": "https://www.fool.com/investing/2026/09/15/the-simple-reason-at-and-t-isn-t-too-concerned-about-spacex-s-starlink-business/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If You'd Invested $10,000 in Vistra 5 Years Ago, Here's How Much You'd Have Today",
+      "link": "https://www.fool.com/investing/2026/09/15/if-youd-invested-vistra-in-stock-5-years-ago/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Will Nike's Stock Price Sink to $23? Here Are the Bear, Base, and Bull Cases Over the Next Year.",
+      "link": "https://www.fool.com/investing/2026/09/15/will-nikes-stock-price-sink-to-23-here-are-the-bea/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Alphabet May Have Just Gotten Its Biggest Competitor Yet. And It's Not OpenAI or Anthropic.",
+      "link": "https://www.fool.com/investing/2026/09/15/alphabet-may-have-just-gotten-its-biggest-competit/?.tsrc=rss",
+      "date": "2026-09-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-09-15"
+  ]
 }
