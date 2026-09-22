@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-21T13:31:50.279438+00:00",
-  "eurUsd": 1.1478,
+  "lastUpdated": "2026-09-22T12:16:34.754597+00:00",
+  "eurUsd": 1.1463,
   "prices": {
-    "BTC-USD": 73969.0,
-    "ETC-USD": 7.62,
-    "FLR-USD": 0.00597,
+    "BTC-USD": 74950.0,
+    "ETC-USD": 7.56,
+    "FLR-USD": 0.006037,
     "EXI2.DE": 109.52,
-    "MRVL": 164.384039,
+    "MRVL": 164.599145,
     "DFEN.DE": 55.03,
-    "NVDA": 177.565778,
+    "NVDA": 177.798133,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 399.91,
-    "pnl": 1.24,
-    "pnlPct": 0.31
+    "totalCurrent": 401.23,
+    "pnl": 2.56,
+    "pnlPct": 0.64
   },
   "history": [
-    {
-      "date": "2026-08-23",
-      "total": 376.94,
-      "pnl": -21.73,
-      "pct": -5.45
-    },
     {
       "date": "2026-08-24",
       "total": 379.01,
@@ -197,325 +191,154 @@
       "total": 399.91,
       "pnl": 1.24,
       "pct": 0.31
+    },
+    {
+      "date": "2026-09-22",
+      "total": 401.23,
+      "pnl": 2.56,
+      "pct": 0.64
     }
   ],
   "news": [
     {
-      "title": "Is Archer Aviation Stock a No-Brainer Buy While It's Trading Near $5?",
-      "link": "https://www.fool.com/investing/2026/09/21/is-archer-aviation-stock-a-no-brainer-buy-while-it-s-trading-near-usd5/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Zacks Market Edge Highlights: ExxonMobil, JPMorgan Chase and NVIDIA",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-market-edge-highlights-exxonmobil-130200702.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia and Micron are part of Zacks Earnings Preview",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-micron-part-zacks-earnings-130100351.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Zacks Investment Ideas feature highlights: Microsoft, NVIDIA and Apple",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-130100092.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Zacks Analyst Blog Highlights Credo Technology and NVIDIA",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-credo-130000521.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell Technology Fell Hard Over 3 Months: It Has Momentum and a Wall Street Pro’s Confidence That 78% Gains are Coming",
-      "link": "https://247wallst.com/investing/2026/09/21/marvell-technology-fell-hard-over-3-months-it-has-momentum-and-a-wall-street-pros-confidence-that-78-gains-are-coming/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Dow Rallies 450 Points As Oil Prices, Treasury Yields Fall; Nvidia Extends Gains (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/b7ca9b65-19fd-32e7-bad5-f53a1ee49def/stock-market-today%3A-dow.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia chief: Zero chance AI will destroy humanity",
-      "link": "https://uk.finance.yahoo.com/news/nvidia-chief-zero-chance-ai-125149395.html?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Einride Taps Nvidia To Power Autonomous Trucking Push - Targets Up To 2,000 Vehicles By 2028",
-      "link": "https://stocktwits.com/news-articles/markets/equity/einride-nvidia-autonomous-trucking-enrd-stock-2000-vehicles-2028/cZMRiocRB4y?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Can Investing in Marvell Technology Stock Double Your Money?",
-      "link": "https://www.fool.com/investing/2026/09/21/can-investing-in-marvell-technology-stock-double-your-money/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Einride Partners With Nvidia to Expand Autonomous Trucking Technology",
-      "link": "https://investorshub.advfn.com/market-news/article/36607/einride-partners-with-nvidia-to-expand-autonomous-trucking-technology?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Anthropic’s IPO Could Be the Biggest in History. Here’s What SpaceX Taught Us About Buying It.",
-      "link": "https://www.fool.com/investing/2026/09/21/anthropic-s-ipo-could-be-the-biggest-in-history-here-s-what-spacex-taught-us-about-buying-it/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "History Says This 1 Bear Market Move Is the Costliest Mistake Investors Can Make",
-      "link": "https://www.fool.com/investing/2026/09/21/history-says-this-1-bear-market-move-is-the-costli/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Robinhood Will Launch Tokenized Stock Trading in the U.S. Before the End of 2027",
-      "link": "https://www.fool.com/investing/2026/09/21/prediction-robinhood-will-launch-tokenized-stock-trading-in-the-u-s-before-the-end-of-2027/?.tsrc=rss",
-      "date": "2026-09-21",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-22": {
+      "title": "QAD | Redzone Accelerates Manufacturing Intelligence with NVIDIA",
+      "link": "https://finance.yahoo.com/technology/ai/articles/qad-redzone-accelerates-manufacturing-intelligence-120300222.html?.tsrc=rss",
       "date": "2026-09-22",
-      "steps": 0,
-      "resting_hr": null,
-      "body_battery": null,
-      "avg_stress": null,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-22 07:36:15",
-          "duration_s": 1497,
-          "distance_m": 0.0,
-          "calories": 210,
-          "avg_hr": 128,
-          "max_hr": 160,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-21": {
-      "date": "2026-09-21",
-      "steps": 1264,
-      "resting_hr": 54,
-      "body_battery": 14,
-      "avg_stress": 59,
-      "sleep": {
-        "total_min": 319,
-        "deep_min": 42,
-        "light_min": 277,
-        "rem_min": 0,
-        "awake_min": 44,
-        "score": 35,
-        "start": 1789953120000,
-        "end": 1789974900000
-      },
-      "activities": []
-    },
-    "2026-09-20": {
-      "date": "2026-09-20",
-      "steps": 11688,
-      "resting_hr": 51,
-      "body_battery": 55,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 120,
-        "light_min": 255,
-        "rem_min": 57,
-        "awake_min": 20,
-        "score": 75,
-        "start": 1789854360000,
-        "end": 1789881480000
-      },
-      "activities": []
-    },
-    "2026-09-19": {
-      "date": "2026-09-19",
-      "steps": 9189,
-      "resting_hr": 52,
-      "body_battery": 18,
-      "avg_stress": 54,
-      "sleep": {
-        "total_min": 363,
-        "deep_min": 93,
-        "light_min": 254,
-        "rem_min": 16,
-        "awake_min": 23,
-        "score": 43,
-        "start": 1789782540000,
-        "end": 1789805700000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-09-19 12:15:52",
-          "duration_s": 2487,
-          "distance_m": 6099.0,
-          "calories": 242,
-          "avg_hr": 113,
-          "max_hr": 139,
-          "avg_speed": 2.45
-        }
+    {
+      "title": "Mitsubishi Electric Introduces Chip-to-Grid Blueprint for AI Factories Powered by NVIDIA",
+      "link": "https://finance.yahoo.com/technology/ai/articles/mitsubishi-electric-introduces-chip-grid-120000339.html?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-18": {
-      "date": "2026-09-18",
-      "steps": 18085,
-      "resting_hr": 47,
-      "body_battery": 86,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 493,
-        "deep_min": 109,
-        "light_min": 319,
-        "rem_min": 65,
-        "awake_min": 6,
-        "score": 84,
-        "start": 1789684560000,
-        "end": 1789714500000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-18 09:10:45",
-          "duration_s": 1267,
-          "distance_m": 0.0,
-          "calories": 140,
-          "avg_hr": 115,
-          "max_hr": 151,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "The Biggest Trade If the Democrats Win Back the House and Senate in November's Mid-Term Elections: Short Artificial Intelligence (AI) Data Centers",
+      "link": "https://www.fool.com/investing/2026/09/22/the-biggest-trade-if-the-democrats-win-back-the-ho/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-17": {
-      "date": "2026-09-17",
-      "steps": 13352,
-      "resting_hr": 51,
-      "body_battery": 35,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 397,
-        "deep_min": 47,
-        "light_min": 350,
-        "rem_min": 0,
-        "awake_min": 116,
-        "score": 33,
-        "start": 1789599360000,
-        "end": 1789630140000
-      },
-      "activities": []
+    {
+      "title": "Vertiv vs. Eaton: This AI Infrastructure Stock Is the Better Buy",
+      "link": "https://www.fool.com/investing/2026/09/22/vertiv-vs-eaton-this-ai-infrastructure-stock-is-th/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-09-16": {
-      "date": "2026-09-16",
-      "steps": 12691,
-      "resting_hr": 52,
-      "body_battery": 30,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 386,
-        "deep_min": 96,
-        "light_min": 270,
-        "rem_min": 20,
-        "awake_min": 67,
-        "score": 42,
-        "start": 1789509060000,
-        "end": 1789536240000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-16 06:43:44",
-          "duration_s": 1526,
-          "distance_m": 0.0,
-          "calories": 194,
-          "avg_hr": 123,
-          "max_hr": 168,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "United States Integrated Circuits Market to Reach US$330 Billion by 2035 as AI and Domestic Manufacturing Accelerate Growth",
+      "link": "https://finance.yahoo.com/technology/articles/united-states-integrated-circuits-market-114900351.html?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Coca-Cola's “$10 Billion” Investment Announcement Is Smaller Than It Sounds. Here's the Math.",
+      "link": "https://www.fool.com/investing/2026/09/22/coca-cola-s-usd10-billion-investment-announcement-is-smaller-than-it-sounds-here-s-the-math/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Freeport-McMoRan's Low-Cost Secret to Take Advantage of Record Copper Prices",
+      "link": "https://www.fool.com/investing/2026/09/22/freeport-mcmorans-low-cost-secret-to-take-advantag/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "AMD Just Joined the $1 Trillion Club. Here's Why Investors Are Betting Big on the Chipmaker.",
+      "link": "https://www.fool.com/investing/2026/09/22/amd-just-joined-the-1-trillion-club-heres-why-investors-are-betting-big-on-the-chipmaker/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I Think Sandisk Stock Will Be in the Low $2,000s in 2030. From About $1,790, That Wouldn't Beat the Market.",
+      "link": "https://www.fool.com/investing/2026/09/22/i-think-sandisk-stock-will-be-in-the-low-usd2-000s-in-2030-from-about-usd1-790-that-wouldn-t-beat-the-market/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: This Is What a $1,000 Investment in Nebius Group Will Be Worth by 2027",
+      "link": "https://www.fool.com/investing/2026/09/22/prediction-this-is-what-a-1000-investment-in-nebiu/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Direct MCP Access Brings Liftr's Cloud and Semiconductor Intelligence into Investor Workflows",
+      "link": "https://finance.yahoo.com/technology/ai/articles/direct-mcp-access-brings-liftrs-121100580.html?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Move Over, Tesla: This Robotics Stock Already Has Paying Customers",
+      "link": "https://www.fool.com/investing/2026/09/22/move-over-tesla-robotics-stock-symbotic/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will QQQ Be in 20 Years? Here's What the Nasdaq-100's Historical Growth Rate Suggests.",
+      "link": "https://www.fool.com/investing/2026/09/22/where-will-qqq-be-in-20-years-historical-growth/?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Marvell Technology (MRVL) Debuts Industry First 2nm Optical Interconnects",
+      "link": "https://finance.yahoo.com/technology/articles/marvell-technology-mrvl-debuts-industry-111533825.html?.tsrc=rss",
+      "date": "2026-09-22",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-09-22"
+  ]
 }
