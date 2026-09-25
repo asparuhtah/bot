@@ -340,5 +340,182 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-09-25": {
+      "date": "2026-09-25",
+      "steps": 4460,
+      "resting_hr": 55,
+      "body_battery": 26,
+      "avg_stress": 41,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-09-24": {
+      "date": "2026-09-24",
+      "steps": 11106,
+      "resting_hr": 51,
+      "body_battery": 57,
+      "avg_stress": 47,
+      "sleep": {
+        "total_min": 451,
+        "deep_min": 77,
+        "light_min": 296,
+        "rem_min": 78,
+        "awake_min": 13,
+        "score": 80,
+        "start": 1790204460000,
+        "end": 1790232300000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-24 07:09:11",
+          "duration_s": 1214,
+          "distance_m": 0.0,
+          "calories": 126,
+          "avg_hr": 108,
+          "max_hr": 156,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-23": {
+      "date": "2026-09-23",
+      "steps": 13666,
+      "resting_hr": 48,
+      "body_battery": 83,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 507,
+        "deep_min": 88,
+        "light_min": 323,
+        "rem_min": 96,
+        "awake_min": 0,
+        "score": 94,
+        "start": 1790117280000,
+        "end": 1790147700000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-23 07:46:02",
+          "duration_s": 283,
+          "distance_m": 0.0,
+          "calories": 15,
+          "avg_hr": 81,
+          "max_hr": 115,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-22": {
+      "date": "2026-09-22",
+      "steps": 5255,
+      "resting_hr": 53,
+      "body_battery": 63,
+      "avg_stress": 32,
+      "sleep": {
+        "total_min": 352,
+        "deep_min": 91,
+        "light_min": 208,
+        "rem_min": 53,
+        "awake_min": 1,
+        "score": 74,
+        "start": 1790031000000,
+        "end": 1790052180000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-22 07:36:15",
+          "duration_s": 1497,
+          "distance_m": 0.0,
+          "calories": 210,
+          "avg_hr": 128,
+          "max_hr": 160,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-21": {
+      "date": "2026-09-21",
+      "steps": 2811,
+      "resting_hr": 58,
+      "body_battery": 14,
+      "avg_stress": 56,
+      "sleep": {
+        "total_min": 319,
+        "deep_min": 42,
+        "light_min": 277,
+        "rem_min": 0,
+        "awake_min": 44,
+        "score": 35,
+        "start": 1789953120000,
+        "end": 1789974900000
+      },
+      "activities": []
+    },
+    "2026-09-20": {
+      "date": "2026-09-20",
+      "steps": 11688,
+      "resting_hr": 51,
+      "body_battery": 55,
+      "avg_stress": 40,
+      "sleep": {
+        "total_min": 432,
+        "deep_min": 120,
+        "light_min": 255,
+        "rem_min": 57,
+        "awake_min": 20,
+        "score": 75,
+        "start": 1789854360000,
+        "end": 1789881480000
+      },
+      "activities": []
+    },
+    "2026-09-19": {
+      "date": "2026-09-19",
+      "steps": 9189,
+      "resting_hr": 52,
+      "body_battery": 18,
+      "avg_stress": 54,
+      "sleep": {
+        "total_min": 363,
+        "deep_min": 93,
+        "light_min": 254,
+        "rem_min": 16,
+        "awake_min": 23,
+        "score": 43,
+        "start": 1789782540000,
+        "end": 1789805700000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-09-19 12:15:52",
+          "duration_s": 2487,
+          "distance_m": 6099.0,
+          "calories": 242,
+          "avg_hr": 113,
+          "max_hr": 139,
+          "avg_speed": 2.45
+        }
+      ]
+    }
+  },
+  "garmin_updated": "2026-09-25"
 }
