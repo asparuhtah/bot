@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-25T12:29:39.680825+00:00",
-  "eurUsd": 1.1405,
+  "lastUpdated": "2026-09-26T11:59:46.704154+00:00",
+  "eurUsd": 1.1386,
   "prices": {
-    "BTC-USD": 73917.0,
-    "ETC-USD": 8.36,
-    "FLR-USD": 0.006406,
+    "BTC-USD": 73885.0,
+    "ETC-USD": 8.39,
+    "FLR-USD": 0.006348,
     "EXI2.DE": 109.52,
-    "MRVL": 165.436212,
+    "MRVL": 165.712278,
     "DFEN.DE": 55.03,
-    "NVDA": 178.702324,
+    "NVDA": 179.000527,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 405.48,
-    "pnl": 6.81,
-    "pnlPct": 1.71
+    "totalCurrent": 405.8,
+    "pnl": 7.13,
+    "pnlPct": 1.79
   },
   "history": [
-    {
-      "date": "2026-08-27",
-      "total": 384.59,
-      "pnl": -14.08,
-      "pct": -3.53
-    },
     {
       "date": "2026-08-28",
       "total": 380.02,
@@ -197,313 +191,154 @@
       "total": 405.48,
       "pnl": 6.81,
       "pct": 1.71
+    },
+    {
+      "date": "2026-09-26",
+      "total": 405.8,
+      "pnl": 7.13,
+      "pct": 1.79
     }
   ],
   "news": [
     {
-      "title": "Technology Stocks Are Back, Because Nothing Else Is",
-      "link": "https://finance.yahoo.com/m/6e83da33-e6c4-3c4b-909e-53a8a1eeff49/technology-stocks-are-back%2C.html?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Aurora And Curaleaf’s Hostile Bid Fight Gets Even Messier",
-      "link": "https://app.moby.co/home/news/news-aurora-and-curaleafs-hostile-bid-fight-gets-even-messier?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Week In AI Chips - Secure AI Integration Advances with VAST DataEnclave Launch",
-      "link": "https://finance.yahoo.com/technology/ai/articles/week-ai-chips-secure-ai-113717596.html?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "58% of Americans Own Stock, but Most Are Doing It Wrong. I'd Start With These 2 Names Instead.",
-      "link": "https://www.fool.com/investing/2026/09/25/58-of-americans-own-stock-but-most-are-doing-it-wr/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AMD Just Joined Nvidia in the $1 Trillion Club. At $614, Wall Street Is Paying Too Much for a Distant No. 2.",
-      "link": "https://www.fool.com/investing/2026/09/25/amd-just-joined-nvidia-in-the-1-trillion-club-at-6/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "I've Changed My Mind on AMD. The AI Supercycle Has Room for More Than Just Nvidia.",
-      "link": "https://www.fool.com/investing/2026/09/25/ive-changed-my-mind-on-amd-the-ai-supercycle-has-r/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AI Crypto Coins Revenue Gap Puts Token Value to the Test",
-      "link": "https://cryptonews.com/news/ai-crypto-revenue-token-demand/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jensen Huang Says AI Boom Will Eventually Hit a 'Period of Digestion,' But Not for 2-3 Years",
-      "link": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-says-ai-boom-110008109.html?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Michael Burry Just Bought Sprouts Farmers Market, Making It a \"Full Position.\" Should You Follow?",
-      "link": "https://www.fool.com/investing/2026/09/25/michael-burry-just-bought-sprouts-farmers-market/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Stock Market Is Triggering a Warning Seen Only Once Before, and Warren Buffett Has a Stark Warning for Investors",
-      "link": "https://www.fool.com/investing/2026/09/25/the-stock-market-is-triggering-a-warning-seen-only/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Robinhood's Fastest-Growing Business Isn't Trading Stocks",
-      "link": "https://www.fool.com/investing/2026/09/25/robinhood-s-fastest-growing-business-isn-t-trading-stocks/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SpaceX Bought xAI for $250 Billion. That Division Now Supposedly Has a $26.5 Trillion Total Addressable Market.",
-      "link": "https://www.fool.com/investing/2026/09/25/spacex-bought-xai-for-250-billion-that-division-no/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Dividend Stock's Moat Is as Wide as It Gets. 3 Reasons to Buy and Hold It Forever.",
-      "link": "https://www.fool.com/investing/2026/09/25/this-dividend-stocks-moat-is-as-wide-as-it-gets-3/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Does History Suggest Buying SpaceX Stock in a Market Crash? The Answer Might Surprise You",
-      "link": "https://www.fool.com/investing/2026/09/25/does-history-suggest-buying-spacex-stock-in-a-mark/?.tsrc=rss",
-      "date": "2026-09-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-26": {
+      "title": "2 Semiconductor Stocks That Could Help Set You Up for Life",
+      "link": "https://www.fool.com/investing/2026/09/26/semiconductor-stocks-set-up-for-life-mrvl-asml/?.tsrc=rss",
       "date": "2026-09-26",
-      "steps": 6063,
-      "resting_hr": 51,
-      "body_battery": 41,
-      "avg_stress": 31,
-      "sleep": {
-        "total_min": 1941,
-        "deep_min": 7,
-        "light_min": 22,
-        "rem_min": 1,
-        "awake_min": 19,
-        "score": 34,
-        "start": 1790291820000,
-        "end": 1790409420000
-      },
-      "activities": []
-    },
-    "2026-09-25": {
-      "date": "2026-09-25",
-      "steps": 10078,
-      "resting_hr": 55,
-      "body_battery": 26,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-09-24": {
-      "date": "2026-09-24",
-      "steps": 11106,
-      "resting_hr": 51,
-      "body_battery": 57,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 451,
-        "deep_min": 77,
-        "light_min": 296,
-        "rem_min": 78,
-        "awake_min": 13,
-        "score": 80,
-        "start": 1790204460000,
-        "end": 1790232300000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-24 07:09:11",
-          "duration_s": 1214,
-          "distance_m": 0.0,
-          "calories": 126,
-          "avg_hr": 108,
-          "max_hr": 156,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-23": {
-      "date": "2026-09-23",
-      "steps": 13666,
-      "resting_hr": 48,
-      "body_battery": 83,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 507,
-        "deep_min": 88,
-        "light_min": 323,
-        "rem_min": 96,
-        "awake_min": 0,
-        "score": 94,
-        "start": 1790117280000,
-        "end": 1790147700000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-23 07:46:02",
-          "duration_s": 283,
-          "distance_m": 0.0,
-          "calories": 15,
-          "avg_hr": 81,
-          "max_hr": 115,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Jim Cramer Says Buy 2 Artificial Intelligence (AI) Stocks Up 875% and 1,400% Since 2023",
+      "link": "https://www.fool.com/investing/2026/09/26/jim-cramer-says-buy-2-ai-stocks-up-1400-since-2023/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-22": {
-      "date": "2026-09-22",
-      "steps": 5255,
-      "resting_hr": 53,
-      "body_battery": 63,
-      "avg_stress": 32,
-      "sleep": {
-        "total_min": 352,
-        "deep_min": 91,
-        "light_min": 208,
-        "rem_min": 53,
-        "awake_min": 1,
-        "score": 74,
-        "start": 1790031000000,
-        "end": 1790052180000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-22 07:36:15",
-          "duration_s": 1497,
-          "distance_m": 0.0,
-          "calories": 210,
-          "avg_hr": 128,
-          "max_hr": 160,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "This Market Signal Has Been 95% Accurate for Nearly 90 Years. What Investors Need to Do Now to be Ready",
+      "link": "https://www.fool.com/investing/2026/09/26/this-market-signal-has-been-95-accurate-for-nearly/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-21": {
-      "date": "2026-09-21",
-      "steps": 2811,
-      "resting_hr": 58,
-      "body_battery": 14,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 319,
-        "deep_min": 42,
-        "light_min": 277,
-        "rem_min": 0,
-        "awake_min": 44,
-        "score": 35,
-        "start": 1789953120000,
-        "end": 1789974900000
-      },
-      "activities": []
+    {
+      "title": "Anthropic's IPO Was Just Delayed to November. Here's the One Number That Has Me Even More Excited.",
+      "link": "https://www.fool.com/investing/2026/09/26/anthropic-s-ipo-was-just-delayed-to-november-here-s-the-one-number-that-has-me-even-more-excited/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-09-20": {
-      "date": "2026-09-20",
-      "steps": 11688,
-      "resting_hr": 51,
-      "body_battery": 55,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 120,
-        "light_min": 255,
-        "rem_min": 57,
-        "awake_min": 20,
-        "score": 75,
-        "start": 1789854360000,
-        "end": 1789881480000
-      },
-      "activities": []
+    {
+      "title": "What Is a Stock Split? I Think the Next Wave of Splits Could Create Buying Opportunities Before 2027.",
+      "link": "https://www.fool.com/investing/2026/09/26/what-is-a-stock-split-i-think-the-next-wave-of-spl/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If You Invest $100 Per Month in Procter & Gamble Stock, Here's the Passive Dividend Income It Could Generate Over 10 Years",
+      "link": "https://www.fool.com/investing/2026/09/26/procter-gamble-stock-passive-dividend-income/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "A Bear Market Is Coming Eventually. Here's How I'm Preparing My Investments.",
+      "link": "https://www.fool.com/investing/2026/09/26/bear-market-coming-eventually-how-to-prepare-today/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SCHD Is Brilliant. Here's Why I Think This Dividend ETF Is Even Better.",
+      "link": "https://www.fool.com/investing/2026/09/26/schd-is-brilliant-heres-why-i-think-this-dividend/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Anduril's $5 Billion Air Force Contract Finally Has a Name",
+      "link": "https://www.fool.com/investing/2026/09/26/andurils-5-billion-air-force-contract-finally-has/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Here's Exactly Why Wall Street Thinks Argenx Stock Could Soar 23% Over the Next 12 Months",
+      "link": "https://www.fool.com/investing/2026/09/26/heres-exactly-why-wall-street-thinks-argenx-stock/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Breakfast News: Cast a Wide Net to Catch Big Wins",
+      "link": "https://www.fool.com/investing/breakfast-news/2026/09/26/breakfast-news/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Bitcoin Is Not the Only Cryptocurrency With a Halving. Here's Why It's Time to Put Zcash (ZEC) on Your Investment Radar.",
+      "link": "https://www.fool.com/investing/2026/09/26/bitcoin-is-not-the-only-cryptocurrency-with-a-halv/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "History Shows: This Midterm Election Result Could Be a Warning Sign for the Stock Market",
+      "link": "https://www.fool.com/investing/2026/09/26/history-shows-this-midterm-election-result-could-b/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Data Center Stocks That Could Help Make You a Fortune",
+      "link": "https://www.fool.com/investing/2026/09/26/2-data-center-stocks-make-fortune/?.tsrc=rss",
+      "date": "2026-09-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-09-26"
+  ]
 }
