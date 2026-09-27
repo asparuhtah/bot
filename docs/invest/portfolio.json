@@ -1,0 +1,23 @@
+{
+  "_readme": "Конфигурация на портфейла. Редактирай директно в GitHub (молив ✎). qty = брой дялове/монети, invested_eur = общо вложено. Ръчни активи (source=manual) се обновяват с полето value_eur. Алертите са в родната валута на актива (USD за MRVL/NVDA/крипто, EUR за .DE).",
+  "assets": [
+    {"id": "BTC",  "name": "Bitcoin",            "group": "crypto", "source": "coingecko", "symbol": "bitcoin",          "ccy": "USD", "qty": 0.00162035,  "invested_eur": 107.00, "alert": {"buy": 60000, "warn": 95000}},
+    {"id": "ETC",  "name": "Ethereum Classic",   "group": "crypto", "source": "coingecko", "symbol": "ethereum-classic", "ccy": "USD", "qty": 6.72696447,  "invested_eur": 58.03,  "alert": {"buy": 6.0,   "warn": 12.0}},
+    {"id": "FLR",  "name": "Flare",              "group": "crypto", "source": "coingecko", "symbol": "flare-networks",   "ccy": "USD", "qty": 14.8080141,  "invested_eur": 0.10},
+    {"id": "EXI2", "name": "iShares ETF (EXI2)", "group": "stocks", "source": "yahoo",     "symbol": "EXI2.DE",          "ccy": "EUR", "qty": 0.477463713, "invested_eur": 50.00,  "alert": {"buy": 95,    "warn": 125}},
+    {"id": "MRVL", "name": "Marvell",            "group": "stocks", "source": "yahoo",     "symbol": "MRVL",             "ccy": "USD", "qty": 0.258598397, "invested_eur": 37.04,  "alert": {"buy": 140,   "warn": 280}},
+    {"id": "DFEN", "name": "VanEck Defense ETF", "group": "stocks", "source": "yahoo",     "symbol": "DFEN.DE",          "ccy": "EUR", "qty": 0.873440280, "invested_eur": 49.00,  "alert": {"buy": 48,    "warn": 65}},
+    {"id": "NVDA", "name": "NVIDIA",             "group": "stocks", "source": "yahoo",     "symbol": "NVDA",             "ccy": "USD", "qty": 0.351794520, "invested_eur": 74.08,  "alert": {"buy": 175,   "warn": 260}},
+    {"id": "ROBO", "name": "Robo-Advisor",       "group": "stocks", "source": "manual",    "ccy": "EUR", "value_eur": 20.81, "invested_eur": 23.42},
+    {"id": "PERSONAL", "name": "Personal",       "group": "cash",   "source": "manual",    "ccy": "EUR", "value_eur": 126.76},
+    {"id": "CASH", "name": "Cash balance",       "group": "cash",   "source": "manual",    "ccy": "EUR", "value_eur": 0.43}
+  ],
+  "notify": {
+    "move_pct": 5.0,
+    "pnl_levels_pct": [-30, -20, -10, 0, 10, 20, 50],
+    "morning_hour": 9,
+    "daily_report_hour": 23,
+    "weekly_weekday": 6,
+    "weekly_hour": 20
+  }
+}

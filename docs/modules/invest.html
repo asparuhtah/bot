@@ -82,6 +82,175 @@
   <div class="sc"><div class="sc-lbl">EUR/USD</div><div class="sc-val" id="iv-fx">—</div><div class="sc-sub">Kraken / data.json</div></div>
 </div>
 
+<!-- ═══ LIVE ОТ БОТА (Invest Tracker v6 → docs/invest/) ═══ -->
+<style>
+.iw .lv-chart{width:100%;height:190px;display:block}
+.iw .lv-chart text{fill:#8b949e;font-size:10px}
+.iw .lv-leg{display:flex;gap:14px;font-size:11px;color:#8b949e;margin-top:4px;flex-wrap:wrap}
+.iw .lv-leg i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.iw .lv-tabs{display:flex;gap:4px}
+.iw .lv-tabs .btn.on{border-color:#58a6ff;color:#58a6ff}
+.iw .wd-grid{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:12px;align-items:center}
+.iw .wd-grid input{width:110px;text-align:right;border-color:#d29922}
+.iw .light{border-radius:7px;padding:9px 12px;font-size:12px;font-weight:600;margin-top:10px}
+.iw .light.g{background:rgba(63,185,80,.12);border:1px solid #1e4620}
+.iw .light.y{background:rgba(210,153,34,.12);border:1px solid #5a4200}
+.iw .light.r{background:rgba(248,81,73,.12);border:1px solid #5a1d1b}
+.iw .rules{font-size:11px;line-height:1.55;color:#c9d1d9;margin-top:10px}
+.iw .rules div{padding:3px 0}
+</style>
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">История на стойността (бот, всеки час)</span>
+    <div class="lv-tabs">
+      <button class="btn mini" data-r="7">7д</button>
+      <button class="btn mini on" data-r="30">30д</button>
+      <button class="btn mini" data-r="365">1г</button>
+      <button class="btn mini" data-r="0">Всичко</button>
+    </div>
+  </div>
+  <svg class="lv-chart" id="lv-chart" viewBox="0 0 800 190" preserveAspectRatio="none"></svg>
+  <div class="lv-leg">
+    <span><i style="background:#58a6ff"></i>Стойност (без кеш)</span>
+    <span><i style="background:#8b949e"></i>Вложено</span>
+    <span id="lv-meta" class="m"></span>
+  </div>
+</div>
+
+<div class="g2">
+<div class="sec">
+  <div class="sec-hdr"><span class="sec-title">💸 Кога да теглиш — калкулатор</span><span class="pill pb" id="wd-upd">—</span></div>
+  <div class="wd-grid">
+    <span>Искам да изтегля (€)</span><input type="number" id="wd-amt" step="1" min="0" value="0">
+    <span class="m">Текуща стойност (без кеш)</span><b id="wd-cur">—</b>
+    <span class="m">Общо вложено</span><b id="wd-inv">—</b>
+    <span class="m">P&amp;L на портфейла</span><b id="wd-pnl">—</b>
+    <span class="m">След теглене остава</span><b id="wd-left">—</b>
+    <span class="m">% от портфейла изтеглено</span><b id="wd-pct">—</b>
+  </div>
+  <div class="light" id="wd-light">—</div>
+  <div class="rules">
+    <div>🟢 <b>Зелено:</b> печалба над +20% И теглене под 25% от портфейла И конкретна нужда.</div>
+    <div>🟡 <b>Жълто:</b> печалба 0–20% ИЛИ теглене 25–50% — може би изчакай.</div>
+    <div>🔴 <b>Червено:</b> на загуба ИЛИ теглене над 50% ИЛИ без конкретна причина.</div>
+    <div>💡 Никога не тегли от паника. ⏰ Ако не ти трябват 12 месеца — не теглиш.</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-hdr">
+    <span class="sec-title">📖 История на тегленията</span>
+    <span class="pill py" id="wd-total">€0.00</span>
+  </div>
+  <div style="max-height:200px;overflow-y:auto">
+  <table><thead><tr><th>Дата</th><th>Актив</th><th>Сума €</th><th>Цена</th><th></th></tr></thead>
+  <tbody id="wd-body"></tbody></table>
+  </div>
+  <div class="tx-form">
+    <label>Дата<input type="date" id="wd-date"></label>
+    <label>Актив<select id="wd-asset"></select></label>
+    <label>Сума €<input type="number" id="wd-sum" step="0.01"></label>
+    <label>Цена<input type="number" id="wd-price" step="any" placeholder="авто"></label>
+    <button class="btn primary" id="wd-add">+ Запиши</button>
+  </div>
+  <div class="note">Пази се локално в браузъра (localStorage) — ползвай Експорт горе за резервно копие на сделките.</div>
+</div>
+</div>
+
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const f2=n=>n==null||isNaN(n)?"—":"€"+n.toLocaleString("bg-BG",{minimumFractionDigits:2,maximumFractionDigits:2});
+  const LSW="inv-withdrawals-v1";
+  let latest=null, daily=[], range=30;
+  const lsGet=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v;}catch(e){return d;}};
+  const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+
+  function parseCSV(t){
+    const [h,...ls]=t.trim().split("\n"); const H=h.split(",");
+    return ls.filter(Boolean).map(l=>{const v=l.split(",");return Object.fromEntries(H.map((k,i)=>[k,v[i]]));});
+  }
+
+  function drawChart(){
+    const svg=$("lv-chart"); if(!svg) return;
+    let d=daily.map(r=>({date:r.date, val:(+r.crypto_eur)+(+r.stocks_eur), inv:+r.invested_eur}));
+    if(range) d=d.slice(-range);
+    if(!d.length){svg.innerHTML='<text x="10" y="95">Още няма данни — първите точки идват до час след старта на бота.</text>';return;}
+    const W=800,H=190,pl=46,pr=10,pt=10,pb=22;
+    const ys=d.flatMap(p=>[p.val,p.inv]); let lo=Math.min(...ys), hi=Math.max(...ys);
+    const pad=(hi-lo)*0.1||5; lo-=pad; hi+=pad;
+    const x=i=> pl + (d.length===1?(W-pl-pr)/2: i*(W-pl-pr)/(d.length-1));
+    const y=v=> pt + (hi-v)*(H-pt-pb)/(hi-lo);
+    const path=k=>d.map((p,i)=>(i?"L":"M")+x(i).toFixed(1)+","+y(p[k]).toFixed(1)).join("");
+    let g="";
+    for(let i=0;i<=3;i++){const v=lo+(hi-lo)*i/3; g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="#21262d"/><text x="4" y="${y(v)+3}">€${v.toFixed(0)}</text>`;}
+    const step=Math.max(1,Math.ceil(d.length/6));
+    d.forEach((p,i)=>{ if(i%step===0||i===d.length-1) g+=`<text x="${x(i)}" y="${H-6}" text-anchor="middle">${p.date.slice(5).replace("-",".")}</text>`; });
+    const last=d[d.length-1];
+    g+=`<path d="${path("inv")}" fill="none" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+    g+=`<path d="${path("val")}" fill="none" stroke="#58a6ff" stroke-width="2"/>`;
+    g+=`<circle cx="${x(d.length-1)}" cy="${y(last.val)}" r="3.5" fill="#58a6ff"/>`;
+    svg.innerHTML=g;
+    const first=d[0], dv=last.val-first.val;
+    $("lv-meta").textContent=`${d.length} дни · промяна ${dv>=0?"+":""}${dv.toFixed(2)} €`;
+  }
+
+  function calc(){
+    if(!latest) return;
+    const t=latest.totals, cur=t.value_invested, inv=t.invested, pnlPct=t.pnl_pct;
+    const amt=Math.max(0,+$("wd-amt").value||0), share=cur?amt/cur*100:0;
+    $("wd-cur").textContent=f2(cur); $("wd-inv").textContent=f2(inv);
+    $("wd-pnl").innerHTML=`<span class="${t.pnl>=0?'g':'r'}">${t.pnl>=0?"+":""}${f2(t.pnl)} (${pnlPct>=0?"+":""}${pnlPct.toFixed(1)}%)</span>`;
+    $("wd-left").textContent=f2(cur-amt); $("wd-pct").textContent=share.toFixed(1)+"%";
+    let c,msg;
+    if(amt===0){c="y";msg="Въведи сума за теглене.";}
+    else if(pnlPct<0||share>50){c="r";msg="🔴 ЧЕРВЕНО — не теглиш"+(pnlPct<0?" (портфейлът е на загуба)":" (над 50% от портфейла)")+".";}
+    else if(pnlPct>20&&share<25){c="g";msg="🟢 ЗЕЛЕНО — може, ако имаш конкретна нужда.";}
+    else {c="y";msg="🟡 ЖЪЛТО — помисли / изчакай ("+(pnlPct<=20?"печалбата е под 20%":"тегленето е 25–50%")+").";}
+    const el=$("wd-light"); el.className="light "+c; el.textContent=msg;
+    $("wd-upd").textContent="бот: "+(latest.updated||"").replace("T"," ").slice(0,16);
+  }
+
+  function renderWd(){
+    const w=lsGet(LSW,[]);
+    $("wd-body").innerHTML=w.length? w.map((x,i)=>`<tr><td class="m">${x.date}</td><td class="tname">${x.asset}</td><td>€${(+x.sum).toFixed(2)}</td><td class="m">${x.price||"—"}</td><td><button class="btn mini" data-del="${i}">✕</button></td></tr>`).join("")
+      : '<tr><td colspan="5" class="m">Още няма тегления 👍</td></tr>';
+    $("wd-total").textContent="Общо: €"+w.reduce((s,x)=>s+(+x.sum||0),0).toFixed(2);
+  }
+
+  function fillAssets(){
+    const sel=$("wd-asset"); if(!latest||sel.options.length) return;
+    sel.innerHTML=latest.assets.map(a=>`<option value="${a.asset}">${a.name}</option>`).join("");
+  }
+
+  async function load(){
+    try{ latest=await (await fetch("invest/latest.json?t="+Date.now())).json(); }catch(e){ latest=null; }
+    try{ const res=await fetch("invest/daily.csv?t="+Date.now()); daily=res.ok? parseCSV(await res.text()) : []; }catch(e){ daily=[]; }
+    drawChart(); calc(); fillAssets(); renderWd();
+  }
+
+  document.querySelectorAll(".iw .lv-tabs .btn").forEach(b=>b.onclick=()=>{
+    document.querySelectorAll(".iw .lv-tabs .btn").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on"); range=+b.dataset.r; drawChart();
+  });
+  $("wd-amt").oninput=calc;
+  $("wd-date").value=new Date().toISOString().slice(0,10);
+  $("wd-add").onclick=()=>{
+    const sum=+$("wd-sum").value; if(!sum) return;
+    const a=$("wd-asset").value, la=latest&&latest.assets.find(x=>x.asset===a);
+    const w=lsGet(LSW,[]);
+    w.push({date:$("wd-date").value, asset:a, sum, price:$("wd-price").value || (la? la.price : "")});
+    lsSet(LSW,w); $("wd-sum").value=""; $("wd-price").value=""; renderWd();
+  };
+  $("wd-body").onclick=e=>{
+    const i=e.target.dataset.del; if(i==null) return;
+    if(!confirm("Изтрий това теглене?")) return;
+    const w=lsGet(LSW,[]); w.splice(+i,1); lsSet(LSW,w); renderWd();
+  };
+  load();
+})();
+</script>
+
 <div class="sec">
   <div class="sec-hdr">
     <span class="sec-title">Портфейл — осреднена цена срещу настояща</span>
@@ -267,6 +436,14 @@ async function ivLoadPrices(){
     eurUsd = dataJson.eurUsd || eurUsd;
     Object.assign(prices, dataJson.prices||{});
   }catch(e){}
+  // 1b) Invest Tracker v6 — живи цени на акции/ETF + ръчните (Robo)
+  try{
+    const lj = await (await fetch("invest/latest.json?t="+Date.now())).json();
+    const MAP = {BTC:"BTC-USD",ETC:"ETC-USD",FLR:"FLR-USD",EXI2:"EXI2.DE",DFEN:"DFEN.DE",MRVL:"MRVL",NVDA:"NVDA",ROBO:"ROBO"};
+    for(const a of lj.assets||[]){ const t=MAP[a.asset]; if(t && a.price_eur!=null){ prices[t]=a.price_eur; disp[t]=a.price; } }
+    if(lj.eurusd) eurUsd = lj.eurusd;
+    dataJson = Object.assign(dataJson||{}, {lastUpdated: lj.updated});
+  }catch(e){}
   // 2) CoinGecko live за крипто
   try{
     const ids = Object.values(IV_PORTFOLIO).filter(a=>a.cgId).map(a=>a.cgId).join(",");
@@ -277,7 +454,7 @@ async function ivLoadPrices(){
   }catch(e){}
   // display prices за акции: data.json държи EUR-конвертирани; покажи native
   for(const [t,a] of Object.entries(IV_PORTFOLIO)){
-    if(!a.cgId && prices[t]!=null){
+    if(!a.cgId && prices[t]!=null && disp[t]==null){
       disp[t] = a.curr==="USD" ? prices[t]*eurUsd : prices[t];
     }
   }
@@ -322,7 +499,7 @@ function ivRenderTable(){
   $("iv-pnl").textContent = sign(pnl)+" €"; $("iv-pnl").className = "sc-val "+cls(pnl);
   $("iv-pct").textContent = sign(pct)+"%"; $("iv-pct").className = "sc-sub "+cls(pct);
   $("iv-fx").textContent = fmt(eurUsd,4);
-  $("iv-upd").textContent = dataJson? "data.json: "+ (dataJson.lastUpdated||"").slice(0,10) : "live";
+  $("iv-upd").textContent = dataJson? "бот: "+ String(dataJson.lastUpdated||"").replace("T"," ").slice(0,16) : "live";
   return {totInv, totCur, pnl};
 }
 

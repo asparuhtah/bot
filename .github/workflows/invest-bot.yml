@@ -1,100 +1,44 @@
-name: Investment Bot
+name: Investment Tracker v6
+
+# Цени → docs/invest/*.csv (в git, нищо не се губи) + Telegram алерти/отчети.
+# Командите в Telegram се обработват от Cloudflare Worker (webhook), не тук.
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # на всеки 5 минути (UTC, GitHub може леко да закъснява)
-  workflow_dispatch:         # позволява ръчно пускане от GitHub UI (Actions таб)
+    - cron: '7,22,37,52 * * * *'   # на ~15 мин (GitHub може да закъснее; скриптът е устойчив)
+  workflow_dispatch:                # ръчно: Actions → Investment Tracker v6 → Run workflow
 
 concurrency:
   group: invest-bot
-  cancel-in-progress: false   # опашка вместо застъпване, ако два run-а съвпаднат
+  cancel-in-progress: false
 
 jobs:
-  run-bot:
+  track:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     permissions:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: pip install requests
 
-      # ── ДИАГНОСТИКА: проверява дали secret-ът BOT_TOKEN е валиден ──────────
-      # Показва само отговора на Telegram (без самия токен) в Summary.
-      - name: Диагностика на токена
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: |
-          set +e
-          {
-            echo "## 🔎 Диагностика"
-            echo ""
-            echo "- Дължина на BOT_TOKEN secret: **${#BOT_TOKEN}** символа (очаквано ~46)"
-          } >> "$GITHUB_STEP_SUMMARY"
-
-          code=$(curl -s -o /tmp/me.json -w '%{http_code}' "https://api.telegram.org/bot${BOT_TOKEN}/getMe")
-          {
-            echo "- getMe HTTP код: **${code}**  (200 = токенът е верен, 401 = грешен токен)"
-            echo ""
-            echo '```json'
-            cat /tmp/me.json
-            echo ""
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Run investment bot
+      - name: Run tracker
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID:   ${{ secrets.ID_CHAT }}
         run: |
-          set +e
-          python invest_bot_runner.py 2>&1 | tee /tmp/bot.log
+          set -o pipefail
+          python scripts/invest_tracker.py 2>&1 | tee /tmp/run.log
           {
-            echo "## 🤖 Лог на бота"
-            echo ""
+            echo "## 📈 Invest Tracker"
             echo '```'
-            cat /tmp/bot.log
-            echo ""
+            cat /tmp/run.log
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Commit updated state / history
-        run: |
-          set +e
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bot_state.json
-          if [ -f portfolio_history.csv ]; then git add portfolio_history.csv; fi
-
-          git diff --staged --quiet
-          if [ $? -eq 0 ]; then
-            echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
-            echo "Няма промени за запис (state файлът е непроменен)." >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-
-          git commit -m "bot: state update $(date -u '+%Y-%m-%d %H:%M UTC')"
-
-          for i in 1 2 3 4 5; do
-            git push
-            if [ $? -eq 0 ]; then
-              echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
-              echo "Push успешен (опит $i)." >> "$GITHUB_STEP_SUMMARY"
-              exit 0
-            fi
-            git fetch origin main
-            git merge origin/main --no-edit -X ours
-            sleep $(( (RANDOM % 5) + 1 ))
-          done
-
-          echo "## 💾 Commit" >> "$GITHUB_STEP_SUMMARY"
-          echo "⚠️ Push не успя след 5 опита." >> "$GITHUB_STEP_SUMMARY"
-          exit 1

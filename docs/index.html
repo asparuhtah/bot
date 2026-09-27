@@ -493,6 +493,18 @@ async function loadPrices(){
       if(pair)eurUsd=parseFloat(res[pair].c[0]);
     }
   }catch(e){console.warn(e);}
+  // Цени от Invest Tracker v6 (GitHub Actions → docs/invest/latest.json) — живи цени на акциите/ETF
+  try{
+    const lj=await fetchJSON('./invest/latest.json?t='+Date.now(),6000);
+    const MAP={EXI2:'EXI2.DE',DFEN:'DFEN.DE',MRVL:'MRVL',NVDA:'NVDA',ROBO:'ROBO'};
+    const CG={BTC:'bitcoin',ETC:'ethereum-classic',FLR:'flare-networks'};
+    for(const a of lj.assets||[]){
+      if(MAP[a.asset]&&a.price) manualPrices[MAP[a.asset]]=a.price;
+      if(CG[a.asset]&&!cgPrices[CG[a.asset]]?.eur) cgPrices[CG[a.asset]]={eur:a.price_eur,usd:a.price};  // резерва, ако CoinGecko не отговори
+    }
+    if(lj.eurusd&&!ok) eurUsd=lj.eurusd;
+    if(typeof renderPriceEditors==='function') renderPriceEditors();
+  }catch(e){console.warn('invest/latest.json',e);}
   el('sEurUsd').textContent=eurUsd.toFixed(4);
   el('lupd').textContent=ok?`Обновено ${new Date().toLocaleTimeString('bg-BG')}`:'CoinGecko недостъпен';
   renderPortfolio();
@@ -802,6 +814,17 @@ function renderProjects(){
 // ═══════════════════════════════════════════════════════════════ HISTORY ══
 
 async function loadHistory(){
+  // 1) daily.csv от Invest Tracker v6 (пълна история, в git)
+  try{
+    const res=await fetch('./invest/daily.csv?t='+Date.now(),{signal:AbortSignal.timeout(6000)});if(!res.ok)throw new Error(res.status);const txt=await res.text();
+    const [hdr,...lines]=txt.trim().split('\n');const H=hdr.split(',');
+    const rows=lines.map(l=>{const v=l.split(',');return Object.fromEntries(H.map((h,i)=>[h,v[i]]));}).reverse().slice(0,10);
+    if(!rows.length)throw new Error('empty');
+    el('histList').innerHTML=rows.map(r=>{const pnl=+r.pnl_eur,cls=pnl>=0?'pos':'neg';
+      return `<div class="hr-row"><span style="color:var(--muted)">${r.date}</span><span style="font-weight:500">€${(+r.total_eur).toFixed(2)}</span><span class="${cls}">${pnl>=0?'+':''}€${pnl.toFixed(2)} (${(+r.pnl_pct).toFixed(1)}%)</span></div>`;}).join('');
+    el('histBadge').textContent=`${rows.length} дни · daily.csv`;
+    return;
+  }catch(e){console.warn('daily.csv',e);}
   try{
     const data=await fetchJSON('./data.json',5000);
     if(!data.history?.length)throw new Error('empty');
