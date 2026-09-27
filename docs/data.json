@@ -1,179 +1,23 @@
 {
-  "lastUpdated": "2026-08-31T14:43:46.879692+00:00",
-  "eurUsd": 1.1603,
+  "lastUpdated": "2026-09-26T11:59:46.704154+00:00",
+  "eurUsd": 1.1386,
   "prices": {
-    "BTC-USD": 67604.0,
-    "ETC-USD": 6.27,
-    "FLR-USD": 0.005499,
+    "BTC-USD": 73885.0,
+    "ETC-USD": 8.39,
+    "FLR-USD": 0.006348,
     "EXI2.DE": 109.52,
-    "MRVL": 162.613117,
+    "MRVL": 165.712278,
     "DFEN.DE": 55.03,
-    "NVDA": 175.652848,
+    "NVDA": 179.000527,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 379.37,
-    "pnl": -19.3,
-    "pnlPct": -4.84
+    "totalCurrent": 405.8,
+    "pnl": 7.13,
+    "pnlPct": 1.79
   },
   "history": [
-    {
-      "date": "2026-08-02",
-      "total": 355.52,
-      "pnl": -43.15,
-      "pct": -10.82
-    },
-    {
-      "date": "2026-08-03",
-      "total": 354.73,
-      "pnl": -43.94,
-      "pct": -11.02
-    },
-    {
-      "date": "2026-08-04",
-      "total": 356.29,
-      "pnl": -42.38,
-      "pct": -10.63
-    },
-    {
-      "date": "2026-08-05",
-      "total": 356.0,
-      "pnl": -42.67,
-      "pct": -10.7
-    },
-    {
-      "date": "2026-08-06",
-      "total": 356.26,
-      "pnl": -42.41,
-      "pct": -10.64
-    },
-    {
-      "date": "2026-08-07",
-      "total": 356.94,
-      "pnl": -41.73,
-      "pct": -10.47
-    },
-    {
-      "date": "2026-08-08",
-      "total": 356.97,
-      "pnl": -41.7,
-      "pct": -10.46
-    },
-    {
-      "date": "2026-08-09",
-      "total": 356.69,
-      "pnl": -41.98,
-      "pct": -10.53
-    },
-    {
-      "date": "2026-08-10",
-      "total": 357.33,
-      "pnl": -41.34,
-      "pct": -10.37
-    },
-    {
-      "date": "2026-08-11",
-      "total": 355.62,
-      "pnl": -43.05,
-      "pct": -10.8
-    },
-    {
-      "date": "2026-08-12",
-      "total": 354.77,
-      "pnl": -43.9,
-      "pct": -11.01
-    },
-    {
-      "date": "2026-08-13",
-      "total": 354.74,
-      "pnl": -43.93,
-      "pct": -11.02
-    },
-    {
-      "date": "2026-08-14",
-      "total": 352.02,
-      "pnl": -46.65,
-      "pct": -11.7
-    },
-    {
-      "date": "2026-08-15",
-      "total": 352.54,
-      "pnl": -46.13,
-      "pct": -11.57
-    },
-    {
-      "date": "2026-08-16",
-      "total": 352.11,
-      "pnl": -46.56,
-      "pct": -11.68
-    },
-    {
-      "date": "2026-08-17",
-      "total": 352.09,
-      "pnl": -46.58,
-      "pct": -11.68
-    },
-    {
-      "date": "2026-08-18",
-      "total": 352.85,
-      "pnl": -45.82,
-      "pct": -11.49
-    },
-    {
-      "date": "2026-08-19",
-      "total": 353.1,
-      "pnl": -45.57,
-      "pct": -11.43
-    },
-    {
-      "date": "2026-08-20",
-      "total": 361.21,
-      "pnl": -37.46,
-      "pct": -9.4
-    },
-    {
-      "date": "2026-08-21",
-      "total": 374.12,
-      "pnl": -24.55,
-      "pct": -6.16
-    },
-    {
-      "date": "2026-08-22",
-      "total": 381.76,
-      "pnl": -16.91,
-      "pct": -4.24
-    },
-    {
-      "date": "2026-08-23",
-      "total": 376.94,
-      "pnl": -21.73,
-      "pct": -5.45
-    },
-    {
-      "date": "2026-08-24",
-      "total": 379.01,
-      "pnl": -19.66,
-      "pct": -4.93
-    },
-    {
-      "date": "2026-08-25",
-      "total": 385.49,
-      "pnl": -13.18,
-      "pct": -3.31
-    },
-    {
-      "date": "2026-08-26",
-      "total": 381.4,
-      "pnl": -17.27,
-      "pct": -4.33
-    },
-    {
-      "date": "2026-08-27",
-      "total": 384.59,
-      "pnl": -14.08,
-      "pct": -3.53
-    },
     {
       "date": "2026-08-28",
       "total": 380.02,
@@ -197,13 +41,169 @@
       "total": 379.37,
       "pnl": -19.3,
       "pct": -4.84
+    },
+    {
+      "date": "2026-09-01",
+      "total": 379.27,
+      "pnl": -19.4,
+      "pct": -4.87
+    },
+    {
+      "date": "2026-09-02",
+      "total": 377.02,
+      "pnl": -21.65,
+      "pct": -5.43
+    },
+    {
+      "date": "2026-09-03",
+      "total": 379.2,
+      "pnl": -19.47,
+      "pct": -4.88
+    },
+    {
+      "date": "2026-09-04",
+      "total": 385.18,
+      "pnl": -13.49,
+      "pct": -3.38
+    },
+    {
+      "date": "2026-09-05",
+      "total": 383.11,
+      "pnl": -15.56,
+      "pct": -3.9
+    },
+    {
+      "date": "2026-09-06",
+      "total": 383.84,
+      "pnl": -14.83,
+      "pct": -3.72
+    },
+    {
+      "date": "2026-09-07",
+      "total": 384.58,
+      "pnl": -14.09,
+      "pct": -3.53
+    },
+    {
+      "date": "2026-09-08",
+      "total": 383.58,
+      "pnl": -15.09,
+      "pct": -3.78
+    },
+    {
+      "date": "2026-09-09",
+      "total": 385.74,
+      "pnl": -12.93,
+      "pct": -3.24
+    },
+    {
+      "date": "2026-09-10",
+      "total": 381.6,
+      "pnl": -17.07,
+      "pct": -4.28
+    },
+    {
+      "date": "2026-09-11",
+      "total": 379.0,
+      "pnl": -19.67,
+      "pct": -4.93
+    },
+    {
+      "date": "2026-09-12",
+      "total": 380.52,
+      "pnl": -18.15,
+      "pct": -4.55
+    },
+    {
+      "date": "2026-09-13",
+      "total": 378.63,
+      "pnl": -20.04,
+      "pct": -5.03
+    },
+    {
+      "date": "2026-09-14",
+      "total": 382.18,
+      "pnl": -16.49,
+      "pct": -4.14
+    },
+    {
+      "date": "2026-09-15",
+      "total": 379.36,
+      "pnl": -19.31,
+      "pct": -4.84
+    },
+    {
+      "date": "2026-09-16",
+      "total": 377.13,
+      "pnl": -21.54,
+      "pct": -5.4
+    },
+    {
+      "date": "2026-09-17",
+      "total": 380.43,
+      "pnl": -18.24,
+      "pct": -4.57
+    },
+    {
+      "date": "2026-09-18",
+      "total": 385.52,
+      "pnl": -13.15,
+      "pct": -3.3
+    },
+    {
+      "date": "2026-09-19",
+      "total": 393.06,
+      "pnl": -5.61,
+      "pct": -1.41
+    },
+    {
+      "date": "2026-09-20",
+      "total": 391.17,
+      "pnl": -7.5,
+      "pct": -1.88
+    },
+    {
+      "date": "2026-09-21",
+      "total": 399.91,
+      "pnl": 1.24,
+      "pct": 0.31
+    },
+    {
+      "date": "2026-09-22",
+      "total": 401.23,
+      "pnl": 2.56,
+      "pct": 0.64
+    },
+    {
+      "date": "2026-09-23",
+      "total": 405.97,
+      "pnl": 7.3,
+      "pct": 1.83
+    },
+    {
+      "date": "2026-09-24",
+      "total": 404.01,
+      "pnl": 5.34,
+      "pct": 1.34
+    },
+    {
+      "date": "2026-09-25",
+      "total": 405.48,
+      "pnl": 6.81,
+      "pct": 1.71
+    },
+    {
+      "date": "2026-09-26",
+      "total": 405.8,
+      "pnl": 7.13,
+      "pct": 1.79
     }
   ],
   "news": [
     {
-      "title": "Jim Cramer Warns AI Is Making Even “Diversified” Portfolios More Concentrated",
-      "link": "https://247wallst.com/investing/2026/08/31/jim-cramer-warns-ai-is-making-even-diversified-portfolios-more-concentrated/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "2 Semiconductor Stocks That Could Help Set You Up for Life",
+      "link": "https://www.fool.com/investing/2026/09/26/semiconductor-stocks-set-up-for-life-mrvl-asml/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -211,9 +211,9 @@
       ]
     },
     {
-      "title": "Oil, Yields Higher Ahead of \"Jobs Week\"",
-      "link": "https://finance.yahoo.com/economy/policy/articles/oil-yields-higher-ahead-jobs-141500733.html?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Jim Cramer Says Buy 2 Artificial Intelligence (AI) Stocks Up 875% and 1,400% Since 2023",
+      "link": "https://www.fool.com/investing/2026/09/26/jim-cramer-says-buy-2-ai-stocks-up-1400-since-2023/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -221,9 +221,9 @@
       ]
     },
     {
-      "title": "Prediction: Nvidia Stock Will Trade at $350 on This Date",
-      "link": "https://247wallst.com/investing/2026/08/31/prediction-nvidia-stock-will-trade-at-350-on-this-date/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "This Market Signal Has Been 95% Accurate for Nearly 90 Years. What Investors Need to Do Now to be Ready",
+      "link": "https://www.fool.com/investing/2026/09/26/this-market-signal-has-been-95-accurate-for-nearly/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -231,9 +231,9 @@
       ]
     },
     {
-      "title": "Wall Street Analysts Believe Marvell (MRVL) Could Rally 34.31%: Here's is How to Trade",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-marvell-135503098.html?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Anthropic's IPO Was Just Delayed to November. Here's the One Number That Has Me Even More Excited.",
+      "link": "https://www.fool.com/investing/2026/09/26/anthropic-s-ipo-was-just-delayed-to-november-here-s-the-one-number-that-has-me-even-more-excited/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -241,9 +241,9 @@
       ]
     },
     {
-      "title": "Nvidia investing $3.5 billion in MediaTek for AI chip partnership",
-      "link": "https://qz.com/nvidia-mediatek-investment-35-billion-ai-chips-083126?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "What Is a Stock Split? I Think the Next Wave of Splits Could Create Buying Opportunities Before 2027.",
+      "link": "https://www.fool.com/investing/2026/09/26/what-is-a-stock-split-i-think-the-next-wave-of-spl/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -251,9 +251,9 @@
       ]
     },
     {
-      "title": "This Thesis for Marvell Technology Keeps Me Accumulating Amid Tailwinds",
-      "link": "https://247wallst.com/investing/2026/08/31/this-thesis-for-marvell-technology-keeps-me-accumulating-amid-tailwinds/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "If You Invest $100 Per Month in Procter & Gamble Stock, Here's the Passive Dividend Income It Could Generate Over 10 Years",
+      "link": "https://www.fool.com/investing/2026/09/26/procter-gamble-stock-passive-dividend-income/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -261,9 +261,9 @@
       ]
     },
     {
-      "title": "Musk Loses The AI Race",
-      "link": "https://247wallst.com/investing/2026/08/31/musk-loses-the-ai-race/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "A Bear Market Is Coming Eventually. Here's How I'm Preparing My Investments.",
+      "link": "https://www.fool.com/investing/2026/09/26/bear-market-coming-eventually-how-to-prepare-today/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -271,9 +271,9 @@
       ]
     },
     {
-      "title": "The Bull Case for Netflix Stock Is Stronger Than You Think",
-      "link": "https://247wallst.com/investing/2026/08/31/the-bull-case-for-netflix-stock-is-stronger-than-you-think/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "SCHD Is Brilliant. Here's Why I Think This Dividend ETF Is Even Better.",
+      "link": "https://www.fool.com/investing/2026/09/26/schd-is-brilliant-heres-why-i-think-this-dividend/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -281,9 +281,9 @@
       ]
     },
     {
-      "title": "MP Materials Stock: Bull vs. Bear on This Top Rare Earth Bet",
-      "link": "https://www.fool.com/investing/2026/08/31/mp-materials-bull-vs-bear-on-this-top-rare-earth/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Anduril's $5 Billion Air Force Contract Finally Has a Name",
+      "link": "https://www.fool.com/investing/2026/09/26/andurils-5-billion-air-force-contract-finally-has/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -291,9 +291,9 @@
       ]
     },
     {
-      "title": "What Does Lumentum Holdings (LITE) New AI Backing Mean For Its Growth?",
-      "link": "https://finance.yahoo.com/technology/ai/articles/does-lumentum-holdings-lite-ai-141542663.html?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Here's Exactly Why Wall Street Thinks Argenx Stock Could Soar 23% Over the Next 12 Months",
+      "link": "https://www.fool.com/investing/2026/09/26/heres-exactly-why-wall-street-thinks-argenx-stock/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -301,9 +301,9 @@
       ]
     },
     {
-      "title": "Pfizer and Starbucks: One Turnaround Is Built to Last, and One Isn’t",
-      "link": "https://247wallst.com/investing/2026/08/31/pfizer-and-starbucks-one-turnaround-is-built-to-last-and-one-isnt/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Breakfast News: Cast a Wide Net to Catch Big Wins",
+      "link": "https://www.fool.com/investing/breakfast-news/2026/09/26/breakfast-news/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -311,9 +311,9 @@
       ]
     },
     {
-      "title": "Chevron and Exxon Mobil Rise 3% as U.S. Strikes on Iran Push WTI Crude Oil to $86",
-      "link": "https://247wallst.com/investing/2026/08/31/chevron-and-exxon-mobil-rise-3-as-u-s-strikes-on-iran-push-wti-crude-oil-to-86/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "Bitcoin Is Not the Only Cryptocurrency With a Halving. Here's Why It's Time to Put Zcash (ZEC) on Your Investment Radar.",
+      "link": "https://www.fool.com/investing/2026/09/26/bitcoin-is-not-the-only-cryptocurrency-with-a-halv/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -321,9 +321,9 @@
       ]
     },
     {
-      "title": "Berkshire Bought a Homebuilder the Same Month JPMorgan Committed $750 Billion to Housing",
-      "link": "https://www.fool.com/investing/2026/08/31/berkshire-bought-a-homebuilder-same-month-jpmorgan/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "History Shows: This Midterm Election Result Could Be a Warning Sign for the Stock Market",
+      "link": "https://www.fool.com/investing/2026/09/26/history-shows-this-midterm-election-result-could-b/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
@@ -331,14 +331,179 @@
       ]
     },
     {
-      "title": "Salesforce at $256: Should You Buy It?",
-      "link": "https://247wallst.com/investing/2026/08/31/salesforce-at-256-should-you-buy-it/?.tsrc=rss",
-      "date": "2026-08-31",
+      "title": "2 Data Center Stocks That Could Help Make You a Fortune",
+      "link": "https://www.fool.com/investing/2026/09/26/2-data-center-stocks-make-fortune/?.tsrc=rss",
+      "date": "2026-09-26",
       "source": "Yahoo Finance",
       "tickers": [
         "MRVL",
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-09-27": {
+      "date": "2026-09-27",
+      "steps": 3946,
+      "resting_hr": 55,
+      "body_battery": 30,
+      "avg_stress": 48,
+      "sleep": {
+        "total_min": 404,
+        "deep_min": 56,
+        "light_min": 348,
+        "rem_min": 0,
+        "awake_min": 101,
+        "score": 36,
+        "start": 1790463360000,
+        "end": 1790493660000
+      },
+      "activities": []
+    },
+    "2026-09-26": {
+      "date": "2026-09-26",
+      "steps": 15764,
+      "resting_hr": 51,
+      "body_battery": 41,
+      "avg_stress": 51,
+      "sleep": {
+        "total_min": 1941,
+        "deep_min": 7,
+        "light_min": 22,
+        "rem_min": 1,
+        "awake_min": 19,
+        "score": 34,
+        "start": 1790291820000,
+        "end": 1790409420000
+      },
+      "activities": []
+    },
+    "2026-09-25": {
+      "date": "2026-09-25",
+      "steps": 10078,
+      "resting_hr": 55,
+      "body_battery": 26,
+      "avg_stress": 51,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-09-24": {
+      "date": "2026-09-24",
+      "steps": 11106,
+      "resting_hr": 51,
+      "body_battery": 57,
+      "avg_stress": 47,
+      "sleep": {
+        "total_min": 451,
+        "deep_min": 77,
+        "light_min": 296,
+        "rem_min": 78,
+        "awake_min": 13,
+        "score": 80,
+        "start": 1790204460000,
+        "end": 1790232300000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-24 07:09:11",
+          "duration_s": 1214,
+          "distance_m": 0.0,
+          "calories": 126,
+          "avg_hr": 108,
+          "max_hr": 156,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-23": {
+      "date": "2026-09-23",
+      "steps": 13666,
+      "resting_hr": 48,
+      "body_battery": 83,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 507,
+        "deep_min": 88,
+        "light_min": 323,
+        "rem_min": 96,
+        "awake_min": 0,
+        "score": 94,
+        "start": 1790117280000,
+        "end": 1790147700000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-23 07:46:02",
+          "duration_s": 283,
+          "distance_m": 0.0,
+          "calories": 15,
+          "avg_hr": 81,
+          "max_hr": 115,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-22": {
+      "date": "2026-09-22",
+      "steps": 5255,
+      "resting_hr": 53,
+      "body_battery": 63,
+      "avg_stress": 32,
+      "sleep": {
+        "total_min": 352,
+        "deep_min": 91,
+        "light_min": 208,
+        "rem_min": 53,
+        "awake_min": 1,
+        "score": 74,
+        "start": 1790031000000,
+        "end": 1790052180000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-22 07:36:15",
+          "duration_s": 1497,
+          "distance_m": 0.0,
+          "calories": 210,
+          "avg_hr": 128,
+          "max_hr": 160,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-21": {
+      "date": "2026-09-21",
+      "steps": 2811,
+      "resting_hr": 58,
+      "body_battery": 14,
+      "avg_stress": 56,
+      "sleep": {
+        "total_min": 319,
+        "deep_min": 42,
+        "light_min": 277,
+        "rem_min": 0,
+        "awake_min": 44,
+        "score": 35,
+        "start": 1789953120000,
+        "end": 1789974900000
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-09-27"
 }
