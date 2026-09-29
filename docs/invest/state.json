@@ -54,25 +54,25 @@
       "ccy": "EUR",
       "price_eur": 20.81,
       "src": "manual",
-      "at": "2026-09-29T09:08+03:00"
+      "at": "2026-09-29T16:01+03:00"
     },
     "PERSONAL": {
       "price": 126.76,
       "ccy": "EUR",
       "price_eur": 126.76,
       "src": "manual",
-      "at": "2026-09-29T09:08+03:00"
+      "at": "2026-09-29T16:01+03:00"
     },
     "CASH": {
       "price": 0.43,
       "ccy": "EUR",
       "price_eur": 0.43,
       "src": "manual",
-      "at": "2026-09-29T09:08+03:00"
+      "at": "2026-09-29T16:01+03:00"
     }
   },
-  "last_eurusd": 1.13612,
-  "last_hour_logged": "2026-09-29 09",
+  "last_eurusd": 1.13455,
+  "last_hour_logged": "2026-09-29 16",
   "alert_state": {},
   "move_sent": {
     "ETC:down": "2026-09-28"
