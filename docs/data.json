@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-09-28T14:50:43.782250+00:00",
-  "eurUsd": 1.1358,
+  "lastUpdated": "2026-09-30T13:14:07.570329+00:00",
+  "eurUsd": 1.1363,
   "prices": {
-    "BTC-USD": 73024.0,
-    "ETC-USD": 7.96,
-    "FLR-USD": 0.006193,
+    "BTC-USD": 75276.0,
+    "ETC-USD": 8.17,
+    "FLR-USD": 0.006662,
     "EXI2.DE": 109.52,
-    "MRVL": 166.120796,
+    "MRVL": 166.047699,
     "DFEN.DE": 55.03,
-    "NVDA": 179.441803,
+    "NVDA": 179.362844,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 401.78,
-    "pnl": 3.11,
-    "pnlPct": 0.78
+    "totalCurrent": 406.8,
+    "pnl": 8.13,
+    "pnlPct": 2.04
   },
   "history": [
-    {
-      "date": "2026-08-30",
-      "total": 380.91,
-      "pnl": -17.76,
-      "pct": -4.46
-    },
     {
       "date": "2026-08-31",
       "total": 379.37,
@@ -197,355 +191,154 @@
       "total": 401.78,
       "pnl": 3.11,
       "pct": 0.78
+    },
+    {
+      "date": "2026-09-30",
+      "total": 406.8,
+      "pnl": 8.13,
+      "pct": 2.04
     }
   ],
   "news": [
     {
-      "title": "Nvidia Stock Rises After $150 Billion Buyback Boost",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-stock-rises-150-billion-144825265.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia introduces AI security system to ‘set boundaries’ and stop rogue agents",
-      "link": "https://www.independent.co.uk/tech/nvidia-ai-rogue-agents-security-b3057685.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Just Put Another $150 Billion Behind Its Own Stock",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-just-put-another-150-144304329.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel Drops 4% on Oil-Driven Rate Fears, NVIDIA Rises 3% on Record $150B Buyback; Taiwan Semiconductor Slips",
-      "link": "https://247wallst.com/investing/2026/09/28/intel-drops-4-on-oil-driven-rate-fears-nvidia-rises-3-on-record-150b-buyback-taiwan-semiconductor-slips/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SpaceX’s Starship Reaches Orbit for the First Time",
-      "link": "https://app.moby.co/home/news/news-spacexs-starship-reaches-orbit-for-the-first-time?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Dow Skids, Trump Rejects Iran Deal; Chips Tumble But Nvidia Rises On This (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/6b34a52f-8642-3ca8-8589-c9e25040f485/stock-market-today%3A-dow.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "You Think VUG Owns the Fastest-Growing Companies. That's Not Quite How It Works.",
-      "link": "https://www.fool.com/investing/2026/09/28/think-vug-owns-fastest-growing-companies-not-quite/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 AI Stocks With Revenue Growth Up To 41%",
-      "link": "https://finance.yahoo.com/technology/ai/articles/3-ai-stocks-revenue-growth-141110606.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SPECTRUM BRINGS AI COMPUTING TO THE EDGE OF THE NETWORK AT SCTE TECHEXPO 26",
-      "link": "https://finance.yahoo.com/technology/ai/articles/spectrum-brings-ai-computing-edge-140000539.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Just Announced the Largest Stock Buyback Authorization Increase in History. Should You Buy the Stock?",
-      "link": "https://www.fool.com/investing/2026/09/28/nvidia-just-announced-the-largest-stock-buyback-authorization-increase-in-history-should-you-buy-the-stock/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell vs. Broadcom: Which Custom AI Chip Stock Has More Room to Run?",
-      "link": "https://finance.yahoo.com/technology/ai/articles/marvell-vs-broadcom-custom-ai-130933168.html?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Meet the 1 Stock I'd Buy With $500 and Never Look at Again",
-      "link": "https://www.fool.com/investing/2026/09/28/meet-the-1-stock-id-buy-with-500-and-never-look-at/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Up Over 550% in 2026, Is It Too Late to Buy Moderna Stock?",
-      "link": "https://www.fool.com/investing/2026/09/28/up-over-550-in-2026-is-it-too-late-to-buy-moderna-stock/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "2 of the Best ETFs to Buy When Inflation Is Running Hot",
-      "link": "https://www.fool.com/investing/2026/09/28/2-of-the-best-etfs-when-inflation-is-running-hot/?.tsrc=rss",
-      "date": "2026-09-28",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-09-29": {
-      "date": "2026-09-29",
-      "steps": 10112,
-      "resting_hr": 53,
-      "body_battery": 60,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 504,
-        "deep_min": 48,
-        "light_min": 368,
-        "rem_min": 88,
-        "awake_min": 7,
-        "score": 58,
-        "start": 1790632740000,
-        "end": 1790663400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-29 06:58:16",
-          "duration_s": 1256,
-          "distance_m": 0.0,
-          "calories": 66,
-          "avg_hr": 81,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-09-28": {
-      "date": "2026-09-28",
-      "steps": 13916,
-      "resting_hr": 49,
-      "body_battery": 81,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 489,
-        "deep_min": 112,
-        "light_min": 291,
-        "rem_min": 86,
-        "awake_min": 31,
-        "score": 86,
-        "start": 1790547360000,
-        "end": 1790578560000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-28 07:09:33",
-          "duration_s": 1319,
-          "distance_m": 0.0,
-          "calories": 128,
-          "avg_hr": 107,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-09-27": {
-      "date": "2026-09-27",
-      "steps": 5301,
-      "resting_hr": 54,
-      "body_battery": 45,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 404,
-        "deep_min": 56,
-        "light_min": 348,
-        "rem_min": 0,
-        "awake_min": 101,
-        "score": 36,
-        "start": 1790463360000,
-        "end": 1790493660000
-      },
-      "activities": []
-    },
-    "2026-09-26": {
-      "date": "2026-09-26",
-      "steps": 15764,
-      "resting_hr": 51,
-      "body_battery": 41,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 1941,
-        "deep_min": 7,
-        "light_min": 22,
-        "rem_min": 1,
-        "awake_min": 19,
-        "score": 34,
-        "start": 1790291820000,
-        "end": 1790409420000
-      },
-      "activities": []
-    },
-    "2026-09-25": {
-      "date": "2026-09-25",
-      "steps": 10078,
-      "resting_hr": 55,
-      "body_battery": 26,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-09-24": {
-      "date": "2026-09-24",
-      "steps": 11106,
-      "resting_hr": 51,
-      "body_battery": 57,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 451,
-        "deep_min": 77,
-        "light_min": 296,
-        "rem_min": 78,
-        "awake_min": 13,
-        "score": 80,
-        "start": 1790204460000,
-        "end": 1790232300000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-24 07:09:11",
-          "duration_s": 1214,
-          "distance_m": 0.0,
-          "calories": 126,
-          "avg_hr": 108,
-          "max_hr": 156,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-09-23": {
-      "date": "2026-09-23",
-      "steps": 13666,
-      "resting_hr": 48,
-      "body_battery": 83,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 507,
-        "deep_min": 88,
-        "light_min": 323,
-        "rem_min": 96,
-        "awake_min": 0,
-        "score": 94,
-        "start": 1790117280000,
-        "end": 1790147700000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-23 07:46:02",
-          "duration_s": 283,
-          "distance_m": 0.0,
-          "calories": 15,
-          "avg_hr": 81,
-          "max_hr": 115,
-          "avg_speed": 0.0
-        }
-      ]
-    },
-    "2026-09-30": {
+      "title": "CoreWeave Delivers NVIDIA Vera Rubin NVL72 Performance at Production Scale, Starting With Cognition",
+      "link": "https://finance.yahoo.com/technology/ai/articles/coreweave-delivers-nvidia-vera-rubin-130000022.html?.tsrc=rss",
       "date": "2026-09-30",
-      "steps": 12255,
-      "resting_hr": 47,
-      "body_battery": 55,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 500,
-        "deep_min": 56,
-        "light_min": 369,
-        "rem_min": 75,
-        "awake_min": 38,
-        "score": 76,
-        "start": 1790712780000,
-        "end": 1790745060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-30 05:42:35",
-          "duration_s": 1296,
-          "distance_m": 0.0,
-          "calories": 101,
-          "avg_hr": 97,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Not Chips. Not Memory. Data Center Cooling Is the Unsung AI Infrastructure Play Nobody's Watching",
+      "link": "https://www.fool.com/investing/2026/09/30/not-chips-not-memory-data-center-cooling-is-the-un/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NVDA Stock Eyes Third Straight Monthly Gain: Nvidia Adds Data Center Digital Twin Deal",
+      "link": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-third-monthly-gain-nvidia-ai-data-center-jacobs-digital-twin/cZMFINJRBhl?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Tech Stocks That Could Be in Trouble if There's an Artificial Intelligence (AI) Slowdown",
+      "link": "https://www.fool.com/investing/2026/09/30/3-tech-stocks-that-could-be-in-trouble-if-there-s-an-artificial-intelligence-ai-slowdown/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "DeepSeek Just Gave Huawei a New Weapon in the Race Against Nvidia",
+      "link": "https://finance.yahoo.com/technology/ai/articles/deepseek-just-gave-huawei-weapon-121017468.html?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "DeepSeek Targets Nvidia's Software Moat With Huawei Partnership",
+      "link": "https://finance.yahoo.com/technology/ai/articles/deepseek-targets-nvidias-software-moat-120615261.html?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meet the Low-Cost Vanguard ETF With 51.8% Invested in Nvidia, Apple, Alphabet, Microsoft, and Amazon While VOO Has Just 30%",
+      "link": "https://www.fool.com/investing/2026/09/30/mega-cap-growth-stocks-mgk-voo-nvidia-apple/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Apple's Market Value Grew From $350 Billion to $4.75 Trillion During Tim Cook's 15 Years as CEO. Here's What That Growth Curve Means for Betting on Apple's Next Chapter Under John Ternus.",
+      "link": "https://www.fool.com/investing/2026/09/30/apples-market-value-grew-growth-curve-ternus/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "AI Stocks Are Creating a Sneaky Risk for S&P 500 Investors, and History Is Flashing a Warning Signal",
+      "link": "https://www.fool.com/investing/2026/09/30/ai-stocks-are-creating-a-sneaky-risk-for-sp-500-in/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Anthropic’s Prospectus Shows a Giant Loss and an Even Bigger Ask",
+      "link": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "HPE Hikes Networking Segment Guidance, Announces AMD Helios Order",
+      "link": "https://finance.yahoo.com/m/0d5a643d-7404-3ad9-a602-5a9ec7fd2a42/hpe-hikes-networking-segment.html?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will Dell Technologies Be in 3 Years?",
+      "link": "https://www.fool.com/investing/2026/09/30/where-will-dell-technologies-be-in-3-years/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: This Is What a $1,000 Investment in XRP Will Be Worth in 3 Years",
+      "link": "https://www.fool.com/investing/2026/09/30/prediction-this-is-what-a-1000-investment-in-xrp-w/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX vs Anthropic: Which Stock Is More Justifiable at a $2 Trillion Valuation?",
+      "link": "https://www.fool.com/investing/2026/09/30/spacex-vs-anthropic-which-stock-is-more-justifiable-at-a-2-trillion-valuation/?.tsrc=rss",
+      "date": "2026-09-30",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-09-30"
+  ]
 }
