@@ -344,10 +344,10 @@
   "garmin": {
     "2026-09-29": {
       "date": "2026-09-29",
-      "steps": 5313,
+      "steps": 10112,
       "resting_hr": 53,
-      "body_battery": 40,
-      "avg_stress": 33,
+      "body_battery": 60,
+      "avg_stress": 45,
       "sleep": {
         "total_min": 504,
         "deep_min": 48,
@@ -515,7 +515,37 @@
           "avg_speed": 0.0
         }
       ]
+    },
+    "2026-09-30": {
+      "date": "2026-09-30",
+      "steps": 12255,
+      "resting_hr": 47,
+      "body_battery": 55,
+      "avg_stress": 37,
+      "sleep": {
+        "total_min": 500,
+        "deep_min": 56,
+        "light_min": 369,
+        "rem_min": 75,
+        "awake_min": 38,
+        "score": 76,
+        "start": 1790712780000,
+        "end": 1790745060000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-30 05:42:35",
+          "duration_s": 1296,
+          "distance_m": 0.0,
+          "calories": 101,
+          "avg_hr": 97,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
     }
   },
-  "garmin_updated": "2026-09-29"
+  "garmin_updated": "2026-09-30"
 }
