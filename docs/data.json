@@ -340,5 +340,182 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-10-01": {
+      "date": "2026-10-01",
+      "steps": 4328,
+      "resting_hr": 54,
+      "body_battery": 31,
+      "avg_stress": 34,
+      "sleep": {
+        "total_min": 326,
+        "deep_min": 52,
+        "light_min": 261,
+        "rem_min": 13,
+        "awake_min": 10,
+        "score": 58,
+        "start": 1790817360000,
+        "end": 1790837520000
+      },
+      "activities": [
+        {
+          "type": "cycling",
+          "name": "Slivnitsa Cycling",
+          "start": "2026-10-01 12:39:20",
+          "duration_s": 2014,
+          "distance_m": 6089.0,
+          "calories": 248,
+          "avg_hr": 119,
+          "max_hr": 150,
+          "avg_speed": 3.02
+        }
+      ]
+    },
+    "2026-09-30": {
+      "date": "2026-09-30",
+      "steps": 14556,
+      "resting_hr": 47,
+      "body_battery": 55,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 500,
+        "deep_min": 56,
+        "light_min": 369,
+        "rem_min": 75,
+        "awake_min": 38,
+        "score": 76,
+        "start": 1790712780000,
+        "end": 1790745060000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-30 05:42:35",
+          "duration_s": 1296,
+          "distance_m": 0.0,
+          "calories": 101,
+          "avg_hr": 97,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-29": {
+      "date": "2026-09-29",
+      "steps": 10112,
+      "resting_hr": 53,
+      "body_battery": 60,
+      "avg_stress": 45,
+      "sleep": {
+        "total_min": 504,
+        "deep_min": 48,
+        "light_min": 368,
+        "rem_min": 88,
+        "awake_min": 7,
+        "score": 58,
+        "start": 1790632740000,
+        "end": 1790663400000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-29 06:58:16",
+          "duration_s": 1256,
+          "distance_m": 0.0,
+          "calories": 66,
+          "avg_hr": 81,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-28": {
+      "date": "2026-09-28",
+      "steps": 13916,
+      "resting_hr": 49,
+      "body_battery": 81,
+      "avg_stress": 41,
+      "sleep": {
+        "total_min": 489,
+        "deep_min": 112,
+        "light_min": 291,
+        "rem_min": 86,
+        "awake_min": 31,
+        "score": 86,
+        "start": 1790547360000,
+        "end": 1790578560000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-28 07:09:33",
+          "duration_s": 1319,
+          "distance_m": 0.0,
+          "calories": 128,
+          "avg_hr": 107,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-27": {
+      "date": "2026-09-27",
+      "steps": 5301,
+      "resting_hr": 54,
+      "body_battery": 45,
+      "avg_stress": 42,
+      "sleep": {
+        "total_min": 404,
+        "deep_min": 56,
+        "light_min": 348,
+        "rem_min": 0,
+        "awake_min": 101,
+        "score": 36,
+        "start": 1790463360000,
+        "end": 1790493660000
+      },
+      "activities": []
+    },
+    "2026-09-26": {
+      "date": "2026-09-26",
+      "steps": 15764,
+      "resting_hr": 51,
+      "body_battery": 41,
+      "avg_stress": 51,
+      "sleep": {
+        "total_min": 1941,
+        "deep_min": 7,
+        "light_min": 22,
+        "rem_min": 1,
+        "awake_min": 19,
+        "score": 34,
+        "start": 1790291820000,
+        "end": 1790409420000
+      },
+      "activities": []
+    },
+    "2026-09-25": {
+      "date": "2026-09-25",
+      "steps": 10078,
+      "resting_hr": 55,
+      "body_battery": 26,
+      "avg_stress": 51,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-10-01"
 }
