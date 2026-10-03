@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-02T13:26:36.085030+00:00",
-  "eurUsd": 1.1247,
+  "lastUpdated": "2026-10-03T12:10:03.416089+00:00",
+  "eurUsd": 1.1241,
   "prices": {
-    "BTC-USD": 77074.0,
-    "ETC-USD": 8.1,
-    "FLR-USD": 0.006619,
+    "BTC-USD": 75220.0,
+    "ETC-USD": 7.88,
+    "FLR-USD": 0.006419,
     "EXI2.DE": 109.52,
-    "MRVL": 167.760292,
+    "MRVL": 167.849835,
     "DFEN.DE": 55.03,
-    "NVDA": 181.212768,
+    "NVDA": 181.309492,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 410.33,
-    "pnl": 11.66,
-    "pnlPct": 2.93
+    "totalCurrent": 405.9,
+    "pnl": 7.23,
+    "pnlPct": 1.81
   },
   "history": [
-    {
-      "date": "2026-09-02",
-      "total": 377.02,
-      "pnl": -21.65,
-      "pct": -5.43
-    },
     {
       "date": "2026-09-03",
       "total": 379.2,
@@ -197,371 +191,154 @@
       "total": 410.33,
       "pnl": 11.66,
       "pct": 2.93
+    },
+    {
+      "date": "2026-10-03",
+      "total": 405.9,
+      "pnl": 7.23,
+      "pct": 1.81
     }
   ],
   "news": [
     {
-      "title": "Punch List: $750M biotech project breaks ground, Nvidia taps Jacobs for data center digital twin",
-      "link": "https://www.constructiondive.com/news/punch-list-750m-biotech-project-breaks-ground-nvidia-taps-jacobs-for-dat/831991/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVDA Stock Is Back As Morgan Stanley’s Top Pick – All AI Trends Play To Nvidia’s ‘Strengths,’ Says Analyst",
-      "link": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-is-back-as-morgan-stanley-s-top-pick-all-ai-trends-play-to-nvidia-s-strengths-says-analys/cZDjOo1RBK7?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Serious Is Alphabet’s Threat to Nvidia?",
-      "link": "https://247wallst.com/investing/2026/10/02/how-serious-is-alphabets-threat-to-nvidia/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Amazon hiking AI chip rental prices, exploring Nvidia leaseback",
-      "link": "https://qz.com/amazon-ai-chip-rental-prices-nvidia-leaseback-100226?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Sector Update: Tech Stocks Rise Pre-Bell Friday",
-      "link": "https://finance.yahoo.com/technology/articles/sector-tech-stocks-rise-pre-131302085.html?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If the Stock Market Crashes, Young Investors in Their 20s Might Want to Buy This Nasdaq ETF and Hold It Until Retirement",
-      "link": "https://www.fool.com/investing/2026/10/02/stock-market-crashes-20s-buy-nasdaq-etf-retirement/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Musk, Huang Forecast AI-Powered GDP Gains; ARK Buys More Rocket Lab",
-      "link": "https://finance.yahoo.com/m/eab3c662-db24-3fe6-851e-852bfb85f8ea/musk%2C-huang-forecast.html?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Numbers Every SpaceX Investors Should Know",
-      "link": "https://www.fool.com/investing/2026/10/02/3-numbers-every-spacex-investors-should-know/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Up 30%, Should You Buy Credo Technology Right Now?",
-      "link": "https://www.fool.com/investing/2026/10/02/up-xx-should-you-buy-credo-technology-right-now/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Institutional Investors Just Did What They Always Do So I Keep Buying Micron",
-      "link": "https://247wallst.com/investing/2026/10/02/institutional-investors-just-did-what-they-always-do-so-i-keep-buying-micron/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Should You Buy Viking Therapeutics Stock While It Trades Below Its $35 Offering Price?",
-      "link": "https://www.fool.com/investing/2026/10/02/should-buy-viking-therapeutics-stock-trade-below/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Stock Regains 'Top Pick' Status At Morgan Stanley",
-      "link": "https://finance.yahoo.com/m/e41adca5-176a-3945-8db3-cfb43a4a2565/nvidia-stock-regains-%27top.html?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Where Will American Express Stock Be in 2031?",
-      "link": "https://www.fool.com/investing/2026/10/02/where-will-american-express-stock-be-in-2031/?.tsrc=rss",
-      "date": "2026-10-02",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "America at a crossroads: Commissioner Peirce’s parting challenge",
-      "link": "https://www.coindesk.com/opinion/2026/10/01/america-at-a-crossroads-commissioner-peirce-s-parting-challenge",
-      "date": "2026-10-02",
-      "source": "CoinDesk",
-      "tickers": [
-        "BTC-USD",
-        "ETC-USD"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-03": {
+      "title": "Dow Jones Futures: Nasdaq Hits High As Nvidia, SpaceX, Bloom Energy Flash Buy Signals. What To Do Now.",
+      "link": "https://finance.yahoo.com/m/b98e0c13-f78a-3e19-ad93-12d5a340e701/dow-jones-futures%3A-nasdaq.html?.tsrc=rss",
       "date": "2026-10-03",
-      "steps": 5884,
-      "resting_hr": 51,
-      "body_battery": 60,
-      "avg_stress": 26,
-      "sleep": {
-        "total_min": 539,
-        "deep_min": 75,
-        "light_min": 408,
-        "rem_min": 56,
-        "awake_min": 55,
-        "score": 71,
-        "start": 1790978340000,
-        "end": 1791013980000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-03 10:26:53",
-          "duration_s": 1517,
-          "distance_m": 3592.0,
-          "calories": 154,
-          "avg_hr": 111,
-          "max_hr": 143,
-          "avg_speed": 2.37
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-03 09:23:50",
-          "duration_s": 2013,
-          "distance_m": 0.0,
-          "calories": 179,
-          "avg_hr": 107,
-          "max_hr": 153,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-02": {
-      "date": "2026-10-02",
-      "steps": 11978,
-      "resting_hr": 52,
-      "body_battery": 42,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 309,
-        "deep_min": 102,
-        "light_min": 169,
-        "rem_min": 38,
-        "awake_min": 76,
-        "score": 60,
-        "start": 1790902680000,
-        "end": 1790925780000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-02 12:00:22",
-          "duration_s": 1286,
-          "distance_m": 2677.0,
-          "calories": 88,
-          "avg_hr": 93,
-          "max_hr": 125,
-          "avg_speed": 2.08
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-02 10:07:39",
-          "duration_s": 1352,
-          "distance_m": 4619.0,
-          "calories": 110,
-          "avg_hr": 100,
-          "max_hr": 124,
-          "avg_speed": 3.42
-        }
+    {
+      "title": "Here's Who Won the Drone Dominance Gauntlet 2 Contest",
+      "link": "https://www.fool.com/investing/2026/10/03/heres-who-won-the-drone-dominance-gauntlet-2-conte/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-01": {
-      "date": "2026-10-01",
-      "steps": 6686,
-      "resting_hr": 54,
-      "body_battery": 33,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 326,
-        "deep_min": 52,
-        "light_min": 261,
-        "rem_min": 13,
-        "awake_min": 10,
-        "score": 58,
-        "start": 1790817360000,
-        "end": 1790837520000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-10-01 12:39:20",
-          "duration_s": 2014,
-          "distance_m": 6089.0,
-          "calories": 248,
-          "avg_hr": 119,
-          "max_hr": 150,
-          "avg_speed": 3.02
-        }
+    {
+      "title": "2 High-Octane Cannabis Stocks to Buy in October for Aggressive Investors",
+      "link": "https://www.fool.com/investing/2026/10/03/2-high-octane-cannabis-stocks-to-buy-in-october/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-30": {
-      "date": "2026-09-30",
-      "steps": 14556,
-      "resting_hr": 47,
-      "body_battery": 55,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 500,
-        "deep_min": 56,
-        "light_min": 369,
-        "rem_min": 75,
-        "awake_min": 38,
-        "score": 76,
-        "start": 1790712780000,
-        "end": 1790745060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-30 05:42:35",
-          "duration_s": 1296,
-          "distance_m": 0.0,
-          "calories": 101,
-          "avg_hr": 97,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Should You Forget Palantir and Buy These 2 Artificial Intelligence (AI) Stocks Instead?",
+      "link": "https://www.fool.com/investing/2026/10/03/should-you-forget-palantir-and-buy-these-2-artific/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-29": {
-      "date": "2026-09-29",
-      "steps": 10112,
-      "resting_hr": 53,
-      "body_battery": 60,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 504,
-        "deep_min": 48,
-        "light_min": 368,
-        "rem_min": 88,
-        "awake_min": 7,
-        "score": 58,
-        "start": 1790632740000,
-        "end": 1790663400000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-29 06:58:16",
-          "duration_s": 1256,
-          "distance_m": 0.0,
-          "calories": 66,
-          "avg_hr": 81,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Where Will Intel Stock Be in 5 Years: Comeback Story or Cautionary Tale?",
+      "link": "https://www.fool.com/investing/2026/10/03/where-will-intel-stock-be-5-years-comeback-story/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-28": {
-      "date": "2026-09-28",
-      "steps": 13916,
-      "resting_hr": 49,
-      "body_battery": 81,
-      "avg_stress": 41,
-      "sleep": {
-        "total_min": 489,
-        "deep_min": 112,
-        "light_min": 291,
-        "rem_min": 86,
-        "awake_min": 31,
-        "score": 86,
-        "start": 1790547360000,
-        "end": 1790578560000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-09-28 07:09:33",
-          "duration_s": 1319,
-          "distance_m": 0.0,
-          "calories": 128,
-          "avg_hr": 107,
-          "max_hr": 141,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Marvell Stock Has More Than Tripled This Year. I Think It Can Double Again by 2031.",
+      "link": "https://www.fool.com/investing/2026/10/03/marvell-stock-has-more-than-tripled-this-year-i-think-it-can-double-again-by-2031/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-09-27": {
-      "date": "2026-09-27",
-      "steps": 5301,
-      "resting_hr": 54,
-      "body_battery": 45,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 404,
-        "deep_min": 56,
-        "light_min": 348,
-        "rem_min": 0,
-        "awake_min": 101,
-        "score": 36,
-        "start": 1790463360000,
-        "end": 1790493660000
-      },
-      "activities": []
+    {
+      "title": "UnitedHealth Reports on Oct. 13. Here's the 1 Number I'm Watching.",
+      "link": "https://www.fool.com/investing/2026/10/03/unitedhealth-reports-on-oct-13-heres-the-1-number/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Could $20,000 Invested in Palantir Help You Retire a Millionaire?",
+      "link": "https://www.fool.com/investing/2026/10/03/could-20k-invested-in-palantir-help-you-retire-a-m/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The Memory Boom Helped Micron Deliver a Record Year. Here’s Where the Stock Will Be in 3 Years",
+      "link": "https://www.fool.com/investing/2026/10/03/the-memory-boom-helped-micron-deliver-a-record-year-here-s-where-the-stock-will-be-in-3-years/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Robinhood CEO Vlad Tenev Says Crypto Will Lead a Surge in Prediction Market Trading Volume. Here's What It Means for Crypto.",
+      "link": "https://www.fool.com/investing/2026/10/03/robinhood-ceo-vlad-tenev-says-crypto-will-lead-a-s/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If You'd Invested $1,000 in Broadcom's 2009 IPO, Here's How Much You'd Have Today",
+      "link": "https://www.fool.com/investing/2026/10/03/if-invest-1000-broadcom-2009-ipo-how-much/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "How NASA Saved Boeing's Space Program With a New Contract and $359 Million",
+      "link": "https://www.fool.com/investing/2026/10/03/nasa-just-saved-boeings-space-program/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "AbbVie Just Won FDA Approval for a Once-Daily Parkinson's Pill. Here's Why It Matters More Than You Think.",
+      "link": "https://www.fool.com/investing/2026/10/03/abbvie-fda-approval-daily-parkinsons-pill/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Anthropic Could Raise Up to $100 Billion in Its November IPO",
+      "link": "https://www.fool.com/investing/2026/10/03/anthropic-could-raise-up-to-100-billion-in-its-nov/?.tsrc=rss",
+      "date": "2026-10-03",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-03"
+  ]
 }
