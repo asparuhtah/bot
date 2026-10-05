@@ -340,5 +340,216 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-10-05": {
+      "date": "2026-10-05",
+      "steps": 781,
+      "resting_hr": 56,
+      "body_battery": null,
+      "avg_stress": 59,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-10-04": {
+      "date": "2026-10-04",
+      "steps": 13946,
+      "resting_hr": 55,
+      "body_battery": 10,
+      "avg_stress": 59,
+      "sleep": {
+        "total_min": 294,
+        "deep_min": 62,
+        "light_min": 232,
+        "rem_min": 0,
+        "awake_min": 26,
+        "score": 37,
+        "start": 1791084540000,
+        "end": 1791103740000
+      },
+      "activities": []
+    },
+    "2026-10-03": {
+      "date": "2026-10-03",
+      "steps": 25816,
+      "resting_hr": 51,
+      "body_battery": 60,
+      "avg_stress": 38,
+      "sleep": {
+        "total_min": 539,
+        "deep_min": 75,
+        "light_min": 408,
+        "rem_min": 56,
+        "awake_min": 55,
+        "score": 71,
+        "start": 1790978340000,
+        "end": 1791013980000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-10-03 10:26:53",
+          "duration_s": 1517,
+          "distance_m": 3592.0,
+          "calories": 154,
+          "avg_hr": 111,
+          "max_hr": 143,
+          "avg_speed": 2.37
+        },
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-10-03 09:23:50",
+          "duration_s": 2013,
+          "distance_m": 0.0,
+          "calories": 179,
+          "avg_hr": 107,
+          "max_hr": 153,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-10-02": {
+      "date": "2026-10-02",
+      "steps": 11978,
+      "resting_hr": 52,
+      "body_battery": 42,
+      "avg_stress": 40,
+      "sleep": {
+        "total_min": 309,
+        "deep_min": 102,
+        "light_min": 169,
+        "rem_min": 38,
+        "awake_min": 76,
+        "score": 60,
+        "start": 1790902680000,
+        "end": 1790925780000
+      },
+      "activities": [
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-10-02 12:00:22",
+          "duration_s": 1286,
+          "distance_m": 2677.0,
+          "calories": 88,
+          "avg_hr": 93,
+          "max_hr": 125,
+          "avg_speed": 2.08
+        },
+        {
+          "type": "kiteboarding_v2",
+          "name": "Slivnitsa Kiteboarding",
+          "start": "2026-10-02 10:07:39",
+          "duration_s": 1352,
+          "distance_m": 4619.0,
+          "calories": 110,
+          "avg_hr": 100,
+          "max_hr": 124,
+          "avg_speed": 3.42
+        }
+      ]
+    },
+    "2026-10-01": {
+      "date": "2026-10-01",
+      "steps": 6686,
+      "resting_hr": 54,
+      "body_battery": 33,
+      "avg_stress": 46,
+      "sleep": {
+        "total_min": 326,
+        "deep_min": 52,
+        "light_min": 261,
+        "rem_min": 13,
+        "awake_min": 10,
+        "score": 58,
+        "start": 1790817360000,
+        "end": 1790837520000
+      },
+      "activities": [
+        {
+          "type": "cycling",
+          "name": "Slivnitsa Cycling",
+          "start": "2026-10-01 12:39:20",
+          "duration_s": 2014,
+          "distance_m": 6089.0,
+          "calories": 248,
+          "avg_hr": 119,
+          "max_hr": 150,
+          "avg_speed": 3.02
+        }
+      ]
+    },
+    "2026-09-30": {
+      "date": "2026-09-30",
+      "steps": 14556,
+      "resting_hr": 47,
+      "body_battery": 55,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 500,
+        "deep_min": 56,
+        "light_min": 369,
+        "rem_min": 75,
+        "awake_min": 38,
+        "score": 76,
+        "start": 1790712780000,
+        "end": 1790745060000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-30 05:42:35",
+          "duration_s": 1296,
+          "distance_m": 0.0,
+          "calories": 101,
+          "avg_hr": 97,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-09-29": {
+      "date": "2026-09-29",
+      "steps": 10112,
+      "resting_hr": 53,
+      "body_battery": 60,
+      "avg_stress": 45,
+      "sleep": {
+        "total_min": 504,
+        "deep_min": 48,
+        "light_min": 368,
+        "rem_min": 88,
+        "awake_min": 7,
+        "score": 58,
+        "start": 1790632740000,
+        "end": 1790663400000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-09-29 06:58:16",
+          "duration_s": 1256,
+          "distance_m": 0.0,
+          "calories": 66,
+          "avg_hr": 81,
+          "max_hr": 141,
+          "avg_speed": 0.0
+        }
+      ]
+    }
+  },
+  "garmin_updated": "2026-10-05"
 }
