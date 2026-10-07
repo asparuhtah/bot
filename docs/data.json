@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-06T13:50:21.298911+00:00",
-  "eurUsd": 1.1247,
+  "lastUpdated": "2026-10-07T14:08:04.251305+00:00",
+  "eurUsd": 1.1178,
   "prices": {
-    "BTC-USD": 76725.0,
-    "ETC-USD": 7.94,
-    "FLR-USD": 0.006461,
+    "BTC-USD": 74278.0,
+    "ETC-USD": 7.45,
+    "FLR-USD": 0.006267,
     "EXI2.DE": 109.52,
-    "MRVL": 167.760292,
+    "MRVL": 168.795849,
     "DFEN.DE": 55.03,
-    "NVDA": 181.212768,
+    "NVDA": 182.331365,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 408.69,
-    "pnl": 10.02,
-    "pnlPct": 2.51
+    "totalCurrent": 402.09,
+    "pnl": 3.42,
+    "pnlPct": 0.86
   },
   "history": [
-    {
-      "date": "2026-09-06",
-      "total": 383.84,
-      "pnl": -14.83,
-      "pct": -3.72
-    },
     {
       "date": "2026-09-07",
       "total": 384.58,
@@ -197,335 +191,154 @@
       "total": 408.69,
       "pnl": 10.02,
       "pct": 2.51
+    },
+    {
+      "date": "2026-10-07",
+      "total": 402.09,
+      "pnl": 3.42,
+      "pct": 0.86
     }
   ],
   "news": [
     {
-      "title": "S&P 500 hovers near record highs as Treasury yields ease: AlphaCheck",
-      "link": "https://finance.yahoo.com/markets/article/sp-500-hovers-near-record-highs-as-treasury-yields-ease-alphacheck-134008813.html?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why CrowdStrike Stock Rallied Nearly 15% in September",
-      "link": "https://www.fool.com/investing/2026/10/06/why-crowdstrike-stock-rallied-nearly-15-in-september/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Turned $10,000 Into More Than $1.3 Million. Can It Happen Again?",
-      "link": "https://247wallst.com/investing/2026/10/06/nvidia-turned-10000-into-more-than-1-3-million-can-it-happen-again/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Backed Reflection AI Launches Its New Beam Model To Compete With Chinese tech rivals",
-      "link": "https://www.tikr.com/blog/nvidia-stock-reflection-ai-beam-open-weight-model?ref=yahoofinance&.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Overlooked Growth Stocks Powering Every AI Chip Nvidia and AMD Build",
-      "link": "https://www.fool.com/investing/2026/10/06/growth-stocks-powering-every-chip-nvidia-amd/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "New Book Decipher & Deliver Offers an Operator's Transformation Playbook for CEOs, Boards and PE Sponsors",
-      "link": "https://finance.yahoo.com/small-business/articles/book-decipher-deliver-offers-operators-130000683.html?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Only 2 Artificial Intelligence (AI) Stocks I'd Buy With $1,000 Today and Never Sell",
-      "link": "https://www.fool.com/investing/2026/10/06/the-only-2-artificial-intelligence-ai-stocks-id-bu/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "ASML vs. Nvidia: Which AI Semiconductor Stock Is a Better Buy in 2026?",
-      "link": "https://www.fool.com/coverage/better-buy/2026/10/06/asml-vs-nvidia-which-ai-semiconductor-stock-better-buy-2026/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "CrowdStrike Launches Fourth Cybersecurity Startup Accelerator With AWS and Nvidia",
-      "link": "https://investorshub.advfn.com/market-news/article/37556/crowdstrike-launches-fourth-cybersecurity-startup-accelerator-with-aws-and-nvidia?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Fed’s Rate Hike Isn’t A Headwind For Nvidia For Several Reasons",
-      "link": "https://247wallst.com/investing/2026/10/06/the-feds-rate-hike-isnt-a-headwind-for-nvidia-for-several-reasons/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Tilray Brands: Is the Stock a Buy at Less Than $4?",
-      "link": "https://www.fool.com/investing/2026/10/06/tilray-brands-is-the-stock-a-buy-at-less-than-4/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street Is Worried About a Market Crash. 75 Years of History Says Investors Should Be Watching Something Else.",
-      "link": "https://www.fool.com/investing/2026/10/06/wall-street-worried-market-crash-75-years-history/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Boost Run Soars 11% on $526 Million Sovereign AI Cloud Deal: “An Important Step”",
-      "link": "https://www.tikr.com/blog/boost-run-soars-11-on-526-million-sovereign-ai-cloud-deal-an-important-step?ref=yahoofinance&.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Can Canopy Growth Survive Another 5 Years?",
-      "link": "https://www.fool.com/investing/2026/10/06/can-canopy-growth-survive-another-5-years/?.tsrc=rss",
-      "date": "2026-10-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-07": {
+      "title": "SpaceX stock slips on report of its $40 billion in new debt for Nvidia chips",
+      "link": "https://finance.yahoo.com/markets/stocks/article/spacex-stock-slips-on-report-of-its-40-billion-in-new-debt-for-nvidia-chips-140223011.html?.tsrc=rss",
       "date": "2026-10-07",
-      "steps": 8229,
-      "resting_hr": 57,
-      "body_battery": 25,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 347,
-        "deep_min": 115,
-        "light_min": 232,
-        "rem_min": 0,
-        "awake_min": 9,
-        "score": 42,
-        "start": 1791336360000,
-        "end": 1791357720000
-      },
-      "activities": []
-    },
-    "2026-10-06": {
-      "date": "2026-10-06",
-      "steps": 13924,
-      "resting_hr": 56,
-      "body_battery": 22,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 285,
-        "deep_min": 57,
-        "light_min": 213,
-        "rem_min": 15,
-        "awake_min": 3,
-        "score": 53,
-        "start": 1791246720000,
-        "end": 1791264000000
-      },
-      "activities": []
-    },
-    "2026-10-05": {
-      "date": "2026-10-05",
-      "steps": 9715,
-      "resting_hr": 61,
-      "body_battery": 8,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 189,
-        "deep_min": 108,
-        "light_min": 81,
-        "rem_min": 0,
-        "awake_min": 33,
-        "score": 28,
-        "start": 1791170100000,
-        "end": 1791183420000
-      },
-      "activities": []
-    },
-    "2026-10-04": {
-      "date": "2026-10-04",
-      "steps": 13946,
-      "resting_hr": 55,
-      "body_battery": 10,
-      "avg_stress": 59,
-      "sleep": {
-        "total_min": 294,
-        "deep_min": 62,
-        "light_min": 232,
-        "rem_min": 0,
-        "awake_min": 26,
-        "score": 37,
-        "start": 1791084540000,
-        "end": 1791103740000
-      },
-      "activities": []
-    },
-    "2026-10-03": {
-      "date": "2026-10-03",
-      "steps": 25816,
-      "resting_hr": 51,
-      "body_battery": 60,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 539,
-        "deep_min": 75,
-        "light_min": 408,
-        "rem_min": 56,
-        "awake_min": 55,
-        "score": 71,
-        "start": 1790978340000,
-        "end": 1791013980000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-03 10:26:53",
-          "duration_s": 1517,
-          "distance_m": 3592.0,
-          "calories": 154,
-          "avg_hr": 111,
-          "max_hr": 143,
-          "avg_speed": 2.37
-        },
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-03 09:23:50",
-          "duration_s": 2013,
-          "distance_m": 0.0,
-          "calories": 179,
-          "avg_hr": 107,
-          "max_hr": 153,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-02": {
-      "date": "2026-10-02",
-      "steps": 11978,
-      "resting_hr": 52,
-      "body_battery": 42,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 309,
-        "deep_min": 102,
-        "light_min": 169,
-        "rem_min": 38,
-        "awake_min": 76,
-        "score": 60,
-        "start": 1790902680000,
-        "end": 1790925780000
-      },
-      "activities": [
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-02 12:00:22",
-          "duration_s": 1286,
-          "distance_m": 2677.0,
-          "calories": 88,
-          "avg_hr": 93,
-          "max_hr": 125,
-          "avg_speed": 2.08
-        },
-        {
-          "type": "kiteboarding_v2",
-          "name": "Slivnitsa Kiteboarding",
-          "start": "2026-10-02 10:07:39",
-          "duration_s": 1352,
-          "distance_m": 4619.0,
-          "calories": 110,
-          "avg_hr": 100,
-          "max_hr": 124,
-          "avg_speed": 3.42
-        }
+    {
+      "title": "How Marvell blew past expectations at its investor day",
+      "link": "https://finance.yahoo.com/video/marvell-blew-past-expectations-investor-140000509.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-01": {
-      "date": "2026-10-01",
-      "steps": 6686,
-      "resting_hr": 54,
-      "body_battery": 33,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 326,
-        "deep_min": 52,
-        "light_min": 261,
-        "rem_min": 13,
-        "awake_min": 10,
-        "score": 58,
-        "start": 1790817360000,
-        "end": 1790837520000
-      },
-      "activities": [
-        {
-          "type": "cycling",
-          "name": "Slivnitsa Cycling",
-          "start": "2026-10-01 12:39:20",
-          "duration_s": 2014,
-          "distance_m": 6089.0,
-          "calories": 248,
-          "avg_hr": 119,
-          "max_hr": 150,
-          "avg_speed": 3.02
-        }
+    {
+      "title": "10-year Treasury yield hits highest level since 2002 as stocks retreat: AlphaCheck",
+      "link": "https://finance.yahoo.com/markets/article/10-year-treasury-yield-hits-highest-level-since-2002-as-stocks-retreat-alphacheck-134621987.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Elon Musk's SpaceX seeking to raise $40B to buy Nvidia chips",
+      "link": "https://finance.yahoo.com/video/elon-musks-spacex-seeking-raise-132132685.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Behavox Signs $8 Million GPU Commitment With Civo for Sovereign UK AI Processing",
+      "link": "https://finance.yahoo.com/technology/ai/articles/behavox-signs-8-million-gpu-140000032.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX Doubles Down on Nvidia AI Chips. What It Says About Both Stocks.",
+      "link": "https://finance.yahoo.com/m/2321d5ae-8f60-36c8-8911-2806a80451ef/spacex-doubles-down-on-nvidia.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia Stock Falls. It’s Betting on These Start-Ups to Drive AI Gains.",
+      "link": "https://finance.yahoo.com/m/1130f24f-ce90-3a5f-9380-75d0512ea7f5/nvidia-stock-falls.-it%E2%80%99s.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Q3 2026 insider stock sales: Nvidia's Mark Stevens tops AI sellers",
+      "link": "https://qz.com/nvidia-mark-stevens-ai-insider-stock-selling-third-quarter-100726?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Despite 231% year-to-date surge, Marvell stock has 42% upside to Wall Street’s price target",
+      "link": "https://247wallst.com/investing/2026/10/07/despite-231-year-to-date-surge-marvell-stock-has-42-upside-to-wall-streets-price-target/?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stocks slide as oil climbs on Mideast flareup",
+      "link": "https://finance.yahoo.com/energy/articles/oil-rises-stocks-fall-hormuz-023838273.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "On Holding Is Down Over 50% From Its All-Time High. Is a Push Into Football and Golf the Key to Unlocking Faster Growth?",
+      "link": "https://www.fool.com/investing/2026/10/07/on-holding-is-down-50-from-its-all-time-high-is-a/?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The 10-Year Treasury Just Hit a 24-Year High. Here's What History Says That Means for Realty Income.",
+      "link": "https://www.fool.com/investing/2026/10/07/the-10-year-treasury-just-hit-a-24-year-high-here-s-what-history-says-that-means-for-realty-income/?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Tesla’s Third-Quarter Deliveries Beat Expectations. Time to Buy the Stock?",
+      "link": "https://www.fool.com/investing/2026/10/07/tesla-s-third-quarter-deliveries-beat-expectations-time-to-buy-the-stock/?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NTT DATA Opens AI Factory Munich Where Clients Can Validate their AI in a Live Environment",
+      "link": "https://finance.yahoo.com/technology/ai/articles/ntt-data-opens-ai-factory-130000064.html?.tsrc=rss",
+      "date": "2026-10-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-10-07"
+  ]
 }
