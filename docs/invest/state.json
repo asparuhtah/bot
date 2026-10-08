@@ -1,25 +1,25 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 83300.0,
+      "price": 83088.0,
       "ccy": "USD",
-      "price_eur": 74370.0,
+      "price_eur": 74210.0,
       "src": "coingecko",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "ETC": {
-      "price": 8.53,
+      "price": 8.43,
       "ccy": "USD",
-      "price_eur": 7.62,
+      "price_eur": 7.53,
       "src": "coingecko",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "FLR": {
-      "price": 0.006965,
+      "price": 0.006953,
       "ccy": "USD",
-      "price_eur": 0.006218,
+      "price_eur": 0.00621,
       "src": "coingecko",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "EXI2": {
       "price": 117.70528,
@@ -43,36 +43,36 @@
       "at": "2026-09-27T14:34+03:00"
     },
     "NVDA": {
-      "price": 230.86,
+      "price": 237.47,
       "ccy": "USD",
-      "price_eur": 205.316566,
+      "price_eur": 212.178342,
       "src": "yahoo",
-      "at": "2026-10-02T05:36+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "ROBO": {
       "price": 20.81,
       "ccy": "EUR",
       "price_eur": 20.81,
       "src": "manual",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "PERSONAL": {
       "price": 126.76,
       "ccy": "EUR",
       "price_eur": 126.76,
       "src": "manual",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     },
     "CASH": {
       "price": 0.43,
       "ccy": "EUR",
       "price_eur": 0.43,
       "src": "manual",
-      "at": "2026-10-08T04:21+03:00"
+      "at": "2026-10-08T10:32+03:00"
     }
   },
-  "last_eurusd": 1.11988,
-  "last_hour_logged": "2026-10-08 04",
+  "last_eurusd": 1.1192,
+  "last_hour_logged": "2026-10-08 10",
   "alert_state": {},
   "move_sent": {
     "ETC:down": "2026-10-07",
@@ -81,5 +81,5 @@
   "pnl_band": 4,
   "last_weekly": "2026-W40",
   "last_daily_report": "2026-10-07",
-  "last_morning": "2026-10-06"
+  "last_morning": "2026-10-08"
 }
