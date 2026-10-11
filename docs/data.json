@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-10T13:12:24.491840+00:00",
-  "eurUsd": 1.1192,
+  "lastUpdated": "2026-10-11T13:42:28.952809+00:00",
+  "eurUsd": 1.1193,
   "prices": {
-    "BTC-USD": 73869.0,
-    "ETC-USD": 7.41,
-    "FLR-USD": 0.006268,
+    "BTC-USD": 74039.0,
+    "ETC-USD": 7.44,
+    "FLR-USD": 0.006199,
     "EXI2.DE": 109.52,
-    "MRVL": 168.584703,
+    "MRVL": 168.569642,
     "DFEN.DE": 55.03,
-    "NVDA": 182.103288,
+    "NVDA": 182.087019,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 401.02,
-    "pnl": 2.35,
-    "pnlPct": 0.59
+    "totalCurrent": 401.49,
+    "pnl": 2.82,
+    "pnlPct": 0.71
   },
   "history": [
-    {
-      "date": "2026-09-10",
-      "total": 381.6,
-      "pnl": -17.07,
-      "pct": -4.28
-    },
     {
       "date": "2026-09-11",
       "total": 379.0,
@@ -197,289 +191,154 @@
       "total": 401.02,
       "pnl": 2.35,
       "pct": 0.59
+    },
+    {
+      "date": "2026-10-11",
+      "total": 401.49,
+      "pnl": 2.82,
+      "pct": 0.71
     }
   ],
   "news": [
     {
-      "title": "'Not the time to be skittish': Why Wall Street sees stocks rising by year-end",
-      "link": "https://finance.yahoo.com/markets/article/not-the-time-to-be-skittish-why-wall-street-sees-stocks-rising-by-year-end-115918876.html?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Worried About an AI Bubble? You Need To See This 1 Chart Now.",
-      "link": "https://www.fool.com/investing/2026/10/10/worried-about-an-ai-bubble-you-need-to-see-this-1-chart-now/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jim Cramer makes major SpaceX call tied to Nvidia",
-      "link": "https://www.thestreet.com/investing/stocks/spcx-jim-cramer-sees-spacex-becoming-nvidias-biggest-customer?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Stock Market's Biggest Winners Are Hiding a Problem. This Is How I'd Protect My Portfolio.",
-      "link": "https://www.fool.com/investing/2026/10/10/stock-market-biggest-winners-problem-how-protect/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Vannor Launches Agentic Marketing After AI Agents Drive 30-Fold Increase in First-Page Google Rankings",
-      "link": "https://finance.yahoo.com/technology/ai/articles/vannor-launches-agentic-marketing-ai-113300170.html?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: This Will Be the Next Big AI Gold Rush and This Company Will Be the Winner.",
-      "link": "https://www.fool.com/investing/2026/10/10/prediction-this-will-be-the-next-big-ai-gold-rush-and-this-company-will-be-the-winner/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Rigetti Computing Stock Could Double by 2031. Here's Why I'm Still Cautious.",
-      "link": "https://www.fool.com/investing/2026/10/10/where-will-rigetti-computing-stock-be-in-5-years/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "This Nuclear Stock Doesn't Need a Breakthrough. It Just Won Another $189 Million Contract Doing What It's Always Done.",
-      "link": "https://www.fool.com/investing/2026/10/10/nuclear-stock-bwxt-need-breakthrough-contract/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Tim Cook's Final Apple Earnings Call Showed the Company Made More Quarterly Revenue Than It Booked in All of Fiscal 2011, the Year He Became CEO. What Does That Growth Curve Mean for Apple Under John Ternus?",
-      "link": "https://www.fool.com/investing/2026/10/10/tim-cooks-final-apple-earnings-call-showed-the-com/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Tesla Shares Surge: What's Driving the Latest Rally",
-      "link": "https://www.fool.com/investing/2026/10/10/tesla-shares-surge-whats-driving-the-latest-rally/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Is Bitcoin the Best Crypto You Can Buy Right Now?",
-      "link": "https://www.fool.com/investing/2026/10/10/is-bitcoin-the-best-crypto-you-can-buy-right-now/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Netflix Is Treading Water Around a 2-Year Low. Is It the Most Obvious Growth Stock to Buy in October?",
-      "link": "https://www.fool.com/investing/2026/10/10/netflix-stock-treading-water-year-low-growth/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Adobe's Earnings Are on Track to Grow About Eightfold in a Decade. Why Has Its Stock Lagged the Market So Badly?",
-      "link": "https://www.fool.com/investing/2026/10/10/adobe-s-earnings-are-on-track-to-grow-about-eightfold-in-a-decade-why-has-its-stock-lagged-the-market-so-badly/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Warren Buffett Has Warned Investors About This for Decades. The Bond Market Is Making His Advice Matter Again.",
-      "link": "https://www.fool.com/investing/2026/10/10/warren-buffett-warned-investors-bond-market-advice/?.tsrc=rss",
-      "date": "2026-10-10",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-11": {
+      "title": "OpenAI’s $20 Billion Revenue Problem",
+      "link": "https://app.moby.co/home/news/news-openais-20-billion-revenue-problem?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
       "date": "2026-10-11",
-      "steps": 446,
-      "resting_hr": 51,
-      "body_battery": 40,
-      "avg_stress": 21,
-      "sleep": {
-        "total_min": 246,
-        "deep_min": 59,
-        "light_min": 187,
-        "rem_min": 0,
-        "awake_min": 16,
-        "score": 32,
-        "start": 1791677880000,
-        "end": 1791693600000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-11 07:21:31",
-          "duration_s": 1211,
-          "distance_m": 0.0,
-          "calories": 159,
-          "avg_hr": 122,
-          "max_hr": 150,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-10": {
-      "date": "2026-10-10",
-      "steps": 6090,
-      "resting_hr": 70,
-      "body_battery": 4,
-      "avg_stress": 70,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
+    {
+      "title": "This Nvidia Partner Was My Top Pick for 2026, and It's Up 43%: Here's Why It's Still a Great Value Now",
+      "link": "https://www.fool.com/investing/2026/10/11/this-nvidia-partner-was-my-top-pick-for-2026-and-i/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-09": {
-      "date": "2026-10-09",
-      "steps": 15311,
-      "resting_hr": 50,
-      "body_battery": 65,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 415,
-        "deep_min": 108,
-        "light_min": 220,
-        "rem_min": 87,
-        "awake_min": 87,
-        "score": 67,
-        "start": 1791504300000,
-        "end": 1791534420000
-      },
-      "activities": []
+    {
+      "title": "Prediction: Netflix Stock Is Going to Soar After Oct. 20",
+      "link": "https://www.fool.com/investing/2026/10/11/prediction-netflix-stock-going-soar-after-oct-20/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-08": {
-      "date": "2026-10-08",
-      "steps": 16338,
-      "resting_hr": 52,
-      "body_battery": 36,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 336,
-        "deep_min": 115,
-        "light_min": 193,
-        "rem_min": 28,
-        "awake_min": 9,
-        "score": 65,
-        "start": 1791420000000,
-        "end": 1791440700000
-      },
-      "activities": []
+    {
+      "title": "4 Vanguard Funds Worth Buying and Holding for the Next 20 Years",
+      "link": "https://www.fool.com/investing/2026/10/11/4-vanguard-funds-buy-hold-for-next-20-years/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-07": {
-      "date": "2026-10-07",
-      "steps": 15659,
-      "resting_hr": 57,
-      "body_battery": 25,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 347,
-        "deep_min": 115,
-        "light_min": 232,
-        "rem_min": 0,
-        "awake_min": 9,
-        "score": 42,
-        "start": 1791336360000,
-        "end": 1791357720000
-      },
-      "activities": []
+    {
+      "title": "Marvell's Outlook Says Revenue and Earnings Could 10x in 5 Years. Here's Why the Stock's a Bargain Even If It Falls Short.",
+      "link": "https://www.fool.com/investing/2026/10/11/marvell-revenue-earnings-10x-stock-bargain/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-06": {
-      "date": "2026-10-06",
-      "steps": 13924,
-      "resting_hr": 56,
-      "body_battery": 22,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 285,
-        "deep_min": 57,
-        "light_min": 213,
-        "rem_min": 15,
-        "awake_min": 3,
-        "score": 53,
-        "start": 1791246720000,
-        "end": 1791264000000
-      },
-      "activities": []
+    {
+      "title": "Schwab's Dividend ETF's Worst Year Since 2012 Was a 5.5% Loss. The Cost Showed Up in the Good Years.",
+      "link": "https://www.fool.com/investing/2026/10/11/schwab-s-dividend-etf-s-worst-year-since-2012-was-a-5-5-loss-the-cost-showed-up-in-the-good-years/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-05": {
-      "date": "2026-10-05",
-      "steps": 9715,
-      "resting_hr": 61,
-      "body_battery": 8,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 189,
-        "deep_min": 108,
-        "light_min": 81,
-        "rem_min": 0,
-        "awake_min": 33,
-        "score": 28,
-        "start": 1791170100000,
-        "end": 1791183420000
-      },
-      "activities": []
+    {
+      "title": "Is Rocket Companies (RKT) Stock a Buy, Sell, or Hold Near Its 52-Week Low?",
+      "link": "https://www.fool.com/investing/2026/10/11/is-rocket-companies-rkt-stock-a-buy-sell-or-hold-n/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dow Jones Futures Loom; ASML, Nvidia Chipmaker Taiwan Semi To Kick Off AI Earnings",
+      "link": "https://finance.yahoo.com/m/0d7a86f7-63d8-35ac-9402-ed0f2ca814ac/dow-jones-futures-loom%3B-asml%2C.html?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Here's Where These 4 Nuclear Reactor Stocks Could Be in 5 Years",
+      "link": "https://www.fool.com/investing/2026/10/11/where-4-nuclear-reactor-stocks-could-be-oklo-nne/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX Is Public. Here's What $1,000 in Each of These 5 Space Stocks Could Be Worth by 2030.",
+      "link": "https://www.fool.com/investing/2026/10/11/spacex-is-public-heres-what-1000-in-each-of-these/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Paramount and Warner Bros. Discovery Are Now Skydance. Here's Why I'd Rather Own Netflix.",
+      "link": "https://www.fool.com/investing/2026/10/11/paramount-and-warner-bros-discovery-are-now-skydan/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX vs. Micron: Which Is the Better Artificial Intelligence (AI) Stock to Own for the Next 5 Years?",
+      "link": "https://www.fool.com/investing/2026/10/11/spacex-vs-micron-better-artificial-intelligence-ai/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Oklo the Next Trillion-Dollar Stock?",
+      "link": "https://www.fool.com/investing/2026/10/11/is-oklo-the-next-trillion-dollar-stock/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I've Been Investing for 22 Years. Here's the 1 Thing I Wish More People Knew About Bear Markets.",
+      "link": "https://www.fool.com/investing/2026/10/11/investing-22-years-thing-knew-bear-market/?.tsrc=rss",
+      "date": "2026-10-11",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-11"
+  ]
 }
