@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-14T12:35:30.260395+00:00",
-  "eurUsd": 1.1147,
+  "lastUpdated": "2026-10-15T12:22:28.779557+00:00",
+  "eurUsd": 1.1206,
   "prices": {
-    "BTC-USD": 73956.0,
-    "ETC-USD": 7.2,
-    "FLR-USD": 0.006087,
+    "BTC-USD": 72220.0,
+    "ETC-USD": 6.91,
+    "FLR-USD": 0.005861,
     "EXI2.DE": 109.52,
-    "MRVL": 169.265273,
+    "MRVL": 168.374085,
     "DFEN.DE": 55.03,
-    "NVDA": 182.838432,
+    "NVDA": 181.875781,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 400.18,
-    "pnl": 1.51,
-    "pnlPct": 0.38
+    "totalCurrent": 394.84,
+    "pnl": -3.83,
+    "pnlPct": -0.96
   },
   "history": [
-    {
-      "date": "2026-09-14",
-      "total": 382.18,
-      "pnl": -16.49,
-      "pct": -4.14
-    },
     {
       "date": "2026-09-15",
       "total": 379.36,
@@ -197,313 +191,154 @@
       "total": 400.18,
       "pnl": 1.51,
       "pct": 0.38
+    },
+    {
+      "date": "2026-10-15",
+      "total": 394.84,
+      "pnl": -3.83,
+      "pct": -0.96
     }
   ],
   "news": [
     {
-      "title": "2 Beaten-Down Healthcare Stocks That Could Soar in the Fourth Quarter",
-      "link": "https://www.fool.com/investing/2026/10/14/2-beaten-down-healthcare-stocks-that-could-soar-in/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA (NVDA) Could Be 18% Undervalued As AI Partnerships Extend Its Reach",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-could-18-undervalued-121005731.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Global X Launches PowerStock ETF Suite to Give Canadians 33% More Exposure to Their Highest Conviction Stocks",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/global-x-launches-powerstock-etf-120000112.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Saturn Cloud's AI Token Factory Comes to vCluster Stacks, Turning AI Cloud GPUs Into Per-Token Revenue",
-      "link": "https://finance.yahoo.com/technology/ai/articles/saturn-clouds-ai-token-factory-120000283.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SBS launches sovereign AI platform for core banking with NVIDIA",
-      "link": "https://www.retailbankerinternational.com/news/sbs-launches-sovereign-ai-platform-for-core-banking-with-nvidia/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Splashes the Cash as It Takes AI Safety Case Global",
-      "link": "https://finance.yahoo.com/m/77b6740d-7e85-3ab0-adbb-dc293c99e629/nvidia-splashes-the-cash-as.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The S&P 500 Is Dangerously Concentrated in 5 Tech Giants. Are They Still Buys?",
-      "link": "https://www.fool.com/investing/2026/10/14/sp-500-concentrated-tech-giant-buy-stocks/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AI Chips Today - AI Infrastructure Evolves With Strategic Partnerships And Innovations",
-      "link": "https://finance.yahoo.com/technology/ai/articles/ai-chips-today-ai-infrastructure-113726549.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel vs. Marvell Technology: Which Tech Stock Is a Better Buy in 2026?",
-      "link": "https://www.fool.com/coverage/better-buy/2026/10/14/intel-vs-marvell-technology-which-tech-stock-is-a-better-buy-in-2026/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Best Semiconductor Stocks to Buy and Hold Through 2030",
-      "link": "https://www.fool.com/investing/2026/10/14/best-semiconductor-stocks-to-buy-and-hold-through/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Navitas Semiconductor (NVTS) Stock Looks Cheap On Its 77% Three Year Run",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/navitas-semiconductor-nvts-stock-looks-121056498.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Investors May Respond To Enbridge (TSX:ENB) Sunrise Expansion And Reaffirmed 2026 Dividend Outlook",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-enbridge-tsx-121051857.html?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Oklo Launched Another $1 Billion Stock Sale. Here's How Much Dilution Shareholders Have Absorbed Since It Went Public.",
-      "link": "https://www.fool.com/investing/2026/10/14/oklo-launched-another-1-billion-stock-sale/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Intel’s Make-or-Break Moment Is Here. What Happens to INTC Stock Next?",
-      "link": "https://247wallst.com/investing/2026/10/14/intels-make-or-break-moment-is-here-what-happens-to-intc-stock-next/?.tsrc=rss",
-      "date": "2026-10-14",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-15": {
+      "title": "Stock Market Today: Dow Rises, Nasdaq Tumbles As AI Worries Hit Major Players (Live Coverage)",
+      "link": "https://finance.yahoo.com/m/27f9f9ee-5b06-3a78-a91a-ddc2a33bd2d2/stock-market-today%3A-dow.html?.tsrc=rss",
       "date": "2026-10-15",
-      "steps": 9572,
-      "resting_hr": 60,
-      "body_battery": 8,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 251,
-        "deep_min": 95,
-        "light_min": 156,
-        "rem_min": 0,
-        "awake_min": 53,
-        "score": 31,
-        "start": 1792034820000,
-        "end": 1792053060000
-      },
-      "activities": []
-    },
-    "2026-10-14": {
-      "date": "2026-10-14",
-      "steps": 15067,
-      "resting_hr": 57,
-      "body_battery": 8,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 210,
-        "deep_min": 83,
-        "light_min": 127,
-        "rem_min": 0,
-        "awake_min": 64,
-        "score": 25,
-        "start": 1791942000000,
-        "end": 1791958440000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-14 14:51:07",
-          "duration_s": 2125,
-          "distance_m": 1000.0,
-          "calories": 224,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.58
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-13": {
-      "date": "2026-10-13",
-      "steps": 14512,
-      "resting_hr": 50,
-      "body_battery": 60,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 337,
-        "deep_min": 79,
-        "light_min": 246,
-        "rem_min": 12,
-        "awake_min": 28,
-        "score": 57,
-        "start": 1791847380000,
-        "end": 1791869280000
-      },
-      "activities": []
-    },
-    "2026-10-12": {
-      "date": "2026-10-12",
-      "steps": 14230,
-      "resting_hr": 59,
-      "body_battery": 34,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 325,
-        "deep_min": 92,
-        "light_min": 233,
-        "rem_min": 0,
-        "awake_min": 51,
-        "score": 53,
-        "start": 1791762240000,
-        "end": 1791784800000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-12 13:33:07",
-          "duration_s": 2157,
-          "distance_m": 1150.0,
-          "calories": 236,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.53
-        }
+    {
+      "title": "3 AI Infrastructure Stocks to Buy Right Now and Hold for 10 Years",
+      "link": "https://www.fool.com/investing/2026/10/15/ai-infrastructure-stocks-buy-now-hold-amd-tsmc/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-11": {
-      "date": "2026-10-11",
-      "steps": 8158,
-      "resting_hr": 51,
-      "body_battery": 40,
-      "avg_stress": 35,
-      "sleep": {
-        "total_min": 246,
-        "deep_min": 59,
-        "light_min": 187,
-        "rem_min": 0,
-        "awake_min": 16,
-        "score": 32,
-        "start": 1791677880000,
-        "end": 1791693600000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-11 07:21:31",
-          "duration_s": 1211,
-          "distance_m": 0.0,
-          "calories": 159,
-          "avg_hr": 122,
-          "max_hr": 150,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Big Tech Will Spend $745 Billion on AI This Year. These Stocks Get Paid on Every Dollar.",
+      "link": "https://www.fool.com/investing/2026/10/15/big-tech-745-billion-ai-stocks-paid-every-dollar/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-10": {
-      "date": "2026-10-10",
-      "steps": 6090,
-      "resting_hr": 70,
-      "body_battery": 4,
-      "avg_stress": 70,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
+    {
+      "title": "Why This AI Play — An Nvidia, Amazon Supplier — Is Outpacing The S&P",
+      "link": "https://finance.yahoo.com/m/7ad80dc0-4de1-3986-a5e7-ba50979bfef8/why-this-ai-play-%E2%80%94-an-nvidia%2C.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-09": {
-      "date": "2026-10-09",
-      "steps": 15311,
-      "resting_hr": 50,
-      "body_battery": 65,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 415,
-        "deep_min": 108,
-        "light_min": 220,
-        "rem_min": 87,
-        "awake_min": 87,
-        "score": 67,
-        "start": 1791504300000,
-        "end": 1791534420000
-      },
-      "activities": []
+    {
+      "title": "QumulusAI Puts $71.9 Million Blackwell Agreement into Production; Signed Customer Contracts Surpass $500 Million",
+      "link": "https://finance.yahoo.com/technology/ai/articles/qumulusai-puts-71-9-million-113000799.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Apple Needs Just a 7% Gain to Become the World’s Most Valuable Company",
+      "link": "https://247wallst.com/investing/2026/10/15/apple-needs-just-a-7-gain-to-become-the-worlds-most-valuable-company/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "As AI Makes Software Cheaper to Build, Data and Distribution Become the Moat",
+      "link": "https://www.fool.com/investing/2026/10/15/as-ai-makes-software-cheaper-to-build-data-and-dis/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "History Says Berkshire Hathaway Stock Holds Up When the Market Falls: It Beat the S&P 500 in 11 of 13 Down Years",
+      "link": "https://www.fool.com/investing/2026/10/15/history-says-berkshire-hathaway-stock-holds-up-whe/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stock market today: S&P 500, Nasdaq futures slip as semiconductor sell-off continues",
+      "link": "https://finance.yahoo.com/markets/live/copy-stock-market-today-hot-inflation-report-drops-tech-drives-sp-500-nasdaq-down-122056767.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Premarket movers: CoreWeave tumbles; Penske Automotive surges",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-coreweave-tumbles-penske-121441461.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Wall Street is 'tiring of the Bank of Nvidia, the Bank of AMD and the Bank of Broadcom': Baird's Mortonson",
+      "link": "https://finance.yahoo.com/markets/article/wall-street-is-tiring-of-the-bank-of-nvidia-the-bank-of-amd-and-the-bank-of-broadcom-bairds-mortonson-121235021.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dow Jones Futures Rise, But AI Sell-Off Continues On Anthropic News; Taiwan Semiconductor Earnings Strong",
+      "link": "https://finance.yahoo.com/m/aa652aec-f2fc-3be9-a055-a0a4183cba67/dow-jones-futures-rise%2C-but.html?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The S&P 500 Is Expecting Something Extraordinary. History Says Investors Should Be Careful What They Wish For.",
+      "link": "https://www.fool.com/investing/2026/10/15/sp-500-expect-extraordinary-earnings-history/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Here's What a $10,000 Investment in IonQ Could Be Worth by October 2027",
+      "link": "https://www.fool.com/investing/2026/10/15/heres-what-a-10000-investment-in-ionq-could-be-wor/?.tsrc=rss",
+      "date": "2026-10-15",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-15"
+  ]
 }
