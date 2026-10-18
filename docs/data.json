@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-17T11:17:50.412402+00:00",
-  "eurUsd": 1.1233,
+  "lastUpdated": "2026-10-18T11:54:04.886761+00:00",
+  "eurUsd": 1.1231,
   "prices": {
-    "BTC-USD": 72577.0,
-    "ETC-USD": 7.03,
-    "FLR-USD": 0.005827,
+    "BTC-USD": 72932.0,
+    "ETC-USD": 6.88,
+    "FLR-USD": 0.005734,
     "EXI2.DE": 109.52,
-    "MRVL": 167.969376,
+    "MRVL": 167.999288,
     "DFEN.DE": 55.03,
-    "NVDA": 181.438618,
+    "NVDA": 181.470929,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 395.97,
-    "pnl": -2.7,
-    "pnlPct": -0.68
+    "totalCurrent": 395.55,
+    "pnl": -3.12,
+    "pnlPct": -0.78
   },
   "history": [
-    {
-      "date": "2026-09-17",
-      "total": 380.43,
-      "pnl": -18.24,
-      "pct": -4.57
-    },
     {
       "date": "2026-09-18",
       "total": 385.52,
@@ -197,313 +191,154 @@
       "total": 395.97,
       "pnl": -2.7,
       "pct": -0.68
+    },
+    {
+      "date": "2026-10-18",
+      "total": 395.55,
+      "pnl": -3.12,
+      "pct": -0.78
     }
   ],
   "news": [
     {
-      "title": "Cathie Wood-Led Ark Invest's Biggest Q3 Winners And Losers — PLTR, NVDA, TXG Led While TSLA, RKLB Dragged",
-      "link": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-ark-invest-biggest-q3-winners-losers-pltr-nvda-txg-tsla-rklb/cZxkcykRBtO?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Missed Out On Micron and Sandisk? Make Sure You Don't Miss Out On This Memory Stock.",
-      "link": "https://www.fool.com/investing/2026/10/17/missed-out-on-micron-and-sandisk-make-sure-you-don/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Sandisk Stock Is Still Up 488% This Year Despite a 40% Drop. Is It a Buy Now?",
-      "link": "https://www.fool.com/investing/2026/10/17/sandisk-stock-is-still-up-488-this-year-despite-a-40-drop-is-it-a-buy-now/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Johnson & Johnson Just Raised Its Sales Outlook Again. Here's Why the Dividend King Is Still a Buy.",
-      "link": "https://www.fool.com/investing/2026/10/17/johnson-johnson-raise-sales-dividend-king-buy/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Could Buying Plug Power Today Transform $1,000 Into Life-Changing Wealth?",
-      "link": "https://www.fool.com/investing/2026/10/17/could-buying-plug-power-today-transform-1000-into/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SCHD Is Crushing the Vanguard High Dividend Yield ETF (VYM) This Year. I Predict That Advantage Is About to Fade.",
-      "link": "https://www.fool.com/investing/2026/10/17/schd-is-crushing-the-vanguard-high-dividend-yield/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What Danaher Stock's AI Lab Push Means For Shareholders",
-      "link": "https://finance.yahoo.com/technology/ai/articles/danaher-stocks-ai-lab-push-091338863.html?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Forget High-Yield Traps: AbbVie Is the Dividend King to Buy and Hold Through Any Rate Cycle",
-      "link": "https://www.fool.com/investing/2026/10/17/forget-high-yield-traps-abbvie-is-the-dividend-kin/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "History Says Tesla Stock Swings Hard on Earnings. It Has Moved 8% or More After 10 of Its Last 15 Reports.",
-      "link": "https://www.fool.com/investing/2026/10/17/history-says-tesla-stock-swings-hard-on-earnings-it-has-moved-8-or-more-after-10-of-its-last-15-reports/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "President Donald Trump Claims Gasoline Prices Will \"Drop Like a Rock\" When the Iran War Ends, but He's Completely Missed the Bigger Picture",
-      "link": "https://www.fool.com/investing/2026/10/17/donald-trump-claims-gas-prices-drop-like-a-rock-when-iran-war-ends-completely-miss-bigger-picture/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Here's Where The Trade Desk Stock Will Be in 2029",
-      "link": "https://www.fool.com/investing/2026/10/17/prediction-here-s-where-the-trade-desk-stock-will-be-in-2029/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What Akamai Technologies (AKAM)'s Cloud Customer Wins Mean For Shareholders",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/akamai-technologies-akam-cloud-customer-071642887.html?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "BYD or Tesla: Which Is a Better Stock?",
-      "link": "https://www.fool.com/investing/2026/10/17/byd-or-tesla-which-is-a-better-stock/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "1 Reason Intel Stock Could Outperform in 2027",
-      "link": "https://www.fool.com/investing/2026/10/17/1-reason-intel-stock-could-outperform-in-2027/?.tsrc=rss",
-      "date": "2026-10-17",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-18": {
+      "title": "Breakfast News: The Sunday Edition",
+      "link": "https://www.fool.com/investing/breakfast-news/2026/10/18/breakfast-news/?.tsrc=rss",
       "date": "2026-10-18",
-      "steps": 2520,
-      "resting_hr": 53,
-      "body_battery": 36,
-      "avg_stress": 32,
-      "sleep": {
-        "total_min": 335,
-        "deep_min": 85,
-        "light_min": 245,
-        "rem_min": 5,
-        "awake_min": 1,
-        "score": 57,
-        "start": 1792287840000,
-        "end": 1792308000000
-      },
-      "activities": []
-    },
-    "2026-10-17": {
-      "date": "2026-10-17",
-      "steps": 8432,
-      "resting_hr": 54,
-      "body_battery": 35,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 420,
-        "deep_min": 154,
-        "light_min": 254,
-        "rem_min": 12,
-        "awake_min": 45,
-        "score": 43,
-        "start": 1792195080000,
-        "end": 1792222980000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-17 09:16:57",
-          "duration_s": 1237,
-          "distance_m": 0.0,
-          "calories": 136,
-          "avg_hr": 113,
-          "max_hr": 160,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-16": {
-      "date": "2026-10-16",
-      "steps": 19452,
-      "resting_hr": 56,
-      "body_battery": 14,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 307,
-        "deep_min": 121,
-        "light_min": 186,
-        "rem_min": 0,
-        "awake_min": 76,
-        "score": 35,
-        "start": 1792106760000,
-        "end": 1792129740000
-      },
-      "activities": []
-    },
-    "2026-10-15": {
-      "date": "2026-10-15",
-      "steps": 15690,
-      "resting_hr": 60,
-      "body_battery": 8,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 251,
-        "deep_min": 95,
-        "light_min": 156,
-        "rem_min": 0,
-        "awake_min": 53,
-        "score": 31,
-        "start": 1792034820000,
-        "end": 1792053060000
-      },
-      "activities": []
-    },
-    "2026-10-14": {
-      "date": "2026-10-14",
-      "steps": 15067,
-      "resting_hr": 57,
-      "body_battery": 8,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 210,
-        "deep_min": 83,
-        "light_min": 127,
-        "rem_min": 0,
-        "awake_min": 64,
-        "score": 25,
-        "start": 1791942000000,
-        "end": 1791958440000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-14 14:51:07",
-          "duration_s": 2125,
-          "distance_m": 1000.0,
-          "calories": 224,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.58
-        }
+    {
+      "title": "We Just Witnessed a Unique Stock Market Measure Do Something for Only the 4th Time Since 1997, and It Offers a Chilling Outlook for Wall Street",
+      "link": "https://www.fool.com/investing/2026/10/18/just-witnessed-unique-stock-market-measure-do-something-4th-time-since-1997-chilling-outlook-for-wall-street/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-13": {
-      "date": "2026-10-13",
-      "steps": 14512,
-      "resting_hr": 50,
-      "body_battery": 60,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 337,
-        "deep_min": 79,
-        "light_min": 246,
-        "rem_min": 12,
-        "awake_min": 28,
-        "score": 57,
-        "start": 1791847380000,
-        "end": 1791869280000
-      },
-      "activities": []
+    {
+      "title": "Prediction: $1,000 Invested in Taiwan Semiconductor Today Will Be Worth This Much by 2030",
+      "link": "https://www.fool.com/investing/2026/10/18/prediction-1000-invested-in-taiwan-semiconductor-t/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-12": {
-      "date": "2026-10-12",
-      "steps": 14230,
-      "resting_hr": 59,
-      "body_battery": 34,
-      "avg_stress": 42,
-      "sleep": {
-        "total_min": 325,
-        "deep_min": 92,
-        "light_min": 233,
-        "rem_min": 0,
-        "awake_min": 51,
-        "score": 53,
-        "start": 1791762240000,
-        "end": 1791784800000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-12 13:33:07",
-          "duration_s": 2157,
-          "distance_m": 1150.0,
-          "calories": 236,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.53
-        }
+    {
+      "title": "Warren Buffett Says He Has \"Never Felt Better\" About Berkshire Hathaway's Future as He Steps Down as Chairman at 96",
+      "link": "https://www.fool.com/investing/2026/10/18/warren-buffett-better-berkshire-hathaway-chair/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NASA to Buy a New Space Station. Price Tag: $34.1 Billion",
+      "link": "https://www.fool.com/investing/2026/10/18/nasa-to-buy-a-new-space-station-price-tag-341-bill/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Richard Branson's Virgin Galactic Reopened Ticket Sales at $750,000 a Seat in 2026, Up From the $600,000 It Charged for 700 Previously Sold Seats. Is SPCE Stock's Pricing Power Finally Catching Up to Its Cash Burn?",
+      "link": "https://www.fool.com/investing/2026/10/18/richard-bransons-virgin-galactic-reopened-ticket-s/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "2 Retail Stocks to Buy Before the Holiday Shopping Season",
+      "link": "https://www.fool.com/investing/2026/10/18/2-retail-stocks-to-buy-before-the-holiday-shopping-season/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX Bids for Space Dominance, Plans 456 Starship Launches Per Year",
+      "link": "https://www.fool.com/investing/2026/10/18/spacex-bids-for-space-dominance-plans-456-starship/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "As Bitcoin Matures, Altcoins Face a Reckoning. Here's Which Ones Have a Real Use.",
+      "link": "https://www.fool.com/investing/2026/10/18/as-bitcoin-matures-altcoins-face-a-reckoning-heres/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Netflix Stock Has Gained in the Fourth Quarter in 17 of the Last 24 Years",
+      "link": "https://www.fool.com/investing/2026/10/18/netflix-stock-has-gained-in-the-fourth-quarter-in-17-of-the-last-24-years/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Can Alphabet Stock Double By 2030?",
+      "link": "https://www.fool.com/investing/2026/10/18/can-alphabet-stock-double-by-2030/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Centrus Energy Stock a Millionaire Maker?",
+      "link": "https://www.fool.com/investing/2026/10/18/is-centrus-energy-stock-a-millionaire-maker/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "A Record Number of S&P 500 Companies Issued Upbeat Guidance Before Earnings Season. Should You Buy an Index Fund Now?",
+      "link": "https://www.fool.com/investing/2026/10/18/a-record-number-of-s-and-p-500-companies-issued-upbeat-guidance-before-earnings-season-should-you-buy-an-index-fund-now/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "I Just Bought More Realty Income (O) Stock. Here’s How Many Shares It Takes to Collect $1,000 a Month.",
+      "link": "https://www.fool.com/investing/2026/10/18/i-just-bought-more-realty-income-o-stock-here-s-how-many-shares-it-takes-to-collect-usd1-000-a-month/?.tsrc=rss",
+      "date": "2026-10-18",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-10-18"
+  ]
 }
