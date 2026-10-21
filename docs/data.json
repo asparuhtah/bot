@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-20T12:28:02.676541+00:00",
-  "eurUsd": 1.1221,
+  "lastUpdated": "2026-10-21T12:37:54.811572+00:00",
+  "eurUsd": 1.1225,
   "prices": {
-    "BTC-USD": 72704.0,
-    "ETC-USD": 6.9,
-    "FLR-USD": 0.00563,
+    "BTC-USD": 74325.0,
+    "ETC-USD": 7.2,
+    "FLR-USD": 0.005734,
     "EXI2.DE": 109.52,
-    "MRVL": 168.149006,
+    "MRVL": 168.089087,
     "DFEN.DE": 55.03,
-    "NVDA": 181.632653,
+    "NVDA": 181.567929,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 395.41,
-    "pnl": -3.26,
-    "pnlPct": -0.82
+    "totalCurrent": 400.02,
+    "pnl": 1.35,
+    "pnlPct": 0.34
   },
   "history": [
-    {
-      "date": "2026-09-20",
-      "total": 391.17,
-      "pnl": -7.5,
-      "pct": -1.88
-    },
     {
       "date": "2026-09-21",
       "total": 399.91,
@@ -197,301 +191,154 @@
       "total": 395.41,
       "pnl": -3.26,
       "pct": -0.82
+    },
+    {
+      "date": "2026-10-21",
+      "total": 400.02,
+      "pnl": 1.35,
+      "pct": 0.34
     }
   ],
   "news": [
     {
-      "title": "Inception’s Mercury 3 Undercuts the Speed-Optimized Frontier at 1,068 Tokens per Second",
-      "link": "https://finance.yahoo.com/technology/ai/articles/inception-mercury-3-undercuts-speed-122004054.html?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA Keeps Falling and Wall Street Won’t Move Its Target. Is It Time To Buy?",
-      "link": "https://247wallst.com/investing/2026/10/20/nvidia-keeps-falling-and-wall-street-wont-move-its-target-is-it-time-to-buy/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Do You Invest For A Crash And A Rally?",
-      "link": "https://www.trefis.com/articles/619448/how-do-you-invest-for-a-crash-and-a-rally/2026-10-20?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "BlackRock CEO Larry Fink Thinks a Data Center Moratorium Could Trigger a Recession. If He's Right, Here's What History Says to Do Next.",
-      "link": "https://www.fool.com/investing/2026/10/20/blackrock-ceo-larry-fink-data-center-recession/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Apple Now Trades at Twice Nvidia’s Forward P/E",
-      "link": "https://247wallst.com/investing/2026/10/20/apple-now-trades-at-twice-nvidias-forward-p-e/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "llm-d 1.0 Advances Open, Cost-Efficient AI Inference for Production Scale",
-      "link": "https://finance.yahoo.com/technology/ai/articles/llm-d-1-0-advances-120000629.html?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dutch Bros Stock Is Down 33% While Its Same-Store Sales Keep Growing. Could the Gap Close on Nov. 4?",
-      "link": "https://www.fool.com/investing/2026/10/20/dutch-bros-stock-down-33-while-same-store-sales/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Have $1,000 to Invest? This Dirt Cheap Pharma Stock Pays You 4.2% to Wait.",
-      "link": "https://www.fool.com/investing/2026/10/20/have-1000-to-invest-this-dirt-cheap-pharma-stock-p/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Should You Buy the iShares Semiconductor ETF After Its 25% Plunge? The Answer Might Surprise You.",
-      "link": "https://www.fool.com/investing/2026/10/20/should-buy-ishares-semiconductor-etf-25-plunge-ans/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Not Anthropic. Not OpenAI. This Is the Artificial Intelligence (AI) Stock I'd Buy Before the Next Mega-IPO.",
-      "link": "https://www.fool.com/investing/2026/10/20/not-anthropic-not-openai-this-is-the-artificial-in/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Rocket Lab's Recent Fall Is Overblown",
-      "link": "https://www.fool.com/investing/2026/10/20/why-rocket-labs-fall-is-overblown/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street Gave Micron Back Its $1 Trillion Crown Just One Session Later",
-      "link": "https://247wallst.com/investing/2026/10/20/wall-street-gave-micron-back-its-1-trillion-crown-just-one-session-later/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Prediction: Here's What $1,000 Invested in Tesla Stock Will Be Worth in 3 Years",
-      "link": "https://www.fool.com/investing/2026/10/20/prediction-heres-what-1000-invested-in-tesla-stock/?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Which Stocks Are Paying For $4.33 Gas?",
-      "link": "https://www.trefis.com/articles/619447/which-stocks-are-paying-for-4-33-gas/2026-10-20?.tsrc=rss",
-      "date": "2026-10-20",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-21": {
+      "title": "Supermicro stock jumps as server maker lifts revenue forecast",
+      "link": "https://finance.yahoo.com/markets/article/supermicro-stock-jumps-as-server-maker-lifts-revenue-forecast-122408188.html?.tsrc=rss",
       "date": "2026-10-21",
-      "steps": 3971,
-      "resting_hr": 58,
-      "body_battery": 10,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 316,
-        "deep_min": 44,
-        "light_min": 272,
-        "rem_min": 0,
-        "awake_min": 33,
-        "score": 37,
-        "start": 1792544100000,
-        "end": 1792565040000
-      },
-      "activities": []
-    },
-    "2026-10-20": {
-      "date": "2026-10-20",
-      "steps": 17270,
-      "resting_hr": 59,
-      "body_battery": 7,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 235,
-        "deep_min": 57,
-        "light_min": 178,
-        "rem_min": 0,
-        "awake_min": 104,
-        "score": 21,
-        "start": 1792456800000,
-        "end": 1792477140000
-      },
-      "activities": []
-    },
-    "2026-10-19": {
-      "date": "2026-10-19",
-      "steps": 12345,
-      "resting_hr": 50,
-      "body_battery": 61,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 469,
-        "deep_min": 44,
-        "light_min": 369,
-        "rem_min": 56,
-        "awake_min": 31,
-        "score": 70,
-        "start": 1792362660000,
-        "end": 1792392660000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-19 15:32:43",
-          "duration_s": 2300,
-          "distance_m": 1600.0,
-          "calories": 358,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.77
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-18": {
-      "date": "2026-10-18",
-      "steps": 9731,
-      "resting_hr": 53,
-      "body_battery": 39,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 335,
-        "deep_min": 85,
-        "light_min": 245,
-        "rem_min": 5,
-        "awake_min": 1,
-        "score": 57,
-        "start": 1792287840000,
-        "end": 1792308000000
-      },
-      "activities": []
-    },
-    "2026-10-17": {
-      "date": "2026-10-17",
-      "steps": 8432,
-      "resting_hr": 54,
-      "body_battery": 35,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 420,
-        "deep_min": 154,
-        "light_min": 254,
-        "rem_min": 12,
-        "awake_min": 45,
-        "score": 43,
-        "start": 1792195080000,
-        "end": 1792222980000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-17 09:16:57",
-          "duration_s": 1237,
-          "distance_m": 0.0,
-          "calories": 136,
-          "avg_hr": 113,
-          "max_hr": 160,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Jensen Huang refutes AI job fears: 'It creates jobs'",
+      "link": "https://finance.yahoo.com/video/jensen-huang-refutes-ai-job-fears-it-creates-jobs-121344047.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-16": {
-      "date": "2026-10-16",
-      "steps": 19452,
-      "resting_hr": 56,
-      "body_battery": 14,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 307,
-        "deep_min": 121,
-        "light_min": 186,
-        "rem_min": 0,
-        "awake_min": 76,
-        "score": 35,
-        "start": 1792106760000,
-        "end": 1792129740000
-      },
-      "activities": []
+    {
+      "title": "Elisa taps NVIDIA and Nokia for its journey towards commercial AI-RAN in Finland",
+      "link": "https://finance.yahoo.com/technology/ai/articles/elisa-taps-nvidia-nokia-journey-123200821.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-15": {
-      "date": "2026-10-15",
-      "steps": 15690,
-      "resting_hr": 60,
-      "body_battery": 8,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 251,
-        "deep_min": 95,
-        "light_min": 156,
-        "rem_min": 0,
-        "awake_min": 53,
-        "score": 31,
-        "start": 1792034820000,
-        "end": 1792053060000
-      },
-      "activities": []
+    {
+      "title": "3 Stocks to Buy Before Wall Street Catches On Before October Ends",
+      "link": "https://247wallst.com/investing/2026/10/21/3-stocks-to-buy-before-wall-street-catches-on-before-october-ends/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "CrowdStrike stock rises on expanded NVIDIA AI security partnership",
+      "link": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-stock-rises-expanded-nvidia-121257721.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia’s Huang highlights AI benefits in Berlin speech amid wider European tour",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-huang-highlights-ai-benefits-120916333.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Savvy Investors Love This Often Overlooked Clue. It's Flashing Now For This Nvidia, Google Partner.",
+      "link": "https://finance.yahoo.com/m/102935b0-172b-3259-a728-d401ed48ab63/savvy-investors-love-this.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Quantum X Labs’ Decoder Delivers Lowest Logical Error Rates by integrating NVIDIA CUDA-Q QEC in Comparison to Other Decoders",
+      "link": "https://finance.yahoo.com/technology/ai/articles/quantum-x-labs-decoder-delivers-120100535.html?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Bitmine's Tom Lee Warns of a Potential Sell-Off in Ethereum. Here's the Most Likely Scenario for ETH.",
+      "link": "https://www.fool.com/investing/2026/10/21/bitmines-tom-lee-warns-of-a-potential-sell-off-in/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Micron Tripled in 2026. Can It Repeat in 2027?",
+      "link": "https://www.fool.com/investing/2026/10/21/micron-tripled-in-2026-can-it-repeat-in-2027/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Novo's CagriSema Delivered 25% Weight Loss in Women. Could It Help Turn Around the Beaten-Down Stock?",
+      "link": "https://www.fool.com/investing/2026/10/21/novos-cagrisema-delivered-25-weight-loss-in-women-could-it-help-turn-around-the-beaten-down-stock/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nebius Less Exposed To AI Cloud Debt Concerns, Says CRO Marc Boroditsky — Piper Sandler Cuts Target 22%",
+      "link": "https://stocktwits.com/news-articles/markets/equity/nebius-less-exposed-to-ai-cloud-debt-concerns-says-cro-marc-boroditsky-piper-sandler-cuts-target-22/cZxMb9dRBve?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Better Altcoin Buy: XRP vs. Solana",
+      "link": "https://www.fool.com/investing/2026/10/21/better-altcoin-buy-xrp-vs-solana/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Super Micro Says AI Demand Is So Strong It Blew Past Its Own Forecast by 25%",
+      "link": "https://247wallst.com/investing/2026/10/21/super-micro-says-ai-demand-is-so-strong-it-blew-past-its-own-forecast-by-25/?.tsrc=rss",
+      "date": "2026-10-21",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-21"
+  ]
 }
