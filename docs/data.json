@@ -340,5 +340,169 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-10-24": {
+      "date": "2026-10-24",
+      "steps": 1051,
+      "resting_hr": 53,
+      "body_battery": 35,
+      "avg_stress": 30,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-10-23": {
+      "date": "2026-10-23",
+      "steps": 14348,
+      "resting_hr": 57,
+      "body_battery": 23,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 382,
+        "deep_min": 84,
+        "light_min": 283,
+        "rem_min": 15,
+        "awake_min": 74,
+        "score": 34,
+        "start": 1792712400000,
+        "end": 1792739760000
+      },
+      "activities": []
+    },
+    "2026-10-22": {
+      "date": "2026-10-22",
+      "steps": 16145,
+      "resting_hr": 53,
+      "body_battery": 24,
+      "avg_stress": 56,
+      "sleep": {
+        "total_min": 302,
+        "deep_min": 89,
+        "light_min": 183,
+        "rem_min": 30,
+        "awake_min": 9,
+        "score": 61,
+        "start": 1792634520000,
+        "end": 1792653180000
+      },
+      "activities": []
+    },
+    "2026-10-21": {
+      "date": "2026-10-21",
+      "steps": 17287,
+      "resting_hr": 58,
+      "body_battery": 10,
+      "avg_stress": 50,
+      "sleep": {
+        "total_min": 316,
+        "deep_min": 44,
+        "light_min": 272,
+        "rem_min": 0,
+        "awake_min": 33,
+        "score": 37,
+        "start": 1792544100000,
+        "end": 1792565040000
+      },
+      "activities": [
+        {
+          "type": "hiit",
+          "name": "HIIT",
+          "start": "2026-10-21 19:01:08",
+          "duration_s": 3755,
+          "distance_m": 0.0,
+          "calories": 389,
+          "avg_hr": 118,
+          "max_hr": 161,
+          "avg_speed": 0.0
+        },
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-10-21 14:23:09",
+          "duration_s": 2146,
+          "distance_m": 1500.0,
+          "calories": 310,
+          "avg_hr": null,
+          "max_hr": null,
+          "avg_speed": 0.7
+        }
+      ]
+    },
+    "2026-10-20": {
+      "date": "2026-10-20",
+      "steps": 17270,
+      "resting_hr": 59,
+      "body_battery": 7,
+      "avg_stress": 55,
+      "sleep": {
+        "total_min": 235,
+        "deep_min": 57,
+        "light_min": 178,
+        "rem_min": 0,
+        "awake_min": 104,
+        "score": 21,
+        "start": 1792456800000,
+        "end": 1792477140000
+      },
+      "activities": []
+    },
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "steps": 12345,
+      "resting_hr": 50,
+      "body_battery": 61,
+      "avg_stress": 43,
+      "sleep": {
+        "total_min": 469,
+        "deep_min": 44,
+        "light_min": 369,
+        "rem_min": 56,
+        "awake_min": 31,
+        "score": 70,
+        "start": 1792362660000,
+        "end": 1792392660000
+      },
+      "activities": [
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-10-19 15:32:43",
+          "duration_s": 2300,
+          "distance_m": 1600.0,
+          "calories": 358,
+          "avg_hr": null,
+          "max_hr": null,
+          "avg_speed": 0.77
+        }
+      ]
+    },
+    "2026-10-18": {
+      "date": "2026-10-18",
+      "steps": 9731,
+      "resting_hr": 53,
+      "body_battery": 39,
+      "avg_stress": 46,
+      "sleep": {
+        "total_min": 335,
+        "deep_min": 85,
+        "light_min": 245,
+        "rem_min": 5,
+        "awake_min": 1,
+        "score": 57,
+        "start": 1792287840000,
+        "end": 1792308000000
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-10-24"
 }
