@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-24T11:46:55.987497+00:00",
-  "eurUsd": 1.1191,
+  "lastUpdated": "2026-10-25T12:16:17.338900+00:00",
+  "eurUsd": 1.1199,
   "prices": {
-    "BTC-USD": 71882.0,
-    "ETC-USD": 6.79,
-    "FLR-USD": 0.005382,
+    "BTC-USD": 71768.0,
+    "ETC-USD": 6.7,
+    "FLR-USD": 0.005448,
     "EXI2.DE": 109.52,
-    "MRVL": 168.599768,
+    "MRVL": 168.479329,
     "DFEN.DE": 55.03,
-    "NVDA": 182.11956,
+    "NVDA": 181.989463,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 393.63,
-    "pnl": -5.04,
-    "pnlPct": -1.27
+    "totalCurrent": 392.76,
+    "pnl": -5.91,
+    "pnlPct": -1.48
   },
   "history": [
-    {
-      "date": "2026-09-24",
-      "total": 404.01,
-      "pnl": 5.34,
-      "pct": 1.34
-    },
     {
       "date": "2026-09-25",
       "total": 405.48,
@@ -197,312 +191,154 @@
       "total": 393.63,
       "pnl": -5.04,
       "pct": -1.27
+    },
+    {
+      "date": "2026-10-25",
+      "total": 392.76,
+      "pnl": -5.91,
+      "pct": -1.48
     }
   ],
   "news": [
     {
-      "title": "Prediction: $200 a Month Invested in Nvidia Will Be Worth This Much by 2035",
-      "link": "https://www.fool.com/investing/2026/10/24/prediction-200-a-month-invested-in-nvidia-will-be/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Jensen Huang Says AI Demand Is \"Off the Charts.\" The Money to Pay for It Isn't",
-      "link": "https://www.fool.com/investing/2026/10/24/jensen-huang-says-ai-demand-is-off-the-charts-the-money-to-pay-for-it-isn-t/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Apple Just Passed Nvidia as the World’s Most Valuable Company on iPhone Duo Day",
-      "link": "https://247wallst.com/investing/2026/10/24/apple-just-passed-nvidia-as-the-worlds-most-valuable-company-on-iphone-duo-day/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "3 Key Things to Monitor When Tech Giants Report Earnings",
-      "link": "https://www.fool.com/investing/2026/10/24/3-key-things-to-monitor-when-tech-giants-report-ea/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "2 Unloved Stocks of 2026 to Consider Buying Now",
-      "link": "https://www.fool.com/investing/2026/10/24/2-unloved-stocks-of-2026-to-consider-buying-now/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "History Says Nvidia Rarely Trades This Cheaply. Here's What Happened the Last Time.",
-      "link": "https://www.fool.com/investing/2026/10/24/history-says-nvidia-rarely-trades-this-cheaply-her/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Here's Why AMD Investors Should Consider Selling Before Nov. 3",
-      "link": "https://www.fool.com/investing/2026/10/24/heres-why-amd-investors-should-consider-selling-be/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Tech Stock Sell-Off: This Could Be the Most Powerful Reason to Buy Bonds Right Now",
-      "link": "https://www.fool.com/investing/2026/10/24/tech-stock-sell-off-reason-buy-bonds/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Caterpillar Is Quietly Becoming an AI Stock. Here's the Segment Growing 72% That Proves It.",
-      "link": "https://www.fool.com/investing/2026/10/24/caterpillar-is-quietly-becoming-an-ai-stock-heres/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Better Buy: Solana vs. XRP",
-      "link": "https://www.fool.com/investing/2026/10/24/better-buy-solana-vs-xrp/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SpaceX Shares Surge as Elon Musk Makes Huge Revenue Prediction. Is the Stock Still a Buy?",
-      "link": "https://www.fool.com/investing/2026/10/24/spacex-stock-surge-elon-musk-revenue-stock-buy/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Amazon Spent More on Data Centers Last Quarter Than AWS Earned in Revenue. Should Investors Worry?",
-      "link": "https://www.fool.com/investing/2026/10/24/amazon-spent-more-on-data-centers-last-quarter-than-aws-earned-in-revenue-should-investors-worry/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Rocket Lab Is Buying Iridium, and Guess What? Iridium Just Beat Earnings!",
-      "link": "https://www.fool.com/investing/2026/10/24/rocket-lab-buying-iridium-which-just-beat-earnings/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "President Donald Trump Pledged Not to Touch Social Security, but He's Indirectly Dug a $169 Billion Hole for America's Top Retirement Program",
-      "link": "https://www.fool.com/retirement/2026/10/24/donald-trump-pledged-not-to-touch-social-security-but-he-indirectly-dug-169-billion-hole/?.tsrc=rss",
-      "date": "2026-10-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-25": {
+      "title": "Why Are Investors Buying Credit Default Swaps to Hedge AI-Related Debt?",
+      "link": "https://investorshub.advfn.com/market-news/article/38472/why-are-investors-buying-credit-default-swaps-to-hedge-ai-related-debt?.tsrc=rss",
       "date": "2026-10-25",
-      "steps": 521,
-      "resting_hr": 53,
-      "body_battery": 39,
-      "avg_stress": 30,
-      "sleep": {
-        "total_min": 397,
-        "deep_min": 72,
-        "light_min": 269,
-        "rem_min": 56,
-        "awake_min": 131,
-        "score": 62,
-        "start": 1792874940000,
-        "end": 1792906620000
-      },
-      "activities": []
-    },
-    "2026-10-24": {
-      "date": "2026-10-24",
-      "steps": 4554,
-      "resting_hr": 53,
-      "body_battery": 35,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 136,
-        "light_min": 279,
-        "rem_min": 17,
-        "awake_min": 57,
-        "score": 43,
-        "start": 1792797480000,
-        "end": 1792826820000
-      },
-      "activities": []
-    },
-    "2026-10-23": {
-      "date": "2026-10-23",
-      "steps": 14348,
-      "resting_hr": 57,
-      "body_battery": 23,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 382,
-        "deep_min": 84,
-        "light_min": 283,
-        "rem_min": 15,
-        "awake_min": 74,
-        "score": 34,
-        "start": 1792712400000,
-        "end": 1792739760000
-      },
-      "activities": []
-    },
-    "2026-10-22": {
-      "date": "2026-10-22",
-      "steps": 16145,
-      "resting_hr": 53,
-      "body_battery": 24,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 302,
-        "deep_min": 89,
-        "light_min": 183,
-        "rem_min": 30,
-        "awake_min": 9,
-        "score": 61,
-        "start": 1792634520000,
-        "end": 1792653180000
-      },
-      "activities": []
-    },
-    "2026-10-21": {
-      "date": "2026-10-21",
-      "steps": 17287,
-      "resting_hr": 58,
-      "body_battery": 10,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 316,
-        "deep_min": 44,
-        "light_min": 272,
-        "rem_min": 0,
-        "awake_min": 33,
-        "score": 37,
-        "start": 1792544100000,
-        "end": 1792565040000
-      },
-      "activities": [
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-10-21 19:01:08",
-          "duration_s": 3755,
-          "distance_m": 0.0,
-          "calories": 389,
-          "avg_hr": 118,
-          "max_hr": 161,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-21 14:23:09",
-          "duration_s": 2146,
-          "distance_m": 1500.0,
-          "calories": 310,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.7
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-20": {
-      "date": "2026-10-20",
-      "steps": 17270,
-      "resting_hr": 59,
-      "body_battery": 7,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 235,
-        "deep_min": 57,
-        "light_min": 178,
-        "rem_min": 0,
-        "awake_min": 104,
-        "score": 21,
-        "start": 1792456800000,
-        "end": 1792477140000
-      },
-      "activities": []
+    {
+      "title": "If the Stock Market Crashes, This Is the First ETF I'm Loading Up On",
+      "link": "https://www.fool.com/investing/2026/10/25/if-stock-market-crashes-first-etf-buy-qqq/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-19": {
-      "date": "2026-10-19",
-      "steps": 12345,
-      "resting_hr": 50,
-      "body_battery": 61,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 469,
-        "deep_min": 44,
-        "light_min": 369,
-        "rem_min": 56,
-        "awake_min": 31,
-        "score": 70,
-        "start": 1792362660000,
-        "end": 1792392660000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-19 15:32:43",
-          "duration_s": 2300,
-          "distance_m": 1600.0,
-          "calories": 358,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.77
-        }
+    {
+      "title": "AI Debt Has Exploded 4X To Nearly $500 Billion: What It Means For NVDA, ORCL And CRWV, According To IO Fund",
+      "link": "https://stocktwits.com/news-articles/markets/equity/ai-debt-boom-4x-500-billion-what-means-nvda-orcl-crwv/cZUcrs8RBUZ?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Elon Musk Just Delivered Spectacular News for SpaceX Stock Investors",
+      "link": "https://www.fool.com/investing/2026/10/25/elon-musk-delivered-spectacular-news-spacex-stock/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Netflix Is Shaking Up Its Content Leadership. Here's What Needs to Happen Next.",
+      "link": "https://www.fool.com/investing/2026/10/25/netflix-shaking-up-content-leaders-what-next/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Good News for Tesla Investors: 3 Key Benchmarks Elon Musk's Company Delivered On in the Third Quarter",
+      "link": "https://www.fool.com/investing/2026/10/25/good-news-for-tesla-investors-3-key-benchmarks-elo/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will Neurocrine Biosciences Be in 5 Years?",
+      "link": "https://www.fool.com/investing/2026/10/25/where-will-neurocrine-biosciences-be-in-5-years/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will Broadcom Stock Be in 5 Years?",
+      "link": "https://www.fool.com/investing/2026/10/25/where-will-broadcom-stock-be-in-5-years/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Berkshire Hathaway Started Buying Back Its Own Stock Again This Year. Should You Buy It at a Record High?",
+      "link": "https://www.fool.com/investing/2026/10/25/berkshire-hathaway-started-buying-back-its-own-stock-again-this-year-should-you-buy-it-at-a-record-high/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "How to Split $10,000 Across 5 ETFs and Not Touch It for 20 Years",
+      "link": "https://www.fool.com/investing/2026/10/25/how-to-split-10000-across-5-etfs-and-not-touch-it/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If You Invest $1,000 a Year in Morgan Stanley (MS) Stock, How Much Dividend Income Could It Generate Over 20 Years?",
+      "link": "https://www.fool.com/investing/2026/10/25/if-you-invest-1000-a-year-in-morgan-stanley-ms-sto/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "History Shows 1 Powerful Fact That Makes Me Bullish on VTI",
+      "link": "https://www.fool.com/investing/2026/10/25/history-shows-1-powerful-fact-that-makes-me-bullis/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Berkshire Hathaway Stock Rose 10 Days in a Row in October for the First Time Since 2018. Here's What History Says Comes Next.",
+      "link": "https://www.fool.com/investing/2026/10/25/berkshire-hathaway-stock-rose-10-days-in-a-row-in/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Where Will Bloom Energy Stock Be in 5 Years?",
+      "link": "https://www.fool.com/investing/2026/10/25/where-will-bloom-energy-stock-be-in-5-years/?.tsrc=rss",
+      "date": "2026-10-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-10-25"
+  ]
 }
