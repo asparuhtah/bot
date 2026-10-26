@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-25T12:16:17.338900+00:00",
-  "eurUsd": 1.1199,
+  "lastUpdated": "2026-10-26T13:46:50.483321+00:00",
+  "eurUsd": 1.1182,
   "prices": {
-    "BTC-USD": 71768.0,
-    "ETC-USD": 6.7,
-    "FLR-USD": 0.005448,
+    "BTC-USD": 71239.0,
+    "ETC-USD": 6.73,
+    "FLR-USD": 0.005422,
     "EXI2.DE": 109.52,
-    "MRVL": 168.479329,
+    "MRVL": 168.735468,
     "DFEN.DE": 55.03,
-    "NVDA": 181.989463,
+    "NVDA": 182.266142,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 392.76,
-    "pnl": -5.91,
-    "pnlPct": -1.48
+    "totalCurrent": 392.27,
+    "pnl": -6.4,
+    "pnlPct": -1.61
   },
   "history": [
-    {
-      "date": "2026-09-25",
-      "total": 405.48,
-      "pnl": 6.81,
-      "pct": 1.71
-    },
     {
       "date": "2026-09-26",
       "total": 405.8,
@@ -197,300 +191,154 @@
       "total": 392.76,
       "pnl": -5.91,
       "pct": -1.48
+    },
+    {
+      "date": "2026-10-26",
+      "total": 392.27,
+      "pnl": -6.4,
+      "pct": -1.61
     }
   ],
   "news": [
     {
-      "title": "Why Are Investors Buying Credit Default Swaps to Hedge AI-Related Debt?",
-      "link": "https://investorshub.advfn.com/market-news/article/38472/why-are-investors-buying-credit-default-swaps-to-hedge-ai-related-debt?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If the Stock Market Crashes, This Is the First ETF I'm Loading Up On",
-      "link": "https://www.fool.com/investing/2026/10/25/if-stock-market-crashes-first-etf-buy-qqq/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AI Debt Has Exploded 4X To Nearly $500 Billion: What It Means For NVDA, ORCL And CRWV, According To IO Fund",
-      "link": "https://stocktwits.com/news-articles/markets/equity/ai-debt-boom-4x-500-billion-what-means-nvda-orcl-crwv/cZUcrs8RBUZ?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Elon Musk Just Delivered Spectacular News for SpaceX Stock Investors",
-      "link": "https://www.fool.com/investing/2026/10/25/elon-musk-delivered-spectacular-news-spacex-stock/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Netflix Is Shaking Up Its Content Leadership. Here's What Needs to Happen Next.",
-      "link": "https://www.fool.com/investing/2026/10/25/netflix-shaking-up-content-leaders-what-next/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Good News for Tesla Investors: 3 Key Benchmarks Elon Musk's Company Delivered On in the Third Quarter",
-      "link": "https://www.fool.com/investing/2026/10/25/good-news-for-tesla-investors-3-key-benchmarks-elo/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Where Will Neurocrine Biosciences Be in 5 Years?",
-      "link": "https://www.fool.com/investing/2026/10/25/where-will-neurocrine-biosciences-be-in-5-years/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Where Will Broadcom Stock Be in 5 Years?",
-      "link": "https://www.fool.com/investing/2026/10/25/where-will-broadcom-stock-be-in-5-years/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Berkshire Hathaway Started Buying Back Its Own Stock Again This Year. Should You Buy It at a Record High?",
-      "link": "https://www.fool.com/investing/2026/10/25/berkshire-hathaway-started-buying-back-its-own-stock-again-this-year-should-you-buy-it-at-a-record-high/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How to Split $10,000 Across 5 ETFs and Not Touch It for 20 Years",
-      "link": "https://www.fool.com/investing/2026/10/25/how-to-split-10000-across-5-etfs-and-not-touch-it/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You Invest $1,000 a Year in Morgan Stanley (MS) Stock, How Much Dividend Income Could It Generate Over 20 Years?",
-      "link": "https://www.fool.com/investing/2026/10/25/if-you-invest-1000-a-year-in-morgan-stanley-ms-sto/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "History Shows 1 Powerful Fact That Makes Me Bullish on VTI",
-      "link": "https://www.fool.com/investing/2026/10/25/history-shows-1-powerful-fact-that-makes-me-bullis/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Berkshire Hathaway Stock Rose 10 Days in a Row in October for the First Time Since 2018. Here's What History Says Comes Next.",
-      "link": "https://www.fool.com/investing/2026/10/25/berkshire-hathaway-stock-rose-10-days-in-a-row-in/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Where Will Bloom Energy Stock Be in 5 Years?",
-      "link": "https://www.fool.com/investing/2026/10/25/where-will-bloom-energy-stock-be-in-5-years/?.tsrc=rss",
-      "date": "2026-10-25",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-26": {
+      "title": "The 10 biggest stocks are faltering, and it's dragging the S&P 500 down",
+      "link": "https://finance.yahoo.com/markets/article/the-10-biggest-stocks-are-faltering-and-its-dragging-the-sp-500-down-122521456.html?.tsrc=rss",
       "date": "2026-10-26",
-      "steps": 3411,
-      "resting_hr": 56,
-      "body_battery": 29,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 433,
-        "deep_min": 112,
-        "light_min": 316,
-        "rem_min": 5,
-        "awake_min": 35,
-        "score": 41,
-        "start": 1792967460000,
-        "end": 1792995540000
-      },
-      "activities": []
-    },
-    "2026-10-25": {
-      "date": "2026-10-25",
-      "steps": 14392,
-      "resting_hr": 53,
-      "body_battery": 46,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 397,
-        "deep_min": 72,
-        "light_min": 269,
-        "rem_min": 56,
-        "awake_min": 131,
-        "score": 62,
-        "start": 1792874940000,
-        "end": 1792906620000
-      },
-      "activities": []
-    },
-    "2026-10-24": {
-      "date": "2026-10-24",
-      "steps": 4554,
-      "resting_hr": 53,
-      "body_battery": 35,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 136,
-        "light_min": 279,
-        "rem_min": 17,
-        "awake_min": 57,
-        "score": 43,
-        "start": 1792797480000,
-        "end": 1792826820000
-      },
-      "activities": []
-    },
-    "2026-10-23": {
-      "date": "2026-10-23",
-      "steps": 14348,
-      "resting_hr": 57,
-      "body_battery": 23,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 382,
-        "deep_min": 84,
-        "light_min": 283,
-        "rem_min": 15,
-        "awake_min": 74,
-        "score": 34,
-        "start": 1792712400000,
-        "end": 1792739760000
-      },
-      "activities": []
-    },
-    "2026-10-22": {
-      "date": "2026-10-22",
-      "steps": 16145,
-      "resting_hr": 53,
-      "body_battery": 24,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 302,
-        "deep_min": 89,
-        "light_min": 183,
-        "rem_min": 30,
-        "awake_min": 9,
-        "score": 61,
-        "start": 1792634520000,
-        "end": 1792653180000
-      },
-      "activities": []
-    },
-    "2026-10-21": {
-      "date": "2026-10-21",
-      "steps": 17287,
-      "resting_hr": 58,
-      "body_battery": 10,
-      "avg_stress": 50,
-      "sleep": {
-        "total_min": 316,
-        "deep_min": 44,
-        "light_min": 272,
-        "rem_min": 0,
-        "awake_min": 33,
-        "score": 37,
-        "start": 1792544100000,
-        "end": 1792565040000
-      },
-      "activities": [
-        {
-          "type": "hiit",
-          "name": "HIIT",
-          "start": "2026-10-21 19:01:08",
-          "duration_s": 3755,
-          "distance_m": 0.0,
-          "calories": 389,
-          "avg_hr": 118,
-          "max_hr": 161,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-10-21 14:23:09",
-          "duration_s": 2146,
-          "distance_m": 1500.0,
-          "calories": 310,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.7
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-20": {
-      "date": "2026-10-20",
-      "steps": 17270,
-      "resting_hr": 59,
-      "body_battery": 7,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 235,
-        "deep_min": 57,
-        "light_min": 178,
-        "rem_min": 0,
-        "awake_min": 104,
-        "score": 21,
-        "start": 1792456800000,
-        "end": 1792477140000
-      },
-      "activities": []
+    {
+      "title": "The bull case for Nvidia as most S&P 500 stocks slide",
+      "link": "https://www.thestreet.com/investing/bull-case-for-nvidia-as-most-sp-500-stocks-slide?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "1 Unstoppable Stock-Split Stock to Buy Before It Joins Nvidia, Alphabet, Microsoft, and Apple in the $3 Trillion Club",
+      "link": "https://www.fool.com/investing/2026/10/26/1-stock-split-stock-buy-nvidia-alphabet-3-trillion/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Ocean Power Technologies, Stratum sign LOI to test renewable-powered offshore data center",
+      "link": "https://www.proactiveinvestors.com/companies/news/1100688/ocean-power-technologies-stratum-sign-loi-to-test-renewable-powered-offshore-data-center-1100688.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SMH’s Price Has Soared, but Its Payout Is Still Below 2022 Levels",
+      "link": "https://247wallst.com/investing/etf/2026/10/26/smhs-price-has-soared-but-its-payout-is-still-below-2022-levels/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SpaceX's Elon Musk reveals $40 billion in debt for AI chips, warns of neoclouds",
+      "link": "https://finance.yahoo.com/markets/stocks/article/spacexs-elon-musk-reveals-40-billion-in-debt-for-ai-chips-warns-of-neoclouds-122318683.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 Reasons to Buy Reddit Stock This Week",
+      "link": "https://www.fool.com/investing/2026/10/26/3-reasons-to-buy-reddit-stock-this-week/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Update: Meta Launches $35 Billion Stock, Preferred Offerings; Plans Potential $60 Billion ATM Stock Offering",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/meta-launches-35-billion-stock-122202450.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meta Stock Has Dropped the Day After 3 Straight Earnings Reports. Is It a Buy Now?",
+      "link": "https://www.fool.com/investing/2026/10/26/meta-stock-has-dropped-the-day-after-3-straight-earnings-reports-is-it-a-buy-now/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Bedrock Robotics Raises $600 Million Series C to Scale Autonomous Construction Equipment Across U.S. Sites",
+      "link": "https://finance.yahoo.com/technology/ai/articles/bedrock-robotics-raises-600-million-133500451.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Robinhood Stock a Buy About a Third Below Its Record High?",
+      "link": "https://www.fool.com/investing/2026/10/26/is-robinhood-stock-a-buy-about-a-third-below-its-r/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Micron Just Delivered a Monster Quarter, but the Stock Is Plummeting. The Reason Is Obvious.",
+      "link": "https://www.fool.com/investing/2026/10/26/micron-just-delivered-a-monster-quarter-but-the-st/?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Elon Musk predicts many neoclouds will experience 'guppy-level death'",
+      "link": "https://finance.yahoo.com/video/elon-musk-predicts-many-neoclouds-will-experience-guppy-level-death-131438289.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Meta is raising even more cash to fund the AI build-out — as much as $95B",
+      "link": "https://finance.yahoo.com/video/meta-is-raising-even-more-cash-to-fund-the-ai-build-out--as-much-as-95b-130042491.html?.tsrc=rss",
+      "date": "2026-10-26",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-26"
+  ]
 }
