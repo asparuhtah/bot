@@ -1,25 +1,25 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 79910.0,
+      "price": 80420.0,
       "ccy": "USD",
-      "price_eur": 71656.0,
+      "price_eur": 72232.0,
       "src": "coingecko",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     },
     "ETC": {
-      "price": 7.5,
+      "price": 7.57,
       "ccy": "USD",
-      "price_eur": 6.72,
+      "price_eur": 6.8,
       "src": "coingecko",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     },
     "FLR": {
-      "price": 0.006046,
+      "price": 0.006079,
       "ccy": "USD",
-      "price_eur": 0.005421,
+      "price_eur": 0.00546,
       "src": "coingecko",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     },
     "EXI2": {
       "price": 117.70528,
@@ -54,25 +54,25 @@
       "ccy": "EUR",
       "price_eur": 20.81,
       "src": "manual",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     },
     "PERSONAL": {
       "price": 126.76,
       "ccy": "EUR",
       "price_eur": 126.76,
       "src": "manual",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     },
     "CASH": {
       "price": 0.43,
       "ccy": "EUR",
       "price_eur": 0.43,
       "src": "manual",
-      "at": "2026-10-27T14:21+02:00"
+      "at": "2026-10-27T20:05+02:00"
     }
   },
-  "last_eurusd": 1.11492,
-  "last_hour_logged": "2026-10-27 14",
+  "last_eurusd": 1.11344,
+  "last_hour_logged": "2026-10-27 20",
   "alert_state": {},
   "move_sent": {
     "ETC:down": "2026-10-22",
