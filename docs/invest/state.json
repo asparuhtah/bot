@@ -1,25 +1,25 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 80033.0,
+      "price": 80122.0,
       "ccy": "USD",
-      "price_eur": 71612.0,
+      "price_eur": 71718.0,
       "src": "coingecko",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "ETC": {
-      "price": 7.57,
+      "price": 7.61,
       "ccy": "USD",
-      "price_eur": 6.78,
+      "price_eur": 6.82,
       "src": "coingecko",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "FLR": {
-      "price": 0.00608,
+      "price": 0.006089,
       "ccy": "USD",
-      "price_eur": 0.00544,
+      "price_eur": 0.00545,
       "src": "coingecko",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "EXI2": {
       "price": 117.70528,
@@ -43,40 +43,41 @@
       "at": "2026-09-27T14:34+03:00"
     },
     "NVDA": {
-      "price": 229.28,
+      "price": 216.0,
       "ccy": "USD",
-      "price_eur": 204.845972,
+      "price_eur": 193.338764,
       "src": "yahoo",
-      "at": "2026-10-10T18:13+03:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "ROBO": {
       "price": 20.81,
       "ccy": "EUR",
       "price_eur": 20.81,
       "src": "manual",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "PERSONAL": {
       "price": 126.76,
       "ccy": "EUR",
       "price_eur": 126.76,
       "src": "manual",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     },
     "CASH": {
       "price": 0.43,
       "ccy": "EUR",
       "price_eur": 0.43,
       "src": "manual",
-      "at": "2026-10-26T23:49+02:00"
+      "at": "2026-10-27T02:53+02:00"
     }
   },
-  "last_eurusd": 1.11767,
-  "last_hour_logged": "2026-10-26 23",
+  "last_eurusd": 1.11721,
+  "last_hour_logged": "2026-10-27 02",
   "alert_state": {},
   "move_sent": {
     "ETC:down": "2026-10-22",
-    "FLR:up": "2026-09-30"
+    "FLR:up": "2026-09-30",
+    "NVDA:down": "2026-10-27"
   },
   "pnl_band": 4,
   "last_weekly": "2026-W43",
