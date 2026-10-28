@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-10-27T12:54:19.575009+00:00",
-  "eurUsd": 1.1152,
+  "lastUpdated": "2026-10-28T13:43:19.397582+00:00",
+  "eurUsd": 1.1136,
   "prices": {
-    "BTC-USD": 72003.0,
+    "BTC-USD": 72493.0,
     "ETC-USD": 6.78,
-    "FLR-USD": 0.005451,
+    "FLR-USD": 0.00549,
     "EXI2.DE": 109.52,
-    "MRVL": 169.189383,
+    "MRVL": 169.432471,
     "DFEN.DE": 55.03,
-    "NVDA": 182.756456,
+    "NVDA": 183.019037,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 394.13,
-    "pnl": -4.54,
-    "pnlPct": -1.14
+    "totalCurrent": 395.08,
+    "pnl": -3.59,
+    "pnlPct": -0.9
   },
   "history": [
-    {
-      "date": "2026-09-27",
-      "total": 406.42,
-      "pnl": 7.75,
-      "pct": 1.94
-    },
     {
       "date": "2026-09-28",
       "total": 401.78,
@@ -197,289 +191,154 @@
       "total": 394.13,
       "pnl": -4.54,
       "pct": -1.14
+    },
+    {
+      "date": "2026-10-28",
+      "total": 395.08,
+      "pnl": -3.59,
+      "pct": -0.9
     }
   ],
   "news": [
     {
-      "title": "Nvidia to invest $3 billion in Meta, expand partnership on Muse",
-      "link": "https://finance.yahoo.com/markets/article/nvidia-to-invest-3-billion-in-meta-expand-partnership-on-muse-125249944.html?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Last Month Exposed The Risk Narrative Between Nvidia Vs.Taiwan Semiconductor",
-      "link": "https://247wallst.com/investing/2026/10/27/the-last-month-exposed-the-risk-narrative-between-nvidia-vs-taiwan-semiconductor/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Big Tech Is About to Report. Nvidia Investors Should Watch One Number.",
-      "link": "https://www.fool.com/investing/2026/10/27/big-tech-is-about-to-report-nvidia-investors-should-watch-one-number/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "These AI Chip Stocks May Be Just Getting Started",
-      "link": "https://247wallst.com/investing/2026/10/27/these-ai-chip-stocks-may-be-just-getting-started/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Are You Overpaying For Micron Stock Versus Its Peers?",
-      "link": "https://www.trefis.com/stock/mu/articles/620745/are-you-overpaying-for-micron-stock-versus-its-peers/2026-10-27?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "How Long Does It Take to Build $2,000 Per Month in Passive Dividend Income? Here's What History Says.",
-      "link": "https://www.fool.com/investing/2026/10/27/how-long-monthly-passive-dividend-income-history/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What Few Investors Realize About QQQ’s Dividend",
-      "link": "https://247wallst.com/investing/etf/2026/10/27/what-few-investors-realize-about-qqqs-dividend/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Apple Could Lose Its $5 Trillion Valuation as iPhone Duo Screens Crack",
-      "link": "https://247wallst.com/investing/2026/10/27/apple-could-lose-its-5-trillion-valuation-as-iphone-duo-screens-crack/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Schneider Electric, Nscale and Start Campus Bring the NVIDIA Omniverse DSX Blueprint into a Live AI Factory Environment",
-      "link": "https://finance.yahoo.com/technology/ai/articles/schneider-electric-nscale-start-campus-120000650.html?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "IREN Limited Fell by 33% in 2026 But 3 Analysts Believe It Will Nearly Quadruple in Price From Here",
-      "link": "https://247wallst.com/investing/2026/10/27/iren-limited-fell-by-33-in-2026-but-3-analysts-believe-it-will-nearly-quadruple-in-price-from-here/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Better Defense Stock to Own Through 2030: Palantir vs. RTX Corporation",
-      "link": "https://www.fool.com/investing/2026/10/27/better-defense-stock-to-own-through-2030-palantir/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "President Trump Has Endorsed 8 Different Cryptocurrencies Since Taking Office in 2025. On Average, They Are Down 60%, So Buyer Beware.",
-      "link": "https://www.fool.com/investing/2026/10/27/president-trump-has-endorsed-8-different-cryptocur/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SpaceX secures $40bn finance lease commitment for GPUs",
-      "link": "https://www.verdict.co.uk/spacex-secures-40bn-finance-lease-commitment/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Bloom Energy Stock Has Plunged Despite Explosive Growth. Is It Time to Buy?",
-      "link": "https://www.fool.com/investing/2026/10/27/bloom-energy-stock-has-plunged-despite-explosive-growth-is-it-time-to-buy/?.tsrc=rss",
-      "date": "2026-10-27",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-10-28": {
+      "title": "Nvidia, AMD, and Micron stocks lead chip sector higher for third day in a row",
+      "link": "https://finance.yahoo.com/markets/article/nvidia-amd-and-micron-stocks-lead-chip-sector-higher-for-third-day-in-a-row-124044569.html?.tsrc=rss",
       "date": "2026-10-28",
-      "steps": 4392,
-      "resting_hr": 54,
-      "body_battery": 33,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 433,
-        "deep_min": 78,
-        "light_min": 324,
-        "rem_min": 31,
-        "awake_min": 14,
-        "score": 48,
-        "start": 1793141640000,
-        "end": 1793168460000
-      },
-      "activities": []
-    },
-    "2026-10-27": {
-      "date": "2026-10-27",
-      "steps": 16382,
-      "resting_hr": 55,
-      "body_battery": 24,
-      "avg_stress": 46,
-      "sleep": {
-        "total_min": 233,
-        "deep_min": 64,
-        "light_min": 169,
-        "rem_min": 0,
-        "awake_min": 50,
-        "score": 39,
-        "start": 1793051280000,
-        "end": 1793068260000
-      },
-      "activities": []
-    },
-    "2026-10-26": {
-      "date": "2026-10-26",
-      "steps": 15643,
-      "resting_hr": 56,
-      "body_battery": 29,
-      "avg_stress": 44,
-      "sleep": {
-        "total_min": 433,
-        "deep_min": 112,
-        "light_min": 316,
-        "rem_min": 5,
-        "awake_min": 35,
-        "score": 41,
-        "start": 1792967460000,
-        "end": 1792995540000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-10-26 17:28:28",
-          "duration_s": 1217,
-          "distance_m": 0.0,
-          "calories": 101,
-          "avg_hr": 101,
-          "max_hr": 148,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-10-25": {
-      "date": "2026-10-25",
-      "steps": 14392,
-      "resting_hr": 53,
-      "body_battery": 46,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 397,
-        "deep_min": 72,
-        "light_min": 269,
-        "rem_min": 56,
-        "awake_min": 131,
-        "score": 62,
-        "start": 1792874940000,
-        "end": 1792906620000
-      },
-      "activities": []
+    {
+      "title": "Should Nvidia be worried as OpenAI leans on Google's chips?",
+      "link": "https://finance.yahoo.com/video/should-nvidia-be-worried-as-openai-leans-on-googles-chips-133120570.html?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-24": {
-      "date": "2026-10-24",
-      "steps": 4554,
-      "resting_hr": 53,
-      "body_battery": 35,
-      "avg_stress": 51,
-      "sleep": {
-        "total_min": 432,
-        "deep_min": 136,
-        "light_min": 279,
-        "rem_min": 17,
-        "awake_min": 57,
-        "score": 43,
-        "start": 1792797480000,
-        "end": 1792826820000
-      },
-      "activities": []
+    {
+      "title": "Not Nvidia. Not Micron. This Underappreciated AI Stock Could Be 2027's Biggest Winner.",
+      "link": "https://www.fool.com/investing/2026/10/28/not-nvidia-not-micron-this-underappreciated-ai-sto/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-23": {
-      "date": "2026-10-23",
-      "steps": 14348,
-      "resting_hr": 57,
-      "body_battery": 23,
-      "avg_stress": 55,
-      "sleep": {
-        "total_min": 382,
-        "deep_min": 84,
-        "light_min": 283,
-        "rem_min": 15,
-        "awake_min": 74,
-        "score": 34,
-        "start": 1792712400000,
-        "end": 1792739760000
-      },
-      "activities": []
+    {
+      "title": "NVIDIA, AMD and Broadcom May Invest in Meta, Their Own Biggest Customer. What That Signals",
+      "link": "https://247wallst.com/investing/2026/10/28/nvidia-amd-and-broadcom-may-invest-in-meta-their-own-biggest-customer-what-that-signals/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-22": {
-      "date": "2026-10-22",
-      "steps": 16145,
-      "resting_hr": 53,
-      "body_battery": 24,
-      "avg_stress": 56,
-      "sleep": {
-        "total_min": 302,
-        "deep_min": 89,
-        "light_min": 183,
-        "rem_min": 30,
-        "awake_min": 9,
-        "score": 61,
-        "start": 1792634520000,
-        "end": 1792653180000
-      },
-      "activities": []
+    {
+      "title": "Qualcomm Stock Has an AI Opportunity Most Nvidia Investors May Be Overlooking",
+      "link": "https://247wallst.com/investing/2026/10/28/qualcomm-stock-has-an-ai-opportunity-most-nvidia-investors-may-be-overlooking/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Anthropic IPO on Tap, NVIDIA Updates, & Other Investor Days Shaping Markets",
+      "link": "https://www.wallstreethorizon.com/blog/Anthropic-IPO-on-Tap-NVIDIA-Updates--Other-Investor-Days-Shaping-Markets?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Jeff Bezos Says Retirees Should Buy the S&P 500 Instead of AI Stocks — but That Could Be Riskier Than You Think",
+      "link": "https://247wallst.com/investing/2026/10/28/jeff-bezos-says-retirees-should-buy-the-sp-500-instead-of-ai-stocks-but-that-could-be-riskier-than-you-think/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Wall Street Analysts See Marvell (MRVL) as a Buy: Should You Invest?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-see-marvell-123003964.html?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Prediction: $10,000 Invested in Nvidia Will Be Worth This Much by Late 2029 -- If the AI Spending Boom Continues",
+      "link": "https://www.fool.com/investing/2026/10/28/prediction-10000-invest-nvidia-2029-ai-boom/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "CoreWeave Expands AI Cloud Infrastructure Footprint at a Global Scale",
+      "link": "https://finance.yahoo.com/technology/ai/articles/coreweave-expands-ai-cloud-infrastructure-121800153.html?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia Partner Vertiv Soars After Blowout Earnings, Strong Guidance",
+      "link": "https://finance.yahoo.com/m/6921f512-7bf2-33e1-8213-72c6fd574804/nvidia-partner-vertiv-soars.html?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "NextEra Expects to Grow Its Dividend 6% a Year Through 2028. Here's Why That's Enough.",
+      "link": "https://www.fool.com/investing/2026/10/28/nextera-expects-to-grow-its-dividend-6-a-year-thro/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "HIVE Digital Technologies secures $129 million loan for Cohere AI cluster",
+      "link": "https://www.proactiveinvestors.com/companies/news/1100839/hive-digital-technologies-secures-129-million-loan-for-cohere-ai-cluster-1100839.html?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Bear Market Is Coming, Here's Exactly How I'm Preparing My Investment Portfolio",
+      "link": "https://www.fool.com/investing/2026/10/28/if-a-bear-market-is-coming-heres-exactly-how-im-pr/?.tsrc=rss",
+      "date": "2026-10-28",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-10-28"
+  ]
 }
