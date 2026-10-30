@@ -1,25 +1,25 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 76662.0,
+      "price": 76886.0,
       "ccy": "USD",
-      "price_eur": 68645.0,
+      "price_eur": 68621.0,
       "src": "coingecko",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "ETC": {
-      "price": 7.1,
+      "price": 7.21,
       "ccy": "USD",
-      "price_eur": 6.36,
+      "price_eur": 6.44,
       "src": "coingecko",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "FLR": {
-      "price": 0.005948,
+      "price": 0.005974,
       "ccy": "USD",
-      "price_eur": 0.005326,
+      "price_eur": 0.005332,
       "src": "coingecko",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "EXI2": {
       "price": 117.70528,
@@ -43,36 +43,36 @@
       "at": "2026-09-27T14:34+03:00"
     },
     "NVDA": {
-      "price": 213.66,
+      "price": 204.64,
       "ccy": "USD",
-      "price_eur": 191.177523,
+      "price_eur": 183.45959,
       "src": "yahoo",
-      "at": "2026-10-29T22:59+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "ROBO": {
       "price": 20.81,
       "ccy": "EUR",
       "price_eur": 20.81,
       "src": "manual",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "PERSONAL": {
       "price": 126.76,
       "ccy": "EUR",
       "price_eur": 126.76,
       "src": "manual",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     },
     "CASH": {
       "price": 0.43,
       "ccy": "EUR",
       "price_eur": 0.43,
       "src": "manual",
-      "at": "2026-10-30T20:47+02:00"
+      "at": "2026-10-31T00:40+02:00"
     }
   },
-  "last_eurusd": 1.11644,
-  "last_hour_logged": "2026-10-30 20",
+  "last_eurusd": 1.11545,
+  "last_hour_logged": "2026-10-31 00",
   "alert_state": {},
   "move_sent": {
     "ETC:down": "2026-10-29",
@@ -81,6 +81,6 @@
   },
   "pnl_band": 4,
   "last_weekly": "2026-W43",
-  "last_daily_report": "2026-10-28",
+  "last_daily_report": "2026-10-30",
   "last_morning": "2026-10-29"
 }
