@@ -340,5 +340,134 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "steps": 4782,
+      "resting_hr": 50,
+      "body_battery": 42,
+      "avg_stress": 34,
+      "sleep": {
+        "total_min": 326,
+        "deep_min": 79,
+        "light_min": 232,
+        "rem_min": 15,
+        "awake_min": 64,
+        "score": 50,
+        "start": 1793747160000,
+        "end": 1793770560000
+      },
+      "activities": []
+    },
+    "2026-11-03": {
+      "date": "2026-11-03",
+      "steps": 15314,
+      "resting_hr": 47,
+      "body_battery": 86,
+      "avg_stress": 40,
+      "sleep": {
+        "total_min": 443,
+        "deep_min": 85,
+        "light_min": 288,
+        "rem_min": 70,
+        "awake_min": 14,
+        "score": 88,
+        "start": 1793658180000,
+        "end": 1793685600000
+      },
+      "activities": []
+    },
+    "2026-11-02": {
+      "date": "2026-11-02",
+      "steps": 7375,
+      "resting_hr": 59,
+      "body_battery": null,
+      "avg_stress": 57,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "steps": 11862,
+      "resting_hr": 49,
+      "body_battery": 79,
+      "avg_stress": 45,
+      "sleep": {
+        "total_min": 498,
+        "deep_min": 135,
+        "light_min": 311,
+        "rem_min": 52,
+        "awake_min": 22,
+        "score": 82,
+        "start": 1793485200000,
+        "end": 1793516400000
+      },
+      "activities": []
+    },
+    "2026-10-31": {
+      "date": "2026-10-31",
+      "steps": 16553,
+      "resting_hr": 57,
+      "body_battery": 27,
+      "avg_stress": 47,
+      "sleep": {
+        "total_min": 362,
+        "deep_min": 68,
+        "light_min": 294,
+        "rem_min": 0,
+        "awake_min": 64,
+        "score": 38,
+        "start": 1793402700000,
+        "end": 1793428260000
+      },
+      "activities": []
+    },
+    "2026-10-30": {
+      "date": "2026-10-30",
+      "steps": 10333,
+      "resting_hr": 52,
+      "body_battery": 46,
+      "avg_stress": 48,
+      "sleep": {
+        "total_min": 380,
+        "deep_min": 103,
+        "light_min": 246,
+        "rem_min": 31,
+        "awake_min": 4,
+        "score": 71,
+        "start": 1793321460000,
+        "end": 1793344500000
+      },
+      "activities": []
+    },
+    "2026-10-29": {
+      "date": "2026-10-29",
+      "steps": 10259,
+      "resting_hr": 59,
+      "body_battery": 8,
+      "avg_stress": 57,
+      "sleep": {
+        "total_min": 285,
+        "deep_min": 92,
+        "light_min": 179,
+        "rem_min": 14,
+        "awake_min": 22,
+        "score": 39,
+        "start": 1793240400000,
+        "end": 1793258820000
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-11-04"
 }
