@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-11-03T14:47:25.704178+00:00",
-  "eurUsd": 1.1185,
+  "lastUpdated": "2026-11-04T14:59:33.353473+00:00",
+  "eurUsd": 1.1249,
   "prices": {
-    "BTC-USD": 69086.0,
-    "ETC-USD": 6.28,
-    "FLR-USD": 0.00538,
+    "BTC-USD": 70367.0,
+    "ETC-USD": 6.42,
+    "FLR-USD": 0.005363,
     "EXI2.DE": 109.52,
-    "MRVL": 168.69021,
+    "MRVL": 167.730465,
     "DFEN.DE": 55.03,
-    "NVDA": 182.217255,
+    "NVDA": 181.180549,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 385.72,
-    "pnl": -12.95,
-    "pnlPct": -3.25
+    "totalCurrent": 388.13,
+    "pnl": -10.54,
+    "pnlPct": -2.64
   },
   "history": [
-    {
-      "date": "2026-10-05",
-      "total": 408.29,
-      "pnl": 9.62,
-      "pct": 2.41
-    },
     {
       "date": "2026-10-06",
       "total": 408.69,
@@ -197,277 +191,154 @@
       "total": 385.72,
       "pnl": -12.95,
       "pct": -3.25
+    },
+    {
+      "date": "2026-11-04",
+      "total": 388.13,
+      "pnl": -10.54,
+      "pct": -2.64
     }
   ],
   "news": [
     {
-      "title": "Micron, Nvidia, and AMD lead chip stocks rebound",
-      "link": "https://finance.yahoo.com/markets/article/micron-nvidia-amd-lead-chip-stocks-rebound-140538628.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Could Marvell Actually Climb 102%? Or Is UBS Totally Wrong?",
-      "link": "https://www.tikr.com/blog/could-marvell-actually-climb-102-or-is-ubs-totally-wrong?ref=yahoofinance&tlnk=yf-261103-m2g99c9p&.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Ondine Capital Announces First Close of Fund III to Drive AI and Semiconductor Innovation",
-      "link": "https://finance.yahoo.com/technology/ai/articles/ondine-capital-announces-first-close-143600623.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "You Can See The Diarrhea in YUM! Brands Third Quarter",
-      "link": "https://app.moby.co/home/news/news-you-can-see-the-diarrhea-in-yum-brands-third-quarter?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Micron or Nvidia: If I Could Only Buy and Hold One of These Artificial Intelligence (AI) Chip Stocks for the Next 5 Years, It Would Be This One",
-      "link": "https://www.fool.com/investing/2026/11/03/micron-or-nvidia-if-i-could-only-buy-and-hold-one/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What the Marvell-Lumentum Misfire Means for a Tesla-SpaceX Merger",
-      "link": "https://finance.yahoo.com/m/4e07bebb-339f-368a-a045-9daa726a5986/what-the-marvell-lumentum.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "The Average Stock Just Beat the S&P 500 by the Most Since 2009",
-      "link": "https://247wallst.com/investing/2026/11/03/the-average-stock-just-beat-the-sp-500-by-the-most-since-2009/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Analysts downgrade Marvell and slash price targets over Lumentum deal",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/analysts-downgrade-marvell-slash-price-133715676.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What Nvidia and Apple’s Tug-of-War Says About the AI Trade",
-      "link": "https://finance.yahoo.com/m/47d8035e-21f3-344d-ac1b-f31a2e69504d/what-nvidia-and-apple%E2%80%99s.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Dow Futures Plunge 323 Points, Apple Sinks, and Iran Strikes Send Oil Soaring",
-      "link": "https://247wallst.com/investing/2026/11/03/stock-market-today-dow-futures-plunge-323-points-apple-sinks-and-iran-strikes-send-oil-soaring/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Burry vs Karp: One Year Later, Who Actually Won the Palantir Fight?",
-      "link": "https://247wallst.com/investing/2026/11/03/burry-vs-karp-one-year-later-who-actually-won-the-palantir-fight/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Here's My Top Stock to Buy for November",
-      "link": "https://www.fool.com/investing/2026/11/03/heres-my-top-stock-to-buy-for-november/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "SambaNova SN50 Chips to Power Supermicro's New Inference Racks, Delivering High-Performance Inference to Data Centers Worldwide",
-      "link": "https://finance.yahoo.com/technology/ai/articles/sambanova-sn50-chips-power-supermicros-140000251.html?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Upstart Beats Expectations in a Challenging Macro Environment. What It Means for Investors",
-      "link": "https://www.fool.com/investing/2026/11/03/upstart-beats-expectations-in-a-challenging-macro-environment/?.tsrc=rss",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-11-04": {
+      "title": "If You Invest $1,000 in Marvell Today, Here’s What It Could Be Worth by 2030",
+      "link": "https://247wallst.com/investing/2026/11/04/if-you-invest-1000-in-marvell-today-heres-what-it-could-be-worth-by-2030/?.tsrc=rss",
       "date": "2026-11-04",
-      "steps": 4782,
-      "resting_hr": 50,
-      "body_battery": 42,
-      "avg_stress": 34,
-      "sleep": {
-        "total_min": 326,
-        "deep_min": 79,
-        "light_min": 232,
-        "rem_min": 15,
-        "awake_min": 64,
-        "score": 50,
-        "start": 1793747160000,
-        "end": 1793770560000
-      },
-      "activities": []
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-03": {
-      "date": "2026-11-03",
-      "steps": 15314,
-      "resting_hr": 47,
-      "body_battery": 86,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 443,
-        "deep_min": 85,
-        "light_min": 288,
-        "rem_min": 70,
-        "awake_min": 14,
-        "score": 88,
-        "start": 1793658180000,
-        "end": 1793685600000
-      },
-      "activities": []
+    {
+      "title": "Nvidia Is Telling Cloud Clients to Sell at Least 51% to Non-Chinese Customers",
+      "link": "https://247wallst.com/investing/2026/11/04/nvidia-is-telling-cloud-clients-to-sell-at-least-51-to-non-chinese-customers/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-02": {
-      "date": "2026-11-02",
-      "steps": 7375,
-      "resting_hr": 59,
-      "body_battery": null,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
+    {
+      "title": "Equable Analysis: State and Local Pension Funds Have at Least $578 Billion Invested in AI Companies",
+      "link": "https://finance.yahoo.com/technology/ai/articles/equable-analysis-state-local-pension-140600715.html?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-01": {
-      "date": "2026-11-01",
-      "steps": 11862,
-      "resting_hr": 49,
-      "body_battery": 79,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 498,
-        "deep_min": 135,
-        "light_min": 311,
-        "rem_min": 52,
-        "awake_min": 22,
-        "score": 82,
-        "start": 1793485200000,
-        "end": 1793516400000
-      },
-      "activities": []
+    {
+      "title": "ModelOp Unveils Industry-First Full-Stack AI Policy Enforcement With NVIDIA OpenShell",
+      "link": "https://finance.yahoo.com/technology/ai/articles/modelop-unveils-industry-first-full-135800127.html?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-31": {
-      "date": "2026-10-31",
-      "steps": 16553,
-      "resting_hr": 57,
-      "body_battery": 27,
-      "avg_stress": 47,
-      "sleep": {
-        "total_min": 362,
-        "deep_min": 68,
-        "light_min": 294,
-        "rem_min": 0,
-        "awake_min": 64,
-        "score": 38,
-        "start": 1793402700000,
-        "end": 1793428260000
-      },
-      "activities": []
+    {
+      "title": "Meet the Only \"Magnificent Seven\" Stock That's Outperforming the S&P 500 and Nasdaq This Year (Hint: It's Not Nvidia)",
+      "link": "https://www.fool.com/investing/2026/11/04/meet-the-only-magnificent-seven-stock-thats-outper/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-30": {
-      "date": "2026-10-30",
-      "steps": 10333,
-      "resting_hr": 52,
-      "body_battery": 46,
-      "avg_stress": 48,
-      "sleep": {
-        "total_min": 380,
-        "deep_min": 103,
-        "light_min": 246,
-        "rem_min": 31,
-        "awake_min": 4,
-        "score": 71,
-        "start": 1793321460000,
-        "end": 1793344500000
-      },
-      "activities": []
+    {
+      "title": "Marvell Slipped Over The Last Month and Then Crashed Massively on the Lumentum Announcement: This Wall Street Desk Doubled Down on Its 130% Gains Prediction",
+      "link": "https://247wallst.com/investing/2026/11/04/marvell-slipped-over-the-last-month-and-then-crashed-massively-on-the-lumentum-announcement-this-wall-street-desk-doubled-down-on-its-130-gains-prediction/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-10-29": {
-      "date": "2026-10-29",
-      "steps": 10259,
-      "resting_hr": 59,
-      "body_battery": 8,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 285,
-        "deep_min": 92,
-        "light_min": 179,
-        "rem_min": 14,
-        "awake_min": 22,
-        "score": 39,
-        "start": 1793240400000,
-        "end": 1793258820000
-      },
-      "activities": []
+    {
+      "title": "2 Berkshire Hathaway Holdings to Buy After Record Third Quarters",
+      "link": "https://www.fool.com/investing/2026/11/04/berkshire-hathaway-buy-record-q3-axp-chubb/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "This 1 Market Niche Is Growing at an Exponential Rate for Robinhood. That's Why I'm Bullish on HOOD Stock.",
+      "link": "https://www.fool.com/investing/2026/11/04/this-1-market-niche-is-growing-at-an-exponential-r/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Rigetti Computing Slipped 23.4% Last Month",
+      "link": "https://www.fool.com/investing/2026/11/04/why-rigetti-computing-slipped-234-last-month/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "If a Stock Market Crash Comes in November, You'll Still Rest Easy Knowing You Bought This Dividend Stock",
+      "link": "https://www.fool.com/investing/2026/11/04/if-a-stock-market-crash-comes-in-november-youll/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "What sets AMD data centers apart as Intel stock keeps sliding?",
+      "link": "https://finance.yahoo.com/video/what-sets-amd-data-centers-apart-as-intel-stock-keeps-sliding-141848435.html?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Altria Group Shares Bumped 15.9% Higher In October",
+      "link": "https://www.fool.com/investing/2026/11/04/why-altria-group-shares-bumped-159-higher-in-octob/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "As Holidays Approach, No One Cares About Amazon’s Biggest Business",
+      "link": "https://247wallst.com/investing/2026/11/04/as-holidays-approach-no-one-cares-about-amazons-biggest-business/?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Morgan Stanley Tokenizes U.S. Equities",
+      "link": "https://www.cryptoprowl.com/releases/morgan-stanley-tokenizes-us-equities-7645?.tsrc=rss",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-11-04"
+  ]
 }
