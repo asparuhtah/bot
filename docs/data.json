@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-11-06T14:43:42.605118+00:00",
-  "eurUsd": 1.1142,
+  "lastUpdated": "2026-11-07T13:41:17.184850+00:00",
+  "eurUsd": 1.1138,
   "prices": {
-    "BTC-USD": 68029.0,
-    "ETC-USD": 6.39,
-    "FLR-USD": 0.005166,
+    "BTC-USD": 68045.0,
+    "ETC-USD": 6.24,
+    "FLR-USD": 0.005151,
     "EXI2.DE": 109.52,
-    "MRVL": 169.341231,
+    "MRVL": 169.402047,
     "DFEN.DE": 55.03,
-    "NVDA": 182.920481,
+    "NVDA": 182.986173,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 385.16,
-    "pnl": -13.51,
-    "pnlPct": -3.39
+    "totalCurrent": 384.22,
+    "pnl": -14.45,
+    "pnlPct": -3.63
   },
   "history": [
-    {
-      "date": "2026-10-08",
-      "total": 401.15,
-      "pnl": 2.48,
-      "pct": 0.62
-    },
     {
       "date": "2026-10-09",
       "total": 400.24,
@@ -197,312 +191,154 @@
       "total": 385.16,
       "pnl": -13.51,
       "pct": -3.39
+    },
+    {
+      "date": "2026-11-07",
+      "total": 384.22,
+      "pnl": -14.45,
+      "pct": -3.63
     }
   ],
   "news": [
     {
-      "title": "Nvidia, AMD, and Micron stocks lead chip sector higher following worst sell-off since 2020",
-      "link": "https://finance.yahoo.com/markets/article/nvidia-amd-micron-sandsik-lead-chip-sector-higher-134336542.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "’Blue tsunami’ batters AI stocks: Is this a rare buy the dip setup?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/blue-tsunami-batters-ai-stocks-143835829.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Stock, Other AI Names Rebound After Sell-Off",
-      "link": "https://finance.yahoo.com/m/870e9d6a-dbbb-3380-9680-17f32e5017a1/nvidia-stock%2C-other-ai-names.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What's Going To Happen With NVIDIA Stock Soon?",
-      "link": "https://www.trefis.com/stock/nvda/articles/623367/whats-going-to-happen-with-nvidia-stock-soon/2026-11-06?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Dow Slides 500 Points Amid Surprise Jobs Report; Nvidia Leads Tech Rebound (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/259a2432-7041-3624-978f-9a7336f10b31/stock-market-today%3A-dow.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Analyst Calls Tech Stock Sell-Off 'Golden Buying Opportunity'",
-      "link": "https://finance.yahoo.com/m/aeb920dc-4bcd-3531-8458-6a642b7135df/analyst-calls-tech-stock.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell Technology, Inc. Announces Conference Call to Review Third Quarter of Fiscal Year 2027 Financial Results",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-inc-announces-conference-140500096.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Isn’t the Only AI Stock That Could Surprise Wall Street in 2027",
-      "link": "https://247wallst.com/investing/2026/11/06/nvidia-isnt-the-only-ai-stock-that-could-surprise-wall-street-in-2027/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Chip Stocks Just Had Their Second-Worst Day on Record",
-      "link": "https://247wallst.com/investing/2026/11/06/chip-stocks-just-had-their-second-worst-day-on-record/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Marvell Drops 50% in One Month: This Analyst Stands Pat on 195% Gains Prediction",
-      "link": "https://247wallst.com/investing/2026/11/06/marvell-drops-50-in-one-month-this-analyst-stands-pat-on-195-gains-prediction/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "AMD Vs. Nvidia: The Balance of Power Shifts To AMD Now",
-      "link": "https://247wallst.com/investing/2026/11/06/amd-vs-nvidia-the-balance-of-power-shifts-to-amd-now/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Cathie Wood Is Buying The Dip In Nvidia As She Adds $45.9 Million Of NVDA And Sells $119.7 Million Of Broadcom",
-      "link": "https://247wallst.com/investing/2026/11/06/cathie-wood-is-buying-the-dip-in-nvidia-as-she-adds-45-9-million-of-nvda-and-sells-119-7-million-of-broadcom/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Market Chatter: TSMC Mulls Expanding Into Advanced Memory Chip Production",
-      "link": "https://finance.yahoo.com/technology/articles/market-chatter-tsmc-mulls-expanding-142144931.html?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Teva's 3 Key Branded Drugs Grew Sales 33% Last Quarter. Is This Turnaround Stock a Buy Right Now?",
-      "link": "https://www.fool.com/investing/2026/11/06/tevas-3-key-branded-drugs-grew-sales-33-last-quart/?.tsrc=rss",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-11-07": {
+      "title": "Consumers Are Now Worried About an AI Bubble, Michigan Survey Says",
+      "link": "https://247wallst.com/investing/2026/11/07/consumers-are-now-worried-about-an-ai-bubble-michigan-survey-says/?.tsrc=rss",
       "date": "2026-11-07",
-      "steps": 5714,
-      "resting_hr": 56,
-      "body_battery": null,
-      "avg_stress": 72,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-11-06": {
-      "date": "2026-11-06",
-      "steps": 18022,
-      "resting_hr": 49,
-      "body_battery": 72,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 416,
-        "deep_min": 104,
-        "light_min": 277,
-        "rem_min": 35,
-        "awake_min": 33,
-        "score": 72,
-        "start": 1793918460000,
-        "end": 1793945400000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-11-06 13:03:12",
-          "duration_s": 4375,
-          "distance_m": 1550.0,
-          "calories": 480,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.78
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-05": {
-      "date": "2026-11-05",
-      "steps": 12074,
-      "resting_hr": 56,
-      "body_battery": 17,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 250,
-        "deep_min": 74,
-        "light_min": 162,
-        "rem_min": 14,
-        "awake_min": 2,
-        "score": 36,
-        "start": 1793847180000,
-        "end": 1793862300000
-      },
-      "activities": []
-    },
-    "2026-11-04": {
-      "date": "2026-11-04",
-      "steps": 15612,
-      "resting_hr": 50,
-      "body_battery": 42,
-      "avg_stress": 39,
-      "sleep": {
-        "total_min": 326,
-        "deep_min": 79,
-        "light_min": 232,
-        "rem_min": 15,
-        "awake_min": 64,
-        "score": 50,
-        "start": 1793747160000,
-        "end": 1793770560000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-11-04 15:56:04",
-          "duration_s": 1322,
-          "distance_m": 0.0,
-          "calories": 177,
-          "avg_hr": 126,
-          "max_hr": 166,
-          "avg_speed": 0.0
-        },
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-11-04 14:43:00",
-          "duration_s": 1988,
-          "distance_m": 1200.0,
-          "calories": 255,
-          "avg_hr": 89,
-          "max_hr": 89,
-          "avg_speed": 0.67
-        }
+    {
+      "title": "Marvell and Western Digital Just Had Their Worst Week Since 2001",
+      "link": "https://247wallst.com/investing/2026/11/07/marvell-and-western-digital-just-had-their-worst-week-since-2001/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-03": {
-      "date": "2026-11-03",
-      "steps": 15314,
-      "resting_hr": 47,
-      "body_battery": 86,
-      "avg_stress": 40,
-      "sleep": {
-        "total_min": 443,
-        "deep_min": 85,
-        "light_min": 288,
-        "rem_min": 70,
-        "awake_min": 14,
-        "score": 88,
-        "start": 1793658180000,
-        "end": 1793685600000
-      },
-      "activities": []
+    {
+      "title": "Airbnb Just Popped After a Blowout Quarter. Is the Stock Still a Buy?",
+      "link": "https://www.fool.com/investing/2026/11/07/airbnb-just-popped-after-a-blowout-quarter-is-the-stock-still-a-buy/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-02": {
-      "date": "2026-11-02",
-      "steps": 7375,
-      "resting_hr": 59,
-      "body_battery": null,
-      "avg_stress": 57,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
+    {
+      "title": "In 5 Years, One of These Cryptocurrencies Could Be Worth More Than Bitcoin",
+      "link": "https://www.fool.com/investing/2026/11/07/in-5-years-one-of-these-cryptocurrencies-could-be/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-01": {
-      "date": "2026-11-01",
-      "steps": 11862,
-      "resting_hr": 49,
-      "body_battery": 79,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 498,
-        "deep_min": 135,
-        "light_min": 311,
-        "rem_min": 52,
-        "awake_min": 22,
-        "score": 82,
-        "start": 1793485200000,
-        "end": 1793516400000
-      },
-      "activities": []
+    {
+      "title": "Coherent Stock Fell 8% in a Week. J.P. Morgan Sees 100% Upside From Here",
+      "link": "https://www.tikr.com/blog/coherent-stock-fell-8-in-a-week-j-p-morgan-sees-100-upside-from-here?ref=yahoofinance&tlnk=yf-261107-rw3jqjf8&.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "George Kurtz Just Announced Incredible News for CrowdStrike Investors and the Artificial Intelligence (AI) Industry",
+      "link": "https://www.fool.com/investing/2026/11/07/george-kurtz-incredible-crowdstrike-investors-ai/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Rocket Lab Just Built a Space Robot",
+      "link": "https://www.fool.com/investing/2026/11/07/rocket-lab-just-built-a-space-robot/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Here's the Yearly Dividend Income $10,000 Provides Across 3 Very Different Yields",
+      "link": "https://www.fool.com/investing/2026/11/07/yearly-dividend-income-10000-3-different-yields/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Archer Aviation Said It Has More Than $6 Billion in Orders. What Does That Actually Mean for Investors?",
+      "link": "https://www.fool.com/investing/2026/11/07/archer-aviation-said-it-has-more-than-6-billion-in/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Social Security's Trump Bump-Led 2027 COLA Is a Double-Edged Sword for Tens of Millions of Retirees",
+      "link": "https://www.fool.com/retirement/2026/11/07/social-security-trump-bump-led-2027-cola-is-double-edged-sword-for-tens-of-millions-retirees/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Could Investing $10,000 in IonQ Stock Make You a Millionaire?",
+      "link": "https://www.fool.com/investing/2026/11/07/could-investing-10000-in-ionq-stock-make-you-a-mil/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Blackbaud Stock Soared by Almost 30% Last Month",
+      "link": "https://www.fool.com/investing/2026/11/07/why-blackbaud-stock-soared-by-almost-30-last-month/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Is Alphabet's Core Search Business in Trouble? Looking Past the Headline Revenue Growth Provides a Clear Answer.",
+      "link": "https://www.fool.com/investing/2026/11/07/is-alphabets-core-search-business-in-trouble-looki/?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dow Jones Futures: Market Needs Repair But Apple, Amazon, Microsoft Strong; Berkshire Earnings Fall",
+      "link": "https://finance.yahoo.com/m/283e1bd9-349e-390b-a32b-b4ed9a9034f3/dow-jones-futures%3A-market.html?.tsrc=rss",
+      "date": "2026-11-07",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-11-07"
+  ]
 }
