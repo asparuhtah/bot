@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-11-11T14:51:30.422881+00:00",
-  "eurUsd": 1.1085,
+  "lastUpdated": "2026-11-12T15:42:33.250267+00:00",
+  "eurUsd": 1.105,
   "prices": {
-    "BTC-USD": 66436.0,
-    "ETC-USD": 6.05,
-    "FLR-USD": 0.004934,
+    "BTC-USD": 64525.0,
+    "ETC-USD": 5.89,
+    "FLR-USD": 0.004764,
     "EXI2.DE": 109.52,
-    "MRVL": 170.211998,
+    "MRVL": 170.751131,
     "DFEN.DE": 55.03,
-    "NVDA": 183.861074,
+    "NVDA": 184.443439,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 380.85,
-    "pnl": -17.82,
-    "pnlPct": -4.47
+    "totalCurrent": 377.01,
+    "pnl": -21.66,
+    "pnlPct": -5.43
   },
   "history": [
-    {
-      "date": "2026-10-13",
-      "total": 401.62,
-      "pnl": 2.95,
-      "pct": 0.74
-    },
     {
       "date": "2026-10-14",
       "total": 400.18,
@@ -197,313 +191,154 @@
       "total": 380.85,
       "pnl": -17.82,
       "pct": -4.47
+    },
+    {
+      "date": "2026-11-12",
+      "total": 377.01,
+      "pnl": -21.66,
+      "pct": -5.43
     }
   ],
   "news": [
     {
-      "title": "Huang controversy reignites Washington's chip debate",
-      "link": "https://finance.yahoo.com/video/huang-controversy-reignites-washingtons-chip-debate-144623040.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dan Ives warns removing Jensen Huang as Nvidia CEO could wipe $1.2 trillion from the company's value",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/dan-ives-warns-removing-jensen-143000833.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Nvidia Stock Is Rising Despite Wall Street’s First Call for Jensen Huang to Step Down",
-      "link": "https://finance.yahoo.com/m/b59b6468-7986-393a-ab3d-f7d8e07fca7a/why-nvidia-stock-is-rising.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Nvidia Reportedly Sold Chips to Blacklisted Chinese University as Scrutiny on Jensen Huang Mounts",
-      "link": "https://www.ibtimes.com/nvidia-h200-chips-blacklisted-chinese-university-3809642?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Wednesday as Nvidia Stock Recovers",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-141131269.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4%",
-      "link": "https://247wallst.com/investing/2026/11/11/nvidia-rises-4-despite-baird-downgrade-and-huang-uncertainty-amd-climbs-5-broadcom-gains-4/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "CoreWeave Surges 16% as Beat-and-Raise Quarter Eases Financing Fears; Nebius Gains 13%, Oracle Advances 5%",
-      "link": "https://247wallst.com/investing/2026/11/11/coreweave-jumps-16-as-beat-and-raise-quarter-eases-financing-fears-nebius-surges-13-oracle-rises-5/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "What You Actually Own When You Buy a Share of Berkshire Hathaway",
-      "link": "https://www.fool.com/investing/2026/11/11/what-you-actually-own-when-you-buy-a-share-of-berkshire-hathaway/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why CoreWeave Earnings, Outlook Sparked 'Sigh Of Relief In The AI Market'",
-      "link": "https://finance.yahoo.com/m/ad611b90-19b3-3483-8e63-8cdb59726707/why-coreweave-earnings%2C.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street Didn't Understand CoreWeave, Its CEO Said. Now the Stock Is Soaring.",
-      "link": "https://www.fool.com/investing/2026/11/11/wall-street-didn-t-understand-coreweave-its-ceo-said-now-the-stock-is-soaring/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Freeport-McMoRan vs. a Copper ETF: Which Is the Better Way to Own Copper?",
-      "link": "https://www.fool.com/investing/2026/11/11/freeport-mcmoran-copper-etf-better-buy/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "1 Unstoppable Stock-Split Stock to Buy Before It Joins the $1 Trillion Club",
-      "link": "https://www.fool.com/investing/2026/11/11/1-unstoppable-stock-split-stock-to-buy-before-it-j/?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "University of Alabama Builds Statewide High Performance Computing Center with Dell Technologies",
-      "link": "https://finance.yahoo.com/technology/ai/articles/university-alabama-builds-statewide-high-140000961.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Plurai raises $13M to build the simulation infrastructure for trustworthy, self-improving AI agents",
-      "link": "https://finance.yahoo.com/technology/ai/articles/plurai-raises-13m-build-simulation-140000227.html?.tsrc=rss",
-      "date": "2026-11-11",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-11-12": {
+      "title": "SoFi chief market Strategist on an Nvidia without Jensen Huang: 'What happens without the visionary?'",
+      "link": "https://finance.yahoo.com/markets/article/sofi-chief-market-strategist-on-an-nvidia-without-jensen-huang-what-happens-without-the-visionary-154048480.html?.tsrc=rss",
       "date": "2026-11-12",
-      "steps": 10160,
-      "resting_hr": 55,
-      "body_battery": 30,
-      "avg_stress": 37,
-      "sleep": {
-        "total_min": 326,
-        "deep_min": 34,
-        "light_min": 282,
-        "rem_min": 10,
-        "awake_min": 31,
-        "score": 55,
-        "start": 1794443640000,
-        "end": 1794465060000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-11-12 09:04:26",
-          "duration_s": 1311,
-          "distance_m": 0.0,
-          "calories": 147,
-          "avg_hr": 114,
-          "max_hr": 157,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-11": {
-      "date": "2026-11-11",
-      "steps": 18073,
-      "resting_hr": 54,
-      "body_battery": 43,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 324,
-        "deep_min": 58,
-        "light_min": 266,
-        "rem_min": 0,
-        "awake_min": 87,
-        "score": 42,
-        "start": 1794351300000,
-        "end": 1794375960000
-      },
-      "activities": []
-    },
-    "2026-11-10": {
-      "date": "2026-11-10",
-      "steps": 16780,
-      "resting_hr": 49,
-      "body_battery": 60,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 397,
-        "deep_min": 120,
-        "light_min": 277,
-        "rem_min": 0,
-        "awake_min": 12,
-        "score": 58,
-        "start": 1794263040000,
-        "end": 1794287580000
-      },
-      "activities": []
-    },
-    "2026-11-09": {
-      "date": "2026-11-09",
-      "steps": 20056,
-      "resting_hr": 54,
-      "body_battery": 60,
-      "avg_stress": 39,
-      "sleep": {
-        "total_min": 478,
-        "deep_min": 89,
-        "light_min": 322,
-        "rem_min": 67,
-        "awake_min": 10,
-        "score": 79,
-        "start": 1794174540000,
-        "end": 1794203820000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-11-09 17:57:48",
-          "duration_s": 4487,
-          "distance_m": 0.0,
-          "calories": 436,
-          "avg_hr": 113,
-          "max_hr": 177,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Jensen Huang's exit puts Nvidia's $530 billion web of AI deals under the microscope",
+      "link": "https://finance.yahoo.com/markets/article/jensen-huangs-exit-puts-nvidias-530-billion-web-of-ai-deals-under-the-microscope-153142269.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-08": {
-      "date": "2026-11-08",
-      "steps": 16191,
-      "resting_hr": 50,
-      "body_battery": 57,
-      "avg_stress": 45,
-      "sleep": {
-        "total_min": 444,
-        "deep_min": 64,
-        "light_min": 349,
-        "rem_min": 31,
-        "awake_min": 97,
-        "score": 34,
-        "start": 1794093300000,
-        "end": 1794125760000
-      },
-      "activities": []
+    {
+      "title": "NVIDIA’s Leadership Crisis Is Dragging the S&P 500 Lower. Here’s What Else Is Moving",
+      "link": "https://247wallst.com/investing/2026/11/12/nvidias-leadership-crisis-is-dragging-the-sp-500-lower-heres-what-else-is-moving/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-07": {
-      "date": "2026-11-07",
-      "steps": 8929,
-      "resting_hr": 56,
-      "body_battery": null,
-      "avg_stress": 69,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
+    {
+      "title": "Nvidia CEO Jensen Huang resigns",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-preparing-oust-ceo-jensen-002910155.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-06": {
-      "date": "2026-11-06",
-      "steps": 18022,
-      "resting_hr": 49,
-      "body_battery": 72,
-      "avg_stress": 43,
-      "sleep": {
-        "total_min": 416,
-        "deep_min": 104,
-        "light_min": 277,
-        "rem_min": 35,
-        "awake_min": 33,
-        "score": 72,
-        "start": 1793918460000,
-        "end": 1793945400000
-      },
-      "activities": [
-        {
-          "type": "lap_swimming",
-          "name": "Pool Swim",
-          "start": "2026-11-06 13:03:12",
-          "duration_s": 4375,
-          "distance_m": 1550.0,
-          "calories": 480,
-          "avg_hr": null,
-          "max_hr": null,
-          "avg_speed": 0.78
-        }
+    {
+      "title": "Who is Colette Kress, Nvidia's interim CEO?",
+      "link": "https://www.usatoday.com/story/tech/2026/11/12/nvidia-appoints-colette-kress-as-interim-ceo/92740030007/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stock Market Crash: What History Says Comes Next After the Market's Big Single-Day Dip.",
+      "link": "https://www.fool.com/investing/2026/11/12/stock-market-crash-what-history-says-comes-next-after-market-s-big-single-day-dip/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang resigns in wake of affair, spy scandal",
+      "link": "https://www.cbsnews.com/news/nvidia-ceo-jensen-huang-resigns/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Musk-Huang partnership speculation grows after Nvidia exit as SpaceX shares rise",
+      "link": "https://finance.yahoo.com/technology/ai/articles/musk-huang-partnership-speculation-grows-152056860.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Jensen Huang Just Resigned From Nvidia. If You Have $5,000, These Are the 3 Tech Stocks to Buy",
+      "link": "https://247wallst.com/investing/2026/11/12/if-you-have-5000-these-are-the-3-tech-stocks-to-buy-if-nvidia-removes-ceo-jensen-huang/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Stock Market Today: Dow Slips As Nvidia's Huang Steps Down; Nebius Nosedives (Live Coverage)",
+      "link": "https://finance.yahoo.com/m/b961f164-91b1-38c0-a2e1-5ab20b01108e/stock-market-today%3A-dow-slips.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nvidia, AMD, CoreWeave, Nebius, Tesla, Strategy, and More Stocks That Explain Today’s Market",
+      "link": "https://finance.yahoo.com/m/923c0fbe-6605-3913-952c-4b295e62fcac/nvidia%2C-amd%2C-coreweave%2C.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "3 ETFs I'm Buying Without Hesitation If a Bear Market Begins in 2027",
+      "link": "https://www.fool.com/investing/2026/11/12/etf-buy-hesitation-bear-market-schd-vug-near/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "BC-Most Active Stocks",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/bc-most-active-stocks-153019739.html?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Nio’s Deliveries Are Up 38.5% This Year. But It Just Hit a Speed Bump.",
+      "link": "https://www.fool.com/investing/2026/11/12/nio-s-deliveries-are-up-38-5-this-year-but-it-just-hit-a-speed-bump/?.tsrc=rss",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     }
-  },
-  "garmin_updated": "2026-11-12"
+  ]
 }
