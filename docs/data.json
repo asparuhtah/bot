@@ -340,5 +340,158 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-11-24": {
+      "date": "2026-11-24",
+      "steps": 6723,
+      "resting_hr": 51,
+      "body_battery": 58,
+      "avg_stress": 32,
+      "sleep": {
+        "total_min": 395,
+        "deep_min": 71,
+        "light_min": 257,
+        "rem_min": 67,
+        "awake_min": 11,
+        "score": 75,
+        "start": 1795476960000,
+        "end": 1795501320000
+      },
+      "activities": []
+    },
+    "2026-11-23": {
+      "date": "2026-11-23",
+      "steps": 16497,
+      "resting_hr": 50,
+      "body_battery": 74,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 559,
+        "deep_min": 94,
+        "light_min": 378,
+        "rem_min": 87,
+        "awake_min": 102,
+        "score": 57,
+        "start": 1795380540000,
+        "end": 1795420200000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-11-23 12:56:10",
+          "duration_s": 3848,
+          "distance_m": 0.0,
+          "calories": 294,
+          "avg_hr": 103,
+          "max_hr": 171,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-11-22": {
+      "date": "2026-11-22",
+      "steps": 13619,
+      "resting_hr": 56,
+      "body_battery": 11,
+      "avg_stress": 53,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-11-21": {
+      "date": "2026-11-21",
+      "steps": 23739,
+      "resting_hr": 55,
+      "body_battery": 34,
+      "avg_stress": 52,
+      "sleep": {
+        "total_min": 303,
+        "deep_min": 60,
+        "light_min": 219,
+        "rem_min": 24,
+        "awake_min": 27,
+        "score": 58,
+        "start": 1795219020000,
+        "end": 1795238820000
+      },
+      "activities": [
+        {
+          "type": "mountaineering",
+          "name": "Sofia Climb",
+          "start": "2026-11-21 12:57:16",
+          "duration_s": 7348,
+          "distance_m": 21341.0,
+          "calories": 529,
+          "avg_hr": 101,
+          "max_hr": 149,
+          "avg_speed": 2.9
+        }
+      ]
+    },
+    "2026-11-20": {
+      "date": "2026-11-20",
+      "steps": 7061,
+      "resting_hr": 51,
+      "body_battery": 61,
+      "avg_stress": 49,
+      "sleep": {
+        "total_min": 414,
+        "deep_min": 135,
+        "light_min": 272,
+        "rem_min": 7,
+        "awake_min": 44,
+        "score": 57,
+        "start": 1795128000000,
+        "end": 1795155480000
+      },
+      "activities": []
+    },
+    "2026-11-19": {
+      "date": "2026-11-19",
+      "steps": 14358,
+      "resting_hr": 58,
+      "body_battery": 11,
+      "avg_stress": 52,
+      "sleep": {
+        "total_min": 319,
+        "deep_min": 89,
+        "light_min": 219,
+        "rem_min": 11,
+        "awake_min": 40,
+        "score": 39,
+        "start": 1795048140000,
+        "end": 1795069680000
+      },
+      "activities": []
+    },
+    "2026-11-18": {
+      "date": "2026-11-18",
+      "steps": 16094,
+      "resting_hr": 57,
+      "body_battery": 11,
+      "avg_stress": 57,
+      "sleep": {
+        "total_min": 184,
+        "deep_min": 36,
+        "light_min": 148,
+        "rem_min": 0,
+        "awake_min": 42,
+        "score": 25,
+        "start": 1794967620000,
+        "end": 1794981180000
+      },
+      "activities": []
+    }
+  },
+  "garmin_updated": "2026-11-24"
 }
