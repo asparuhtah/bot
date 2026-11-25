@@ -1,29 +1,23 @@
 {
-  "lastUpdated": "2026-11-24T18:32:54.929519+00:00",
-  "eurUsd": 1.0967,
+  "lastUpdated": "2026-11-25T17:44:39.708090+00:00",
+  "eurUsd": 1.0981,
   "prices": {
-    "BTC-USD": 54756.0,
-    "ETC-USD": 5.29,
-    "FLR-USD": 0.004657,
+    "BTC-USD": 54400.0,
+    "ETC-USD": 5.27,
+    "FLR-USD": 0.004541,
     "EXI2.DE": 109.52,
-    "MRVL": 172.043403,
+    "MRVL": 171.82406,
     "DFEN.DE": 55.03,
-    "NVDA": 185.839336,
+    "NVDA": 185.602404,
     "ROBO": 23.37
   },
   "portfolio": {
     "totalInvested": 398.67,
-    "totalCurrent": 357.97,
-    "pnl": -40.7,
-    "pnlPct": -10.21
+    "totalCurrent": 357.12,
+    "pnl": -41.55,
+    "pnlPct": -10.42
   },
   "history": [
-    {
-      "date": "2026-10-26",
-      "total": 392.27,
-      "pnl": -6.4,
-      "pct": -1.61
-    },
     {
       "date": "2026-10-27",
       "total": 394.13,
@@ -197,313 +191,154 @@
       "total": 357.97,
       "pnl": -40.7,
       "pct": -10.21
+    },
+    {
+      "date": "2026-11-25",
+      "total": 357.12,
+      "pnl": -41.55,
+      "pct": -10.42
     }
   ],
   "news": [
     {
-      "title": "Why HubSpot's CEO thinks Jensen Huang came back to Nvidia too soon",
-      "link": "https://finance.yahoo.com/markets/article/why-hubspots-ceo-thinks-jensen-huang-came-back-to-nvidia-too-soon-183053258.html?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Stock Market Today: Nasdaq Skids As Nvidia Dives; New Trump Tariffs Loom; Anthropic Plunges (Live Coverage)",
-      "link": "https://finance.yahoo.com/m/4aa4ff31-269f-346e-80c4-e681510af7ae/stock-market-today%3A-nasdaq.html?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "ASML Is the Most Important Company You’ve Never Heard Of. Should You Buy the Stock?",
-      "link": "https://www.fool.com/investing/2026/11/24/asml-is-the-most-important-company-youve-never-heard-of-should-you-buy-the-stock/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Huang's return fails to dispel doubts as Nvidia shares drop",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/huangs-return-fails-dispel-doubts-164158462.html?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Marvell Stock Is Moving With Nvidia Fueled AI Chip Optimism",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/why-marvell-stock-moving-nvidia-181152431.html?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "If You Invest $5,000 Into These 3 Stocks, You Could Have $10,000 by 2030",
-      "link": "https://247wallst.com/investing/2026/11/24/if-you-invest-5000-into-these-3-stocks-you-could-have-10000-by-2030/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?",
-      "link": "https://decrypt.co/383898/wall-street-crypto-extreme-whats-spooking-investors?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Here's Why SpaceX Stock Slumped Today, And Why it Could Come Under More Pressure as Tesla Merger Talks Continue",
-      "link": "https://www.fool.com/investing/2026/11/24/here-s-why-spacex-stock-slumped-today-and-why-it-could-come-under-more-pressure-as-tesla-merger-talks-continue/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Why Sandisk Stock Plunged Today",
-      "link": "https://www.fool.com/investing/2026/11/24/why-sandisk-stock-plunged-today/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Dick's Stock Rocks on Tuesday. Here's Why.",
-      "link": "https://www.fool.com/investing/2026/11/24/dick-s-stock-rocks-on-tuesday-here-s-why/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Axsome Just Crossed a $1 Billion Revenue Run Rate, but Its Stock Hit a 52-Week Low. Is Wall Street Missing Something?",
-      "link": "https://www.fool.com/investing/2026/11/24/axsome-just-crossed-a-1-billion-revenue-run-rate-but-its-stock-hit-a-52-week-low-is-wall-street-missing-something/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Will Bitcoin Drop Below $50,000 Before It Recovers?",
-      "link": "https://247wallst.com/investing/cryptocurrency/2026/11/24/will-bitcoin-drop-below-50000-before-it-recovers/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Anthropic Just Fell Below Its IPO Price, but Here's What the Stock Could Be Worth in 2030",
-      "link": "https://www.fool.com/investing/2026/11/24/anthropic-just-fell-below-its-ipo-price-but-here-s-what-the-stock-could-be-worth-in-2030/?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "title": "Kioxia Stocks Jump 9.95% as Memory Names Rebound After Huang's Return",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/kioxia-stocks-jump-9-95-180137413.html?.tsrc=rss",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    }
-  ],
-  "garmin": {
-    "2026-11-25": {
+      "title": "The Jensen Huang Premium Is Gone. 3 AI Stocks down 25% to 33% I'd Confidently Buy Right Now",
+      "link": "https://www.fool.com/investing/2026/11/25/the-jensen-huang-premium-is-gone-3-ai-stocks-down-25-to-33-i-d-confidently-buy-right-now/?.tsrc=rss",
       "date": "2026-11-25",
-      "steps": 11034,
-      "resting_hr": 53,
-      "body_battery": 53,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 335,
-        "deep_min": 102,
-        "light_min": 233,
-        "rem_min": 0,
-        "awake_min": 84,
-        "score": 44,
-        "start": 1795562940000,
-        "end": 1795588080000
-      },
-      "activities": []
-    },
-    "2026-11-24": {
-      "date": "2026-11-24",
-      "steps": 13671,
-      "resting_hr": 51,
-      "body_battery": 58,
-      "avg_stress": 38,
-      "sleep": {
-        "total_min": 395,
-        "deep_min": 71,
-        "light_min": 257,
-        "rem_min": 67,
-        "awake_min": 11,
-        "score": 75,
-        "start": 1795476960000,
-        "end": 1795501320000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-11-24 17:50:27",
-          "duration_s": 4529,
-          "distance_m": 0.0,
-          "calories": 426,
-          "avg_hr": 115,
-          "max_hr": 164,
-          "avg_speed": 0.0
-        }
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-23": {
-      "date": "2026-11-23",
-      "steps": 16497,
-      "resting_hr": 50,
-      "body_battery": 74,
-      "avg_stress": 36,
-      "sleep": {
-        "total_min": 559,
-        "deep_min": 94,
-        "light_min": 378,
-        "rem_min": 87,
-        "awake_min": 102,
-        "score": 57,
-        "start": 1795380540000,
-        "end": 1795420200000
-      },
-      "activities": [
-        {
-          "type": "strength_training",
-          "name": "Strength",
-          "start": "2026-11-23 12:56:10",
-          "duration_s": 3848,
-          "distance_m": 0.0,
-          "calories": 294,
-          "avg_hr": 103,
-          "max_hr": 171,
-          "avg_speed": 0.0
-        }
+    {
+      "title": "Nvidia Sinks 9% as Huang Rally Fades: Stephanie Link Sees “A Cloud Over It”",
+      "link": "https://www.tikr.com/blog/nvidia-sinks-9-as-huang-rally-fades-stephanie-link-sees-a-cloud-over-it?ref=yahoofinance&tlnk=yf-261125-q8ch658v&.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-22": {
-      "date": "2026-11-22",
-      "steps": 13619,
-      "resting_hr": 56,
-      "body_battery": 11,
-      "avg_stress": 53,
-      "sleep": {
-        "total_min": 0,
-        "deep_min": 0,
-        "light_min": 0,
-        "rem_min": 0,
-        "awake_min": 0,
-        "score": null,
-        "start": null,
-        "end": null
-      },
-      "activities": []
-    },
-    "2026-11-21": {
-      "date": "2026-11-21",
-      "steps": 23739,
-      "resting_hr": 55,
-      "body_battery": 34,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 303,
-        "deep_min": 60,
-        "light_min": 219,
-        "rem_min": 24,
-        "awake_min": 27,
-        "score": 58,
-        "start": 1795219020000,
-        "end": 1795238820000
-      },
-      "activities": [
-        {
-          "type": "mountaineering",
-          "name": "Sofia Climb",
-          "start": "2026-11-21 12:57:16",
-          "duration_s": 7348,
-          "distance_m": 21341.0,
-          "calories": 529,
-          "avg_hr": 101,
-          "max_hr": 149,
-          "avg_speed": 2.9
-        }
+    {
+      "title": "Is NVIDIA (NVDA) Cheap After Jensen Huang’s Return Calmed Leadership Fears?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-cheap-jensen-huang-171040296.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
       ]
     },
-    "2026-11-20": {
-      "date": "2026-11-20",
-      "steps": 7061,
-      "resting_hr": 51,
-      "body_battery": 61,
-      "avg_stress": 49,
-      "sleep": {
-        "total_min": 414,
-        "deep_min": 135,
-        "light_min": 272,
-        "rem_min": 7,
-        "awake_min": 44,
-        "score": 57,
-        "start": 1795128000000,
-        "end": 1795155480000
-      },
-      "activities": []
+    {
+      "title": "Tech stocks suffer sell-off on AI angst, US inflation",
+      "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-firms-back-crosshairs-huang-024219799.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     },
-    "2026-11-19": {
-      "date": "2026-11-19",
-      "steps": 14358,
-      "resting_hr": 58,
-      "body_battery": 11,
-      "avg_stress": 52,
-      "sleep": {
-        "total_min": 319,
-        "deep_min": 89,
-        "light_min": 219,
-        "rem_min": 11,
-        "awake_min": 40,
-        "score": 39,
-        "start": 1795048140000,
-        "end": 1795069680000
-      },
-      "activities": []
+    {
+      "title": "Mohamed El-Erian Is Buying The Tech Dip ‘Very Slowly,’ Says Nvidia Is ‘Too Big to Wobble’",
+      "link": "https://stocktwits.com/news-articles/markets/equity/mohamed-el-erian-is-buying-the-tech-dip-very-slowly-says-nvidia-is-too-big-to-wobble/cNbHNilR9mp?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "AI Chip Stocks Extend Brutal Selloff as Nvidia, AMD and Broadcom Tumble Again",
+      "link": "https://finance.yahoo.com/technology/ai/articles/ai-chip-stocks-extend-brutal-170236621.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Dell Technologies Stock Plunged Today",
+      "link": "https://www.fool.com/investing/2026/11/25/why-dell-technologies-stock-plunged-today/?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Palantir Is Down 25% From Its High. Is It a Bargain or Still Overvalued?",
+      "link": "https://www.fool.com/investing/2026/11/25/palantir-is-down-25-from-its-high-is-it-a-bargain-or-still-overvalued/?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Micron Technology Stock is Plunging Today",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-micron-technology-stock-plunging-171705917.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "SK hynix Stocks Sink 11.05% Despite 80% Operating Margin",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-stocks-sink-11-171606778.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Dell Just Delivered a Blowout Quarter. Why Is the Stock Sinking",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/dell-just-delivered-blowout-quarter-171222130.html?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "The Largest IPO in Stock Market History Is Here. What It Means for Your Portfolio",
+      "link": "https://www.fool.com/investing/2026/11/25/the-largest-ipo-in-stock-market-history-is-here-what-it-means-for-your-portfolio/?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Mobileye faces new competition as cars get smarter",
+      "link": "https://www.axios.com/2026/11/25/mobileye-faces-new-competition-as-cars-get-smarter#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "title": "Why Did Firefly Aerospace Stock Drop Today?",
+      "link": "https://www.fool.com/investing/2026/11/25/why-did-firefly-aerospace-stock-drop-today/?.tsrc=rss",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
     }
-  },
-  "garmin_updated": "2026-11-25"
+  ]
 }
