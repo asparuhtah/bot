@@ -1,4 +1,4 @@
-name: Investment Tracker v6
+name: Investment Tracker v7
 
 # Цени → docs/invest/*.csv (в git, нищо не се губи) + Telegram алерти/отчети.
 # Командите в Telegram се обработват от Cloudflare Worker (webhook), не тук.
@@ -27,7 +27,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests yfinance   # yfinance заобикаля 429 на Yahoo от GitHub runners
 
       - name: Run tracker
         env:
