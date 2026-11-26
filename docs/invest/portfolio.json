@@ -26,7 +26,7 @@
       "symbol": "VWCE.DE",
       "ccy": "EUR",
       "qty": 1.0,
-      "invested_eur": 160.0,
+      "invested_eur": 164.0,
       "last_known": {
         "price_eur": 158.99,
         "at": "2026-11-25T17:48+02:00",
@@ -40,7 +40,7 @@
       "source": "yahoo",
       "symbol": "EXI2.DE",
       "ccy": "EUR",
-      "qty": 0.477463713,
+      "qty": 0.47746371,
       "invested_eur": 50.0,
       "alert": {
         "buy": 95,
@@ -60,8 +60,9 @@
       "source": "manual",
       "ccy": "EUR",
       "value_eur": 38.92,
-      "invested_eur": 42.62,
-      "bucket": "core"
+      "invested_eur": 40.0,
+      "bucket": "core",
+      "_note": "вложено = оценка; провери в Revolut → Robo-Advisor → Large purchase и поправи"
     },
     {
       "id": "NVDA",
@@ -71,7 +72,7 @@
       "symbol": "NVDA",
       "ccy": "USD",
       "qty": 0.35179452,
-      "invested_eur": 74.08,
+      "invested_eur": 68.54,
       "alert": {
         "buy": 175,
         "warn": 260
@@ -91,7 +92,7 @@
       "symbol": "MRVL",
       "ccy": "USD",
       "qty": 0.16745366,
-      "invested_eur": 23.98,
+      "invested_eur": 22.02,
       "alert": {
         "buy": 140,
         "warn": 280
@@ -111,7 +112,7 @@
       "symbol": "DFEN.DE",
       "ccy": "EUR",
       "qty": 0.87344028,
-      "invested_eur": 49.0,
+      "invested_eur": 50.0,
       "alert": {
         "buy": 48,
         "warn": 65
@@ -197,7 +198,9 @@
       "cost_eur": 12.88,
       "proceeds_eur": 9.96,
       "pnl_eur": -2.92,
-      "source": "revolut-brokerage"
+      "source": "revolut-brokerage",
+      "fee": 1.09,
+      "fee_eur": 0.99
     },
     {
       "date": "2026-12-31",

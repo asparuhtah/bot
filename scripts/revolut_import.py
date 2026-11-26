@@ -3,6 +3,9 @@
 Revolut import — чете извлеченията на Revolut и обновява docs/invest/portfolio.json
 ================================================================================
 Поддържани файлове (CSV, експорт от приложението):
+  • „trading-account-statement_….csv“ — пълен списък сделки (BUY/SELL, DIVIDEND,
+    CASH TOP-UP). От него се смятат ТОЧНИТЕ позиции: qty, вложено в EUR
+    (по курса от деня на сделката, метод „средна цена“), кеш в брокерската сметка.
   • Brokerage „Profit and loss statement“ — секции „Income from Sells“ и
     „Other income & fees“ (продажби и дивиденти).
   • Crypto „tax / P&L statement“ — „Crypto Summaries“ (продажби, разходи, такси,
@@ -11,6 +14,9 @@ Revolut import — чете извлеченията на Revolut и обнов�
 Какво записва в portfolio.json (САМО ЧИСЛА — без име, сметка, IBAN):
   • realized[]  — продажби (по сделка за акции, годишно обобщение за крипто)
   • income[]    — дивиденти, Learn & Earn, staking
+  • при --positions (само с trading-account-statement): презаписва qty и
+    invested_eur на акциите/ETF-ите и кеша в брокерската сметка (CASH), и
+    слага positions_as_of = датата на последната сделка.
   • при --apply-sells: намалява qty и invested_eur на продадените позиции
     пропорционално на продаденото количество — само за продажби СЛЕД
     positions_as_of (датата, към която qty в portfolio.json е сверено с Revolut).
@@ -19,6 +25,7 @@ Revolut import — чете извлеченията на Revolut и обнов�
   python scripts/revolut_import.py файл1.csv [файл2.csv …]            # само показва
   python scripts/revolut_import.py файл1.csv … --write                 # записва
   python scripts/revolut_import.py файл1.csv … --write --apply-sells   # + коригира позиции
+  python scripts/revolut_import.py trading-account-statement.csv --write --positions   # точни позиции
 
 Импортът е идемпотентен: повторно пускане на същия файл не дублира редове.
 ⚠️ Repo-то е публично — не commit-вай самите извлечения (statements/ е в .gitignore).
@@ -180,6 +187,66 @@ def parse_crypto(rows, year):
     return realized, income
 
 
+TX_HEADER = ["Date", "Ticker", "Type", "Quantity", "Price per share", "Total Amount", "Currency", "FX Rate"]
+
+
+def parse_transactions(rows):
+    """trading-account-statement → (sells, income, positions, cash) или None, ако не е този формат."""
+    if not rows or [c.strip() for c in rows[0][:8]] != TX_HEADER:
+        return None
+    pos, cash, sells, income = {}, {}, [], []
+    last_day = ""
+    for r in rows[1:]:
+        if len(r) < 8 or not r[0]:
+            continue
+        d = dict(zip(TX_HEADER, r))
+        day, tk, typ = d["Date"][:10], d["Ticker"], d["Type"].upper()
+        ccy = d["Currency"] or "EUR"
+        qty, price, total = num(d["Quantity"]), num(d["Price per share"]), num(d["Total Amount"]) or 0.0
+        fx = num(d["FX Rate"]) or 1.0                     # USD за 1 EUR
+        eur = total / fx if ccy == "USD" else total
+        last_day = max(last_day, day)
+        cash[ccy] = cash.get(ccy, 0.0)
+        if typ.startswith("CASH TOP-UP"):
+            cash[ccy] += total
+        elif typ.startswith("CASH WITHDRAWAL"):
+            cash[ccy] -= abs(total)
+        elif typ.startswith("BUY"):
+            p = pos.setdefault(tk, {"qty": 0.0, "invested_eur": 0.0, "ccy": ccy})
+            p["qty"] += qty
+            p["invested_eur"] += eur
+            cash[ccy] -= total
+        elif typ.startswith("SELL"):
+            p = pos.setdefault(tk, {"qty": 0.0, "invested_eur": 0.0, "ccy": ccy})
+            share = qty / p["qty"] if p["qty"] else 0
+            cost_eur = p["invested_eur"] * share
+            p["qty"] -= qty
+            p["invested_eur"] -= cost_eur
+            cash[ccy] += total
+            gross = qty * price if (qty and price) else None
+            fee = round(gross - total, 2) if gross is not None and gross - total > 0.005 else 0.0
+            sells.append({"date": day, "asset": tk, "type": "sell", "qty": qty, "ccy": ccy,
+                          "proceeds": round(total, 2), "proceeds_eur": round(eur, 2),
+                          "cost_eur": round(cost_eur, 2), "pnl_eur": round(eur - cost_eur, 2),
+                          "fee": fee, "fee_eur": round(fee / fx if ccy == "USD" else fee, 2),
+                          "source": "revolut-transactions"})
+        elif typ.startswith("DIVIDEND"):
+            cash[ccy] += total
+            income.append({"date": day, "asset": tk, "type": "dividend", "ccy": ccy, "gross": total,
+                           "wht": 0.0, "net": total, "net_eur": round(eur, 2), "source": "revolut-transactions"})
+        elif "FEE" in typ:
+            cash[ccy] -= abs(total)
+            income.append({"date": day, "asset": tk or "FEE", "type": "fee", "ccy": ccy,
+                           "net": -abs(total), "net_eur": -round(abs(eur), 2), "source": "revolut-transactions"})
+        else:
+            print(f"  ? непознат тип „{d['Type']}“ на {day} — пропускам")
+    for p in pos.values():
+        p["qty"] = round(p["qty"], 9)
+        p["invested_eur"] = round(p["invested_eur"], 2)
+    return sells, income, {k: v for k, v in pos.items() if v["qty"] > 1e-9}, \
+        {k: round(v, 2) for k, v in cash.items()}, last_day
+
+
 def detect_year(rows, sells, income):
     for x in sells + income:
         return int(x["date"][:4])
@@ -194,10 +261,14 @@ def detect_year(rows, sells, income):
 
 def parse_file(path, fx):
     rows = rows_of(read_text(path))
+    tx = parse_transactions(rows)
+    if tx:
+        sells, income, positions, cash, last_day = tx
+        return sells, income, {"positions": positions, "cash": cash, "as_of": last_day}
     sells, income = parse_brokerage(rows, fx)
     year = detect_year(rows, sells, income)
     c_real, c_inc = parse_crypto(rows, year)
-    return sells + c_real, income + c_inc
+    return sells + c_real, income + c_inc, None
 
 
 # ─── СЛИВАНЕ В portfolio.json ────────────────────────────────────────────────
@@ -206,7 +277,9 @@ def key_of(x):
         return ("crypto_summary", x["year"])
     if x.get("asset") == "CRYPTO":
         return ("crypto_income", x.get("type"), x.get("year"))
-    return (x.get("type"), x.get("date"), x.get("asset"), round(x.get("qty") or x.get("net") or 0, 8))
+    if x.get("type") == "sell":
+        return ("sell", x.get("date"), x.get("asset"), round(x.get("qty") or 0, 8))
+    return (x.get("type"), x.get("date"), x.get("asset"))
 
 
 def merge(cfg, realized, income, apply_sells):
@@ -230,9 +303,15 @@ def merge(cfg, realized, income, apply_sells):
         for x in new:
             k = key_of(x)
             if k in idx:
-                if lst[idx[k]] != x:
-                    lst[idx[k]] = x
-                    log.append(f"↻ {lst_name}: {x['asset']} {x['date']} (обновено)")
+                old = lst[idx[k]]
+                # P&L statement е по-точен (цена на придобиване от Revolut) → не го презаписваме,
+                # само допълваме липсващи полета (напр. таксата от списъка сделки)
+                add = {f: v for f, v in x.items() if old.get(f) is None and v is not None}
+                if x.get("source") != "revolut-transactions":
+                    add.update({f: v for f, v in x.items() if old.get(f) != v})
+                if add:
+                    old.update(add)
+                    log.append(f"↻ {lst_name}: {x['asset']} {x['date']} ({', '.join(sorted(add))})")
             else:
                 lst.append(x)
                 idx[k] = len(lst) - 1
@@ -265,6 +344,40 @@ def apply_sell(cfg, s):
     return [f"  → {a['id']}: qty {q0} → {a['qty']}, вложено €{inv0} → €{a['invested_eur']}"]
 
 
+def apply_positions(cfg, snap, fx):
+    log = []
+    by_key = {}
+    for a in cfg["assets"]:
+        by_key[a["id"]] = a
+        if a.get("symbol"):
+            by_key[a["symbol"].split(".")[0]] = a
+    for tk, p in sorted(snap["positions"].items()):
+        a = by_key.get(tk)
+        if not a:
+            log.append(f"  ! {tk}: няма го в portfolio.json — добави актив (id, symbol, bucket), после пусни отново")
+            continue
+        if (a.get("qty"), a.get("invested_eur")) != (p["qty"], p["invested_eur"]):
+            log.append(f"  → {a['id']}: qty {a.get('qty')} → {p['qty']}, вложено €{a.get('invested_eur')} → €{p['invested_eur']}")
+            a["qty"], a["invested_eur"] = p["qty"], p["invested_eur"]
+    held = set(snap["positions"])
+    for a in cfg["assets"]:
+        if a.get("source") == "yahoo" and not a.get("closed") and a["id"] not in held \
+                and (a.get("symbol") or "").split(".")[0] not in held:
+            log.append(f"  ! {a['id']}: го няма в извлечението — продаден ли е? (сложи closed: true)")
+    cash = snap["cash"]
+    rate = fx[max(fx)] if fx else 1.10
+    cash_eur = round(cash.get("EUR", 0) + cash.get("USD", 0) / rate, 2)
+    c = next((a for a in cfg["assets"] if a["id"] == "CASH"), None)
+    if c is not None and c.get("value_eur") != cash_eur:
+        log.append(f"  → CASH (брокерска): €{c.get('value_eur')} → €{cash_eur} "
+                   f"({', '.join(f'{v} {k}' for k, v in cash.items())})")
+        c["value_eur"] = cash_eur
+    if snap["as_of"] and cfg.get("positions_as_of", "") != snap["as_of"]:
+        log.append(f"  → positions_as_of: {cfg.get('positions_as_of')} → {snap['as_of']}")
+        cfg["positions_as_of"] = snap["as_of"]
+    return log
+
+
 def report(cfg):
     out = []
     by_year = {}
@@ -293,20 +406,29 @@ def report(cfg):
 
 def main(argv):
     files = [a for a in argv if not a.startswith("--")]
-    write, apply_sells = "--write" in argv, "--apply-sells" in argv
+    write, apply_sells, positions = "--write" in argv, "--apply-sells" in argv, "--positions" in argv
     if not files:
         print(__doc__)
         return 1
     fx = fx_table()
-    realized, income = [], []
+    realized, income, snaps = [], [], []
     for f in files:
-        r, i = parse_file(f, fx)
-        print(f"📄 {os.path.basename(f)}: {len(r)} реализирани, {len(i)} доходи")
+        r, i, snap = parse_file(f, fx)
+        print(f"📄 {os.path.basename(f)}: {len(r)} реализирани, {len(i)} доходи"
+              + (f", {len(snap['positions'])} позиции към {snap['as_of']}" if snap else ""))
         realized += r
         income += i
+        if snap:
+            snaps.append(snap)
     with open(CFG_FILE, encoding="utf-8") as fh:
         cfg = json.load(fh)
-    log = merge(cfg, realized, income, apply_sells)
+    log = merge(cfg, realized, income, apply_sells and not snaps)
+    if snaps and positions:
+        log += apply_positions(cfg, max(snaps, key=lambda s: s["as_of"]), fx)
+    elif snaps:
+        print("ℹ️ Списък сделки — добави --positions, за да обновиш qty/вложено/кеш:")
+        for tk, p in sorted(max(snaps, key=lambda s: s["as_of"])["positions"].items()):
+            print(f"   {tk:<6} qty {p['qty']:<12} вложено €{p['invested_eur']}")
     print("\n".join(log) if log else "ℹ️ Нищо ново — всичко вече е импортирано.")
     print("\n".join(report(cfg)))
     if write and log:
