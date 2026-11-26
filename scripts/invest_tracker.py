@@ -647,15 +647,16 @@ def main():
 
     daily = rebuild_daily(daily_ids)
 
-    plan = cfg.get("plan")
+    plan = invest_plan.active_plan(cfg.get("plan"), now.date())
     plan_msgs, plan_block, plan_info = [], "", None
     if plan:
         summary = invest_plan.summarize(assets, rows, plan)
         bench = invest_plan.update_benchmark(assets, rows, plan, state, now.date()) \
             if now.date() >= date.fromisoformat(plan.get("start", "2000-01-01")) else None
         plan_msgs = invest_plan.check_plan(assets, rows, summary, plan, state, now)
-        plan_block = invest_plan.plan_text(summary, bench, plan, state, now)
-        plan_info = {"summary": summary, "benchmark": bench,
+        plan_block = invest_plan.plan_text(summary, bench, plan, state, now, assets)
+        plan_info = {"phase": plan.get("phase"), "summary": summary, "benchmark": bench,
+                     "missing": invest_plan.missing_instruments(assets, plan),
                      "next_contribution": invest_plan.next_contribution(plan, now.date()).isoformat()}
         for k, b in summary["buckets"].items():
             print(f"  [{k:<5}] €{b['value']:>8} · {b['pct']}% (цел {b['target_pct']}%)")

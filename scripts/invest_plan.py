@@ -13,8 +13,9 @@ portfolio.json може да има "bucket"; иначе: cash→safe, crypto→
 
 from datetime import date, datetime, timedelta
 
-BUCKETS = ("safe", "core", "risky")
-LABEL = {"safe": "🛡 Сигурна", "core": "🧱 Ядро", "risky": "🎲 Рискова"}
+BUCKETS = ("safe", "core", "risky")            # по подразбиране; реално = ключовете на plan["targets"]
+LABEL = {"safe": "🛡 Сигурна", "core": "🧱 Ядро", "risky": "🎲 Рискова",
+         "bonds": "📜 Облигации", "gold": "🥇 Злато"}
 DEFAULT_BUCKET = {"cash": "safe", "crypto": "risky", "stocks": "core"}
 
 
@@ -34,25 +35,61 @@ def bucket_of(a):
     return a.get("bucket") or DEFAULT_BUCKET.get(a.get("group"), "core")
 
 
+def buckets_of(plan):
+    return list(plan.get("targets") or {k: 0 for k in BUCKETS})
+
+
+def active_plan(plan, today):
+    """Фазите от стратегията до 2030: последната с from ≤ днес презаписва цели, лимити, вноска."""
+    if not plan:
+        return plan
+    out = {k: v for k, v in plan.items() if k != "phases"}
+    phase, nxt = None, None
+    for ph in sorted(plan.get("phases", []), key=lambda x: x["from"]):
+        if _d(ph["from"]) <= today:
+            if ph.get("enabled", True):          # фаза с enabled:false чака одобрение след преглед
+                phase = ph
+            elif not nxt:
+                nxt = ph
+        elif not nxt:
+            nxt = ph
+    if nxt:
+        out["next_phase"] = {"name": nxt.get("name"), "from": nxt["from"], "enabled": nxt.get("enabled", True)}
+    if phase:
+        out.update({k: v for k, v in phase.items() if k not in ("from", "name")})
+        out["phase"] = phase.get("name", phase["from"])
+        out["phase_from"] = phase["from"]
+    return out
+
+
+def missing_instruments(assets, plan):
+    """Инструменти по стратегията (plan.strategy_instruments), които още не се държат."""
+    held = {a["id"] for a in assets if not a.get("closed") and ((a.get("qty") or 0) > 0 or a.get("value_eur"))}
+    return [(b, i) for b, ids in (plan.get("strategy_instruments") or {}).items() for i in ids if i not in held]
+
+
 # ─── ОБОБЩЕНИЕ ────────────────────────────────────────────────────────────────
 def summarize(assets, rows, plan):
     cfg_by_id = {a["id"]: a for a in assets}
-    val = {b: 0.0 for b in BUCKETS}
-    inv = {b: 0.0 for b in BUCKETS}
+    bks = buckets_of(plan)
+    val = {b: 0.0 for b in bks}
+    inv = {b: 0.0 for b in bks}
     for r in rows:
         b = bucket_of(cfg_by_id.get(r["asset"], {}))
+        if b not in val:                      # кофа без цел в текущата фаза → към ядрото
+            b = "core" if "core" in val else bks[0]
         val[b] += r["value_eur"] or 0
         inv[b] += r["invested_eur"] or 0
     total = sum(val.values())
     targets = plan.get("targets", {})
     out = {"total": round(total, 2), "buckets": {}}
-    for b in BUCKETS:
+    for b in bks:
         pct = val[b] / total * 100 if total else 0
         tgt = float(targets.get(b, 0)) * 100
         out["buckets"][b] = {"value": round(val[b], 2), "invested": round(inv[b], 2),
                              "pct": round(pct, 1), "target_pct": round(tgt, 1),
                              "dev_pp": round(pct - tgt, 1)}
-    rk = out["buckets"]["risky"]
+    rk = out["buckets"].setdefault("risky", {"value": 0, "invested": 0, "pct": 0, "target_pct": 0, "dev_pp": 0})
     rk["drawdown_pct"] = round((rk["value"] / rk["invested"] - 1) * 100, 1) if rk["invested"] else 0.0
     return out
 
@@ -106,7 +143,7 @@ def where_next(summary, plan, state, today):
     b = summary["buckets"]
     cap = float(plan.get("cap_risky_invested_eur", 2000))
     fz = frozen_until(state)
-    cands = [k for k in BUCKETS
+    cands = [k for k in b
              if not (k == "risky" and (b["risky"]["invested"] >= cap or (fz and fz >= today)))]
     k = min(cands, key=lambda x: b[x]["dev_pp"])
     return k, plan.get("instruments", {}).get(k, k)
@@ -257,12 +294,14 @@ def check_plan(assets, rows, summary, plan, state, now):
 
     # 3) отклонение на кофите
     band = float(plan.get("rebalance_band_pp", 5))
-    for k in BUCKETS:
+    for k in summary["buckets"]:
         bk = summary["buckets"][k]
+        if not bk["target_pct"] and not bk["value"]:
+            continue
         st = "low" if bk["dev_pp"] < -band else "high" if bk["dev_pp"] > band else "ok"
         key = f"dev_{k}"
         if st != flags.get(key, "ok") and st != "ok":
-            msgs.append(f"⚖️ {LABEL[k]}: {bk['pct']:.0f}% при цел {bk['target_pct']:.0f}% "
+            msgs.append(f"⚖️ {LABEL.get(k, k)}: {bk['pct']:.0f}% при цел {bk['target_pct']:.0f}% "
                         f"({'+' if bk['dev_pp'] > 0 else ''}{bk['dev_pp']:.0f} п.п.). "
                         + ("Насочи следващите вноски тук." if st == "low" else "Спри вноските тук, без да продаваш."))
         flags[key] = st
@@ -321,13 +360,15 @@ def check_plan(assets, rows, summary, plan, state, now):
 
 
 # ─── ТЕКСТ ЗА ОТЧЕТИТЕ ────────────────────────────────────────────────────────
-def plan_text(summary, bench, plan, state, now):
+def plan_text(summary, bench, plan, state, now, assets=None):
     today = now.date()
-    L = ["<b>🧭 План</b>"]
-    for k in BUCKETS:
+    L = [f"<b>🧭 План</b>{' · ' + plan['phase'] if plan.get('phase') else ''}"]
+    for k in summary["buckets"]:
         b = summary["buckets"][k]
+        if not b["target_pct"] and not b["value"]:
+            continue
         mark = "🟢" if abs(b["dev_pp"]) <= float(plan.get("rebalance_band_pp", 5)) else "🟠"
-        L.append(f"{mark} {LABEL[k]}: {_eur(b['value'])} · {b['pct']:.0f}% (цел {b['target_pct']:.0f}%)")
+        L.append(f"{mark} {LABEL.get(k, k)}: {_eur(b['value'])} · {b['pct']:.0f}% (цел {b['target_pct']:.0f}%)")
     rk = summary["buckets"]["risky"]
     cap_r = float(plan.get("cap_risky_invested_eur", 2000))
     L.append(f"   рискова: вложени {_eur(rk['invested'])} / {_eur(cap_r)} · {_pct(rk['drawdown_pct'])}")
@@ -337,10 +378,17 @@ def plan_text(summary, bench, plan, state, now):
     nd = next_contribution(plan, today)
     k, inst = where_next(summary, plan, state, today)
     amt = float(plan.get("monthly_contribution_eur", 500))
-    L.append(f"📆 Следваща вноска {_eur(amt)}: {nd:%d.%m} → най-изостанала кофа {LABEL[k]} ({inst})")
+    L.append(f"📆 Следваща вноска {_eur(amt)}: {nd:%d.%m} → най-изостанала кофа {LABEL.get(k, k)} ({inst})")
     ev = upcoming_events(plan, today, 7)
     if ev:
         L.append("📅 " + " · ".join(f"{e['d']:%d.%m} {e['name']}" for e in ev))
+    nx = plan.get("next_phase")
+    if nx:
+        L.append(f"🗓 Следваща фаза „{nx['name']}“ от {_d(nx['from']):%d.%m.%Y}"
+                 + ("" if nx["enabled"] else " — чака одобрение (enabled: true след прегледа)"))
+    miss = missing_instruments(assets or [], plan)
+    if miss:
+        L.append("🧩 Липсват по стратегия: " + ", ".join(f"{i} ({LABEL.get(b, b)})" for b, i in miss))
     if bench:
         sign = "🟢" if bench["diff_pp"] >= 0 else "🔴"
         L.append(f"{sign} Еталон от {_d(bench['since']):%d.%m.%Y}: портфейл {_pct(bench['port_ret'])} "
