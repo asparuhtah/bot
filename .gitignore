@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 /data.json
 .DS_Store
+
+# Извлечения от Revolut (лични данни) — НЕ се commit-ват, repo-то е публично
+statements/
+*.statement.csv
