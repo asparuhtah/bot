@@ -217,7 +217,7 @@
     }
   ],
   "plan": {
-    "_readme": "Правилата от документа „Инвестиционен план 12 месеца (дек 2026 – ное 2027)“. Ботът само сигнализира.",
+    "_readme": "Правилата от „Инвестиционен план 12 месеца“ и „Стратегия 2026–2030“. Ботът само сигнализира. phases: от датата from се прилагат целите/лимитите на фазата; фаза с enabled:false чака одобрение след годишния преглед.",
     "version": "2026-11-26",
     "start": "2026-12-01",
     "end": "2027-11-30",
@@ -315,6 +315,138 @@
       {
         "date": "2027-10-27",
         "name": "Фед"
+      }
+    ],
+    "strategy_instruments": {
+      "safe": [
+        "XEON"
+      ],
+      "core": [
+        "VWCE"
+      ],
+      "risky": [
+        "BTC"
+      ]
+    },
+    "phases": [
+      {
+        "from": "2026-12-01",
+        "name": "Фаза 1 · Проба",
+        "enabled": true
+      },
+      {
+        "from": "2027-12-01",
+        "name": "Фаза 2 · Растеж 2028",
+        "enabled": false,
+        "cap_total_eur": 20000,
+        "monthly_contribution_eur": 750,
+        "targets": {
+          "safe": 0.15,
+          "core": 0.6,
+          "bonds": 0.15,
+          "gold": 0.05,
+          "risky": 0.05
+        },
+        "instruments": {
+          "safe": "XEON",
+          "core": "VWCE",
+          "bonds": "глобални облигации EUR-hedged",
+          "gold": "физическо злато ETC",
+          "risky": "BTC"
+        },
+        "strategy_instruments": {
+          "safe": [
+            "XEON"
+          ],
+          "core": [
+            "VWCE"
+          ],
+          "bonds": [
+            "BONDS"
+          ],
+          "gold": [
+            "GOLD"
+          ],
+          "risky": [
+            "BTC"
+          ]
+        }
+      },
+      {
+        "from": "2028-12-01",
+        "name": "Фаза 2 · Растеж 2029",
+        "enabled": false,
+        "cap_total_eur": 32000,
+        "monthly_contribution_eur": 1000,
+        "targets": {
+          "safe": 0.15,
+          "core": 0.6,
+          "bonds": 0.15,
+          "gold": 0.05,
+          "risky": 0.05
+        },
+        "instruments": {
+          "safe": "XEON",
+          "core": "VWCE",
+          "bonds": "глобални облигации EUR-hedged",
+          "gold": "физическо злато ETC",
+          "risky": "BTC"
+        },
+        "strategy_instruments": {
+          "safe": [
+            "XEON"
+          ],
+          "core": [
+            "VWCE"
+          ],
+          "bonds": [
+            "BONDS"
+          ],
+          "gold": [
+            "GOLD"
+          ],
+          "risky": [
+            "BTC"
+          ]
+        }
+      },
+      {
+        "from": "2029-12-01",
+        "name": "Фаза 3 · Консолидация 2030",
+        "enabled": false,
+        "cap_total_eur": 45000,
+        "monthly_contribution_eur": 1000,
+        "targets": {
+          "safe": 0.15,
+          "core": 0.55,
+          "bonds": 0.2,
+          "gold": 0.05,
+          "risky": 0.05
+        },
+        "instruments": {
+          "safe": "XEON",
+          "core": "VWCE",
+          "bonds": "глобални облигации EUR-hedged",
+          "gold": "физическо злато ETC",
+          "risky": "BTC"
+        },
+        "strategy_instruments": {
+          "safe": [
+            "XEON"
+          ],
+          "core": [
+            "VWCE"
+          ],
+          "bonds": [
+            "BONDS"
+          ],
+          "gold": [
+            "GOLD"
+          ],
+          "risky": [
+            "BTC"
+          ]
+        }
       }
     ]
   },

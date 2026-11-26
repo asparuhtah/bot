@@ -10,51 +10,26 @@ import os
 import requests
 from datetime import datetime, timezone
 
-# ── Portfolio (mirrors asparuh_invest_bot_v4.py) ──────────────────────────────
-PORTFOLIO = {
-    "BTC-USD": {"name": "Bitcoin (BTC)",          "currency": "CRYPTO", "invested": 107.00, "shares": 0.00162035,    "cgId": "bitcoin"},
-    "ETC-USD": {"name": "Ethereum Classic (ETC)", "currency": "CRYPTO", "invested": 58.03,  "shares": 6.72696447,    "cgId": "ethereum-classic"},
-    "FLR-USD": {"name": "Flare (FLR)",            "currency": "CRYPTO", "invested": 0.10,   "shares": 14.8080141,    "cgId": "flare-networks"},
-    "EXI2.DE": {"name": "EXI2 ETF",              "currency": "EUR",    "invested": 50.00,  "shares": 0.477463713},
-    "MRVL":    {"name": "Marvell (MRVL)",         "currency": "USD",    "invested": 37.04,  "shares": 0.258598397},
-    "DFEN.DE": {"name": "VanEck Defense ETF",     "currency": "EUR",    "invested": 49.00,  "shares": 0.873440280},
-    "NVDA":    {"name": "NVIDIA (NVDA)",          "currency": "USD",    "invested": 74.08,  "shares": 0.351794520},
-    "ROBO":    {"name": "Robo-Advisor",           "currency": "EUR",    "invested": 23.42,  "shares": 1.0},
-}
-
-DEFAULT_PRICES = {"EXI2.DE": 109.52, "MRVL": 188.68, "DFEN.DE": 55.03, "NVDA": 203.81, "ROBO": 23.37}
-TOTAL_INVESTED = sum(a["invested"] for a in PORTFOLIO.values())
-DATA_FILE      = os.path.join(os.path.dirname(__file__), "docs", "data.json")
-MAX_HISTORY    = 30
+# ── Портфейлът идва от един източник: docs/invest/portfolio.json (+ latest.json от бота) ──
+ROOT        = os.path.dirname(os.path.abspath(__file__))
+CFG_FILE    = os.path.join(ROOT, "docs", "invest", "portfolio.json")
+LATEST_FILE = os.path.join(ROOT, "docs", "invest", "latest.json")
+DATA_FILE   = os.path.join(ROOT, "docs", "data.json")
+MAX_HISTORY = 30
 
 
-def fetch_coingecko():
-    ids = "bitcoin,ethereum-classic,flare-networks"
-    url = f"https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies=eur,usd"
-    r   = requests.get(url, timeout=12)
-    r.raise_for_status()
-    return r.json()
+def load_json(path, default):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return default
 
 
-def fetch_eurusd():
-    r    = requests.get("https://api.kraken.com/0/public/Ticker?pair=EURUSD", timeout=10)
-    data = r.json()
-    if not data.get("error"):
-        pair = list(data["result"].keys())[0]
-        return round(float(data["result"][pair]["c"][0]), 4)
-    return 1.08
-
-
-def get_price_eur(ticker, cg, eur_usd, manual):
-    a = PORTFOLIO[ticker]
-    if "cgId" in a:
-        eur = cg.get(a["cgId"], {}).get("eur")
-        if eur:
-            return float(eur)
-    mp = manual.get(ticker, DEFAULT_PRICES.get(ticker))
-    if mp:
-        return mp / eur_usd if a["currency"] == "USD" else mp
-    return None
+def open_assets():
+    """Само активните позиции (closed=true и кешът отпадат)."""
+    cfg = load_json(CFG_FILE, {"assets": []})
+    return [a for a in cfg["assets"] if not a.get("closed") and a.get("group") != "cash"]
 
 
 def fetch_news():
@@ -63,12 +38,16 @@ def fetch_news():
     import xml.etree.ElementTree as ET
     from email.utils import parsedate_to_datetime
 
-    feeds = [
-        ("Yahoo Finance", ["MRVL", "NVDA"],
-         "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MRVL,NVDA&region=US&lang=en-US"),
-        ("CoinDesk", ["BTC-USD", "ETC-USD"],
-         "https://www.coindesk.com/arc/outboundfeeds/rss/"),
-    ]
+    assets = open_assets()
+    stocks = [a["symbol"] for a in assets if a.get("source") == "yahoo"]
+    crypto = [a["id"] for a in assets if a.get("group") == "crypto"]
+    feeds = []
+    if stocks:
+        feeds.append(("Yahoo Finance", [x.split(".")[0] for x in stocks],
+                      "https://feeds.finance.yahoo.com/rss/2.0/headline?s=" + ",".join(stocks)
+                      + "&region=US&lang=en-US"))
+    if crypto:
+        feeds.append(("CoinDesk", crypto, "https://www.coindesk.com/arc/outboundfeeds/rss/"))
     items = []
     for source, tickers, url in feeds:
         try:
@@ -100,29 +79,23 @@ def load_existing():
 
 
 def main():
-    print("Fetching prices…")
-    cg      = fetch_coingecko()
-    eur_usd = fetch_eurusd()
-    manual  = DEFAULT_PRICES.copy()
-
-    print(f"EUR/USD: {eur_usd}")
-
-    total_current = 0.0
-    prices_out    = {}
-
-    for ticker, asset in PORTFOLIO.items():
-        peur = get_price_eur(ticker, cg, eur_usd, manual)
-        if peur is None:
-            print(f"  WARNING: no price for {ticker}")
-            continue
-        val   = asset["shares"] * peur
-        total_current += val
-        prices_out[ticker] = round(peur, 6)
-        print(f"  {ticker}: €{peur:.4f} → €{val:.2f}")
-
-    pnl     = total_current - TOTAL_INVESTED
-    pnl_pct = (pnl / TOTAL_INVESTED) * 100 if TOTAL_INVESTED else 0
+    """Стойностите се вземат от latest.json на Invest Tracker (бота) — същите цени и позиции."""
+    latest = load_json(LATEST_FILE, {})
+    ids = {a["id"] for a in open_assets()}
+    rows = [r for r in latest.get("assets", []) if r["asset"] in ids]
+    if not rows:
+        print("⚠️ latest.json липсва или е празен — пускам без нов запис")
+        return
+    eur_usd = latest.get("eurusd")
+    prices_out = {r["asset"]: r["price_eur"] for r in rows}
+    total_current = sum(r["value_eur"] or 0 for r in rows)
+    total_invested = sum(r["invested_eur"] or 0 for r in rows if r.get("invested_eur") is not None)
+    for r in rows:
+        print(f"  {r['asset']}: €{r['price_eur']} → €{r['value_eur']}")
+    pnl     = total_current - total_invested
+    pnl_pct = (pnl / total_invested) * 100 if total_invested else 0
     today   = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    TOTAL_INVESTED = total_invested
 
     # Load existing data and append to history
     existing = load_existing()
