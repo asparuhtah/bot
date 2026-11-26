@@ -498,17 +498,28 @@ def check_alerts(assets, rows, t, daily, cfg, state, now, extra_msgs=None):
 
 # ─── РАЗПИСАНИЕ ───────────────────────────────────────────────────────────────
 def realized_text(cfg, now):
-    rl = [x for x in cfg.get("realized", []) if str(x.get("date", "")).startswith(str(now.year))]
-    if not rl:
+    """Реализирано за годината (от revolut_import.py или ръчно) + доходи (дивиденти, L&E)."""
+    y = str(now.year)
+    rl = [x for x in cfg.get("realized", []) if str(x.get("year") or x.get("date", ""))[:4] == y]
+    inc = [x for x in cfg.get("income", []) if str(x.get("year") or x.get("date", ""))[:4] == y]
+    if not rl and not inc:
         return ""
-    proceeds = sum(float(x.get("proceeds_eur") or 0) for x in rl)
-    known = [x for x in rl if x.get("cost_eur") is not None and x.get("proceeds_eur") is not None]
-    gain = sum(float(x["proceeds_eur"]) - float(x["cost_eur"]) for x in known)
-    s = f"\n\n🧾 Реализирано {now.year}: {len(rl)} продажби, постъпления {eur(proceeds)}"
-    if known:
-        s += f", печалба {signed(gain)} €"
-    if len(known) < len(rl):
-        s += f" ({len(rl) - len(known)} непълни — допиши cost_eur/proceeds_eur в portfolio.json)"
+    pnl, fees, unknown = 0.0, 0.0, 0
+    for x in rl:
+        if x.get("pnl_eur") is not None:
+            pnl += float(x["pnl_eur"])
+        elif x.get("proceeds_eur") is not None and x.get("cost_eur") is not None:
+            pnl += float(x["proceeds_eur"]) - float(x["cost_eur"])
+        else:
+            unknown += 1
+        fees += float(x.get("fees_eur") or 0)
+    s = f"\n\n🧾 Реализирано {y}: P&L {signed(pnl)} €"
+    if fees:
+        s += f" (такси {eur(fees)})"
+    if inc:
+        s += f" · доходи {signed(sum(float(x.get('net_eur') or 0) for x in inc))} €"
+    if unknown:
+        s += f"\n   {unknown} непълни реда — пусни scripts/revolut_import.py с извлечението"
     return s
 
 

@@ -1,5 +1,6 @@
 {
   "_readme": "Конфигурация на портфейла. Редактирай директно в GitHub (молив ✎). qty = брой дялове/монети, invested_eur = общо вложено (цена на придобиване). Ръчни активи (source=manual) се обновяват с value_eur. bucket = safe | core | risky (кофите от плана). closed=true = продадена позиция: не се следи, но историята в daily.csv остава. last_known = последна цена от Revolut, ползва се ако всички източници паднат. Алертите са в родната валута (USD за MRVL/NVDA/крипто, EUR за .DE). При покупка/продажба: смени qty и invested_eur; при продажба добави ред в realized.",
+  "positions_as_of": "2026-11-25",
   "assets": [
     {
       "id": "BTC",
@@ -184,19 +185,32 @@
   "realized": [
     {
       "date": "2026-11-25",
-      "asset": "ETC",
-      "qty": 22.12,
-      "proceeds_eur": 108.9,
-      "cost_eur": null,
-      "note": "цена на придобиване — допиши"
+      "asset": "MRVL",
+      "isin": "US5738741041",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.09114474,
+      "ccy": "USD",
+      "cost": 14.1,
+      "proceeds": 10.9,
+      "pnl": -3.2,
+      "cost_eur": 12.88,
+      "proceeds_eur": 9.96,
+      "pnl_eur": -2.92,
+      "source": "revolut-brokerage"
     },
     {
-      "date": "2026-11-25",
-      "asset": "FLR",
-      "qty": 14.8080141,
-      "proceeds_eur": null,
-      "cost_eur": 0.1,
-      "note": "затворена"
+      "date": "2026-12-31",
+      "year": 2026,
+      "asset": "CRYPTO",
+      "type": "crypto_summary",
+      "proceeds_eur": 111.7,
+      "cost_eur": 155.6,
+      "fees_eur": 11.39,
+      "pnl_eur": -55.29,
+      "tax_withheld_eur": 0,
+      "source": "revolut-crypto",
+      "note": "обобщение за 2026 от Revolut (към датата на извлечението)"
     }
   ],
   "plan": {
@@ -300,5 +314,73 @@
         "name": "Фед"
       }
     ]
-  }
+  },
+  "income": [
+    {
+      "date": "2026-06-16",
+      "asset": "EXI2",
+      "type": "dividend",
+      "ccy": "EUR",
+      "gross": 0.14,
+      "wht": 0.0,
+      "net": 0.14,
+      "net_eur": 0.14,
+      "source": "revolut-brokerage"
+    },
+    {
+      "date": "2026-06-29",
+      "asset": "NVDA",
+      "type": "dividend",
+      "ccy": "EUR",
+      "gross": 0.07,
+      "wht": 0.0,
+      "net": 0.07,
+      "net_eur": 0.07,
+      "source": "revolut-brokerage"
+    },
+    {
+      "date": "2026-07-31",
+      "asset": "MRVL",
+      "type": "dividend",
+      "ccy": "EUR",
+      "gross": 0.0,
+      "wht": 0.0,
+      "net": 0.0,
+      "net_eur": 0.0,
+      "source": "revolut-brokerage"
+    },
+    {
+      "date": "2026-10-02",
+      "asset": "NVDA",
+      "type": "dividend",
+      "ccy": "EUR",
+      "gross": 0.07,
+      "wht": 0.0,
+      "net": 0.07,
+      "net_eur": 0.07,
+      "source": "revolut-brokerage"
+    },
+    {
+      "date": "2026-10-30",
+      "asset": "MRVL",
+      "type": "dividend",
+      "ccy": "EUR",
+      "gross": 0.0,
+      "wht": 0.0,
+      "net": 0.0,
+      "net_eur": 0.0,
+      "source": "revolut-brokerage"
+    },
+    {
+      "date": "2026-12-31",
+      "year": 2026,
+      "asset": "CRYPTO",
+      "type": "learn_earn",
+      "ccy": "EUR",
+      "net": 0.1,
+      "net_eur": 0.1,
+      "source": "revolut-crypto"
+    }
+  ],
+  "_applied_sells": []
 }
