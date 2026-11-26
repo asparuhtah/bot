@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Invest Tracker v6 — GitHub Actions edition
+Invest Tracker v7 — GitHub Actions edition
 ==========================================
 Пуска се от .github/workflows/invest-bot.yml (на ~15 мин). Всеки run:
 
-  1. Дърпа цени: крипто (CoinGecko), акции/ETF (Yahoo → Stooq), EUR/USD (Kraken → Yahoo → ECB).
+  1. Дърпа цени: крипто (CoinGecko), акции/ETF (yfinance → Yahoo → Stooq), EUR/USD (Kraken → Yahoo → ECB).
      Ако източник падне, ползва последната известна цена и я маркира като stale.
   2. Първият run във всеки нов час добавя редове в docs/invest/prices_hourly.csv
      (файлът само расте; живее в git → нищо не се губи при рестарт).
@@ -12,7 +12,9 @@ Invest Tracker v6 — GitHub Actions edition
      latest.json и latest.csv (за dashboard-а и Excel).
   4. Telegram: ценови алерти, рязко движение (±move_pct за ден), P&L прагове,
      сутрешен бриф, дневен отчет, седмично резюме.
-  5. Commit + push с retry (при паралелни commit-и от други workflow-и).
+  5. План (scripts/invest_plan.py): кофи safe/core/risky, стоп/печалба, лимити,
+     календар на събития, следваща вноска, еталон. Настройки в portfolio.json → "plan".
+  6. Commit + push с retry (при паралелни commit-и от други workflow-и).
 
 Командите в Telegram се обработват от Cloudflare Worker (webhook) —
 затова тук НЕ викаме getUpdates (Telegram не позволява и двете).
@@ -28,10 +30,12 @@ import os
 import random
 import subprocess
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 import requests
+
+import invest_plan
 
 ROOT       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR   = os.path.join(ROOT, "docs", "invest")
@@ -117,6 +121,32 @@ def fetch_yahoo(symbol):
     return None
 
 
+def fetch_yf_batch(symbols):
+    """yfinance (cookie/crumb + браузърен TLS) — заобикаля 429 на голия chart API от GitHub runners."""
+    if not symbols:
+        return {}
+    try:
+        import yfinance as yf
+    except ImportError:
+        print("ℹ️ yfinance не е инсталиран — пропускам")
+        return {}
+    out = {}
+    try:
+        tk = yf.Tickers(" ".join(symbols))
+    except Exception as e:
+        print(f"⚠️ yfinance: {e}")
+        return {}
+    for s in symbols:
+        try:
+            fi = tk.tickers[s].fast_info
+            price = fi["last_price"]
+            if price:
+                out[s] = (float(price), fi["currency"], fi["previous_close"])
+        except Exception as e:
+            print(f"⚠️ yfinance {s}: {e}")
+    return out
+
+
 def stooq_symbol(symbol):
     if symbol.endswith(".DE"):
         return symbol[:-3].lower() + ".de"
@@ -171,6 +201,7 @@ def collect_prices(assets, state):
 
     cg_ids = [a["symbol"] for a in assets if a["source"] == "coingecko"]
     cg = fetch_coingecko(cg_ids)
+    yf_prices = fetch_yf_batch([a["symbol"] for a in assets if a["source"] == "yahoo"])
     out = {}
     for a in assets:
         aid, src = a["id"], a["source"]
@@ -181,15 +212,21 @@ def collect_prices(assets, state):
                 got = {"price": float(row["usd"]), "ccy": "USD", "price_eur": float(row["eur"]),
                        "src": "coingecko", "chg24": row.get("usd_24h_change")}
         elif src == "yahoo":
-            y = fetch_yahoo(a["symbol"]) or fetch_stooq(a["symbol"])
+            y = yf_prices.get(a["symbol"])
+            via = "yfinance" if y else None
+            if not y:
+                y = fetch_yahoo(a["symbol"])
+                via = "yahoo" if y else None
+            if not y:
+                y = fetch_stooq(a["symbol"])
+                via = "stooq" if y else None
             if y:
                 price, ccy, _prev = y
                 ccy = (ccy or a["ccy"]).upper()
                 if ccy == "GBP":            # не очакваме, но да не гръмне
                     ccy = "EUR"
                 peur = price / eurusd if ccy == "USD" else price
-                got = {"price": price, "ccy": ccy, "price_eur": peur,
-                       "src": "yahoo" if len(y) == 3 and y[1] else "stooq"}
+                got = {"price": price, "ccy": ccy, "price_eur": peur, "src": via}
         elif src == "manual":
             v = a.get("value_eur")
             if v is not None:
@@ -200,8 +237,18 @@ def collect_prices(assets, state):
             last[aid] = {"price": fnum(got["price"]), "ccy": got["ccy"],
                          "price_eur": fnum(got["price_eur"]), "src": got["src"]}
             last[aid]["at"] = now_sofia().isoformat(timespec="minutes")
+        else:
+            # ръчно въведена цена от Revolut (portfolio.json → last_known), ако е по-нова от кеша
+            lk = a.get("last_known")
+            if lk and lk.get("price_eur") and (aid not in last or lk.get("at", "") > last[aid].get("at", "")):
+                pe = float(lk["price_eur"])
+                ccy = a.get("ccy", "EUR")
+                last[aid] = {"price": fnum(pe * eurusd if ccy == "USD" else pe), "ccy": ccy,
+                             "price_eur": fnum(pe), "src": lk.get("src", "manual"), "at": lk.get("at", "")}
+        if got:
+            pass
         elif aid in last:
-            got = dict(last[aid], src="stale", stale=True)
+            got = dict(last[aid], src="stale", stale=True, stale_at=last[aid].get("at"))
             print(f"⚠️ {aid}: няма свежа цена → последна от {last[aid].get('at')}")
         else:
             print(f"❌ {aid}: няма цена изобщо")
@@ -228,6 +275,7 @@ def build_rows(assets, prices):
             "invested_eur": fnum(inv, 2), "pnl_eur": fnum(pnl, 2),
             "pnl_pct": fnum(pnl / inv * 100, 2) if (pnl is not None and inv) else None,
             "src": p["src"], "stale": p.get("stale", False), "chg24": p.get("chg24"),
+            "stale_at": p.get("stale_at"),
         })
     return rows
 
@@ -364,7 +412,8 @@ def portfolio_msg(title, rows, t, eurusd, now, day_ref=None):
                 if abs(d) >= 0.01:
                     s += f"  · ден {signed(d)}"
             if r["stale"]:
-                s += " ⏳"
+                at = (r.get("stale_at") or "")[:10]
+                s += f" ⏳{' ' + at[8:10] + '.' + at[5:7] if len(at) == 10 else ''}"
             lines.append(s)
         lines.append("")
     arrow = "🟢" if t["pnl"] >= 0 else "🔴"
@@ -372,12 +421,12 @@ def portfolio_msg(title, rows, t, eurusd, now, day_ref=None):
     lines.append(f"   P&L {signed(t['pnl'])} € ({signed(t['pnl_pct'], '%')})")
     lines.append(f"💼 Общо с кеш: <b>{eur(t['total'])}</b>")
     if any(r["stale"] for r in rows):
-        lines.append("\n⏳ = източникът не отговори, показана е последната известна цена")
+        lines.append("\n⏳ = източникът не отговори, показана е последната известна цена (от датата)")
     return "\n".join(lines)
 
 
 # ─── АЛЕРТИ ───────────────────────────────────────────────────────────────────
-def check_alerts(assets, rows, t, daily, cfg, state, now):
+def check_alerts(assets, rows, t, daily, cfg, state, now, extra_msgs=None):
     st = state.setdefault("alert_state", {})
     notify = cfg.get("notify", {})
     today = now.strftime("%Y-%m-%d")
@@ -413,7 +462,7 @@ def check_alerts(assets, rows, t, daily, cfg, state, now):
     moved = state.setdefault("move_sent", {})
     if ref:
         for r in rows:
-            if r["group"] == "cash" or r["stale"]:
+            if r["group"] == "cash" or r["stale"] or r["src"] == "manual":   # ръчна стойност = вноска, не движение
                 continue
             p0 = ref.get(f"{r['asset']}_price")
             if not p0:
@@ -441,13 +490,29 @@ def check_alerts(assets, rows, t, daily, cfg, state, now):
                     f"{signed(crossed, '%')}</b>\nP&L: {signed(t['pnl'])} € ({signed(t['pnl_pct'], '%')}){hint}")
     state["pnl_band"] = band
 
+    msgs.extend(extra_msgs or [])               # правилата от плана (invest_plan.check_plan)
     if msgs:
         send("🔔 <b>Алерт</b>\n\n" + "\n\n".join(msgs))
     return bool(msgs)
 
 
 # ─── РАЗПИСАНИЕ ───────────────────────────────────────────────────────────────
-def scheduled_messages(rows, t, eurusd, daily, cfg, state, now):
+def realized_text(cfg, now):
+    rl = [x for x in cfg.get("realized", []) if str(x.get("date", "")).startswith(str(now.year))]
+    if not rl:
+        return ""
+    proceeds = sum(float(x.get("proceeds_eur") or 0) for x in rl)
+    known = [x for x in rl if x.get("cost_eur") is not None and x.get("proceeds_eur") is not None]
+    gain = sum(float(x["proceeds_eur"]) - float(x["cost_eur"]) for x in known)
+    s = f"\n\n🧾 Реализирано {now.year}: {len(rl)} продажби, постъпления {eur(proceeds)}"
+    if known:
+        s += f", печалба {signed(gain)} €"
+    if len(known) < len(rl):
+        s += f" ({len(rl) - len(known)} непълни — допиши cost_eur/proceeds_eur в portfolio.json)"
+    return s
+
+
+def scheduled_messages(rows, t, eurusd, daily, cfg, state, now, plan_block=""):
     n = cfg.get("notify", {})
     today = now.strftime("%Y-%m-%d")
     ref = prev_day_prices(daily, today)
@@ -455,7 +520,8 @@ def scheduled_messages(rows, t, eurusd, daily, cfg, state, now):
     # сутрешен бриф — първият run в прозореца [morning_hour, +3ч)
     mh = int(n.get("morning_hour", 9))
     if mh <= now.hour < mh + 3 and state.get("last_morning") != today:
-        send(portfolio_msg("🌅 Добро утро, Аспарух!", rows, t, eurusd, now, ref))
+        send(portfolio_msg("🌅 Добро утро, Аспарух!", rows, t, eurusd, now, ref)
+             + (f"\n\n{plan_block}" if plan_block else ""))
         state["last_morning"] = today
 
     # дневен отчет — след daily_report_hour (или до 02:00 за вчера, ако cron-ът е закъснял)
@@ -464,7 +530,7 @@ def scheduled_messages(rows, t, eurusd, daily, cfg, state, now):
         (now - timedelta(days=1)).strftime("%Y-%m-%d") if now.hour < 2 else None)
     if report_day and state.get("last_daily_report", "") < report_day:
         send(portfolio_msg(f"📸 Дневен отчет — {report_day[8:10]}.{report_day[5:7]}", rows, t, eurusd, now, ref)
-             + "\n\n💾 Записано в daily.csv")
+             + (f"\n\n{plan_block}" if plan_block else "") + "\n\n💾 Записано в daily.csv")
         state["last_daily_report"] = report_day
 
     # седмично резюме
@@ -478,12 +544,15 @@ def scheduled_messages(rows, t, eurusd, daily, cfg, state, now):
         if base and base["date"] < today:
             dv = t["total"] - float(base["total_eur"])
             msg += f"\n\n📊 За седмицата (от {base['date']}): {signed(dv)} €"
+        if plan_block:
+            msg += f"\n\n{plan_block}"
+        msg += realized_text(cfg, now)
         send(msg)
         state["last_weekly"] = iso_week
 
 
 # ─── LATEST (за dashboard и Excel) ────────────────────────────────────────────
-def write_latest(rows, t, eurusd, fx_src, daily, now):
+def write_latest(rows, t, eurusd, fx_src, daily, now, plan_info=None):
     ref = prev_day_prices(daily, now.strftime("%Y-%m-%d"))
     for r in rows:
         p0 = ref.get(f"{r['asset']}_price") if ref else None
@@ -493,6 +562,7 @@ def write_latest(rows, t, eurusd, fx_src, daily, now):
         "updated": now.isoformat(timespec="minutes"),
         "eurusd": round(eurusd, 4), "eurusd_src": fx_src,
         "totals": t,
+        "plan": plan_info,
         "assets": [{k: r.get(k) for k in LATEST_COLS + ["stale"]} for r in rows],
     })
     with open(LATEST_CSV, "w", encoding="utf-8", newline="") as f:
@@ -537,9 +607,12 @@ def main():
     if not cfg:
         raise SystemExit(f"Няма {CFG_FILE}")
     state = load_json(STATE_FILE, {})
-    assets = cfg["assets"]
+    assets = [a for a in cfg["assets"] if not a.get("closed")]
     ids = [a["id"] for a in assets]
-    print(f"🤖 Invest Tracker v6 · {now:%Y-%m-%d %H:%M} Sofia · dry={DRY_RUN} · tg={'да' if BOT_TOKEN else 'не'}")
+    # затворените позиции остават като колони в daily.csv → историята не се губи
+    hist_ids = list(dict.fromkeys(r["asset"] for r in read_hourly()))
+    daily_ids = ids + [i for i in hist_ids if i not in ids]
+    print(f"🤖 Invest Tracker v7 · {now:%Y-%m-%d %H:%M} Sofia · dry={DRY_RUN} · tg={'да' if BOT_TOKEN else 'не'}")
 
     prices, eurusd, fx_src = collect_prices(assets, state)
     rows = build_rows(assets, prices)
@@ -561,12 +634,28 @@ def main():
         state["last_hour_logged"] = hour_key
         print(f"💾 Нов часов запис: {hour_key}")
 
-    daily = rebuild_daily(ids)
-    check_alerts(assets, rows, t, daily, cfg, state, now)
-    scheduled_messages(rows, t, eurusd, daily, cfg, state, now)
+    daily = rebuild_daily(daily_ids)
+
+    plan = cfg.get("plan")
+    plan_msgs, plan_block, plan_info = [], "", None
+    if plan:
+        summary = invest_plan.summarize(assets, rows, plan)
+        bench = invest_plan.update_benchmark(assets, rows, plan, state, now.date()) \
+            if now.date() >= date.fromisoformat(plan.get("start", "2000-01-01")) else None
+        plan_msgs = invest_plan.check_plan(assets, rows, summary, plan, state, now)
+        plan_block = invest_plan.plan_text(summary, bench, plan, state, now)
+        plan_info = {"summary": summary, "benchmark": bench,
+                     "next_contribution": invest_plan.next_contribution(plan, now.date()).isoformat()}
+        for k, b in summary["buckets"].items():
+            print(f"  [{k:<5}] €{b['value']:>8} · {b['pct']}% (цел {b['target_pct']}%)")
+        for m in plan_msgs:
+            print("  📌 " + m.replace("<b>", "").replace("</b>", ""))
+
+    check_alerts(assets, rows, t, daily, cfg, state, now, plan_msgs)
+    scheduled_messages(rows, t, eurusd, daily, cfg, state, now, plan_block)
 
     if logged or core(state) != before or not os.path.exists(LATEST_JSON):
-        write_latest(rows, t, eurusd, fx_src, daily, now)
+        write_latest(rows, t, eurusd, fx_src, daily, now, plan_info)
         save_json(STATE_FILE, state)
         git_sync(now)
     else:

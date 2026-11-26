@@ -1,23 +1,304 @@
 {
-  "_readme": "Конфигурация на портфейла. Редактирай директно в GitHub (молив ✎). qty = брой дялове/монети, invested_eur = общо вложено. Ръчни активи (source=manual) се обновяват с полето value_eur. Алертите са в родната валута на актива (USD за MRVL/NVDA/крипто, EUR за .DE).",
+  "_readme": "Конфигурация на портфейла. Редактирай директно в GitHub (молив ✎). qty = брой дялове/монети, invested_eur = общо вложено (цена на придобиване). Ръчни активи (source=manual) се обновяват с value_eur. bucket = safe | core | risky (кофите от плана). closed=true = продадена позиция: не се следи, но историята в daily.csv остава. last_known = последна цена от Revolut, ползва се ако всички източници паднат. Алертите са в родната валута (USD за MRVL/NVDA/крипто, EUR за .DE). При покупка/продажба: смени qty и invested_eur; при продажба добави ред в realized.",
   "assets": [
-    {"id": "BTC",  "name": "Bitcoin",            "group": "crypto", "source": "coingecko", "symbol": "bitcoin",          "ccy": "USD", "qty": 0.00162035,  "invested_eur": 107.00, "alert": {"buy": 60000, "warn": 95000}},
-    {"id": "ETC",  "name": "Ethereum Classic",   "group": "crypto", "source": "coingecko", "symbol": "ethereum-classic", "ccy": "USD", "qty": 6.72696447,  "invested_eur": 58.03,  "alert": {"buy": 6.0,   "warn": 12.0}},
-    {"id": "FLR",  "name": "Flare",              "group": "crypto", "source": "coingecko", "symbol": "flare-networks",   "ccy": "USD", "qty": 14.8080141,  "invested_eur": 0.10},
-    {"id": "EXI2", "name": "iShares ETF (EXI2)", "group": "stocks", "source": "yahoo",     "symbol": "EXI2.DE",          "ccy": "EUR", "qty": 0.477463713, "invested_eur": 50.00,  "alert": {"buy": 95,    "warn": 125}},
-    {"id": "MRVL", "name": "Marvell",            "group": "stocks", "source": "yahoo",     "symbol": "MRVL",             "ccy": "USD", "qty": 0.258598397, "invested_eur": 37.04,  "alert": {"buy": 140,   "warn": 280}},
-    {"id": "DFEN", "name": "VanEck Defense ETF", "group": "stocks", "source": "yahoo",     "symbol": "DFEN.DE",          "ccy": "EUR", "qty": 0.873440280, "invested_eur": 49.00,  "alert": {"buy": 48,    "warn": 65}},
-    {"id": "NVDA", "name": "NVIDIA",             "group": "stocks", "source": "yahoo",     "symbol": "NVDA",             "ccy": "USD", "qty": 0.351794520, "invested_eur": 74.08,  "alert": {"buy": 175,   "warn": 260}},
-    {"id": "ROBO", "name": "Robo-Advisor",       "group": "stocks", "source": "manual",    "ccy": "EUR", "value_eur": 20.81, "invested_eur": 23.42},
-    {"id": "PERSONAL", "name": "Personal",       "group": "cash",   "source": "manual",    "ccy": "EUR", "value_eur": 126.76},
-    {"id": "CASH", "name": "Cash balance",       "group": "cash",   "source": "manual",    "ccy": "EUR", "value_eur": 0.43}
+    {
+      "id": "BTC",
+      "name": "Bitcoin",
+      "group": "crypto",
+      "source": "coingecko",
+      "symbol": "bitcoin",
+      "ccy": "USD",
+      "qty": 0.00162035,
+      "invested_eur": 99.61,
+      "alert": {
+        "buy": 67800,
+        "warn": 95000
+      },
+      "bucket": "risky"
+    },
+    {
+      "id": "VWCE",
+      "name": "Vanguard FTSE All-World (VWCE)",
+      "group": "stocks",
+      "bucket": "core",
+      "source": "yahoo",
+      "symbol": "VWCE.DE",
+      "ccy": "EUR",
+      "qty": 1.0,
+      "invested_eur": 160.0,
+      "last_known": {
+        "price_eur": 158.99,
+        "at": "2026-11-25T17:48+02:00",
+        "src": "revolut"
+      }
+    },
+    {
+      "id": "EXI2",
+      "name": "iShares ETF (EXI2)",
+      "group": "stocks",
+      "source": "yahoo",
+      "symbol": "EXI2.DE",
+      "ccy": "EUR",
+      "qty": 0.477463713,
+      "invested_eur": 50.0,
+      "alert": {
+        "buy": 95,
+        "warn": 125
+      },
+      "bucket": "core",
+      "last_known": {
+        "price_eur": 104.65,
+        "at": "2026-11-25T17:48+02:00",
+        "src": "revolut"
+      }
+    },
+    {
+      "id": "ROBO",
+      "name": "Robo-Advisor (Large purchase)",
+      "group": "stocks",
+      "source": "manual",
+      "ccy": "EUR",
+      "value_eur": 38.92,
+      "invested_eur": 42.62,
+      "bucket": "core"
+    },
+    {
+      "id": "NVDA",
+      "name": "NVIDIA",
+      "group": "stocks",
+      "source": "yahoo",
+      "symbol": "NVDA",
+      "ccy": "USD",
+      "qty": 0.35179452,
+      "invested_eur": 74.08,
+      "alert": {
+        "buy": 175,
+        "warn": 260
+      },
+      "bucket": "risky",
+      "last_known": {
+        "price_eur": 129.96,
+        "at": "2026-11-25T17:48+02:00",
+        "src": "revolut"
+      }
+    },
+    {
+      "id": "MRVL",
+      "name": "Marvell",
+      "group": "stocks",
+      "source": "yahoo",
+      "symbol": "MRVL",
+      "ccy": "USD",
+      "qty": 0.16745366,
+      "invested_eur": 23.98,
+      "alert": {
+        "buy": 140,
+        "warn": 280
+      },
+      "bucket": "risky",
+      "last_known": {
+        "price_eur": 109.4,
+        "at": "2026-11-25T17:48+02:00",
+        "src": "revolut"
+      }
+    },
+    {
+      "id": "DFEN",
+      "name": "VanEck Defense ETF",
+      "group": "stocks",
+      "source": "yahoo",
+      "symbol": "DFEN.DE",
+      "ccy": "EUR",
+      "qty": 0.87344028,
+      "invested_eur": 49.0,
+      "alert": {
+        "buy": 48,
+        "warn": 65
+      },
+      "bucket": "risky",
+      "last_known": {
+        "price_eur": 47.15,
+        "at": "2026-11-25T17:48+02:00",
+        "src": "revolut"
+      }
+    },
+    {
+      "id": "PERSONAL",
+      "name": "Personal",
+      "group": "cash",
+      "source": "manual",
+      "ccy": "EUR",
+      "value_eur": 327.83,
+      "bucket": "safe"
+    },
+    {
+      "id": "CASH",
+      "name": "Cash balance",
+      "group": "cash",
+      "source": "manual",
+      "ccy": "EUR",
+      "value_eur": 9.33,
+      "bucket": "safe"
+    },
+    {
+      "id": "ETC",
+      "name": "Ethereum Classic",
+      "group": "crypto",
+      "source": "coingecko",
+      "symbol": "ethereum-classic",
+      "ccy": "USD",
+      "qty": 0,
+      "invested_eur": 58.03,
+      "closed": true,
+      "closed_on": "2026-11-25"
+    },
+    {
+      "id": "FLR",
+      "name": "Flare",
+      "group": "crypto",
+      "source": "coingecko",
+      "symbol": "flare-networks",
+      "ccy": "USD",
+      "qty": 0,
+      "invested_eur": 0.1,
+      "closed": true,
+      "closed_on": "2026-11-25"
+    }
   ],
   "notify": {
     "move_pct": 5.0,
-    "pnl_levels_pct": [-30, -20, -10, 0, 10, 20, 50],
+    "pnl_levels_pct": [
+      -30,
+      -20,
+      -10,
+      0,
+      10,
+      20,
+      50
+    ],
     "morning_hour": 9,
     "daily_report_hour": 23,
     "weekly_weekday": 6,
     "weekly_hour": 20
+  },
+  "realized": [
+    {
+      "date": "2026-11-25",
+      "asset": "ETC",
+      "qty": 22.12,
+      "proceeds_eur": 108.9,
+      "cost_eur": null,
+      "note": "цена на придобиване — допиши"
+    },
+    {
+      "date": "2026-11-25",
+      "asset": "FLR",
+      "qty": 14.8080141,
+      "proceeds_eur": null,
+      "cost_eur": 0.1,
+      "note": "затворена"
+    }
+  ],
+  "plan": {
+    "_readme": "Правилата от документа „Инвестиционен план 12 месеца (дек 2026 – ное 2027)“. Ботът само сигнализира.",
+    "version": "2026-11-26",
+    "start": "2026-12-01",
+    "end": "2027-11-30",
+    "cap_total_eur": 10000,
+    "cap_risky_invested_eur": 2000,
+    "monthly_contribution_eur": 500,
+    "contribution_day": 23,
+    "targets": {
+      "safe": 0.3,
+      "core": 0.5,
+      "risky": 0.2
+    },
+    "rebalance_band_pp": 5,
+    "instruments": {
+      "safe": "XEON или Flexible Cash EUR",
+      "core": "VWCE",
+      "risky": "BTC, транш €100"
+    },
+    "position_caps_eur": {
+      "BTC": 800,
+      "NVDA": 500,
+      "MRVL": 500,
+      "DFEN": 300,
+      "ROBO": 1500
+    },
+    "no_add": [
+      "EXI2"
+    ],
+    "no_stop": [
+      "BTC"
+    ],
+    "rules": {
+      "take_profit_pct": 50,
+      "pre_earnings_trim_pct": 30,
+      "stop_loss_pct": -30,
+      "trailing_arm_pct": 30,
+      "trailing_stop_pct": -20,
+      "risky_drawdown_freeze_pct": -30,
+      "freeze_days": 90,
+      "dip_buy_vwce_pct": [
+        -10,
+        -15,
+        -20
+      ],
+      "event_blackout_days": 2
+    },
+    "dip_buy_asset": "VWCE",
+    "benchmark": {
+      "asset": "VWCE",
+      "safe_rate_pct": 2.5,
+      "_note": "вноски в safe → XEON-лихва, останалите → VWCE"
+    },
+    "events": [
+      {
+        "date": "2026-12-01",
+        "name": "Marvell отчет",
+        "ticker": "MRVL"
+      },
+      {
+        "date": "2026-12-09",
+        "name": "Фед"
+      },
+      {
+        "date": "2026-12-17",
+        "name": "ЕЦБ"
+      },
+      {
+        "date": "2027-01-27",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-02-07",
+        "name": "Нов шеф на ЕЦБ"
+      },
+      {
+        "date": "2027-03-17",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-04-28",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-06-09",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-07-28",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-09-15",
+        "name": "Фед"
+      },
+      {
+        "date": "2027-10-27",
+        "name": "Фед"
+      }
+    ]
   }
 }

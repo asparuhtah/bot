@@ -1,0 +1,21 @@
+name: tmp price check (invest-plan-v7)
+on:
+  push:
+    branches: [invest-plan-v7]
+    paths: ['.github/workflows/tmp-price-check.yml', 'scripts/invest_tracker.py']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install requests yfinance
+      - run: |
+          cd scripts && python - <<'PY'
+          import invest_tracker as t
+          print(t.fetch_yf_batch(["VWCE.DE","EXI2.DE","DFEN.DE","NVDA","MRVL","XEON.DE"]))
+          print(t.fetch_eurusd())
+          PY
+      - run: INVEST_DRY_RUN=1 python scripts/invest_tracker.py | grep -v "^──"
