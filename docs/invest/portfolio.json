@@ -1,6 +1,6 @@
 {
   "_readme": "Конфигурация на портфейла. Редактирай директно в GitHub (молив ✎). qty = брой дялове/монети, invested_eur = общо вложено (цена на придобиване). Ръчни активи (source=manual) се обновяват с value_eur. bucket = safe | core | risky (кофите от плана). closed=true = продадена позиция: не се следи, но историята в daily.csv остава. last_known = последна цена от Revolut, ползва се ако всички източници паднат. Алертите са в родната валута (USD за MRVL/NVDA/крипто, EUR за .DE). При покупка/продажба: смени qty и invested_eur; при продажба добави ред в realized.",
-  "positions_as_of": "2026-11-25",
+  "positions_as_of": "2026-11-26",
   "assets": [
     {
       "id": "BTC",
@@ -28,10 +28,27 @@
       "qty": 1.0,
       "invested_eur": 164.0,
       "last_known": {
-        "price_eur": 158.99,
-        "at": "2026-11-25T17:48+02:00",
+        "price_eur": 163.2,
+        "at": "2026-11-26T13:17+02:00",
         "src": "revolut"
       }
+    },
+    {
+      "id": "XEON",
+      "name": "Xtrackers EUR Overnight Rate Swap (XEON)",
+      "group": "stocks",
+      "bucket": "safe",
+      "source": "yahoo",
+      "symbol": "XEON.DE",
+      "ccy": "EUR",
+      "qty": 1.0005566,
+      "invested_eur": 151.0,
+      "last_known": {
+        "price_eur": 150.92,
+        "at": "2026-11-26T13:17+02:00",
+        "src": "revolut"
+      },
+      "_note": "вложено ≈ €151 (покупка 26.11) — уточнява се при следващия trading-account-statement"
     },
     {
       "id": "EXI2",
@@ -48,8 +65,8 @@
       },
       "bucket": "core",
       "last_known": {
-        "price_eur": 104.65,
-        "at": "2026-11-25T17:48+02:00",
+        "price_eur": 108.05,
+        "at": "2026-11-26T13:17+02:00",
         "src": "revolut"
       }
     },
@@ -59,7 +76,7 @@
       "group": "stocks",
       "source": "manual",
       "ccy": "EUR",
-      "value_eur": 38.92,
+      "value_eur": 39.57,
       "invested_eur": 40.0,
       "bucket": "core",
       "_note": "вложено = оценка; провери в Revolut → Robo-Advisor → Large purchase и поправи"
@@ -79,8 +96,8 @@
       },
       "bucket": "risky",
       "last_known": {
-        "price_eur": 129.96,
-        "at": "2026-11-25T17:48+02:00",
+        "price_eur": 137.69,
+        "at": "2026-11-26T13:17+02:00",
         "src": "revolut"
       }
     },
@@ -99,8 +116,8 @@
       },
       "bucket": "risky",
       "last_known": {
-        "price_eur": 109.4,
-        "at": "2026-11-25T17:48+02:00",
+        "price_eur": 121.52,
+        "at": "2026-11-26T13:17+02:00",
         "src": "revolut"
       }
     },
@@ -119,8 +136,8 @@
       },
       "bucket": "risky",
       "last_known": {
-        "price_eur": 47.15,
-        "at": "2026-11-25T17:48+02:00",
+        "price_eur": 48.4,
+        "at": "2026-11-26T13:17+02:00",
         "src": "revolut"
       }
     },
@@ -130,8 +147,9 @@
       "group": "cash",
       "source": "manual",
       "ccy": "EUR",
-      "value_eur": 327.83,
-      "bucket": "safe"
+      "value_eur": 176.83,
+      "bucket": "safe",
+      "_note": "≈ след покупката на XEON (327.83 − 151) — обнови с реалното салдо"
     },
     {
       "id": "CASH",
@@ -139,7 +157,7 @@
       "group": "cash",
       "source": "manual",
       "ccy": "EUR",
-      "value_eur": 9.33,
+      "value_eur": 9.3,
       "bucket": "safe"
     },
     {
@@ -184,6 +202,125 @@
     "weekly_hour": 20
   },
   "realized": [
+    {
+      "date": "2026-06-03",
+      "asset": "2B72",
+      "isin": "IE00BF20LF40",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.04591368,
+      "ccy": "EUR",
+      "cost": 0.45,
+      "proceeds": 0.45,
+      "pnl": 0.0,
+      "cost_eur": 0.45,
+      "proceeds_eur": 0.45,
+      "pnl_eur": 0.0,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-06-26",
+      "asset": "79U0",
+      "isin": "LU0959211326",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00252475,
+      "ccy": "EUR",
+      "cost": 0.5,
+      "proceeds": 0.51,
+      "pnl": 0.01,
+      "cost_eur": 0.5,
+      "proceeds_eur": 0.51,
+      "pnl_eur": 0.01,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-06-30",
+      "asset": "79U0",
+      "isin": "LU0959211326",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00014616,
+      "ccy": "EUR",
+      "cost": 0.03,
+      "proceeds": 0.03,
+      "pnl": 0.0,
+      "cost_eur": 0.03,
+      "proceeds_eur": 0.03,
+      "pnl_eur": 0.0,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-06-30",
+      "asset": "AEHY",
+      "isin": "LU2970735911",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00096302,
+      "ccy": "EUR",
+      "cost": 0.01,
+      "proceeds": 0.01,
+      "pnl": 0.0,
+      "cost_eur": 0.01,
+      "proceeds_eur": 0.01,
+      "pnl_eur": 0.0,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-07-20",
+      "asset": "79U0",
+      "isin": "LU0959211326",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00019385,
+      "ccy": "EUR",
+      "cost": 0.04,
+      "proceeds": 0.04,
+      "pnl": 0.0,
+      "cost_eur": 0.04,
+      "proceeds_eur": 0.04,
+      "pnl_eur": 0.0,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-09-14",
+      "asset": "79U0",
+      "isin": "LU0959211326",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00019079,
+      "ccy": "EUR",
+      "cost": 0.04,
+      "proceeds": 0.04,
+      "pnl": 0.0,
+      "cost_eur": 0.04,
+      "proceeds_eur": 0.04,
+      "pnl_eur": 0.0,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
+    {
+      "date": "2026-11-05",
+      "asset": "79U0",
+      "isin": "LU0959211326",
+      "type": "sell",
+      "date_acquired": "2026-04-27",
+      "qty": 0.00250413,
+      "ccy": "EUR",
+      "cost": 0.5,
+      "proceeds": 0.53,
+      "pnl": 0.03,
+      "cost_eur": 0.5,
+      "proceeds_eur": 0.53,
+      "pnl_eur": 0.03,
+      "source": "revolut-robo",
+      "account": "ROBO"
+    },
     {
       "date": "2026-11-25",
       "asset": "MRVL",

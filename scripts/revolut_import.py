@@ -26,6 +26,8 @@ Revolut import — чете извлеченията на Revolut и обнов�
   python scripts/revolut_import.py файл1.csv … --write                 # записва
   python scripts/revolut_import.py файл1.csv … --write --apply-sells   # + коригира позиции
   python scripts/revolut_import.py trading-account-statement.csv --write --positions   # точни позиции
+  python scripts/revolut_import.py robo-pnl.csv --write --account ROBO   # P&L на Robo-Advisor: вътрешните
+        продажби се пазят за данъците, но не пипат позициите (Robo се следи като една позиция)
 
 Импортът е идемпотентен: повторно пускане на същия файл не дублира редове.
 ⚠️ Repo-то е публично — не commit-вай самите извлечения (statements/ е в .gitignore).
@@ -136,7 +138,7 @@ def parse_brokerage(rows, fx):
             section, header = None, None
             continue
         d = dict(zip(header, r))
-        if section == "Income from Sells" and d.get("Date sold"):
+        if section == "Income from Sells" and d.get("Date sold") and d.get("Currency"):
             ccy = d.get("Currency", "EUR")
             day = d["Date sold"]
             cost, gross, pnl = num(d.get("Cost basis")), num(d.get("Gross proceeds")), num(d.get("Gross PnL"))
@@ -278,7 +280,7 @@ def key_of(x):
     if x.get("asset") == "CRYPTO":
         return ("crypto_income", x.get("type"), x.get("year"))
     if x.get("type") == "sell":
-        return ("sell", x.get("date"), x.get("asset"), round(x.get("qty") or 0, 8))
+        return ("sell", x.get("account"), x.get("date"), x.get("asset"), round(x.get("qty") or 0, 8))
     return (x.get("type"), x.get("date"), x.get("asset"))
 
 
@@ -407,6 +409,12 @@ def report(cfg):
 def main(argv):
     files = [a for a in argv if not a.startswith("--")]
     write, apply_sells, positions = "--write" in argv, "--apply-sells" in argv, "--positions" in argv
+    account = next((a.split("=", 1)[1] for a in argv if a.startswith("--account=")), None)
+    if "--account" in argv:
+        i = argv.index("--account")
+        account = argv[i + 1] if i + 1 < len(argv) else None
+        argv = argv[:i] + argv[i + 2:]
+    files = [a for a in argv if not a.startswith("--")]
     if not files:
         print(__doc__)
         return 1
@@ -416,6 +424,11 @@ def main(argv):
         r, i, snap = parse_file(f, fx)
         print(f"📄 {os.path.basename(f)}: {len(r)} реализирани, {len(i)} доходи"
               + (f", {len(snap['positions'])} позиции към {snap['as_of']}" if snap else ""))
+        if account:                                   # напр. ROBO: сделките са вътре в Robo-Advisor
+            for x in r + i:
+                x["account"] = account
+                x["source"] = f"revolut-{account.lower()}"
+            apply_sells = False
         realized += r
         income += i
         if snap:
