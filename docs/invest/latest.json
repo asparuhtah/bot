@@ -1,20 +1,20 @@
 {
-  "updated": "2026-11-27T01:03+02:00",
-  "eurusd": 1.0969,
+  "updated": "2026-11-27T06:55+02:00",
+  "eurusd": 1.0971,
   "eurusd_src": "kraken",
   "totals": {
-    "crypto": 89.26,
+    "crypto": 90.74,
     "stocks": 364.18,
     "cash": 337.16,
     "invested": 494.17,
-    "value_invested": 453.44,
-    "total": 790.6,
-    "pnl": -40.73,
-    "pnl_pct": -8.24
+    "value_invested": 454.92,
+    "total": 792.08,
+    "pnl": -39.25,
+    "pnl_pct": -7.94
   },
   "plan": {
     "summary": {
-      "total": 790.6,
+      "total": 792.08,
       "buckets": {
         "safe": {
           "value": 337.16,
@@ -31,12 +31,12 @@
           "dev_pp": -17.9
         },
         "risky": {
-          "value": 199.4,
+          "value": 200.88,
           "invested": 240.17,
-          "pct": 25.2,
+          "pct": 25.4,
           "target_pct": 20.0,
-          "dev_pp": 5.2,
-          "drawdown_pct": -17.0
+          "dev_pp": 5.4,
+          "drawdown_pct": -16.4
         }
       }
     },
@@ -48,16 +48,16 @@
       "asset": "BTC",
       "name": "Bitcoin",
       "group": "crypto",
-      "price": 60446.0,
+      "price": 61437.0,
       "ccy": "USD",
-      "price_eur": 55087.0,
+      "price_eur": 56001.0,
       "qty": 0.00162035,
-      "value_eur": 89.26,
+      "value_eur": 90.74,
       "invested_eur": 99.61,
-      "pnl_eur": -10.35,
-      "pnl_pct": -10.39,
-      "chg_day_pct": -0.52,
-      "updated": "2026-11-27T01:03+02:00",
+      "pnl_eur": -8.87,
+      "pnl_pct": -8.9,
+      "chg_day_pct": 1.11,
+      "updated": "2026-11-27T06:55+02:00",
       "src": "coingecko",
       "stale": false
     },
@@ -74,7 +74,7 @@
       "pnl_eur": -0.54,
       "pnl_pct": -0.33,
       "chg_day_pct": 0.02,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -91,7 +91,7 @@
       "pnl_eur": 1.66,
       "pnl_pct": 3.32,
       "chg_day_pct": 0.02,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -108,7 +108,7 @@
       "pnl_eur": -1.08,
       "pnl_pct": -2.7,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "manual",
       "stale": false
     },
@@ -118,14 +118,14 @@
       "group": "stocks",
       "price": 149.300003,
       "ccy": "USD",
-      "price_eur": 136.115824,
+      "price_eur": 136.09225,
       "qty": 0.35179452,
       "value_eur": 47.88,
       "invested_eur": 68.54,
       "pnl_eur": -20.66,
-      "pnl_pct": -30.14,
+      "pnl_pct": -30.15,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -135,14 +135,14 @@
       "group": "stocks",
       "price": 130.929993,
       "ccy": "USD",
-      "price_eur": 119.368007,
+      "price_eur": 119.347334,
       "qty": 0.16745366,
       "value_eur": 19.99,
       "invested_eur": 22.02,
       "pnl_eur": -2.03,
-      "pnl_pct": -9.23,
+      "pnl_pct": -9.24,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -159,7 +159,7 @@
       "pnl_eur": -7.73,
       "pnl_pct": -15.46,
       "chg_day_pct": -0.13,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -176,7 +176,7 @@
       "pnl_eur": null,
       "pnl_pct": null,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "manual",
       "stale": false
     },
@@ -193,7 +193,7 @@
       "pnl_eur": null,
       "pnl_pct": null,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-27T01:03+02:00",
+      "updated": "2026-11-27T06:55+02:00",
       "src": "manual",
       "stale": false
     }
