@@ -1,11 +1,11 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 61437.0,
+      "price": 59332.0,
       "ccy": "USD",
-      "price_eur": 56001.0,
+      "price_eur": 54172.0,
       "src": "coingecko",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "ETC": {
       "price": 5.96,
@@ -22,64 +22,64 @@
       "at": "2026-11-26T06:29+02:00"
     },
     "EXI2": {
-      "price": 108.2,
+      "price": 109.900002,
       "ccy": "EUR",
-      "price_eur": 108.2,
+      "price_eur": 109.900002,
       "src": "yfinance",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "MRVL": {
-      "price": 130.929993,
+      "price": 135.079697,
       "ccy": "USD",
-      "price_eur": 119.347334,
+      "price_eur": 123.36158,
       "src": "yfinance",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "DFEN": {
-      "price": 48.395,
+      "price": 49.549999,
       "ccy": "EUR",
-      "price_eur": 48.395,
+      "price_eur": 49.549999,
       "src": "yfinance",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "NVDA": {
-      "price": 149.300003,
+      "price": 146.680099,
       "ccy": "USD",
-      "price_eur": 136.09225,
+      "price_eur": 133.955652,
       "src": "yfinance",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "ROBO": {
       "price": 38.92,
       "ccy": "EUR",
       "price_eur": 38.92,
       "src": "manual",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "PERSONAL": {
       "price": 327.83,
       "ccy": "EUR",
       "price_eur": 327.83,
       "src": "manual",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "CASH": {
       "price": 9.33,
       "ccy": "EUR",
       "price_eur": 9.33,
       "src": "manual",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     },
     "VWCE": {
-      "price": 163.46,
+      "price": 164.460007,
       "ccy": "EUR",
-      "price_eur": 163.46,
+      "price_eur": 164.460007,
       "src": "yfinance",
-      "at": "2026-11-27T06:55+02:00"
+      "at": "2026-11-27T16:53+02:00"
     }
   },
-  "last_eurusd": 1.09705,
-  "last_hour_logged": "2026-11-27 06",
+  "last_eurusd": 1.09499,
+  "last_hour_logged": "2026-11-27 16",
   "alert_state": {
     "ETC": "buy",
     "NVDA": "buy",
@@ -111,7 +111,7 @@
       "dev_core": "low",
       "dev_risky": "high"
     },
-    "dip_peak": 163.46,
+    "dip_peak": 164.460007,
     "dip_level": 0,
     "qty": {
       "BTC": 0.00162035,
