@@ -340,5 +340,182 @@
         "NVDA"
       ]
     }
-  ]
+  ],
+  "garmin": {
+    "2026-11-27": {
+      "date": "2026-11-27",
+      "steps": 8657,
+      "resting_hr": 54,
+      "body_battery": 52,
+      "avg_stress": 37,
+      "sleep": {
+        "total_min": 434,
+        "deep_min": 93,
+        "light_min": 315,
+        "rem_min": 26,
+        "awake_min": 58,
+        "score": 51,
+        "start": 1795737780000,
+        "end": 1795767300000
+      },
+      "activities": []
+    },
+    "2026-11-26": {
+      "date": "2026-11-26",
+      "steps": 11718,
+      "resting_hr": 54,
+      "body_battery": 22,
+      "avg_stress": 56,
+      "sleep": {
+        "total_min": 238,
+        "deep_min": 62,
+        "light_min": 176,
+        "rem_min": 0,
+        "awake_min": 2,
+        "score": 31,
+        "start": 1795657260000,
+        "end": 1795671660000
+      },
+      "activities": [
+        {
+          "type": "lap_swimming",
+          "name": "Pool Swim",
+          "start": "2026-11-26 10:38:36",
+          "duration_s": 4344,
+          "distance_m": 1800.0,
+          "calories": 521,
+          "avg_hr": 78,
+          "max_hr": 78,
+          "avg_speed": 0.84
+        }
+      ]
+    },
+    "2026-11-25": {
+      "date": "2026-11-25",
+      "steps": 14940,
+      "resting_hr": 53,
+      "body_battery": 53,
+      "avg_stress": 46,
+      "sleep": {
+        "total_min": 335,
+        "deep_min": 102,
+        "light_min": 233,
+        "rem_min": 0,
+        "awake_min": 84,
+        "score": 44,
+        "start": 1795562940000,
+        "end": 1795588080000
+      },
+      "activities": []
+    },
+    "2026-11-24": {
+      "date": "2026-11-24",
+      "steps": 13671,
+      "resting_hr": 51,
+      "body_battery": 58,
+      "avg_stress": 38,
+      "sleep": {
+        "total_min": 395,
+        "deep_min": 71,
+        "light_min": 257,
+        "rem_min": 67,
+        "awake_min": 11,
+        "score": 75,
+        "start": 1795476960000,
+        "end": 1795501320000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-11-24 17:50:27",
+          "duration_s": 4529,
+          "distance_m": 0.0,
+          "calories": 426,
+          "avg_hr": 115,
+          "max_hr": 164,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-11-23": {
+      "date": "2026-11-23",
+      "steps": 16497,
+      "resting_hr": 50,
+      "body_battery": 74,
+      "avg_stress": 36,
+      "sleep": {
+        "total_min": 559,
+        "deep_min": 94,
+        "light_min": 378,
+        "rem_min": 87,
+        "awake_min": 102,
+        "score": 57,
+        "start": 1795380540000,
+        "end": 1795420200000
+      },
+      "activities": [
+        {
+          "type": "strength_training",
+          "name": "Strength",
+          "start": "2026-11-23 12:56:10",
+          "duration_s": 3848,
+          "distance_m": 0.0,
+          "calories": 294,
+          "avg_hr": 103,
+          "max_hr": 171,
+          "avg_speed": 0.0
+        }
+      ]
+    },
+    "2026-11-22": {
+      "date": "2026-11-22",
+      "steps": 13619,
+      "resting_hr": 56,
+      "body_battery": 11,
+      "avg_stress": 53,
+      "sleep": {
+        "total_min": 0,
+        "deep_min": 0,
+        "light_min": 0,
+        "rem_min": 0,
+        "awake_min": 0,
+        "score": null,
+        "start": null,
+        "end": null
+      },
+      "activities": []
+    },
+    "2026-11-21": {
+      "date": "2026-11-21",
+      "steps": 23739,
+      "resting_hr": 55,
+      "body_battery": 34,
+      "avg_stress": 52,
+      "sleep": {
+        "total_min": 303,
+        "deep_min": 60,
+        "light_min": 219,
+        "rem_min": 24,
+        "awake_min": 27,
+        "score": 58,
+        "start": 1795219020000,
+        "end": 1795238820000
+      },
+      "activities": [
+        {
+          "type": "mountaineering",
+          "name": "Sofia Climb",
+          "start": "2026-11-21 12:57:16",
+          "duration_s": 7348,
+          "distance_m": 21341.0,
+          "calories": 529,
+          "avg_hr": 101,
+          "max_hr": 149,
+          "avg_speed": 2.9
+        }
+      ]
+    }
+  },
+  "garmin_updated": "2026-11-27"
 }
