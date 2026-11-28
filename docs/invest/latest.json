@@ -1,42 +1,42 @@
 {
-  "updated": "2026-11-28T01:21+02:00",
-  "eurusd": 1.0936,
+  "updated": "2026-11-28T06:46+02:00",
+  "eurusd": 1.0933,
   "eurusd_src": "kraken",
   "totals": {
-    "crypto": 88.52,
-    "stocks": 370.31,
+    "crypto": 88.8,
+    "stocks": 370.33,
     "cash": 337.16,
     "invested": 494.17,
-    "value_invested": 458.83,
-    "total": 795.99,
-    "pnl": -35.34,
-    "pnl_pct": -7.15
+    "value_invested": 459.13,
+    "total": 796.29,
+    "pnl": -35.04,
+    "pnl_pct": -7.09
   },
   "plan": {
     "summary": {
-      "total": 795.99,
+      "total": 796.29,
       "buckets": {
         "safe": {
           "value": 337.16,
           "invested": 0.0,
-          "pct": 42.4,
+          "pct": 42.3,
           "target_pct": 30.0,
-          "dev_pp": 12.4
+          "dev_pp": 12.3
         },
         "core": {
           "value": 256.77,
           "invested": 254.0,
-          "pct": 32.3,
+          "pct": 32.2,
           "target_pct": 50.0,
-          "dev_pp": -17.7
+          "dev_pp": -17.8
         },
         "risky": {
-          "value": 202.06,
+          "value": 202.36,
           "invested": 240.17,
           "pct": 25.4,
           "target_pct": 20.0,
           "dev_pp": 5.4,
-          "drawdown_pct": -15.9
+          "drawdown_pct": -15.7
         }
       }
     },
@@ -48,16 +48,16 @@
       "asset": "BTC",
       "name": "Bitcoin",
       "group": "crypto",
-      "price": 59788.0,
+      "price": 59982.0,
       "ccy": "USD",
-      "price_eur": 54628.0,
+      "price_eur": 54805.0,
       "qty": 0.00162035,
-      "value_eur": 88.52,
+      "value_eur": 88.8,
       "invested_eur": 99.61,
-      "pnl_eur": -11.09,
-      "pnl_pct": -11.14,
-      "chg_day_pct": 0.77,
-      "updated": "2026-11-28T01:21+02:00",
+      "pnl_eur": -10.81,
+      "pnl_pct": -10.85,
+      "chg_day_pct": 1.1,
+      "updated": "2026-11-28T06:46+02:00",
       "src": "coingecko",
       "stale": false
     },
@@ -74,7 +74,7 @@
       "pnl_eur": 1.46,
       "pnl_pct": 0.89,
       "chg_day_pct": 0.61,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -91,7 +91,7 @@
       "pnl_eur": 2.39,
       "pnl_pct": 4.77,
       "chg_day_pct": -0.16,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -108,7 +108,7 @@
       "pnl_eur": -1.08,
       "pnl_pct": -2.7,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "manual",
       "stale": false
     },
@@ -118,14 +118,14 @@
       "group": "stocks",
       "price": 150.490005,
       "ccy": "USD",
-      "price_eur": 137.612251,
+      "price_eur": 137.651271,
       "qty": 0.35179452,
-      "value_eur": 48.41,
+      "value_eur": 48.42,
       "invested_eur": 68.54,
-      "pnl_eur": -20.13,
-      "pnl_pct": -29.37,
+      "pnl_eur": -20.12,
+      "pnl_pct": -29.35,
       "chg_day_pct": 2.6,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -135,14 +135,14 @@
       "group": "stocks",
       "price": 140.539993,
       "ccy": "USD",
-      "price_eur": 128.513683,
+      "price_eur": 128.550123,
       "qty": 0.16745366,
-      "value_eur": 21.52,
+      "value_eur": 21.53,
       "invested_eur": 22.02,
-      "pnl_eur": -0.5,
-      "pnl_pct": -2.27,
+      "pnl_eur": -0.49,
+      "pnl_pct": -2.24,
       "chg_day_pct": 4.04,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -159,7 +159,7 @@
       "pnl_eur": -6.39,
       "pnl_pct": -12.79,
       "chg_day_pct": 0.76,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "yfinance",
       "stale": false
     },
@@ -176,7 +176,7 @@
       "pnl_eur": null,
       "pnl_pct": null,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "manual",
       "stale": false
     },
@@ -193,7 +193,7 @@
       "pnl_eur": null,
       "pnl_pct": null,
       "chg_day_pct": 0.0,
-      "updated": "2026-11-28T01:21+02:00",
+      "updated": "2026-11-28T06:46+02:00",
       "src": "manual",
       "stale": false
     }

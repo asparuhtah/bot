@@ -1,11 +1,11 @@
 {
   "last_prices": {
     "BTC": {
-      "price": 59788.0,
+      "price": 59982.0,
       "ccy": "USD",
-      "price_eur": 54628.0,
+      "price_eur": 54805.0,
       "src": "coingecko",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "ETC": {
       "price": 5.96,
@@ -26,60 +26,60 @@
       "ccy": "EUR",
       "price_eur": 109.72,
       "src": "yfinance",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "MRVL": {
       "price": 140.539993,
       "ccy": "USD",
-      "price_eur": 128.513683,
+      "price_eur": 128.550123,
       "src": "yfinance",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "DFEN": {
       "price": 49.925,
       "ccy": "EUR",
       "price_eur": 49.925,
       "src": "yfinance",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "NVDA": {
       "price": 150.490005,
       "ccy": "USD",
-      "price_eur": 137.612251,
+      "price_eur": 137.651271,
       "src": "yfinance",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "ROBO": {
       "price": 38.92,
       "ccy": "EUR",
       "price_eur": 38.92,
       "src": "manual",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "PERSONAL": {
       "price": 327.83,
       "ccy": "EUR",
       "price_eur": 327.83,
       "src": "manual",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "CASH": {
       "price": 9.33,
       "ccy": "EUR",
       "price_eur": 9.33,
       "src": "manual",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     },
     "VWCE": {
       "price": 165.46,
       "ccy": "EUR",
       "price_eur": 165.46,
       "src": "yfinance",
-      "at": "2026-11-28T01:21+02:00"
+      "at": "2026-11-28T06:46+02:00"
     }
   },
-  "last_eurusd": 1.09358,
-  "last_hour_logged": "2026-11-28 01",
+  "last_eurusd": 1.09327,
+  "last_hour_logged": "2026-11-28 06",
   "alert_state": {
     "ETC": "buy",
     "NVDA": "buy",
